@@ -6,6 +6,7 @@ import { VerticalTimeline } from "@/components/ui/VerticalTimeline";
 import { DraftBadge } from "@/components/ui/evidence";
 import { journeyTimeline, todayLabel } from "@/lib/timeline";
 import { eventEras, publishedEvents } from "@/lib/data/events";
+import { TimelineLayers } from "@/components/lifestyle/TimelineLayers";
 
 export const metadata: Metadata = {
   title: "Timeline",
@@ -15,9 +16,9 @@ export const metadata: Metadata = {
 /** Reviewed events are read from the database; refresh every 5 minutes. */
 export const revalidate = 300;
 
-export default async function TimelinePage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ selected?: string }> }) {
+export default async function TimelinePage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ selected?: string; layer?: string }> }) {
   const { locale } = await params;
-  const { selected } = await searchParams;
+  const { selected, layer } = await searchParams;
   const j = getJourney();
   const pos = selected ? findStop(selected) : undefined;
   const s = pos?.item;
@@ -34,6 +35,7 @@ export default async function TimelinePage({ params, searchParams }: { params: P
     >
       <div className="zq-pagebody">
         <div className="zq-split">
+          <TimelineLayers locale={locale} layer={layer}>
           <div>
             <VerticalTimeline eras={journeyTimeline(j)} selected={s?.id} today={todayLabel()} enhance />
             {events?.length ? (
@@ -48,6 +50,7 @@ export default async function TimelinePage({ params, searchParams }: { params: P
               Signs of the Last Hour are not placed on this timeline: no date is known. See the <Link href="/last-hour">Last Hour explorer</Link>.
             </p>
           </div>
+          </TimelineLayers>
           <div className="zq-split-sticky">
             <p className="zq-meta zq-vt-hint">Tap a stop to open its card: summary, date certainty, place, sources and the full story.</p>
             <div style={{ marginTop: 16 }}>

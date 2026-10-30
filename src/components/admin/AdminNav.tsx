@@ -8,6 +8,7 @@ import { stripLocale } from "@/lib/i18n";
 const LINKS: Array<{ href: string; label: string; roles: Role[] }> = [
   { href: "/admin", label: "Overview", roles: ["editor", "scholarly_reviewer", "moderator", "admin"] },
   { href: "/admin/review", label: "Review queue", roles: ["editor", "scholarly_reviewer", "admin"] },
+  { href: "/admin/life-through-ages", label: "Life Through the Ages", roles: ["editor", "scholarly_reviewer", "science_reviewer", "admin"] },
   { href: "/admin/events/new", label: "New event", roles: ["editor", "admin"] },
   { href: "/admin/profiles", label: "Story editor", roles: ["editor", "admin"] },
   { href: "/admin/stories", label: "Stories", roles: ["editor", "admin"] },
