@@ -24,7 +24,7 @@ export const EVIDENCE_TEXT: Record<"en" | "ar", Record<EvidenceKind, string>> = 
 
 export interface EvidenceLabelProps {
   kind: EvidenceKind;
-  lang?: "en" | "ar";
+  lang?: "en" | "ar" | "ur"; // Urdu labels fall back to English until reviewed
   title?: string;
   children?: ReactNode;
 }
@@ -34,7 +34,7 @@ export function EvidenceLabel({ kind, lang = "en", title, children }: EvidenceLa
   return (
     <span className={`zq-ev zq-ev-${kind}`} title={title} data-evidence={kind}>
       <EvidenceMark kind={kind} />
-      <span>{children ?? EVIDENCE_TEXT[lang][kind]}</span>
+      <span>{children ?? EVIDENCE_TEXT[lang === "ar" ? "ar" : "en"][kind]}</span>
     </span>
   );
 }

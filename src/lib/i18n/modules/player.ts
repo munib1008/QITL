@@ -271,7 +271,7 @@ const ar: PlayerStrings = {
   },
 };
 
-export const playerStrings: Record<Locale, PlayerStrings> = { en, ar };
+export const playerStrings: Record<"en" | "ar", PlayerStrings> = { en, ar }; // Urdu falls back to English until reviewed Urdu strings exist
 
 export function getPlayerStrings(locale: string): PlayerStrings {
   return locale === "ar" ? ar : en;

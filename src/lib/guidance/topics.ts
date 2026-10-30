@@ -124,7 +124,7 @@ export function citation(r: ClaimRef): { kind: string; label: string; href?: str
 }
 
 /** Where a related link goes. People link only when they are prophets (QITL has a page for each prophet). */
-export function linkTarget(l: GuidanceLinkRow, locale: "en" | "ar"): { label: string; href?: string } | null {
+export function linkTarget(l: GuidanceLinkRow, locale: "en" | "ar" | "ur"): { label: string; href?: string } | null {
   const ar = locale === "ar";
   if (l.target_kind === "person" && l.people)
     return { label: ar ? l.people.name_ar : l.people.name_en, href: l.people.kind === "prophet" ? `/prophets/${l.people.slug}` : undefined };

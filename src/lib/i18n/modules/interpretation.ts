@@ -251,7 +251,7 @@ const ar: InterpretationStrings = {
   },
 };
 
-export const interpretationStrings: Record<Locale, InterpretationStrings> = { en, ar };
+export const interpretationStrings: Record<"en" | "ar", InterpretationStrings> = { en, ar }; // Urdu falls back to English until reviewed Urdu strings exist
 
 export function interpretationT(locale: string): InterpretationStrings {
   return locale === "ar" ? ar : en;

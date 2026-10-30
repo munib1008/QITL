@@ -292,7 +292,7 @@ const ar: CreationStrings = {
   },
 };
 
-export const creation: Record<Locale, CreationStrings> = { en, ar };
+export const creation: Record<"en" | "ar", CreationStrings> = { en, ar }; // Urdu falls back to English until reviewed Urdu strings exist
 
 export function creationStrings(locale: string): CreationStrings {
   return locale === "ar" ? ar : en;

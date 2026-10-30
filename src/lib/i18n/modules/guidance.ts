@@ -104,7 +104,7 @@ const ar: GuidanceStrings = {
   version: "الإصدار",
 };
 
-export const guidanceStrings: Record<Locale, GuidanceStrings> = { en, ar };
+export const guidanceStrings: Record<"en" | "ar", GuidanceStrings> = { en, ar }; // Urdu falls back to English until reviewed Urdu strings exist
 
 export function guidanceT(locale: string): GuidanceStrings {
   return locale === "ar" ? ar : en;

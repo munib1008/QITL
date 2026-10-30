@@ -4,7 +4,7 @@ import { CitationChip, EvidenceLabel } from "@/components/ui/evidence";
 import { citation, layersOf, linkTarget, type GuidanceIcon, type GuidanceLesson, type GuidanceLinkRow, type LessonClaim, type SafetyNote } from "@/lib/guidance/topics";
 import type { GuidanceStrings } from "@/lib/i18n/modules/guidance";
 
-type L = "en" | "ar";
+type L = "en" | "ar" | "ur"; // Urdu shows the English fields until reviewed Urdu content exists
 
 /** Abstract, geometric topic marks (16px grid, 1.5px stroke). Never a figure. */
 const ICONS: Record<GuidanceIcon, ReactNode> = {
