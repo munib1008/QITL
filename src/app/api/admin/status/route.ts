@@ -14,6 +14,10 @@ const TABLE = {
   story_section: "story_sections",
   quiz: "story_quizzes",
   media: "story_media",
+  guidance_topic: "guidance_topics",
+  guidance_lesson: "guidance_lessons",
+  guidance_link: "guidance_links",
+  guidance_safety_note: "guidance_safety_notes",
 } as const;
 
 const Change = z.object({

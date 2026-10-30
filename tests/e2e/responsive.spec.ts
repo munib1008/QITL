@@ -28,6 +28,8 @@ export const ROUTES = [
   "/learn",
   "/community",
   "/community/guidelines",
+  "/guidance",
+  "/guidance/feeling-overwhelmed",
   "/compare",
   "/sign-in",
   "/account",

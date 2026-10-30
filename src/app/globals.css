@@ -3,6 +3,7 @@
 @import "../styles/home.css";
 @import "../styles/prophet.css";
 @import "../styles/pages.css";
+@import "../styles/guidance.css";
 @import "../styles/mobile.css";
 
 @tailwind base;

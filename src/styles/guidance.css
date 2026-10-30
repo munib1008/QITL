@@ -1,0 +1,67 @@
+/*
+ * Life Guidance (/guidance). Mobile-first on the mobile.css tokens (--gutter, --tap, --fs-*), logical properties only
+ * so the layout mirrors in Arabic. The three lesson layers differ by heading, label, border style and colour together,
+ * never by colour alone.
+ */
+.gd-page { gap: 24px; }
+.gd-grid { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+.gd-topic {
+  display: flex; align-items: flex-start; gap: 12px; min-height: var(--tap); padding: 14px 16px;
+  background: var(--surface-raised); border: 1px solid var(--hairline); border-radius: var(--radius-md);
+  color: var(--ink); text-decoration: none; height: 100%;
+}
+.gd-topic:hover { border-color: var(--brass); }
+.gd-topic:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.gd-grid-planned .gd-topic { border-style: dashed; background: var(--surface); }
+.gd-topic-mark { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--surface-sunken); color: var(--brass-ink); }
+.gd-icon { width: 20px; height: 20px; }
+.gd-topic-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.gd-topic-text b { font: 600 16px/22px var(--font-sans); overflow-wrap: anywhere; }
+.gd-topic-alt { font: 400 14px/20px var(--font-sans); color: var(--ink-muted); }
+.gd-topic-alt:lang(ar) { font-family: var(--font-naskh), var(--font-sans); }
+.gd-topic-text .zq-soon { align-self: flex-start; }
+.gd-kick { display: inline-flex; align-items: center; gap: 6px; }
+.gd-kick .gd-icon { width: 16px; height: 16px; }
+
+.gd-notice, .gd-safety {
+  border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px;
+  background: var(--surface-raised); border: 1px solid var(--hairline); border-inline-start: 4px solid var(--slate);
+}
+.gd-notice h2, .gd-safety h2 { margin: 0; font: 600 16px/22px var(--font-sans); }
+.gd-safety h3 { margin: 4px 0 0; font: 600 14px/20px var(--font-sans); }
+.gd-notice p, .gd-safety p, .gd-safety ul { margin: 0; font: 400 15px/24px var(--font-sans); }
+.gd-notice p { color: var(--ink-muted); }
+.gd-safety { border-inline-start-color: var(--status-info); }
+.gd-safety ul { padding-inline-start: 20px; }
+.gd-crisis { padding: 8px 12px; border-radius: var(--radius-sm); background: var(--surface-sunken); border: 1px solid var(--status-danger); }
+
+.gd-lessons { display: flex; flex-direction: column; gap: 16px; }
+.gd-lessons > h2, .gd-related h2 { margin: 0; font: 500 var(--fs-h2)/1.25 var(--font-display); }
+.gd-lesson { display: flex; flex-direction: column; gap: 12px; padding: 16px; background: var(--surface-raised); border: 1px solid var(--hairline); border-radius: var(--radius-md); }
+.gd-lesson > h3 { margin: 0; font: 600 20px/28px var(--font-display); }
+.gd-layer { display: flex; flex-direction: column; gap: 8px; padding: 12px 14px; border-radius: var(--radius-sm); border: 1px solid var(--hairline); border-inline-start-width: 4px; }
+.gd-layer h4 { margin: 0; font: 600 13px/18px var(--font-sans); letter-spacing: .06em; text-transform: uppercase; }
+.gd-layer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.gd-layer li { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.gd-layer p { margin: 0; font: 400 var(--fs-body)/1.6 var(--font-sans); max-width: var(--reading-max); }
+.gd-layer .zq-meta { font-size: 13px; }
+.gd-layer-revelation { border-inline-start-color: var(--ev-quran); background: var(--surface); }
+.gd-layer-scholarly { border-inline-start-color: var(--ev-scholar); border-inline-start-style: double; border-inline-start-width: 5px; }
+.gd-layer-application { border-inline-start-color: var(--brass); border-style: dashed; border-inline-start-style: solid; background: var(--surface-sunken); }
+.gd-layer .gd-app-label { font: 600 13px/18px var(--font-sans); color: var(--brass-ink); }
+.gd-layer .gd-attrib { font-size: 14px; color: var(--ink-muted); }
+.gd-refs { display: flex; flex-wrap: wrap; gap: 8px; }
+.gd-ref { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.gd-ref .zq-chip { min-height: 32px; }
+
+.gd-related ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+.gd-related li { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border: 1px solid var(--hairline); border-radius: var(--radius-sm); background: var(--surface-raised); }
+.gd-related a { min-height: 24px; font-weight: 600; }
+
+.gd-mufti { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.gd-mufti .zq-btn { min-height: var(--tap); }
+
+@media (min-width: 601px) {
+  .gd-notice, .gd-safety, .gd-lesson { padding: 20px; }
+  .gd-layer { padding: 14px 18px; }
+}
