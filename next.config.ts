@@ -20,7 +20,8 @@ const csp = [
   "base-uri 'self'",
   "form-action 'self'",
   "object-src 'none'",
-  ...(dev ? [] : ["upgrade-insecure-requests"]),
+  // Only on an https site: on plain-http localhost it would break the service worker and assets.
+  ...(!dev && (process.env.NEXT_PUBLIC_SITE_URL ?? "").startsWith("https://") ? ["upgrade-insecure-requests"] : []),
 ].join("; ");
 
 const securityHeaders = [
@@ -30,7 +31,9 @@ const securityHeaders = [
   { key: "X-Frame-Options", value: "DENY" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
-  ...(dev ? [] : [{ key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" }]),
+  ...(!dev && (process.env.NEXT_PUBLIC_SITE_URL ?? "").startsWith("https://")
+    ? [{ key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" }]
+    : []),
 ];
 
 const config: NextConfig = {

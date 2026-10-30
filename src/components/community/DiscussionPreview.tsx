@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSession } from "@/components/account/useSession";
+import { supabaseConfigured } from "@/lib/env";
 import { EmptyState, Skeleton } from "@/components/ui/misc";
 import { EvidenceLabel } from "@/components/ui/evidence";
 import type { BookmarkTargetType } from "@/lib/validation";
@@ -26,7 +27,9 @@ export function DiscussionPreview({ contentType, contentId }: { contentType: Boo
   const [err, setErr] = useState<string | null>(null);
 
   const load = () =>
-    fetch(`/api/discussions?${new URLSearchParams({ contentType, contentId })}`)
+    !supabaseConfigured()
+      ? Promise.resolve(setSt({ s: "unavailable" }))
+      : fetch(`/api/discussions?${new URLSearchParams({ contentType, contentId })}`)
       .then(async (r) => {
         if (r.status === 503) return setSt({ s: "unavailable" });
         if (!r.ok) return setSt({ s: "error" });

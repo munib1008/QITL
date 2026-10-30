@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useSession } from "@/components/account/useSession";
+import { supabaseConfigured } from "@/lib/env";
 import { Comment, IconButton } from "@/components/ui/cards";
 import { CitationChip } from "@/components/ui/evidence";
 import { EmptyState, Skeleton, Toast } from "@/components/ui/misc";
@@ -56,6 +57,7 @@ export function DiscussionThread({ id }: { id: string }) {
   const [following, setFollowing] = useState<boolean | null>(null);
 
   const load = useCallback(async () => {
+    if (!supabaseConfigured()) return setData("unavailable");
     const r = await fetch(`/api/discussions/${id}/comments`, { cache: "no-store" }).catch(() => null);
     if (!r) return setData("error");
     if (r.status === 503) return setData("unavailable");
