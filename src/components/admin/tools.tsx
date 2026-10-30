@@ -5,6 +5,7 @@ import { getBrowserSupabase } from "@/lib/supabase/browser";
 import { EditorialStatus, EvidenceLabel, type EditorialState } from "@/components/ui/evidence";
 import { EmptyState, Skeleton, TextField } from "@/components/ui/misc";
 import type { EvidenceKind } from "@/content/journey";
+import { loadCreationReviewables, reviewEntityType, type CreationReviewKind } from "./creation-review";
 
 /* ---------- shared ---------- */
 
@@ -55,7 +56,7 @@ interface Reviewable {
   id: string;
   status: EditorialState;
   label: string;
-  kind: "claim" | "event" | "story" | "chapter" | "relationship" | "place_geometry" | "person" | "story_section" | "quiz" | "media";
+  kind: "claim" | "event" | "story" | "chapter" | "relationship" | "place_geometry" | "person" | "story_section" | "quiz" | "media" | CreationReviewKind;
   evidence?: EvidenceKind;
   detail?: string;
 }
@@ -114,6 +115,7 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
       out.push({ id: r.id, status: r.status, kind: "quiz", label: `Quiz: ${r.title} (${r.audience})` });
     for (const r of (media.data ?? []) as Array<{ id: string; status: EditorialState; role: string; animation_key: string | null; caption: string }>)
       out.push({ id: r.id, status: r.status, kind: "media", label: `${r.role}${r.animation_key ? `: ${r.animation_key}` : ""} — ${r.caption}`, detail: "Publishing media also needs an approver: use Publish after approval." });
+    out.push(...(await loadCreationReviewables(c)));
     setItems(out);
   }, []);
   useEffect(() => {
@@ -156,7 +158,7 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
               ) : null}
               {canReview ? (
                 <>
-                  <button type="button" className="zq-btn zq-btn-primary zq-btn-sm" onClick={() => act(() => call("/api/admin/review", "POST", { entityType: it.kind, entityId: it.id, decision: "approved" }), "Approved.")}>
+                  <button type="button" className="zq-btn zq-btn-primary zq-btn-sm" onClick={() => act(() => call("/api/admin/review", "POST", { entityType: reviewEntityType(it.kind), entityId: it.id, decision: "approved" }), "Approved.")}>
                     Approve
                   </button>
                   <button
@@ -164,7 +166,7 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
                     className="zq-btn zq-btn-secondary zq-btn-sm"
                     onClick={() => {
                       const comment = window.prompt("What needs to change?") ?? "";
-                      if (comment) void act(() => call("/api/admin/review", "POST", { entityType: it.kind, entityId: it.id, decision: "changes_requested", comment }), "Changes requested.");
+                      if (comment) void act(() => call("/api/admin/review", "POST", { entityType: reviewEntityType(it.kind), entityId: it.id, decision: "changes_requested", comment }), "Changes requested.");
                     }}
                   >
                     Request changes

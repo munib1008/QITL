@@ -4,6 +4,7 @@
 @import "../styles/prophet.css";
 @import "../styles/pages.css";
 @import "../styles/mobile.css";
+@import "../styles/creation.css";
 
 @tailwind base;
 @tailwind components;

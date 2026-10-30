@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { fontVariables } from "../fonts";
 import { getDict, isLocale, LOCALES } from "@/lib/i18n";
+import { creationStrings } from "@/lib/i18n/modules/creation";
 import { publicEnv } from "@/lib/env";
 import { ServiceWorker } from "@/components/shell/ServiceWorker";
 import { BottomNav } from "@/components/shell/BottomNav";
@@ -42,6 +43,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const { dir, t } = getDict(locale);
+  const creation = creationStrings(locale).nav;
   return (
     <html lang={locale} dir={dir} className={fontVariables} suppressHydrationWarning>
       <head>
@@ -58,6 +60,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
             { href: "/prophets", label: t.nav.prophets, note: t.exploreNotes.prophets },
             { href: "/stories", label: t.nav.stories, note: t.exploreNotes.stories },
             { href: "/events", label: t.nav.events, note: t.exploreNotes.events },
+            { href: "/creation", label: creation.label, note: creation.note },
             { href: "/hadith", label: t.nav.hadith, note: t.exploreNotes.hadith },
             { href: "/atlas", label: t.nav.atlas, note: t.exploreNotes.atlas },
             { href: "/genealogy", label: t.nav.genealogy, note: t.exploreNotes.genealogy },

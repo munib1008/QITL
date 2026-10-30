@@ -16,6 +16,8 @@ export const ROUTES = [
   "/prophets/yusuf",
   "/events",
   "/stories",
+  "/creation",
+  "/creation/jinn",
   "/quran",
   "/quran/1",
   "/quran/18",
