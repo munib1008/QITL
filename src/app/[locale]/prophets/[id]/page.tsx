@@ -8,8 +8,8 @@ import { BookmarkButton } from "@/components/account/BookmarkButton";
 import { CopyCitationButton, ShareButton } from "@/components/account/ShareButtons";
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
 import { NoteEditor } from "@/components/account/NoteEditor";
-import { ProphetProfile } from "@/components/profile/ProphetProfile";
-import { getPersonProfile } from "@/lib/data/profiles";
+import { StoryView } from "@/components/story/StoryView";
+import { getStory } from "@/lib/data/story";
 import { CitationChip, DraftBadge, EraTag, EvidenceLabel } from "@/components/ui/evidence";
 import { VerseCard } from "@/components/ui/cards";
 import { EmptyState, MapLegend } from "@/components/ui/misc";
@@ -46,7 +46,7 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
   const place = p.place ?? { name: "Unknown", certainty: "unknown" as const };
   const named = p.surahs?.find((s) => s.named);
   const hon = (x?: { honorific: string }) => (x?.honorific ? ` ${x.honorific}` : "");
-  const profile = ms ? null : await getPersonProfile(p.id);
+  const story = ms ? null : await getStory({ person: p.id });
 
   return (
     <ReadingPage locale={locale} crumbs={[{ href: "/prophets", label: "Prophets" }, { label: p.name }]}>
@@ -132,7 +132,7 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
       <div className="pp-grid">
         <div>
           <nav className="pp-toc" aria-label="On this page">
-            {!ms ? <a href="#profile">Profile</a> : null}
+            {!ms ? <a href="#full-story">Full story</a> : null}
             <a href="#story">Story</a>
             <a href="#quran">Quran</a>
             <a href="#hadith">Sunnah</a>
@@ -140,16 +140,45 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
             <a href="#discuss">Discussion</a>
           </nav>
 
-          {profile ? (
-            <section className="pp-sec" id="profile" aria-labelledby="profile-h">
-              <h2 id="profile-h">Profile</h2>
-              <p className="lead">The same structure for every prophet: key facts, then three reading depths. Each part is cited and reviewed.</p>
-              <ProphetProfile result={profile} name={p.name} />
+          {story ? (
+            <section className="pp-sec" id="full-story" aria-labelledby="full-story-h">
+              <h2 id="full-story-h">The full story</h2>
+              <p className="lead">
+                Every prophet follows the same structure, A to G. Each part is written only from the Quran and authenticated narrations, cited,
+                and reviewed by a scholar before it appears.
+              </p>
+              {story.state === "ok" && story.story ? (
+                <StoryView
+                  story={story.story}
+                  name={p.name}
+                  intro={
+                    p.surahs?.length ? (
+                      <p className="qs-hadith-refs">
+                        <span className="qp-fact-label">Quran chapters</span>
+                        {p.surahs.map((su) => (
+                          <CitationChip key={su.number} kind="Surah" href={`/quran/${su.number}`}>{`${su.number} ${su.name}`}</CitationChip>
+                        ))}
+                      </p>
+                    ) : null
+                  }
+                />
+              ) : (
+                <EmptyState
+                  tone={story.state === "not_configured" ? "soon" : "unknown"}
+                  label={<EvidenceLabel kind="unknown">Not yet written</EvidenceLabel>}
+                  title={story.state === "error" ? "The story could not be loaded." : `The full story of ${p.name} is not published yet.`}
+                >
+                  <p>
+                    It is written section by section from cited sources and appears only after scholarly review. Anything the sources do not establish
+                    is shown as &ldquo;Not established in the Quran or selected authentic Hadith.&rdquo;
+                  </p>
+                </EmptyState>
+              )}
             </section>
           ) : null}
 
           <section className="pp-sec" id="story" aria-labelledby="story-h">
-            <h2 id="story-h">{p.story?.length ? `The story in ${p.story.length} movements` : "The story"}</h2>
+            <h2 id="story-h">{p.story?.length ? `Outline in ${p.story.length} movements` : "Outline"}</h2>
             <p className="lead">{p.summary}</p>
             {p.story?.length ? (
               <ol className="pp-steps" data-testid="story-steps">

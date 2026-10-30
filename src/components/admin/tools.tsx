@@ -55,7 +55,7 @@ interface Reviewable {
   id: string;
   status: EditorialState;
   label: string;
-  kind: "claim" | "event" | "story" | "chapter" | "relationship" | "place_geometry" | "person" | "profile_section";
+  kind: "claim" | "event" | "story" | "chapter" | "relationship" | "place_geometry" | "person" | "story_section" | "quiz" | "media";
   evidence?: EvidenceKind;
   detail?: string;
 }
@@ -69,7 +69,7 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
     const c = sb();
     if (!c) return;
     const open = ["draft", "in_review", "approved", "published", "correction", "rejected"];
-    const [claims, events, stories, chapters, rels, geoms, people, sections] = await Promise.all([
+    const [claims, events, stories, chapters, rels, geoms, people, sections, quizzes, media] = await Promise.all([
       c.from("evidence_claims").select("id, status, statement, evidence, claim_references(kind, quran_surah, quran_ayah_from, quran_ayah_to, locator)").in("status", open).limit(100),
       c.from("historical_events").select("id, status, title, date_precision, category").in("status", open).limit(100),
       c.from("stories").select("id, status, title").in("status", open).limit(100),
@@ -77,7 +77,9 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
       c.from("relationships").select("id, status, kind, confidence").in("status", open).limit(100),
       c.from("place_geometries").select("id, status, precision, confidence, locations(name_en)").in("status", open).limit(100),
       c.from("people").select("id, status, name_en, name_ar, honorific").in("status", open).limit(200),
-      c.from("profile_sections").select("id, status, kind, value_text, known, body_md, people(name_en)").in("status", open).limit(200),
+      c.from("story_sections").select("id, status, section, audience, value_text, known, body_md, people(name_en), historical_events(title)").in("status", open).limit(300),
+      c.from("story_quizzes").select("id, status, title, audience").in("status", open).limit(100),
+      c.from("story_media").select("id, status, role, animation_key, caption").in("status", open).limit(100),
     ]);
     const out: Reviewable[] = [];
     for (const r of (claims.data ?? []) as Array<{ id: string; status: EditorialState; statement: string; evidence: EvidenceKind; claim_references: Array<{ kind: string; quran_surah: number | null; quran_ayah_from: number | null; quran_ayah_to: number | null; locator: string | null }> }>)
@@ -100,14 +102,18 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
       out.push({ id: r.id, status: r.status, kind: "place_geometry", label: `${r.locations?.name_en ?? "Place"} · ${r.precision}`, evidence: r.confidence });
     for (const r of (people.data ?? []) as Array<{ id: string; status: EditorialState; name_en: string; name_ar: string; honorific: string | null }>)
       out.push({ id: r.id, status: r.status, kind: "person", label: `${r.name_en} · ${r.name_ar}${r.honorific ? ` ${r.honorific}` : ""}`, detail: "Person record: check the name, Arabic name and honorific" });
-    for (const r of (sections.data ?? []) as unknown as Array<{ id: string; status: EditorialState; kind: string; value_text: string | null; known: boolean; body_md: string; people: { name_en: string } | null }>)
+    for (const r of (sections.data ?? []) as unknown as Array<{ id: string; status: EditorialState; section: string; audience: string; value_text: string | null; known: boolean; body_md: string; people: { name_en: string } | null; historical_events: { title: string } | null }>)
       out.push({
         id: r.id,
         status: r.status,
-        kind: "profile_section",
-        label: `${r.people?.name_en ?? "Profile"} · ${r.kind.replace(/_/g, " ")}`,
+        kind: "story_section",
+        label: `${r.people?.name_en ?? r.historical_events?.title ?? "Story"} · ${r.section.replace(/_/g, " ")} · ${r.audience}`,
         detail: r.known ? (r.value_text ?? r.body_md.slice(0, 240)) : "Not established",
       });
+    for (const r of (quizzes.data ?? []) as Array<{ id: string; status: EditorialState; title: string; audience: string }>)
+      out.push({ id: r.id, status: r.status, kind: "quiz", label: `Quiz: ${r.title} (${r.audience})` });
+    for (const r of (media.data ?? []) as Array<{ id: string; status: EditorialState; role: string; animation_key: string | null; caption: string }>)
+      out.push({ id: r.id, status: r.status, kind: "media", label: `${r.role}${r.animation_key ? `: ${r.animation_key}` : ""} — ${r.caption}`, detail: "Publishing media also needs an approver: use Publish after approval." });
     setItems(out);
   }, []);
   useEffect(() => {

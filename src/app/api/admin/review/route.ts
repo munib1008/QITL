@@ -4,7 +4,7 @@ import { dbError, isResponse, json, parseBody } from "@/lib/api";
 import { requireRole } from "@/lib/admin";
 
 const Review = z.object({
-  entityType: z.enum(["claim", "story", "chapter", "event", "relationship", "place_geometry", "person", "profile_section"]),
+  entityType: z.enum(["claim", "story", "chapter", "event", "relationship", "place_geometry", "person", "story_section", "quiz", "media"]),
   entityId: z.string().uuid(),
   decision: z.enum(["approved", "changes_requested", "rejected"]),
   comment: z.string().trim().max(2000).optional(),

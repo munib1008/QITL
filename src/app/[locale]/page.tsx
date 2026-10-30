@@ -5,6 +5,7 @@ import { JourneyTimeline } from "@/components/journey/JourneyTimeline";
 import { JourneyHeader } from "@/components/shell/SiteHeader";
 import { DraftBadge } from "@/components/ui/evidence";
 import { Rosette } from "@/components/ui/icons";
+import { Mark } from "@/components/shell/Logo";
 import { publicEnv } from "@/lib/env";
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -19,7 +20,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "QITL — The Islamic Knowledge Atlas",
+    name: "QITL — Quran in Timeline",
     url: publicEnv.siteUrl,
     inLanguage: ["en", "ar"],
     potentialAction: { "@type": "SearchAction", target: `${publicEnv.siteUrl}/search?q={query}`, "query-input": "required name=query" },
@@ -121,7 +122,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </section>
       </main>
       <footer className="zq-foot" id="method">
-        <span>QITL — Islamic Knowledge Atlas</span>
+        <span className="zq-foot-mark">
+          <Mark size={36} tone="dark" />
+          <span>QITL — Quran in Timeline</span>
+        </span>
         <span>Respecting evidence · Preserving uncertainty · Learning together</span>
         <nav className="zq-foot-links" aria-label="About">
           <Link href="/about">About</Link>

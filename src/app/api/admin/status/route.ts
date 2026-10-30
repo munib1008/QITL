@@ -11,7 +11,9 @@ const TABLE = {
   relationship: "relationships",
   place_geometry: "place_geometries",
   person: "people",
-  profile_section: "profile_sections",
+  story_section: "story_sections",
+  quiz: "story_quizzes",
+  media: "story_media",
 } as const;
 
 const Change = z.object({
@@ -32,7 +34,21 @@ export async function POST(req: NextRequest) {
   const c = await parseBody(req, Change);
   if (isResponse(c)) return c;
   if (c.status === "correction" && !c.revisionNote) return fail(422, "note_required", "A correction needs a public revision note.");
-  const { data, error } = await a.sb.from(TABLE[c.entityType]).update({ status: c.status }).eq("id", c.entityId).select("id, status").maybeSingle();
+  const patch: Record<string, unknown> = { status: c.status };
+  if (c.entityType === "media" && c.status === "published") {
+    // Published media records the scholarly reviewer whose approval it rests on.
+    const { data: rev } = await a.sb
+      .from("editorial_reviews")
+      .select("reviewer_id, decision")
+      .eq("entity_type", "media")
+      .eq("entity_id", c.entityId)
+      .order("created_at", { ascending: false })
+      .limit(1)
+      .maybeSingle();
+    if (!rev || rev.decision !== "approved") return fail(422, "rule", "This media has no scholarly approval yet.");
+    patch.approved_by = rev.reviewer_id;
+  }
+  const { data, error } = await a.sb.from(TABLE[c.entityType]).update(patch).eq("id", c.entityId).select("id, status").maybeSingle();
   if (error) return dbError(error);
   if (!data) return fail(404, "not_found", "Not found, or you cannot change it.");
   if (c.revisionNote) {

@@ -94,7 +94,7 @@ test("API: personal routes refuse anonymous and cross-site requests; search work
   expect(r3.status()).toBe(422);
 });
 
-for (const path of ["/prophets", "/prophets/yusuf", "/timeline", "/atlas", "/quran", "/quran/12", "/hadith", "/genealogy", "/last-hour", "/search?q=nuh", "/methodology", "/sign-in", "/community"]) {
+for (const path of ["/events", "/prophets", "/prophets/yusuf", "/timeline", "/atlas", "/quran", "/quran/12", "/hadith", "/genealogy", "/last-hour", "/search?q=nuh", "/methodology", "/sign-in", "/community"]) {
   test(`axe: ${path}`, async ({ page }) => {
     await page.goto(path);
     const res = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]).analyze();
@@ -110,4 +110,21 @@ test.describe("narrow screens", () => {
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
       expect(overflow).toBeLessThanOrEqual(0);
     });
+});
+
+test("branding: the QITL logo with a text alternative, favicon, apple icon and social card", async ({ page, request }) => {
+  await page.goto("/");
+  await expect(page.getByRole("link", { name: /QITL — Quran in Timeline, home/ })).toBeVisible();
+  await expect(page.locator('img[alt="QITL — Quran in Timeline"]').first()).toBeVisible();
+  await expect(page).toHaveTitle(/QITL — Quran in Timeline/);
+  for (const sel of ['link[rel="icon"]', 'link[rel="apple-touch-icon"]', 'meta[property="og:image"]']) expect(await page.locator(sel).count(), sel).toBeGreaterThan(0);
+  const og = await page.locator('meta[property="og:image"]').first().getAttribute("content");
+  expect((await request.get(new URL(og!).pathname)).status()).toBe(200);
+});
+
+test("events encyclopedia and the prophet story section render their designed states", async ({ page }) => {
+  await page.goto("/events");
+  await expect(page.getByRole("heading", { name: "Quranic events", level: 1 })).toBeVisible();
+  await page.goto("/prophets/nuh");
+  await expect(page.getByRole("heading", { name: "The full story" })).toBeVisible();
 });

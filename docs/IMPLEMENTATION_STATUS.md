@@ -16,15 +16,27 @@ What works today, what is blocked and by what. "Working" means wired end to end 
 | SEO: metadata, Open Graph card, sitemap, robots, JSON-LD | | build |
 | Security headers and CSP | See `docs/engineering/threat-model.md` for the `'unsafe-inline'` follow-up | e2e |
 
-## Prophet profiles (new)
+## Storytelling system (new)
 
-Every prophet uses one structure: four facts (time among his people, total lifespan, people addressed, outcome) and three reading
-depths (a 30-second overview, a narrative of the situation, challenge, what happened and lessons, and a source-based study). Each
-section rests on a referenced claim and is published only after scholarly review; a fact the sources do not establish is published as
-"Not established", never estimated. Editors import the journey's prophets as draft people and write sections in Editorial → Prophet
-profiles. The prophet page shows the profile once sections are published. No profile content exists yet; it has to be written and reviewed.
+- **One structure for every prophet and Quranic event**, sections A–G: introduction facts, before the mission, the calling,
+  challenges as Situation → Challenge → Action → Response → Outcome → Lesson, outcome, takeaways (lesson, meaning, everyday
+  example labelled as an application) and the full source list, plus a one-minute summary, reflection questions and scholarly notes.
+- **Three reading levels** (Kids, Young learners, Full story). Kids and young texts adapt a full section and must rest on the same
+  claim; the database refuses anything else and publishes them only after their full section.
+- **Evidence rule:** story claims may cite the Quran and narrations from Sahih al-Bukhari, Sahih Muslim, Jami' at-Tirmidhi and Sunan
+  Ibn Majah only, and every hadith citation must name an authentic (sahih or hasan) grading by a named scholar. Enforced by the database.
+  The seven-collection catalogue remains for the hadith explorer.
+- **Quranic events encyclopedia** at /events and /events/[slug], connected to the timeline, people and places. The brief's event list can
+  be imported as drafts (titles only) from the Story editor.
+- **Quizzes** built only on reviewed claims, with right/wrong feedback and the source, no points; questions lock once published.
+- **Symbolic animations** (rain and flood, the sea path, seven harvests, daylight over a cave, foundations rising, palace architecture, the
+  beginning of the timeline): SVG, no figures, captions, text alternatives, pause and replay, no autoplay with reduced motion. Each appears only
+  after an editor registers it for a story and a scholarly reviewer approves it.
+- **Branding:** the QITL logo (light and dark), compact emblem, favicon, Apple icon, web manifest, Open Graph card and loading screen.
 
-The timeline also lists events published in the database, on their own track: sacred history in relative order, dated history in CE and AH.
+No story content, quizzes or media exist yet: they are written in Editorial → Story editor and appear after review.
+Still to come for this brief: word-by-word vocabulary (needs a licensed source), cover/infographic image uploads, the kids' "Remember the
+story" graphic, story-to-map camera sync, and the Arabic interface for the new pages.
 
 ## Built and tested, waiting for credentials (Supabase)
 

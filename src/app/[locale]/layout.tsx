@@ -8,10 +8,11 @@ import "../globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(publicEnv.siteUrl),
-  title: { default: "QITL — The Islamic Knowledge Atlas", template: "%s · QITL" },
+  title: { default: "QITL — Quran in Timeline", template: "%s · QITL" },
+  applicationName: "QITL",
   description:
     "Explore the story. Follow the evidence. The Quran, authenticated Hadith, the prophets, chronology and geography — every claim labelled by how certain it is.",
-  openGraph: { type: "website", siteName: "QITL — Islamic Knowledge Atlas", images: ["/opengraph-image"] },
+  openGraph: { type: "website", siteName: "QITL — Quran in Timeline" },
   twitter: { card: "summary_large_image" },
   alternates: { languages: { en: "/", ar: "/ar" } },
 };
@@ -21,7 +22,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#f7f3ea" },
-    { media: "(prefers-color-scheme: dark)", color: "#0b171b" },
+    { media: "(prefers-color-scheme: dark)", color: "#061519" },
   ],
 };
 

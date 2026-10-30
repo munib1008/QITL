@@ -7,7 +7,7 @@ export type Locale = "en" | "ar";
 
 const en = {
   skip: "Skip to content",
-  brandTagline: "Islamic Knowledge Atlas",
+  brandTagline: "Quran in Timeline",
   nav: {
     journey: "The Journey",
     explore: "Explore",
@@ -18,6 +18,7 @@ const en = {
     quran: "Quran",
     hadith: "Hadith",
     stories: "Stories",
+    events: "Events",
     genealogy: "Genealogy",
     lastHour: "Last Hour",
     community: "Community",
@@ -37,7 +38,7 @@ const en = {
 
 const ar: typeof en = {
   skip: "تخطَّ إلى المحتوى",
-  brandTagline: "أطلس المعرفة الإسلامية",
+  brandTagline: "القرآن عبر الزمن",
   nav: {
     journey: "الرحلة",
     explore: "استكشف",
@@ -48,6 +49,7 @@ const ar: typeof en = {
     quran: "القرآن",
     hadith: "الحديث",
     stories: "القصص",
+    events: "الأحداث",
     genealogy: "الأنساب",
     lastHour: "أشراط الساعة",
     community: "المجتمع",

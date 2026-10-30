@@ -5,6 +5,7 @@ import { Icon } from "@/components/ui/icons";
 import { AccountLink } from "./AccountLink";
 import { LangToggle, ThemeToggle } from "./toggles";
 import { MobileMenu } from "./MobileMenu";
+import { Logo, Mark } from "./Logo";
 
 export interface NavLink {
   href: string;
@@ -18,6 +19,7 @@ export function mainNav(t: ReturnType<typeof getDict>["t"]): NavLink[] {
     { href: "/atlas", label: t.nav.atlas },
     { href: "/quran", label: t.nav.quran },
     { href: "/hadith", label: t.nav.hadith },
+    { href: "/events", label: t.nav.events },
     { href: "/stories", label: t.nav.stories },
     { href: "/genealogy", label: t.nav.genealogy },
     { href: "/last-hour", label: t.nav.lastHour },
@@ -30,14 +32,8 @@ export function JourneyHeader({ locale }: { locale: string }) {
   const { locale: l, t } = getDict(locale);
   return (
     <header className="zq-nav">
-      <Link className="zq-brand" href="/" aria-label="QITL home">
-        <span className="zq-mono" aria-hidden="true">
-          Q
-        </span>
-        <span>
-          <b>QITL</b>
-          <small>{t.brandTagline}</small>
-        </span>
+      <Link className="zq-brand" href="/" aria-label="QITL — Quran in Timeline, home">
+        <Logo height={52} tone="dark" priority />
       </Link>
       <nav className="zq-links" aria-label="Main">
         <a href="#journey">{t.nav.journey}</a>
@@ -60,11 +56,8 @@ export function ReadingHeader({ locale, query }: { locale: string; query?: strin
   const { locale: l, t } = getDict(locale);
   return (
     <header className="pp-nav">
-      <Link className="pp-brand" href="/" aria-label="QITL home">
-        <span className="pp-mono" aria-hidden="true">
-          Q
-        </span>
-        QITL
+      <Link className="pp-brand" href="/" aria-label="QITL — Quran in Timeline, home">
+        <Logo height={44} priority />
       </Link>
       <SearchField maxWidth={420} defaultValue={query} id="hdr-q" />
       <div className="pp-navact">
@@ -94,7 +87,10 @@ export function SiteFooter({ locale }: { locale: string }) {
     <footer className="pp-foot zq-sitefoot">
       <div className="zq-foot-cols">
         <div>
-          <b className="zq-foot-brand">QITL</b>
+          <span className="zq-foot-mark">
+            <Mark size={40} />
+            <b className="zq-foot-brand">QITL</b>
+          </span>
           <p className="zq-meta">{t.footer.principles}</p>
           {t.draftArabicUi ? <p className="zq-meta">{t.draftArabicUi}</p> : null}
         </div>
