@@ -68,9 +68,9 @@ export function ReadingHeader({ locale, query }: { locale: string; query?: strin
       </Link>
       <SearchField maxWidth={420} defaultValue={query} id="hdr-q" />
       <div className="pp-navact">
-        <Link className="zq-btn zq-btn-quiet zq-btn-sm zq-btn-link pp-msearch" href="/search">
+        <Link className="zq-btn zq-btn-quiet zq-btn-sm zq-btn-link pp-msearch" href="/search" aria-label={t.nav.search}>
           <Icon.search />
-          {t.nav.search}
+          <span className="zq-hide-sm">{t.nav.search}</span>
         </Link>
         <ThemeToggle labels={t.theme} />
         <LangToggle locale={l} label={t.lang.label} />

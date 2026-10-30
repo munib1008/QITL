@@ -216,7 +216,7 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
                   <li key={`${s.number}-${s.passages.join()}`}>
                     <span className="n">{s.number}</span>
                     <span className="t">
-                      <b>{s.name}</b>
+                      <b>{s.name}</b>{" "}
                       <span lang="ar" dir="rtl">
                         {s.arabic}
                       </span>

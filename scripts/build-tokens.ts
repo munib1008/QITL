@@ -48,9 +48,16 @@ export function buildCss(tokens: Tokens): string {
   const themes = tokens.color.themes.map((t) => t.id);
   const themed = [...tokens.color.tokens, ...tokens.shadow.tokens];
   const blocks = themes.map((theme) => {
-    const sel = theme === "light" ? ':root, [data-theme="light"]' : `[data-theme="${theme}"]`;
+    // A page that owns the journey theme also themes <html>, so the scrollbar gutter and overscroll match it.
+    const sel =
+      theme === "light"
+        ? ':root, [data-theme="light"]'
+        : theme === "journey"
+          ? '[data-theme="journey"], html:has(> body > [data-theme="journey"])'
+          : `[data-theme="${theme}"]`;
     const body = themed.map((t) => `  --${t.name}: ${themeValue(t, theme)};`).join("\n");
-    return `${sel} {\n${body}\n}`;
+    const scheme = theme === "light" ? "" : "\n  color-scheme: dark;";
+    return `${sel} {\n${body}${scheme}\n}`;
   });
   // With no explicit choice, follow the system preference.
   if (themes.includes("dark")) {

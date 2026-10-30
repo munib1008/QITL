@@ -189,12 +189,26 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
           if (n.getBoundingClientRect().top < window.innerHeight && n.dataset.id) passed.push(n.dataset.id);
         });
         if (passed.length) setReveal((r) => ({ ...r, ...Object.fromEntries(passed.map((id) => [id, "in" as const])) }));
-        if (!scrollSync || Date.now() < hold.current || modalOpen.current || Math.abs(window.scrollY - last) < 4) return;
+        // While held (after a click) or while the evidence panel is open, scrolling (including the browser's own
+        // scroll anchoring and focus restoration) re-baselines instead of moving the active stop.
+        if (!scrollSync || Date.now() < hold.current || modalOpen.current) {
+          last = window.scrollY;
+          return;
+        }
+        if (Math.abs(window.scrollY - last) < 4) return;
         last = window.scrollY;
         const mid = window.innerHeight * FOCUS_LINE;
         const ds: Array<{ id: string; d: number }> = [];
         el.querySelectorAll<HTMLElement>("[data-node]").forEach((n) => {
-          ds.push({ id: n.dataset.node!, d: Math.abs(n.getBoundingClientRect().top - mid) });
+          const id = n.dataset.node!;
+          let d = Math.abs(n.getBoundingClientRect().top - mid);
+          // While the focus line is still inside the active stop's (expanded, possibly taller-than-screen) card,
+          // it keeps the focus, so a reader can scroll down to its buttons without it collapsing.
+          if (id === cur.current) {
+            const r = n.closest(".zq-jt-item")?.getBoundingClientRect();
+            if (r && r.top <= mid && r.bottom >= mid) d = 0;
+          }
+          ds.push({ id, d });
         });
         const next = pickActive(ds, cur.current);
         if (next !== cur.current) setActive(next);

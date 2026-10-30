@@ -79,3 +79,16 @@
 .zq-atlas-overlay > * { pointer-events: auto; max-width: 420px; }
 .zq-ayah { padding: 16px 0; border-top: 1px solid var(--hairline); }
 .pp-empty-soon { border-style: dashed; }
+@media (max-width: 479px) {
+  .pp-nav { gap: 8px; padding-inline: 12px; }
+  .pp-navact { gap: 2px; flex-wrap: wrap; justify-content: flex-end; }
+  .pp-navact .zq-btn-sm { padding: 0 6px; min-width: 32px; justify-content: center; }
+}
+/* A sticky side column taller than the screen would hide its lower half: let it scroll on its own. */
+@media (min-width: 1024px) { .pp-side { max-height: calc(100vh - 48px); overflow-y: auto; overscroll-behavior: contain; padding-inline-end: 4px; } }
+/* The journey's progress pill sticks below the sticky glass header, not under it. */
+.zq-page .zq-jt-progress { top: 80px; }
+.zq-navact .zq-btn, .pp-navact .zq-btn { white-space: nowrap; }
+/* Arabic interface: each paragraph takes its direction from its own first strong character, so English
+   content (still English until translated) keeps its punctuation in order inside the RTL layout. */
+[dir="rtl"] :is(p, h1, h2, h3, li, dd, blockquote) { unicode-bidi: plaintext; }

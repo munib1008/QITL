@@ -98,9 +98,10 @@
   --shadow-drawer: 0 0 48px rgba(0,0,0,0.6);
   --shadow-glow: 0 12px 32px rgba(0,0,0,0.5);
   --shadow-glow-active: 0 0 0 3px rgba(217,181,106,0.35), 0 0 24px rgba(61,220,151,0.25);
+  color-scheme: dark;
 }
 
-[data-theme="journey"] {
+[data-theme="journey"], html:has(> body > [data-theme="journey"]) {
   --surface: #061519;
   --surface-raised: rgba(15,42,49,0.58);
   --surface-sunken: rgba(0,0,0,0.28);
@@ -148,6 +149,7 @@
   --shadow-drawer: 0 0 56px rgba(0,0,0,0.7);
   --shadow-glow: 0 0 24px rgba(61,220,151,0.14), 0 16px 40px rgba(0,0,0,0.55);
   --shadow-glow-active: 0 0 0 3px rgba(217,181,106,0.4), 0 0 32px rgba(61,220,151,0.35);
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {

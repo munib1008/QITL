@@ -24,11 +24,11 @@ export function MobileMenu({ links, label }: { links: NavLink[]; label: string }
   }, [open]);
   return (
     <div className="zq-mmenu">
-      <button ref={btn} type="button" className="zq-btn zq-btn-quiet zq-btn-sm" aria-expanded={open} aria-controls="zq-mmenu-list" onClick={() => setOpen((o) => !o)}>
+      <button ref={btn} type="button" className="zq-btn zq-btn-quiet zq-btn-sm" aria-expanded={open} aria-controls="zq-mmenu-list" aria-label={label} onClick={() => setOpen((o) => !o)}>
         <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
           <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" strokeWidth={1.6} />
         </svg>
-        {label}
+        <span className="zq-hide-sm">{label}</span>
       </button>
       <nav id="zq-mmenu-list" className="zq-mmenu-list" hidden={!open} aria-label="All sections">
         {links.map((l) => (

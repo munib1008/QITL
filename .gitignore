@@ -11,3 +11,6 @@ test-results/
 next-env.d.ts
 .vercel
 supabase/.temp/
+
+# Playwright
+/playwright/.cache/
