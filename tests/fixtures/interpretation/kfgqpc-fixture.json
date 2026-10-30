@@ -1,0 +1,6 @@
+[
+  { "fixture": "synthetic placeholder, not Quran text", "id": 1, "jozz": 1, "sura_no": 1, "sura_name_en": "Fixture-One", "sura_name_ar": "FIXTURE-NAME-1", "page": 1, "aya_no": 1, "aya_text": "FIXTURE-AR-1-1 [1]", "aya_text_emlaey": "FIXTURE" },
+  { "fixture": "synthetic placeholder, not Quran text", "id": 2, "jozz": 1, "sura_no": 1, "sura_name_en": "Fixture-One", "sura_name_ar": "FIXTURE-NAME-1", "page": 1, "aya_no": 2, "aya_text": "FIXTURE-AR-1-2 [2]", "aya_text_emlaey": "FIXTURE" },
+  { "fixture": "synthetic placeholder, not Quran text", "id": 3, "jozz": 1, "sura_no": 2, "sura_name_en": "Fixture-Two", "sura_name_ar": "FIXTURE-NAME-2", "page": 2, "aya_no": 1, "aya_text": "FIXTURE-AR-2-1 [1]", "aya_text_emlaey": "FIXTURE" },
+  { "fixture": "synthetic placeholder, not Quran text", "id": 4, "jozz": 1, "sura_no": 2, "sura_name_en": "Fixture-Two", "sura_name_ar": "FIXTURE-NAME-2", "page": 2, "aya_no": 2, "aya_text": "FIXTURE-AR-2-2 [2]", "aya_text_emlaey": "FIXTURE" }
+]

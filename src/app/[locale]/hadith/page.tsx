@@ -4,7 +4,7 @@ import { ReadingPage } from "@/components/shell/ReadingPage";
 import { EvidenceLabel } from "@/components/ui/evidence";
 import { COLLECTIONS } from "@/lib/data/hadith";
 
-export const metadata: Metadata = { title: "Hadith", description: "Seven Sunni collections, catalogued. Every narration graded on its own, by a named scholar." };
+export const metadata: Metadata = { title: "Hadith", description: "Four Sunni collections, catalogued: Sahih al-Bukhari, Sahih Muslim, Jami' at-Tirmidhi and Sunan Ibn Majah. Every narration graded on its own, by a named scholar." };
 
 export default async function HadithIndex({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -13,7 +13,7 @@ export default async function HadithIndex({ params }: { params: Promise<{ locale
       locale={locale}
       crumbs={[{ label: "Hadith" }]}
       title="Hadith"
-      lead="Seven Sunni collections, as a catalogue. A collection is not a grade: every narration shows each recorded grading, by a named scholar, with its source — disagreements included."
+      lead="Four Sunni collections, as a catalogue: Sahih al-Bukhari, Sahih Muslim, Jami' at-Tirmidhi and Sunan Ibn Majah. A collection is not a grade: every narration shows each recorded grading, by a named scholar, with its source — disagreements included."
     >
       <div className="zq-pagebody">
         <div className="zq-grid">

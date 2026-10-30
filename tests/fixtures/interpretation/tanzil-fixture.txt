@@ -1,0 +1,6 @@
+# FIXTURE - synthetic placeholders, not Quran text
+# Version: 0.0-fixture
+1|1|FIXTURE-AR-1-1
+1|2|FIXTURE-AR-1-2
+2|1|FIXTURE-AR-2-1
+2|2|FIXTURE-AR-2-2 | with a pipe

@@ -2,9 +2,10 @@ import type { NextRequest } from "next/server";
 import { z } from "zod";
 import { dbError, fail, notConfigured, publicJson } from "@/lib/api";
 import { getServerSupabase } from "@/lib/supabase/server";
+import { COLLECTION_IDS } from "@/lib/data/hadith";
 
-const COLLECTIONS = ["bukhari", "muslim", "abudawud", "tirmidhi", "nasai", "ibnmajah", "muwatta"] as const;
-const P = z.object({ collection: z.enum(COLLECTIONS), number: z.string().regex(/^[0-9]+[a-z]?$/) });
+// The public catalogue: Bukhari, Muslim, Tirmidhi and Ibn Majah only (src/lib/data/hadith.ts).
+const P = z.object({ collection: z.enum(COLLECTION_IDS), number: z.string().regex(/^[0-9]+[a-z]?$/) });
 
 /** One narration with every recorded grading (never collapsed) and licensed translations only. */
 export async function GET(req: NextRequest, { params }: { params: Promise<{ collection: string; number: string }> }) {

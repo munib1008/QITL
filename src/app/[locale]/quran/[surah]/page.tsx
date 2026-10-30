@@ -5,6 +5,7 @@ import { journeyStops } from "@/content/journey";
 import { quranSource, surahArabic, surahList } from "@/content/quran";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { AyahReader } from "@/components/quran/AyahReader";
+import { StudyLauncher } from "@/components/quran/StudyLauncher";
 import { CitationChip, EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
 import { parseAyahRange } from "@/lib/refs";
@@ -83,15 +84,18 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
         ) : null}
         {verses ? (
           <>
-            <AyahReader surah={n} surahName={name} verses={verses} links={ayahLinks} />
+            <AyahReader surah={n} surahName={name} verses={verses} links={ayahLinks} locale={locale} />
             <p className="zq-meta">
               Arabic text: {src?.source}, version {src?.version}. {src?.license}
             </p>
           </>
         ) : (
-          <EmptyState label={<EvidenceLabel kind="unknown">Source not imported</EvidenceLabel>} title="The Arabic of this surah is not loaded yet.">
-            <p>It is shown only from the verified source import, never typed in. Tafsir and translations appear here once licensed and reviewed.</p>
-          </EmptyState>
+          <>
+            <EmptyState label={<EvidenceLabel kind="unknown">Source not imported</EvidenceLabel>} title="The Arabic of this surah is not loaded yet.">
+              <p>It is shown only from the verified source import, never typed in. Tafsir and translations appear here once licensed and reviewed.</p>
+            </EmptyState>
+            <StudyLauncher surah={n} maxAyah={meta?.ayahs ?? null} related={ayahLinks} locale={locale} />
+          </>
         )}
         <nav className="qr-surahnav" aria-label="Surah navigation">
           {n > 1 ? (

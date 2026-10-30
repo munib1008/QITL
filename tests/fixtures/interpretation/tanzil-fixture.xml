@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- FIXTURE - synthetic placeholders, not Quran text. Version: 0.0-fixture -->
+<quran>
+  <sura index="1" name="FIXTURE-SURAH-1">
+    <aya index="1" text="FIXTURE-AR-1-1" />
+    <aya index="2" text="FIXTURE-AR-1-2 &amp; &quot;quoted&quot;" />
+  </sura>
+  <sura index="2" name="FIXTURE-SURAH-2">
+    <aya index="1" text="FIXTURE-AR-2-1" />
+    <aya index="2" text="FIXTURE-AR-2-2" />
+  </sura>
+</quran>

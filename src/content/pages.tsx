@@ -53,9 +53,9 @@ export const INFO_PAGES: Record<string, InfoPage> = {
           <li><EvidenceLabel kind="unknown" /> revelation and reliable history are silent. This is a valid answer.</li>
         </ul>
         <h2 id="quran">The Quran</h2>
-        <p>The Arabic comes only from a verified source (Tanzil), imported verbatim and pinned by version and checksum. It is never typed in or edited. Translations are shown only when their licence is cleared.</p>
+        <p>The Arabic comes only from a verified source (the King Fahd Complex Madinah Mushaf or Tanzil, chosen by the owner), imported verbatim and pinned by version and checksum. It is never typed in or edited. Translations are shown only when their licence is cleared.</p>
         <h2 id="hadith">Hadith</h2>
-        <p>QITL catalogues seven Sunni collections. A collection is not a grade: each narration shows every recorded grading, by a named scholar, with its source. When gradings differ, all of them are listed.</p>
+        <p>QITL catalogues four Sunni collections: Sahih al-Bukhari, Sahih Muslim, Jami&rsquo; at-Tirmidhi and Sunan Ibn Majah. A collection is not a grade: a narration from Jami&rsquo; at-Tirmidhi or Sunan Ibn Majah is presented as sahih only when a named scholar&rsquo;s grading of it says so, and each narration shows every recorded grading, by a named scholar, with its source. When gradings differ, all of them are listed.</p>
         <h2 id="dates">Dates</h2>
         <p>Sacred history before recorded chronology is shown in relative order, without years. Dated history shows CE and AH with a mark for how precise each date is. No date or countdown is ever given for the Last Hour.</p>
         <h2 id="places">Places</h2>
