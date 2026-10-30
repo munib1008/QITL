@@ -5,6 +5,8 @@ import { AccountDashboard } from "@/components/account/AccountDashboard";
 import { EmptyState } from "@/components/ui/misc";
 import { getUser } from "@/lib/supabase/server";
 import { journeyStops } from "@/content/journey";
+import { MyQuestions } from "@/components/mufti/MyQuestions";
+import { MyDreamRequests } from "@/components/dreams/MyDreamRequests";
 
 export const metadata: Metadata = { title: "My library", robots: { index: false } };
 
@@ -16,7 +18,11 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
     <ReadingPage locale={locale} crumbs={[{ label: "My library" }]} title="My library" lead="Your bookmarks, reading progress and private notes, and your account settings. Only you can see this page.">
       <div className="zq-pagebody">
         {sb && user ? (
-          <AccountDashboard email={user.email ?? ""} names={Object.fromEntries(journeyStops().map((s) => [s.id, s.name]))} />
+          <>
+            <AccountDashboard email={user.email ?? ""} names={Object.fromEntries(journeyStops().map((s) => [s.id, s.name]))} />
+            <MyQuestions locale={locale} />
+            <MyDreamRequests locale={locale} compact />
+          </>
         ) : (
           <EmptyState tone="soon" label={<span className="zq-soon">Coming soon</span>} title="Accounts are not open on this site yet.">
             <p>Everything is readable without an account.</p>

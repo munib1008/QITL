@@ -13,6 +13,8 @@ const LINKS: Array<{ href: string; label: string; roles: Role[] }> = [
   { href: "/admin/stories", label: "Stories", roles: ["editor", "admin"] },
   { href: "/admin/relationships", label: "Genealogy edges", roles: ["editor", "admin"] },
   { href: "/admin/moderation", label: "Moderation", roles: ["moderator", "admin"] },
+  { href: "/admin/mufti", label: "Mufti Q&A", roles: ["moderator", "admin"] },
+  { href: "/admin/dreams", label: "Dream requests", roles: ["admin"] },
   { href: "/admin/corrections", label: "Corrections", roles: ["editor", "admin"] },
   { href: "/admin/sources", label: "Sources & licences", roles: ["admin"] },
   { href: "/admin/users", label: "Users & roles", roles: ["admin"] },

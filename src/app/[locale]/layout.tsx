@@ -5,6 +5,8 @@ import { getDict, isLocale, LOCALES } from "@/lib/i18n";
 import { publicEnv } from "@/lib/env";
 import { ServiceWorker } from "@/components/shell/ServiceWorker";
 import { BottomNav } from "@/components/shell/BottomNav";
+import { muftiT } from "@/lib/i18n/modules/mufti";
+import { dreamsT } from "@/lib/i18n/modules/dreams";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -42,6 +44,8 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const { dir, t } = getDict(locale);
+  const mufti = muftiT(locale).explore;
+  const dreams = dreamsT(locale).explore;
   return (
     <html lang={locale} dir={dir} className={fontVariables} suppressHydrationWarning>
       <head>
@@ -63,6 +67,8 @@ export default async function LocaleLayout({ children, params }: { children: Rea
             { href: "/genealogy", label: t.nav.genealogy, note: t.exploreNotes.genealogy },
             { href: "/last-hour", label: t.nav.lastHour, note: t.exploreNotes.lastHour },
             { href: "/community", label: t.nav.community, note: t.exploreNotes.community },
+            { href: "/community/questions", label: mufti.label, note: mufti.note },
+            { href: "/dreams", label: dreams.label, note: dreams.note },
             { href: "/learn", label: t.learnArabic, note: t.exploreNotes.learn },
             { href: "/search", label: t.nav.search, note: t.exploreNotes.search },
           ]}
