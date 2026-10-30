@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState, type ReactNode } from "react";
+import Link from "next/link";
 import { getBrowserSupabase } from "@/lib/supabase/browser";
 import { EditorialStatus, EvidenceLabel, type EditorialState } from "@/components/ui/evidence";
 import { EmptyState, Skeleton, TextField } from "@/components/ui/misc";
@@ -139,6 +140,10 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
 
   return (
     <div style={{ display: "grid", gap: 16 }}>
+      <p className="zq-meta" style={{ margin: 0 }}>
+        Life Through the Ages records have two review pathways (religious and historical/scientific): review them in{" "}
+        <Link href="/admin/life-through-ages">its own queue</Link>.
+      </p>
       <Feedback msg={msg} />
       <List
         rows={items}
@@ -699,6 +704,7 @@ export function RolesManager() {
             <option value="moderator">Moderator</option>
             <option value="editor">Editor</option>
             <option value="scholarly_reviewer">Scholarly reviewer</option>
+            <option value="science_reviewer">Science reviewer (historical / scientific)</option>
             <option value="admin">Admin</option>
           </select>
         </div>

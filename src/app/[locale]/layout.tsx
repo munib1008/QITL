@@ -7,6 +7,7 @@ import { publicEnv } from "@/lib/env";
 import { ServiceWorker } from "@/components/shell/ServiceWorker";
 import { BottomNav } from "@/components/shell/BottomNav";
 import { guidanceT } from "@/lib/i18n/modules/guidance";
+import { lifestyleStrings } from "@/lib/i18n/modules/lifestyle";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -66,6 +67,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
             { href: "/atlas", label: t.nav.atlas, note: t.exploreNotes.atlas },
             { href: "/genealogy", label: t.nav.genealogy, note: t.exploreNotes.genealogy },
             { href: "/last-hour", label: t.nav.lastHour, note: t.exploreNotes.lastHour },
+            { href: "/life-through-ages", label: lifestyleStrings(locale).nav, note: lifestyleStrings(locale).navNote },
             { href: "/community", label: t.nav.community, note: t.exploreNotes.community },
             { href: "/guidance", label: guidanceT(locale).nav, note: guidanceT(locale).exploreNote },
             { href: "/learn", label: t.learnArabic, note: t.exploreNotes.learn },

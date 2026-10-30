@@ -102,6 +102,11 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
           <BookmarkButton target={{ type: "journey_stop", id: p.id }} />
           <CopyCitationButton text={`QITL — ${p.name}. ${publicEnv.siteUrl}/prophets/${p.id}`} />
           <ShareButton title={`${p.name} — QITL`} path={`/prophets/${p.id}`} />
+          {!ms ? (
+            <Link className="zq-btn zq-btn-secondary zq-btn-link" href={`/life-through-ages/prophets/${p.id}`} data-testid="life-times-tab">
+              Their Life &amp; Times
+            </Link>
+          ) : null}
         </div>
       </header>
 

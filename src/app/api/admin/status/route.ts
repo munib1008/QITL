@@ -2,6 +2,7 @@ import type { NextRequest } from "next/server";
 import { z } from "zod";
 import { dbError, fail, isResponse, json, parseBody } from "@/lib/api";
 import { requireRole } from "@/lib/admin";
+import { RECORD_TYPES } from "@/lib/lifestyle/model";
 
 const TABLE = {
   claim: "evidence_claims",
@@ -30,6 +31,8 @@ const TABLE = {
   creation_relationship: "creation_relationships",
   creation_story: "creation_stories",
   creation_visual: "creation_visual_assets",
+  // Life Through the Ages (publishing also needs the religious and/or historical-scientific review).
+  ...RECORD_TYPES,
 } as const;
 
 const Change = z.object({
