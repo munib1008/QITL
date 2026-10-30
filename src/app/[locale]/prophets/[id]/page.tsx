@@ -11,6 +11,8 @@ import { DiscussionPreview } from "@/components/community/DiscussionPreview";
 import { NoteEditor } from "@/components/account/NoteEditor";
 import { StoryView } from "@/components/story/StoryView";
 import { getStory } from "@/lib/data/story";
+import { getPlayerBundle } from "@/lib/data/player";
+import { StoryPlayerSection } from "@/components/player/StoryPlayerSection";
 import { CitationChip, DraftBadge, EraTag, EvidenceLabel } from "@/components/ui/evidence";
 import { VerseCard } from "@/components/ui/cards";
 import { EmptyState, MapLegend } from "@/components/ui/misc";
@@ -48,6 +50,7 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
   const named = p.surahs?.find((s) => s.named);
   const hon = (x?: { honorific: string }) => (x?.honorific ? ` ${x.honorific}` : "");
   const story = ms ? null : await getStory({ person: p.id });
+  const player = ms ? null : await getPlayerBundle({ person: p.id });
 
   return (
     <ReadingPage locale={locale} crumbs={[{ href: "/prophets", label: "Prophets" }, { label: p.name }]}>
@@ -151,6 +154,8 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
               { id: "discuss", label: "Discussion" },
             ]}
           />
+
+          {player?.scripts.length ? <StoryPlayerSection bundle={player} locale={locale} /> : null}
 
           {story ? (
             <section className="pp-sec" id="full-story" aria-labelledby="full-story-h">

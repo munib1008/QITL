@@ -9,6 +9,8 @@ import { EmptyState } from "@/components/ui/misc";
 import { PRECISION_TEXT, type DatePrecision } from "@/components/ui/cards";
 import { getPublicSupabase } from "@/lib/supabase/server";
 import { getStory } from "@/lib/data/story";
+import { getPlayerBundle } from "@/lib/data/player";
+import { StoryPlayerSection } from "@/components/player/StoryPlayerSection";
 import { formatRange } from "@/lib/years";
 import type { EvidenceKind } from "@/content/labels";
 
@@ -63,7 +65,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
       </ReadingPage>
     );
   if (!e) notFound();
-  const story = await getStory({ event: slug });
+  const [story, player] = await Promise.all([getStory({ event: slug }), getPlayerBundle({ event: slug })]);
   const when = formatRange(e.start_year, e.end_year, e.start_ah, e.end_ah, e.date_precision === "estimated") ?? PRECISION_TEXT[e.date_precision];
   return (
     <ReadingPage
@@ -85,6 +87,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
     >
       <div className="pp-grid">
         <div>
+          {player?.scripts.length ? <StoryPlayerSection bundle={player} locale={locale} /> : null}
           {story.state === "ok" && story.story ? (
             <StoryView story={story.story} name={e.title} chapterKey={`event:${e.slug}`} />
           ) : (
