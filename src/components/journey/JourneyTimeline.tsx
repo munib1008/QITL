@@ -112,6 +112,7 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
   const [filter, setFilter] = useState<JourneyFilter>("all");
   const [active, setActive] = useState<string>(initialActive ?? all[0]?.id ?? "");
   const [evItem, setEvItem] = useState<JourneyItem | null>(null);
+  const [paused, setPaused] = useState(false);
   /** Reveal state: ids hidden below the fold at load ("rv") and those since revealed ("in"). */
   const [reveal, setReveal] = useState<Record<string, "rv" | "in">>({});
   const root = useRef<HTMLElement>(null);
@@ -236,7 +237,7 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
 
   let side = 0;
   return (
-    <section className="zq-jt" data-theme="journey" ref={root} aria-label={label}>
+    <section className="zq-jt" data-theme="journey" data-motion={paused ? "paused" : undefined} ref={root} aria-label={label}>
       <div className="zq-jt-bg" ref={bg} aria-hidden="true" />
       {intro ? <div className="zq-jt-intro">{intro}</div> : null}
       <div className="zq-jt-filters zq-glass" role="group" aria-label="Show">
@@ -246,6 +247,9 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
             {text}
           </button>
         ))}
+        <button type="button" className="zq-jt-filter zq-jt-motion" aria-pressed={paused} onClick={() => setPaused((p) => !p)}>
+          {paused ? "Play animation" : "Pause animation"}
+        </button>
       </div>
       <div
         className="zq-jt-progress"
@@ -369,7 +373,7 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
           footer={
             draft
               ? "Draft — references to be verified and approved by the scholarly reviewer before publishing."
-              : "Reviewed content · see methodology"
+              : "Approved by the scholarly reviewers · see the methodology"
           }
         />
       ) : null}

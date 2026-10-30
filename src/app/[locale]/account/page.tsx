@@ -13,7 +13,7 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
   const { sb, user } = await getUser();
   if (sb && !user) redirect("/sign-in?returnTo=/account");
   return (
-    <ReadingPage locale={locale} crumbs={[{ label: "My library" }]} title="My library" lead="Your bookmarks, reading progress, private notes and followed discussions. Only you can see this page.">
+    <ReadingPage locale={locale} crumbs={[{ label: "My library" }]} title="My library" lead="Your bookmarks, reading progress and private notes, and your account settings. Only you can see this page.">
       <div className="zq-pagebody">
         {sb && user ? (
           <AccountDashboard email={user.email ?? ""} names={Object.fromEntries(journeyStops().map((s) => [s.id, s.name]))} />

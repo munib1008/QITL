@@ -83,8 +83,9 @@ export function EvidenceDrawer({ claim, status, tabs, footer, onClose, theme }: 
   const onTabKey = (e: KeyboardEvent<HTMLDivElement>) => {
     const n = tabs.length;
     let next = sel;
-    if (e.key === "ArrowRight") next = (sel + 1) % n;
-    else if (e.key === "ArrowLeft") next = (sel - 1 + n) % n;
+    const rtl = getComputedStyle(e.currentTarget).direction === "rtl";
+    if (e.key === (rtl ? "ArrowLeft" : "ArrowRight")) next = (sel + 1) % n;
+    else if (e.key === (rtl ? "ArrowRight" : "ArrowLeft")) next = (sel - 1 + n) % n;
     else if (e.key === "Home") next = 0;
     else if (e.key === "End") next = n - 1;
     else return;
@@ -153,7 +154,7 @@ export function EvidenceDrawer({ claim, status, tabs, footer, onClose, theme }: 
         <div className="zq-drawer-body" role="tabpanel" id={`${id}-panel`} aria-labelledby={`${id}-tab-${sel}`} tabIndex={0}>
           {tabs[sel]?.content}
         </div>
-        <div className="zq-drawer-foot">{footer ?? "Reviewed content · see methodology"}</div>
+        <div className="zq-drawer-foot">{footer ?? "Review status is shown on the page · see the methodology"}</div>
       </div>
     </div>,
     document.body,

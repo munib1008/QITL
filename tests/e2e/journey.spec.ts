@@ -76,6 +76,15 @@ test.describe("home journey", () => {
     for (const r of before) if (/\b(BCE|CE)\b/.test(r.when)) expect(r.when, r.id!).toContain("Historians' estimate");
   });
 
+  test("the rail stays in view while reading the journey on wide screens", async ({ page }) => {
+    test.skip((page.viewportSize()?.width ?? 0) < 1180, "rail shows from 1180px");
+    await page.goto("/");
+    await page.locator('[data-node="musa"]').scrollIntoViewIfNeeded();
+    const rail = await page.getByRole("navigation", { name: "Jump to a stop" }).boundingBox();
+    expect(rail!.y).toBeGreaterThanOrEqual(0);
+    expect(rail!.y).toBeLessThan(200);
+  });
+
   test("has no axe violations", async ({ page }) => {
     await page.goto("/");
     const res = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]).analyze();
@@ -90,6 +99,11 @@ test.describe("mobile", () => {
     await page.locator("#journey").scrollIntoViewIfNeeded();
     await page.mouse.wheel(0, 1200);
     await expect(page.getByTestId("journey-progress")).toBeVisible();
+    // Sticky: after scrolling deep into the journey the pill is still on screen, just below the header.
+    await page.locator('[data-node="musa"]').scrollIntoViewIfNeeded();
+    const pill = await page.getByTestId("journey-progress").boundingBox();
+    expect(pill!.y).toBeGreaterThanOrEqual(0);
+    expect(pill!.y).toBeLessThan(160);
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     expect(overflow).toBeLessThanOrEqual(0);
     await page.locator('[data-node="adam"]').click();

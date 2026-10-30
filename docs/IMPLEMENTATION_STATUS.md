@@ -49,6 +49,18 @@ Code, API routes, database schema, RLS and triggers are complete and tested agai
 | Google sign-in | Provider set up in Supabase, `NEXT_PUBLIC_AUTH_GOOGLE=1` |
 | Account deletion | `SUPABASE_SERVICE_ROLE_KEY` on the server |
 
+## Known gaps (from the design audit, not yet built)
+
+- `/timeline` reads the journey file only; events published through the editor appear in the events API and search but not yet on the timeline page.
+- The surah reader does not yet load licensed translations (the compare page does).
+- Discussions attach to a whole page; attaching a thread to one evidence card (`claim_id`) is supported by the schema and API but not by the UI.
+- No public revision-history view yet (notes and versions are stored; staff see the diff in the review queue).
+- No appeals screen (the table exists; appeals go through the contact page), and My library does not list followed threads yet.
+- Skeletons do not switch to an error after a timeout; error toasts have no recovery action; the map legend does not collapse on mobile.
+- Timeline items are links, not buttons with atlas-camera sync; the timeline is not virtualised (29 stops today).
+- No image upload or approval screen (the `assets` rules and storage policies are in place).
+- Motion durations are not tokens; the home headline scales to 80px (prototype) rather than the 64px `display-xl` token; the Open Graph card uses literal colours.
+
 ## Upcoming (not built)
 
 - Email digest sender (preferences, tokens and notification queue exist).

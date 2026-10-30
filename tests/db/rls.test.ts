@@ -357,3 +357,16 @@ describe("read RPCs", () => {
     expect((await db.as<{ g: unknown }>(null, "select public.person_graph('nobody', 2) g"))[0]!.g).toBeNull();
   });
 });
+
+describe("media assets", () => {
+  test("an image cannot depict a person, cannot be published without an approver, nor from an uncleared source", async () => {
+    const [src] = await db.admin<{ id: string }>("insert into public.sources (type, work, rights_status) values ('image', 'Fixture photo archive', 'requested') returning id");
+    const [ok] = await db.admin<{ id: string }>("insert into public.sources (type, work, rights_status) values ('image', 'Fixture cleared archive', 'cleared') returning id");
+    const base = "insert into public.assets (storage_path, kind, alt_text, credit, source_id, mime_type, bytes, depicts_person, status, approved_by) values ($1, 'image', 'A geometric tile pattern', 'Fixture', $2, 'image/png', 1000, $3, $4, $5)";
+    await rejects(db.as(editor, base, ["a.png", ok!.id, true, "draft", null]), /check constraint/);
+    await rejects(db.admin(base, ["b.png", ok!.id, false, "published", null]), /check constraint/);
+    await rejects(db.admin(base, ["c.png", src!.id, false, "published", admin]), /rights are not cleared/);
+    await db.admin("update public.sources set rights_status = 'cleared' where id = $1", [src!.id]);
+    await db.admin(base, ["d.png", src!.id, false, "published", admin]);
+  });
+});

@@ -30,7 +30,7 @@ const en = {
   lang: { label: "Language", switchTo: "العربية" },
   footer: {
     principles: "Respecting evidence · Preserving uncertainty · Learning together",
-    corrections: "Corrections? Every page has a revision history.",
+    corrections: "Found an error? Accepted corrections are published with a revision note.",
   },
   draftArabicUi: "",
 };
@@ -60,7 +60,7 @@ const ar: typeof en = {
   lang: { label: "اللغة", switchTo: "English" },
   footer: {
     principles: "احترام الدليل · حفظ مواضع عدم اليقين · نتعلم معًا",
-    corrections: "تصحيحات؟ لكل صفحة سجل مراجعات.",
+    corrections: "وجدت خطأ؟ تُنشر التصحيحات المقبولة مع ملاحظة مراجعة.",
   },
   draftArabicUi: "واجهة عربية تجريبية — الترجمة قيد المراجعة",
 };

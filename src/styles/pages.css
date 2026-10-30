@@ -92,3 +92,8 @@
 /* Arabic interface: each paragraph takes its direction from its own first strong character, so English
    content (still English until translated) keeps its punctuation in order inside the RTL layout. */
 [dir="rtl"] :is(p, h1, h2, h3, li, dd, blockquote) { unicode-bidi: plaintext; }
+
+.pp-map-unknown { position: absolute; inset-inline-start: 12px; bottom: 12px; margin: 0; padding: 8px 12px; list-style: none; background: var(--surface-raised); border: 1px solid var(--hairline); border-radius: var(--radius-sm); font: 400 13px/18px var(--font-sans); max-width: calc(100% - 330px); }
+.pp-q { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; border: 2px dashed var(--ev-unknown); color: var(--ev-unknown); font: 700 11px/1 var(--font-sans); margin-inline-end: 6px; }
+@media (max-width: 640px) { .pp-map { height: auto; min-height: 260px; display: flex; flex-direction: column; gap: 8px; padding: 8px; } .pp-map .zq-legend, .pp-map-unknown, .pp-map .note { position: static; max-width: none; } .pp-map svg.base { position: relative; height: 160px; } }
+.zq-jt-motion { margin-inline-start: auto; font-weight: 400; }

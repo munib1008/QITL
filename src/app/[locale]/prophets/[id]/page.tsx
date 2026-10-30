@@ -99,7 +99,7 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
       <nav className="pp-pos" aria-label="Journey position">
         {prev ? (
           <Link href={`/prophets/${prev.id}`}>
-            <span>← Previous</span>
+            <span><span className="zq-arrow" aria-hidden="true">←</span> Previous</span>
             <b>
               {prev.name}
               <span lang="ar">{hon(prev)}</span>
@@ -113,7 +113,7 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
         </div>
         {next ? (
           <Link href={`/prophets/${next.id}`} className="nx">
-            <span>Next →</span>
+            <span>Next <span className="zq-arrow" aria-hidden="true">→</span></span>
             <b>
               {next.name}
               <span lang="ar">{hon(next)}</span>
@@ -147,7 +147,7 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
                       <EvidenceLabel kind="quran" />
                       <CitationChip href={quranHref(s.ayat)}>{`Q ${s.ayat}`}</CitationChip>
                       <Link className="zq-iconbtn" href={quranHref(s.ayat) ?? "/quran"}>
-                        Read ayat →
+                        Read ayat <span className="zq-arrow" aria-hidden="true">→</span>
                       </Link>
                     </div>
                   </li>
@@ -299,19 +299,21 @@ function AtlasPreview({ name, certainty }: { name: string; certainty: "point" | 
           <path d="M250 40 C330 30 420 60 470 110 C500 150 470 210 400 230 C320 250 250 220 220 170 C195 120 200 60 250 40Z" fill="none" stroke="var(--map-hypothesis)" strokeWidth={2} strokeDasharray="1 4" strokeLinecap="round" />
         ) : null}
         {certainty === "point" ? <circle cx={340} cy={130} r={8} fill="var(--map-point)" stroke="var(--surface-raised)" strokeWidth={3} /> : null}
-        {certainty === "unknown" ? (
-          <>
-            <circle cx={400} cy={120} r={18} fill="none" stroke="var(--ev-unknown)" strokeWidth={2} strokeDasharray="2 3" />
-            <text x={400} y={126} textAnchor="middle" fill="var(--ev-unknown)" style={{ font: "700 16px var(--font-sans)" }}>
-              ?
-            </text>
-          </>
+        {/* Unknown places are never drawn on the map; they are listed beside it. */}
+        {certainty !== "unknown" ? (
+          <text x={340} y={160} textAnchor="middle" fill="var(--ink)" style={{ font: "600 14px var(--font-sans)" }}>
+            {name.length > 48 ? `${name.slice(0, 46)}…` : name}
+          </text>
         ) : null}
-        <text x={certainty === "unknown" ? 400 : 340} y={certainty === "unknown" ? 166 : 160} textAnchor="middle" fill="var(--ink)" style={{ font: "600 14px var(--font-sans)" }}>
-          {certainty === "unknown" ? "Not mapped" : name.length > 48 ? `${name.slice(0, 46)}…` : name}
-        </text>
       </svg>
       <span className="note">Schematic preview — not to scale; not a geographic position</span>
+      {certainty === "unknown" ? (
+        <ul className="pp-map-unknown" aria-label="Not mapped">
+          <li>
+            <span className="pp-q" aria-hidden="true">?</span> {name} — location unknown, not placed
+          </li>
+        </ul>
+      ) : null}
       <MapLegend items={certainty === "point" ? ["point", "unknown"] : certainty === "hypothesis" ? ["hypothesis", "unknown"] : ["region", "unknown"]} attribution="Schematic drawing by ZIQ · no map data" />
     </div>
   );

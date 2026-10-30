@@ -55,7 +55,7 @@ interface Reviewable {
   id: string;
   status: EditorialState;
   label: string;
-  kind: "claim" | "event" | "story" | "chapter" | "relationship";
+  kind: "claim" | "event" | "story" | "chapter" | "relationship" | "place_geometry";
   evidence?: EvidenceKind;
   detail?: string;
 }
@@ -68,13 +68,14 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
   const load = useCallback(async () => {
     const c = sb();
     if (!c) return;
-    const open = ["draft", "in_review", "approved", "correction", "rejected"];
-    const [claims, events, stories, chapters, rels] = await Promise.all([
+    const open = ["draft", "in_review", "approved", "published", "correction", "rejected"];
+    const [claims, events, stories, chapters, rels, geoms] = await Promise.all([
       c.from("evidence_claims").select("id, status, statement, evidence, claim_references(kind, quran_surah, quran_ayah_from, quran_ayah_to, locator)").in("status", open).limit(100),
       c.from("historical_events").select("id, status, title, date_precision, category").in("status", open).limit(100),
       c.from("stories").select("id, status, title").in("status", open).limit(100),
       c.from("chapters").select("id, status, title, position, stories(title)").in("status", open).limit(100),
       c.from("relationships").select("id, status, kind, confidence").in("status", open).limit(100),
+      c.from("place_geometries").select("id, status, precision, confidence, locations(name_en)").in("status", open).limit(100),
     ]);
     const out: Reviewable[] = [];
     for (const r of (claims.data ?? []) as Array<{ id: string; status: EditorialState; statement: string; evidence: EvidenceKind; claim_references: Array<{ kind: string; quran_surah: number | null; quran_ayah_from: number | null; quran_ayah_to: number | null; locator: string | null }> }>)
@@ -93,6 +94,8 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
       out.push({ id: r.id, status: r.status, kind: "chapter", label: `${r.stories?.title ?? "Story"} · ${r.position}. ${r.title}` });
     for (const r of (rels.data ?? []) as Array<{ id: string; status: EditorialState; kind: string; confidence: EvidenceKind }>)
       out.push({ id: r.id, status: r.status, kind: "relationship", label: r.kind.replace(/_/g, " "), evidence: r.confidence });
+    for (const r of (geoms.data ?? []) as unknown as Array<{ id: string; status: EditorialState; precision: string; confidence: EvidenceKind; locations: { name_en: string } | null }>)
+      out.push({ id: r.id, status: r.status, kind: "place_geometry", label: `${r.locations?.name_en ?? "Place"} · ${r.precision}`, evidence: r.confidence });
     setItems(out);
   }, []);
   useEffect(() => {
@@ -158,6 +161,19 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
               {canEdit && it.kind !== "claim" ? (
                 <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => act(() => call("/api/admin/status", "POST", { entityType: it.kind, entityId: it.id, status: "published" }), "Published.")}>
                   Publish
+                </button>
+              ) : null}
+              {canEdit && it.kind !== "claim" && it.status === "published" ? (
+                <button
+                  type="button"
+                  className="zq-btn zq-btn-secondary zq-btn-sm"
+                  onClick={() => {
+                    const revisionNote = window.prompt("Public revision note: what is being corrected and why?") ?? "";
+                    if (revisionNote.trim().length >= 3)
+                      void act(() => call("/api/admin/status", "POST", { entityType: it.kind, entityId: it.id, status: "correction", revisionNote }), "Marked for correction with a public revision note.");
+                  }}
+                >
+                  Start a correction
                 </button>
               ) : null}
               <button

@@ -85,7 +85,7 @@ export const INFO_PAGES: Record<string, InfoPage> = {
     body: (
       <>
         <h2>How to report an error</h2>
-        <p>Sign in and use &ldquo;Report an error&rdquo; on the page, or write to us through the <Link href="/contact">contact page</Link>. Include the page, what is wrong and your evidence.</p>
+        <p>Write to us through the <Link href="/contact">contact page</Link>. Include the page, what is wrong and your evidence. Signed-in readers can also submit a correction request, which goes straight to the editors&apos; queue.</p>
         <h2>What happens next</h2>
         <p>An editor checks the report against the sources. If it is accepted, the content is corrected through the same review process and a public revision note explains what changed and when.</p>
         <h2>Published corrections</h2>
@@ -161,7 +161,7 @@ export const INFO_PAGES: Record<string, InfoPage> = {
           <li>No speculation about the date of the Last Hour or about current events.</li>
           <li>No personal attacks, no sectarian insults, no spam, no one&apos;s personal information.</li>
         </ul>
-        <p>Reported comments are hidden while a moderator reviews them. You can appeal a moderation decision from your account.</p>
+        <p>A comment reported by several readers is hidden until a moderator reviews it. To appeal a moderation decision, write to us through the <Link href="/contact">contact page</Link>.</p>
       </>
     ),
   },

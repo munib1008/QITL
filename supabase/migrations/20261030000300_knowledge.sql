@@ -352,8 +352,21 @@ create table public.assets (
   status public.publication_status not null default 'draft',
   approved_by uuid references auth.users (id),
   created_by uuid references auth.users (id) on delete set null,
-  created_at timestamptz not null default now()
+  created_at timestamptz not null default now(),
+  check (status <> 'published' or approved_by is not null)
 );
+
+-- A published image needs a source whose rights are cleared (or public domain).
+create or replace function public.check_asset_rights()
+returns trigger language plpgsql security definer set search_path = public as $$
+begin
+  if new.status = 'published' and not public.source_publishable(new.source_id) then
+    raise exception 'image source rights are not cleared' using errcode = 'P0001';
+  end if;
+  return new;
+end $$;
+create trigger assets_rights before insert or update on public.assets for each row execute function public.check_asset_rights();
+
 create table public.asset_links (
   asset_id uuid not null references public.assets (id) on delete cascade,
   entity_type public.content_type not null,

@@ -17,7 +17,11 @@ export async function middleware(req: NextRequest) {
   }
 
   let res: NextResponse;
-  if (pathname === "/ar" || pathname.startsWith("/ar/")) res = NextResponse.next({ request: req });
+  if (pathname === "/ar" || pathname.startsWith("/ar/")) {
+    res = NextResponse.next({ request: req });
+    // Opening an Arabic link keeps the reader in Arabic on the next internal link.
+    if (req.cookies.get("ziq-locale")?.value !== "ar") res.cookies.set("ziq-locale", "ar", { path: "/", maxAge: 31536000, sameSite: "lax" });
+  }
   else {
     const locale = req.cookies.get("ziq-locale")?.value === "ar" ? "ar" : "en";
     const url = req.nextUrl.clone();

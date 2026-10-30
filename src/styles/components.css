@@ -363,3 +363,13 @@ a.zq-iconbtn { text-decoration: none; }
 .zq-soon { align-self: flex-start; font: 600 11px/14px var(--font-sans); letter-spacing: .06em; color: var(--ink-muted); border: 1px dashed var(--border); border-radius: var(--radius-pill); padding: 3px 10px; white-space: nowrap; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .zq-node { text-decoration: none; }
+/* overflow: hidden made .zq-jt a scroll container, which silently disabled position: sticky for the
+   progress pill and the rail. clip keeps the decorative layers clipped without that side effect. */
+.zq-jt { overflow: clip; }
+
+/* WCAG 2.2 target size: citation chips are at least 24px tall. */
+.zq-chip { min-height: 24px; }
+/* Motion pause (WCAG 2.2.2): the journey's looping sheen and pulse stop when the reader pauses them. */
+.zq-jt[data-motion="paused"] *, .zq-jt[data-motion="paused"] *::after { animation-play-state: paused !important; }
+/* Directional arrows flip with the reading direction. */
+[dir="rtl"] .zq-arrow { display: inline-block; transform: scaleX(-1); }

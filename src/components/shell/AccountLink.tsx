@@ -17,9 +17,9 @@ export function AccountLink({ signInLabel, accountLabel }: { signInLabel: string
     );
   if (s.status === "unavailable")
     return (
-      <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" disabled title="Accounts are not configured on this deployment yet">
-        {signInLabel}
-      </button>
+      <span className="zq-soon" title="Reading never needs an account">
+        Accounts coming soon
+      </span>
     );
   return (
     <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" href={`/sign-in?returnTo=${encodeURIComponent(stripLocale(pathname))}`} aria-disabled={s.status === "loading" || undefined}>
