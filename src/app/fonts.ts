@@ -1,4 +1,4 @@
-import { Amiri, Amiri_Quran, IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Sans_Arabic, Noto_Naskh_Arabic, Source_Serif_4 } from "next/font/google";
+import { Amiri, Amiri_Quran, IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Sans_Arabic, Noto_Naskh_Arabic, Noto_Nastaliq_Urdu, Source_Serif_4 } from "next/font/google";
 
 /**
  * All faces are SIL Open Font License. next/font downloads them at build time and self-hosts them,
@@ -12,4 +12,7 @@ export const amiriQuran = Amiri_Quran({ subsets: ["arabic"], weight: "400", vari
 export const amiri = Amiri({ subsets: ["arabic"], weight: ["400", "700"], variable: "--ff-amiri", display: "swap", preload: false });
 export const naskh = Noto_Naskh_Arabic({ subsets: ["arabic"], weight: ["400", "600"], variable: "--ff-naskh", display: "swap", preload: false });
 
-export const fontVariables = [serif, plex, plexAr, mono, amiriQuran, amiri, naskh].map((f) => f.variable).join(" ");
+/** Urdu interface text (Nastaliq). Not preloaded: only Urdu pages use it. Quranic Arabic keeps --font-quran. */
+export const nastaliq = Noto_Nastaliq_Urdu({ subsets: ["arabic"], weight: ["400", "600"], variable: "--ff-nastaliq", display: "swap", preload: false });
+
+export const fontVariables = [serif, plex, plexAr, mono, amiriQuran, amiri, naskh, nastaliq].map((f) => f.variable).join(" ");

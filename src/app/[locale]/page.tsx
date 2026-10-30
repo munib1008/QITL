@@ -22,7 +22,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     "@type": "WebSite",
     name: "QITL — Quran in Timeline",
     url: publicEnv.siteUrl,
-    inLanguage: ["en", "ar"],
+    inLanguage: ["en", "ar", "ur"],
     potentialAction: { "@type": "SearchAction", target: `${publicEnv.siteUrl}/search?q={query}`, "query-input": "required name=query" },
   };
 

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "Explore the story. Follow the evidence. The Quran, authenticated Hadith, the prophets, chronology and geography — every claim labelled by how certain it is.",
   openGraph: { type: "website", siteName: "QITL — Quran in Timeline" },
   twitter: { card: "summary_large_image" },
-  alternates: { languages: { en: "/", ar: "/ar" } },
+  alternates: { languages: { en: "/", ar: "/ar", ur: "/ur" } },
 };
 
 export const viewport: Viewport = {
@@ -57,6 +57,8 @@ export default async function LocaleLayout({ children, params }: { children: Rea
         </a>
         {children}
         <BottomNav
+          locale={locale}
+          langLabels={t.lang}
           labels={t.bottom}
           explore={[
             { href: "/prophets", label: t.nav.prophets, note: t.exploreNotes.prophets },

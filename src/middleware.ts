@@ -1,29 +1,35 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
+import { LOCALE_COOKIE, PREFIXED_LOCALES, localeFromPath, resolveLocale } from "@/lib/i18n/locales";
 
 /**
- * 1. Locale: /ar/... is always Arabic. Any other path is served in the language chosen with the language toggle
- *    (cookie qitl-locale, English by default) by rewriting to /en/... or /ar/... internally, so every link in the app
- *    stays a plain path and both variants are statically generated. /en/... redirects to the unprefixed URL.
+ * 1. Locale: /ar/... is always Arabic and /ur/... always Urdu. Any other path is served in the language chosen with the
+ *    language switch (cookie qitl-locale: en, ar or ur; English by default and for any unknown value) by rewriting to
+ *    /en/..., /ar/... or /ur/... internally, so every link in the app stays a plain path and every variant is statically
+ *    generated. /en/... chooses English (sets the cookie) and redirects to the unprefixed URL.
  * 2. Auth: refreshes the Supabase session cookie when Supabase is configured.
  */
 export async function middleware(req: NextRequest) {
   const { pathname, search } = req.nextUrl;
+  const prefix = localeFromPath(pathname);
 
-  if (pathname === "/en" || pathname.startsWith("/en/")) {
+  if (prefix === "en") {
     const url = req.nextUrl.clone();
     url.pathname = pathname.slice(3) || "/";
-    return NextResponse.redirect(url, 308);
+    // The language switch links to /en/... to choose English: remember it, then serve the unprefixed URL.
+    const r = NextResponse.redirect(url, 307);
+    if (req.cookies.get(LOCALE_COOKIE)?.value !== "en") r.cookies.set(LOCALE_COOKIE, "en", { path: "/", maxAge: 31536000, sameSite: "lax" });
+    return r;
   }
 
   let res: NextResponse;
-  if (pathname === "/ar" || pathname.startsWith("/ar/")) {
+  if (prefix && PREFIXED_LOCALES.includes(prefix)) {
     res = NextResponse.next({ request: req });
-    // Opening an Arabic link keeps the reader in Arabic on the next internal link.
-    if (req.cookies.get("qitl-locale")?.value !== "ar") res.cookies.set("qitl-locale", "ar", { path: "/", maxAge: 31536000, sameSite: "lax" });
+    // Opening an Arabic or Urdu link keeps the reader in that language on the next internal link.
+    if (req.cookies.get(LOCALE_COOKIE)?.value !== prefix) res.cookies.set(LOCALE_COOKIE, prefix, { path: "/", maxAge: 31536000, sameSite: "lax" });
   }
   else {
-    const locale = req.cookies.get("qitl-locale")?.value === "ar" ? "ar" : "en";
+    const locale = resolveLocale(req.cookies.get(LOCALE_COOKIE)?.value);
     const url = req.nextUrl.clone();
     url.pathname = `/${locale}${pathname === "/" ? "" : pathname}`;
     url.search = search;

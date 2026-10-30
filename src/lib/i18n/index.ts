@@ -1,24 +1,20 @@
-import { dict, type Locale } from "./dict";
+import { dict } from "./dict";
+import { dirOf, resolveLocale } from "./locales";
 
 export { type Locale } from "./dict";
-export const LOCALES: Locale[] = ["en", "ar"];
-
-export function isLocale(v: string): v is Locale {
-  return (LOCALES as string[]).includes(v);
-}
+export { moduleStrings, type ModuleStrings } from "./modules";
+export * from "./locales";
 
 /**
- * Interface language: the [locale] route segment, chosen by the middleware from /ar/... or the qitl-locale cookie.
+ * Interface language: the [locale] route segment, chosen by the middleware from /ar/..., /ur/... or the qitl-locale cookie.
  * Content language is set per block with lang/dir.
  */
 export function getDict(locale: string) {
-  const l: Locale = locale === "ar" ? "ar" : "en";
-  return { locale: l, dir: l === "ar" ? ("rtl" as const) : ("ltr" as const), t: dict[l] };
+  const l = resolveLocale(locale);
+  return { locale: l, dir: dirOf(l), t: dict[l] };
 }
 
-export const LOCALE_COOKIE = "qitl-locale";
-
-/** The public path without the internal /en or /ar locale segment (rewrites can expose either). */
-export function stripLocale(path: string): string {
-  return path.replace(/^\/(en|ar)(?=\/|$)/, "") || "/";
+/** The "draft, needs review by a qualified translator" notice for this interface language, or "" for English. */
+export function draftNotice(t: ReturnType<typeof getDict>["t"]): string {
+  return t.draftUrduUi || t.draftArabicUi;
 }

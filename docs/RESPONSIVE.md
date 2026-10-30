@@ -67,7 +67,8 @@ bottom bar clear of the home indicator on notched phones.
 
 | Suite | What it checks |
 |---|---|
-| `tests/e2e/responsive.spec.ts` | 31 routes × English and Arabic × 320, 360, 414, 768, 1024, 1440 px: HTTP status, no sideways page scroll (and names the elements that overflow), no control under 24×24 px at phone widths, nothing hidden behind the bottom bar. `SHOTS=after` saves screenshots; `AUDIT=1` writes a register instead of failing. |
+| `tests/e2e/responsive.spec.ts` | 31 routes × English, Arabic and Urdu × 320, 360, 414, 768, 1024, 1440 px: HTTP status, no sideways page scroll (and names the elements that overflow), no control under 24×24 px at phone widths, nothing hidden behind the bottom bar. `SHOTS=after` saves screenshots; `AUDIT=1` writes a register instead of failing. |
+| `tests/e2e/urdu.spec.ts` | Urdu interface: `/ur` routing and cookie, the EN / العربية / اردو switch (header and Explore sheet, 44px), Nastaliq for interface text and the Quran font for Quranic Arabic, no clipped Nastaliq in controls at 320px, the three language preferences, axe on key pages at 360 and 1440px. See `docs/I18N.md`. |
 | `tests/e2e/mobile.spec.ts` | 360px interactions: bottom navigation (labels, 44px targets, current page, hidden on desktop), Explore sheet focus handling, footer clearance, timeline stop expansion and story link, jump-to-era and progress, chapter next / previous / resume, Arabic RTL with axe, axe with the sheet open. |
 | `tests/e2e/journey.spec.ts`, `pages.spec.ts` | Run in both the desktop (1440) and mobile (Pixel 7, 390) projects, with axe on the main pages. |
 
@@ -84,7 +85,8 @@ bottom bar clear of the home indicator on notched phones.
 | 7 | /quran/[n] | all | no previous/next surah | Medium | Fixed |
 | 8 | Page heads | ≤ 600 | 18px display-serif lead and 32px+ titles used most of the first screen | Low | Fixed: smaller on phones |
 
-After the fixes the responsive sweep passes for all 62 route/locale runs at all six widths.
+After the fixes the responsive sweep passes for all 62 route/locale runs at all six widths. With Urdu added (2026-10-31) it
+passes for all 93 runs; Urdu needed no page-specific fix beyond the Nastaliq line-height rules in `src/styles/i18n.css`.
 
 ## Not done in this pass (honest list)
 

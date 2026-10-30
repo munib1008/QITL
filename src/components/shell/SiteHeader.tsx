@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getDict } from "@/lib/i18n";
+import { draftNotice, getDict } from "@/lib/i18n";
 import { SearchField } from "@/components/ui/misc";
 import { Icon } from "@/components/ui/icons";
 import { AccountLink } from "./AccountLink";
@@ -41,7 +41,7 @@ export function JourneyHeader({ locale }: { locale: string }) {
         <Link href="/methodology">{t.nav.methodology}</Link>
       </nav>
       <div className="zq-navact">
-        <LangToggle locale={l} label={t.lang.label} />
+        <LangToggle locale={l} labels={t.lang} />
         <Link className="zq-btn zq-btn-primary zq-btn-sm zq-btn-link" href="/prophets">
           {t.nav.begin}
         </Link>
@@ -66,7 +66,7 @@ export function ReadingHeader({ locale, query }: { locale: string; query?: strin
           <span className="zq-hide-sm">{t.nav.search}</span>
         </Link>
         <ThemeToggle labels={t.theme} />
-        <LangToggle locale={l} label={t.lang.label} />
+        <LangToggle locale={l} labels={t.lang} />
         <AccountLink signInLabel={t.nav.signIn} accountLabel={t.nav.account} />
         <MobileMenu links={mainNav(t)} label={t.nav.explore} />
       </div>
@@ -92,7 +92,7 @@ export function SiteFooter({ locale }: { locale: string }) {
             <b className="zq-foot-brand">QITL</b>
           </span>
           <p className="zq-meta">{t.footer.principles}</p>
-          {t.draftArabicUi ? <p className="zq-meta">{t.draftArabicUi}</p> : null}
+          {draftNotice(t) ? <p className="zq-meta">{draftNotice(t)}</p> : null}
         </div>
         <nav aria-label="About">
           <Link href="/about">About</Link>
