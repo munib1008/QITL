@@ -187,3 +187,13 @@ table { max-width: 100%; }
   .zq-pagehead h1 { font-size: 30px; }
   .zq-pagehead .lead { font-size: 16px; line-height: 24px; }
 }
+
+/* ---------- Home journey filters on phones: label, an even 2×2 of filters, then the motion control ---------- */
+@media (max-width: 600px) {
+  .zq-jt-filters { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr 1fr auto; gap: 8px; padding: 12px; margin-inline: var(--gutter); }
+  .zq-jt-flabel { grid-column: 1 / -1; margin: 0 0 2px; text-align: start; }
+  .zq-jt-filter { width: 100%; min-height: var(--tap); justify-content: center; text-align: center; padding-inline: 8px; white-space: normal; line-height: 18px; }
+  .zq-jt-motion { grid-column: 1 / -1; margin-top: 4px; position: relative; }
+  .zq-jt-motion::before { content: ""; position: absolute; inset-inline: 4px; top: -7px; border-top: 1px solid var(--glass-stroke); }
+}
+@media (min-width: 340px) and (max-width: 600px) { .zq-jt-filter:not(.zq-jt-motion) { white-space: nowrap; font-size: 12.5px; padding-inline: 6px; } }
