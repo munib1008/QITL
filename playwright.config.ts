@@ -18,6 +18,8 @@ export default defineConfig({
     command: `npx next start -p ${PORT}`,
     port: PORT,
     reuseExistingServer: !process.env.CI,
+    // Turns on the gated /player-fixture test page (placeholder data only) for this test server.
+    env: { QITL_E2E_FIXTURES: "1" },
     timeout: 120_000,
   },
 });
