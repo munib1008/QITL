@@ -18,6 +18,18 @@ const TABLE = {
   guidance_lesson: "guidance_lessons",
   guidance_link: "guidance_links",
   guidance_safety_note: "guidance_safety_notes",
+  // Creation Atlas (every row is reviewed under the entity type 'creation')
+  creation_profile: "creation_profiles",
+  creation_characteristic: "creation_characteristics",
+  creation_ability: "creation_abilities",
+  creation_limitation: "creation_limitations",
+  creation_interaction: "creation_interactions",
+  creation_lesson: "creation_lessons",
+  creation_misconception: "creation_misconceptions",
+  creation_source_reference: "creation_source_references",
+  creation_relationship: "creation_relationships",
+  creation_story: "creation_stories",
+  creation_visual: "creation_visual_assets",
 } as const;
 
 const Change = z.object({
@@ -39,12 +51,12 @@ export async function POST(req: NextRequest) {
   if (isResponse(c)) return c;
   if (c.status === "correction" && !c.revisionNote) return fail(422, "note_required", "A correction needs a public revision note.");
   const patch: Record<string, unknown> = { status: c.status };
-  if (c.entityType === "media" && c.status === "published") {
+  if ((c.entityType === "media" || c.entityType === "creation_visual") && c.status === "published") {
     // Published media records the scholarly reviewer whose approval it rests on.
     const { data: rev } = await a.sb
       .from("editorial_reviews")
       .select("reviewer_id, decision")
-      .eq("entity_type", "media")
+      .eq("entity_type", c.entityType === "media" ? "media" : "creation")
       .eq("entity_id", c.entityId)
       .order("created_at", { ascending: false })
       .limit(1)

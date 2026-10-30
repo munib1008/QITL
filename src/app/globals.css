@@ -5,6 +5,7 @@
 @import "../styles/pages.css";
 @import "../styles/guidance.css";
 @import "../styles/mobile.css";
+@import "../styles/creation.css";
 
 @tailwind base;
 @tailwind components;
