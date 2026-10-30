@@ -1,0 +1,1645 @@
+{
+  "schema": "ziq.journey.v1",
+  "status": "draft",
+  "review": {
+    "state": "pending_scholarly_review",
+    "rule": "Surah links are well established; every ayah range and hadith number must be verified against pinned canonical editions before publishing."
+  },
+  "eras": [
+    {
+      "title": "Early humanity",
+      "note": "Chronological position only — no dates are known.",
+      "items": [
+        {
+          "id": "adam",
+          "name": "Adam",
+          "arabicName": "آدم",
+          "honorific": "(عليه السلام)",
+          "subtitle": "The first human and the first prophet",
+          "era": {
+            "label": "Early humanity",
+            "certainty": "relative"
+          },
+          "summary": "Created by Allah from clay, taught the names, placed in the Garden; he slipped, repented and was forgiven, and was sent to the earth.",
+          "surahs": [
+            {
+              "number": 2,
+              "name": "Al-Baqarah",
+              "arabic": "البقرة",
+              "passages": [
+                "2:30–39"
+              ],
+              "named": false
+            },
+            {
+              "number": 7,
+              "name": "Al-A'raf",
+              "arabic": "الأعراف",
+              "passages": [
+                "7:11–25"
+              ],
+              "named": false
+            },
+            {
+              "number": 20,
+              "name": "Ta-Ha",
+              "arabic": "طه",
+              "passages": [
+                "20:115–123"
+              ],
+              "named": false
+            },
+            {
+              "number": 15,
+              "name": "Al-Hijr",
+              "arabic": "الحجر",
+              "passages": [
+                "15:26–44"
+              ],
+              "named": false
+            },
+            {
+              "number": 38,
+              "name": "Sad",
+              "arabic": "ص",
+              "passages": [
+                "38:71–85"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Unknown location",
+            "certainty": "unknown"
+          },
+          "points": 8,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "01",
+          "dated": false
+        },
+        {
+          "id": "idris",
+          "name": "Idris",
+          "arabicName": "إدريس",
+          "honorific": "(عليه السلام)",
+          "subtitle": "A man of truth, raised to a high station",
+          "era": {
+            "label": "Early humanity",
+            "certainty": "relative"
+          },
+          "summary": "Described in the Quran as truthful and a prophet, and among the patient.",
+          "surahs": [
+            {
+              "number": 19,
+              "name": "Maryam",
+              "arabic": "مريم",
+              "passages": [
+                "19:56–57"
+              ],
+              "named": false
+            },
+            {
+              "number": 21,
+              "name": "Al-Anbiya",
+              "arabic": "الأنبياء",
+              "passages": [
+                "21:85–86"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Unknown location",
+            "certainty": "unknown"
+          },
+          "order": {
+            "label": "Placed before Nuh by most scholars",
+            "disputed": true
+          },
+          "points": 8,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "02",
+          "dated": false
+        }
+      ]
+    },
+    {
+      "title": "Nuh and the ancient nations",
+      "note": "Chronological position only — no dates are known.",
+      "items": [
+        {
+          "id": "nuh",
+          "name": "Nuh",
+          "arabicName": "نوح",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Messenger to his people; the Ark",
+          "era": {
+            "label": "Before and after the Flood",
+            "certainty": "relative"
+          },
+          "ageMarker": "Remained among his people 950 years (29:14)",
+          "summary": "Called his people to worship Allah alone; few believed. He built the Ark and was saved with the believers from the Flood.",
+          "surahs": [
+            {
+              "number": 71,
+              "name": "Nuh",
+              "arabic": "نوح",
+              "passages": [
+                "71:1–28"
+              ],
+              "named": true
+            },
+            {
+              "number": 11,
+              "name": "Hud",
+              "arabic": "هود",
+              "passages": [
+                "11:25–49"
+              ],
+              "named": false
+            },
+            {
+              "number": 7,
+              "name": "Al-A'raf",
+              "arabic": "الأعراف",
+              "passages": [
+                "7:59–64"
+              ],
+              "named": false
+            },
+            {
+              "number": 26,
+              "name": "Ash-Shu'ara",
+              "arabic": "الشعراء",
+              "passages": [
+                "26:105–122"
+              ],
+              "named": false
+            },
+            {
+              "number": 54,
+              "name": "Al-Qamar",
+              "arabic": "القمر",
+              "passages": [
+                "54:9–15"
+              ],
+              "named": false
+            },
+            {
+              "number": 29,
+              "name": "Al-'Ankabut",
+              "arabic": "العنكبوت",
+              "passages": [
+                "29:14–15"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "The Ark rested on al-Judi (11:44) — location disputed",
+            "certainty": "disputed"
+          },
+          "points": 10,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "03",
+          "dated": false
+        },
+        {
+          "id": "hud",
+          "name": "Hud",
+          "arabicName": "هود",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Sent to the people of 'Ad",
+          "era": {
+            "label": "After the Flood",
+            "certainty": "relative"
+          },
+          "summary": "Called 'Ad, a powerful people of al-Ahqaf, to worship Allah; they rejected him and were destroyed by a violent wind.",
+          "surahs": [
+            {
+              "number": 11,
+              "name": "Hud",
+              "arabic": "هود",
+              "passages": [
+                "11:50–60"
+              ],
+              "named": true
+            },
+            {
+              "number": 7,
+              "name": "Al-A'raf",
+              "arabic": "الأعراف",
+              "passages": [
+                "7:65–72"
+              ],
+              "named": false
+            },
+            {
+              "number": 26,
+              "name": "Ash-Shu'ara",
+              "arabic": "الشعراء",
+              "passages": [
+                "26:123–140"
+              ],
+              "named": false
+            },
+            {
+              "number": 46,
+              "name": "Al-Ahqaf",
+              "arabic": "الأحقاف",
+              "passages": [
+                "46:21–26"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Al-Ahqaf, southern Arabia",
+            "certainty": "region"
+          },
+          "points": 10,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "04",
+          "dated": false
+        },
+        {
+          "id": "salih",
+          "name": "Salih",
+          "arabicName": "صالح",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Sent to the people of Thamud",
+          "era": {
+            "label": "After 'Ad",
+            "certainty": "relative"
+          },
+          "summary": "Brought the she-camel as a sign to Thamud; they hamstrung it and were seized by the punishment.",
+          "surahs": [
+            {
+              "number": 11,
+              "name": "Hud",
+              "arabic": "هود",
+              "passages": [
+                "11:61–68"
+              ],
+              "named": false
+            },
+            {
+              "number": 7,
+              "name": "Al-A'raf",
+              "arabic": "الأعراف",
+              "passages": [
+                "7:73–79"
+              ],
+              "named": false
+            },
+            {
+              "number": 26,
+              "name": "Ash-Shu'ara",
+              "arabic": "الشعراء",
+              "passages": [
+                "26:141–159"
+              ],
+              "named": false
+            },
+            {
+              "number": 91,
+              "name": "Ash-Shams",
+              "arabic": "الشمس",
+              "passages": [
+                "91:11–15"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Al-Hijr, north-west Arabia (15:80)",
+            "certainty": "region"
+          },
+          "points": 10,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "05",
+          "dated": false
+        }
+      ]
+    },
+    {
+      "title": "Ibrahim and his family",
+      "note": "Chronological position — historians' dates vary widely and are not used.",
+      "items": [
+        {
+          "id": "ibrahim",
+          "name": "Ibrahim",
+          "arabicName": "إبراهيم",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Khalil Allah — taken by Allah as an intimate friend (4:125)",
+          "era": {
+            "label": "Era of Ibrahim",
+            "certainty": "relative"
+          },
+          "summary": "Rejected the idols of his people, was saved from the fire, and raised the foundations of the Ka'bah with Ismail.",
+          "surahs": [
+            {
+              "number": 14,
+              "name": "Ibrahim",
+              "arabic": "إبراهيم",
+              "passages": [
+                "14:35–41"
+              ],
+              "named": true
+            },
+            {
+              "number": 2,
+              "name": "Al-Baqarah",
+              "arabic": "البقرة",
+              "passages": [
+                "2:124–141",
+                "2:258–260"
+              ],
+              "named": false
+            },
+            {
+              "number": 6,
+              "name": "Al-An'am",
+              "arabic": "الأنعام",
+              "passages": [
+                "6:74–83"
+              ],
+              "named": false
+            },
+            {
+              "number": 19,
+              "name": "Maryam",
+              "arabic": "مريم",
+              "passages": [
+                "19:41–50"
+              ],
+              "named": false
+            },
+            {
+              "number": 21,
+              "name": "Al-Anbiya",
+              "arabic": "الأنبياء",
+              "passages": [
+                "21:51–73"
+              ],
+              "named": false
+            },
+            {
+              "number": 37,
+              "name": "As-Saffat",
+              "arabic": "الصافات",
+              "passages": [
+                "37:83–113"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Makkah — the Ka'bah (2:127)",
+            "certainty": "point"
+          },
+          "points": 12,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "06",
+          "dated": false
+        },
+        {
+          "id": "lut",
+          "name": "Lut",
+          "arabicName": "لوط",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Warned the towns of his people",
+          "era": {
+            "label": "Era of Ibrahim",
+            "certainty": "relative"
+          },
+          "summary": "Believed in Ibrahim and was sent to a people who persisted in immorality; he and his family, except his wife, were saved.",
+          "surahs": [
+            {
+              "number": 11,
+              "name": "Hud",
+              "arabic": "هود",
+              "passages": [
+                "11:77–83"
+              ],
+              "named": false
+            },
+            {
+              "number": 7,
+              "name": "Al-A'raf",
+              "arabic": "الأعراف",
+              "passages": [
+                "7:80–84"
+              ],
+              "named": false
+            },
+            {
+              "number": 15,
+              "name": "Al-Hijr",
+              "arabic": "الحجر",
+              "passages": [
+                "15:57–77"
+              ],
+              "named": false
+            },
+            {
+              "number": 26,
+              "name": "Ash-Shu'ara",
+              "arabic": "الشعراء",
+              "passages": [
+                "26:160–175"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "The towns of Lut — exact site not established",
+            "certainty": "hypothesis"
+          },
+          "points": 12,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "07",
+          "dated": false
+        },
+        {
+          "id": "ismail",
+          "name": "Ismail",
+          "arabicName": "إسماعيل",
+          "honorific": "(عليه السلام)",
+          "subtitle": "True to his promise; co-builder of the Ka'bah",
+          "era": {
+            "label": "Era of Ibrahim",
+            "certainty": "relative"
+          },
+          "summary": "Son of Ibrahim; raised the House with his father and prayed for a messenger from their descendants.",
+          "surahs": [
+            {
+              "number": 2,
+              "name": "Al-Baqarah",
+              "arabic": "البقرة",
+              "passages": [
+                "2:125–129"
+              ],
+              "named": false
+            },
+            {
+              "number": 19,
+              "name": "Maryam",
+              "arabic": "مريم",
+              "passages": [
+                "19:54–55"
+              ],
+              "named": false
+            },
+            {
+              "number": 37,
+              "name": "As-Saffat",
+              "arabic": "الصافات",
+              "passages": [
+                "37:101–107"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Makkah",
+            "certainty": "point"
+          },
+          "note": "37:101–107 does not name the son; most scholars identify him as Ismail.",
+          "points": 12,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "08",
+          "dated": false
+        },
+        {
+          "id": "ishaq",
+          "name": "Ishaq",
+          "arabicName": "إسحاق",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Glad tidings given to Ibrahim in old age",
+          "era": {
+            "label": "Era of Ibrahim",
+            "certainty": "relative"
+          },
+          "ageMarker": "Born when Ibrahim and his wife were old (11:72)",
+          "summary": "Promised to Ibrahim and his wife by the angels; a prophet among the righteous.",
+          "surahs": [
+            {
+              "number": 11,
+              "name": "Hud",
+              "arabic": "هود",
+              "passages": [
+                "11:69–73"
+              ],
+              "named": false
+            },
+            {
+              "number": 37,
+              "name": "As-Saffat",
+              "arabic": "الصافات",
+              "passages": [
+                "37:112–113"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Unknown location",
+            "certainty": "unknown"
+          },
+          "points": 12,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "09",
+          "dated": false
+        },
+        {
+          "id": "yaqub",
+          "name": "Yaqub",
+          "arabicName": "يعقوب",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Father of the tribes (al-Asbat)",
+          "era": {
+            "label": "Era of Ibrahim's descendants",
+            "certainty": "relative"
+          },
+          "summary": "Son of Ishaq and father of Yusuf; he counselled his sons to die only in submission to Allah.",
+          "surahs": [
+            {
+              "number": 2,
+              "name": "Al-Baqarah",
+              "arabic": "البقرة",
+              "passages": [
+                "2:132–133"
+              ],
+              "named": false
+            },
+            {
+              "number": 12,
+              "name": "Yusuf",
+              "arabic": "يوسف",
+              "passages": [
+                "12:4–18",
+                "12:83–100"
+              ],
+              "named": false
+            },
+            {
+              "number": 19,
+              "name": "Maryam",
+              "arabic": "مريم",
+              "passages": [
+                "19:49"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Canaan, later Egypt (12:99)",
+            "certainty": "region"
+          },
+          "points": 12,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "10",
+          "dated": false
+        },
+        {
+          "id": "yusuf",
+          "name": "Yusuf",
+          "arabicName": "يوسف",
+          "honorific": "(عليه السلام)",
+          "subtitle": "“The best of stories” (12:3)",
+          "era": {
+            "label": "Era of Ibrahim's descendants",
+            "certainty": "relative"
+          },
+          "summary": "Thrown into a well by his brothers, sold into Egypt, imprisoned, then given authority over its storehouses and reunited with his family.",
+          "surahs": [
+            {
+              "number": 12,
+              "name": "Yusuf",
+              "arabic": "يوسف",
+              "passages": [
+                "12:3–101"
+              ],
+              "named": true
+            }
+          ],
+          "place": {
+            "name": "Egypt",
+            "certainty": "region"
+          },
+          "points": 12,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "11",
+          "dated": false,
+          "story": [
+            {
+              "title": "The dream",
+              "ayat": "12:4–6",
+              "summary_status": "draft — see design/prototype/prophet.html for wording"
+            },
+            {
+              "title": "The brothers' plot and the well",
+              "ayat": "12:8–18",
+              "summary_status": "draft — see design/prototype/prophet.html for wording"
+            },
+            {
+              "title": "Sold and raised in Egypt",
+              "ayat": "12:19–22",
+              "summary_status": "draft — see design/prototype/prophet.html for wording"
+            },
+            {
+              "title": "The test in the house",
+              "ayat": "12:23–29",
+              "summary_status": "draft — see design/prototype/prophet.html for wording"
+            },
+            {
+              "title": "Prison and the dreams interpreted",
+              "ayat": "12:35–49",
+              "summary_status": "draft — see design/prototype/prophet.html for wording"
+            },
+            {
+              "title": "Authority over the storehouses",
+              "ayat": "12:50–57",
+              "summary_status": "draft — see design/prototype/prophet.html for wording"
+            },
+            {
+              "title": "The brothers come to Egypt",
+              "ayat": "12:58–93",
+              "summary_status": "draft — see design/prototype/prophet.html for wording"
+            },
+            {
+              "title": "The family reunited",
+              "ayat": "12:94–101",
+              "summary_status": "draft — see design/prototype/prophet.html for wording"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Between Yusuf and Isa",
+      "note": "Order of several prophets here is not stated in the Quran and is disputed.",
+      "items": [
+        {
+          "id": "ayyub",
+          "name": "Ayyub",
+          "arabicName": "أيوب",
+          "honorific": "(عليه السلام)",
+          "subtitle": "The model of patience",
+          "era": {
+            "label": "Era not established",
+            "certainty": "disputed"
+          },
+          "summary": "Afflicted severely, he called upon his Lord with patience; Allah removed his harm and restored his family.",
+          "surahs": [
+            {
+              "number": 21,
+              "name": "Al-Anbiya",
+              "arabic": "الأنبياء",
+              "passages": [
+                "21:83–84"
+              ],
+              "named": false
+            },
+            {
+              "number": 38,
+              "name": "Sad",
+              "arabic": "ص",
+              "passages": [
+                "38:41–44"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Unknown location",
+            "certainty": "unknown"
+          },
+          "order": {
+            "label": "Placement disputed",
+            "disputed": true
+          },
+          "points": 10,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "12",
+          "dated": false
+        },
+        {
+          "id": "shuayb",
+          "name": "Shu'ayb",
+          "arabicName": "شعيب",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Sent to Madyan",
+          "era": {
+            "label": "Before Musa",
+            "certainty": "relative"
+          },
+          "summary": "Called the people of Madyan to worship Allah and give full measure and weight; they rejected him and were destroyed.",
+          "surahs": [
+            {
+              "number": 11,
+              "name": "Hud",
+              "arabic": "هود",
+              "passages": [
+                "11:84–95"
+              ],
+              "named": false
+            },
+            {
+              "number": 7,
+              "name": "Al-A'raf",
+              "arabic": "الأعراف",
+              "passages": [
+                "7:85–93"
+              ],
+              "named": false
+            },
+            {
+              "number": 26,
+              "name": "Ash-Shu'ara",
+              "arabic": "الشعراء",
+              "passages": [
+                "26:176–191"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Madyan",
+            "certainty": "region"
+          },
+          "points": 10,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "13",
+          "dated": false
+        },
+        {
+          "id": "musa",
+          "name": "Musa & Harun",
+          "arabicName": "موسى وهارون",
+          "honorific": "(عليهما السلام)",
+          "subtitle": "Kalim Allah, and his brother",
+          "era": {
+            "label": "Era of Pharaoh",
+            "certainty": "disputed"
+          },
+          "summary": "Allah spoke to Musa and sent him with Harun to Pharaoh; Bani Isra'il were delivered through the parted sea and Musa was given the Tawrah.",
+          "surahs": [
+            {
+              "number": 28,
+              "name": "Al-Qasas",
+              "arabic": "القصص",
+              "passages": [
+                "28:3–46"
+              ],
+              "named": false
+            },
+            {
+              "number": 20,
+              "name": "Ta-Ha",
+              "arabic": "طه",
+              "passages": [
+                "20:9–98"
+              ],
+              "named": false
+            },
+            {
+              "number": 7,
+              "name": "Al-A'raf",
+              "arabic": "الأعراف",
+              "passages": [
+                "7:103–162"
+              ],
+              "named": false
+            },
+            {
+              "number": 26,
+              "name": "Ash-Shu'ara",
+              "arabic": "الشعراء",
+              "passages": [
+                "26:10–68"
+              ],
+              "named": false
+            },
+            {
+              "number": 18,
+              "name": "Al-Kahf",
+              "arabic": "الكهف",
+              "passages": [
+                "18:60–82"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Egypt and Sinai",
+            "certainty": "region"
+          },
+          "points": 8,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "14",
+          "dated": false
+        },
+        {
+          "id": "dhulkifl",
+          "name": "Dhul-Kifl",
+          "arabicName": "ذو الكفل",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Among the patient and the best",
+          "era": {
+            "label": "Era not established",
+            "certainty": "disputed"
+          },
+          "summary": "Named by the Quran among the patient, the righteous and the best.",
+          "surahs": [
+            {
+              "number": 21,
+              "name": "Al-Anbiya",
+              "arabic": "الأنبياء",
+              "passages": [
+                "21:85–86"
+              ],
+              "named": false
+            },
+            {
+              "number": 38,
+              "name": "Sad",
+              "arabic": "ص",
+              "passages": [
+                "38:48"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Unknown location",
+            "certainty": "unknown"
+          },
+          "order": {
+            "label": "Placement disputed",
+            "disputed": true
+          },
+          "points": 8,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "15",
+          "dated": false
+        },
+        {
+          "id": "dawud",
+          "name": "Dawud",
+          "arabicName": "داود",
+          "honorific": "(عليه السلام)",
+          "subtitle": "King and prophet; given the Zabur",
+          "era": {
+            "label": "c. 10th century BCE",
+            "certainty": "estimate"
+          },
+          "summary": "Killed Jalut, was given kingship and wisdom, and the mountains and birds glorified Allah with him.",
+          "surahs": [
+            {
+              "number": 38,
+              "name": "Sad",
+              "arabic": "ص",
+              "passages": [
+                "38:17–26"
+              ],
+              "named": false
+            },
+            {
+              "number": 2,
+              "name": "Al-Baqarah",
+              "arabic": "البقرة",
+              "passages": [
+                "2:251"
+              ],
+              "named": false
+            },
+            {
+              "number": 34,
+              "name": "Saba",
+              "arabic": "سبأ",
+              "passages": [
+                "34:10–11"
+              ],
+              "named": false
+            },
+            {
+              "number": 21,
+              "name": "Al-Anbiya",
+              "arabic": "الأنبياء",
+              "passages": [
+                "21:78–80"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Land of Bayt al-Maqdis",
+            "certainty": "region"
+          },
+          "points": 8,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "16",
+          "dated": false
+        },
+        {
+          "id": "sulayman",
+          "name": "Sulayman",
+          "arabicName": "سليمان",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Kingdom, wisdom and the wind",
+          "era": {
+            "label": "c. 10th century BCE",
+            "certainty": "estimate"
+          },
+          "summary": "Son of Dawud; given understanding, command of the wind and the jinn, and called the Queen of Saba' to Islam.",
+          "surahs": [
+            {
+              "number": 27,
+              "name": "An-Naml",
+              "arabic": "النمل",
+              "passages": [
+                "27:15–44"
+              ],
+              "named": false
+            },
+            {
+              "number": 34,
+              "name": "Saba",
+              "arabic": "سبأ",
+              "passages": [
+                "34:12–14"
+              ],
+              "named": false
+            },
+            {
+              "number": 38,
+              "name": "Sad",
+              "arabic": "ص",
+              "passages": [
+                "38:30–40"
+              ],
+              "named": false
+            },
+            {
+              "number": 21,
+              "name": "Al-Anbiya",
+              "arabic": "الأنبياء",
+              "passages": [
+                "21:78–82"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Land of Bayt al-Maqdis; Saba' in Yemen (27:22)",
+            "certainty": "region"
+          },
+          "points": 8,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "17",
+          "dated": false
+        },
+        {
+          "id": "ilyas",
+          "name": "Ilyas",
+          "arabicName": "إلياس",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Called his people away from Ba'l",
+          "era": {
+            "label": "Era not established",
+            "certainty": "disputed"
+          },
+          "summary": "Warned his people against worshipping Ba'l and leaving the Best of creators.",
+          "surahs": [
+            {
+              "number": 37,
+              "name": "As-Saffat",
+              "arabic": "الصافات",
+              "passages": [
+                "37:123–132"
+              ],
+              "named": false
+            },
+            {
+              "number": 6,
+              "name": "Al-An'am",
+              "arabic": "الأنعام",
+              "passages": [
+                "6:85"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Unknown location",
+            "certainty": "unknown"
+          },
+          "order": {
+            "label": "Placement disputed",
+            "disputed": true
+          },
+          "points": 10,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "18",
+          "dated": false
+        },
+        {
+          "id": "alyasa",
+          "name": "Al-Yasa'",
+          "arabicName": "اليسع",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Among those preferred above the worlds",
+          "era": {
+            "label": "Era not established",
+            "certainty": "disputed"
+          },
+          "summary": "Named among the prophets whom Allah guided and preferred.",
+          "surahs": [
+            {
+              "number": 6,
+              "name": "Al-An'am",
+              "arabic": "الأنعام",
+              "passages": [
+                "6:86"
+              ],
+              "named": false
+            },
+            {
+              "number": 38,
+              "name": "Sad",
+              "arabic": "ص",
+              "passages": [
+                "38:48"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Unknown location",
+            "certainty": "unknown"
+          },
+          "order": {
+            "label": "Placement disputed",
+            "disputed": true
+          },
+          "points": 10,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "19",
+          "dated": false
+        },
+        {
+          "id": "yunus",
+          "name": "Yunus",
+          "arabicName": "يونس",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Dhun-Nun; the only nation that believed when it saw the punishment",
+          "era": {
+            "label": "Era not established",
+            "certainty": "disputed"
+          },
+          "summary": "Left his people in anger, was swallowed by the fish, glorified Allah in the darkness and was saved; his people believed.",
+          "surahs": [
+            {
+              "number": 10,
+              "name": "Yunus",
+              "arabic": "يونس",
+              "passages": [
+                "10:98"
+              ],
+              "named": true
+            },
+            {
+              "number": 37,
+              "name": "As-Saffat",
+              "arabic": "الصافات",
+              "passages": [
+                "37:139–148"
+              ],
+              "named": false
+            },
+            {
+              "number": 21,
+              "name": "Al-Anbiya",
+              "arabic": "الأنبياء",
+              "passages": [
+                "21:87–88"
+              ],
+              "named": false
+            },
+            {
+              "number": 68,
+              "name": "Al-Qalam",
+              "arabic": "القلم",
+              "passages": [
+                "68:48–50"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Nineveh — historical tradition",
+            "certainty": "hypothesis"
+          },
+          "order": {
+            "label": "Placement disputed",
+            "disputed": true
+          },
+          "points": 10,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "20",
+          "dated": false
+        }
+      ]
+    },
+    {
+      "title": "The time of Isa",
+      "note": "Zakariya, Yahya and Isa were contemporaries.",
+      "items": [
+        {
+          "id": "zakariya",
+          "name": "Zakariya",
+          "arabicName": "زكريا",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Guardian of Maryam",
+          "era": {
+            "label": "c. 1st century BCE (estimate)",
+            "certainty": "estimate"
+          },
+          "ageMarker": "Given a son in old age, his wife barren (19:8)",
+          "summary": "Took charge of Maryam in the sanctuary and prayed for an heir; he was given Yahya.",
+          "surahs": [
+            {
+              "number": 19,
+              "name": "Maryam",
+              "arabic": "مريم",
+              "passages": [
+                "19:2–11"
+              ],
+              "named": false
+            },
+            {
+              "number": 3,
+              "name": "Aal-Imran",
+              "arabic": "آل عمران",
+              "passages": [
+                "3:37–41"
+              ],
+              "named": false
+            },
+            {
+              "number": 21,
+              "name": "Al-Anbiya",
+              "arabic": "الأنبياء",
+              "passages": [
+                "21:89–90"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Bayt al-Maqdis — the sanctuary (3:37)",
+            "certainty": "region"
+          },
+          "points": 12,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "21",
+          "dated": false
+        },
+        {
+          "id": "yahya",
+          "name": "Yahya",
+          "arabicName": "يحيى",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Given wisdom as a child",
+          "era": {
+            "label": "c. 1st century BCE–CE (estimate)",
+            "certainty": "estimate"
+          },
+          "ageMarker": "Given judgement while still a child (19:12)",
+          "summary": "Confirmer of a word from Allah; noble, chaste and a prophet among the righteous.",
+          "surahs": [
+            {
+              "number": 19,
+              "name": "Maryam",
+              "arabic": "مريم",
+              "passages": [
+                "19:7–15"
+              ],
+              "named": false
+            },
+            {
+              "number": 3,
+              "name": "Aal-Imran",
+              "arabic": "آل عمران",
+              "passages": [
+                "3:39"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Land of Bayt al-Maqdis",
+            "certainty": "region"
+          },
+          "points": 12,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "22",
+          "dated": false
+        },
+        {
+          "id": "isa",
+          "name": "Isa",
+          "arabicName": "عيسى",
+          "honorific": "(عليه السلام)",
+          "subtitle": "Al-Masih, son of Maryam; given the Injil",
+          "era": {
+            "label": "c. 1st century CE (estimate)",
+            "certainty": "estimate"
+          },
+          "ageMarker": "Spoke as an infant in the cradle (19:29–30)",
+          "summary": "Born to Maryam without a father; he was neither killed nor crucified but raised by Allah, and gave glad tidings of a messenger named Ahmad.",
+          "surahs": [
+            {
+              "number": 19,
+              "name": "Maryam",
+              "arabic": "مريم",
+              "passages": [
+                "19:16–36"
+              ],
+              "named": false
+            },
+            {
+              "number": 3,
+              "name": "Aal-Imran",
+              "arabic": "آل عمران",
+              "passages": [
+                "3:45–59"
+              ],
+              "named": false
+            },
+            {
+              "number": 4,
+              "name": "An-Nisa",
+              "arabic": "النساء",
+              "passages": [
+                "4:157–159"
+              ],
+              "named": false
+            },
+            {
+              "number": 5,
+              "name": "Al-Ma'idah",
+              "arabic": "المائدة",
+              "passages": [
+                "5:110–118"
+              ],
+              "named": false
+            },
+            {
+              "number": 61,
+              "name": "As-Saff",
+              "arabic": "الصف",
+              "passages": [
+                "61:6"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Land of Bayt al-Maqdis",
+            "certainty": "region"
+          },
+          "points": 12,
+          "evidence": [
+            "quran"
+          ],
+          "type": "prophet",
+          "chapter": "23",
+          "dated": false
+        }
+      ]
+    },
+    {
+      "title": "The final Messenger ﷺ",
+      "note": "Dated history — CE and AH shown with how certain each date is.",
+      "items": [
+        {
+          "id": "muhammad",
+          "name": "Muhammad",
+          "arabicName": "محمد",
+          "honorific": "ﷺ",
+          "subtitle": "The Messenger of Allah and the seal of the prophets (33:40)",
+          "era": {
+            "label": "c. 570 – 632 CE",
+            "certainty": "traditional"
+          },
+          "ageMarker": "40 at the first revelation; 63 at his passing (Sahih al-Bukhari, Sahih Muslim)",
+          "summary": "Born in Makkah, he received the Quran over 23 years, migrated to Madinah and completed the message. His life follows as five milestones.",
+          "surahs": [
+            {
+              "number": 47,
+              "name": "Muhammad",
+              "arabic": "محمد",
+              "passages": [
+                "47:2"
+              ],
+              "named": true
+            },
+            {
+              "number": 33,
+              "name": "Al-Ahzab",
+              "arabic": "الأحزاب",
+              "passages": [
+                "33:40"
+              ],
+              "named": false
+            },
+            {
+              "number": 48,
+              "name": "Al-Fath",
+              "arabic": "الفتح",
+              "passages": [
+                "48:29"
+              ],
+              "named": false
+            },
+            {
+              "number": 61,
+              "name": "As-Saff",
+              "arabic": "الصف",
+              "passages": [
+                "61:6"
+              ],
+              "named": false
+            }
+          ],
+          "place": {
+            "name": "Makkah and Madinah",
+            "certainty": "point"
+          },
+          "evidence": [
+            "quran",
+            "hadith"
+          ],
+          "points": 8,
+          "type": "prophet",
+          "chapter": "24",
+          "dated": true
+        },
+        {
+          "id": "birth",
+          "type": "milestone",
+          "name": "Birth of the Prophet ﷺ",
+          "arabicName": "مولد النبي ﷺ",
+          "honorific": "",
+          "subtitle": "Makkah — the Year of the Elephant",
+          "era": {
+            "label": "c. 570 CE",
+            "certainty": "traditional"
+          },
+          "summary": "Born in Makkah in the year traditionally called the Year of the Elephant. 570 and 571 CE are both given; neither is a confirmed date.",
+          "refs": [
+            {
+              "kind": "quran",
+              "ref": "Q 105:1–5",
+              "label": "The Elephant (context)"
+            },
+            {
+              "kind": "scholar",
+              "ref": "Sirah chronology",
+              "label": "Traditional dating"
+            }
+          ],
+          "place": {
+            "name": "Makkah",
+            "certainty": "point"
+          },
+          "evidence": [
+            "scholar"
+          ],
+          "points": 8,
+          "chapter": "25",
+          "dated": true
+        },
+        {
+          "id": "revelation",
+          "type": "milestone",
+          "name": "The first revelation",
+          "arabicName": "بدء الوحي",
+          "honorific": "",
+          "subtitle": "Cave of Hira, at age 40",
+          "era": {
+            "label": "c. 610 CE",
+            "certainty": "estimate"
+          },
+          "summary": "The first verses of Al-'Alaq were revealed in the Cave of Hira, opening the Prophet's ﷺ mission.",
+          "refs": [
+            {
+              "kind": "quran",
+              "ref": "Q 96:1–5",
+              "label": "First verses revealed"
+            },
+            {
+              "kind": "hadith",
+              "ref": "Sahih al-Bukhari 3",
+              "label": "Beginning of revelation"
+            }
+          ],
+          "place": {
+            "name": "Cave of Hira, Makkah",
+            "certainty": "point"
+          },
+          "evidence": [
+            "quran",
+            "hadith"
+          ],
+          "points": 8,
+          "chapter": "26",
+          "dated": true
+        },
+        {
+          "id": "hijrah",
+          "type": "milestone",
+          "name": "The Hijrah",
+          "arabicName": "الهجرة النبوية",
+          "honorific": "",
+          "subtitle": "Makkah to Madinah — year 1 of the Hijri calendar",
+          "era": {
+            "label": "622 CE · 1 AH",
+            "certainty": "exact"
+          },
+          "summary": "The migration to Madinah began the Madinan period. The Hijri calendar, adopted later under 'Umar, counts its years from it.",
+          "refs": [
+            {
+              "kind": "quran",
+              "ref": "Q 9:40",
+              "label": "The cave during the migration"
+            },
+            {
+              "kind": "hadith",
+              "ref": "Sahih al-Bukhari — narrations of the Hijrah",
+              "label": "Number to be confirmed"
+            }
+          ],
+          "place": {
+            "name": "Makkah to Madinah",
+            "certainty": "point"
+          },
+          "evidence": [
+            "quran",
+            "hadith"
+          ],
+          "points": 8,
+          "chapter": "27",
+          "dated": true
+        },
+        {
+          "id": "farewell",
+          "type": "milestone",
+          "name": "The Farewell Pilgrimage",
+          "arabicName": "حجة الوداع",
+          "honorific": "",
+          "subtitle": "The final Hajj and its sermon",
+          "era": {
+            "label": "10 AH · 632 CE",
+            "certainty": "exact"
+          },
+          "summary": "The Prophet ﷺ performed his only Hajj and addressed the people; Al-Ma'idah 5:3 was revealed at 'Arafah.",
+          "refs": [
+            {
+              "kind": "quran",
+              "ref": "Q 5:3",
+              "label": "“This day I have perfected…”"
+            },
+            {
+              "kind": "hadith",
+              "ref": "Sahih Muslim 1218",
+              "label": "Jabir's account of the Hajj"
+            }
+          ],
+          "place": {
+            "name": "Makkah and 'Arafah",
+            "certainty": "point"
+          },
+          "evidence": [
+            "quran",
+            "hadith"
+          ],
+          "points": 8,
+          "chapter": "28",
+          "dated": true
+        },
+        {
+          "id": "passing",
+          "type": "milestone",
+          "name": "Passing of the Prophet ﷺ",
+          "arabicName": "وفاة النبي ﷺ",
+          "honorific": "",
+          "subtitle": "The message completed",
+          "era": {
+            "label": "11 AH · 632 CE",
+            "certainty": "exact"
+          },
+          "ageMarker": "Aged 63 (lunar years)",
+          "summary": "He passed away in Madinah; Abu Bakr reminded the people that Muhammad was a messenger and that Allah is Ever-Living.",
+          "refs": [
+            {
+              "kind": "quran",
+              "ref": "Q 3:144",
+              "label": "Recited by Abu Bakr"
+            },
+            {
+              "kind": "quran",
+              "ref": "Q 39:30",
+              "label": "“Indeed, you will die…”"
+            },
+            {
+              "kind": "hadith",
+              "ref": "Sahih al-Bukhari 4466",
+              "label": "His age at passing"
+            }
+          ],
+          "place": {
+            "name": "Madinah",
+            "certainty": "point"
+          },
+          "evidence": [
+            "quran",
+            "hadith"
+          ],
+          "points": 8,
+          "chapter": "29",
+          "dated": true
+        }
+      ]
+    }
+  ]
+}
