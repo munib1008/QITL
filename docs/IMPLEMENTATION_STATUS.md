@@ -91,3 +91,45 @@ Code, API routes, database schema, RLS and triggers are complete and tested agai
 - Visual regression baselines against `design/prototype/home.html` (screenshots of the app are in `docs/design/screenshots/`).
 - Arabic interface review by a qualified translator; Urdu.
 - Final visual designs for the Quran reader, hadith explorer, atlas, genealogy explorer, Last Hour explorer, account and admin (listed as still to design in `design/README.md`; built here from the design system).
+
+## Mobile-first pass (2026-10-31)
+
+See `docs/RESPONSIVE.md` for the design tokens, the issue register, before/after screenshots and the honest list of what
+is not done (atlas and genealogy gestures, admin tables as cards, real-device testing, Lighthouse numbers).
+
+## Schema only: interpretation, narration, Creation Atlas, Mufti Q&A (2026-10-31)
+
+Migrations 1150–1600 are applied to Supabase and covered by `tests/db/production.test.ts`. **No page uses them yet.**
+
+| Area | Tables | Rules enforced in the database |
+|---|---|---|
+| Interpretation engine (1200) | `translation_editions`, `translator_profiles`, `source_licences` (view over `sources`), `quran_word_morphology`, `quran_word_senses`, `quran_word_occurrences` (view), `hadith_commentary_links`, `translation_comparisons`, `interpretation_explanations`, `interpretation_differences`, `interpretation_reviews`, `content_dependency_versions`; `tafsir_entries` gains `edition_id`, `flags` (weak narration, Isra'iliyyat, disputed, unattributed) | An edition shows only when verified and its source licence is cleared; early tafsir must carry a reliability note; corpus rows hidden until licensed; an explanation publishes only after all eight checks (Arabic source, references, licensing, attribution, grammar, hadith grading, Sunni scholarly, language quality) pass on its current version, each signed by the right role, plus a scholarly approval; editing makes a new version and flags dependants |
+| Story production and narration (1300) | `story_scripts`, `story_scenes`, `scene_claim_references`, `translation_glossary`, `translation_jobs`, `story_translations`, `translation_reviews`, `narration_voices`, `narration_jobs`, `narration_audio`, `scene_ambient_audio`, `scene_visual_assets`, `scene_animation_manifest`, `story_playback_preferences`, `story_playback_progress`, `story_publication_versions` | Every scene but "explore" needs approved claims; a script needs a scholarly approval; a translation publishes only from the current published source version with linguistic and religious reviews; voices need a recorded licence; audio is approved only for the current scene version with a pronunciation check; editing a scene makes its audio stale; idempotency keys on jobs; ambience gain capped at 0.4 |
+| Creation Atlas (1400) | `creation_categories` (six, seeded), `creation_profiles`, `creation_characteristics` (template fields), `creation_abilities`, `creation_limitations`, `creation_interactions`, `creation_lessons`, `creation_misconceptions`, `creation_source_references`, `creation_relationships`, `creation_stories`, `creation_visual_assets` | Each entry is classed revelation / authentic hadith / scholarly interpretation / not established; a known statement needs a claim; edges need a claim; visuals can never depict the unseen; scholarly approval to publish |
+| Mufti Q&A (1500) | `mufti_profiles`, `mufti_questions`, `mufti_assignments`, `mufti_answers`, `mufti_answer_citations`, `mufti_answer_reviews`, `mufti_question_follows` | Only an admin verifies a mufti; only verified, assigned muftis answer; an answer publishes with a citation and an independent review (never self-review); editing returns it to review; private questions visible to asker, assigned muftis and staff; no "accepted answer" |
+| Roles (1150) | `translation_reviewer`, `audio_producer`, `mufti` | |
+
+### External integrations (configured for development only)
+
+- **Lara Translate MCP** (`lara-translate`, https://mcp-v2.laratranslate.com/v1) is registered for Claude Code; it needs the
+  OAuth sign-in from an interactive `claude` terminal (`/mcp`). Production translation must use the server-side SDK
+  `@translated/lara` with `LARA_ACCESS_KEY_ID` / `LARA_ACCESS_KEY_SECRET` (not set; no worker built yet).
+- `bibooks` and `ai-translators` MCP servers were added locally at the owner's request; they are not used by the app.
+
+### Blockers that need the owner
+
+| Blocker | Needed for |
+|---|---|
+| Choose the Quran text source (King Fahd Complex developer resources, or Tanzil) and accept its terms; Tanzil allows verbatim copies with attribution and no changes | Every Arabic verse, word-by-word, interpretation |
+| Licences for each Quran translation (English, Urdu), tafsir (incl. Tafsir Muqatil ibn Sulayman: edition and rights unknown), Quranic Arabic Corpus (GPL: confirm its terms suit the site), sunnah.com API key and terms | Comparison UI, word-by-word, hadith, commentary |
+| A TTS provider with a documented commercial-use agreement, and licensed ambience recordings | Narration and Listen / Immersive modes |
+| Lara API credentials for production | Translation workflow |
+| Qualified scholarly reviewers, translation reviewers and verified muftis | Every publish step; no religious content can go live without them |
+| Supabase Auth URL settings (Site URL and `/auth/callback` redirect) and the first admin grant | Sign-in on qitl.vercel.app |
+
+### Not built yet (the next sessions)
+
+Story Production Studio (admin) and the server workers for Lara and TTS; the QITL Story Player (Read / Listen / Immersive,
+captions, ducking, preferences); the Interpretation Explorer in the Quran reader and the source import adapters; the
+Creation Atlas pages, comparison and relationship graph; Mufti Q&A pages and admin assignment; the reviewed reference
+story for Nuh (needs real sources, review and a voice licence before it can exist).
