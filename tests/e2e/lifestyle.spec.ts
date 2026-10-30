@@ -66,9 +66,7 @@ for (const width of [360, 1440]) {
         await pg.check(page);
         const sideways = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
         expect(sideways).toBeLessThanOrEqual(1);
-        // The shared glass bottom bar's contrast depends on whatever page content scrolls beneath it; it is audited on
-        // its own in mobile.spec.ts, so it is excluded here to keep this check about this module's pages.
-        const a = await new AxeBuilder({ page }).exclude("[data-bottom-nav]").withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]).analyze();
+        const a = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]).analyze();
         expect(a.violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(" ")).slice(0, 3).join(" | ")}`)).toEqual([]);
       });
     }

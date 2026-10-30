@@ -26,7 +26,8 @@
   box-shadow: 0 -6px 18px rgba(0, 0, 0, .06);
 }
 @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .qb-nav { background: var(--glass-fill); backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2); }
+  /* Nearly opaque so labels keep full contrast over any content scrolling beneath. */
+  .qb-nav { background: color-mix(in srgb, var(--surface-raised) 94%, transparent); backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2); }
 }
 @media (prefers-reduced-transparency: reduce) { .qb-nav { background: var(--surface-raised); backdrop-filter: none; -webkit-backdrop-filter: none; } }
 .qb-item {
