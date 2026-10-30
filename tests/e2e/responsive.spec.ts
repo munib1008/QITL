@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 /**
- * Responsive sweep: every public route, English and Arabic, at the brief's widths.
+ * Responsive sweep: every public route, in English, Arabic and Urdu, at the brief's widths.
  * Fails on horizontal page overflow, on content hidden behind the fixed bottom navigation and on primary controls
  * smaller than 44x44 px. With SHOTS=before|after it also saves full-page screenshots to docs/responsive/<SHOTS>/.
  */
@@ -106,13 +106,13 @@ async function hiddenBehindBottomNav(page: Page) {
   });
 }
 
-for (const locale of ["en", "ar"] as const) {
+for (const locale of ["en", "ar", "ur"] as const) {
   test.describe(`responsive ${locale}`, () => {
     test.skip(() => test.info().project.name !== "desktop", "one project drives every width");
     for (const route of ROUTES) {
-      test(`${locale} ${route}`, async ({ page, context }) => {
+      test(`${locale} ${route}`, async ({ page, context, baseURL }) => {
         test.setTimeout(120_000);
-        await context.addCookies([{ name: "qitl-locale", value: locale, url: "http://localhost:3100" }]);
+        await context.addCookies([{ name: "qitl-locale", value: locale, url: baseURL ?? "http://localhost:3100" }]);
         const problems: string[] = [];
         for (const w of WIDTHS) {
           await page.setViewportSize({ width: w, height: w < 600 ? 780 : 900 });

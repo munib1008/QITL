@@ -7,6 +7,7 @@ import { Markdown } from "@/components/ui/Markdown";
 import { ChapterNav } from "./ChapterNav";
 import { AnimationPlayer } from "./AnimationPlayer";
 import { QuizBlock } from "./QuizBlock";
+import { LanguageNote } from "@/components/i18n/LanguageNote";
 import type { Audience, Ref, Section, Story } from "@/lib/data/story-types";
 import { AUDIENCES, FACT_KEYS, FACT_TITLE, NOT_ESTABLISHED, STEP_ROLES, STEP_TITLE, refLabel } from "@/lib/data/story-types";
 
@@ -100,6 +101,7 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
         ))}
         <span className="zq-meta qs-levels-note">Reading levels change the presentation, never the evidence.</span>
       </div>
+      <LanguageNote kind="narration" />
       {chapterKey ? (
         <ChapterNav
           storageKey={chapterKey}

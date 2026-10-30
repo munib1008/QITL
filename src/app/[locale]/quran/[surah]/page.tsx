@@ -7,6 +7,7 @@ import { ReadingPage } from "@/components/shell/ReadingPage";
 import { AyahReader } from "@/components/quran/AyahReader";
 import { CitationChip, EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
+import { LanguageNote } from "@/components/i18n/LanguageNote";
 import { parseAyahRange } from "@/lib/refs";
 import { LOCALES } from "@/lib/i18n";
 
@@ -66,6 +67,7 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
       }
     >
       <div className="zq-pagebody">
+        <LanguageNote kind="quran" />
         {related.length ? (
           <section aria-labelledby="rel-h" className="pp-card">
             <h2 id="rel-h">On the journey</h2>

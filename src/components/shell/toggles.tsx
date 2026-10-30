@@ -1,26 +1,44 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { LOCALES, localizedPath, stripLocale, type Locale } from "@/lib/i18n";
+import { setLocaleCookie } from "@/lib/i18n/useLanguagePrefs";
 
-/** EN · ع: stores the choice in a cookie (read by the middleware) and reloads the page in that language. */
-export function LangToggle({ locale, label }: { locale: "en" | "ar"; label: string }) {
-  const router = useRouter();
-  const next = locale === "ar" ? "en" : "ar";
+export interface LangLabels {
+  label: string;
+  en: string;
+  ar: string;
+  ur: string;
+}
+
+/**
+ * EN / العربية / اردو: a three-way switch of plain links (44px targets). /ar/... and /ur/... set the qitl-locale cookie in
+ * the middleware; English goes through /en/..., which sets the cookie to en and redirects to the unprefixed URL, so the
+ * switch works without JavaScript. With JavaScript the cookie is also set before the full navigation (html lang/dir
+ * and fonts change with the language).
+ */
+export function LangToggle({ locale, labels, variant = "header" }: { locale: Locale; labels: LangLabels; variant?: "header" | "sheet" }) {
+  const path = stripLocale(usePathname() ?? "/");
+  const [query, setQuery] = useState("");
+  useEffect(() => setQuery(window.location.search), [path]);
   return (
-    <button
-      type="button"
-      className="zq-btn zq-btn-quiet zq-btn-sm"
-      aria-label={`${label}: ${next === "ar" ? "العربية" : "English"}`}
-      onClick={() => {
-        document.cookie = `qitl-locale=${next}; path=/; max-age=31536000; samesite=lax`;
-        const path = window.location.pathname.replace(/^\/ar(?=\/|$)/, "") || "/";
-        if (window.location.pathname !== path) router.push(path);
-        router.refresh();
-      }}
-    >
-      EN · <span lang="ar">ع</span>
-    </button>
+    <div className={`zq-lang zq-lang-${variant}`} role="group" aria-label={labels.label}>
+      {LOCALES.map((l) => (
+        <a
+          key={l}
+          href={(l === "en" ? (path === "/" ? "/en" : `/en${path}`) : localizedPath(path, l)) + query}
+          lang={l}
+          dir={l === "en" ? "ltr" : "rtl"}
+          hrefLang={l}
+          className="zq-lang-opt"
+          aria-current={l === locale ? "true" : undefined}
+          onClick={() => setLocaleCookie(l)}
+        >
+          {labels[l]}
+        </a>
+      ))}
+    </div>
   );
 }
 

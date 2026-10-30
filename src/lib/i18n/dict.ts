@@ -1,9 +1,10 @@
 /**
- * Interface strings. English is the reviewed source. The Arabic interface strings are a first draft that
- * still needs review by a qualified translator (design/README.md, "Open design items"); the UI says so.
- * Urdu slots in as another key with the same shape.
+ * Interface strings. English is the reviewed source. The Arabic and Urdu interface strings are first drafts that
+ * still need review by a qualified translator (design/README.md, "Open design items"); the UI says so
+ * (draftArabicUi, draftUrduUi). Religious terms follow translation_glossary; honorifics stay ﷺ and (عليه السلام).
+ * Module-specific strings live in ./modules (see docs/I18N.md), not here.
  */
-export type Locale = "en" | "ar";
+export type Locale = "en" | "ar" | "ur";
 
 const en = {
   skip: "Skip to content",
@@ -28,7 +29,7 @@ const en = {
     begin: "Begin exploring",
   },
   theme: { label: "Theme", light: "Light", dark: "Dark", system: "System" },
-  lang: { label: "Language", switchTo: "العربية" },
+  lang: { label: "Language", en: "English", ar: "العربية", ur: "اردو" },
   footer: {
     principles: "Respecting evidence · Preserving uncertainty · Learning together",
     corrections: "Found an error? Accepted corrections are published with a revision note.",
@@ -53,10 +54,23 @@ const en = {
     lastHour: "Signs, without dates",
     community: "Moderated discussion",
     learn: "Quranic Arabic lessons",
-    search: "Everything, in English or Arabic",
+    search: "Everything, in English, Arabic or Urdu",
   },
   learnArabic: "Learn Quranic Arabic",
+  prefs: {
+    title: "Language preferences",
+    interface: "Interface language",
+    quran: "Quran translation language",
+    narration: "Narration language",
+    arabicOnly: "Arabic only",
+    savedLocal: "Saved on this device",
+    savedAccount: "Saved to your account",
+    note: "Translations and narration appear only where a licensed, reviewed edition exists in that language; otherwise English or the Arabic alone is shown.",
+    unavailable: "Not available in this language yet",
+    storyNarration: "Story narration",
+  },
   draftArabicUi: "",
+  draftUrduUi: "",
 };
 
 const ar: typeof en = {
@@ -82,7 +96,7 @@ const ar: typeof en = {
     begin: "ابدأ الاستكشاف",
   },
   theme: { label: "المظهر", light: "فاتح", dark: "داكن", system: "النظام" },
-  lang: { label: "اللغة", switchTo: "English" },
+  lang: { label: "اللغة", en: "English", ar: "العربية", ur: "اردو" },
   footer: {
     principles: "احترام الدليل · حفظ مواضع عدم اليقين · نتعلم معًا",
     corrections: "وجدت خطأ؟ تُنشر التصحيحات المقبولة مع ملاحظة مراجعة.",
@@ -107,11 +121,92 @@ const ar: typeof en = {
     lastHour: "العلامات بلا تواريخ",
     community: "نقاش خاضع للإشراف",
     learn: "دروس العربية القرآنية",
-    search: "كل شيء بالعربية أو الإنجليزية",
+    search: "كل شيء بالعربية أو الإنجليزية أو الأردية",
   },
   learnArabic: "تعلّم العربية القرآنية",
+  prefs: {
+    title: "تفضيلات اللغة",
+    interface: "لغة الواجهة",
+    quran: "لغة ترجمة القرآن",
+    narration: "لغة السرد الصوتي",
+    arabicOnly: "العربية فقط",
+    savedLocal: "حُفظ على هذا الجهاز",
+    savedAccount: "حُفظ في حسابك",
+    note: "تظهر الترجمات والسرد فقط حيث توجد طبعة مرخّصة ومراجَعة بتلك اللغة؛ وإلا تُعرض الإنجليزية أو النص العربي وحده.",
+    unavailable: "غير متاح بهذه اللغة بعد",
+    storyNarration: "سرد القصة",
+  },
   draftArabicUi: "واجهة عربية تجريبية — الترجمة قيد المراجعة",
+  draftUrduUi: "",
 };
 
-export const dict = { en, ar };
+/** Draft Urdu (first pass with Lara, corrected by hand): needs review by a qualified translator, like the Arabic. */
+const ur: typeof en = {
+  skip: "مواد پر جائیں",
+  brandTagline: "قرآن، زمانی ترتیب میں",
+  nav: {
+    journey: "سفر",
+    explore: "دریافت کریں",
+    methodology: "طریقۂ کار",
+    prophets: "انبیاء",
+    timeline: "ٹائم لائن",
+    atlas: "اٹلس",
+    quran: "قرآن",
+    hadith: "حدیث",
+    stories: "قصے",
+    events: "واقعات",
+    genealogy: "نسب نامہ",
+    lastHour: "علاماتِ قیامت",
+    community: "کمیونٹی",
+    search: "تلاش",
+    signIn: "سائن اِن",
+    account: "میری لائبریری",
+    begin: "دریافت شروع کریں",
+  },
+  theme: { label: "تھیم", light: "روشن", dark: "تاریک", system: "سسٹم" },
+  lang: { label: "زبان", en: "English", ar: "العربية", ur: "اردو" },
+  footer: {
+    principles: "دلیل کا احترام · غیر یقینی کی حفاظت · مل کر سیکھنا",
+    corrections: "کوئی غلطی ملی؟ منظور شدہ اصلاحات نظرِثانی کے نوٹ کے ساتھ شائع کی جاتی ہیں۔",
+  },
+  bottom: {
+    home: "صفحۂ اوّل",
+    timeline: "ٹائم لائن",
+    quran: "قرآن",
+    explore: "دریافت",
+    profile: "پروفائل",
+    close: "بند کریں",
+    exploreTitle: "QITL دریافت کریں",
+    soon: "جلد آ رہا ہے",
+  },
+  exploreNotes: {
+    prophets: "۲۹ ابواب، آدم (عليه السلام) سے محمد ﷺ تک",
+    stories: "حوالوں کے ساتھ قصوں کا مطالعہ",
+    events: "قرآنی واقعات کا انسائیکلوپیڈیا",
+    hadith: "مستند مجموعے",
+    atlas: "مقامات، ان کی یقینی حیثیت کے ساتھ",
+    genealogy: "حوالہ شدہ خاندانی رشتے",
+    lastHour: "نشانیاں، تاریخوں کے بغیر",
+    community: "نگرانی میں ہونے والی گفتگو",
+    learn: "قرآنی عربی کے اسباق",
+    search: "سب کچھ، انگریزی، عربی یا اردو میں",
+  },
+  learnArabic: "قرآنی عربی سیکھیں",
+  prefs: {
+    title: "زبان کی ترجیحات",
+    interface: "انٹرفیس کی زبان",
+    quran: "ترجمۂ قرآن کی زبان",
+    narration: "صوتی بیان کی زبان",
+    arabicOnly: "صرف عربی",
+    savedLocal: "اس ڈیوائس پر محفوظ ہو گیا",
+    savedAccount: "آپ کے اکاؤنٹ میں محفوظ ہو گیا",
+    note: "ترجمہ اور صوتی بیان صرف وہیں دکھائے جاتے ہیں جہاں اس زبان میں لائسنس یافتہ اور نظرِثانی شدہ ایڈیشن موجود ہو؛ ورنہ انگریزی یا صرف عربی متن دکھایا جاتا ہے۔",
+    unavailable: "اس زبان میں ابھی دستیاب نہیں",
+    storyNarration: "قصے کا صوتی بیان",
+  },
+  draftArabicUi: "",
+  draftUrduUi: "اردو انٹرفیس کا مسودہ — ترجمہ زیرِ نظرِثانی ہے",
+};
+
+export const dict = { en, ar, ur };
 export type Dict = typeof en;

@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { AccountDashboard } from "@/components/account/AccountDashboard";
 import { EmptyState } from "@/components/ui/misc";
+import { LanguagePrefsPanel } from "@/components/account/LanguagePrefsPanel";
 import { getUser } from "@/lib/supabase/server";
 import { journeyStops } from "@/content/journey";
 
@@ -15,6 +16,10 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
   return (
     <ReadingPage locale={locale} crumbs={[{ label: "My library" }]} title="My library" lead="Your bookmarks, reading progress and private notes, and your account settings. Only you can see this page.">
       <div className="zq-pagebody">
+        {/* Three independent language choices; without an account they are kept on this device. */}
+        <div id="language">
+          <LanguagePrefsPanel locale={locale} />
+        </div>
         {sb && user ? (
           <AccountDashboard email={user.email ?? ""} names={Object.fromEntries(journeyStops().map((s) => [s.id, s.name]))} />
         ) : (

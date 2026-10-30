@@ -185,6 +185,20 @@ describe("story production and narration", () => {
     await rejects(db.as(alice, "update public.story_playback_preferences set ambient_volume = 0.9 where user_id = $1", [alice]), /check constraint/);
     expect(await db.as(bob, "select * from public.story_playback_preferences")).toHaveLength(0);
   });
+
+  test("language preferences: narration and Quran translation languages are checked and private", async () => {
+    await db.as(alice, "insert into public.story_playback_preferences (user_id) values ($1) on conflict (user_id) do nothing", [alice]);
+    await db.as(alice, "update public.story_playback_preferences set language = 'ur', quran_translation_language = 'none' where user_id = $1", [alice]);
+    const [row] = (await db.as<{ language: string; quran_translation_language: string }>(alice, "select language, quran_translation_language from public.story_playback_preferences where user_id = $1", [alice])) as [
+      { language: string; quran_translation_language: string },
+    ];
+    expect(row).toEqual({ language: "ur", quran_translation_language: "none" });
+    await rejects(db.as(alice, "update public.story_playback_preferences set quran_translation_language = 'fr' where user_id = $1", [alice]), /check constraint/);
+    await rejects(db.as(alice, "update public.story_playback_preferences set language = 'xx' where user_id = $1", [alice]), /check constraint/);
+    expect(await db.as(bob, "select * from public.story_playback_preferences where user_id = $1", [alice])).toHaveLength(0);
+    await db.as(alice, "update public.profiles set locale = 'ur' where id = $1", [alice]);
+    await rejects(db.as(alice, "update public.profiles set locale = 'fr' where id = $1", [alice]), /check constraint/);
+  });
 });
 
 describe("Creation Atlas", () => {

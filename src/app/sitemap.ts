@@ -11,6 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const prophets = journeyStops().map((s) => `/prophets/${s.id}`);
   return [...fixed, ...prophets, ...quran, ...hadith].map((p) => ({
     url: `${base}${p}`,
-    alternates: { languages: { en: `${base}${p}`, ar: `${base}/ar${p}` } },
+    alternates: { languages: { en: `${base}${p}`, ar: `${base}/ar${p}`, ur: `${base}/ur${p}` } },
   }));
 }

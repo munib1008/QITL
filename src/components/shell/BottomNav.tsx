@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { stripLocale } from "@/lib/i18n";
+import { resolveLocale, stripLocale } from "@/lib/i18n";
+import { LangToggle, type LangLabels } from "./toggles";
 import { useSession } from "@/components/account/useSession";
 
 export interface BottomNavLabels {
@@ -69,7 +70,7 @@ const ICONS = {
  * for the device's safe area. The page reserves the same height (body padding in pages.css) so nothing is hidden.
  * Explore opens a bottom sheet (a modal dialog: focus moves in, Esc and the backdrop close it, focus returns).
  */
-export function BottomNav({ labels, explore }: { labels: BottomNavLabels; explore: ExploreItem[] }) {
+export function BottomNav({ labels, explore, locale, langLabels }: { labels: BottomNavLabels; explore: ExploreItem[]; locale?: string; langLabels?: LangLabels }) {
   const path = stripLocale(usePathname() ?? "/");
   const session = useSession();
   const [open, setOpen] = useState(false);
@@ -164,6 +165,11 @@ export function BottomNav({ labels, explore }: { labels: BottomNavLabels; explor
                 </li>
               ))}
             </ul>
+            {langLabels ? (
+              <div className="qb-lang">
+                <LangToggle locale={resolveLocale(locale)} labels={langLabels} variant="sheet" />
+              </div>
+            ) : null}
           </div>
         </div>
       ) : null}
