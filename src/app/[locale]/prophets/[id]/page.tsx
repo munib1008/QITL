@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ChapterNav } from "@/components/story/ChapterNav";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ERA_TEXT, PLACE_TEXT, findStop, journeyStops, getJourney } from "@/content/journey";
@@ -139,6 +140,17 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
             <a href="#places">Places</a>
             <a href="#discuss">Discussion</a>
           </nav>
+          <ChapterNav
+            storageKey={`prophet:${p.id}`}
+            chapters={[
+              { id: "full-story", label: "The full story" },
+              { id: "story", label: "Outline" },
+              { id: "quran", label: "From the Quran" },
+              { id: "hadith", label: "From the Sunnah" },
+              { id: "places", label: "Places" },
+              { id: "discuss", label: "Discussion" },
+            ]}
+          />
 
           {story ? (
             <section className="pp-sec" id="full-story" aria-labelledby="full-story-h">

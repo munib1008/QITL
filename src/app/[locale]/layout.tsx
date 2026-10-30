@@ -4,6 +4,7 @@ import { fontVariables } from "../fonts";
 import { getDict, isLocale, LOCALES } from "@/lib/i18n";
 import { publicEnv } from "@/lib/env";
 import { ServiceWorker } from "@/components/shell/ServiceWorker";
+import { BottomNav } from "@/components/shell/BottomNav";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover", // safe-area insets for the bottom navigation on notched phones
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#f7f3ea" },
     { media: "(prefers-color-scheme: dark)", color: "#061519" },
@@ -50,6 +52,21 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           {t.skip}
         </a>
         {children}
+        <BottomNav
+          labels={t.bottom}
+          explore={[
+            { href: "/prophets", label: t.nav.prophets, note: t.exploreNotes.prophets },
+            { href: "/stories", label: t.nav.stories, note: t.exploreNotes.stories },
+            { href: "/events", label: t.nav.events, note: t.exploreNotes.events },
+            { href: "/hadith", label: t.nav.hadith, note: t.exploreNotes.hadith },
+            { href: "/atlas", label: t.nav.atlas, note: t.exploreNotes.atlas },
+            { href: "/genealogy", label: t.nav.genealogy, note: t.exploreNotes.genealogy },
+            { href: "/last-hour", label: t.nav.lastHour, note: t.exploreNotes.lastHour },
+            { href: "/community", label: t.nav.community, note: t.exploreNotes.community },
+            { href: "/learn", label: t.learnArabic, note: t.exploreNotes.learn },
+            { href: "/search", label: t.nav.search, note: t.exploreNotes.search },
+          ]}
+        />
         <ServiceWorker />
       </body>
     </html>

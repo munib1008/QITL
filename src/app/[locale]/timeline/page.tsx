@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ERA_TEXT, PLACE_TEXT, findStop, getJourney } from "@/content/journey";
+import { findStop, getJourney } from "@/content/journey";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { VerticalTimeline } from "@/components/ui/VerticalTimeline";
-import { CitationChip, DraftBadge, EraTag, EvidenceLabel } from "@/components/ui/evidence";
-import { EmptyState } from "@/components/ui/misc";
+import { DraftBadge } from "@/components/ui/evidence";
 import { journeyTimeline, todayLabel } from "@/lib/timeline";
 import { eventEras, publishedEvents } from "@/lib/data/events";
-import { PRECISION_TEXT } from "@/components/ui/cards";
-import { quranHref } from "@/lib/refs";
 
 export const metadata: Metadata = {
   title: "Timeline",
@@ -38,85 +35,21 @@ export default async function TimelinePage({ params, searchParams }: { params: P
       <div className="zq-pagebody">
         <div className="zq-split">
           <div>
-            <VerticalTimeline eras={journeyTimeline(j)} selected={s?.id} today={todayLabel()} />
+            <VerticalTimeline eras={journeyTimeline(j)} selected={s?.id} today={todayLabel()} enhance />
             {events?.length ? (
               <section aria-labelledby="reviewed-events-h" style={{ marginTop: 24 }}>
                 <h2 id="reviewed-events-h" className="zq-eyebrow" style={{ padding: "0 16px" }}>
                   Reviewed events
                 </h2>
-                <VerticalTimeline eras={eventEras(events)} selected={selected} today={false} label="Reviewed events" />
+                <VerticalTimeline eras={eventEras(events)} selected={ev ? selected : undefined} today={false} label="Reviewed events" />
               </section>
             ) : null}
             <p className="zq-meta" style={{ padding: "0 16px" }}>
               Signs of the Last Hour are not placed on this timeline: no date is known. See the <Link href="/last-hour">Last Hour explorer</Link>.
             </p>
           </div>
-          <div className="zq-split-sticky" aria-live="polite">
-            {ev ? (
-              <article className="zq-card" style={{ maxWidth: "none" }} aria-labelledby="sel-title">
-                <div className="zq-card-head">
-                  <p className="zq-eyebrow">Event</p>
-                  {ev.evidence_claims ? <EvidenceLabel kind={ev.evidence_claims.evidence} /> : null}
-                </div>
-                <h2 id="sel-title" className="zq-title" style={{ fontSize: 24, lineHeight: "32px", fontFamily: "var(--font-display)" }}>
-                  {ev.title}{" "}
-                  {ev.title_ar ? (
-                    <span lang="ar" dir="rtl" className="zq-jc-sar">
-                      {ev.title_ar}
-                    </span>
-                  ) : null}
-                </h2>
-                {ev.summary ? <p className="zq-meta">{ev.summary}</p> : null}
-                <dl className="zq-kv">
-                  <dt>Date</dt>
-                  <dd>{PRECISION_TEXT[ev.date_precision]}</dd>
-                </dl>
-              </article>
-            ) : s ? (
-              <article className="zq-card" style={{ maxWidth: "none" }} aria-labelledby="sel-title">
-                <div className="zq-card-head">
-                  <p className="zq-eyebrow">{s.type === "milestone" ? "Milestone" : "Prophet"}</p>
-                  <EraTag {...s.era} />
-                </div>
-                <h2 id="sel-title" className="zq-title" style={{ fontSize: 24, lineHeight: "32px", fontFamily: "var(--font-display)" }}>
-                  {s.name} <span lang="ar" className="zq-meta" style={{ display: "inline" }}>{s.honorific}</span>
-                </h2>
-                <p className="zq-meta">{s.summary}</p>
-                <dl className="zq-kv">
-                  <dt>Date</dt>
-                  <dd>
-                    {s.era.label} — {ERA_TEXT[s.era.certainty]}
-                  </dd>
-                  <dt>Place</dt>
-                  <dd>
-                    {PLACE_TEXT[s.place?.certainty ?? "unknown"]}: {s.place?.name ?? "Unknown"}
-                  </dd>
-                </dl>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 6, alignItems: "center" }}>
-                  {(s.evidence ?? ["quran"]).map((k) => (
-                    <EvidenceLabel key={k} kind={k} />
-                  ))}
-                  {(s.surahs ?? []).slice(0, 3).flatMap((su) => su.passages.slice(0, 1).map((p) => <CitationChip key={p} href={quranHref(p)}>{`Q ${p}`}</CitationChip>))}
-                </div>
-                <div className="zq-actions">
-                  <Link className="zq-btn zq-btn-primary zq-btn-sm zq-btn-link" href={`/prophets/${s.id}`}>
-                    Read the story
-                  </Link>
-                  <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" href={`/atlas?focus=${s.id}`}>
-                    Show on the atlas
-                  </Link>
-                  {pos?.next ? (
-                    <Link className="zq-btn zq-btn-quiet zq-btn-sm zq-btn-link" href={`/timeline?selected=${pos.next.id}`} scroll={false}>
-                      Next: {pos.next.name} →
-                    </Link>
-                  ) : null}
-                </div>
-              </article>
-            ) : (
-              <EmptyState label={<EvidenceLabel kind="unknown">Nothing selected</EvidenceLabel>} title="Select a stop on the timeline.">
-                <p>Its card, evidence and place appear here. Each stop links to its story and to the atlas.</p>
-              </EmptyState>
-            )}
+          <div className="zq-split-sticky">
+            <p className="zq-meta zq-vt-hint">Tap a stop to open its card: summary, date certainty, place, sources and the full story.</p>
             <div style={{ marginTop: 16 }}>
               <DateLegend />
             </div>

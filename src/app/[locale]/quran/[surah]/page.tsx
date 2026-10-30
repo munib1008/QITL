@@ -93,6 +93,27 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
             <p>It is shown only from the verified source import, never typed in. Tafsir and translations appear here once licensed and reviewed.</p>
           </EmptyState>
         )}
+        <nav className="qr-surahnav" aria-label="Surah navigation">
+          {n > 1 ? (
+            <Link className="zq-btn zq-btn-secondary zq-btn-link" href={`/quran/${n - 1}`} rel="prev">
+              ← Surah {n - 1}
+              {surahList()?.[n - 2] ? ` · ${surahList()![n - 2]!.name}` : ""}
+            </Link>
+          ) : (
+            <span />
+          )}
+          <Link className="zq-btn zq-btn-quiet zq-btn-link" href="/quran">
+            All surahs
+          </Link>
+          {n < 114 ? (
+            <Link className="zq-btn zq-btn-secondary zq-btn-link" href={`/quran/${n + 1}`} rel="next">
+              Surah {n + 1}
+              {surahList()?.[n] ? ` · ${surahList()![n]!.name}` : ""} →
+            </Link>
+          ) : (
+            <span />
+          )}
+        </nav>
         <section aria-labelledby="tafsir-h">
           <h2 id="tafsir-h" className="zq-eyebrow">
             Tafsir

@@ -1,4 +1,5 @@
 import "server-only";
+import { PRECISION_TEXT } from "@/components/ui/cards";
 import type { EvidenceKind } from "@/content/labels";
 import type { DatePrecision } from "@/components/ui/cards";
 import type { TimelineEra } from "@/components/ui/VerticalTimeline";
@@ -55,6 +56,12 @@ export function eventEras(events: PublishedEvent[]): TimelineEra[] {
           dateLabel: formatRange(e.start_year, e.end_year, e.start_ah, e.end_ah, e.date_precision === "estimated"),
           evidence: e.evidence_claims?.evidence,
           href: `/timeline?selected=event-${e.slug}`,
+          detail: {
+            summary: e.summary ?? undefined,
+            facts: [["Date", PRECISION_TEXT[e.date_precision]] as [string, string]],
+            refs: [],
+            links: [{ label: "Read about this event", href: `/events/${e.slug}`, primary: true }],
+          },
         })),
       };
     })

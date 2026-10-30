@@ -86,7 +86,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
       <div className="pp-grid">
         <div>
           {story.state === "ok" && story.story ? (
-            <StoryView story={story.story} name={e.title} />
+            <StoryView story={story.story} name={e.title} chapterKey={`event:${e.slug}`} />
           ) : (
             <EmptyState label={<EvidenceLabel kind="unknown">Not yet written</EvidenceLabel>} title="The full story of this event is not published yet." />
           )}

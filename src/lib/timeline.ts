@@ -1,6 +1,8 @@
 import type { JourneyItem, Journey } from "@/content/journey";
 import type { TimelineEra, TimelineItem } from "@/components/ui/VerticalTimeline";
 import type { DatePrecision } from "@/components/ui/cards";
+import { ERA_TEXT, PLACE_TEXT } from "@/content/journey";
+import { quranHref } from "@/lib/refs";
 
 /** Journey certainty → timeline mark precision. Relative and disputed eras stay on the relative-order track. */
 export function precisionOf(s: JourneyItem): DatePrecision {
@@ -34,6 +36,24 @@ export function journeyTimeline(j: Journey): TimelineEra[] {
         dateLabel: pr === "relative" ? "Relative order only" : pr === "unknown" ? "Date unknown" : i.era.label,
         evidence: pr === "estimated" ? "estimate" : i.era.certainty === "disputed" ? "disputed" : undefined,
         href: `/timeline?selected=${i.id}`,
+        detail: {
+          summary: i.summary,
+          facts: [
+            ["Date", `${i.era.label} — ${ERA_TEXT[i.era.certainty]}`],
+            ["Place", `${PLACE_TEXT[i.place?.certainty ?? "unknown"]}: ${i.place?.name ?? "Unknown"}`],
+          ],
+          refs: (i.surahs ?? [])
+            .slice(0, 3)
+            .flatMap((su) => su.passages.slice(0, 1))
+            .flatMap((p) => {
+              const href = quranHref(p);
+              return href ? [{ label: `Q ${p}`, href }] : [];
+            }),
+          links: [
+            { label: "Read the story", href: `/prophets/${i.id}`, primary: true },
+            { label: "Show on the atlas", href: `/atlas?focus=${i.id}` },
+          ],
+        },
       };
     });
     return { title: e.title, kind: dated ? "dated" : "relative", note: e.note, items };

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { CitationChip, EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
 import { Markdown } from "@/components/ui/Markdown";
+import { ChapterNav } from "./ChapterNav";
 import { AnimationPlayer } from "./AnimationPlayer";
 import { QuizBlock } from "./QuizBlock";
 import type { Audience, Ref, Section, Story } from "@/lib/data/story-types";
@@ -29,7 +30,7 @@ function Refs({ refs, evidence }: { refs: Ref[]; evidence?: Section["evidence"] 
  * One story, in three reading levels. Every level rests on the same reviewed claims: a kids or young text is an
  * adaptation of a full section on the same claim. Where no adaptation exists yet, the full text is shown and says so.
  */
-export function StoryView({ story, name, intro }: { story: Story; name: string; intro?: ReactNode }) {
+export function StoryView({ story, name, intro, chapterKey }: { story: Story; name: string; intro?: ReactNode; /** shows sticky chapter progress (pages without their own) */ chapterKey?: string }) {
   const [level, setLevel] = useState<Audience>("full");
   useEffect(() => {
     try {
@@ -99,6 +100,23 @@ export function StoryView({ story, name, intro }: { story: Story; name: string; 
         ))}
         <span className="zq-meta qs-levels-note">Reading levels change the presentation, never the evidence.</span>
       </div>
+      {chapterKey ? (
+        <ChapterNav
+          storageKey={chapterKey}
+          chapters={[
+            { id: "qs-quick", label: "Quick understanding" },
+            { id: "qs-a", label: "Introduction" },
+            { id: "qs-b", label: "Before the mission" },
+            { id: "qs-c", label: "The calling" },
+            { id: "qs-d", label: "Challenges" },
+            { id: "qs-e", label: "Outcome" },
+            { id: "qs-f", label: "Takeaways" },
+            { id: "qs-reflect", label: "Reflection" },
+            { id: "qs-quiz", label: "Quiz" },
+            { id: "qs-g", label: "Sources" },
+          ]}
+        />
+      ) : null}
 
       {story.media.length ? (
         <div className="qs-media">
