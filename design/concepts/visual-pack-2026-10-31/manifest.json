@@ -1,0 +1,218 @@
+{
+  "collection": "QITL visual concepts",
+  "source_image": "Generated concept contact sheet",
+  "production_warning": "Images are concepts and not historical or theological evidence. Avoid depicting prophets or unseen beings. Verify symbols, inscriptions and cultural details.",
+  "asset_count": 42,
+  "assets": [
+    {
+      "path": "png/ui/qitl-logo-lockup.png",
+      "label": "QITL logo brand lockup",
+      "notes": "Concept art; check embedded type before final production"
+    },
+    {
+      "path": "png/ui/qitl-square-logo.png",
+      "label": "QITL square emblem",
+      "notes": "Concept app icon"
+    },
+    {
+      "path": "png/ui/qitl-hero-banner.png",
+      "label": "QITL hero banner",
+      "notes": "Text baked into visual; avoid for localization"
+    },
+    {
+      "path": "png/ui/qitl-quran-visual.png",
+      "label": "Quran reading visual",
+      "notes": "Illustrative graphic, not an authentic mushaf page"
+    },
+    {
+      "path": "png/stories/nuh-ark.png",
+      "label": "Nuh \u2014 flood",
+      "notes": "Concept illustration only; source-ground details and non-figurative restrictions require editorial review"
+    },
+    {
+      "path": "png/stories/musa-sea.png",
+      "label": "Musa \u2014 sea parting",
+      "notes": "Concept illustration only; source-ground details and non-figurative restrictions require editorial review"
+    },
+    {
+      "path": "png/stories/ibrahim-kaaba.png",
+      "label": "Ibrahim \u2014 Kaaba",
+      "notes": "Concept illustration only; source-ground details and non-figurative restrictions require editorial review"
+    },
+    {
+      "path": "png/stories/yusuf-well.png",
+      "label": "Yusuf \u2014 well",
+      "notes": "Concept illustration only; source-ground details and non-figurative restrictions require editorial review"
+    },
+    {
+      "path": "png/stories/ayyub-night.png",
+      "label": "Ayyub \u2014 trials",
+      "notes": "Concept illustration only; source-ground details and non-figurative restrictions require editorial review"
+    },
+    {
+      "path": "png/stories/yunus-whale.png",
+      "label": "Yunus \u2014 whale",
+      "notes": "Concept illustration only; source-ground details and non-figurative restrictions require editorial review"
+    },
+    {
+      "path": "png/stories/sulayman-kingdom.png",
+      "label": "Sulayman \u2014 kingdom",
+      "notes": "Concept illustration only; source-ground details and non-figurative restrictions require editorial review"
+    },
+    {
+      "path": "png/stories/ashab-al-kahf.png",
+      "label": "People of the Cave",
+      "notes": "Concept illustration only; source-ground details and non-figurative restrictions require editorial review"
+    },
+    {
+      "path": "png/stories/people-of-ad.png",
+      "label": "People of Ad",
+      "notes": "Concept artwork; do not treat as actual geographical/historical depiction"
+    },
+    {
+      "path": "png/stories/thamud-rocks.png",
+      "label": "Thamud",
+      "notes": "Concept artwork; do not treat as actual geographical/historical depiction"
+    },
+    {
+      "path": "png/stories/people-of-lut.png",
+      "label": "People of Lut",
+      "notes": "Concept artwork; do not treat as actual geographical/historical depiction"
+    },
+    {
+      "path": "png/stories/garden-symbolic.png",
+      "label": "Garden symbolic motif",
+      "notes": "Concept artwork; do not treat as actual geographical/historical depiction"
+    },
+    {
+      "path": "png/stories/fire-warning-symbolic.png",
+      "label": "Fire symbolic motif",
+      "notes": "Concept artwork; do not treat as actual geographical/historical depiction"
+    },
+    {
+      "path": "png/stories/yajuj-majuj-barrier.png",
+      "label": "Yajuj and Majuj barrier",
+      "notes": "Concept artwork; do not treat as actual geographical/historical depiction"
+    },
+    {
+      "path": "png/stories/dhul-qarnayn-journey.png",
+      "label": "Dhul Qarnayn journey",
+      "notes": "Concept artwork; do not treat as actual geographical/historical depiction"
+    },
+    {
+      "path": "png/stories/dawud-architecture.png",
+      "label": "Dawud context illustration",
+      "notes": "Concept artwork; do not treat as actual geographical/historical depiction"
+    },
+    {
+      "path": "png/ui/icon-quran-reader.png",
+      "label": "Quran Reader",
+      "notes": "Concept icon; embedded tiny writing may be decorative, do not use as authentic Arabic"
+    },
+    {
+      "path": "png/ui/icon-word-by-word.png",
+      "label": "Word By Word",
+      "notes": "Concept icon; embedded tiny writing may be decorative, do not use as authentic Arabic"
+    },
+    {
+      "path": "png/ui/icon-translations.png",
+      "label": "Translations",
+      "notes": "Concept icon; embedded tiny writing may be decorative, do not use as authentic Arabic"
+    },
+    {
+      "path": "png/ui/icon-tafsir.png",
+      "label": "Tafsir",
+      "notes": "Concept icon; embedded tiny writing may be decorative, do not use as authentic Arabic"
+    },
+    {
+      "path": "png/ui/icon-hadith.png",
+      "label": "Hadith",
+      "notes": "Concept icon; embedded tiny writing may be decorative, do not use as authentic Arabic"
+    },
+    {
+      "path": "png/ui/icon-timeline.png",
+      "label": "Timeline",
+      "notes": "Concept icon; embedded tiny writing may be decorative, do not use as authentic Arabic"
+    },
+    {
+      "path": "png/ui/icon-events.png",
+      "label": "Events",
+      "notes": "Concept icon; embedded tiny writing may be decorative, do not use as authentic Arabic"
+    },
+    {
+      "path": "png/ui/icon-lessons.png",
+      "label": "Lessons",
+      "notes": "Concept icon; embedded tiny writing may be decorative, do not use as authentic Arabic"
+    },
+    {
+      "path": "png/ui/icon-story-player.png",
+      "label": "Story Player",
+      "notes": "Concept icon; embedded tiny writing may be decorative, do not use as authentic Arabic"
+    },
+    {
+      "path": "png/ui/icon-kids-mode.png",
+      "label": "Kids Mode",
+      "notes": "Concept icon; embedded tiny writing may be decorative, do not use as authentic Arabic"
+    },
+    {
+      "path": "png/ui/icon-mufti-qa.png",
+      "label": "Mufti Qa",
+      "notes": "Concept icon; embedded tiny writing may be decorative, do not use as authentic Arabic"
+    },
+    {
+      "path": "png/ui/icon-account.png",
+      "label": "Account",
+      "notes": "Concept icon; embedded tiny writing may be decorative, do not use as authentic Arabic"
+    },
+    {
+      "path": "png/stories/nuh-rain-wide.png",
+      "label": "Nuh \u2014 storm and flood",
+      "notes": "Concept art / ambient scene, not eyewitness reconstruction"
+    },
+    {
+      "path": "gif/nuh-rain.gif",
+      "label": "Nuh \u2014 storm and flood",
+      "notes": "Animated 2-second ambient pan/light loop; prototype motion, not scene-specific physical simulation"
+    },
+    {
+      "path": "png/stories/musa-water-wide.png",
+      "label": "Musa \u2014 sea parting",
+      "notes": "Concept art / ambient scene, not eyewitness reconstruction"
+    },
+    {
+      "path": "gif/musa-water.gif",
+      "label": "Musa \u2014 sea parting",
+      "notes": "Animated 2-second ambient pan/light loop; prototype motion, not scene-specific physical simulation"
+    },
+    {
+      "path": "png/stories/ibrahim-night-wide.png",
+      "label": "Ibrahim \u2014 symbolic night sky",
+      "notes": "Concept art / ambient scene, not eyewitness reconstruction"
+    },
+    {
+      "path": "gif/ibrahim-night.gif",
+      "label": "Ibrahim \u2014 symbolic night sky",
+      "notes": "Animated 2-second ambient pan/light loop; prototype motion, not scene-specific physical simulation"
+    },
+    {
+      "path": "png/stories/nature-water-wide.png",
+      "label": "Nature scenery \u2014 thematic visual",
+      "notes": "Concept art / ambient scene, not eyewitness reconstruction"
+    },
+    {
+      "path": "gif/nature-water.gif",
+      "label": "Nature scenery \u2014 thematic visual",
+      "notes": "Animated 2-second ambient pan/light loop; prototype motion, not scene-specific physical simulation"
+    },
+    {
+      "path": "png/stories/warning-flames-wide.png",
+      "label": "Symbolic warning motif",
+      "notes": "Concept art / ambient scene, not eyewitness reconstruction"
+    },
+    {
+      "path": "gif/warning-flames.gif",
+      "label": "Symbolic warning motif",
+      "notes": "Animated 2-second ambient pan/light loop; prototype motion, not scene-specific physical simulation"
+    }
+  ]
+}
