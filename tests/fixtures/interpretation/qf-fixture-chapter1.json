@@ -1,0 +1,8 @@
+{
+  "_fixture": "synthetic placeholder in the Quran Foundation response shape, not a translation",
+  "translations": [
+    { "resource_id": 999, "verse_key": "1:1", "text": "FIXTURE-QF-1-1" },
+    { "resource_id": 999, "verse_key": "1:2", "text": "FIXTURE-QF-1-2<sup foot_note=1>1</sup>" }
+  ],
+  "meta": { "translation_name": "FIXTURE", "author_name": "FIXTURE" }
+}

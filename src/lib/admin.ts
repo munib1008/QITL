@@ -3,7 +3,7 @@ import type { NextRequest, NextResponse } from "next/server";
 import type { SupabaseClient, User } from "@supabase/supabase-js";
 import { fail, isResponse, requireUser } from "@/lib/api";
 
-export type Role = "moderator" | "editor" | "scholarly_reviewer" | "admin";
+export type Role = "moderator" | "editor" | "scholarly_reviewer" | "translation_reviewer" | "admin";
 
 /**
  * Staff gate for admin routes: signed in, same-origin, and holding the role. The database enforces the same

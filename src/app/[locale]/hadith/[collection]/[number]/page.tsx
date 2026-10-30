@@ -5,7 +5,7 @@ import { HadithCard } from "@/components/ui/cards";
 import { EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
-import { collectionById } from "@/lib/data/hadith";
+import { AUTHENTIC_GRADES, collectionById, presentedAsSahih } from "@/lib/data/hadith";
 import { getServerSupabase } from "@/lib/supabase/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ collection: string; number: string }> }): Promise<Metadata> {
@@ -28,7 +28,6 @@ interface Entry {
   hadith_translations: Array<{ translator: string; text: string }>;
   hadith_gradings: Grading[];
 }
-const AUTH = new Set(["sahih", "hasan", "hasan sahih", "sahih li-ghayrihi", "hasan li-ghayrihi"]);
 
 export default async function HadithPage({ params }: { params: Promise<{ locale: string; collection: string; number: string }> }) {
   const { locale, collection, number } = await params;
@@ -62,9 +61,16 @@ export default async function HadithPage({ params }: { params: Promise<{ locale:
                   numbering={e.numbering_system}
                   arabic={e.arabic}
                   translation={t?.text}
-                  gradings={e.hadith_gradings.map((g) => ({ grade: g.grade_label, grader: g.grader, source: g.citation, authentic: AUTH.has(g.grade), varies }))}
+                  gradings={e.hadith_gradings.map((g) => ({ grade: g.grade_label, grader: g.grader, source: g.citation, authentic: AUTHENTIC_GRADES.has(g.grade), varies }))}
                   actions={{ bookmark: { type: "hadith", id: `${c.id}:${e.canonical_number}` } }}
                 />
+                {!c.sahihCollection ? (
+                  <p className="zq-meta" data-sahih-presentation={presentedAsSahih(c.id, e.hadith_gradings) ? "sahih" : "not-sahih"}>
+                    {presentedAsSahih(c.id, e.hadith_gradings)
+                      ? "Presented as sahih because a named scholar's recorded grading of this narration says so."
+                      : `Not presented as sahih: no recorded grading of this narration says sahih. Being in ${c.name} is not a grade.`}
+                  </p>
+                ) : null}
                 {t ? <p className="zq-licence">Translation: {t.translator}</p> : <p className="zq-licence zq-licence-pending">Translation unavailable — licence pending</p>}
                 {varies ? (
                   <section className="pp-card" aria-labelledby={`dis-${e.id}`}>

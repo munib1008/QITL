@@ -1,0 +1,24 @@
+{
+  "_fixture": "synthetic placeholders in the sunnah.com API response shape, not hadith text",
+  "data": [
+    {
+      "collection": "tirmidhi", "bookNumber": "1", "chapterId": "1.00", "hadithNumber": "101",
+      "hadith": [
+        { "lang": "en", "chapterTitle": "FIXTURE", "body": "FIXTURE-EN-101", "grades": [{ "graded_by": "Fixture Grader A", "grade": "Sahih (Fixture Grader A)" }] },
+        { "lang": "ar", "chapterTitle": "FIXTURE", "body": "FIXTURE-AR-101", "grades": [] }
+      ]
+    },
+    {
+      "collection": "tirmidhi", "bookNumber": "1", "chapterId": "1.00", "hadithNumber": "102",
+      "hadith": [
+        { "lang": "en", "body": "FIXTURE-EN-102", "grades": [{ "graded_by": "Fixture Grader A", "grade": "Da'if" }, { "graded_by": "", "grade": "Hasan" }] },
+        { "lang": "ar", "body": "FIXTURE-AR-102", "grades": [{ "graded_by": "Fixture Grader B", "grade": "Hasan" }] }
+      ]
+    },
+    {
+      "collection": "tirmidhi", "bookNumber": "1", "chapterId": "1.00", "hadithNumber": "103 bad",
+      "hadith": [{ "lang": "ar", "body": "FIXTURE-AR-103" }]
+    }
+  ],
+  "total": 3, "limit": 50, "previous": null, "next": null
+}

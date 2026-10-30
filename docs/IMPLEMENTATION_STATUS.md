@@ -25,7 +25,7 @@ What works today, what is blocked and by what. "Working" means wired end to end 
   claim; the database refuses anything else and publishes them only after their full section.
 - **Evidence rule:** story claims may cite the Quran and narrations from Sahih al-Bukhari, Sahih Muslim, Jami' at-Tirmidhi and Sunan
   Ibn Majah only, and every hadith citation must name an authentic (sahih or hasan) grading by a named scholar. Enforced by the database.
-  The seven-collection catalogue remains for the hadith explorer.
+  The public hadith catalogue is the same four collections (2026-10-31; was seven).
 - **Quranic events encyclopedia** at /events and /events/[slug], connected to the timeline, people and places. The brief's event list can
   be imported as drafts (titles only) from the Story editor.
 - **Quizzes** built only on reviewed claims, with right/wrong feedback and the source, no points; questions lock once published.
@@ -99,7 +99,7 @@ is not done (atlas and genealogy gestures, admin tables as cards, real-device te
 
 ## Schema only: interpretation, narration, Creation Atlas, Mufti Q&A (2026-10-31)
 
-Migrations 1150–1600 are applied to Supabase and covered by `tests/db/production.test.ts`. **No page uses them yet.**
+Migrations 1150–1600 are applied to Supabase and covered by `tests/db/production.test.ts`. The interpretation tables are used by the Study panel (below); the others have no pages yet.
 
 | Area | Tables | Rules enforced in the database |
 |---|---|---|
@@ -108,6 +108,27 @@ Migrations 1150–1600 are applied to Supabase and covered by `tests/db/producti
 | Creation Atlas (1400) | `creation_categories` (six, seeded), `creation_profiles`, `creation_characteristics` (template fields), `creation_abilities`, `creation_limitations`, `creation_interactions`, `creation_lessons`, `creation_misconceptions`, `creation_source_references`, `creation_relationships`, `creation_stories`, `creation_visual_assets` | Each entry is classed revelation / authentic hadith / scholarly interpretation / not established; a known statement needs a claim; edges need a claim; visuals can never depict the unseen; scholarly approval to publish |
 | Mufti Q&A (1500) | `mufti_profiles`, `mufti_questions`, `mufti_assignments`, `mufti_answers`, `mufti_answer_citations`, `mufti_answer_reviews`, `mufti_question_follows` | Only an admin verifies a mufti; only verified, assigned muftis answer; an answer publishes with a citation and an independent review (never self-review); editing returns it to review; private questions visible to asker, assigned muftis and staff; no "accepted answer" |
 | Roles (1150) | `translation_reviewer`, `audio_producer`, `mufti` | |
+
+### Interpretation Explorer and source adapters (branch mod/interpretation, 2026-10-31)
+
+- **Study panel** in the Quran reader (`src/components/quran/StudyPanel.tsx`): a "Study" button per ayah (or, while the
+  Arabic is not imported, an ayah picker) opens a bottom sheet below 1024px and a docked column beside the text above it.
+  Arabic first, never overlaid. Tabs: Translations (up to 10 editions + the separate early-tafsir slot for Tafsir Muqatil
+  ibn Sulayman, labelled commentary, with reliability note and flags), Word by word, Differences explained (four kinds,
+  never merged), Tafsir comparison, Hadith (four collections, sahih only by a named grading), Stories & timeline, QITL
+  summary (published only; human or AI-assisted with model). Every unlicensed or unimported item shows its designed
+  state. Data: `GET /api/quran/[surah]/[ayah]/study` (anonymous, RLS-limited). "Ask a Mufti" shows "coming soon" until
+  the Mufti Q&A pages land (`askMuftiHref` in `src/lib/interpretation/state.ts` is ready).
+- **Admin:** `/admin/editions` (translator profiles, edition registry, verify) and `/admin/explanations` (editor, the
+  eight signed checks per role, differences editor, scholarly approval, AI-draft request).
+- **Adapters (code + fixture tests only, never run):** `scripts/import-quran.ts` (King Fahd Complex Hafs JSON or Tanzil
+  text/XML; `--accept-terms`; source + pinned version + checksums + retrieved date; stored verses immutable),
+  `scripts/import-translation.ts` (QuranEnc, Quran Foundation) and `scripts/import-hadith.ts` (sunnah.com, drafts only),
+  both gated on a verified edition with a cleared licence. Keys: `QURANENC_API_KEY`, `QF_CLIENT_ID`/`QF_CLIENT_SECRET`,
+  `SUNNAH_API_KEY`. Header names for QuranEnc's key must be confirmed when the access agreement is signed.
+- **AI-assisted drafts:** `POST /api/admin/interpretation/draft` (editors; off unless `ANTHROPIC_API_KEY`), inputs only
+  stored licensed sources, saved as a draft with model, prompt version and inputs; output presenting an averaged or
+  "most accurate" translation is refused.
 
 ### External integrations (configured for development only)
 
@@ -130,6 +151,6 @@ Migrations 1150–1600 are applied to Supabase and covered by `tests/db/producti
 ### Not built yet (the next sessions)
 
 Story Production Studio (admin) and the server workers for Lara and TTS; the QITL Story Player (Read / Listen / Immersive,
-captions, ducking, preferences); the Interpretation Explorer in the Quran reader and the source import adapters; the
+captions, ducking, preferences); the
 Creation Atlas pages, comparison and relationship graph; Mufti Q&A pages and admin assignment; the reviewed reference
 story for Nuh (needs real sources, review and a voice licence before it can exist).

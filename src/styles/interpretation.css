@@ -1,0 +1,89 @@
+/*
+ * Interpretation Explorer (the per-ayah Study panel). Mobile-first: a modal bottom sheet below 1024px, a docked column
+ * beside the text from 1024px (its own grid column, so it never covers the Arabic). Logical properties only (RTL / Urdu).
+ */
+.qs-layout { display: block; }
+@media (min-width: 1024px) {
+  .qs-layout[data-study-open] { display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, 420px); gap: var(--space-6, 32px); align-items: start; }
+  .qs-side {
+    position: sticky; inset-block-start: calc(var(--header-height, 64px) + 16px);
+    max-block-size: calc(100dvh - var(--header-height, 64px) - 32px); overflow-y: auto; overscroll-behavior: contain;
+    background: var(--surface-raised); color: var(--ink); border: 1px solid var(--hairline); border-radius: var(--radius-lg, 16px);
+    padding: 16px 20px 20px; box-shadow: var(--shadow-float);
+  }
+}
+.qs-main { min-inline-size: 0; }
+
+.qs-backdrop { position: fixed; inset: 0; z-index: 80; background: var(--scrim, rgba(4, 12, 14, .5)); display: flex; align-items: flex-end; justify-content: center; }
+.qs-sheet {
+  inline-size: 100%; max-inline-size: 720px; max-block-size: 90dvh; overflow-y: auto; overscroll-behavior: contain;
+  background: var(--surface-raised); color: var(--ink); border-start-start-radius: 20px; border-start-end-radius: 20px;
+  padding: 8px var(--gutter, 16px) calc(16px + var(--safe-bottom, 0px)); box-shadow: var(--shadow-float);
+  animation: qs-up .22s ease-out;
+}
+@keyframes qs-up { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .qs-sheet { animation: none; } }
+
+.qs-panel-inner { display: grid; gap: 12px; min-inline-size: 0; }
+.qs-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.qs-head h2 { margin: 0; font: 600 18px/24px var(--font-display); }
+.qs-head h2:focus { outline: none; }
+.qs-head h2:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.qs-head .zq-btn { min-block-size: var(--tap, 44px); }
+
+.qs-arabic { position: relative; z-index: 0; padding-block: 4px 8px; border-block-end: 1px solid var(--hairline); }
+.qs-arabic .zq-ar-quran { font-size: var(--fs-ar-verse, 30px); max-inline-size: var(--measure-arabic); }
+
+.qs-tabs { padding: 0; overflow-x: auto; flex-wrap: nowrap; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
+.qs-tabs .zq-tab { white-space: nowrap; min-block-size: var(--tap, 44px); flex: 0 0 auto; }
+.qs-body { min-inline-size: 0; }
+.qs-body:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+
+.qs-stack { display: grid; gap: 12px; }
+.qs-intro { margin: 0; font: 400 14px/20px var(--font-sans); color: var(--ink-muted); }
+.qs-cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.qs-card { border: 1px solid var(--hairline); border-radius: var(--radius-md, 12px); padding: 12px; background: var(--surface); display: grid; gap: 8px; min-inline-size: 0; overflow-wrap: anywhere; }
+.qs-card h4, .qs-early h4, .qs-diff-group h4, .qs-report h4 { margin: 0; font: 600 15px/20px var(--font-sans); }
+.qs-card-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; }
+.qs-text { margin: 0; font: 400 16px/26px var(--font-display); }
+.qs-text:lang(ar), .qs-text:lang(ur) { font-family: var(--font-naskh); font-size: 20px; line-height: 2; }
+.qs-note { margin: 0; font: 400 13px/19px var(--font-sans); color: var(--ink); }
+.qs-pending { margin: 0; }
+
+.qs-state { display: inline-flex; align-items: center; min-block-size: 24px; padding: 2px 8px; border-radius: var(--radius-pill, 999px); border: 1px solid var(--hairline); font: 600 12px/16px var(--font-sans); color: var(--ink-muted); background: var(--surface-sunken, transparent); }
+.qs-state-shown { color: var(--sage-ink, var(--ink)); border-color: var(--sage, var(--hairline)); }
+.qs-state-licence_pending, .qs-state-unverified { color: var(--status-warning); border-style: dashed; }
+.qs-state-not_imported { border-style: dashed; }
+
+.qs-attr { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 6px 12px; margin: 0; font: 400 12px/16px var(--font-sans); }
+.qs-attr dt { color: var(--ink-muted); font-weight: 600; }
+.qs-attr dd { margin: 0; color: var(--ink); overflow-wrap: anywhere; }
+
+/* The early-tafsir slot is commentary: visibly set apart from the translations above it. */
+.qs-early { display: grid; gap: 8px; padding: 12px; border: 1px dashed var(--brass); border-radius: var(--radius-md, 12px); background: var(--surface-sunken, var(--surface)); }
+.qs-early .zq-eyebrow { margin: 0; }
+.qs-flags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.qs-flag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: var(--radius-pill, 999px); border: 1px solid var(--status-warning); color: var(--status-warning); font: 600 12px/16px var(--font-sans); }
+.qs-flag svg { inline-size: 12px; block-size: 12px; }
+
+.qs-words { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.qs-word { border: 1px solid var(--hairline); border-radius: var(--radius-md, 12px); padding: 12px; display: grid; gap: 6px; }
+.qs-word-ar { margin: 0; font: 400 26px/1.8 var(--font-quran); text-align: start; }
+.qs-word .zq-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0; }
+
+.qs-diff-group { display: grid; gap: 8px; }
+.qs-empty { display: grid; gap: 6px; justify-items: start; padding: 12px; border: 1px dashed var(--hairline); border-radius: var(--radius-md, 12px); }
+.qs-empty p { margin: 0; font: 400 14px/20px var(--font-sans); color: var(--ink); }
+.qs-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 0; }
+
+.qs-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.qs-foot { padding-block-start: 8px; border-block-start: 1px solid var(--hairline); }
+.qs-actions .zq-btn { min-block-size: var(--tap, 44px); }
+.qs-disabled { opacity: .7; cursor: not-allowed; border-style: dashed; }
+.qs-report { display: grid; gap: 8px; padding: 12px; border: 1px solid var(--hairline); border-radius: var(--radius-md, 12px); }
+
+.qs-study-btn { min-block-size: var(--tap, 44px); }
+.qs-launcher { display: grid; gap: 8px; }
+.qs-launcher h2 { margin: 0; }
+.qs-launch-row { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; }
+.qs-launch-row .zq-field { inline-size: min(160px, 100%); }

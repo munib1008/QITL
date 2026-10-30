@@ -1,0 +1,7 @@
+{
+  "_fixture": "synthetic placeholder in QuranEnc's response shape, not a translation",
+  "result": [
+    { "id": "1", "sura": "1", "aya": "1", "arabic_text": "FIXTURE-AR-IGNORED", "translation": "FIXTURE-EN-1-1", "footnotes": "" },
+    { "id": "2", "sura": "1", "aya": "2", "arabic_text": "FIXTURE-AR-IGNORED", "translation": "FIXTURE-EN-1-2", "footnotes": "FIXTURE-NOTE" }
+  ]
+}
