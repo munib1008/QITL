@@ -1,6 +1,6 @@
-/* ZIQ service worker: network first for pages, falling back to a cached copy, then to /offline.
+/* QITL service worker: network first for pages, falling back to a cached copy, then to /offline.
    Never caches API responses, account or admin pages. */
-const CACHE = "ziq-pages-v1";
+const CACHE = "qitl-pages-v1";
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.add("/offline")).then(() => self.skipWaiting()));
 });

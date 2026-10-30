@@ -1,3 +1,5 @@
+set search_path = public, extensions;
+
 -- Source registry, licences, the Quran and the seven catalogued Hadith collections.
 -- Nothing here is seeded with religious text: text arrives only through pinned, checksummed source imports.
 
@@ -55,7 +57,7 @@ create table public.source_import_jobs (
 
 -- A licence may be shown publicly only when cleared (or public domain).
 create or replace function public.source_publishable(sid uuid)
-returns boolean language sql stable security definer set search_path = public as $$
+returns boolean language sql stable security definer set search_path = public, extensions as $$
   select exists (select 1 from public.sources s where s.id = sid and s.rights_status in ('cleared', 'public_domain'));
 $$;
 

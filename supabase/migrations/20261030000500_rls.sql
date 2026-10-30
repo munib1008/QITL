@@ -1,3 +1,5 @@
+set search_path = public, extensions;
+
 -- Row level security for every table. Default deny: a table without a policy is unreadable by anon/authenticated.
 -- Public reading: only published (or catalogue) rows. Personal data: owner only. Staff writes: by role.
 -- Source and text tables are never publicly writable; imports run with the service role.
@@ -12,7 +14,10 @@ begin
   end loop;
 end $$;
 
--- Table privileges: RLS decides rows; grants decide verbs.
+-- Table privileges: RLS decides rows; grants decide verbs. Start from none (Supabase's default
+-- privileges grant everything to anon and authenticated), then grant exactly what is needed.
+revoke all on all tables in schema public from anon, authenticated;
+revoke all on all sequences in schema public from anon, authenticated;
 grant usage on schema public to anon, authenticated;
 grant select on all tables in schema public to anon, authenticated;
 revoke select on public.audit_logs, public.rate_limit_events, public.role_assignments, public.moderation_actions,
@@ -38,6 +43,11 @@ grant insert, update on public.bans to authenticated;
 grant usage, select on all sequences in schema public to authenticated;
 grant execute on function public.moderate(text, uuid, text, text), public.export_my_data() to authenticated;
 grant execute on function public.unsubscribe(uuid) to anon, authenticated;
+-- Internal helpers are for triggers only, not for direct calls through the API.
+revoke execute on function public.throttle(text, integer, integer), public.is_banned(uuid), public.audit(),
+  public.handle_new_user(), public.snapshot_version(), public.guard_entity_publish(), public.guard_claim_status(),
+  public.check_reviewer(), public.before_comment(), public.before_discussion(), public.before_report(),
+  public.after_report(), public.after_comment() from public, anon, authenticated;
 
 -- ---------- Catalogue and text (read: public, published or rights-cleared; write: service role only) ----------
 create policy read_all on public.hadith_collections for select using (true);

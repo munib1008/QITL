@@ -8,10 +8,10 @@ import "../globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(publicEnv.siteUrl),
-  title: { default: "ZIQ — The Islamic Knowledge Atlas", template: "%s · ZIQ" },
+  title: { default: "QITL — The Islamic Knowledge Atlas", template: "%s · QITL" },
   description:
     "Explore the story. Follow the evidence. The Quran, authenticated Hadith, the prophets, chronology and geography — every claim labelled by how certain it is.",
-  openGraph: { type: "website", siteName: "ZIQ — Islamic Knowledge Atlas", images: ["/opengraph-image"] },
+  openGraph: { type: "website", siteName: "QITL — Islamic Knowledge Atlas", images: ["/opengraph-image"] },
   twitter: { card: "summary_large_image" },
   alternates: { languages: { en: "/", ar: "/ar" } },
 };
@@ -33,7 +33,7 @@ export function generateStaticParams() {
  * Applies a theme the reader chose earlier before first paint (no flash). Without a choice the CSS follows
  * prefers-color-scheme. Pages that own a theme (the home journey) set data-theme on their own wrapper.
  */
-const THEME_INIT = `try{var t=localStorage.getItem("ziq-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;
+const THEME_INIT = `try{var t=localStorage.getItem("qitl-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;
 
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
   const { locale } = await params;

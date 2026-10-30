@@ -1,10 +1,10 @@
-# CLAUDE.md — ZIQ, the Islamic Knowledge Atlas
+# CLAUDE.md — QITL, the Islamic Knowledge Atlas
 
 Read this before making any change. These rules hold for every task in this repository.
 
-## What ZIQ is
+## What QITL is
 
-ZIQ is a free, public Islamic knowledge platform covering the Quran, authenticated Sunni Hadith, the prophets, genealogy, chronology, an atlas and the signs of the Last Hour. Reading never requires an account; accounts exist only for bookmarks, notes, progress and discussion.
+QITL is a free, public Islamic knowledge platform covering the Quran, authenticated Sunni Hadith, the prophets, genealogy, chronology, an atlas and the signs of the Last Hour. Reading never requires an account; accounts exist only for bookmarks, notes, progress and discussion.
 
 - Product requirements: `MASTER_BUILD_PROMPT.md`, `PROMPT_1_DESIGN_UX.md`, `PROMPT_2_FULL_PLATFORM_BUILD.md`
 - **Finalised design (the source of truth for UI):** `design/`. Start with `design/README.md`.

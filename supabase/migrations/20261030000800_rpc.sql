@@ -1,8 +1,10 @@
+set search_path = public, extensions;
+
 -- Read RPCs for the atlas and the genealogy graph. SECURITY INVOKER: RLS still decides what is visible.
 
 create or replace function public.atlas_places(bbox text default null, at_year integer default null)
 returns table (id uuid, location_slug text, name text, geom_precision public.geometry_precision, confidence public.evidence_kind, geojson jsonb, source text, attribution text)
-language sql stable security invoker set search_path = public as $$
+language sql stable security invoker set search_path = public, extensions as $$
   with box as (
     select case when bbox is null then null else st_makeenvelope(
       split_part(bbox, ',', 1)::float8, split_part(bbox, ',', 2)::float8,
@@ -23,7 +25,7 @@ grant execute on function public.atlas_places(text, integer) to anon, authentica
 
 -- People within `depth` edges of a person, and the edges between them, each carrying its claim and references.
 create or replace function public.person_graph(person_slug text, depth integer default 2)
-returns jsonb language sql stable security invoker set search_path = public as $$
+returns jsonb language sql stable security invoker set search_path = public, extensions as $$
   with recursive start as (
     select id from public.people where slug = person_slug and status = 'published'
   ), walk(pid, d) as (

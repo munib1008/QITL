@@ -19,7 +19,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "ZIQ — The Islamic Knowledge Atlas",
+    name: "QITL — The Islamic Knowledge Atlas",
     url: publicEnv.siteUrl,
     inLanguage: ["en", "ar"],
     potentialAction: { "@type": "SearchAction", target: `${publicEnv.siteUrl}/search?q={query}`, "query-input": "required name=query" },
@@ -121,7 +121,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </section>
       </main>
       <footer className="zq-foot" id="method">
-        <span>ZIQ — Islamic Knowledge Atlas</span>
+        <span>QITL — Islamic Knowledge Atlas</span>
         <span>Respecting evidence · Preserving uncertainty · Learning together</span>
         <nav className="zq-foot-links" aria-label="About">
           <Link href="/about">About</Link>

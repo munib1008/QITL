@@ -54,8 +54,8 @@ export const FollowInput = z.object({ discussionId: z.string().uuid(), follow: z
 export function safeReturnTo(v: string | null | undefined): string {
   if (!v || !v.startsWith("/") || v.startsWith("//") || v.startsWith("/\\")) return "/";
   try {
-    const u = new URL(v, "http://ziq.local");
-    if (u.origin !== "http://ziq.local") return "/";
+    const u = new URL(v, "http://qitl.local");
+    if (u.origin !== "http://qitl.local") return "/";
     return u.pathname + u.search + u.hash;
   } catch {
     return "/";

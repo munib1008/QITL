@@ -389,7 +389,7 @@ Spec: `TextField.md`, `SearchField.md`.
 { label: string; id: string; help?: string; error?: string } & React.InputHTMLAttributes<HTMLInputElement>
 // SearchField
 { label?: string; placeholder?: string; defaultValue?: string; maxWidth?: number; id?: string }
-// label default "Search ZIQ"; placeholder "Search prophets, surahs, hadith, places…"; maxWidth 520; id "zq-q"
+// label default "Search QITL"; placeholder "Search prophets, surahs, hadith, places…"; maxWidth 520; id "zq-q"
 ```
 
 TextField: label always visible above; help or error below linked by `aria-describedby`; error replaces help, adds `Icon.alert` and `aria-invalid`; `dir="auto"` should be passed for user text that may be Arabic (callers pass `dir="rtl"` for Arabic titles and `dir="ltr"` for ids). SearchField: `role="search"` GET form to `/search`, visually hidden label, works without JavaScript. Delta: TextField requires `id`; SearchField uses `defaultValue`.
@@ -524,7 +524,7 @@ Layers: regions (`map-region` fill 0.45 + `slate` edge), hypotheses (`map-hypoth
 { surah: number; surahName: string; verses: Array<{ ayah: number; text: string }>; links: Record<number, Array<{ id: string; name: string }>> }
 ```
 
-Text size group (`role="group" aria-label="Arabic text size"`): "A−"/"A+" buttons labelled "Smaller/Larger Arabic text", disabled at 24px and 48px; `<output aria-live="polite">` shows the size; persisted in `localStorage` (`ziq-quran-size`). Each ayah is an `<li id="ayah-N">` with `scroll-margin-top`, the Arabic paragraph (`lang="ar" dir="rtl"`, max `measure-arabic`), and an action group: citation chip, bookmark (icon), copy reference ("Copied" for 1.5s), links to journey stops. No design spec (Quran reader still to design); follows the `quran-ayah` rules.
+Text size group (`role="group" aria-label="Arabic text size"`): "A−"/"A+" buttons labelled "Smaller/Larger Arabic text", disabled at 24px and 48px; `<output aria-live="polite">` shows the size; persisted in `localStorage` (`qitl-quran-size`). Each ayah is an `<li id="ayah-N">` with `scroll-margin-top`, the Arabic paragraph (`lang="ar" dir="rtl"`, max `measure-arabic`), and an action group: citation chip, bookmark (icon), copy reference ("Copied" for 1.5s), links to journey stops. No design spec (Quran reader still to design); follows the `quran-ayah` rules.
 
 ## shell
 
@@ -536,7 +536,7 @@ Text size group (`role="group" aria-label="Arabic text size"`): "A−"/"A+" butt
 | `SiteFooter` | `{ locale: string }` | Principles, draft-Arabic notice, two link groups |
 | `mainNav(t)` | returns `NavLink[]` with `export interface NavLink { href: string; label: string; }` | Nine sections |
 | `MobileMenu` | `{ links: NavLink[]; label: string }` | Disclosure: `aria-expanded`, `aria-controls`, Esc closes and refocuses the button, closes on route change; links have 44px height |
-| `LangToggle` | `{ locale: "en" \| "ar"; label: string }` | "EN · ع"; `aria-label` "Language: العربية" or "Language: English"; sets the `ziq-locale` cookie |
+| `LangToggle` | `{ locale: "en" \| "ar"; label: string }` | "EN · ع"; `aria-label` "Language: العربية" or "Language: English"; sets the `qitl-locale` cookie |
 | `ThemeToggle` | `{ labels: { label: string; light: string; dark: string; system: string } }` | Cycles System → Light → Dark; `aria-label` "Theme: [current]"; text hidden under 480px |
 | `AccountLink` | `{ signInLabel: string; accountLabel: string }` | Four session states; unavailable state is a disabled button with a `title` tooltip |
 | `InfoPageView` | `{ params: Promise<{ locale: string }>; slug: string; crumbs?: Array<{ href?: string; label: string }> }`; `infoMetadata(slug)` | Renders `INFO_PAGES[slug]`, with a `role="note"` banner for legal drafts |

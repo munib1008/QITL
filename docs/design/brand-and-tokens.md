@@ -1,6 +1,6 @@
 # Brand and tokens
 
-This document describes ZIQ's brand principles, voice and the complete design-token inventory, and how tokens travel from the design handoff into the running Next.js app. It summarises and links the sources of truth; where this document and `design/` disagree, `design/` wins (see [design/README.md](../../design/README.md)).
+This document describes QITL's brand principles, voice and the complete design-token inventory, and how tokens travel from the design handoff into the running Next.js app. It summarises and links the sources of truth; where this document and `design/` disagree, `design/` wins (see [design/README.md](../../design/README.md)).
 
 | Source | What it owns |
 |---|---|
@@ -62,7 +62,7 @@ design/tokens/tokens.json            (single source of truth; edited in the desi
         └──► src/styles/tokens.generated.ts   TOKENS: token names, breakpoints, families, type styles
                        │
                        ▼
-             tailwind.config.ts  ziqPreset    every value → var(--token)
+             tailwind.config.ts  qitlPreset    every value → var(--token)
                        │
                        ▼
              src/app/globals.css  @import tokens.css, components.css, home.css, prophet.css, pages.css
@@ -81,14 +81,14 @@ What `scripts/build-tokens.ts` emits:
 | `.type-<style>` | One class per type style: `font: <weight> <size>/<line-height> var(--font-<family>)` plus letter-spacing |
 | `tokens.generated.ts` | `TOKENS.colors`, `shadows`, `spacing`, `radius`, `breakpoints` (`sm/md/lg/xl`), `zIndex`, `families`, `typeStyles` |
 
-Tailwind preset (`ziqPreset` in `tailwind.config.ts`): `screens` = `bp-sm/md/lg/xl`; `colors` = every colour token name (`bg-surface-raised`, `text-ink-muted`); `spacing` strips the `space-` prefix (`p-4` = `var(--space-4)`); `borderRadius` strips `radius-`; `boxShadow` strips `shadow-`; `zIndex` strips `z-`; `fontFamily` = `display | sans | quran | naskh | mono`; `maxWidth.reading` and `maxWidth.arabic`. No hex value appears in a component; the one exception is the Open Graph image (`src/app/opengraph-image.tsx`), which cannot read CSS variables and copies Journey values by hand.
+Tailwind preset (`qitlPreset` in `tailwind.config.ts`): `screens` = `bp-sm/md/lg/xl`; `colors` = every colour token name (`bg-surface-raised`, `text-ink-muted`); `spacing` strips the `space-` prefix (`p-4` = `var(--space-4)`); `borderRadius` strips `radius-`; `boxShadow` strips `shadow-`; `zIndex` strips `z-`; `fontFamily` = `display | sans | quran | naskh | mono`; `maxWidth.reading` and `maxWidth.arabic`. No hex value appears in a component; the one exception is the Open Graph image (`src/app/opengraph-image.tsx`), which cannot read CSS variables and copies Journey values by hand.
 
 Theme selection at runtime:
 
 | Situation | Mechanism |
 |---|---|
 | No choice made | `:root:not([data-theme])` follows `prefers-color-scheme` |
-| Reader chose light or dark | `ThemeToggle` (System → Light → Dark) stores `ziq-theme` in `localStorage`; an inline script in `src/app/[locale]/layout.tsx` applies `data-theme` on `<html>` before first paint |
+| Reader chose light or dark | `ThemeToggle` (System → Light → Dark) stores `qitl-theme` in `localStorage`; an inline script in `src/app/[locale]/layout.tsx` applies `data-theme` on `<html>` before first paint |
 | Home page | The page wrapper and `JourneyTimeline` set `data-theme="journey"` on themselves; the theme toggle is not shown on the home header |
 | Evidence drawer | Takes an optional `theme` prop and sets `data-theme` on its own scrim (the Journey passes `journey`) |
 

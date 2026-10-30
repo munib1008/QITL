@@ -1,6 +1,6 @@
 # Responsive, RTL and accessibility
 
-How ZIQ adapts from 320px phones to ultra-wide screens, how the Arabic interface and Arabic content blocks behave, and how the WCAG 2.2 AA target is met and checked. Token values are in [brand-and-tokens.md](brand-and-tokens.md); per-screen layouts in [screen-specifications.md](screen-specifications.md).
+How QITL adapts from 320px phones to ultra-wide screens, how the Arabic interface and Arabic content blocks behave, and how the WCAG 2.2 AA target is met and checked. Token values are in [brand-and-tokens.md](brand-and-tokens.md); per-screen layouts in [screen-specifications.md](screen-specifications.md).
 
 ## Breakpoints
 
@@ -58,7 +58,7 @@ Screenshots of the Arabic interface: [Yusuf, 1440](screenshots/prophet-yusuf-ar-
 
 | Level | Rule |
 |---|---|
-| Page | `<html lang dir>` from the locale segment: `/ar/...` or the `ziq-locale=ar` cookie → `lang="ar" dir="rtl"` |
+| Page | `<html lang dir>` from the locale segment: `/ar/...` or the `qitl-locale=ar` cookie → `lang="ar" dir="rtl"` |
 | Arabic block inside English UI | Every Arabic name, honorific, surah name, Quran text and hadith text carries `lang="ar"`, and block-level Arabic also `dir="rtl"` (for example `<p class="zq-ar-quran" lang="ar" dir="rtl">`) |
 | English inside the Arabic UI | Page copy that is still English inside the RTL shell keeps its punctuation in order through `[dir="rtl"] :is(p, h1, h2, h3, li, dd, blockquote) { unicode-bidi: plaintext; }` (`pages.css`): each paragraph takes its direction from its first strong character |
 | References | `CitationChip` wraps the reference in `<span dir="ltr">`; reference inputs (compare ref, hadith number, comment citation, admin ids, polygon corners) set `dir="ltr"` |
@@ -119,7 +119,7 @@ All motion is non-essential: nothing is conveyed only by movement.
 
 ## WCAG 2.2 AA checklist
 
-| Criterion | How ZIQ meets it | Status |
+| Criterion | How QITL meets it | Status |
 |---|---|---|
 | 1.1.1 Non-text content | Icons and marks are `aria-hidden` next to visible words; schematic map preview is `role="img"` with a text label; the atlas list and genealogy edge list are the text alternatives; the Open Graph image has `alt` | Met |
 | 1.3.1 Info and relationships | Headings in order, lists for timelines and results, `dl` for key-value data, tables with captions and `scope`, fieldsets with legends | Met |

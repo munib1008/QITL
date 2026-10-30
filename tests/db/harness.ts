@@ -38,6 +38,10 @@ export async function createDb(): Promise<Db> {
     }
   }
   await pg.exec("grant all on all tables in schema public to service_role; grant usage on schema public to service_role;");
+  // Like Supabase: the API roles resolve extension types and functions from the "extensions" schema.
+  await pg.exec(`grant usage on schema extensions to anon, authenticated, service_role;
+    alter role anon set search_path = "$user", public, extensions;
+    alter role authenticated set search_path = "$user", public, extensions;`);
   return new Db(pg);
 }
 
@@ -46,7 +50,7 @@ export class Db {
 
   /** Run SQL as the database owner (setup only). */
   async admin<T = Record<string, unknown>>(sql: string, params: unknown[] = []): Promise<T[]> {
-    await this.pg.exec("reset role; select set_config('request.jwt.claim.sub', '', false);");
+    await this.pg.exec("reset role; set search_path = \"$user\", public, extensions; select set_config('request.jwt.claim.sub', '', false);");
     return (await this.pg.query<T>(sql, params)).rows;
   }
 
@@ -54,7 +58,7 @@ export class Db {
   async as<T = Record<string, unknown>>(user: string | null, sql: string, params: unknown[] = []): Promise<T[]> {
     await this.pg.exec("reset role;");
     await this.pg.query("select set_config('request.jwt.claim.sub', $1, false)", [user ?? ""]);
-    await this.pg.exec(`set role ${user ? "authenticated" : "anon"};`);
+    await this.pg.exec(`set role ${user ? "authenticated" : "anon"}; set search_path = "$user", public, extensions;`);
     try {
       return (await this.pg.query<T>(sql, params)).rows;
     } finally {

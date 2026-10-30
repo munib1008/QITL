@@ -1,3 +1,5 @@
+set search_path = public, extensions;
+
 -- Personal data (bookmarks, progress, private notes, follows, notifications) and moderated discussion.
 
 -- ---------- Personal ----------
@@ -183,13 +185,13 @@ create table public.rate_limit_events (
 create index rate_limit_events_user on public.rate_limit_events (user_id, action, at desc);
 
 create or replace function public.is_banned(uid uuid)
-returns boolean language sql stable security definer set search_path = public as $$
+returns boolean language sql stable security definer set search_path = public, extensions as $$
   select exists (select 1 from public.bans b where b.user_id = uid and b.lifted_at is null and (b.until is null or b.until > now()));
 $$;
 
 -- Anti-spam throttle, enforced in the database so no client can bypass it.
 create or replace function public.throttle(action text, per_minute integer, per_hour integer)
-returns void language plpgsql security definer set search_path = public as $$
+returns void language plpgsql security definer set search_path = public, extensions as $$
 declare
   uid uuid := auth.uid();
   m integer;
@@ -205,7 +207,7 @@ begin
 end $$;
 
 create or replace function public.before_comment()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 begin
   if tg_op = 'INSERT' then
     if public.is_banned(new.author_id) then raise exception 'posting is suspended for this account' using errcode = '42501'; end if;
@@ -227,7 +229,7 @@ end $$;
 create trigger comments_before before insert or update on public.comments for each row execute function public.before_comment();
 
 create or replace function public.before_discussion()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 begin
   if public.is_banned(new.created_by) then raise exception 'posting is suspended for this account' using errcode = '42501'; end if;
   perform public.throttle('discussion', 2, 10);
@@ -237,7 +239,7 @@ end $$;
 create trigger discussions_before before insert on public.discussions for each row execute function public.before_discussion();
 
 create or replace function public.before_report()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 begin
   perform public.throttle('report', 5, 30);
   new.status := 'open';
@@ -247,7 +249,7 @@ create trigger reports_before before insert on public.reports for each row execu
 
 -- Three open reports hide a comment until a moderator reviews it (it keeps its place, with an explanation).
 create or replace function public.after_report()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 begin
   if new.target_type = 'comment' and (select count(*) from public.reports where target_type = 'comment' and target_id = new.target_id and status = 'open') >= 3 then
     update public.comments set status = 'hidden' where id = new.target_id and status = 'visible';
@@ -258,7 +260,7 @@ create trigger reports_after after insert on public.reports for each row execute
 
 -- Followers (and the parent's author) are notified of new comments.
 create or replace function public.after_comment()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 begin
   insert into public.notifications (user_id, kind, discussion_id, comment_id)
   select f.user_id, 'thread_activity', new.discussion_id, new.id
@@ -277,7 +279,7 @@ create trigger comments_after after insert on public.comments for each row execu
 
 -- Moderator action applied atomically with its log entry and report resolution.
 create or replace function public.moderate(p_target_type text, p_target_id uuid, p_action text, p_reason text)
-returns void language plpgsql security definer set search_path = public as $$
+returns void language plpgsql security definer set search_path = public, extensions as $$
 begin
   if not public.has_role('moderator') then raise exception 'moderators only' using errcode = '42501'; end if;
   if p_target_type = 'comment' then
@@ -355,7 +357,7 @@ create unique index data_jobs_one_open on public.data_jobs (user_id, kind) where
 
 -- Everything a user owns, as JSON, for "Export my data". Runs as the caller; RLS limits it to their rows.
 create or replace function public.export_my_data()
-returns jsonb language sql stable security invoker set search_path = public as $$
+returns jsonb language sql stable security invoker set search_path = public, extensions as $$
   select jsonb_build_object(
     'exported_at', now(),
     'profile', (select to_jsonb(p) from public.profiles p where p.id = auth.uid()),
@@ -370,7 +372,7 @@ $$;
 
 -- One-click unsubscribe from a digest email, by token, without signing in.
 create or replace function public.unsubscribe(token uuid)
-returns boolean language plpgsql security definer set search_path = public as $$
+returns boolean language plpgsql security definer set search_path = public, extensions as $$
 begin
   update public.notification_prefs set digest = 'off', email_replies = false, updated_at = now() where unsubscribe_token = token;
   return found;

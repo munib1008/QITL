@@ -3,7 +3,7 @@ import { createServerClient } from "@supabase/ssr";
 
 /**
  * 1. Locale: /ar/... is always Arabic. Any other path is served in the language chosen with the language toggle
- *    (cookie ziq-locale, English by default) by rewriting to /en/... or /ar/... internally, so every link in the app
+ *    (cookie qitl-locale, English by default) by rewriting to /en/... or /ar/... internally, so every link in the app
  *    stays a plain path and both variants are statically generated. /en/... redirects to the unprefixed URL.
  * 2. Auth: refreshes the Supabase session cookie when Supabase is configured.
  */
@@ -20,10 +20,10 @@ export async function middleware(req: NextRequest) {
   if (pathname === "/ar" || pathname.startsWith("/ar/")) {
     res = NextResponse.next({ request: req });
     // Opening an Arabic link keeps the reader in Arabic on the next internal link.
-    if (req.cookies.get("ziq-locale")?.value !== "ar") res.cookies.set("ziq-locale", "ar", { path: "/", maxAge: 31536000, sameSite: "lax" });
+    if (req.cookies.get("qitl-locale")?.value !== "ar") res.cookies.set("qitl-locale", "ar", { path: "/", maxAge: 31536000, sameSite: "lax" });
   }
   else {
-    const locale = req.cookies.get("ziq-locale")?.value === "ar" ? "ar" : "en";
+    const locale = req.cookies.get("qitl-locale")?.value === "ar" ? "ar" : "en";
     const url = req.nextUrl.clone();
     url.pathname = `/${locale}${pathname === "/" ? "" : pathname}`;
     url.search = search;

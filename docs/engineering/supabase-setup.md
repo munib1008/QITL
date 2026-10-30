@@ -21,7 +21,7 @@ supabase db push
 ## 3. Auth
 
 - **Authentication → URL configuration**: Site URL = `NEXT_PUBLIC_SITE_URL`; add `https://<your-domain>/auth/callback` (and `http://localhost:3000/auth/callback` for development) to the redirect allow-list.
-- **Email**: enable the email provider with "Confirm email" on. Configure custom SMTP for production so sign-in links come from your domain. Suggested magic-link template: subject "Your ZIQ sign-in link", body with `{{ .ConfirmationURL }}` and a line saying the link works once and expires.
+- **Email**: enable the email provider with "Confirm email" on. Configure custom SMTP for production so sign-in links come from your domain. Suggested magic-link template: subject "Your QITL sign-in link", body with `{{ .ConfirmationURL }}` and a line saying the link works once and expires.
 - **Google (optional)**: enable the provider with your OAuth client, add the Supabase callback URL to the Google console, then set `NEXT_PUBLIC_AUTH_GOOGLE=1`.
 
 ## 4. First admin

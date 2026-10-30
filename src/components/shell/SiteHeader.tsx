@@ -30,12 +30,12 @@ export function JourneyHeader({ locale }: { locale: string }) {
   const { locale: l, t } = getDict(locale);
   return (
     <header className="zq-nav">
-      <Link className="zq-brand" href="/" aria-label="ZIQ home">
+      <Link className="zq-brand" href="/" aria-label="QITL home">
         <span className="zq-mono" aria-hidden="true">
-          Z
+          Q
         </span>
         <span>
-          <b>ZIQ</b>
+          <b>QITL</b>
           <small>{t.brandTagline}</small>
         </span>
       </Link>
@@ -60,11 +60,11 @@ export function ReadingHeader({ locale, query }: { locale: string; query?: strin
   const { locale: l, t } = getDict(locale);
   return (
     <header className="pp-nav">
-      <Link className="pp-brand" href="/" aria-label="ZIQ home">
+      <Link className="pp-brand" href="/" aria-label="QITL home">
         <span className="pp-mono" aria-hidden="true">
-          Z
+          Q
         </span>
-        ZIQ
+        QITL
       </Link>
       <SearchField maxWidth={420} defaultValue={query} id="hdr-q" />
       <div className="pp-navact">
@@ -94,7 +94,7 @@ export function SiteFooter({ locale }: { locale: string }) {
     <footer className="pp-foot zq-sitefoot">
       <div className="zq-foot-cols">
         <div>
-          <b className="zq-foot-brand">ZIQ</b>
+          <b className="zq-foot-brand">QITL</b>
           <p className="zq-meta">{t.footer.principles}</p>
           {t.draftArabicUi ? <p className="zq-meta">{t.draftArabicUi}</p> : null}
         </div>

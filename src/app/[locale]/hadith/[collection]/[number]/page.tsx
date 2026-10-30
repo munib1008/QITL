@@ -82,7 +82,7 @@ export default async function HadithPage({ params }: { params: Promise<{ locale:
             );
           })
         ) : (
-          <EmptyState label={<EvidenceLabel kind="unknown">Not published</EvidenceLabel>} title={`${c.name} ${number} is not published on ZIQ yet.`}>
+          <EmptyState label={<EvidenceLabel kind="unknown">Not published</EvidenceLabel>} title={`${c.name} ${number} is not published on QITL yet.`}>
             <p>{sb ? "No reviewed record exists for this number in this collection." : "The hadith database is not connected on this site yet."} No text is shown rather than an unverified one.</p>
           </EmptyState>
         )}

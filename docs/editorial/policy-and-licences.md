@@ -8,7 +8,7 @@
 4. **Show disagreement.** When gradings or positions differ, all of them are shown with their sources. Nothing is collapsed into a single badge.
 5. **No invention.** No dates for undated sacred history, no years for the Last Hour, no pins for unlocated places, no generations that the sources do not give, no "last descendant".
 6. **No depictions** of prophets, Companions or the Ahl al-Bayt. Geometry, calligraphy and maps only.
-7. **No rulings.** ZIQ does not issue fatwas, and nothing produced by software is published as verified knowledge.
+7. **No rulings.** QITL does not issue fatwas, and nothing produced by software is published as verified knowledge.
 8. **Corrections are public.** Accepted corrections go through review again and carry a public revision note; earlier versions are kept.
 9. **Drafts say so.** Unreviewed content is labelled "Draft — pending scholarly review". Demo fixtures are labelled DEMO and contain placeholders, never invented text.
 
@@ -25,7 +25,7 @@ Status of every external source the app uses or plans to use. Nothing is shown t
 | Hadith gradings | Per-narration grades by named scholars | Per work cited | **Not cleared** | |
 | Map tiles | Atlas base map | Per provider | **Not configured** | Map stays off until a provider and attribution are set |
 | Source Serif 4, IBM Plex Sans, IBM Plex Sans Arabic, IBM Plex Mono, Amiri, Amiri Quran, Noto Naskh Arabic | Typography | SIL Open Font License 1.1 | **Cleared** | Self-hosted by `next/font` at build time |
-| Journey content (`content/journey/journey.draft.json`) | Home journey and prophet pages | ZIQ's own | **Draft** | Pending scholarly review; every ayah range and hadith number to be verified against pinned editions |
+| Journey content (`content/journey/journey.draft.json`) | Home journey and prophet pages | QITL's own | **Draft** | Pending scholarly review; every ayah range and hadith number to be verified against pinned editions |
 | maplibre-gl | Map rendering | BSD-3-Clause | **Cleared** | |
 
 To clear a source: add it in **Editorial → Sources and licences**, record the licence URL and text, verify the edition and checksum, then set rights to `cleared`.

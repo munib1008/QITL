@@ -1,4 +1,4 @@
-/* ZIQ component styles, ported from design/reference/bundle.css. Logical properties throughout so RTL mirrors. */
+/* QITL component styles, ported from design/reference/bundle.css. Logical properties throughout so RTL mirrors. */
 .zq, .zq * { box-sizing: border-box; }
 .zq-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; padding: var(--space-4); }
 .zq-stack { display: flex; flex-direction: column; gap: var(--space-4); padding: var(--space-4); }

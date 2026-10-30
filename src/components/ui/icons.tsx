@@ -81,7 +81,7 @@ export const Icon = {
 };
 export type IconName = keyof typeof Icon;
 
-/** Eight-point star (khatam) built from two squares: the ZIQ geometric primitive. */
+/** Eight-point star (khatam) built from two squares: the QITL geometric primitive. */
 export function Star(p: P) {
   return (
     <Svg {...p}>

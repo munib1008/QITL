@@ -31,7 +31,7 @@ if (!pin && !(args.includes("--expect-sha256") && /^[0-9a-f]{64}$/.test(expect ?
 }
 
 async function get(url: string): Promise<Buffer> {
-  const r = await fetch(url, { headers: { "User-Agent": "ZIQ source importer (one-off, verbatim)" } });
+  const r = await fetch(url, { headers: { "User-Agent": "QITL source importer (one-off, verbatim)" } });
   if (!r.ok) throw new Error(`${url}: HTTP ${r.status}`);
   return Buffer.from(await r.arrayBuffer());
 }

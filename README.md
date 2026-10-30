@@ -1,8 +1,8 @@
-# ZIQ — The Islamic Knowledge Atlas
+# QITL — The Islamic Knowledge Atlas
 
 **Explore the story. Follow the evidence.**
 
-ZIQ is a proposed free-to-read, interactive Islamic knowledge platform connecting the Qur'an, authenticated Hadith, prophetic history, family relationships, historical maps, and the authentic teachings on the Last Hour.
+QITL is a proposed free-to-read, interactive Islamic knowledge platform connecting the Qur'an, authenticated Hadith, prophetic history, family relationships, historical maps, and the authentic teachings on the Last Hour.
 
 ## Run it
 

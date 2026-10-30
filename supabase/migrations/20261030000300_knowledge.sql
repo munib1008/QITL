@@ -1,3 +1,5 @@
+set search_path = public, extensions;
+
 -- Claims and evidence, people and genealogy, events and chronology, places and geometry, stories.
 -- One source-backed entity feeds the story, timeline, atlas and graph, so the views cannot disagree.
 
@@ -71,7 +73,7 @@ create trigger editorial_reviews_audit after insert on public.editorial_reviews 
 
 -- Reviews are recorded only by scholarly reviewers (or admins) and never by the claim's author.
 create or replace function public.check_reviewer()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 begin
   if not exists (select 1 from public.role_assignments where user_id = new.reviewer_id and role in ('scholarly_reviewer', 'admin')) then
     raise exception 'only a scholarly reviewer may record a review' using errcode = '42501';
@@ -84,13 +86,13 @@ end $$;
 create trigger editorial_reviews_check before insert on public.editorial_reviews for each row execute function public.check_reviewer();
 
 create or replace function public.latest_review_approved(t text, eid uuid)
-returns boolean language sql stable security definer set search_path = public as $$
+returns boolean language sql stable security definer set search_path = public, extensions as $$
   select coalesce((select decision = 'approved' from public.editorial_reviews where entity_type = t and entity_id = eid order by created_at desc limit 1), false);
 $$;
 
 -- Publish guard for claims: an approved claim needs at least one reference and a reviewer's approval.
 create or replace function public.guard_claim_status()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 begin
   if new.status in ('approved', 'published') and (tg_op = 'INSERT' or old.status is distinct from new.status) then
     if not exists (select 1 from public.claim_references where claim_id = new.id) then
@@ -197,7 +199,7 @@ create index place_geometries_location on public.place_geometries (location_id);
 create trigger place_geometries_audit after insert or update or delete on public.place_geometries for each row execute function public.audit();
 
 create or replace function public.check_region_area()
-returns trigger language plpgsql as $$
+returns trigger language plpgsql set search_path = public, extensions as $$
 declare
   min_km2 numeric;
   area_km2 numeric;
@@ -358,7 +360,7 @@ create table public.assets (
 
 -- A published image needs a source whose rights are cleared (or public domain).
 create or replace function public.check_asset_rights()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 begin
   if new.status = 'published' and not public.source_publishable(new.source_id) then
     raise exception 'image source rights are not cleared' using errcode = 'P0001';
@@ -414,7 +416,7 @@ create table public.correction_requests (
 
 -- Snapshot every published or corrected entity so corrections show a diff.
 create or replace function public.snapshot_version()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 begin
   if new.status in ('published', 'correction') and (tg_op = 'INSERT' or old is distinct from new) then
     insert into public.content_versions (entity_type, entity_id, version, snapshot, created_by)
@@ -429,7 +431,7 @@ end $$;
 
 -- Publish guard for entities: every linked claim approved, at least one claim, and a scholarly approval.
 create or replace function public.guard_entity_publish()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 declare
   n_claims integer;
   n_unapproved integer;

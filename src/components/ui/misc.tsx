@@ -145,7 +145,7 @@ export function TextField({
 }
 
 /** Global search: a GET form to /search, so it works without JavaScript. */
-export function SearchField({ label = "Search ZIQ", placeholder = "Search prophets, surahs, hadith, places…", defaultValue, maxWidth = 520, id = "zq-q" }: { label?: string; placeholder?: string; defaultValue?: string; maxWidth?: number; id?: string }) {
+export function SearchField({ label = "Search QITL", placeholder = "Search prophets, surahs, hadith, places…", defaultValue, maxWidth = 520, id = "zq-q" }: { label?: string; placeholder?: string; defaultValue?: string; maxWidth?: number; id?: string }) {
   return (
     <form role="search" action="/search" method="get" className="zq-field zq-search" style={{ maxWidth }}>
       <label htmlFor={id} className="sr-only">

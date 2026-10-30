@@ -5,7 +5,7 @@ import { TOKENS } from "./src/styles/tokens.generated";
 const v = (names: readonly string[], strip = "") =>
   Object.fromEntries(names.map((n) => [n.replace(strip, ""), `var(--${n})`]));
 
-export const ziqPreset: Partial<Config> = {
+export const qitlPreset: Partial<Config> = {
   theme: {
     screens: { sm: TOKENS.breakpoints.sm, md: TOKENS.breakpoints.md, lg: TOKENS.breakpoints.lg, xl: TOKENS.breakpoints.xl },
     extend: {
@@ -22,7 +22,7 @@ export const ziqPreset: Partial<Config> = {
 
 const config: Config = {
   content: ["./src/**/*.{ts,tsx}"],
-  presets: [ziqPreset as Config],
+  presets: [qitlPreset as Config],
   corePlugins: { preflight: true },
 };
 export default config;

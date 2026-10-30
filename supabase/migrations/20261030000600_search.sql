@@ -1,3 +1,5 @@
+set search_path = public, extensions;
+
 -- Full-text search over published content in English and Arabic, with Arabic normalisation and trigram
 -- matching for transliterations (Shu'ayb / Shuaib / Shoaib).
 
@@ -5,7 +7,7 @@
 create or replace function public.normalize_arabic(t text)
 returns text language sql immutable parallel safe as $$
   select translate(
-    regexp_replace(coalesce(t, ''), '[ً-ٰٟۖ-ۭـ]', '', 'g'),
+    regexp_replace(coalesce(t, ''), E'[\u064B-\u065F\u0670\u06D6-\u06ED\u0640]', '', 'g'),
     'أإآٱىةؤئ',
     'اااايهوي'
   );
@@ -45,7 +47,7 @@ create policy read_all on public.search_index for select using (true);
 
 -- Only published rows are ever indexed; unpublishing removes them.
 create or replace function public.index_story()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 begin
   if tg_op = 'DELETE' or new.status <> 'published' then
     delete from public.search_index where entity_type = 'story' and entity_id = coalesce(new.id, old.id)::text;
@@ -59,7 +61,7 @@ end $$;
 create trigger stories_index after insert or update or delete on public.stories for each row execute function public.index_story();
 
 create or replace function public.index_event()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 begin
   if tg_op = 'DELETE' or new.status <> 'published' then
     delete from public.search_index where entity_type = 'event' and entity_id = coalesce(new.id, old.id)::text;
@@ -75,7 +77,7 @@ create trigger historical_events_index after insert or update or delete on publi
 
 create or replace function public.search(q text, facets text[] default null, lim integer default 20, off integer default 0)
 returns table (entity_type text, entity_id text, url text, title text, title_ar text, snippet text, facet text, rank real, total bigint)
-language sql stable security invoker set search_path = public as $$
+language sql stable security invoker set search_path = public, extensions as $$
   with query as (
     select websearch_to_tsquery('simple', public.normalize_latin(public.normalize_arabic(q))) as ts_simple,
            websearch_to_tsquery('english', q) as ts_en,

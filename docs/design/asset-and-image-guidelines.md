@@ -1,6 +1,6 @@
 # Asset and image guidelines
 
-What imagery ZIQ may and may not use, the geometric motif system that replaces figurative art, the Open Graph card, fonts and their licences, the database and storage constraints on uploaded assets, and the approval workflow. Rules come from `CLAUDE.md` (content rule 7), [design/brand-book.md](../../design/brand-book.md) ("Imagery", "Iconography") and the migrations in `supabase/migrations/`.
+What imagery QITL may and may not use, the geometric motif system that replaces figurative art, the Open Graph card, fonts and their licences, the database and storage constraints on uploaded assets, and the approval workflow. Rules come from `CLAUDE.md` (content rule 7), [design/brand-book.md](../../design/brand-book.md) ("Imagery", "Iconography") and the migrations in `supabase/migrations/`.
 
 ## Imagery rules
 
@@ -43,7 +43,7 @@ Rules:
 
 ### Logo
 
-No logo has been supplied. The interim mark is a "Z" in Source Serif 4 inside an outlined square (emerald on the home header, `brand` on reading pages), next to the word "ZIQ". Replace both headers and the Open Graph card together when a real mark exists.
+No logo has been supplied. The interim mark is a "Z" in Source Serif 4 inside an outlined square (emerald on the home header, `brand` on reading pages), next to the word "QITL". Replace both headers and the Open Graph card together when a real mark exists.
 
 ### Icons
 
@@ -56,10 +56,10 @@ Line icons on a 16px grid, 1.5px stroke, inheriting `currentColor`: bookmark, bo
 | Property | Value |
 |---|---|
 | Size | 1200 × 630 PNG |
-| Alt | "ZIQ — The Islamic Knowledge Atlas" |
+| Alt | "QITL — The Islamic Knowledge Atlas" |
 | Background | Journey `surface` `#061519` |
 | Mark | Eight-point star as two outlined squares, stroke `#e6c88d` (Journey `brass`), 140px |
-| Wordmark | "ZIQ", 96px, weight 600, letter-spacing 24, `#f2f8f4` (Journey `ink`) |
+| Wordmark | "QITL", 96px, weight 600, letter-spacing 24, `#f2f8f4` (Journey `ink`) |
 | Tagline | "Explore the story. Follow the evidence.", 36px, `#98b7b0` (Journey `ink-muted`) |
 | Rules | No figures, no photography, no Arabic set without a loaded Arabic font |
 
@@ -146,7 +146,7 @@ Gaps to close before any image ships:
 
 ### Map imagery
 
-Base tiles come from the provider in `NEXT_PUBLIC_MAP_TILES_URL`, with its credit in `NEXT_PUBLIC_MAP_ATTRIBUTION`; both must be set or the map stays off. Record the provider as a `sources` row of type `map_tiles` with its licence. Tiles are desaturated (raster saturation −0.7, opacity 0.85) so ZIQ's certainty layers read clearly, and the attribution stays visible in the MapLibre control and in `MapLegend`.
+Base tiles come from the provider in `NEXT_PUBLIC_MAP_TILES_URL`, with its credit in `NEXT_PUBLIC_MAP_ATTRIBUTION`; both must be set or the map stays off. Record the provider as a `sources` row of type `map_tiles` with its licence. Tiles are desaturated (raster saturation −0.7, opacity 0.85) so QITL's certainty layers read clearly, and the attribution stays visible in the MapLibre control and in `MapLegend`.
 
 ## Screenshots and design QA artefacts
 

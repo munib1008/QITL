@@ -1,6 +1,6 @@
 # Information architecture
 
-The complete site map of ZIQ, the route that implements each area today, how the Arabic locale works, how views link to each other, and the content model behind them. Screen-level detail is in [screen-specifications.md](screen-specifications.md); flows are in [interaction-flows.md](interaction-flows.md).
+The complete site map of QITL, the route that implements each area today, how the Arabic locale works, how views link to each other, and the content model behind them. Screen-level detail is in [screen-specifications.md](screen-specifications.md); flows are in [interaction-flows.md](interaction-flows.md).
 
 Status words used in this document:
 
@@ -77,7 +77,7 @@ Home copy note: the brief proposed the hero "Explore the story. Follow the evide
 
 | Element | Home (`JourneyHeader`) | Reading pages (`ReadingHeader`) |
 |---|---|---|
-| Brand | "Z" monogram (interim, no logo yet) + "ZIQ" + tagline, links to `/` | "Z" monogram + "ZIQ", links to `/` |
+| Brand | "Z" monogram (interim, no logo yet) + "QITL" + tagline, links to `/` | "Z" monogram + "QITL", links to `/` |
 | Primary links | The Journey (`#journey`), Explore (`#explore`), Methodology (`/methodology`); hidden under 860px | Section row (from 1024px): Prophets, Timeline, Atlas, Quran, Hadith, Stories, Genealogy, Last Hour, Community |
 | Search | None in the header | `SearchField` (GET form to `/search`); collapses to a Search link under 640px |
 | Language | `LangToggle` "EN · ع" | `LangToggle` |
@@ -95,11 +95,11 @@ Breadcrumbs: every `ReadingPage` renders "Home › …" from its `crumbs` prop; 
 |---|---|
 | `/ar` or `/ar/...` | Always Arabic; served as is from the `[locale]=ar` segment. |
 | `/en` or `/en/...` | 308 redirect to the unprefixed path. |
-| Any other page path | Rewritten internally to `/en/...` or `/ar/...` according to the `ziq-locale` cookie (`ar` → Arabic, anything else → English). The URL the reader sees does not change. |
+| Any other page path | Rewritten internally to `/en/...` or `/ar/...` according to the `qitl-locale` cookie (`ar` → Arabic, anything else → English). The URL the reader sees does not change. |
 | Excluded | `/api/*`, `/auth/*`, `/_next/*` and any path with a file extension. |
 | Auth refresh | When Supabase is configured and an `sb-*` cookie exists, the middleware refreshes the session. |
 
-- `LangToggle` writes `ziq-locale=<en|ar>; path=/; max-age=31536000; samesite=lax`, strips a leading `/ar` from the current path, navigates and refreshes.
+- `LangToggle` writes `qitl-locale=<en|ar>; path=/; max-age=31536000; samesite=lax`, strips a leading `/ar` from the current path, navigates and refreshes.
 - `src/app/[locale]/layout.tsx` sets `<html lang dir>` from the segment (`ar` → `rtl`). Both locales are statically generated (`generateStaticParams`).
 - `stripLocale()` removes `/en` or `/ar` before a path is used as `returnTo`.
 - Interface strings come from `src/lib/i18n/dict.ts` (`en` reviewed; `ar` a draft pending review, announced in the footer). Page copy, info pages and content remain English inside the Arabic shell; Arabic names and Quran text are Arabic in both.

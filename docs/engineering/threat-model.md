@@ -1,6 +1,6 @@
 # Threat model
 
-Scope: the ZIQ web app (Next.js on a serverless host), Supabase (Postgres, Auth, Storage) and the browser. Method: assets → threats → controls → residual risk.
+Scope: the QITL web app (Next.js on a serverless host), Supabase (Postgres, Auth, Storage) and the browser. Method: assets → threats → controls → residual risk.
 
 ## Assets
 

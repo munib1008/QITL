@@ -37,7 +37,7 @@ Code, API routes, database schema, RLS and triggers are complete and tested agai
 | Quran Arabic in the reader, verse cards, compare page, Basmala in the hero | Tanzil import not yet run (needs the owner to accept its terms) | "Arabic not loaded — waiting for the verified Quran source" |
 | Quran translations, translation compare | No translation licence cleared | "Translation unavailable — licence pending" |
 | Tafsir | No licence cleared | Empty state |
-| Hadith text, translations and gradings | No licensed edition imported | "Not published on ZIQ yet" |
+| Hadith text, translations and gradings | No licensed edition imported | "Not published on QITL yet" |
 | Journey summaries for Yusuf's story movements | Wording still being drafted (`summary_status` in the JSON) | "Summary being drafted — read the ayat below" |
 | Family links on prophet pages and the genealogy explorer | No reviewed relationship claims yet | Empty state with a link to the explorer |
 

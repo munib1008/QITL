@@ -91,8 +91,8 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
             </Link>
           ) : null}
           <BookmarkButton target={{ type: "journey_stop", id: p.id }} />
-          <CopyCitationButton text={`ZIQ — ${p.name}. ${publicEnv.siteUrl}/prophets/${p.id}`} />
-          <ShareButton title={`${p.name} — ZIQ`} path={`/prophets/${p.id}`} />
+          <CopyCitationButton text={`QITL — ${p.name}. ${publicEnv.siteUrl}/prophets/${p.id}`} />
+          <ShareButton title={`${p.name} — QITL`} path={`/prophets/${p.id}`} />
         </div>
       </header>
 
@@ -314,7 +314,7 @@ function AtlasPreview({ name, certainty }: { name: string; certainty: "point" | 
           </li>
         </ul>
       ) : null}
-      <MapLegend items={certainty === "point" ? ["point", "unknown"] : certainty === "hypothesis" ? ["hypothesis", "unknown"] : ["region", "unknown"]} attribution="Schematic drawing by ZIQ · no map data" />
+      <MapLegend items={certainty === "point" ? ["point", "unknown"] : certainty === "hypothesis" ? ["hypothesis", "unknown"] : ["region", "unknown"]} attribution="Schematic drawing by QITL · no map data" />
     </div>
   );
 }

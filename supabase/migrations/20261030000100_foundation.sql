@@ -1,9 +1,13 @@
--- ZIQ foundation: extensions, enums, profiles, roles and the helpers every RLS policy uses.
+-- QITL foundation: extensions, enums, profiles, roles and the helpers every RLS policy uses.
 -- Runs on Supabase (auth schema provided) and on the PGlite test harness (auth schema stubbed in tests/db/harness.ts).
 
-create extension if not exists pgcrypto;
-create extension if not exists pg_trgm;
-create extension if not exists postgis;
+-- Extensions live in the "extensions" schema, as Supabase recommends; functions below put it on their search_path.
+create schema if not exists extensions;
+create extension if not exists pgcrypto with schema extensions;
+create extension if not exists pg_trgm with schema extensions;
+create extension if not exists postgis with schema extensions;
+-- Tables in this migration set use PostGIS and trigram types and opclasses by their unqualified names.
+set search_path = public, extensions;
 
 -- ---------- Enums ----------
 create type public.evidence_kind as enum ('quran', 'hadith', 'scholar', 'estimate', 'disputed', 'unknown');
@@ -35,7 +39,7 @@ create table public.role_assignments (
 
 -- ---------- Helpers ----------
 create or replace function public.has_role(r public.app_role)
-returns boolean language sql stable security definer set search_path = public as $$
+returns boolean language sql stable security definer set search_path = public, extensions as $$
   select auth.uid() is not null and (
     r = 'user' or exists (
       select 1 from public.role_assignments ra
@@ -45,7 +49,7 @@ returns boolean language sql stable security definer set search_path = public as
 $$;
 
 create or replace function public.is_staff()
-returns boolean language sql stable security definer set search_path = public as $$
+returns boolean language sql stable security definer set search_path = public, extensions as $$
   select exists (
     select 1 from public.role_assignments ra
     where ra.user_id = auth.uid() and ra.role in ('editor', 'scholarly_reviewer', 'admin')
@@ -64,7 +68,7 @@ create trigger profiles_touch before update on public.profiles
 
 -- A profile row for every new auth user.
 create or replace function public.handle_new_user()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 begin
   insert into public.profiles (id) values (new.id) on conflict do nothing;
   insert into public.notification_prefs (user_id) values (new.id) on conflict do nothing;
@@ -84,7 +88,7 @@ create table public.audit_logs (
 create index audit_logs_entity on public.audit_logs (entity_type, entity_id, at desc);
 
 create or replace function public.audit()
-returns trigger language plpgsql security definer set search_path = public as $$
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
 declare
   rec jsonb;
   old_rec jsonb;

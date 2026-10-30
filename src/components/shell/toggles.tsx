@@ -13,7 +13,7 @@ export function LangToggle({ locale, label }: { locale: "en" | "ar"; label: stri
       className="zq-btn zq-btn-quiet zq-btn-sm"
       aria-label={`${label}: ${next === "ar" ? "العربية" : "English"}`}
       onClick={() => {
-        document.cookie = `ziq-locale=${next}; path=/; max-age=31536000; samesite=lax`;
+        document.cookie = `qitl-locale=${next}; path=/; max-age=31536000; samesite=lax`;
         const path = window.location.pathname.replace(/^\/ar(?=\/|$)/, "") || "/";
         if (window.location.pathname !== path) router.push(path);
         router.refresh();
@@ -31,7 +31,7 @@ export function ThemeToggle({ labels }: { labels: { label: string; light: string
   const [theme, setTheme] = useState<Theme>("system");
   useEffect(() => {
     try {
-      const t = localStorage.getItem("ziq-theme");
+      const t = localStorage.getItem("qitl-theme");
       if (t === "light" || t === "dark") setTheme(t);
     } catch {
       // storage unavailable: stay on system
@@ -41,8 +41,8 @@ export function ThemeToggle({ labels }: { labels: { label: string; light: string
     const next: Theme = theme === "system" ? "light" : theme === "light" ? "dark" : "system";
     setTheme(next);
     try {
-      if (next === "system") localStorage.removeItem("ziq-theme");
-      else localStorage.setItem("ziq-theme", next);
+      if (next === "system") localStorage.removeItem("qitl-theme");
+      else localStorage.setItem("qitl-theme", next);
     } catch {
       // ignore
     }

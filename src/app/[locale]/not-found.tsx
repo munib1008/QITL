@@ -12,7 +12,7 @@ export default function NotFound() {
           <Rosette points={8} className="pp-mark" />
           <p className="zq-eyebrow">404</p>
           <h1>This page is not here.</h1>
-          <p className="zq-meta">It may have moved, or the address may be mistyped. Nothing on ZIQ is removed without a revision note.</p>
+          <p className="zq-meta">It may have moved, or the address may be mistyped. Nothing on QITL is removed without a revision note.</p>
           <SearchField id="nf-q" maxWidth={480} />
           <p>
             <Link href="/">Home</Link> · <Link href="/prophets">Prophets</Link> · <Link href="/quran">Quran</Link>

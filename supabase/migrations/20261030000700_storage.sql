@@ -1,4 +1,6 @@
 -- @supabase-only
+set search_path = public, extensions;
+
 -- Storage buckets and policies (Supabase Storage). Skipped by the PGlite test harness.
 -- media: approved, licensed images; public read, staff write. exports: user data exports; owner read only.
 

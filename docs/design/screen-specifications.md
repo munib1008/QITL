@@ -24,7 +24,7 @@ Screenshots of the current build: [home hero 1440](screenshots/home-hero-1440.pn
 ```
 Desktop ≥1024                                         Mobile <640
 ┌──────────────────────────────────────────────┐      ┌──────────────────────────┐
-│ [Z] ZIQ  [ Search ZIQ…            ] ◐ EN·ع [Sign in]│ [Z] ZIQ [S] [T] EN·ع [In] [=] │
+│ [Z] QITL  [ Search QITL…            ] ◐ EN·ع [Sign in]│ [Z] QITL [S] [T] EN·ع [In] [=] │
 │ Prophets Timeline Atlas Quran Hadith Stories …│      ├──────────────────────────┤
 ├──────────────────────────────────────────────┤      │ Home › Section            │
 │ Home › Section › Page                         │      │ Kicker                    │
@@ -35,7 +35,7 @@ Desktop ≥1024                                         Mobile <640
 ├──────────────────────────────────────────────┤      │ Page body (1 column)      │
 │ Page body                                     │      ├──────────────────────────┤
 ├──────────────────────────────────────────────┤      │ Footer (stacked columns)  │
-│ ZIQ principles │ About links │ Legal links    │      └──────────────────────────┘
+│ QITL principles │ About links │ Legal links    │      └──────────────────────────┘
 └──────────────────────────────────────────────┘
 ```
 
@@ -61,12 +61,12 @@ No analytics library is installed and no event is emitted today. The privacy pag
 
 Status: **Wired** (journey JSON). Basmala in the hero appears only after the Quran import. Feature cards are labelled "Coming soon". **Finalised visual** (`design/prototype/home.html`, `HomePage.md`). Screenshots: [hero 1440](screenshots/home-hero-1440.png), [hero 390](screenshots/home-hero-390.png), [journey 1440](screenshots/home-journey-1440.png), [journey 390](screenshots/home-journey-390.png).
 
-Purpose: introduce ZIQ and carry the reader through the 29-stop Journey from Adam (عليه السلام) to the passing of the Prophet ﷺ.
+Purpose: introduce QITL and carry the reader through the 29-stop Journey from Adam (عليه السلام) to the passing of the Prophet ﷺ.
 
 ```
 Desktop (container ≥1180)
 ┌─────────────────────────────────────────────────────────────────┐
-│ [Z] ZIQ  Islamic Knowledge Atlas   The Journey  Explore  Methodology   EN·ع [Begin exploring] │
+│ [Z] QITL  Islamic Knowledge Atlas   The Journey  Explore  Methodology   EN·ع [Begin exploring] │
 ├─────────────────────────────────────────────────────────────────┤
 │                    (Basmala, gold, after import)                 │
 │                 A JOURNEY THROUGH SACRED HISTORY                 │
@@ -85,12 +85,12 @@ Desktop (container ≥1180)
 │ MORE WAYS TO UNDERSTAND · Every story, in context.                │
 │ [Interactive atlas] [Evidence first] [Connected genealogy]  each "Coming soon" │
 ├─────────────────────────────────────────────────────────────────┤
-│ ZIQ — Islamic Knowledge Atlas · principles · About Methodology Privacy Accessibility │
+│ QITL — Islamic Knowledge Atlas · principles · About Methodology Privacy Accessibility │
 └─────────────────────────────────────────────────────────────────┘
 
 Mobile (<860)
 ┌──────────────────────────┐
-│ [Z] ZIQ      EN·ع  ☰      │
+│ [Z] QITL      EN·ع  ☰      │
 │ hero, centred, 1 column   │
 │ facts stacked             │
 │ filter pills (wrap)       │
@@ -220,7 +220,7 @@ Controls and behaviour:
 |---|---|---|
 | Read Surah [name] / Read the ayat | Link (primary) | `/quran/[n]` or `/quran/[s]#ayah-[a]` |
 | Bookmark | See `BookmarkButton` states | `/sign-in?returnTo&intent` when signed out |
-| Cite this page | Copies "ZIQ — [name]. [site]/prophets/[id]"; "Citation copied" or "Copy failed" for 2s (`aria-live`) | clipboard |
+| Cite this page | Copies "QITL — [name]. [site]/prophets/[id]"; "Citation copied" or "Copy failed" for 2s (`aria-live`) | clipboard |
 | Share | Native share sheet; falls back to copying the URL ("Link copied") | — |
 | Position bar | Previous and Next in journey order | `/prophets/[prev|next]` |
 | Story step chip, Read ayat → | Link | `/quran/[s]#ayah-[a]` |
@@ -483,7 +483,7 @@ Components: `ReadingPage`, `EvidenceLabel`, `CitationChip`, `AyahReader`, `Bookm
 
 Data inputs: `surahList()[n-1]`, `surahArabic(n)`, `quranSource()`; journey stops whose passages fall in surah n (ayah → stop links).
 
-Controls: A− / A+ step through 24, 28, 32, 38, 44, 48px (buttons disabled at the ends; size remembered in `localStorage` `ziq-quran-size`; `output` announces the size); per ayah: citation chip (anchor), bookmark, Copy reference ("Copied" for 1.5s), stop links.
+Controls: A− / A+ step through 24, 28, 32, 38, 44, 48px (buttons disabled at the ends; size remembered in `localStorage` `qitl-quran-size`; `output` announces the size); per ayah: citation chip (anchor), bookmark, Copy reference ("Copied" for 1.5s), stop links.
 
 States: invalid surah → 404; not imported → label "Source not imported", "The Arabic of this surah is not loaded yet." + "It is shown only from the verified source import, never typed in. Tafsir and translations appear here once licensed and reviewed."; tafsir → label "Not yet attached", "No tafsir is attached to this surah yet." + "Each tafsir excerpt names its scholar and work, and appears only when its licence is cleared."
 
@@ -559,7 +559,7 @@ Components: `HadithCard`, `HadithGrade`, `CardActions`, `EmptyState`, `Discussio
 
 Data inputs: `hadith_entries` + `hadith_translations` (RLS returns only rights-cleared sources) + `hadith_gradings (grader, grade, grade_label, citation)`; authentic grades: sahih, hasan, hasan sahih, sahih li-ghayrihi, hasan li-ghayrihi; `varies` when more than one distinct grade.
 
-States: invalid collection or number format → 404; nothing published → label "Not published", "[Name] [n] is not published on ZIQ yet." + "No reviewed record exists for this number in this collection." or "The hadith database is not connected on this site yet." + "No text is shown rather than an unverified one."; zero gradings → "Grade not recorded".
+States: invalid collection or number format → 404; nothing published → label "Not published", "[Name] [n] is not published on QITL yet." + "No reviewed record exists for this number in this collection." or "The hadith database is not connected on this site yet." + "No text is shown rather than an unverified one."; zero gradings → "Grade not recorded".
 
 Analytics: `hadith_viewed {collection}`, `hadith_disagreement_viewed {collection}`.
 
@@ -627,7 +627,7 @@ Status: **Wired** over journey content; database index added with Supabase. Visu
 
 ```
 Search · lead
-[ Search ZIQ…                       ]
+[ Search QITL…                       ]
 [All (n)] [Prophets (n)] [Quran (n)] …       (facet pills with counts; only non-zero)
 n results for "query" [in the journey content (the full index is not connected…)]
 PROPHETS
@@ -748,7 +748,7 @@ Not built: followed threads list (the lead promises it), saved places, saved col
 
 Analytics: `library_viewed`, `bookmark_removed {target_type}`, `data_exported`, `account_deleted` (count only). Never note content.
 
-Acceptance: only the owner's rows are visible (RLS); export downloads `ziq-export-YYYY-MM-DD.json`; delete requires the phrase and signs the reader out.
+Acceptance: only the owner's rows are visible (RLS); export downloads `qitl-export-YYYY-MM-DD.json`; delete requires the phrase and signs the reader out.
 
 ## Unsubscribed `/account/unsubscribed?ok=<0|1>`
 
@@ -826,12 +826,12 @@ Acceptance: legal drafts carry the banner; no religious claim is made on these p
 Route: any unmatched path (`[...rest]` calls `notFound()`; also unknown prophet ids, surahs outside 1–114, bad hadith numbers, unpublished stories). Status: **Wired**.
 
 ```
-[Z] ZIQ header
+[Z] QITL header
         ✸
         404
   This page is not here.
-  It may have moved, or the address may be mistyped. Nothing on ZIQ is removed without a revision note.
-  [ Search ZIQ… ]
+  It may have moved, or the address may be mistyped. Nothing on QITL is removed without a revision note.
+  [ Search QITL… ]
   Home · Prophets · Quran
 footer
 ```
@@ -842,7 +842,7 @@ Analytics: `not_found_viewed {path_group}` (first path segment only). Acceptance
 
 Route: `src/app/[locale]/error.tsx`. Status: **Wired**. No header or footer (renders inside the locale layout only).
 
-Copy: "500", "Something went wrong on our side.", "The page could not be loaded. Try again; if it keeps failing, the rest of ZIQ still works.", optional "Reference: [digest]", buttons Try again (`reset()`) and Home. Logs only the digest. Analytics: `error_viewed {digest_present}`.
+Copy: "500", "Something went wrong on our side.", "The page could not be loaded. Try again; if it keeps failing, the rest of QITL still works.", optional "Reference: [digest]", buttons Try again (`reset()`) and Home. Logs only the digest. Analytics: `error_viewed {digest_present}`.
 
 ## Offline `/offline`
 

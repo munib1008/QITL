@@ -8,7 +8,7 @@ export function isLocale(v: string): v is Locale {
 }
 
 /**
- * Interface language: the [locale] route segment, chosen by the middleware from /ar/... or the ziq-locale cookie.
+ * Interface language: the [locale] route segment, chosen by the middleware from /ar/... or the qitl-locale cookie.
  * Content language is set per block with lang/dir.
  */
 export function getDict(locale: string) {
@@ -16,7 +16,7 @@ export function getDict(locale: string) {
   return { locale: l, dir: l === "ar" ? ("rtl" as const) : ("ltr" as const), t: dict[l] };
 }
 
-export const LOCALE_COOKIE = "ziq-locale";
+export const LOCALE_COOKIE = "qitl-locale";
 
 /** The public path without the internal /en or /ar locale segment (rewrites can expose either). */
 export function stripLocale(path: string): string {

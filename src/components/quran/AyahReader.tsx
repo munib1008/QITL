@@ -17,7 +17,7 @@ export function AyahReader({ surah, surahName, verses, links }: { surah: number;
   const [copied, setCopied] = useState<number | null>(null);
   useEffect(() => {
     try {
-      const v = Number(localStorage.getItem("ziq-quran-size"));
+      const v = Number(localStorage.getItem("qitl-quran-size"));
       if (SIZES.includes(v)) setSize(v);
     } catch {
       // storage unavailable
@@ -26,7 +26,7 @@ export function AyahReader({ surah, surahName, verses, links }: { surah: number;
   const set = (v: number) => {
     setSize(v);
     try {
-      localStorage.setItem("ziq-quran-size", String(v));
+      localStorage.setItem("qitl-quran-size", String(v));
     } catch {
       // ignore
     }
