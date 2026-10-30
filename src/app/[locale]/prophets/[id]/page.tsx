@@ -8,6 +8,8 @@ import { BookmarkButton } from "@/components/account/BookmarkButton";
 import { CopyCitationButton, ShareButton } from "@/components/account/ShareButtons";
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
 import { NoteEditor } from "@/components/account/NoteEditor";
+import { ProphetProfile } from "@/components/profile/ProphetProfile";
+import { getPersonProfile } from "@/lib/data/profiles";
 import { CitationChip, DraftBadge, EraTag, EvidenceLabel } from "@/components/ui/evidence";
 import { VerseCard } from "@/components/ui/cards";
 import { EmptyState, MapLegend } from "@/components/ui/misc";
@@ -20,6 +22,8 @@ export function generateStaticParams() {
   return LOCALES.flatMap((locale) => journeyStops().map((s) => ({ locale, id: s.id })));
 }
 export const dynamicParams = false;
+/** Published profiles come from the database; refresh the static page every 5 minutes. */
+export const revalidate = 300;
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
@@ -42,6 +46,7 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
   const place = p.place ?? { name: "Unknown", certainty: "unknown" as const };
   const named = p.surahs?.find((s) => s.named);
   const hon = (x?: { honorific: string }) => (x?.honorific ? ` ${x.honorific}` : "");
+  const profile = ms ? null : await getPersonProfile(p.id);
 
   return (
     <ReadingPage locale={locale} crumbs={[{ href: "/prophets", label: "Prophets" }, { label: p.name }]}>
@@ -127,12 +132,21 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
       <div className="pp-grid">
         <div>
           <nav className="pp-toc" aria-label="On this page">
+            {!ms ? <a href="#profile">Profile</a> : null}
             <a href="#story">Story</a>
             <a href="#quran">Quran</a>
             <a href="#hadith">Sunnah</a>
             <a href="#places">Places</a>
             <a href="#discuss">Discussion</a>
           </nav>
+
+          {profile ? (
+            <section className="pp-sec" id="profile" aria-labelledby="profile-h">
+              <h2 id="profile-h">Profile</h2>
+              <p className="lead">The same structure for every prophet: key facts, then three reading depths. Each part is cited and reviewed.</p>
+              <ProphetProfile result={profile} name={p.name} />
+            </section>
+          ) : null}
 
           <section className="pp-sec" id="story" aria-labelledby="story-h">
             <h2 id="story-h">{p.story?.length ? `The story in ${p.story.length} movements` : "The story"}</h2>

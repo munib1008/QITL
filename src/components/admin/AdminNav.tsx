@@ -9,6 +9,7 @@ const LINKS: Array<{ href: string; label: string; roles: Role[] }> = [
   { href: "/admin", label: "Overview", roles: ["editor", "scholarly_reviewer", "moderator", "admin"] },
   { href: "/admin/review", label: "Review queue", roles: ["editor", "scholarly_reviewer", "admin"] },
   { href: "/admin/events/new", label: "New event", roles: ["editor", "admin"] },
+  { href: "/admin/profiles", label: "Prophet profiles", roles: ["editor", "admin"] },
   { href: "/admin/stories", label: "Stories", roles: ["editor", "admin"] },
   { href: "/admin/relationships", label: "Genealogy edges", roles: ["editor", "admin"] },
   { href: "/admin/moderation", label: "Moderation", roles: ["moderator", "admin"] },

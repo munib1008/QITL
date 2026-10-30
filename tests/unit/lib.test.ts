@@ -78,3 +78,19 @@ describe("markdown links", () => {
     expect(safeHref("http://insecure.example")).toBeNull();
   });
 });
+
+import { formatRange, formatYear } from "@/lib/years";
+describe("years", () => {
+  test("astronomical numbering has a year zero; BCE/CE does not", () => {
+    expect(formatYear(1)).toBe("1 CE");
+    expect(formatYear(0)).toBe("1 BCE");
+    expect(formatYear(-1)).toBe("2 BCE");
+  });
+  test("ranges across the era boundary name both eras, and estimates say so", () => {
+    expect(formatRange(-4, 30)).toBe("5 BCE–30 CE");
+    expect(formatRange(610, 632)).toBe("610–632 CE");
+    expect(formatRange(570, 570, null, null, true)).toBe("c. 570 CE");
+    expect(formatRange(622, null, 1, null)).toBe("622 CE · 1 AH");
+    expect(formatRange(null, null)).toBeUndefined();
+  });
+});

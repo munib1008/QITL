@@ -337,6 +337,7 @@ describe("read RPCs", () => {
   test("the person graph returns only published people and edges, each with its claim", async () => {
     const mk = async (slug: string) => {
       const [p] = await db.as<{ id: string }>(editor, "insert into public.people (slug, name_en, name_ar, kind) values ($1, $1, 'x', 'prophet') returning id", [slug]);
+      await db.as(reviewer, "insert into public.editorial_reviews (entity_type, entity_id, reviewer_id, decision) values ('person', $1, $2, 'approved')", [p!.id, reviewer]);
       await db.admin("update public.people set status = 'published' where id = $1", [p!.id]);
       return p!.id;
     };
@@ -368,5 +369,40 @@ describe("media assets", () => {
     await rejects(db.admin(base, ["c.png", src!.id, false, "published", admin]), /rights are not cleared/);
     await db.admin("update public.sources set rights_status = 'cleared' where id = $1", [src!.id]);
     await db.admin(base, ["d.png", src!.id, false, "published", admin]);
+  });
+});
+
+describe("profiles", () => {
+  let person: string, claim: string;
+  beforeAll(async () => {
+    [{ id: person }] = (await db.as<{ id: string }>(editor, "insert into public.people (slug, name_en, name_ar, kind) values ('profile-fixture', 'Fixture', 'x', 'prophet') returning id")) as [{ id: string }];
+    claim = await newClaim(editor, "Fixture claim behind a profile section");
+    await db.as(editor, "insert into public.claim_references (claim_id, kind, quran_surah, quran_ayah_from) values ($1, 'quran', 12, 3)", [claim]);
+    await db.as(reviewer, "insert into public.editorial_reviews (entity_type, entity_id, reviewer_id, decision) values ('claim', $1, $2, 'approved')", [claim, reviewer]);
+    await db.as(editor, "update public.evidence_claims set status = 'approved' where id = $1", [claim]);
+  });
+  test("a person cannot be published without a scholarly approval", async () => {
+    await rejects(db.as(editor, "update public.people set status = 'published' where id = $1", [person]), /no review, no publish/);
+  });
+  test("an unknown fact carries no value, a known fact needs one, and facts sit in the overview depth", async () => {
+    await rejects(db.as(editor, "insert into public.profile_sections (person_id, kind, depth, known, value_text, claim_id) values ($1, 'lifespan', 'overview', false, '900 years', $2)", [person, claim]), /check constraint/);
+    await rejects(db.as(editor, "insert into public.profile_sections (person_id, kind, depth, claim_id) values ($1, 'outcome', 'overview', $2)", [person, claim]), /check constraint/);
+    await rejects(db.as(editor, "insert into public.profile_sections (person_id, kind, depth, value_text, claim_id) values ($1, 'outcome', 'study', 'x', $2)", [person, claim]), /check constraint/);
+    await db.as(editor, "insert into public.profile_sections (person_id, kind, depth, known, value_note, claim_id) values ($1, 'lifespan', 'overview', false, 'Not stated in the sources', $2)", [person, claim]);
+  });
+  test("a section has exactly one subject and prose sections need prose", async () => {
+    await rejects(db.as(editor, "insert into public.profile_sections (kind, depth, body_md, claim_id) values ('situation', 'narrative', 'x', $1)", [claim]), /check constraint/);
+    await rejects(db.as(editor, "insert into public.profile_sections (person_id, kind, depth, claim_id) values ($1, 'situation', 'narrative', $2)", [person, claim]), /check constraint/);
+  });
+  test("no review, no publish; public only once the section and its subject are published", async () => {
+    const [sec] = await db.as<{ id: string }>(editor, "insert into public.profile_sections (person_id, kind, depth, body_md, claim_id) values ($1, 'situation', 'narrative', 'Fixture narrative', $2) returning id", [person, claim]);
+    await rejects(db.as(editor, "update public.profile_sections set status = 'published' where id = $1", [sec!.id]), /no review, no publish/);
+    await db.as(reviewer, "insert into public.editorial_reviews (entity_type, entity_id, reviewer_id, decision) values ('profile_section', $1, $2, 'approved')", [sec!.id, reviewer]);
+    await db.as(editor, "update public.profile_sections set status = 'published' where id = $1", [sec!.id]);
+    expect(await db.as(null, "select id from public.profile_sections where id = $1", [sec!.id])).toHaveLength(0);
+    await db.as(reviewer, "insert into public.editorial_reviews (entity_type, entity_id, reviewer_id, decision) values ('person', $1, $2, 'approved')", [person, reviewer]);
+    await db.as(editor, "update public.people set status = 'published' where id = $1", [person]);
+    expect(await db.as(null, "select id from public.profile_sections where id = $1", [sec!.id])).toHaveLength(1);
+    await rejects(db.as(alice, "insert into public.profile_sections (person_id, kind, depth, body_md, claim_id) values ($1, 'challenge', 'narrative', 'x', $2)", [person, claim]), /row-level security|permission denied/);
   });
 });

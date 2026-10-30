@@ -6,6 +6,8 @@ import { VerticalTimeline } from "@/components/ui/VerticalTimeline";
 import { CitationChip, DraftBadge, EraTag, EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
 import { journeyTimeline, todayLabel } from "@/lib/timeline";
+import { eventEras, publishedEvents } from "@/lib/data/events";
+import { PRECISION_TEXT } from "@/components/ui/cards";
 import { quranHref } from "@/lib/refs";
 
 export const metadata: Metadata = {
@@ -13,12 +15,18 @@ export const metadata: Metadata = {
   description: "From Adam to today, in order and not to scale. Undated sacred history stays on a relative-order track.",
 };
 
+/** Reviewed events are read from the database; refresh every 5 minutes. */
+export const revalidate = 300;
+
 export default async function TimelinePage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ selected?: string }> }) {
   const { locale } = await params;
   const { selected } = await searchParams;
   const j = getJourney();
   const pos = selected ? findStop(selected) : undefined;
   const s = pos?.item;
+  // Reviewed events from the database sit on their own track below the journey.
+  const events = await publishedEvents();
+  const ev = selected?.startsWith("event-") ? events?.find((e) => `event-${e.slug}` === selected) : undefined;
   return (
     <ReadingPage
       locale={locale}
@@ -31,12 +39,40 @@ export default async function TimelinePage({ params, searchParams }: { params: P
         <div className="zq-split">
           <div>
             <VerticalTimeline eras={journeyTimeline(j)} selected={s?.id} today={todayLabel()} />
+            {events?.length ? (
+              <section aria-labelledby="reviewed-events-h" style={{ marginTop: 24 }}>
+                <h2 id="reviewed-events-h" className="zq-eyebrow" style={{ padding: "0 16px" }}>
+                  Reviewed events
+                </h2>
+                <VerticalTimeline eras={eventEras(events)} selected={selected} today={false} label="Reviewed events" />
+              </section>
+            ) : null}
             <p className="zq-meta" style={{ padding: "0 16px" }}>
               Signs of the Last Hour are not placed on this timeline: no date is known. See the <Link href="/last-hour">Last Hour explorer</Link>.
             </p>
           </div>
           <div className="zq-split-sticky" aria-live="polite">
-            {s ? (
+            {ev ? (
+              <article className="zq-card" style={{ maxWidth: "none" }} aria-labelledby="sel-title">
+                <div className="zq-card-head">
+                  <p className="zq-eyebrow">Event</p>
+                  {ev.evidence_claims ? <EvidenceLabel kind={ev.evidence_claims.evidence} /> : null}
+                </div>
+                <h2 id="sel-title" className="zq-title" style={{ fontSize: 24, lineHeight: "32px", fontFamily: "var(--font-display)" }}>
+                  {ev.title}{" "}
+                  {ev.title_ar ? (
+                    <span lang="ar" dir="rtl" className="zq-jc-sar">
+                      {ev.title_ar}
+                    </span>
+                  ) : null}
+                </h2>
+                {ev.summary ? <p className="zq-meta">{ev.summary}</p> : null}
+                <dl className="zq-kv">
+                  <dt>Date</dt>
+                  <dd>{PRECISION_TEXT[ev.date_precision]}</dd>
+                </dl>
+              </article>
+            ) : s ? (
               <article className="zq-card" style={{ maxWidth: "none" }} aria-labelledby="sel-title">
                 <div className="zq-card-head">
                   <p className="zq-eyebrow">{s.type === "milestone" ? "Milestone" : "Prophet"}</p>

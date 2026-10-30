@@ -11,6 +11,7 @@ const TABLE = {
   relationship: "relationships",
   place_geometry: "place_geometries",
   person: "people",
+  profile_section: "profile_sections",
 } as const;
 
 const Change = z.object({

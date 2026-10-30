@@ -39,3 +39,16 @@ export function getServiceSupabase(): SupabaseClient | null {
   if (!supabaseConfigured() || !key) return null;
   return createClient(publicEnv.supabaseUrl, key, { auth: { persistSession: false, autoRefreshToken: false } });
 }
+
+/**
+ * Anonymous, cookie-free client for public reads of published content. RLS limits it to what any visitor may see,
+ * and because it never touches cookies, pages that use it stay statically cacheable (ISR).
+ */
+let publicClient: SupabaseClient | null | undefined;
+export function getPublicSupabase(): SupabaseClient | null {
+  if (publicClient !== undefined) return publicClient;
+  publicClient = supabaseConfigured()
+    ? createClient(publicEnv.supabaseUrl, publicEnv.supabaseAnonKey, { auth: { persistSession: false, autoRefreshToken: false } })
+    : null;
+  return publicClient;
+}

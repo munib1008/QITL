@@ -1,6 +1,6 @@
 # Implementation status
 
-What works today, what is blocked and by what. "Working" means wired end to end and covered by tests; nothing marked working is a mock. Last updated with branch `feat/platform-foundation`.
+What works today, what is blocked and by what. "Working" means wired end to end and covered by tests; nothing marked working is a mock. Supabase and Vercel are connected (qitl.vercel.app); everything below that needed credentials is now live, waiting for reviewed content.
 
 ## Fully working (no external service needed)
 
@@ -15,6 +15,16 @@ What works today, what is blocked and by what. "Working" means wired end to end 
 | Hadith catalogue (seven collections), information pages (about, methodology, review board, corrections, terms, privacy, accessibility, contact, guidelines) | Legal pages are marked drafts for counsel | axe |
 | SEO: metadata, Open Graph card, sitemap, robots, JSON-LD | | build |
 | Security headers and CSP | See `docs/engineering/threat-model.md` for the `'unsafe-inline'` follow-up | e2e |
+
+## Prophet profiles (new)
+
+Every prophet uses one structure: four facts (time among his people, total lifespan, people addressed, outcome) and three reading
+depths (a 30-second overview, a narrative of the situation, challenge, what happened and lessons, and a source-based study). Each
+section rests on a referenced claim and is published only after scholarly review; a fact the sources do not establish is published as
+"Not established", never estimated. Editors import the journey's prophets as draft people and write sections in Editorial → Prophet
+profiles. The prophet page shows the profile once sections are published. No profile content exists yet; it has to be written and reviewed.
+
+The timeline also lists events published in the database, on their own track: sacred history in relative order, dated history in CE and AH.
 
 ## Built and tested, waiting for credentials (Supabase)
 
@@ -51,7 +61,6 @@ Code, API routes, database schema, RLS and triggers are complete and tested agai
 
 ## Known gaps (from the design audit, not yet built)
 
-- `/timeline` reads the journey file only; events published through the editor appear in the events API and search but not yet on the timeline page.
 - The surah reader does not yet load licensed translations (the compare page does).
 - Discussions attach to a whole page; attaching a thread to one evidence card (`claim_id`) is supported by the schema and API but not by the UI.
 - No public revision-history view yet (notes and versions are stored; staff see the diff in the review queue).

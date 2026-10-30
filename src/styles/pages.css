@@ -97,3 +97,18 @@
 .pp-q { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; border: 2px dashed var(--ev-unknown); color: var(--ev-unknown); font: 700 11px/1 var(--font-sans); margin-inline-end: 6px; }
 @media (max-width: 640px) { .pp-map { height: auto; min-height: 260px; display: flex; flex-direction: column; gap: 8px; padding: 8px; } .pp-map .zq-legend, .pp-map-unknown, .pp-map .note { position: static; max-width: none; } .pp-map svg.base { position: relative; height: 160px; } }
 .zq-jt-motion { margin-inline-start: auto; font-weight: 400; }
+
+/* Prophet profile: fact grid and reading depths */
+.qp { display: flex; flex-direction: column; gap: 20px; }
+.qp-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px; }
+.qp-fact { height: 100%; display: flex; flex-direction: column; gap: 6px; padding: 16px; background: var(--surface-raised); border: 1px solid var(--hairline); border-radius: var(--radius-md); }
+.qp-fact-label { font: 600 12px/16px var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); }
+.qp-fact-value { font: 600 22px/28px var(--font-display); color: var(--ink); }
+.qp-fact-note { font: 400 13px/18px var(--font-sans); color: var(--ink-muted); }
+.qp-fact-pending { font: italic 400 15px/22px var(--font-sans); color: var(--ink-muted); }
+.qp-refs { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: auto; }
+.qp-tabs { padding: 0; }
+.qp-panel { padding-top: 16px; }
+.qp-panel:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+.qp-section { display: flex; flex-direction: column; gap: 8px; padding: 12px 0 20px; border-bottom: 1px solid var(--hairline); }
+.qp-section h3 { margin: 0; font: 600 20px/28px var(--font-display); }
