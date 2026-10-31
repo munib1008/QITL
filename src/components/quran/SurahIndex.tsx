@@ -51,9 +51,13 @@ export function SurahIndex({ surahs, juz, locale = "en" }: { surahs: Entry[]; ju
               <Link href={`/quran/${s.number}`}>
                 <span className="zq-order">{s.number}</span>
                 <span>
-                  <b>{s.name}</b>
+                  <b lang="en">{s.name}</b>
                   <span className="zq-meta" style={{ display: "block" }}>
-                    {s.english ? `${s.english} · ` : ""}
+                    {s.english ? (
+                      <>
+                        <span lang="en">{s.english}</span> ·{" "}
+                      </>
+                    ) : null}
                     {t.ayat(s.ayahs)}
                     {s.revelation ? ` · ${s.revelation}` : ""}
                   </span>

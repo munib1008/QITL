@@ -129,9 +129,8 @@ test("switching the interface language keeps the page, the query and the #hash",
   await sw.getByRole("link", { name: "اردو" }).click();
   await expect(page).toHaveURL(/\/ur\/prophets\/yusuf#places$/);
   await expect(page.locator("html")).toHaveAttribute("lang", "ur");
-  await page.evaluate(() => {
-    window.location.hash = "discuss";
-  });
+  // Another fragment, opened the way a link would (the page's own scripts may rewrite a hash set afterwards).
+  await page.goto("/ur/prophets/yusuf#discuss");
   await page.locator("header").getByRole("group", { name: "زبان" }).getByRole("link", { name: "العربية" }).click();
   await expect(page).toHaveURL(/\/ar\/prophets\/yusuf#discuss$/);
   await page.locator("header").getByRole("group", { name: "اللغة" }).getByRole("link", { name: "English" }).click();
