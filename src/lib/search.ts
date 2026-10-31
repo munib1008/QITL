@@ -175,6 +175,9 @@ export type Facet =
   | "ayahs"
   | "stories"
   | "events"
+  | "people"
+  | "communities"
+  | "hadith_stories"
   | "places"
   | "hadith"
   | "creation"
@@ -186,7 +189,7 @@ export type Facet =
   | "last_hour";
 
 /** Display order of the facet filters. */
-export const FACETS: Facet[] = ["prophets", "milestones", "quran", "ayahs", "stories", "events", "hadith", "creation", "guidance", "lifestyle", "qiraat", "questions", "last_hour", "places", "pages"];
+export const FACETS: Facet[] = ["prophets", "milestones", "quran", "ayahs", "stories", "events", "people", "communities", "hadith_stories", "hadith", "creation", "guidance", "lifestyle", "qiraat", "questions", "last_hour", "places", "pages"];
 export const isFacet = (s: string): s is Facet => (FACETS as string[]).includes(s);
 
 export interface SearchHit {
@@ -200,7 +203,18 @@ export interface SearchHit {
   arabic?: string;
   facet: Facet;
   score: number;
+  /** The visible type of the result (prophet, person, community, event, parable, hadith_story, story); absent for pages, surahs and ayat. */
+  kind?: SearchKind;
+  /** Event Universe track, for events, people and communities. */
+  track?: string;
+  /** Surahs the record's Quran references fall in. */
+  surahs?: number[];
 }
+
+/** Result types shown as a label and usable as the `type` filter. */
+export const SEARCH_KINDS = ["prophet", "person", "community", "event", "parable", "hadith_story", "story"] as const;
+export type SearchKind = (typeof SEARCH_KINDS)[number];
+export const isKind = (s: string | null | undefined): s is SearchKind => !!s && (SEARCH_KINDS as readonly string[]).includes(s);
 
 /**
  * Widely used English and Arabic-transliteration forms of the prophets' names, so "Abraham" finds Ibrahim.
@@ -293,6 +307,8 @@ export function searchJourney(q: string): SearchHit[] {
         titleAr: s.arabicName,
         snippet: s.summary,
         facet: s.type === "milestone" ? "milestones" : "prophets",
+        ...(s.type === "milestone" ? {} : { kind: "prophet" as const }),
+        surahs: (s.surahs ?? []).map((x) => x.number),
         // A prophet outranks a surah of the same name (Ibrahim, Yusuf, Nuh).
         score: score + 0.5,
       });

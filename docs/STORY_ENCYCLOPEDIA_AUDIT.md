@@ -20,9 +20,9 @@ coverage dashboard. Rule from the brief and from QITL: complete coverage means e
 
 ## Gaps (what this phase builds)
 
-1. **Hadith Stories library**: no table or page for authenticated hadith narratives as stories (title, narrator, collection reference, grading
+1. **Hadith Stories library** (DONE on `mod/hadith-people`, 2026-11-01: `/hadith-stories`, `/admin/hadith-stories`, migration `20261031002520`; no story is published, nothing is seeded): no table or page for authenticated hadith narratives as stories (title, narrator, collection reference, grading
    scholar, summary, Quran connections, lessons, link to person/community/event). Only grade-gated entries.
-2. **People and Communities encyclopedia pages**: `people` and `historical_communities` rows exist but there is no public page per person
+2. **People and Communities encyclopedia pages** (DONE on `mod/hadith-people`, 2026-11-01: `/people`, `/communities`, migration `20261031002521`; no record is published, nothing is seeded; the editors' screen for `encyclopedia_kind`, the Event Universe item and `person_claims` is still to build): `people` and `historical_communities` rows exist but there is no public page per person
    or community, no "identity not established / traditional identification" presentation, no list by kind.
 3. **Story chapters with their own references and depth modes**: story_sections carry steps; there is no chapter object with its own
    verse references, no One-Minute / Complete / Deep Study / Kids / Life Lessons switch, no chapter deep links.
@@ -34,7 +34,7 @@ coverage dashboard. Rule from the brief and from QITL: complete coverage means e
 5. **Source-change invalidation**: a change to a claim, reference, grading or tafsir link must mark dependent summaries, translations and
    audio as needing review.
    **DONE (2026-11-01)**: triggers on `content_dependency_versions`, the Needs re-review queue, `docs/STORY_COVERAGE.md` section 2.
-6. **Unified story search** with facets (prophet, person, community, event, hadith story, parable, surah/verse, theme, life challenge).
+6. **Unified story search** (DONE on `mod/hadith-people`, 2026-11-01: typed results and the type / track / surah facets, migration `20261031002522`) with facets (prophet, person, community, event, hadith story, parable, surah/verse, theme, life challenge).
 7. **Automated story checks** (missing refs, duplicate stories, unsupported names, hadith grading gaps, broken links) in CI and admin.
    **DONE (2026-11-01)**: `src/lib/stories/checks.ts`, `pnpm check:stories`, shown on the coverage page, `docs/STORY_COVERAGE.md` section 4.
 
@@ -42,7 +42,7 @@ Gaps 1, 2 and 6 belong to `mod/hadith-people`.
 
 ## Phases
 
-- A (this run, two parallel branches): `mod/hadith-people` = gaps 1, 2, 6; `mod/story-chapters` = gaps 3, 4, 5, 7.
+- A (this run, two parallel branches; gaps 1, 2 and 6 are built on `mod/hadith-people`, gaps 3, 4, 5 and 7 remain on `mod/story-chapters`): `mod/hadith-people` = gaps 1, 2, 6; `mod/story-chapters` = gaps 3, 4, 5, 7.
 - B (needs reviewers and licences, not code): populate and review Priority A stories (Adam, Nuh, Ibrahim, Yusuf, Musa, Isa, Muhammad), then the
   remaining prophets, people, communities, hadith stories. Content is entered through the admin studios and published only after the
   scholarly, language and media reviews. Nothing is seeded as published.
