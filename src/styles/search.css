@@ -1,0 +1,41 @@
+/* ---------- Search (/search): mobile first, logical properties only, 44px targets ---------- */
+.sr-form { display: flex; gap: 8px; align-items: stretch; max-inline-size: 640px; }
+.sr-form .zq-search { flex: 1 1 auto; min-inline-size: 0; }
+.sr-form .zq-input { min-block-size: var(--tap, 44px); }
+.sr-submit { min-block-size: var(--tap, 44px); min-inline-size: 44px; }
+
+/* Facets scroll sideways on phones instead of wrapping into a tall block. */
+.sr-facets { display: flex; gap: 8px; overflow-x: auto; padding-block: 12px 4px; margin-block-start: 8px; scrollbar-width: thin; overscroll-behavior-inline: contain; }
+.sr-facets .zq-pill { min-block-size: var(--tap, 44px); white-space: nowrap; flex: 0 0 auto; padding-inline: 14px; }
+.sr-facets .zq-pill b { font-weight: 600; margin-inline-start: 6px; color: var(--ink-muted); }
+@media (min-width: 768px) { .sr-facets { flex-wrap: wrap; overflow-x: visible; } }
+
+.sr-status { margin-block: 12px 0; }
+.sr-list { list-style: none; margin: 0; padding: 0; }
+.sr-hit { display: flex; flex-direction: column; gap: 4px; padding-block: 14px; border-block-start: 1px solid var(--hairline); min-inline-size: 0; }
+.sr-hit .zq-eyebrow { margin: 0; }
+.sr-link {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; min-block-size: var(--tap, 44px);
+  font: 600 18px/26px var(--font-display); color: var(--ink); text-decoration: underline; text-decoration-color: var(--border);
+  text-underline-offset: 4px; overflow-wrap: anywhere;
+}
+.sr-link:hover { text-decoration-color: currentColor; }
+.sr-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.sr-link .sr-ar { font: 500 18px/1.8 var(--ff-naskh, "Noto Naskh Arabic"), var(--font-sans); }
+.sr-snippet { margin: 0; overflow-wrap: anywhere; }
+/* Verbatim Quran Arabic: always the Quran face, never Nastaliq. */
+.sr-ayah { margin: 4px 0 0; font: 400 24px/2 var(--font-quran); color: var(--ink); text-align: start; overflow-wrap: anywhere; }
+@media (min-width: 768px) { .sr-ayah { font-size: 26px; } }
+
+.sr-pager { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center; margin-block: 24px 8px; }
+.sr-pager a, .sr-pager span[aria-current] {
+  display: inline-flex; align-items: center; justify-content: center; min-block-size: var(--tap, 44px); min-inline-size: 44px;
+  padding-inline: 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--ink); text-decoration: none;
+  font: 600 14px/20px var(--font-sans);
+}
+.sr-pager a:hover { background: var(--sage-soft); }
+.sr-pager a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.sr-pager span[aria-current] { background: var(--sage-soft); border-color: var(--brand); }
+.sr-pager .sr-gap { color: var(--ink-muted); padding-inline: 4px; }
+.sr-attrib { margin-block-start: 16px; }
+html[lang="ur"] .sr-pager a, html[lang="ur"] .sr-pager span[aria-current], html[lang="ur"] .sr-facets .zq-pill { line-height: 2; }

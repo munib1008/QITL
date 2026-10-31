@@ -1,80 +1,152 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ReadingPage } from "@/components/shell/ReadingPage";
-import { EmptyState, SearchField } from "@/components/ui/misc";
-import { searchJourney, type SearchHit } from "@/lib/search";
-import { getServerSupabase } from "@/lib/supabase/server";
+import { QuranAttribution } from "@/components/quran/QuranAttribution";
+import { EmptyState } from "@/components/ui/misc";
+import { Icon } from "@/components/ui/icons";
+import { fill, searchStrings } from "@/lib/i18n/modules/search";
+import { MAX_QUERY, unifiedSearch } from "@/lib/search-engine";
+import { quranSource } from "@/lib/search-sources";
+import type { Facet, SearchHit } from "@/lib/search";
+import "@/styles/search.css";
 
 export const metadata: Metadata = { title: "Search", robots: { index: false } };
 
-const FACETS: Array<[string, string]> = [
-  ["prophets", "Prophets"],
-  ["milestones", "Milestones"],
-  ["quran", "Quran"],
-  ["stories", "Stories"],
-  ["events", "Events"],
-  ["hadith", "Hadith"],
-  ["last_hour", "Last Hour"],
-];
+function href(q: string, facet: Facet | null, page = 1): string {
+  const p = new URLSearchParams({ q });
+  if (facet) p.set("facet", facet);
+  if (page > 1) p.set("page", String(page));
+  return `/search?${p.toString()}`;
+}
 
-export default async function SearchPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ q?: string; facet?: string }> }) {
-  const { locale } = await params;
-  const { q = "", facet } = await searchParams;
-  const query = q.trim().slice(0, 120);
-  let hits: SearchHit[] = query ? searchJourney(query) : [];
-  const sb = query ? await getServerSupabase() : null;
-  if (sb) {
-    const { data } = await sb.rpc("search", { q: query, facets: null, lim: 50, off: 0 });
-    for (const r of (data ?? []) as Array<{ entity_type: string; entity_id: string; url: string; title: string; title_ar: string | null; snippet: string; facet: SearchHit["facet"]; rank: number }>)
-      hits.push({ type: r.entity_type, id: r.entity_id, url: r.url, title: r.title, titleAr: r.title_ar ?? undefined, snippet: r.snippet, facet: r.facet, score: r.rank * 3 });
+/** Page numbers to show: first, last, and two either side of the current one. */
+function pageList(page: number, pages: number): Array<number | "gap"> {
+  const out: Array<number | "gap"> = [];
+  for (let n = 1; n <= pages; n++) {
+    if (n === 1 || n === pages || Math.abs(n - page) <= 2) out.push(n);
+    else if (out[out.length - 1] !== "gap") out.push("gap");
   }
-  const counts = Object.fromEntries(FACETS.map(([f]) => [f, hits.filter((h) => h.facet === f).length]));
-  if (facet) hits = hits.filter((h) => h.facet === facet);
+  return out;
+}
+
+function Hit({ h, label, t }: { h: SearchHit; label: string; t: ReturnType<typeof searchStrings> }) {
+  const ref = h.type === "ayah" ? h.id : null;
+  return (
+    <li className="sr-hit" data-facet={h.facet}>
+      <span className="zq-eyebrow">{label}</span>
+      <Link className="sr-link" href={h.url} aria-label={ref ? fill(t.openAyah, { ref: `Q ${ref}` }) : undefined}>
+        <span>{h.title}</span>
+        {h.titleAr ? (
+          <span lang="ar" dir="rtl" className="sr-ar">
+            {h.titleAr}
+          </span>
+        ) : null}
+      </Link>
+      {h.arabic ? (
+        <p className="sr-ayah" lang="ar" dir="rtl" data-verbatim-quran>
+          {h.arabic}
+        </p>
+      ) : null}
+      {h.snippet ? <p className="zq-meta sr-snippet">{h.snippet}</p> : null}
+    </li>
+  );
+}
+
+export default async function SearchPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ q?: string | string[]; facet?: string | string[]; page?: string | string[] }> }) {
+  const { locale } = await params;
+  const sp = await searchParams;
+  const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v) ?? "";
+  const query = one(sp.q).trim().slice(0, MAX_QUERY);
+  const t = searchStrings(locale);
+  const r = await unifiedSearch({ q: query, facet: one(sp.facet) || null, page: Number(one(sp.page)) || 1, locale });
+  const all = Object.values(r.facets).reduce((a, b) => a + (b ?? 0), 0);
+  const showsQuran = r.results.some((h) => h.arabic);
 
   return (
-    <ReadingPage locale={locale} crumbs={[{ label: "Search" }]} query={query} title="Search" lead="Prophets, surahs, stories, events and narrations, in English or Arabic, with or without vowel marks.">
+    <ReadingPage locale={locale} crumbs={[{ label: t.title }]} query={query} title={t.title} lead={t.lead}>
       <div className="zq-pagebody">
-        <SearchField id="page-q" defaultValue={query} maxWidth={640} />
+        <form role="search" action="/search" method="get" className="sr-form">
+          <div className="zq-field zq-search">
+            <label htmlFor="page-q" className="sr-only">
+              {t.fieldLabel}
+            </label>
+            <Icon.search />
+            <input id="page-q" name="q" className="zq-input" type="search" placeholder={t.placeholder} defaultValue={query} autoComplete="off" maxLength={MAX_QUERY} />
+          </div>
+          {r.facet ? <input type="hidden" name="facet" value={r.facet} /> : null}
+          <button type="submit" className="zq-btn zq-btn-primary sr-submit">
+            {t.submit}
+          </button>
+        </form>
         {query ? (
           <>
-            <nav className="zq-filters" aria-label="Filter results">
-              <Link className="zq-pill" href={`/search?q=${encodeURIComponent(query)}`} aria-current={!facet || undefined}>
-                All ({Object.values(counts).reduce((a, b) => a + b, 0)})
-              </Link>
-              {FACETS.filter(([f]) => counts[f]).map(([f, label]) => (
-                <Link key={f} className="zq-pill" href={`/search?q=${encodeURIComponent(query)}&facet=${f}`} aria-current={facet === f || undefined}>
-                  {label} ({counts[f]})
+            {all ? (
+              <nav className="sr-facets" aria-label={t.filters}>
+                <Link className="zq-pill" href={href(query, null)} aria-current={!r.facet || undefined}>
+                  {t.all}
+                  <b>{all}</b>
                 </Link>
-              ))}
-            </nav>
-            <p className="zq-meta" role="status">
-              {hits.length} result{hits.length === 1 ? "" : "s"} for “{query}”{sb ? "" : " in the journey content (the full index is not connected on this site yet)"}.
-            </p>
-            {hits.length ? (
-              <ol style={{ listStyle: "none", margin: 0, padding: 0 }}>
-                {hits.map((h) => (
-                  <li key={h.url} className="zq-result">
-                    <span className="zq-eyebrow">{FACETS.find(([f]) => f === h.facet)?.[1] ?? h.facet}</span>
-                    <Link className="title" href={h.url}>
-                      {h.title}{" "}
-                      {h.titleAr ? (
-                        <span lang="ar" dir="rtl" className="zq-jc-sar">
-                          {h.titleAr}
-                        </span>
-                      ) : null}
-                    </Link>
-                    <span className="zq-meta">{h.snippet}</span>
-                  </li>
+                {(Object.keys(r.facets) as Facet[]).map((f) => (
+                  <Link key={f} className="zq-pill" href={href(query, f)} aria-current={r.facet === f || undefined} data-facet={f}>
+                    {t.facets[f]}
+                    <b>{r.facets[f]}</b>
+                  </Link>
                 ))}
-              </ol>
+              </nav>
+            ) : null}
+            <p className="zq-meta sr-status" role="status">
+              {fill(r.total === 1 ? t.results.one : t.results.many, { n: r.total, q: query })}
+              {r.pages > 1 ? ` · ${fill(t.pageOf, { n: r.page, total: r.pages })}` : ""}
+              {r.database === "not_configured" ? ` ${t.partial}` : r.database === "error" ? ` ${t.dbError}` : ""}
+            </p>
+            {r.results.length ? (
+              <>
+                <ol className="sr-list" start={(r.page - 1) * r.perPage + 1}>
+                  {r.results.map((h) => (
+                    <Hit key={`${h.url}|${h.id}`} h={h} label={t.facets[h.facet]} t={t} />
+                  ))}
+                </ol>
+                {showsQuran ? <QuranAttribution src={quranSource()} className="zq-meta sr-attrib" /> : null}
+                {r.pages > 1 ? (
+                  <nav className="sr-pager" aria-label={t.pagination}>
+                    {r.page > 1 ? (
+                      <Link href={href(query, r.facet, r.page - 1)} rel="prev">
+                        {t.prev}
+                      </Link>
+                    ) : null}
+                    {pageList(r.page, r.pages).map((n, i) =>
+                      n === "gap" ? (
+                        <span key={`gap-${i}`} className="sr-gap" aria-hidden="true">
+                          …
+                        </span>
+                      ) : n === r.page ? (
+                        <span key={n} aria-current="page">
+                          {n}
+                        </span>
+                      ) : (
+                        <Link key={n} href={href(query, r.facet, n)} aria-label={fill(t.pageN, { n })}>
+                          {n}
+                        </Link>
+                      ),
+                    )}
+                    {r.page < r.pages ? (
+                      <Link href={href(query, r.facet, r.page + 1)} rel="next">
+                        {t.next}
+                      </Link>
+                    ) : null}
+                  </nav>
+                ) : null}
+              </>
             ) : (
-              <EmptyState title={`Nothing matched “${query}”.`}>
-                <p>Try another spelling (Yusuf, Yousuf, Joseph), the Arabic name (يوسف), or a reference such as 12:4. Browse the <Link href="/prophets">prophets</Link> or the <Link href="/quran">surahs</Link>.</p>
+              <EmptyState title={fill(t.emptyTitle, { q: query })}>
+                <p>
+                  {t.emptyHelp} <Link href="/prophets">{t.prophetsLink}</Link> · <Link href="/quran">{t.surahsLink}</Link>
+                </p>
               </EmptyState>
             )}
           </>
         ) : (
-          <p className="zq-meta">Type a name, a surah, a place or a reference.</p>
+          <p className="zq-meta">{t.prompt}</p>
         )}
       </div>
     </ReadingPage>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { draftNotice, getDict } from "@/lib/i18n";
 import { SearchField } from "@/components/ui/misc";
+import { searchStrings } from "@/lib/i18n/modules/search";
 import { Icon } from "@/components/ui/icons";
 import { AccountLink } from "./AccountLink";
 import { LangToggle, ThemeToggle } from "./toggles";
@@ -61,12 +62,13 @@ export function JourneyHeader({ locale }: { locale: string }) {
 /** Reading pages (solid light/dark): brand, global search, language, theme, account. */
 export function ReadingHeader({ locale, query }: { locale: string; query?: string }) {
   const { locale: l, t } = getDict(locale);
+  const st = searchStrings(l);
   return (
     <header className="pp-nav">
       <Link className="pp-brand" href="/" aria-label="QITL — Quran in Timeline, home">
         <Logo height={44} priority tagline={t.brandTagline} />
       </Link>
-      <SearchField maxWidth={420} defaultValue={query} id="hdr-q" />
+      <SearchField maxWidth={420} defaultValue={query} id="hdr-q" label={st.fieldLabel} placeholder={st.placeholder} />
       <div className="pp-navact">
         <Link className="zq-btn zq-btn-quiet zq-btn-sm zq-btn-link pp-msearch" href="/search" aria-label={t.nav.search}>
           <Icon.search />
