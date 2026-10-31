@@ -31,6 +31,12 @@ const TABLE = {
   creation_relationship: "creation_relationships",
   creation_story: "creation_stories",
   creation_visual: "creation_visual_assets",
+  // Qira'at (reviewed in editorial_reviews; readers and riwayat are reviewed under qiraat_ref_uuid(kind, id))
+  transmission_route: "transmission_routes",
+  qiraat_variant: "qiraat_variants",
+  qiraat_misconception: "qiraat_misconceptions",
+  reciter: "reciters",
+  audio_recording: "audio_recordings",
   // Life Through the Ages (publishing also needs the religious and/or historical-scientific review).
   ...RECORD_TYPES,
 } as const;

@@ -154,3 +154,25 @@ Story Production Studio (admin) and the server workers for Lara and TTS; the QIT
 captions, ducking, preferences); the
 Creation Atlas pages, comparison and relationship graph; Mufti Q&A pages and admin assignment; the reviewed reference
 story for Nuh (needs real sources, review and a voice licence before it can exist).
+
+## Qira'at & Ahruf Learning Centre and the content licence registry (branch mod/qiraat, 2026-10-31)
+
+- **Licence registry** (migration 2110): `content_permissions` per source × asset type × scope with status APPROVED |
+  CONDITIONAL | PERMISSION_REQUIRED | BLOCKED and the rights fields; view `content_licence_registry`; `/admin/licences`.
+  Only an admin sets APPROVED or verifies (the database stamps the acting admin); APPROVED needs a licence or
+  written-permission reference and evidence. Seeded from pages read on 2026-10-31, none APPROVED, none verified. Report and
+  missing-licence list: `docs/LICENSING.md`.
+- **Schema** (migrations 2100, 2120): `qiraat` (10 readers) and `riwayat` (20 transmitters), names only, seeded as drafts;
+  `quran_text_editions` (Tanzil Hafs v1.1 is the only row), `quran_edition_verses` (import-only, licence-gated, immutable),
+  `transmission_routes` (citation required, none seeded), `qiraat_variants` + readings + explanation claims, `qiraat_misconceptions`,
+  `reciters`, `audio_recordings`. A reading must be found in its licensed edition's ayah; a variant publishes only with two
+  riwayat, approved claims, a scholarly approval and allowing licences; a recording needs its source's recording permission
+  for its riwayah, and a text/audio riwayah mismatch is refused unless it is an explained comparison; a licence downgrade hides
+  variants and recordings at once (RLS).
+- **Pages:** `/qiraat` (ahruf narrations as references, draft distinction panel, readers table from the database, what is
+  available, misconceptions from reviewed claims), `/qiraat/compare` (approved variants only, otherwise a designed empty
+  state), the riwayah indicator and selector in `/quran/[surah]` (audio only for approved recordings of the same riwayah:
+  none exist), `/admin/qiraat`, review-queue entries.
+- **Blocked:** every other riwayah's text and all audio (licences, see `docs/LICENSING.md`); hadith text for Bukhari 4991,
+  4992 and Muslim 818; routes, variants and explanations need scholars. Audio from another host will also need the CSP's
+  `media-src` (falls back to `default-src 'self'`) widened when a recording is approved.

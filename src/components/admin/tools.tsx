@@ -8,6 +8,7 @@ import { EmptyState, Skeleton, TextField } from "@/components/ui/misc";
 import type { EvidenceKind } from "@/content/journey";
 import { loadGuidanceReviewables, type GuidanceReviewKind } from "./guidanceReview";
 import { loadCreationReviewables, reviewEntityType, type CreationReviewKind } from "./creation-review";
+import { loadQiraatReviewables, type QiraatReviewKind } from "./qiraat-review";
 
 /* ---------- shared ---------- */
 
@@ -58,7 +59,7 @@ interface Reviewable {
   id: string;
   status: EditorialState;
   label: string;
-  kind: "claim" | "event" | "story" | "chapter" | "relationship" | "place_geometry" | "person" | "story_section" | "quiz" | "media" | GuidanceReviewKind | CreationReviewKind;
+  kind: "claim" | "event" | "story" | "chapter" | "relationship" | "place_geometry" | "person" | "story_section" | "quiz" | "media" | GuidanceReviewKind | CreationReviewKind | QiraatReviewKind;
   evidence?: EvidenceKind;
   detail?: string;
 }
@@ -120,6 +121,7 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
       out.push({ id: r.id, status: r.status, kind: "media", label: `${r.role}${r.animation_key ? `: ${r.animation_key}` : ""} — ${r.caption}`, detail: "Publishing media also needs an approver: use Publish after approval." });
     out.push(...guidance);
     out.push(...(await loadCreationReviewables(c)));
+    out.push(...(await loadQiraatReviewables(c)));
     setItems(out);
   }, []);
   useEffect(() => {

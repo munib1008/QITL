@@ -32,6 +32,8 @@ export const ROUTES = [
   "/life-through-ages/day",
   "/life-through-ages/compare",
   "/life-through-ages/longevity",
+  "/qiraat",
+  "/qiraat/compare",
   "/timeline?layer=food",
   "/search?q=Yusuf",
   "/learn",

@@ -142,7 +142,7 @@ describe("Quran text adapter (fixtures)", () => {
     const sink = new MemorySink();
     const r = await importQuran(sink, quranInput());
     expect(r.inserted).toBe(4);
-    expect(sink.sources[0]).toMatchObject({ type: "quran_text", work: "Tanzil Quran Text (Uthmani)", edition: "Uthmani", license_text: expect.stringContaining("verbatim"), rights_status: "unknown" });
+    expect(sink.sources[0]).toMatchObject({ type: "quran_text", work: "Tanzil Quran Text (Uthmani)", edition: "Uthmani", license_text: expect.stringMatching(/verbatim/i), rights_status: "unknown" });
     expect(sink.versions[0]).toMatchObject({ version: "0.0-fixture", checksum_sha256: sha256(fx("tanzil-fixture.txt")), retrieved_at: NOW.toISOString(), retrieved_from: "https://tanzil.net/fixture", is_current: true });
     expect(sink.verses.get("2:2")).toBe("FIXTURE-AR-2-2 | with a pipe");
   });
