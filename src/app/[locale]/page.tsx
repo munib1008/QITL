@@ -9,6 +9,7 @@ import { DraftBadge } from "@/components/ui/evidence";
 import { Rosette } from "@/components/ui/icons";
 import { Mark } from "@/components/shell/Logo";
 import { publicEnv } from "@/lib/env";
+import { jsonForScript } from "@/lib/security/html";
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -30,7 +31,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <div className="zq-page" data-theme="journey" id="top">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonForScript(jsonLd) }} />
       <JourneyHeader locale={locale} />
       <main id="main">
         <section className="zq-hero" aria-labelledby="hero-title">

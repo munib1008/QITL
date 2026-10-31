@@ -25,9 +25,21 @@ grant execute on all functions in schema auth to anon, authenticated, service_ro
 
 const dir = join(__dirname, "..", "..", "supabase", "migrations");
 
-export async function createDb(): Promise<Db> {
+/**
+ * Supabase's own default privileges: every new table, sequence and function in public is granted to anon and
+ * authenticated, so a migration that forgets to revoke leaves writes guarded by RLS alone. `supabaseDefaults` replays
+ * them before the migrations (the security sweep, tests/db/security.test.ts); the other suites keep the plain setup.
+ */
+const SUPABASE_DEFAULT_PRIVILEGES = `
+alter default privileges in schema public grant all on tables to anon, authenticated, service_role;
+alter default privileges in schema public grant all on sequences to anon, authenticated, service_role;
+alter default privileges in schema public grant all on functions to anon, authenticated, service_role;
+`;
+
+export async function createDb(opts: { supabaseDefaults?: boolean } = {}): Promise<Db> {
   const pg = await PGlite.create({ extensions: { postgis, pg_trgm, pgcrypto, unaccent } });
   await pg.exec(AUTH_STUB);
+  if (opts.supabaseDefaults) await pg.exec(SUPABASE_DEFAULT_PRIVILEGES);
   for (const f of readdirSync(dir).filter((f) => f.endsWith(".sql")).sort()) {
     const sql = readFileSync(join(dir, f), "utf8");
     if (sql.includes("-- @supabase-only")) continue;
