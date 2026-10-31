@@ -144,7 +144,8 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
     <div style={{ display: "grid", gap: 16 }}>
       <p className="zq-meta" style={{ margin: 0 }}>
         Life Through the Ages records have two review pathways (religious and historical/scientific): review them in{" "}
-        <Link href="/admin/life-through-ages">its own queue</Link>.
+        <Link href="/admin/life-through-ages">its own queue</Link>. Shifa records (religious and clinical review) are in{" "}
+        <Link href="/admin/shifa">theirs</Link>.
       </p>
       <Feedback msg={msg} />
       <List

@@ -11,6 +11,7 @@ import { ReadingPage } from "@/components/shell/ReadingPage";
 import { BookmarkButton } from "@/components/account/BookmarkButton";
 import { CopyCitationButton, ShareButton } from "@/components/account/ShareButtons";
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
+import { ShifaRelated } from "@/components/shifa/Related";
 import { NoteEditor } from "@/components/account/NoteEditor";
 import { StoryView } from "@/components/story/StoryView";
 import { getStory } from "@/lib/data/story";
@@ -289,6 +290,8 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
             </p>
             <AtlasPreview name={place.name} certainty={place.certainty} locale={locale} />
           </section>
+
+          {ms ? null : <ShifaRelated locale={locale} personSlug={p.id} />}
 
           <section className="pp-sec" id="discuss" aria-labelledby="discuss-h">
             <h2 id="discuss-h">{t.discussion}</h2>

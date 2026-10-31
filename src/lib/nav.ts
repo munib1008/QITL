@@ -5,6 +5,7 @@ import { guidanceT } from "@/lib/i18n/modules/guidance";
 import { lifestyleStrings } from "@/lib/i18n/modules/lifestyle";
 import { muftiT } from "@/lib/i18n/modules/mufti";
 import { qiraatStrings } from "@/lib/i18n/modules/qiraat";
+import { shifaStrings } from "@/lib/i18n/modules/shifa";
 
 export interface SiteLink {
   href: string;
@@ -24,6 +25,7 @@ export function exploreLinks(locale: string): SiteLink[] {
   const lifestyle = lifestyleStrings(locale);
   const qiraat = qiraatStrings(locale);
   const guidance = guidanceT(locale);
+  const shifa = shifaStrings(locale);
   return [
     { href: "/prophets", label: t.nav.prophets, note: t.exploreNotes.prophets },
     { href: "/quran", label: t.nav.quran },
@@ -37,6 +39,7 @@ export function exploreLinks(locale: string): SiteLink[] {
     { href: "/last-hour", label: t.nav.lastHour, note: t.exploreNotes.lastHour },
     { href: "/life-through-ages", label: lifestyle.nav, note: lifestyle.navNote },
     { href: "/guidance", label: guidance.nav, note: guidance.exploreNote },
+    { href: "/shifa", label: shifa.nav, note: shifa.navNote },
     { href: "/community/questions", label: mufti.label, note: mufti.note },
     { href: "/dreams", label: dreams.label, note: dreams.note },
     { href: "/community", label: t.nav.community, note: t.exploreNotes.community },

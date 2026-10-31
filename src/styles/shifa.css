@@ -1,0 +1,129 @@
+/*
+ * Shifa (/shifa). Mobile-first on the mobile.css tokens (--gutter, --tap, --fs-*), logical properties only so the layout
+ * mirrors in Arabic and Urdu. The evidence layers differ by heading, label, border style and colour together, never by
+ * colour alone; layer D is always dashed and apart. Decorative motion is CSS only and stops under reduced motion.
+ */
+.sh-page { gap: 24px; }
+
+/* ---------- Hero (abstract; pause / replay) ---------- */
+.sh-hero { --sh-sky: var(--surface-sunken); --sh-line: var(--brass-ink); --sh-leaf: var(--sage); --sh-vessel: var(--surface-raised); --sh-water: var(--status-info);
+  margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.sh-hero-svg { width: 100%; height: auto; max-height: 220px; display: block; border-radius: var(--radius-md); }
+.sh-hero figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px; }
+.sh-hero-controls { display: inline-flex; flex-wrap: wrap; gap: 4px; }
+.sh-hero-controls .zq-btn { min-height: var(--tap); }
+.sh-sway { transform-box: fill-box; transform-origin: bottom; }
+.sh-hero[data-playing="true"] .sh-sway { animation: sh-sway 3.4s ease-in-out infinite alternate; }
+.sh-hero[data-playing="true"] .sh-flow { animation: sh-flow 2.6s ease-in-out infinite alternate; }
+.sh-hero[data-playing="true"] .sh-flow-2 { animation-duration: 3.2s; }
+.sh-hero[data-playing="true"] .sh-ring { animation: sh-spin 60s linear infinite; transform-origin: 160px 70px; }
+@keyframes sh-sway { from { transform: rotate(-2deg); } to { transform: rotate(2deg); } }
+@keyframes sh-flow { from { transform: translateX(-4px); } to { transform: translateX(4px); } }
+@keyframes sh-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .sh-hero * { animation: none !important; } }
+
+/* ---------- Safety framing ---------- */
+.sh-safety-stack { display: flex; flex-direction: column; gap: 12px; }
+.sh-safety {
+  border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 8px;
+  background: var(--surface-raised); border: 1px solid var(--hairline); border-inline-start: 4px solid var(--status-info);
+}
+.sh-safety h2 { margin: 0; font: 600 16px/22px var(--font-sans); }
+.sh-safety p { margin: 0; font: 400 15px/24px var(--font-sans); }
+.sh-safety .zq-meta { font-size: 13px; line-height: 20px; }
+.sh-emergency { padding: 8px 12px; border-radius: var(--radius-sm); background: var(--surface-sunken); border: 1px solid var(--status-danger); }
+.sh-wellbeing { border-inline-start-color: var(--status-danger); }
+.sh-ruqyah { border-inline-start-color: var(--brass); }
+.sh-notes h3 { margin: 4px 0 0; font: 600 14px/20px var(--font-sans); }
+.sh-notes ul { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.sh-notes li { display: flex; flex-direction: column; gap: 2px; font: 400 15px/24px var(--font-sans); }
+
+/* ---------- Topic grid ---------- */
+.sh-grid { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+.sh-topic {
+  display: flex; align-items: flex-start; gap: 12px; min-height: var(--tap); padding: 14px 16px;
+  background: var(--surface-raised); border: 1px solid var(--hairline); border-radius: var(--radius-md);
+  color: var(--ink); text-decoration: none; height: 100%;
+}
+.sh-topic:hover { border-color: var(--brass); }
+.sh-topic:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.sh-grid-planned .sh-topic { border-style: dashed; background: var(--surface); }
+.sh-topic-mark { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--surface-sunken); color: var(--brass-ink); }
+.sh-icon { width: 20px; height: 20px; }
+.sh-topic-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.sh-topic-text b { font: 600 16px/22px var(--font-sans); overflow-wrap: anywhere; }
+.sh-topic-alt { font: 400 14px/20px var(--font-sans); color: var(--ink-muted); }
+.sh-topic-alt:lang(ar) { font-family: var(--font-naskh), var(--font-sans); }
+.sh-topic-text .zq-soon { align-self: flex-start; }
+.sh-kick { display: inline-flex; align-items: center; gap: 6px; }
+.sh-kick .sh-icon { width: 16px; height: 16px; }
+
+/* ---------- Four sections (hub) ---------- */
+.sh-sections { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+@media (min-width: 601px) { .sh-sections { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.sh-section-card { display: flex; flex-direction: column; gap: 6px; min-height: var(--tap); padding: 16px; height: 100%; background: var(--surface-raised);
+  border: 1px solid var(--hairline); border-radius: var(--radius-md); color: var(--ink); text-decoration: none; }
+.sh-section-card:hover { border-color: var(--brass); }
+.sh-section-card:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.sh-section-card b { font: 600 18px/26px var(--font-display); }
+.sh-section-card span { font: 400 15px/22px var(--font-sans); color: var(--ink-muted); }
+
+/* ---------- Evidence layers ---------- */
+.sh-entries { display: flex; flex-direction: column; gap: 16px; }
+.sh-entries > h2, .sh-legend > h2, .sh-refpoints > h2, .sh-related > h2 { margin: 0; font: 500 var(--fs-h2)/1.25 var(--font-display); }
+.sh-entry { display: flex; flex-direction: column; gap: 12px; padding: 16px; background: var(--surface-raised); border: 1px solid var(--hairline); border-radius: var(--radius-md); min-width: 0; }
+.sh-entry > header { display: flex; flex-direction: column; gap: 2px; }
+.sh-entry h3 { margin: 0; font: 600 20px/28px var(--font-display); overflow-wrap: anywhere; }
+.sh-layer { display: flex; flex-direction: column; gap: 8px; padding: 12px 14px; border-radius: var(--radius-sm); border: 1px solid var(--hairline); border-inline-start-width: 4px; min-width: 0; }
+.sh-layer h4 { margin: 0; font: 600 14px/20px var(--font-sans); }
+.sh-layer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.sh-layer li { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; min-width: 0; }
+.sh-layer p { margin: 0; font: 400 var(--fs-body)/1.6 var(--font-sans); max-width: var(--reading-max); }
+.sh-layer .zq-meta { font-size: 13px; line-height: 20px; }
+.sh-layer-A { border-inline-start-color: var(--ev-quran); background: var(--surface); }
+.sh-layer-B { border-inline-start-color: var(--ev-hadith); background: var(--surface); border-inline-start-style: dotted; }
+.sh-layer-S { border-inline-start-color: var(--ev-scholar); border-inline-start-style: double; border-inline-start-width: 5px; }
+.sh-layer-C { border-inline-start-color: var(--ev-estimate); background: var(--surface); }
+.sh-layer-D { border-inline-start-color: var(--ev-disputed); }
+.sh-apart { border-style: dashed; background: var(--surface-sunken); }
+.sh-layer-empty { color: var(--ink-muted); font-style: italic; }
+.sh-legend ol { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.sh-legend li.sh-layer { gap: 4px; }
+.sh-legend li.sh-layer b { font: 600 15px/22px var(--font-sans); }
+.sh-attrib { font-size: 14px; color: var(--ink-muted); }
+.sh-refs { display: flex; flex-wrap: wrap; gap: 8px; }
+.sh-ref { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.sh-ref .zq-chip { min-height: 32px; }
+.sh-dl { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; width: 100%; }
+.sh-dl > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.sh-dl dt { font: 600 12px/18px var(--font-sans); letter-spacing: .04em; color: var(--ink-muted); }
+.sh-dl dd { margin: 0; font: 400 15px/22px var(--font-sans); overflow-wrap: anywhere; }
+.sh-dl .sh-limits { padding: 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--hairline); background: var(--surface-sunken); }
+.sh-flags { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+.sh-flag { display: inline-flex; align-items: center; min-height: 24px; padding: 0 10px; border: 1px dashed var(--ev-disputed); border-radius: var(--radius-pill); font: 600 13px/20px var(--font-sans); }
+.sh-recitation { display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border: 1px dashed var(--hairline); border-radius: var(--radius-sm); }
+.sh-recitation p { margin: 0; }
+
+/* ---------- Reference points ---------- */
+.sh-reflist { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+@media (min-width: 901px) { .sh-reflist { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.sh-refcard { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; border: 1px solid var(--hairline); border-radius: var(--radius-md); background: var(--surface-raised); min-width: 0; }
+.sh-refrow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.sh-refcard p { margin: 0; }
+
+/* ---------- Related and tabs ---------- */
+.sh-related { margin-block: 24px; }
+.sh-related ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+.sh-related li { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border: 1px solid var(--hairline); border-radius: var(--radius-sm); background: var(--surface-raised); }
+.sh-related a { display: inline-flex; align-items: center; min-height: var(--tap); font-weight: 600; }
+.sh-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.sh-tabs a { display: inline-flex; align-items: center; min-height: var(--tap); padding-inline: 14px; border: 1px solid var(--hairline); border-radius: var(--radius-pill); color: var(--ink); text-decoration: none; font: 500 14px/20px var(--font-sans); }
+.sh-tabs a[aria-current="page"] { border-color: var(--brass); background: var(--surface-raised); }
+.sh-tabs a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+@media (min-width: 601px) {
+  .sh-safety, .sh-entry { padding: 20px; }
+  .sh-layer { padding: 14px 18px; }
+  .sh-dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sh-dl .sh-limits { grid-column: 1 / -1; }
+}
