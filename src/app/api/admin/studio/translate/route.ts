@@ -1,5 +1,5 @@
 import type { NextRequest } from "next/server";
-import { dbError, fail, isResponse, json, parseBody } from "@/lib/api";
+import { dbError, dbThrottle, fail, isResponse, json, parseBody } from "@/lib/api";
 import { requireAnyRole } from "@/lib/admin";
 import { MAX_ATTEMPTS, countCharacters, getLaraEngine, laraConfigured, translationIdempotencyKey } from "@/lib/production/lara";
 import { TranslateRequest } from "@/lib/production/schemas";
@@ -27,6 +27,8 @@ export async function POST(req: NextRequest) {
   if (!laraConfigured()) return fail(503, "not_configured", "Translation is not configured: set LARA_ACCESS_KEY_ID and LARA_ACCESS_KEY_SECRET.");
   const a = await requireAnyRole(req, ["editor", "translation_reviewer"]);
   if (isResponse(a)) return a;
+  const throttled = await dbThrottle(a.sb, "translate");
+  if (throttled) return throttled;
   const b = await parseBody(req, TranslateRequest);
   if (isResponse(b)) return b;
 

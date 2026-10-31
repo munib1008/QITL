@@ -93,6 +93,74 @@ export function parseTanzilMetadata(js: string): SurahMeta[] {
   return rows.map((m, i) => ({ number: i + 1, ayahCount: Number(m[2]), nameAr: m[5]!, nameTransliterated: m[6]!, nameEn: m[7]! || null }));
 }
 
+/** A position in the text: [surah, ayah]. */
+export type AyahPos = [number, number];
+
+/**
+ * Reading divisions from the same Tanzil metadata file (quran-data.js), saved as content/quran/structure.json:
+ * the first ayah of each juz (30), hizb quarter (240, four per hizb, 60 hizb) and Madinah mushaf page (604).
+ * Numbers only, never text.
+ */
+export interface QuranStructure {
+  source: string;
+  license: string;
+  url: string;
+  sha256: string;
+  juz: AyahPos[];
+  hizbQuarters: AyahPos[];
+  pages: AyahPos[];
+}
+
+export const STRUCTURE_COUNTS = { juz: 30, hizbQuarters: 240, pages: 604 } as const;
+
+function positions(js: string, name: string, expected: number, surahs: SurahMeta[] | null): AyahPos[] {
+  const block = new RegExp(`QuranData\\.${name}\\s*=\\s*\\[([\\s\\S]*?)\\];`).exec(js)?.[1];
+  if (!block) throw new ImportRefused("bad_format", `could not read QuranData.${name}`);
+  const rows = [...block.matchAll(/\[\s*(\d+),\s*(\d+)\s*\]/g)].map((m) => [Number(m[1]), Number(m[2])] as AyahPos);
+  // The list ends with a sentinel [115, 1] (one past the last surah); drop it.
+  const last = rows.at(-1);
+  if (last && last[0] === 115) rows.pop();
+  if (rows.length !== expected) throw new ImportRefused("bad_count", `QuranData.${name}: expected ${expected} entries, found ${rows.length}`);
+  for (let i = 0; i < rows.length; i++) {
+    const [s, a] = rows[i]!;
+    const max = surahs?.[s - 1]?.ayahCount ?? 286;
+    if (s < 1 || s > 114 || a < 1 || a > max) throw new ImportRefused("bad_reference", `QuranData.${name}[${i + 1}] = ${s}:${a} is out of range`);
+    const prev = rows[i - 1];
+    if (prev && (s < prev[0] || (s === prev[0] && a <= prev[1]))) throw new ImportRefused("bad_format", `QuranData.${name} is not in reading order at ${s}:${a}`);
+  }
+  if (rows[0]![0] !== 1 || rows[0]![1] !== 1) throw new ImportRefused("bad_format", `QuranData.${name} must start at 1:1`);
+  return rows;
+}
+
+/** The licence line of quran-data.js's header ("// License: ..."), or null when the file has none. */
+export function tanzilMetadataLicense(js: string): string | null {
+  return /^\s*\/\/\s*License:\s*(.+?)\s*$/m.exec(js)?.[1] ?? null;
+}
+
+/**
+ * Juz, hizb-quarter and page boundaries from Tanzil's quran-data.js. Refused unless the file's own header states the
+ * Creative Commons Attribution licence the text is used under (the same project and terms).
+ */
+export function parseTanzilStructure(js: string, surahs: SurahMeta[] | null = null): QuranStructure {
+  const license = tanzilMetadataLicense(js);
+  if (!license || !/Creative Commons Attribution 3\.0/i.test(license)) throw new ImportRefused("licence", `quran-data.js does not state CC BY 3.0 (found ${license ?? "no licence line"}); not imported`);
+  const header = js
+    .split(/\r?\n/)
+    .filter((l) => l.startsWith("//"))
+    .slice(0, 3)
+    .map((l) => l.replace(/^\/\/\s?/, "").trim())
+    .filter(Boolean);
+  return {
+    source: header.filter((l) => !l.startsWith("License")).join("; "),
+    license,
+    url: "https://tanzil.net/res/text/metadata/quran-data.js",
+    sha256: sha256(Buffer.from(js, "utf8")),
+    juz: positions(js, "Juz", STRUCTURE_COUNTS.juz, surahs),
+    hizbQuarters: positions(js, "HizbQaurter", STRUCTURE_COUNTS.hizbQuarters, surahs),
+    pages: positions(js, "Page", STRUCTURE_COUNTS.pages, surahs),
+  };
+}
+
 /**
  * King Fahd Complex "Hafs" data file (JSON array, one object per ayah), as distributed in the Complex's developer
  * resources: { sura_no, aya_no, aya_text, sura_name_ar, sura_name_en, ... }. aya_text is kept exactly as given,

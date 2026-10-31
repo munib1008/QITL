@@ -13,6 +13,7 @@ import { getPlayerStrings } from "./modules/player";
 import { prophetStrings, storiesStrings } from "./modules/prophets";
 import { qiraatStrings } from "./modules/qiraat";
 import { quranPageStrings, readerStrings } from "./modules/reader";
+import { quranReaderStrings } from "./modules/quranReader";
 import { compareStrings, learnStrings, searchStrings } from "./modules/search";
 import { accountStrings } from "./modules/account";
 import { apiStrings } from "./modules/api";
@@ -38,7 +39,7 @@ export const STRING_FILES: Array<{ module: string; file: string; get: (locale: s
   { module: "atlas", file: "modules/atlas.ts (atlas)", get: atlasStrings },
   { module: "genealogy", file: "modules/atlas.ts (genealogy)", get: genealogyStrings },
   { module: "hadith", file: "modules/hadith.ts", get: hadithStrings },
-  { module: "quran", file: "modules/reader.ts", get: (l) => ({ reader: readerStrings(l), page: quranPageStrings(l) }) },
+  { module: "quran", file: "modules/reader.ts", get: (l) => ({ reader: readerStrings(l), page: quranPageStrings(l), nav: quranReaderStrings(l) }) },
   { module: "search", file: "modules/search.ts (search)", get: searchStrings },
   { module: "learn", file: "modules/search.ts (learn)", get: learnStrings },
   { module: "compare", file: "modules/search.ts (compare)", get: compareStrings },

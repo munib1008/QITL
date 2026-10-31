@@ -12,6 +12,7 @@ import { getDict } from "@/lib/i18n";
 import { publicEnv } from "@/lib/env";
 import { homeStrings } from "@/lib/i18n/modules/home";
 import { uiStrings } from "@/lib/i18n/modules/ui";
+import { jsonForScript } from "@/lib/security/html";
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -34,7 +35,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <div className="zq-page" data-theme="journey" id="top">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonForScript(jsonLd) }} />
       <JourneyHeader locale={locale} />
       <main id="main">
         <section className="zq-hero" aria-labelledby="hero-title">

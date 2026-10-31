@@ -43,7 +43,8 @@ test("dream guide: Quran examples as citation links, hadith as licence-pending r
   const refs = page.getByTestId("quran-dream-refs").getByRole("link");
   await expect(refs).toHaveCount(6);
   const hrefs = await refs.evaluateAll((els) => els.map((e) => e.getAttribute("href")));
-  expect(hrefs).toEqual(["/quran/12#ayah-4", "/quran/12#ayah-36", "/quran/12#ayah-43", "/quran/12#ayah-100", "/quran/37#ayah-102", "/quran/48#ayah-27"]);
+  // Ranges light every ayah in them (ayahHash), like every other Quran link on the site.
+  expect(hrefs).toEqual(["/quran/12#ayah-4-6", "/quran/12#ayah-36-42", "/quran/12#ayah-43-49", "/quran/12#ayah-100", "/quran/37#ayah-102-107", "/quran/48#ayah-27"]);
   const hadith = page.getByTestId("hadith-dream-refs");
   await expect(hadith.getByRole("link", { name: "Sahih Muslim 2263" })).toHaveAttribute("href", "/hadith/muslim/2263");
   await expect(hadith.getByText("Text unavailable — licence pending")).toHaveCount(2);

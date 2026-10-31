@@ -1,5 +1,5 @@
 import type { NextRequest } from "next/server";
-import { dbError, fail, isResponse, json, parseBody } from "@/lib/api";
+import { dbError, dbThrottle, fail, isResponse, json, parseBody } from "@/lib/api";
 import { requireRole } from "@/lib/admin";
 import { DRAFT_MODEL, DRAFT_PROMPT_VERSION, draftConfigured, requestDraft, sanitizeDraft, type DraftClaim } from "@/lib/production/draft";
 import { DraftRequest } from "@/lib/production/schemas";
@@ -23,6 +23,8 @@ export async function POST(req: NextRequest) {
   if (!draftConfigured()) return fail(503, "not_configured", "Claude-assisted drafting is not configured (ANTHROPIC_API_KEY).");
   const a = await requireRole(req, "editor");
   if (isResponse(a)) return a;
+  const throttled = await dbThrottle(a.sb, "ai_draft");
+  if (throttled) return throttled;
   const b = await parseBody(req, DraftRequest);
   if (isResponse(b)) return b;
 

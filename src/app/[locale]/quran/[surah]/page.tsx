@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { journeyStops } from "@/content/journey";
-import { quranSource, surahArabic, surahList } from "@/content/quran";
+import { quranSource, quranStructure, surahArabic, surahList } from "@/content/quran";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { AyahReader } from "@/components/quran/AyahReader";
 import { StudyLauncher } from "@/components/quran/StudyLauncher";
@@ -15,6 +15,9 @@ import { englishContent } from "@/lib/i18n/locales";
 import { quranPageStrings } from "@/lib/i18n/modules/reader";
 import { QuranAttribution } from "@/components/quran/QuranAttribution";
 import { RiwayahIndicator } from "@/components/qiraat/RiwayahIndicator";
+import { JumpToAyah } from "@/components/quran/JumpToAyah";
+import { quranReaderStrings } from "@/lib/i18n/modules/quranReader";
+import { attributionLine, markersForSurah } from "@/lib/quran-reader";
 
 export function generateStaticParams() {
   return LOCALES.flatMap((locale) => Array.from({ length: 114 }, (_, i) => ({ locale, surah: String(i + 1) })));
@@ -36,6 +39,9 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
   const meta = surahList()?.[n - 1];
   const verses = surahArabic(n);
   const src = quranSource();
+  const structure = quranStructure();
+  const markers = structure ? markersForSurah(structure, n) : {};
+  const all = surahList();
 
   // Journey stops whose passages fall in this surah: the "related events" of each ayah.
   const related = journeyStops()
@@ -75,6 +81,8 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
     >
       <div className="zq-pagebody">
         <LanguageNote kind="quran" />
+        {all ? <JumpToAyah surahs={all.map((s) => ({ number: s.number, name: s.name, ayahs: s.ayahs }))} current={n} locale={locale} /> : null}
+        {/* Audio stays honest: the Qira'at module shows a player only for an approved recording of this riwayah. */}
         <RiwayahIndicator locale={locale} surah={n} />
         {related.length ? (
           <section aria-labelledby="rel-h" className="pp-card">
@@ -93,8 +101,9 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
         ) : null}
         {verses ? (
           <>
-            <AyahReader surah={n} surahName={name} verses={verses} links={ayahLinks} locale={locale} />
+            <AyahReader surah={n} surahName={name} verses={verses} links={ayahLinks} locale={locale} markers={markers} attribution={src ? attributionLine(src) : ""} />
             <QuranAttribution src={src} />
+            {structure ? <p className="zq-meta">{quranReaderStrings(locale).index.juzSource}</p> : null}
           </>
         ) : (
           <>

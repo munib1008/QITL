@@ -72,12 +72,12 @@ language (a leaf identical to English with Latin words does not count).
 | mufti | `modules/mufti.ts` | 166 | 100% | 100% | 100% | 0 |
 | player | `modules/player.ts` | 128 | 100% | 100% | 100% | 0 |
 | qiraat | `modules/qiraat.ts` | 58 | 100% | 100% | 95% | 0 |
-| quran | `modules/reader.ts` | 32 | 100% | 100% | 100% | 0 |
+| quran | `modules/reader.ts` | 61 | 98% | 98% | 98% | 1 |
 | search | `modules/search.ts (search)` | 60 | 98% | 98% | 98% | 1 |
 | shell | `dict.ts`, `modules/ui.ts` | 200 | 100% | 100% | 100% | 0 |
 | stories | `modules/prophets.ts`, `modules/story.ts` | 169 | 95% | 95% | 95% | 9 |
 | timeline | `modules/events.ts (timeline)` | 22 | 100% | 100% | 100% | 0 |
-| **all** | | **2573** | **73%** | **73%** | **73%** | **696** |
+| **all** | | **2602** | **73%** | **73%** | **73%** | **697** |
 
 Content strings in src/content and src/lib/data (editorial content, not interface; not counted): 93.
 
@@ -786,6 +786,12 @@ validation (a form validation message).
 | `src/components/creation/CreationVisual.tsx:50` | expr | Gentle waves meeting a shoreline under an open sky |
 | `src/components/creation/CreationVisual.tsx:63` | expr | Light rain falling on soil and green shoots rising |
 | `src/components/creation/CreationVisual.tsx:78` | expr | Flowing abstract pen strokes drawn one after another (no words) |
+
+### quran (1)
+
+| File:line | Kind | Text |
+| --- | --- | --- |
+| `src/components/quran/SavedVerses.tsx:108` | jsx-text | Quran |
 
 ### search (1)
 

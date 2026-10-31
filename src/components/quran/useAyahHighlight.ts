@@ -56,12 +56,14 @@ export function useAyahHighlight() {
       if (url.pathname === window.location.pathname && url.hash === window.location.hash) setTimeout(run, 0);
     };
 
-    run();
+    // On open, wait a frame so a reader that mounts the target's controls first has laid them out.
+    const raf = requestAnimationFrame(run);
     window.addEventListener("hashchange", run);
     document.addEventListener("click", onClick);
     return () => {
       window.removeEventListener("hashchange", run);
       document.removeEventListener("click", onClick);
+      cancelAnimationFrame(raf);
       if (timer) clearTimeout(timer);
       clear();
     };

@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { journeyStops } from "@/content/journey";
-import { quranSource, surahList } from "@/content/quran";
+import { quranSource, quranStructure, surahList } from "@/content/quran";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
 import { QuranAttribution } from "@/components/quran/QuranAttribution";
 import { englishContent } from "@/lib/i18n/locales";
 import { quranPageStrings } from "@/lib/i18n/modules/reader";
+import { ContinueReading } from "@/components/quran/ContinueReading";
+import { JumpToAyah } from "@/components/quran/JumpToAyah";
+import { SurahIndex } from "@/components/quran/SurahIndex";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const t = quranPageStrings((await params).locale);
@@ -35,26 +38,14 @@ export default async function QuranIndex({ params }: { params: Promise<{ locale:
       <div className="zq-pagebody">
         {list ? (
           <>
+            <ContinueReading names={Object.fromEntries(list.map((x) => [x.number, x.name]))} locale={locale} more={2} />
+            <JumpToAyah surahs={list.map((x) => ({ number: x.number, name: x.name, ayahs: x.ayahs }))} locale={locale} />
+            <SurahIndex
+              surahs={list.map((x) => ({ number: x.number, name: x.name, arabic: x.arabic, english: x.english, ayahs: x.ayahs }))}
+              juz={quranStructure()?.juz ?? null}
+              locale={locale}
+            />
             <QuranAttribution src={src} />
-            <ol className="zq-surahs" aria-label={t.surahs}>
-              {list.map((s) => (
-                <li key={s.number}>
-                  <Link href={`/quran/${s.number}`}>
-                    <span className="zq-order">{s.number}</span>
-                    <span>
-                      <b {...en}>{s.name}</b>
-                      <span className="zq-meta" style={{ display: "block" }}>
-                        {t.ayat(s.ayahs)}
-                        {s.revelation ? ` · ${s.revelation}` : ""}
-                      </span>
-                    </span>
-                    <span lang="ar" dir="rtl" className="zq-jc-sar">
-                      {s.arabic}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ol>
           </>
         ) : (
           <>
