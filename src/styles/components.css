@@ -30,7 +30,7 @@
 .zq-ev-unknown { color: var(--ev-unknown); border-style: dotted; border-width: 2px; }
 
 /* Citation chip */
-.zq-chip { display: inline-flex; align-items: center; gap: var(--space-1); font: 500 13px/18px var(--font-mono); color: var(--ink); background: var(--surface-sunken); border: 1px solid var(--hairline); border-radius: var(--radius-xs); padding: 2px var(--space-2); text-decoration: none; cursor: pointer; }
+.zq-chip { display: inline-flex; align-items: center; min-height: 24px; gap: var(--space-1); font: 500 13px/18px var(--font-mono); color: var(--ink); background: var(--surface-sunken); border: 1px solid var(--hairline); border-radius: var(--radius-xs); padding: 2px var(--space-2); text-decoration: none; cursor: pointer; }
 .zq-chip:hover { border-color: var(--border); background: var(--sage-soft); }
 .zq-chip-kind { font-family: var(--font-sans); font-weight: 600; color: var(--ink-muted); }
 

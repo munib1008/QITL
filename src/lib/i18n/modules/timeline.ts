@@ -190,7 +190,7 @@ const ur: DeepPartial<TimelineStrings> = {
     estimate: "مؤرخین کا اندازہ",
   },
   name: { later: "نام بعد کی روایت میں آیا ہے، قرآنی متن میں نہیں", laterShort: "بعد کی روایت کا نام" },
-  card: { verses: "آیات", status: "جائزہ شدہ", open: "اس واقعے کے بارے میں پڑھیں", atlas: "اٹلس پر دکھائیں", genealogy: "شجرۂ نسب میں دیکھیں" },
+  card: { verses: "آیات", status: "جائزہ شدہ", open: "اس واقعے کے بارے میں پڑھیں", atlas: "اٹلس پر دکھائیں", genealogy: "شجرۂ نسب میں دیکھیں", showMore: "{n} مزید دکھائیں" },
   empty: { title: "مکمل ٹائم لائن میں ابھی کچھ شائع نہیں ہوا۔" },
   event: { verses: "آیات", identifications: "شناختیں اور روایات", connections: "تعلقات", stories: "متعلقہ کہانیاں" },
 };

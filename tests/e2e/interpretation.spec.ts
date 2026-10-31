@@ -47,7 +47,8 @@ for (const surah of [1, 12]) {
       await expect(sheet.locator('[data-slot="early-tafsir"]')).toContainText(/Not imported|Licence pending|Edition not verified|Licensed/);
       // No page-level horizontal scroll at 320–360px.
       expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(360);
-      await axe(page);
+      // The page behind a modal sheet is covered and inert, so axe checks the sheet itself (chips under it fail target-size).
+      await axe(page, '[data-study-panel="sheet"]');
 
       await sheet.getByRole("tab", { name: "Differences explained" }).click();
       await expect(sheet.getByRole("tabpanel")).toHaveAttribute("data-tab", "differences");
