@@ -3,8 +3,10 @@ import Link from "next/link";
 import { PLACE_TEXT, getJourney, journeyStops, type PlaceCertainty } from "@/content/journey";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { DraftBadge, EvidenceLabel } from "@/components/ui/evidence";
-import { EmptyState, MapLegend } from "@/components/ui/misc";
+import { MapLegend } from "@/components/ui/misc";
 import { AtlasMapLoader } from "@/components/atlas/AtlasMapLoader";
+import { AtlasSchematic, type AtlasStop } from "@/components/atlas/AtlasSchematic";
+import { ResponsiveDetails } from "@/components/ui/ResponsiveDetails";
 import { mapConfigured, publicEnv } from "@/lib/env";
 
 export const metadata: Metadata = {
@@ -20,6 +22,10 @@ export default async function AtlasPage({ params, searchParams }: { params: Prom
   const { focus } = await searchParams;
   const j = getJourney();
   const stops = journeyStops(j);
+  const focusStop = focus ? stops.find((s) => s.id === focus) : undefined;
+  const schematic: AtlasStop[] = j.eras.flatMap((e) =>
+    e.items.map((s) => ({ id: s.id, name: s.name, era: e.title, place: s.place?.name ?? "Location unknown", certainty: s.place?.certainty ?? "unknown" })),
+  );
   const groups = ORDER.map((c) => ({ c, items: stops.filter((s) => (s.place?.certainty ?? "unknown") === c) })).filter((g) => g.items.length);
 
   return (
@@ -31,6 +37,16 @@ export default async function AtlasPage({ params, searchParams }: { params: Prom
       lead="Verified points only where a source supports them; approximate regions are shaded; unknown places are listed, never placed."
     >
       <div className="zq-pagebody">
+        {focusStop ? (
+          <p className="zx-return">
+            <Link className="zq-btn zq-btn-secondary" href={`/prophets/${focusStop.id}#places`}>
+              <span aria-hidden="true" className="zx-back">
+                ←
+              </span>{" "}
+              Return to the story of {focusStop.name}
+            </Link>
+          </p>
+        ) : null}
         <div className="zq-split" style={{ gridTemplateColumns: undefined }}>
           <section aria-labelledby="places-h" className="zq-split-sticky">
             <h2 id="places-h" className="zq-eyebrow">
@@ -53,20 +69,21 @@ export default async function AtlasPage({ params, searchParams }: { params: Prom
               </div>
             ))}
           </section>
-          <section aria-label="Map">
+          <section aria-label="Map" className="zx-map-col">
             {mapConfigured() ? (
               <AtlasMapLoader tilesUrl={publicEnv.mapTilesUrl} attribution={publicEnv.mapAttribution} />
             ) : (
-              <EmptyState tone="soon" label={<span className="zq-soon">Coming soon</span>} title="The interactive map is not connected yet.">
-                <p>
-                  The map needs a tile provider and reviewed place geometries. Neither is configured on this site, so no map is shown rather than an
-                  invented one. The list of places works now.
-                </p>
-              </EmptyState>
+              <>
+                <p className="zq-meta">The geographic map needs a tile provider and reviewed place geometries; neither is configured on this site, so this schematic is shown instead of an invented map.</p>
+                <AtlasSchematic stops={schematic} focus={focus} rtl={locale === "ar"} />
+              </>
             )}
-            <div style={{ marginTop: 16 }}>
-              <MapLegend items={["point", "region", "unknown", "hypothesis", "route"]} attribution={publicEnv.mapAttribution || "No map data provider configured"} />
-            </div>
+            <ResponsiveDetails className="zx-legend" summary="Legend">
+              <MapLegend
+                items={mapConfigured() ? ["point", "region", "unknown", "hypothesis", "route"] : ["point", "region", "hypothesis", "unknown"]}
+                attribution={mapConfigured() ? publicEnv.mapAttribution : "Schematic drawing by QITL · no map data"}
+              />
+            </ResponsiveDetails>
           </section>
         </div>
       </div>

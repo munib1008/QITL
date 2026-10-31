@@ -1,3 +1,4 @@
+import { FullScreenEditor } from "@/components/admin/FullScreenEditor";
 import { StoryEditor } from "@/components/admin/StoryEditor";
 import { journeyStops } from "@/content/journey";
 
@@ -12,7 +13,9 @@ export default function StoryEditorPage() {
         Every prophet and Quranic event uses the same sections, A to G, in three reading levels. Each section rests on a referenced claim and is published
         only after scholarly review. Use only the Quran and authentic narrations from Bukhari, Muslim, Tirmidhi and Ibn Majah, each with its named grading.
       </p>
-      <StoryEditor stops={stops} />
+      <FullScreenEditor title="Story editor">
+        <StoryEditor stops={stops} />
+      </FullScreenEditor>
     </div>
   );
 }

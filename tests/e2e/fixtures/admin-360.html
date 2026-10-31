@@ -1,0 +1,61 @@
+<!-- Admin markup as AdminNav, RolesManager, VersionDiff and FullScreenEditor render it (see src/components/admin). Used by explorers.spec.ts. -->
+<main>
+  <div class="zq-admin">
+    <nav aria-label="Editorial" class="zq-admin-nav">
+      <details>
+        <summary><span>Editorial menu</span><span class="zq-admin-nav-now">Users &amp; roles</span></summary>
+        <p class="zq-eyebrow" style="padding: 0 12px 8px">admin</p>
+        <a href="#overview">Overview</a>
+        <a href="#review">Review queue</a>
+        <a href="#users" aria-current="page">Users &amp; roles</a>
+        <a href="#audit">Audit trail</a>
+      </details>
+    </nav>
+    <div>
+      <h1>Users &amp; roles</h1>
+      <div style="display: grid; gap: 24px">
+        <div class="zq-tablewrap zq-table-scroll" role="region" aria-label="Role assignments" tabindex="0">
+          <table class="zq-table zq-table-cards">
+            <caption class="sr-only">Role assignments</caption>
+            <thead>
+              <tr><th scope="col">User id</th><th scope="col">Role</th><th scope="col">Verification note</th><th scope="col">Granted</th><th scope="col"><span class="sr-only">Actions</span></th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="User id" class="zq-order">7d1c2a90-4b3e-4f61-9a0c-2f6e1b8d5c33</td>
+                <td data-label="Role">scholarly reviewer</td>
+                <td data-label="Verification note">Credentials checked against the institution's published faculty list</td>
+                <td data-label="Granted">31/10/2026</td>
+                <td data-label="Actions"><button type="button" class="zq-btn zq-btn-danger zq-btn-sm">Revoke</button></td>
+              </tr>
+              <tr>
+                <td data-label="User id" class="zq-order">a9e4f0c1-2d77-4c8b-b1f5-6e3a0d9c7b12</td>
+                <td data-label="Role">editor</td>
+                <td data-label="Verification note">—</td>
+                <td data-label="Granted">30/10/2026</td>
+                <td data-label="Actions"><button type="button" class="zq-btn zq-btn-danger zq-btn-sm">Revoke</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="zq-tablewrap zq-table-scroll" role="region" aria-label="Changes from version 1 to 2" tabindex="0">
+          <table class="zq-table">
+            <caption class="sr-only">Changes from version 1 to 2</caption>
+            <thead><tr><th scope="col">Field</th><th scope="col">Version 1</th><th scope="col">Version 2</th></tr></thead>
+            <tbody><tr><th scope="row">statement</th><td><del>A long earlier statement of the claim that is wider than a phone screen</del></td><td><ins>A long revised statement of the claim that is wider than a phone screen</ins></td></tr></tbody>
+          </table>
+        </div>
+        <div class="zq-fs">
+          <div class="zq-fs-bar"><button type="button" class="zq-btn zq-btn-secondary zq-fs-enter">Full-screen editing</button></div>
+          <div class="zq-fs-body">
+            <form class="zq-form pp-card" aria-label="Grant a role">
+              <div class="zq-field"><label for="uid">User id</label><input id="uid" class="zq-input" /></div>
+              <div class="zq-field"><label for="role">Role</label><select id="role" class="zq-input"><option>editor</option></select></div>
+              <div><button type="submit" class="zq-btn zq-btn-primary">Grant role</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

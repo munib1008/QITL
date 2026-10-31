@@ -110,9 +110,9 @@ for (const locale of ["en", "ar"] as const) {
   test.describe(`responsive ${locale}`, () => {
     test.skip(() => test.info().project.name !== "desktop", "one project drives every width");
     for (const route of ROUTES) {
-      test(`${locale} ${route}`, async ({ page, context }) => {
+      test(`${locale} ${route}`, async ({ page, context, baseURL }) => {
         test.setTimeout(120_000);
-        await context.addCookies([{ name: "qitl-locale", value: locale, url: "http://localhost:3100" }]);
+        await context.addCookies([{ name: "qitl-locale", value: locale, url: baseURL ?? "http://localhost:3100" }]);
         const problems: string[] = [];
         for (const w of WIDTHS) {
           await page.setViewportSize({ width: w, height: w < 600 ? 780 : 900 });

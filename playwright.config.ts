@@ -19,5 +19,7 @@ export default defineConfig({
     port: PORT,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
+    // Synthetic genealogy data for the explorer tests; ignored whenever Supabase is configured (src/lib/e2e-fixtures.ts).
+    env: { QITL_E2E_FIXTURES: "1" },
   },
 });

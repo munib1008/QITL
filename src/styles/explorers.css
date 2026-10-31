@@ -1,0 +1,129 @@
+/*
+ * Atlas schematic, genealogy explorer, pan/zoom controls and the place sheet (docs/RESPONSIVE.md).
+ * Loaded by the client components that use it, so pages without these views never download it.
+ */
+
+/* ---------- Pan/zoom stage ---------- */
+.zx-stage { position: relative; }
+.zx-viewport {
+  position: relative; height: clamp(320px, 56vh, 520px); overflow: hidden; touch-action: none; user-select: none; -webkit-user-select: none;
+  border: 1px solid var(--hairline); border-radius: var(--radius-md); background: var(--surface-sunken); cursor: grab;
+}
+.zx-viewport:active { cursor: grabbing; }
+.zx-viewport:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.zx-svg { display: block; width: 100%; height: 100%; max-width: none; direction: ltr; } /* layout is mirrored by coordinates in RTL */
+.zx-note { margin: 0 0 8px; }
+
+/* Zoom buttons: stacked at the inline-end top corner of the drawing, never over the bottom bar. */
+.zx-zoom {
+  position: absolute; top: 8px; inset-inline-end: 8px; z-index: 2; display: flex; flex-direction: column; gap: 0;
+  background: var(--surface-raised); border: 1px solid var(--hairline); border-radius: 12px; box-shadow: var(--shadow-float); overflow: hidden;
+}
+.zx-zbtn { width: var(--tap); height: var(--tap); display: grid; place-items: center; border: 0; background: none; color: var(--ink); cursor: pointer; }
+.zx-zbtn + .zx-zbtn { border-top: 1px solid var(--hairline); }
+.zx-zbtn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.zx-zbtn:disabled { opacity: .4; cursor: default; }
+.zx-zbtn:focus-visible { outline: 2px solid var(--focus); outline-offset: -3px; border-radius: 10px; }
+.zx-zbtn:hover:not(:disabled) { background: var(--sage-soft); }
+
+/* ---------- Atlas schematic ---------- */
+.zx-return { margin: 0 0 16px; }
+.zx-return .zq-btn { min-height: var(--tap); }
+[dir="rtl"] .zx-back { display: inline-block; transform: scaleX(-1); }
+@media (max-width: 1023px) { .zx-map-col { order: -1; } }
+.zx-lane { fill: transparent; }
+.zx-lane-alt { fill: color-mix(in srgb, var(--surface-raised) 55%, transparent); }
+.zx-lane-name { font: 600 11px/1 var(--font-sans); letter-spacing: .06em; text-transform: uppercase; fill: var(--ink-muted); paint-order: stroke; stroke: var(--surface-sunken); stroke-width: 4px; }
+.zx-era { font: 600 12px/1 var(--font-sans); fill: var(--brass-ink); }
+.zx-era-line { stroke: var(--hairline); stroke-width: 1; stroke-dasharray: 4 4; }
+.zx-node { cursor: pointer; outline: none; }
+.zx-hit { fill: transparent; pointer-events: all; }
+.zx-label { font: 600 13px/1 var(--font-sans); fill: var(--ink); paint-order: stroke; stroke: var(--surface-sunken); stroke-width: 3px; }
+.zx-m-point { fill: var(--map-point); stroke: var(--surface-raised); stroke-width: 3; }
+.zx-m-region { fill: var(--map-region); opacity: .6; }
+.zx-m-region-edge { stroke: var(--slate); stroke-width: 1.5; }
+.zx-m-hyp { fill: none; stroke: var(--map-hypothesis); stroke-width: 2.5; stroke-dasharray: 1 4; stroke-linecap: round; }
+.zx-m-disp { fill: none; stroke: var(--ev-disputed); stroke-width: 2; }
+.zx-focus-ring { fill: none; stroke: var(--brass); stroke-width: 3; }
+.zx-kbd-ring { fill: none; stroke: none; }
+.zx-node:focus-visible .zx-kbd-ring { stroke: var(--focus); stroke-width: 3; }
+.zx-node:hover .zx-label { text-decoration: underline; }
+.zx-unplaced { margin-top: 12px; display: grid; gap: 8px; }
+.zx-unplaced ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.zx-unplaced a { display: inline-flex; align-items: center; min-height: var(--tap); color: var(--ink); font: 600 14px/20px var(--font-sans); }
+.zx-unplaced li[data-focus] a { color: var(--brass-ink); }
+.zx-legend { margin-top: 16px; }
+.zx-legend > summary {
+  display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); padding: 0 14px; cursor: pointer; list-style: none;
+  border: 1px solid var(--hairline); border-radius: var(--radius-sm); background: var(--surface-raised); font: 600 14px/20px var(--font-sans); color: var(--ink);
+}
+.zx-legend > summary::-webkit-details-marker { display: none; }
+.zx-legend > summary::after { content: ""; width: 7px; height: 7px; border-inline-end: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+.zx-legend[open] > summary::after { transform: translateY(2px) rotate(225deg); }
+.zx-legend > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.zx-legend[open] > .zq-legend { margin-top: 8px; max-width: none; box-shadow: none; }
+@media (min-width: 1024px) { .zx-legend > summary { display: none; } }
+
+/* ---------- Sheet (bottom sheet on phones, side panel on desktop) ---------- */
+.zx-sheet {
+  position: fixed; inset: auto 0 calc(var(--bottom-nav-h) + var(--safe-bottom)) 0; margin: 0 auto; padding: 0; border: 0;
+  width: 100%; max-width: 640px; height: min(52dvh, 460px); max-height: none; overflow: hidden;
+  border-radius: 20px 20px 0 0; background: var(--surface-raised); color: var(--ink); box-shadow: var(--shadow-float);
+  transition: height .22s ease, transform .22s ease;
+}
+.zx-sheet-full { height: calc(100dvh - var(--bottom-nav-h) - var(--safe-bottom) - 48px); }
+.zx-sheet::backdrop { background: rgba(4, 12, 14, .45); }
+.zx-sheet[open] { animation: zx-up .22s ease-out; }
+@keyframes zx-up { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.zx-sheet-in { display: flex; flex-direction: column; height: 100%; }
+.zx-sheet-bar { flex: none; padding: 0 var(--gutter) 8px; border-bottom: 1px solid var(--hairline); }
+.zx-grip { display: grid; place-items: center; width: 100%; height: 28px; margin: 0; padding: 0; border: 0; background: none; cursor: grab; touch-action: none; }
+.zx-grip span { width: 44px; height: 5px; border-radius: 3px; background: var(--ink-muted); opacity: .5; }
+.zx-grip:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; border-radius: 8px; }
+.zx-sheet-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.zx-sheet-head h2 { margin: 6px 0 0; font: 600 18px/24px var(--font-display); min-width: 0; overflow-wrap: anywhere; }
+.zx-sheet-head h2:focus { outline: none; }
+.zx-close { flex: none; min-height: var(--tap); }
+.zx-sheet-body { flex: 1; overflow-y: auto; overscroll-behavior: contain; padding: 12px var(--gutter) calc(16px + var(--safe-bottom)); }
+.zx-place { display: grid; gap: 12px; }
+.zx-place .zq-kv { grid-template-columns: 1fr; gap: 0; }
+.zx-place .zq-kv dd { margin: 0 0 8px; }
+.zx-also { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 16px; }
+.zx-also a { display: inline-flex; align-items: center; min-height: var(--tap); }
+.zx-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.zx-actions .zq-btn { min-height: var(--tap); }
+@media (min-width: 1024px) {
+  .zx-sheet { inset: 96px 24px auto auto; margin: 0; width: 400px; height: auto; max-height: calc(100dvh - 120px); border-radius: 16px; }
+  [dir="rtl"] .zx-sheet { inset: 96px auto auto 24px; }
+  .zx-sheet-full { height: auto; }
+  .zx-grip { display: none; }
+  .zx-sheet-bar { padding-top: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .zx-sheet, .zx-sheet[open] { transition: none; animation: none; } }
+
+/* ---------- Genealogy explorer ---------- */
+.zg { display: grid; gap: 12px; }
+.zg-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.zg-tools .zq-btn { min-height: var(--tap); }
+.zg-node { cursor: pointer; outline: none; }
+.zg-box { fill: var(--surface-raised); stroke: var(--hairline); stroke-width: 1.5; }
+.zg-node[data-center] .zg-box { stroke: var(--brass); stroke-width: 2.5; }
+.zg-node[aria-pressed="true"] .zg-box { fill: var(--sage-soft); stroke: var(--brand); stroke-width: 3; }
+.zg-node:focus-visible .zg-box { stroke: var(--focus); stroke-width: 3.5; }
+.zg-name { font: 600 14px/1 var(--font-sans); fill: var(--ink); }
+.zg-sub { font: 400 11px/1 var(--font-sans); fill: var(--ink-muted); }
+.zg-badge { font: 700 11px/1 var(--font-sans); fill: var(--brass-ink); }
+.zg-e { fill: none; stroke-linecap: round; }
+.zg-e-verified { stroke: var(--ink); stroke-width: 2; }
+.zg-e-disputed-o { stroke: var(--ev-disputed); stroke-width: 7; }
+.zg-e-disputed-i { stroke: var(--surface-sunken); stroke-width: 3; }
+.zg-e-unknown { stroke: var(--ink-muted); stroke-width: 2.5; stroke-dasharray: 1 6; }
+.zg-e-label { font: 600 10px/1 var(--font-sans); fill: var(--ink-muted); paint-order: stroke; stroke: var(--surface-sunken); stroke-width: 4px; letter-spacing: .04em; text-transform: uppercase; }
+.zg-dim { opacity: .18; }
+.zg-panel { border: 1px solid var(--hairline); border-radius: var(--radius-md); background: var(--surface-raised); padding: 12px 16px; display: grid; gap: 10px; }
+.zg-panel h3 { margin: 0; font: 600 18px/24px var(--font-display); }
+.zg-panel ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.zg-panel li { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font: 400 14px/20px var(--font-sans); }
+.zg-panel .zq-btn { min-height: var(--tap); }
+.zg-acts { display: flex; flex-wrap: wrap; gap: 8px; }
+.zg-fixture { border: 1px dashed var(--status-warning); border-radius: var(--radius-sm); padding: 8px 12px; margin: 0; font: 600 14px/20px var(--font-sans); }
