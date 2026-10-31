@@ -14,3 +14,6 @@ supabase/.temp/
 
 # Playwright
 /playwright/.cache/
+
+# Stray build logs from worktree agents
+.wt-*.log
