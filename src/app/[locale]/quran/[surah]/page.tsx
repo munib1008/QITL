@@ -12,6 +12,7 @@ import { LanguageNote } from "@/components/i18n/LanguageNote";
 import { parseAyahRange } from "@/lib/refs";
 import { LOCALES } from "@/lib/i18n";
 import { QuranAttribution } from "@/components/quran/QuranAttribution";
+import { RiwayahIndicator } from "@/components/qiraat/RiwayahIndicator";
 
 export function generateStaticParams() {
   return LOCALES.flatMap((locale) => Array.from({ length: 114 }, (_, i) => ({ locale, surah: String(i + 1) })));
@@ -70,6 +71,7 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
     >
       <div className="zq-pagebody">
         <LanguageNote kind="quran" />
+        <RiwayahIndicator locale={locale} surah={n} />
         {related.length ? (
           <section aria-labelledby="rel-h" className="pp-card">
             <h2 id="rel-h">On the journey</h2>

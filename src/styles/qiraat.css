@@ -1,0 +1,36 @@
+/* Qira'at & Ahruf Learning Centre. Mobile-first, logical properties only (RTL / Urdu ready). */
+.qr-body { display: flex; flex-direction: column; gap: 28px; padding-block: 24px 56px; min-width: 0; }
+.qr-section { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.qr-section > h2 { margin: 0; font: 500 var(--fs-h2)/1.25 var(--font-display); }
+.qr-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.qr-tabs a { display: inline-flex; align-items: center; min-height: var(--tap); padding-inline: 14px; border: 1px solid var(--hairline); border-radius: var(--radius-pill);
+  color: var(--ink); text-decoration: none; font: 600 14px/20px var(--font-sans); }
+.qr-tabs a[aria-current="page"] { border-color: var(--brass); background: var(--surface-raised); }
+.qr-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 901px) { .qr-list-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.qr-card { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; border: 1px solid var(--hairline); border-radius: var(--radius-md); background: var(--surface-raised); min-width: 0; }
+.qr-card h3 { margin: 0; font: 600 16px/22px var(--font-sans); }
+.qr-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.qr-draft { display: flex; flex-direction: column; gap: 10px; padding: 16px; border: 2px dashed var(--hairline); border-radius: var(--radius-md); background: var(--surface); }
+.qr-draft ul { margin: 0; padding-inline-start: 20px; display: flex; flex-direction: column; gap: 6px; font: 400 15px/24px var(--font-sans); }
+.qr-table-wrap { overflow-x: auto; min-width: 0; }
+.qr-table { width: 100%; border-collapse: collapse; font: 400 15px/22px var(--font-sans); }
+.qr-table th, .qr-table td { padding: 10px 8px; border-block-end: 1px solid var(--hairline); text-align: start; vertical-align: top; }
+.qr-table [lang="ar"] { font-family: var(--font-naskh); }
+.qr-avail { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+@media (min-width: 901px) { .qr-avail { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.qr-compare { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+@media (min-width: 901px) { .qr-compare { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.qr-reading { font: 400 28px/1.9 var(--font-quran); margin: 0; }
+
+/* Riwayah indicator in the Quran reader */
+.qr-riwayah { display: flex; flex-direction: column; gap: 8px; padding: 12px 14px; border: 1px solid var(--hairline); border-radius: var(--radius-md); background: var(--surface-raised); min-width: 0; }
+.qr-riwayah-now { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; margin: 0; font: 400 15px/22px var(--font-sans); }
+.qr-riwayah-now b { font-weight: 600; }
+.qr-riwayah details > summary { display: inline-flex; align-items: center; min-height: var(--tap); cursor: pointer; font: 600 14px/20px var(--font-sans); color: var(--ink); }
+.qr-riwayah ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; }
+@media (min-width: 601px) { .qr-riwayah ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.qr-riwayah li { display: flex; flex-wrap: wrap; gap: 4px 8px; padding: 6px 0; color: var(--ink-muted); font: 400 14px/20px var(--font-sans); }
+.qr-riwayah li[aria-current="true"] { color: var(--ink); font-weight: 600; }
+.qr-audio { margin: 0; font: 400 14px/20px var(--font-sans); color: var(--ink-muted); }
+.qr-audio audio { width: 100%; max-width: 480px; }

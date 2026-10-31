@@ -7,6 +7,7 @@ import { publicEnv } from "@/lib/env";
 import { ServiceWorker } from "@/components/shell/ServiceWorker";
 import { BottomNav } from "@/components/shell/BottomNav";
 import { guidanceT } from "@/lib/i18n/modules/guidance";
+import { qiraatStrings } from "@/lib/i18n/modules/qiraat";
 import { lifestyleStrings } from "@/lib/i18n/modules/lifestyle";
 import { muftiT } from "@/lib/i18n/modules/mufti";
 import { dreamsT } from "@/lib/i18n/modules/dreams";
@@ -74,6 +75,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
             { href: "/genealogy", label: t.nav.genealogy, note: t.exploreNotes.genealogy },
             { href: "/last-hour", label: t.nav.lastHour, note: t.exploreNotes.lastHour },
             { href: "/life-through-ages", label: lifestyleStrings(locale).nav, note: lifestyleStrings(locale).navNote },
+            { href: "/qiraat", label: qiraatStrings(locale).nav, note: qiraatStrings(locale).navNote },
             { href: "/community", label: t.nav.community, note: t.exploreNotes.community },
             { href: "/guidance", label: guidanceT(locale).nav, note: guidanceT(locale).exploreNote },
             { href: "/community/questions", label: mufti.label, note: mufti.note },
