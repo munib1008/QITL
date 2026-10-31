@@ -83,7 +83,11 @@ async function main() {
   }
 
   const def = QURAN_SOURCES[format];
-  const text = toPipeText(parsed.verses, [`${def.work}`, `Version: ${parsed.version}`, `Source sha256: ${checksum}`, `Retrieved from: ${retrievedFrom}`]);
+  // Tanzil's licence requires its copyright notice in derived files: carry its own comment lines over verbatim.
+  const notice = format === "tanzil-uthmani"
+    ? raw.toString("utf8").split(/\r?\n/).filter((l) => l.startsWith("#")).map((l) => l.replace(/^#\s?/, ""))
+    : [];
+  const text = toPipeText(parsed.verses, [`${def.work}`, `Version: ${parsed.version}`, `Source sha256: ${checksum}`, `Retrieved from: ${retrievedFrom}`, ...notice]);
   mkdirSync(out, { recursive: true });
   writeFileSync(join(out, "quran.txt"), text);
   writeFileSync(

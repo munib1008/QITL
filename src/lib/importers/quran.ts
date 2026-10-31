@@ -47,8 +47,9 @@ export const QURAN_SOURCES: Record<QuranFormat, Omit<SourceRecord, "edition"> & 
     publisher: "Tanzil Project",
     source_url: "https://tanzil.net/",
     language: "ar",
-    license_text: "Tanzil Quran Text, Creative Commons Attribution 3.0; verbatim copying only, with attribution and a link to tanzil.net.",
-    license_url: "https://tanzil.net/download/",
+    license_text:
+      "Tanzil Quran Text (Uthmani), Copyright (C) 2007-2026 Tanzil Project. License: Creative Commons Attribution 3.0. Verbatim copies only (the text may not be changed); the source (Tanzil Project) is credited and linked to tanzil.net; the copyright notice is reproduced in derived files.",
+    license_url: "https://tanzil.net/docs/Text_License",
     attribution: "Tanzil Project, tanzil.net",
     termsUrl: "https://tanzil.net/download/",
   },

@@ -20,6 +20,7 @@ import { Rosette } from "@/components/ui/icons";
 import { parseAyahRange, quranHref } from "@/lib/refs";
 import { publicEnv } from "@/lib/env";
 import { LOCALES } from "@/lib/i18n";
+import { QuranAttribution } from "@/components/quran/QuranAttribution";
 
 export function generateStaticParams() {
   return LOCALES.flatMap((locale) => journeyStops().map((s) => ({ locale, id: s.id })));
@@ -239,11 +240,7 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
                 actions={{ bookmark: { type: "quran_verse", id: `${firstRange.surah}:${firstRange.from}` }, sourceHref: `/quran/${firstRange.surah}#ayah-${firstRange.from}` }}
               />
             ) : null}
-            {src ? (
-              <p className="zq-meta" style={{ marginTop: 8 }}>
-                Arabic text: {src.source}, version {src.version}. {src.license}
-              </p>
-            ) : null}
+            <QuranAttribution src={src} />
           </section>
 
           <section className="pp-sec" id="hadith" aria-labelledby="hadith-h">

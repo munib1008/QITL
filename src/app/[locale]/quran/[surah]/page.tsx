@@ -11,6 +11,7 @@ import { EmptyState } from "@/components/ui/misc";
 import { LanguageNote } from "@/components/i18n/LanguageNote";
 import { parseAyahRange } from "@/lib/refs";
 import { LOCALES } from "@/lib/i18n";
+import { QuranAttribution } from "@/components/quran/QuranAttribution";
 
 export function generateStaticParams() {
   return LOCALES.flatMap((locale) => Array.from({ length: 114 }, (_, i) => ({ locale, surah: String(i + 1) })));
@@ -87,9 +88,7 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
         {verses ? (
           <>
             <AyahReader surah={n} surahName={name} verses={verses} links={ayahLinks} locale={locale} />
-            <p className="zq-meta">
-              Arabic text: {src?.source}, version {src?.version}. {src?.license}
-            </p>
+            <QuranAttribution src={src} />
           </>
         ) : (
           <>

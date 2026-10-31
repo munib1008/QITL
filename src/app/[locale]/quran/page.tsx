@@ -5,6 +5,7 @@ import { quranSource, surahList } from "@/content/quran";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
+import { QuranAttribution } from "@/components/quran/QuranAttribution";
 
 export const metadata: Metadata = { title: "Quran", description: "The 114 surahs, with the Arabic from a verified source and translations shown only where licensed." };
 
@@ -27,9 +28,7 @@ export default async function QuranIndex({ params }: { params: Promise<{ locale:
       <div className="zq-pagebody">
         {list ? (
           <>
-            <p className="zq-meta">
-              Arabic text: {src?.source}, version {src?.version}. {src?.license}
-            </p>
+            <QuranAttribution src={src} />
             <ol className="zq-surahs" aria-label="Surahs">
               {list.map((s) => (
                 <li key={s.number}>

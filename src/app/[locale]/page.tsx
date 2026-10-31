@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getJourney, journeyStops } from "@/content/journey";
-import { basmala } from "@/content/quran";
+import { basmala, quranSource } from "@/content/quran";
+import { QuranAttribution } from "@/components/quran/QuranAttribution";
 import { JourneyTimeline } from "@/components/journey/JourneyTimeline";
 import { JourneyHeader } from "@/components/shell/SiteHeader";
 import { DraftBadge } from "@/components/ui/evidence";
@@ -133,6 +134,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <Link href="/privacy">Privacy</Link>
           <Link href="/accessibility">Accessibility</Link>
         </nav>
+        {bsm ? <QuranAttribution src={quranSource()} /> : null}
       </footer>
     </div>
   );

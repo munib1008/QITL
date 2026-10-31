@@ -6,6 +6,7 @@ import { CitationChip, EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
 import { getServerSupabase } from "@/lib/supabase/server";
 import { parseAyahRange } from "@/lib/refs";
+import { QuranAttribution } from "@/components/quran/QuranAttribution";
 
 export const metadata: Metadata = { title: "Compare sources", description: "Translations and scholarly readings side by side, with licence and source dates shown." };
 
@@ -70,7 +71,7 @@ export default async function ComparePage({ params, searchParams }: { params: Pr
               ) : (
                 <p className="zq-licence zq-licence-pending">Arabic not loaded — the verified source has not been imported yet.</p>
               )}
-              {src ? <p className="zq-licence">{src.source}, version {src.version}</p> : null}
+              <QuranAttribution src={src} className="zq-licence" />
             </article>
             {translations?.length ? (
               translations.map((t) => (
