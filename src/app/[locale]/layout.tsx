@@ -8,6 +8,8 @@ import { ServiceWorker } from "@/components/shell/ServiceWorker";
 import { BottomNav } from "@/components/shell/BottomNav";
 import { guidanceT } from "@/lib/i18n/modules/guidance";
 import { lifestyleStrings } from "@/lib/i18n/modules/lifestyle";
+import { muftiT } from "@/lib/i18n/modules/mufti";
+import { dreamsT } from "@/lib/i18n/modules/dreams";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -46,6 +48,8 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   if (!isLocale(locale)) notFound();
   const { dir, t } = getDict(locale);
   const creation = creationStrings(locale).nav;
+  const mufti = muftiT(locale).explore;
+  const dreams = dreamsT(locale).explore;
   return (
     <html lang={locale} dir={dir} className={fontVariables} suppressHydrationWarning>
       <head>
@@ -72,6 +76,8 @@ export default async function LocaleLayout({ children, params }: { children: Rea
             { href: "/life-through-ages", label: lifestyleStrings(locale).nav, note: lifestyleStrings(locale).navNote },
             { href: "/community", label: t.nav.community, note: t.exploreNotes.community },
             { href: "/guidance", label: guidanceT(locale).nav, note: guidanceT(locale).exploreNote },
+            { href: "/community/questions", label: mufti.label, note: mufti.note },
+            { href: "/dreams", label: dreams.label, note: dreams.note },
             { href: "/learn", label: t.learnArabic, note: t.exploreNotes.learn },
             { href: "/search", label: t.nav.search, note: t.exploreNotes.search },
           ]}

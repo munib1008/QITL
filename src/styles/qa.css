@@ -1,0 +1,46 @@
+/* Mufti Q&A and the Dream Understanding Centre. Mobile-first; tokens from tokens.css and mobile.css only. */
+.qa { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.qa h2 { margin: 0; font: 600 var(--fs-h2)/1.25 var(--font-display); }
+.qa h3 { margin: 0; font: 600 18px/24px var(--font-display); }
+.qa p { margin: 0; }
+.qa-sec { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.qa .zq-btn { min-height: var(--tap); }
+.qa .zq-field { max-width: none; }
+.qa .zq-input, .qa select.zq-input { min-height: var(--tap); width: 100%; max-width: 100%; }
+.qa input[type="checkbox"], .qa input[type="radio"] { width: 24px; height: 24px; flex: none; margin: 0; accent-color: var(--brand); }
+.qa-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.qa-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.qa-card { background: var(--surface-raised); border: 1px solid var(--hairline); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; overflow-wrap: anywhere; }
+@media (min-width: 601px) { .qa-card { padding: 20px; } }
+.qa-card > a.title { font: 600 18px/24px var(--font-display); color: var(--ink); text-decoration: none; display: inline-flex; min-height: var(--tap); align-items: center; }
+.qa-card > a.title:hover { text-decoration: underline; }
+.qa-meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font: 400 13px/18px var(--font-sans); color: var(--ink-muted); }
+.qa-pill { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; border: 1px solid var(--hairline); border-radius: var(--radius-pill); font: 600 12px/18px var(--font-sans); color: var(--ink); background: var(--surface); }
+.qa-badge { display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border: 1px solid var(--brass); border-radius: var(--radius-pill); font: 600 12px/18px var(--font-sans); color: var(--ink); }
+.qa-badge svg { color: var(--brass); }
+/* Answers side by side where there is room; stacked on phones. No answer is styled as preferred. */
+.qa-answers { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); align-items: start; }
+.qa-body { font: 400 var(--fs-body)/1.6 var(--font-sans); }
+.qa-cites { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.qa-cite { display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; border: 1px solid var(--hairline); border-radius: var(--radius-sm); background: var(--surface); min-width: 0; max-width: 100%; }
+.qa-cite small { font: 400 12px/16px var(--font-sans); color: var(--ink-muted); }
+.qa-cite .zq-chip { min-height: 32px; }
+.qa-notice { border-inline-start: 4px solid var(--brass); padding: 12px 14px; background: var(--surface-raised); border-radius: var(--radius-sm); font: 500 15px/22px var(--font-sans); }
+.qa-support { border: 2px solid var(--brand); border-radius: var(--radius-md); padding: 16px; background: var(--surface-raised); display: flex; flex-direction: column; gap: 8px; }
+.qa-support b { font: 600 17px/24px var(--font-sans); }
+.qa-refs { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
+.qa-refs a { display: flex; flex-direction: column; justify-content: center; gap: 2px; min-height: var(--tap); padding: 8px 12px; border: 1px solid var(--hairline); border-radius: var(--radius-sm); background: var(--surface-raised); color: var(--ink); text-decoration: none; }
+.qa-refs a:hover { border-color: var(--brass); }
+.qa-refs b { font: 600 15px/20px var(--font-mono, monospace); }
+.qa-refs small { font: 400 13px/18px var(--font-sans); color: var(--ink-muted); }
+.qa-choice { display: flex; gap: 10px; align-items: flex-start; min-height: var(--tap); padding: 10px 12px; border: 1px solid var(--hairline); border-radius: var(--radius-sm); background: var(--surface-raised); cursor: pointer; font: 400 15px/22px var(--font-sans); }
+.qa-choice:has(input:checked) { border-color: var(--brand); }
+.qa-choices { display: grid; gap: 8px; border: 0; margin: 0; padding: 0; min-width: 0; }
+.qa-choices legend { font: 600 13px/18px var(--font-sans); margin-bottom: 6px; padding: 0; }
+.qa-faq details { border-bottom: 1px solid var(--hairline); }
+.qa-faq summary { min-height: var(--tap); display: flex; align-items: center; padding: 8px 0; cursor: pointer; font: 600 16px/22px var(--font-sans); }
+.qa-faq details p { padding: 0 0 12px; color: var(--ink); }
+.qa-limits { margin: 0; padding-inline-start: 20px; display: grid; gap: 4px; }
+.qa-quote { white-space: pre-wrap; overflow-wrap: anywhere; padding: 12px 14px; border: 1px dashed var(--hairline); border-radius: var(--radius-sm); background: var(--surface); }
+.qa-table { width: 100%; border-collapse: collapse; font: 400 14px/20px var(--font-sans); }
+.qa-table th, .qa-table td { text-align: start; padding: 8px; border-bottom: 1px solid var(--hairline); vertical-align: top; }

@@ -92,7 +92,7 @@ export function attributionParts(e: EditionInfo, unknown: string) {
   };
 }
 
-/** Safe "Ask a Mufti" target for an ayah. The Mufti Q&A pages come from their own module (mod/mufti-dreams). */
+/** "Ask a Mufti" about an ayah: the Mufti Q&A ask form, with the verse as the question's topic. */
 export function askMuftiHref(surah: number, ayah: number): string {
-  return `/mufti/ask?ref=${encodeURIComponent(`Q ${surah}:${ayah}`)}`;
+  return `/community/questions/ask?topic=quran_verse&ref=${encodeURIComponent(`${surah}:${ayah}`)}`;
 }

@@ -19,6 +19,8 @@ const LINKS: Array<{ href: string; label: string; roles: Role[] }> = [
   { href: "/admin/relationships", label: "Genealogy edges", roles: ["editor", "admin"] },
   { href: "/admin/creation", label: "Creation Atlas", roles: ["editor", "scholarly_reviewer", "admin"] },
   { href: "/admin/moderation", label: "Moderation", roles: ["moderator", "admin"] },
+  { href: "/admin/mufti", label: "Mufti Q&A", roles: ["moderator", "admin"] },
+  { href: "/admin/dreams", label: "Dream requests", roles: ["admin"] },
   { href: "/admin/corrections", label: "Corrections", roles: ["editor", "admin"] },
   { href: "/admin/editions", label: "Translation editions", roles: ["editor", "admin"] },
   { href: "/admin/explanations", label: "Explanations & checks", roles: ["editor", "scholarly_reviewer", "translation_reviewer", "admin"] },

@@ -7,7 +7,7 @@ import { EvidenceLabel } from "@/components/ui/evidence";
 import { Icon } from "@/components/ui/icons";
 import { Markdown } from "@/components/ui/Markdown";
 import { interpretationT, type InterpretationStrings } from "@/lib/i18n/modules/interpretation";
-import { attributionParts, groupDifferences } from "@/lib/interpretation/state";
+import { askMuftiHref, attributionParts, groupDifferences } from "@/lib/interpretation/state";
 import type { EditionInfo, RelatedItem, SlotState, StudyData, TafsirFlag } from "@/lib/interpretation/types";
 
 export interface StudyTarget {
@@ -551,9 +551,9 @@ export function StudyView({ target, data, status, locale, headingId, onClose, he
       </div>
 
       <div className="qs-actions qs-foot" role="group" aria-label={t.actions.group}>
-        <span className="zq-btn zq-btn-secondary zq-btn-sm qs-disabled" aria-disabled="true" title={t.actions.askMuftiSoon}>
-          {t.actions.askMuftiSoon}
-        </span>
+        <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" href={askMuftiHref(target.surah, target.ayah)}>
+          {t.actions.askMufti}
+        </Link>
         <BookmarkButton target={{ type: "quran_verse", id: `${target.surah}:${target.ayah}` }} />
         <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" aria-expanded={reporting} onClick={() => setReporting((v) => !v)}>
           {t.actions.report}
