@@ -1,12 +1,14 @@
 import "server-only";
 import { createHash } from "node:crypto";
 import sharp from "sharp";
-import { checkDimensions, checkUpload, MAX_PIXELS, variantWidths, type ImageType } from "./validate";
+import { checkDimensions, checkUpload, MAX_PIXELS, variantWidths, type MediaType } from "./validate";
 import { sanitizeSvg, SvgRejected } from "./svg";
 
 /**
  * Turn an accepted upload into what is stored: a re-encoded original (metadata such as EXIF/GPS stripped, anything
  * appended after the image dropped; SVG sanitised) and responsive WebP renditions. Nothing here touches storage.
+ * A video clip (WebM or MP4) is validated from its container headers and stored byte for byte: there is no transcoding,
+ * no metadata stripping and no poster or rendition (no ffmpeg), so `variants` is empty.
  */
 
 export interface ProcessedVariant {
@@ -18,7 +20,7 @@ export interface ProcessedVariant {
 }
 
 export interface ProcessedImage {
-  type: ImageType;
+  type: MediaType;
   mime: string;
   ext: string;
   original: Buffer;
@@ -28,6 +30,8 @@ export interface ProcessedImage {
   sanitised: boolean;
   removed: string[];
   variants: ProcessedVariant[];
+  /** Video only: seconds from the container headers, null when unreadable (or an image). */
+  durationSeconds: number | null;
 }
 
 export class UploadRejected extends Error {
@@ -45,6 +49,22 @@ export async function processUpload(bytes: Uint8Array, declaredMime?: string | n
   const check = checkUpload(bytes, declaredMime);
   if (!check.ok) throw new UploadRejected(check.code, check.message);
   const { type, mime, ext } = check;
+  if (check.video) {
+    const original = Buffer.from(bytes);
+    return {
+      type,
+      mime,
+      ext,
+      original,
+      sha256: createHash("sha256").update(original).digest("hex"),
+      width: check.video.width,
+      height: check.video.height,
+      sanitised: false,
+      removed: [],
+      variants: [],
+      durationSeconds: check.video.durationSeconds,
+    };
+  }
   let original: Buffer;
   let sanitised = false;
   let removed: string[] = [];
@@ -97,5 +117,6 @@ export async function processUpload(bytes: Uint8Array, declaredMime?: string | n
     sanitised,
     removed,
     variants,
+    durationSeconds: null,
   };
 }

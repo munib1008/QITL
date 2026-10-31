@@ -53,7 +53,7 @@ clips in `design/concepts/` are not on the site (a test enforces this).
 - Reader performance on very long surahs on slow phones: improved, not solved (`docs/RESPONSIVE.md`).
 - Admin editor forms are English only (about 600 strings); the rest of the interface is localised in draft.
 - No real-device, screen-reader or load testing; Playwright emulation and axe only.
-- The media library accepts images only (no video); the motion clips need a video-capable asset type first.
+- The media library accepts images and short video clips (WebM VP8/VP9/AV1, MP4 H.264; 8 MB, 20 s when the container states it). Clips are stored unchanged: no transcoding, no poster, no metadata stripping, and a live-recorded WebM without a duration is limited by bytes only. No clip is published or seeded; each needs the full scan, review and approval path.
 
 ## Before announcing the site
 

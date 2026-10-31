@@ -3,7 +3,8 @@
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { getBrowserSupabase } from "@/lib/supabase/browser";
 import { EmptyState, Skeleton } from "@/components/ui/misc";
-import { MEDIA_CATEGORIES, NON_FIGURATIVE_ITEMS, type MediaMetadata } from "@/lib/media/validate";
+import { MEDIA_CATEGORIES, NON_FIGURATIVE_ITEMS, VIDEO_CONFIRMATION, type MediaMetadata } from "@/lib/media/validate";
+import { MAX_VIDEO_BYTES, MAX_VIDEO_SECONDS, MIN_VIDEO_DESCRIPTION } from "@/lib/media/video";
 import { folderOf, type MediaVariant } from "@/lib/media/render";
 
 interface AssetRow {
@@ -90,6 +91,11 @@ const SCAN_LABEL: Record<string, string> = {
 };
 const EMPTY_META: MediaMetadata = { altText: "", altTextAr: null, altTextUr: null, captionEn: null, captionAr: null, captionUr: null, category: "pattern", kind: "image", credit: "", sourceId: "", permissionId: null };
 const ALL_CONFIRMED = Object.fromEntries(NON_FIGURATIVE_ITEMS.map(([k]) => [k, true]));
+const VIDEO_CONFIRMED = { ...ALL_CONFIRMED, [VIDEO_CONFIRMATION[0]]: true };
+const FILE_ACCEPT = "image/png,image/jpeg,image/webp,image/gif,image/svg+xml,video/webm,video/mp4,.webm,.mp4";
+const isVideoMime = (mime: string) => mime.startsWith("video/");
+/** Client-side guess for which form fields to show; the server decides by the file's bytes. */
+const looksLikeVideo = (f: File | undefined | null) => Boolean(f && (f.type.startsWith("video/") || /\.(webm|mp4)$/i.test(f.name)));
 
 async function post(url: string, body: unknown): Promise<{ ok: boolean; data: Record<string, unknown> }> {
   const res = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
@@ -149,9 +155,10 @@ export function MediaAdmin(flags: Flags) {
       fileRows
         .filter((x) => x.state === "pending" || x.state === "active")
         .map(async (x) => {
+          // A clip previews from its original (it has no renditions); an image from its smallest rendition.
           const v = [...x.variants].sort((m, n) => m.w - n.w)[0];
-          if (!v) return;
-          const { data } = await sb.storage.from("media").createSignedUrl(`${folderOf(x.storage_path)}/${v.name}`, 600);
+          if (!v && !isVideoMime(x.mime_type)) return;
+          const { data } = await sb.storage.from("media").createSignedUrl(v ? `${folderOf(x.storage_path)}/${v.name}` : x.storage_path, 600);
           if (data?.signedUrl) pv[x.id] = data.signedUrl;
         }),
     );
@@ -213,7 +220,7 @@ export function MediaAdmin(flags: Flags) {
           </div>
         </div>
         {!shown.length ? (
-          <EmptyState title={filter === "all" ? "No images yet." : `No ${filter.replace("_", " ")} images.`} />
+          <EmptyState title={filter === "all" ? "No images or clips yet." : `No ${filter.replace("_", " ")} images or clips.`} />
         ) : (
           <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 16 }}>
             {shown.map((a) => {
@@ -226,7 +233,10 @@ export function MediaAdmin(flags: Flags) {
               return (
                 <li key={a.id} className="pp-card" data-status={a.status} style={{ display: "grid", gap: 10 }}>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 16 }}>
-                    {current && previews[current.id] ? (
+                    {current && previews[current.id] && isVideoMime(current.mime_type) ? (
+                      // No autoplay, muted, metadata only: a staff preview of a file that is still being reviewed.
+                      <video src={previews[current.id]} controls muted playsInline preload="metadata" aria-label={`Preview: ${a.alt_text}`} width={240} style={{ maxWidth: "100%", height: "auto", borderRadius: 6, background: "#000" }} data-testid="admin-video-preview" />
+                    ) : current && previews[current.id] ? (
                       // eslint-disable-next-line @next/next/no-img-element -- a short-lived signed staff preview, not a public image
                       <img src={previews[current.id]} alt={a.alt_text} width={160} style={{ maxWidth: "100%", height: "auto", borderRadius: 6, background: "var(--surface-2, transparent)" }} />
                     ) : null}
@@ -274,7 +284,7 @@ export function MediaAdmin(flags: Flags) {
                     <ul className="zq-meta">
                       {versions.map((f) => (
                         <li key={f.id}>
-                          v{f.version} · {f.state} · {SCAN_LABEL[f.scan_status] ?? f.scan_status} · {Math.round(f.bytes / 1024)} KB · {f.variants.length} WebP renditions{f.sanitised ? " · SVG sanitised" : ""}
+                          v{f.version} · {f.state} · {SCAN_LABEL[f.scan_status] ?? f.scan_status} · {Math.round(f.bytes / 1024)} KB · {isVideoMime(f.mime_type) ? "video, stored unchanged (no transcoding)" : `${f.variants.length} WebP renditions`}{f.sanitised ? " · SVG sanitised" : ""}
                         </li>
                       ))}
                     </ul>
@@ -302,13 +312,28 @@ function FileStatus({ f, review }: { f: FileRow; review?: ReviewRow }) {
 }
 
 function FileActions({ f, flags, busy, act }: { f: FileRow; flags: Flags; busy: boolean; act: (b: Record<string, unknown>, done: string) => Promise<void> }) {
+  const [clipTick, setClipTick] = useState(false);
   if (f.state !== "pending") return null;
+  const clip = isVideoMime(f.mime_type);
   return (
     <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
       {flags.isEditor && !f.non_figurative_confirmed ? (
-        <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={busy} onClick={() => act({ action: "confirm_non_figurative", fileId: f.id, confirmation: ALL_CONFIRMED }, "Non-figurative confirmation recorded.")}>
-          Confirm non-figurative
-        </button>
+        <>
+          {clip ? (
+            <label style={{ display: "flex", gap: 8, alignItems: "center" }}>
+              <input type="checkbox" checked={clipTick} onChange={(e) => setClipTick(e.target.checked)} />
+              <span>{VIDEO_CONFIRMATION[1]}</span>
+            </label>
+          ) : null}
+          <button
+            type="button"
+            className="zq-btn zq-btn-secondary zq-btn-sm"
+            disabled={busy || (clip && !clipTick)}
+            onClick={() => act({ action: "confirm_non_figurative", fileId: f.id, confirmation: clip ? VIDEO_CONFIRMED : ALL_CONFIRMED }, "Non-figurative confirmation recorded.")}
+          >
+            Confirm non-figurative
+          </button>
+        </>
       ) : null}
       {flags.isAdmin && (f.scan_status === "not_scanned" || f.scan_status === "failed") ? (
         <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={busy} onClick={() => act({ action: "acknowledge_scan", fileId: f.id, acknowledgement: "scan skipped" }, "Scan skipped: acknowledged.")}>
@@ -386,7 +411,7 @@ function ReplaceFile({ assetId, onDone, setMsg }: { assetId: string; onDone: () 
     <form onSubmit={submit} style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "end" }}>
       <div className="zq-field">
         <label htmlFor={`replace-${assetId}`}>Replace the file (new version)</label>
-        <input id={`replace-${assetId}`} name="file" type="file" accept="image/png,image/jpeg,image/webp,image/gif,image/svg+xml" className="zq-input" />
+        <input id={`replace-${assetId}`} name="file" type="file" accept={FILE_ACCEPT} className="zq-input" />
       </div>
       <button type="submit" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={busy}>
         Upload new version
@@ -401,26 +426,30 @@ function UploadForm({ sources, perms, onDone, setMsg }: { sources: SourceRow[]; 
   const [busy, setBusy] = useState(false);
   const sourcePerms = useMemo(() => perms.filter((p) => p.source_id === meta.sourceId), [perms, meta.sourceId]);
   const set = <K extends keyof MediaMetadata>(k: K, v: MediaMetadata[K]) => setMeta((m) => ({ ...m, [k]: v }));
-  const allConfirmed = NON_FIGURATIVE_ITEMS.every(([k]) => confirmed[k]);
+  const [isVideo, setIsVideo] = useState(false);
+  const allConfirmed = NON_FIGURATIVE_ITEMS.every(([k]) => confirmed[k]) && (!isVideo || Boolean(confirmed[VIDEO_CONFIRMATION[0]]));
 
   const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const file = new FormData(form).get("file");
-    if (!(file instanceof File) || !file.size) return setMsg({ tone: "err", text: "Choose an image to upload." });
-    if (!allConfirmed) return setMsg({ tone: "err", text: "Tick every non-figurative confirmation, or do not upload the image." });
+    if (!(file instanceof File) || !file.size) return setMsg({ tone: "err", text: "Choose an image or a video clip to upload." });
+    if (!allConfirmed) return setMsg({ tone: "err", text: "Tick every non-figurative confirmation, or do not upload the file." });
+    if (isVideo && meta.altText.trim().length < MIN_VIDEO_DESCRIPTION) return setMsg({ tone: "err", text: `A video needs a description of at least ${MIN_VIDEO_DESCRIPTION} characters.` });
+    if (isVideo && !(meta.captionEn ?? "").trim()) return setMsg({ tone: "err", text: "A video needs a caption (English)." });
     const fd = new FormData();
     fd.set("file", file);
     fd.set("metadata", JSON.stringify(meta));
     setBusy(true);
     const res = await fetch("/api/admin/media/upload", { method: "POST", body: fd });
     const data = (await res.json().catch(() => ({}))) as Record<string, unknown>;
-    if (res.ok) await post("/api/admin/media", { action: "confirm_non_figurative", fileId: data.fileId, confirmation: ALL_CONFIRMED });
+    if (res.ok) await post("/api/admin/media", { action: "confirm_non_figurative", fileId: data.fileId, confirmation: data.type === "webm" || data.type === "mp4" ? VIDEO_CONFIRMED : ALL_CONFIRMED });
     setBusy(false);
     if (!res.ok) return setMsg({ tone: "err", text: String(data.error ?? "Upload failed.") });
     const removed = (data.removed as string[] | undefined)?.length ? ` Removed from the SVG: ${(data.removed as string[]).join(", ")}.` : "";
     setMsg({ tone: "ok", text: `Uploaded as a draft (scan: ${String(data.scan).replace("_", " ")}).${removed}` });
     form.reset();
+    setIsVideo(false);
     setMeta(EMPTY_META);
     setConfirmed({});
     await onDone();
@@ -440,20 +469,22 @@ function UploadForm({ sources, perms, onDone, setMsg }: { sources: SourceRow[]; 
   return (
     <form className="pp-card" onSubmit={submit} style={{ display: "grid", gap: 12 }} aria-labelledby="media-upload-h">
       <h2 id="media-upload-h" style={{ margin: 0 }}>
-        Upload an image
+        Upload an image or a video clip
       </h2>
       <p className="zq-meta" style={{ margin: 0 }}>
         PNG, JPEG, WebP, GIF or SVG (checked by content, not by name). Rasters up to 10 MB (GIF 5 MB, SVG 1 MB), at most 12,000 px a side. SVGs are sanitised: scripts, foreign objects, event handlers and external references are removed.
+        Video: WebM (VP8, VP9, AV1) or MP4 (H.264) only, at most {Math.round(MAX_VIDEO_BYTES / 1024 / 1024)} MB and {MAX_VIDEO_SECONDS} seconds (the length is checked when the file states it). A clip is stored exactly as uploaded: it is not
+        re-encoded, no poster is made and its metadata is not stripped, so check the file before uploading. It never autoplays.
       </p>
       <div className="zq-field">
-        <label htmlFor="up-file">Image file</label>
-        <input id="up-file" name="file" type="file" required accept="image/png,image/jpeg,image/webp,image/gif,image/svg+xml" className="zq-input" />
+        <label htmlFor="up-file">Image or video file</label>
+        <input id="up-file" name="file" type="file" required accept={FILE_ACCEPT} className="zq-input" onChange={(e) => setIsVideo(looksLikeVideo(e.target.files?.[0]))} />
       </div>
       <div className="zq-grid" style={{ gap: 12 }}>
-        {text("altText", "Alt text (English, required)", { required: true })}
-        {text("altTextAr", "Alt text (Arabic)", { lang: "ar" })}
-        {text("altTextUr", "Alt text (Urdu)", { lang: "ur" })}
-        {text("captionEn", "Caption (English)", { area: true })}
+        {text("altText", isVideo ? `Description of the clip (English, required, at least ${MIN_VIDEO_DESCRIPTION} characters: what it shows, in words)` : "Alt text (English, required)", { required: true, area: isVideo })}
+        {text("altTextAr", isVideo ? "Description (Arabic)" : "Alt text (Arabic)", { lang: "ar" })}
+        {text("altTextUr", isVideo ? "Description (Urdu)" : "Alt text (Urdu)", { lang: "ur" })}
+        {text("captionEn", isVideo ? "Caption (English, required for a clip)" : "Caption (English)", { area: true })}
         {text("captionAr", "Caption (Arabic)", { area: true, lang: "ar" })}
         {text("captionUr", "Caption (Urdu)", { area: true, lang: "ur" })}
         <div className="zq-field">
@@ -498,6 +529,12 @@ function UploadForm({ sources, perms, onDone, setMsg }: { sources: SourceRow[]; 
             <span>{label}</span>
           </label>
         ))}
+        {isVideo ? (
+          <label style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
+            <input type="checkbox" required data-testid="video-confirmation" checked={Boolean(confirmed[VIDEO_CONFIRMATION[0]])} onChange={(e) => setConfirmed((c) => ({ ...c, [VIDEO_CONFIRMATION[0]]: e.target.checked }))} />
+            <span>{VIDEO_CONFIRMATION[1]}</span>
+          </label>
+        ) : null}
       </fieldset>
       <div>
         <button type="submit" className="zq-btn zq-btn-primary" disabled={busy}>

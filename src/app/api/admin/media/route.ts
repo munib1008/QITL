@@ -89,6 +89,12 @@ export async function POST(req: NextRequest) {
       return json({ asset: data });
     }
     case "confirm_non_figurative": {
+      // A video clip also needs the clip-specific tick (no prophet, angel, jinn or unseen being).
+      const { f: target, error: terr } = await file(act.fileId);
+      if (terr) return dbError(terr);
+      if (target?.mime_type.startsWith("video/") && act.confirmation.noVideoDepiction !== true) {
+        return fail(422, "confirmation_required", "Tick: this clip depicts no prophet, angel, jinn or unseen being.");
+      }
       const { data, error } = await sb.from("asset_files").update({ non_figurative_confirmed: true }).eq("id", act.fileId).select("id, non_figurative_by, non_figurative_at").maybeSingle();
       if (error) return dbError(error);
       if (!data) return fail(404, "not_found", "No such file version.");

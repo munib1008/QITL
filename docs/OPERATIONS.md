@@ -65,6 +65,16 @@ Without pg_cron, run both functions daily with the service role from another tru
 `select public.purge_expired_dream_requests(); select public.purge_rate_limit_events();` over `DATABASE_URL`). The dreams
 privacy notice promises deletion, so a failed run is an incident.
 
+## Media library: video clips
+
+Migration `20261031002510_media_video.sql` is a normal migration. `20261031002511_media_video_storage.sql` is
+`@supabase-only` (it widens the `media` bucket's allowed types to include `video/webm` and `video/mp4`; the size limit stays
+10 MB, a clip is held to 8 MB by the app and the database): apply it on the Supabase project, the local test database skips
+it. Clips are served from the public storage origin like images, so the storage egress and the bucket backup grow with them.
+No transcoding happens anywhere: a clip is stored as uploaded, so ask editors to export with no location metadata. Video
+is never autoplayed and is not seeded; the licence for a clip is recorded as an `image`-type content permission
+(the registry has no separate video type).
+
 ## Backups and restore
 
 - **Point-in-time recovery** (Supabase Pro) is the primary backup. Otherwise schedule a daily logical dump off the

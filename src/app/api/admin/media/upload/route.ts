@@ -4,7 +4,7 @@ import { z } from "zod";
 import { dbError, fail, isResponse, json } from "@/lib/api";
 import { requireRole } from "@/lib/admin";
 import { getServiceSupabase } from "@/lib/supabase/server";
-import { MediaMetadata, metadataToRow } from "@/lib/media/validate";
+import { MediaMetadata, metadataToRow, videoMetadataProblem } from "@/lib/media/validate";
 import { processUpload, UploadRejected } from "@/lib/media/process";
 import { getScanner } from "@/lib/media/scanner";
 import { BUCKET } from "@/lib/media/storage";
@@ -16,9 +16,10 @@ export const dynamic = "force-dynamic";
 const MAX_REQUEST_BYTES = 11 * 1024 * 1024;
 
 /**
- * Upload an image (editors only): a new asset with its metadata, or a new file version of an existing asset
- * (`assetId`). The file type comes from its magic bytes; SVG is sanitised; rasters are re-encoded; WebP renditions
- * are generated. The upload is scanned when MALWARE_SCAN_URL is set (an infected file is refused and nothing is
+ * Upload an image or a short video clip (editors only): a new asset with its metadata, or a new file version of an
+ * existing asset (`assetId`). The file type comes from its magic bytes; SVG is sanitised; rasters are re-encoded; WebP
+ * renditions are generated. A WebM/MP4 clip (8 MB, 20 s when readable) is checked from its container headers and stored
+ * unchanged (no transcoding, no poster); it needs a description and a caption. The upload is scanned when MALWARE_SCAN_URL is set (an infected file is refused and nothing is
  * stored); otherwise it stays unscanned in the private pending/ folder until an admin acknowledges the skipped scan.
  */
 export async function POST(req: NextRequest) {
@@ -65,6 +66,17 @@ export async function POST(req: NextRequest) {
   }
 
   // Scan what the uploader sent (before anything is stored). Infected: refuse, store nothing.
+  const isVideo = img.mime.startsWith("video/");
+  if (meta) {
+    if (isVideo) {
+      const problem = videoMetadataProblem(meta);
+      if (problem) return fail(422, "invalid", problem);
+      meta = { ...meta, kind: "video" };
+    } else if (meta.kind === "video") {
+      return fail(422, "invalid", "The kind is video, but the file is not a video.");
+    }
+  }
+
   const scanner = getScanner();
   const scan = await scanner.scan(bytes, { sha256: img.sha256, mime: img.mime });
   if (scan.status === "infected") {
@@ -83,9 +95,12 @@ export async function POST(req: NextRequest) {
     if (error) return dbError(error);
     newAssetId = data.id as string;
   } else {
-    const { data, error } = await a.sb.from("assets").select("id, status").eq("id", assetId!.data!).maybeSingle();
+    const { data, error } = await a.sb.from("assets").select("id, status, kind").eq("id", assetId!.data!).maybeSingle();
     if (error) return dbError(error);
     if (!data) return fail(404, "not_found", "No such asset.");
+    if ((data.kind === "video") !== isVideo) {
+      return fail(422, "kind_mismatch", data.kind === "video" ? "This asset is a video clip; its new version must be a WebM or MP4 clip." : "This asset is an image; its new version must be an image.");
+    }
   }
   const target = newAssetId ?? assetId!.data!;
 
@@ -151,6 +166,8 @@ export async function POST(req: NextRequest) {
       removed: img.removed,
       width: img.width,
       height: img.height,
+      type: img.type,
+      durationSeconds: img.durationSeconds,
       variants: img.variants.map((v) => v.w),
     },
     201,
