@@ -11,6 +11,8 @@ const LINKS: Array<{ href: string; label: string; roles: Role[] }> = [
   { href: "/admin/review", label: "Review queue", roles: ["editor", "scholarly_reviewer", "admin"] },
   { href: "/admin/life-through-ages", label: "Life Through the Ages", roles: ["editor", "scholarly_reviewer", "science_reviewer", "admin"] },
   { href: "/admin/events/new", label: "New event", roles: ["editor", "admin"] },
+  { href: "/admin/events/universe", label: "Event Universe", roles: ["editor", "scholarly_reviewer", "science_reviewer", "admin"] },
+  { href: "/admin/events/coverage", label: "Event coverage", roles: ["editor", "scholarly_reviewer", "science_reviewer", "admin"] },
   { href: "/admin/profiles", label: "Story editor", roles: ["editor", "admin"] },
   { href: "/admin/stories", label: "Stories", roles: ["editor", "admin"] },
   { href: "/admin/guidance", label: "Life Guidance", roles: ["editor", "admin"] },

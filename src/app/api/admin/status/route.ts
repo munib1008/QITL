@@ -37,6 +37,9 @@ const TABLE = {
   qiraat_misconception: "qiraat_misconceptions",
   reciter: "reciters",
   audio_recording: "audio_recordings",
+  // Complete Timeline & Event Universe (each is reviewed under its own entity type)
+  event_identification: "event_identifications",
+  event_connection: "event_connections",
   // Life Through the Ages (publishing also needs the religious and/or historical-scientific review).
   ...RECORD_TYPES,
 } as const;

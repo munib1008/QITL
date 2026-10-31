@@ -9,6 +9,7 @@ import type { EvidenceKind } from "@/content/journey";
 import { loadGuidanceReviewables, type GuidanceReviewKind } from "./guidanceReview";
 import { loadCreationReviewables, reviewEntityType, type CreationReviewKind } from "./creation-review";
 import { loadQiraatReviewables, type QiraatReviewKind } from "./qiraat-review";
+import { loadEventUniverseReviewables, type EventUniverseReviewKind } from "./event-universe-review";
 
 /* ---------- shared ---------- */
 
@@ -59,12 +60,14 @@ interface Reviewable {
   id: string;
   status: EditorialState;
   label: string;
-  kind: "claim" | "event" | "story" | "chapter" | "relationship" | "place_geometry" | "person" | "story_section" | "quiz" | "media" | GuidanceReviewKind | CreationReviewKind | QiraatReviewKind;
+  kind: "claim" | "event" | "story" | "chapter" | "relationship" | "place_geometry" | "person" | "story_section" | "quiz" | "media" | GuidanceReviewKind | CreationReviewKind | QiraatReviewKind | EventUniverseReviewKind;
   evidence?: EvidenceKind;
   detail?: string;
+  /** A historians' dated estimate: it also needs the historical/scientific review. */
+  datedEstimate?: boolean;
 }
 
-export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdit: boolean }) {
+export function ReviewQueue({ canReview, canEdit, canReviewDating = false }: { canReview: boolean; canEdit: boolean; canReviewDating?: boolean }) {
   const [items, setItems] = useState<Reviewable[] | null>(null);
   const [msg, setMsg] = useState<{ tone: "ok" | "err"; text: string } | null>(null);
   const [history, setHistory] = useState<{ id: string; versions: Array<{ version: number; snapshot: Record<string, unknown>; created_at: string }> } | null>(null);
@@ -75,7 +78,8 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
     const open = ["draft", "in_review", "approved", "published", "correction", "rejected"];
     const [claims, events, stories, chapters, rels, geoms, people, sections, quizzes, media, guidance] = await Promise.all([
       c.from("evidence_claims").select("id, status, statement, evidence, claim_references(kind, quran_surah, quran_ayah_from, quran_ayah_to, locator)").in("status", open).limit(100),
-      c.from("historical_events").select("id, status, title, date_precision, category").in("status", open).limit(100),
+      // The 159 inventory drafts of the Event Universe are worked on in /admin/events/universe; they join the queue once in review.
+      c.from("historical_events").select("id, status, title, date_precision, category, track, ordering_kind").in("status", open).or("track.is.null,status.neq.draft").limit(100),
       c.from("stories").select("id, status, title").in("status", open).limit(100),
       c.from("chapters").select("id, status, title, position, stories(title)").in("status", open).limit(100),
       c.from("relationships").select("id, status, kind, confidence").in("status", open).limit(100),
@@ -96,8 +100,15 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
         evidence: r.evidence,
         detail: r.claim_references.map((x) => (x.kind === "quran" ? `Q ${x.quran_surah}:${x.quran_ayah_from}${x.quran_ayah_to ? `–${x.quran_ayah_to}` : ""}` : `${x.kind}: ${x.locator ?? ""}`)).join(" · ") || "No references",
       });
-    for (const r of (events.data ?? []) as Array<{ id: string; status: EditorialState; title: string; date_precision: string; category: string }>)
-      out.push({ id: r.id, status: r.status, kind: "event", label: r.title, detail: `${r.category.replace(/_/g, " ")} · date ${r.date_precision}` });
+    for (const r of (events.data ?? []) as Array<{ id: string; status: EditorialState; title: string; date_precision: string; category: string; track: string | null; ordering_kind: string | null }>)
+      out.push({
+        id: r.id,
+        status: r.status,
+        kind: "event",
+        label: r.title,
+        detail: r.track ? `${r.track} track · ${r.category.replace(/_/g, " ")} · order: ${(r.ordering_kind ?? "").replace(/_/g, " ")}` : `${r.category.replace(/_/g, " ")} · date ${r.date_precision}`,
+        datedEstimate: r.ordering_kind === "dated_estimate",
+      });
     for (const r of (stories.data ?? []) as Array<{ id: string; status: EditorialState; title: string }>) out.push({ id: r.id, status: r.status, kind: "story", label: r.title });
     for (const r of (chapters.data ?? []) as unknown as Array<{ id: string; status: EditorialState; title: string; position: number; stories: { title: string } | null }>)
       out.push({ id: r.id, status: r.status, kind: "chapter", label: `${r.stories?.title ?? "Story"} · ${r.position}. ${r.title}` });
@@ -122,6 +133,7 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
     out.push(...guidance);
     out.push(...(await loadCreationReviewables(c)));
     out.push(...(await loadQiraatReviewables(c)));
+    out.push(...(await loadEventUniverseReviewables(c)));
     setItems(out);
   }, []);
   useEffect(() => {
@@ -182,6 +194,15 @@ export function ReviewQueue({ canReview, canEdit }: { canReview: boolean; canEdi
                     Request changes
                   </button>
                 </>
+              ) : null}
+              {canReviewDating && it.datedEstimate ? (
+                <button
+                  type="button"
+                  className="zq-btn zq-btn-primary zq-btn-sm"
+                  onClick={() => act(() => call("/api/admin/events/universe/dating-review", "POST", { eventId: it.id, decision: "approved" }), "Dating approved (historians' estimate).")}
+                >
+                  Approve dating
+                </button>
               ) : null}
               {canEdit && it.kind === "claim" && it.status !== "approved" ? (
                 <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => act(() => call("/api/admin/status", "POST", { entityType: "claim", entityId: it.id, status: "approved" }), "Claim approved for use.")}>

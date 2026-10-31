@@ -10,7 +10,7 @@ export default async function ReviewPage() {
     <div style={{ display: "grid", gap: 16 }}>
       <h1 style={{ font: "500 32px/40px var(--font-display)", margin: 0 }}>Review queue</h1>
       <p className="zq-meta">Drafts, items in scholarly review and corrections. Approving records a review; publishing is refused by the database until the evidence and reviews are in place.</p>
-      <ReviewQueue canReview={admin || roles.includes("scholarly_reviewer")} canEdit={admin || roles.includes("editor")} />
+      <ReviewQueue canReview={admin || roles.includes("scholarly_reviewer")} canEdit={admin || roles.includes("editor")} canReviewDating={admin || roles.includes("science_reviewer")} />
     </div>
   );
 }

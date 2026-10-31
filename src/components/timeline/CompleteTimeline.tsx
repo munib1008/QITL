@@ -58,9 +58,9 @@ function Empty({ locale, counts, state }: { locale: string; counts: UniverseCoun
 
 /**
  * The research atlas: track filters, then lanes (relative order, historians' estimates, disputed order, order not
- * established, parables), each grouped into eras. Long lists are cut into native disclosures ("Show N more"), so the
- * first screen stays light with 200+ items and nothing needs JavaScript; cards use content-visibility to skip
- * off-screen layout.
+ * established, parables), each grouped into eras. Long lists are cut into native disclosures ("Show N more"): the closed
+ * ones are not rendered, so the first screen stays light with 200+ items and nothing needs JavaScript. (content-visibility
+ * was tried and dropped: its size estimates moved the footer under the bottom bar in Urdu.)
  */
 export function CompleteTimeline({
   locale,
@@ -128,7 +128,9 @@ export function CompleteTimeline({
                       <h3 className="tl-era-title">
                         {label} <span className="tl-lane-n">{era.items.length}</span>
                       </h3>
-                    ) : null}
+                    ) : (
+                      <h3 className="sr-only">{s.lanes[g.lane].title}</h3>
+                    )}
                     {parts.map((part, n) =>
                       n === 0 ? (
                         <ul key={n} className="tl-list">
