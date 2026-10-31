@@ -18,10 +18,9 @@ export default defineConfig({
     command: `npx next start -p ${PORT}`,
     port: PORT,
     reuseExistingServer: !process.env.CI,
-    // Turns on the gated /player-fixture test page (placeholder data only) for this test server.
+    // Test-only fixtures (placeholder data, ignored when Supabase is configured): the /player-fixture page and the
+    // synthetic genealogy graph (src/lib/e2e-fixtures.ts).
     env: { QITL_E2E_FIXTURES: "1" },
     timeout: 120_000,
-    // Synthetic genealogy data for the explorer tests; ignored whenever Supabase is configured (src/lib/e2e-fixtures.ts).
-    env: { QITL_E2E_FIXTURES: "1" },
   },
 });
