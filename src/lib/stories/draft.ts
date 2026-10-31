@@ -184,10 +184,6 @@ interface Scope {
   subject?: { slug: string; ayat: Set<string> };
 }
 
-function pushIf(cond: boolean, issues: Issue[], i: Issue): void {
-  if (cond) issues.push(i);
-}
-
 /** Capitalised words of a unit with whether they open a sentence/clause. */
 function capitalised(unit: string): Array<{ word: string; initial: boolean }> {
   const out: Array<{ word: string; initial: boolean }> = [];
