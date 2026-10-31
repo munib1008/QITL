@@ -2,7 +2,10 @@
   "slug": "ibrahim",
   "title_en": "Ibrahim",
   "title_ar": "إبراهيم",
-  "subject": { "type": "prophet", "event_slug": "ibrahim" },
+  "subject": {
+    "type": "prophet",
+    "event_slug": "ibrahim"
+  },
   "status": "draft",
   "notes": "DRAFT for scholarly review. English only; Arabic and Urdu are left for translators. Written from the Quranic text in the repo (Tanzil Uthmani) only; no hadith, no tafsir, no sira in this phase. Hadith to add later: reports on Ibrahim's words to his people (21:63, 37:89), on the building of the House, on the sacrifice, and on the animals and places of the story. Names and details found only in later tradition are kept in unknowns_md and uncertainties_en. Quotation marks surround only speech recorded in the cited ayat (English renderings are drafts for translator and scholar review). Nothing here is reviewed or published.",
   "chapters": [
@@ -11,76 +14,390 @@
       "position": 1,
       "title_en": "Seeking and the signs in creation",
       "event_slug": null,
-      "verses": [{ "surah": 6, "from": 74, "to": 83 }],
-      "claims": [
-        { "id": "c1", "statement_en": "Ibrahim said to his father Azar: do you take idols as gods? He said he saw him and his people in manifest error.", "verses": [{ "surah": 6, "from": 74, "to": 74 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "Allah showed Ibrahim the dominion of the heavens and the earth, so that he would be among those who have certainty.", "verses": [{ "surah": 6, "from": 75, "to": 75 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "When the night covered him he saw a star and said “This is my Lord”; when it set he said “I do not love those that set.”", "verses": [{ "surah": 6, "from": 76, "to": 76 }], "evidence": "quran" },
-        { "id": "c4", "statement_en": "When he saw the moon appearing he said “This is my Lord”; when it set he said “If my Lord does not guide me, I will be among the people who are astray.”", "verses": [{ "surah": 6, "from": 77, "to": 77 }], "evidence": "quran" },
-        { "id": "c5", "statement_en": "When he saw the sun appearing he said “This is my Lord, this is greater”; when it set he said “My people, I am free of what you associate with Allah.”", "verses": [{ "surah": 6, "from": 78, "to": 78 }], "evidence": "quran" },
-        { "id": "c6", "statement_en": "He said he had turned his face, upright, to the One who originated the heavens and the earth, and that he was not among those who associate others with Allah.", "verses": [{ "surah": 6, "from": 79, "to": 79 }], "evidence": "quran" },
-        { "id": "c7", "statement_en": "His people argued with him; he asked whether they argued with him about Allah when Allah had guided him, said he did not fear what they associate with Allah unless his Lord willed something, and said his Lord's knowledge encompasses all things.", "verses": [{ "surah": 6, "from": 80, "to": 80 }], "evidence": "quran" },
-        { "id": "c8", "statement_en": "Ibrahim asked how he could fear what they associated with Allah when they did not fear associating with Allah that for which Allah sent down no authority, and asked which of the two groups had more right to security.", "verses": [{ "surah": 6, "from": 81, "to": 81 }], "evidence": "quran" },
-        { "id": "c9", "statement_en": "Those who believed and did not mix their belief with wrongdoing: for them is security and they are rightly guided.", "verses": [{ "surah": 6, "from": 82, "to": 82 }], "evidence": "quran" },
-        { "id": "c10", "statement_en": "Allah says this was His argument which He gave to Ibrahim against his people, and that He raises in degrees whom He wills.", "verses": [{ "surah": 6, "from": 83, "to": 83 }], "evidence": "quran" }
+      "verses": [
+        {
+          "surah": 6,
+          "from": 74,
+          "to": 83
+        }
       ],
-      "summary_md": "Ibrahim spoke against the idols of his father Azar and his people [c1]. Allah showed him the dominion of the heavens and the earth [c2]. He looked at a star, the moon and the sun, said of each “This is my Lord”, and turned from each when it set [c3][c4][c5], then turned his face to the One who originated the heavens and the earth [c6].",
-      "body_md": "The passage opens with Ibrahim asking his father Azar whether he takes idols as gods, and telling him that he sees him and his people in manifest error [c1]. Allah says He showed Ibrahim the dominion of the heavens and the earth so that he would be among those who have certainty [c2].\n\nThen the ayat describe three sightings. When night covered him he saw a star and said “This is my Lord”; when it set he said “I do not love those that set” [c3]. He saw the moon appearing and said the same words, and when it set said “If my Lord does not guide me, I will be among the people who are astray” [c4]. He saw the sun appearing and said “This is my Lord, this is greater”; when it set he said “My people, I am free of what you associate with Allah” [c5]. He then said he had turned his face, upright, to the One who originated the heavens and the earth, and was not among those who associate [c6].\n\nHis people argued with him. He asked whether they argued with him about Allah when Allah had already guided him, said he did not fear what they associate unless his Lord willed something, and said his Lord's knowledge encompasses all things [c7]. He asked how he could fear what they associated while they did not fear associating with Allah that for which no authority was sent down, and which group had more right to security [c8]. The answer given is that security and guidance belong to those who believed and did not mix their belief with wrongdoing [c9]. Allah calls all this His argument given to Ibrahim against his people [c10].",
-      "deep_md": "Three features can be read directly from the text. First, the same pattern repeats three times: a heavenly body is seen, Ibrahim says “This is my Lord”, it sets, and he turns away from it [c3][c4][c5]. Second, the conclusion he reaches is stated as a turning of the face to the originator of the heavens and the earth [c6], which answers the opening charge against idols [c1]. Third, the passage closes by framing the whole sequence as Allah's own argument given to Ibrahim [c10], and by stating a principle about security and guidance [c9]. The sequence is placed in the surah after Allah says He showed Ibrahim the dominion of the heavens and the earth [c2]; the text does not give a date or say how this scene relates in time to other scenes about Ibrahim in other surahs.",
-      "kids_md": "Ibrahim's father and people prayed to idols, and Ibrahim told them this was wrong [c1]. Ibrahim looked at a star, then the moon, then the sun. Each one set and went away, and Ibrahim turned from each of them [c3][c4][c5]. Then he said he had turned his face to the One who made the heavens and the earth [c6].",
-      "lessons_md": "Educational interpretation, not scripture: the passage invites a reader to ask what is worthy of devotion, since the things Ibrahim turned from were things that set [c3][c4][c5]. It also shows a believer explaining his position calmly when argued with [c7][c8].",
-      "unknowns_md": "Not established by the ayat: when and where this took place; Ibrahim's age; how this scene stands in time to the scene of the idols and the fire. Interpreters read the words “This is my Lord” in more than one way (as a sincere stage of search, or as a way of arguing with his people); the ayat give the words and what followed and do not label them. The ayat say “his father Azar”; whether and how this name relates to the father spoken of elsewhere is a matter for scholarly notes. Reviewer to confirm the draft English rendering of the word translated “appearing” (bazigh)."
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ibrahim said to his father Azar: do you take idols as gods? He said he saw him and his people in manifest error.",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 74,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God showed Ibrahim the dominion of the heavens and the earth, so that he would be among those who have certainty.",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 75,
+              "to": 75
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When the night covered him he saw a star and said “This is my Lord”; when it set he said “I do not love those that set.”",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 76,
+              "to": 76
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "When he saw the moon appearing he said “This is my Lord”; when it set he said “If my Lord does not guide me, I will be among the people who are astray.”",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 77,
+              "to": 77
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "When he saw the sun appearing he said “This is my Lord, this is greater”; when it set he said “My people, I am free of what you associate with God.”",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 78,
+              "to": 78
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "He said he had turned his face, upright, to the One who originated the heavens and the earth, and that he was not among those who associate others with God.",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 79,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "His people argued with him; he asked whether they argued with him about God when God had guided him, said he did not fear what they associate with God unless his Lord willed something, and said his Lord's knowledge encompasses all things.",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 80,
+              "to": 80
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Ibrahim asked how he could fear what they associated with God when they did not fear associating with God that for which God sent down no authority, and asked which of the pair groups had more right to security.",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 81,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "Those who believed and did not mix their belief with wrongdoing: for them is security and they are rightly guided.",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 82,
+              "to": 82
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "God says this was His argument which He gave to Ibrahim against his people, and that He raises in degrees whom He wills.",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 83,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Ibrahim spoke against the idols of his father Azar and his people [c1]. God showed him the dominion of the heavens and the earth [c2]. He looked at a star, the moon and the sun, said of each “This is my Lord”, and turned from each when it set [c3][c4][c5], then turned his face to the One who originated the heavens and the earth [c6].",
+      "body_md": "The passage opens with Ibrahim asking his father Azar whether he takes idols as gods, and telling him that he sees him and his people in manifest error [c1]. God says He showed Ibrahim the dominion of the heavens and the earth so that he would be among those who have certainty [c2].\n\nWhen night covered him he saw a star and said “This is my Lord”; when it set he said “I do not love those that set” [c3]. He saw the moon appearing and said the same words, and when it set said “If my Lord does not guide me, I will be among the people who are astray” [c4]. He saw the sun appearing and said “This is my Lord, this is greater”; when it set he said “My people, I am free of what you associate with God” [c5]. He then said he had turned his face, upright, to the One who originated the heavens and the earth, and was not among those who associate [c6].\n\nHis people argued with him [c7]. He asked whether they argued with him about God when God had already guided him, said he did not fear what they associate unless his Lord willed something, and said his Lord's knowledge encompasses all things [c7]. He asked how he could fear what they associated while they did not fear associating with God that for which no authority was sent down, and which group had more right to security [c8]. The answer given is that security and guidance belong to those who believed and did not mix their belief with wrongdoing [c9]. God calls all this His argument given to Ibrahim against his people [c10].",
+      "deep_md": "The same pattern is told of a star, the moon and the sun: it is seen, he says this is my Lord, it sets, and he turns from it [c3][c4][c5]. The conclusion is stated as a turning of the face to the originator of the heavens and the earth [c6], which answers the opening charge against idols [c1]. The passage closes by framing the whole sequence as God's argument given to Ibrahim [c10], with a principle about security and guidance [c9].",
+      "kids_md": "Ibrahim told his father and his people that their idols were wrong [c1]. He saw a star, the moon and the sun, said of each that it was his Lord, and turned from each when it set [c3][c4][c5]. Then he said he had turned his face to the One who made the heavens and the earth [c6].",
+      "lessons_md": "Educational interpretation (not scripture): the passage invites a reader to ask what is worthy of devotion, since the things Ibrahim turned from were things that set [c3][c4][c5]. It also shows a believer explaining his position calmly when argued with [c7][c8].",
+      "unknowns_md": "Not established by the ayat: when and where this took place, Ibrahim's age, and how this scene stands in time to the scene of the idols and the fire. The words ‘this is my Lord’ are read in more than one way by interpreters, as a stage of search or as a way of arguing with his people; the ayat give the words and what followed and do not label them. The ayat say ‘his father Azar’; how this relates to other passages about his father is for scholarly notes."
     },
     {
       "anchor": "calling-his-father",
       "position": 2,
       "title_en": "Calling his father",
-      "event_slug": "azar",
-      "verses": [{ "surah": 19, "from": 41, "to": 50 }],
-      "claims": [
-        { "id": "c1", "statement_en": "Allah describes Ibrahim as a siddiq (one of great truthfulness) and a prophet.", "verses": [{ "surah": 19, "from": 41, "to": 41 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "Ibrahim asked his father why he worshipped what neither hears nor sees nor avails him anything.", "verses": [{ "surah": 19, "from": 42, "to": 42 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "He told his father that knowledge had come to him which had not come to his father, and asked him to follow him so that he would guide him to an even path.", "verses": [{ "surah": 19, "from": 43, "to": 43 }], "evidence": "quran" },
-        { "id": "c4", "statement_en": "He told his father not to worship Shaytan, who was disobedient to the Most Merciful, and said he feared that a punishment from the Most Merciful would touch his father and he would become an ally of Shaytan.", "verses": [{ "surah": 19, "from": 44, "to": 45 }], "evidence": "quran" },
-        { "id": "c5", "statement_en": "His father answered by asking whether Ibrahim was turning away from his gods, and said that if he did not stop he would stone him, and told him to leave him for a long time.", "verses": [{ "surah": 19, "from": 46, "to": 46 }], "evidence": "quran" },
-        { "id": "c6", "statement_en": "Ibrahim said “Peace be upon you; I will ask my Lord to forgive you; He has been gracious to me”, and said he would withdraw from them and from what they invoke besides Allah and would invoke his Lord, hoping not to be unfortunate in invoking his Lord.", "verses": [{ "surah": 19, "from": 47, "to": 48 }], "evidence": "quran" },
-        { "id": "c7", "statement_en": "When he withdrew from them and from what they worshipped besides Allah, Allah granted him Ishaq and Yaqub and made each a prophet.", "verses": [{ "surah": 19, "from": 49, "to": 49 }], "evidence": "quran" },
-        { "id": "c8", "statement_en": "Allah granted them of His mercy and gave them a high tongue of truth.", "verses": [{ "surah": 19, "from": 50, "to": 50 }], "evidence": "quran" }
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 19,
+          "from": 41,
+          "to": 50
+        }
       ],
-      "summary_md": "Allah calls Ibrahim truthful and a prophet [c1]. He spoke kindly and with reasons to his father, who worshipped what cannot hear or see [c2][c3][c4]. His father threatened him [c5]; Ibrahim wished him peace, said he would withdraw and keep calling on his Lord [c6], and Allah granted him Ishaq and Yaqub [c7].",
-      "body_md": "Allah describes Ibrahim as a siddiq and a prophet [c1]. He asked his father why he worshipped what neither hears nor sees nor avails him anything [c2], said that knowledge had come to him which had not come to his father, and asked his father to follow him so that he could guide him to an even path [c3]. He told his father not to worship Shaytan, who was disobedient to the Most Merciful, and said he feared that a punishment from the Most Merciful would touch him [c4].\n\nThe father's reply asks whether Ibrahim is turning away from his gods, warns that if he does not stop he will stone him, and tells him to leave him for a long time [c5]. Ibrahim said “Peace be upon you”, said he would ask his Lord to forgive his father, and that he would withdraw from them and from what they invoke besides Allah and invoke his Lord, hoping not to be unfortunate in his prayer [c6]. When he withdrew, Allah granted him Ishaq and Yaqub and made each a prophet [c7], gave them of His mercy and gave them a high tongue of truth [c8].",
-      "deep_md": "In this passage every address to the father begins with the same respectful call and moves from a question [c2], to an offer of guidance [c3], to a warning [c4]. The father's answer is a refusal with a threat [c5]. The text then records Ibrahim's two decisions: to ask forgiveness for his father [c6] and to withdraw [c6]. The reward that follows is stated as a gift of Ishaq and Yaqub and prophethood [c7][c8]. Other ayat about the same father are in the chapters on the signs in creation and on the model for believers; they are read together, not assumed to be in time order.",
-      "kids_md": "Ibrahim spoke gently to his father. He asked why his father prayed to things that cannot hear or see [c2]. His father was angry and told him to leave [c5]. Ibrahim said “Peace be upon you” and kept calling on his Lord [c6]. Allah gave Ibrahim Ishaq and Yaqub, and made them prophets [c7].",
-      "lessons_md": "Educational interpretation, not scripture: the passage shows a way of speaking to a family member who disagrees: with respect, with reasons, and with a wish for their good, while still keeping one's own path [c2][c3][c6].",
-      "unknowns_md": "Not established in these ayat: whether the father changed; where Ibrahim withdrew to; when this took place. The Arabic word in the father's threat can be read as stoning or as verbal abuse; interpreters differ and this needs a scholarly note. The later ayat on Ibrahim asking forgiveness for his father (60:4, and 9:114 in the record for Azar) are to be read together with this passage by a reviewer."
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God describes Ibrahim as a siddiq (one of great truthfulness) and a prophet.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 41,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Ibrahim asked his father why he worshipped what neither hears nor sees nor avails him anything.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He told his father that knowledge had come to him which had not come to his father, and asked him to follow him so that he would guide him to an even path.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 43,
+              "to": 43
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He told his father not to worship Satan, who was disobedient to the Most Merciful, and said he feared that a punishment from the Most Merciful would touch his father and he would become an ally of Satan.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 44,
+              "to": 45
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "His father answered by asking whether Ibrahim was turning away from his gods, and said that if he did not stop he would stone him, and told him to leave him for a long time.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 46,
+              "to": 46
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Ibrahim said “Peace be upon you; I will ask my Lord to forgive you; he has been gracious to me”, and said he would withdraw from them and from what they invoke besides God and would invoke his Lord, hoping not to be unfortunate in invoking his Lord.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 47,
+              "to": 48
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "When he withdrew from them and from what they worshipped besides God, God granted him Ishaq and Yaqub and made each a prophet.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 49,
+              "to": 49
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "God granted them of His mercy and gave them a high tongue of truth.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God calls Ibrahim truthful and a prophet [c1]. He spoke kindly and with reasons to his father, who worshipped what cannot hear or see [c2][c3][c4]. His father threatened him [c5]; Ibrahim wished him peace, said he would withdraw and keep calling on his Lord [c6], and God granted him Ishaq and Yaqub [c7].",
+      "body_md": "God describes Ibrahim as a siddiq and a prophet [c1]. He asked his father why he worshipped what neither hears nor sees nor avails him anything [c2], said that knowledge had come to him which had not come to his father, and asked his father to follow him so that he could guide him to an even path [c3]. He told his father not to worship Satan, who was disobedient to the Most Merciful, and said he feared that a punishment from the Most Merciful would touch him [c4].\n\nThe father's reply asks whether Ibrahim is turning away from his gods, warns that if he does not stop he will stone him, and tells him to leave him for a long time [c5]. Ibrahim said “Peace be upon you”, said he would ask his Lord to forgive his father, and that he would withdraw from them and from what they invoke besides God and invoke his Lord, hoping not to be unfortunate in his prayer [c6]. When he withdrew, God granted him Ishaq and Yaqub and made each a prophet [c7], gave them of His mercy and gave them a high tongue of truth [c8].",
+      "deep_md": "In this passage every address to the father begins with the same respectful call and moves from a question [c2], to an offer of guidance [c3], to a warning [c4]. The father's answer is a refusal with a threat [c5]. The text then records Ibrahim's a pair of decisions: to ask forgiveness for his father [c6] and to withdraw [c6]. The reward that follows is stated as a gift of Ishaq and Yaqub and prophethood [c7][c8].",
+      "kids_md": "Ibrahim asked his father [c2]. He asked why his father prayed to things that cannot hear or see [c2]. His father said he would stone him if he did not stop, and told him to leave him for a long time [c5]. Ibrahim said “Peace be upon you” and kept calling on his Lord [c6]. God gave Ibrahim Ishaq and Yaqub, and made them prophets [c7].",
+      "lessons_md": "Educational interpretation (not scripture): the passage shows a way of speaking to a family member who disagrees: with respect, with reasons, and with a wish for their good, while still keeping one's own path [c2][c3][c6].",
+      "unknowns_md": "Not established in these ayat: whether the father changed, where Ibrahim withdrew to, and when this took place. The Arabic word in the father's threat can be read as stoning or as verbal abuse; interpreters differ and this needs a scholarly note. How the promise to ask forgiveness for his father relates to the later passages about his father is for a reviewer."
     },
     {
       "anchor": "what-do-you-worship",
       "position": 3,
-      "title_en": "“What do you worship?”",
+      "title_en": "What do you worship?",
       "event_slug": "people-of-ibrahim",
       "verses": [
-        { "surah": 21, "from": 51, "to": 56 },
-        { "surah": 26, "from": 69, "to": 82 },
-        { "surah": 29, "from": 16, "to": 17 },
-        { "surah": 37, "from": 83, "to": 87 }
+        {
+          "surah": 21,
+          "from": 51,
+          "to": 56
+        },
+        {
+          "surah": 26,
+          "from": 70,
+          "to": 82
+        },
+        {
+          "surah": 29,
+          "from": 16,
+          "to": 17
+        },
+        {
+          "surah": 37,
+          "from": 83,
+          "to": 87
+        }
       ],
       "claims": [
-        { "id": "c1", "statement_en": "Allah gave Ibrahim his right judgement (rushd) before, and knew him.", "verses": [{ "surah": 21, "from": 51, "to": 51 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "Ibrahim asked his father and his people what these images were to which they were devoted; they replied that they found their fathers worshipping them; he said that they and their fathers were in manifest error.", "verses": [{ "surah": 21, "from": 52, "to": 54 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "They asked whether he had brought the truth or was playing; he said “Rather, your Lord is the Lord of the heavens and the earth, who originated them, and I am a witness to that.”", "verses": [{ "surah": 21, "from": 55, "to": 56 }], "evidence": "quran" },
-        { "id": "c4", "statement_en": "In Surah Ash-Shu'ara he asked his father and people what they worshipped; they said they worshipped idols and stayed devoted to them; he asked whether the idols hear them when they call, or benefit or harm; they said they found their fathers doing the same.", "verses": [{ "surah": 26, "from": 70, "to": 74 }], "evidence": "quran" },
-        { "id": "c5", "statement_en": "Ibrahim said that all they worshipped, they and their earlier fathers, were enemies to him except the Lord of the worlds, who created him and guides him, who feeds him and gives him drink, who heals him when he is ill, who will cause him to die and then give him life, and from whom he hopes forgiveness of his fault on the Day of Recompense.", "verses": [{ "surah": 26, "from": 75, "to": 82 }], "evidence": "quran" },
-        { "id": "c6", "statement_en": "In Surah Al-Ankabut, Ibrahim told his people to worship Allah and be mindful of Him, said they worship idols besides Allah and invent falsehood, that those they worship do not own any provision for them, and told them to seek provision from Allah, worship Him and be grateful to Him.", "verses": [{ "surah": 29, "from": 16, "to": 17 }], "evidence": "quran" },
-        { "id": "c7", "statement_en": "In Surah As-Saffat, Ibrahim asked his father and his people what they worshipped, asked whether they wanted false gods besides Allah, and asked what they thought of the Lord of the worlds.", "verses": [{ "surah": 37, "from": 85, "to": 87 }], "evidence": "quran" },
-        { "id": "c8", "statement_en": "Ibrahim is said to have come to his Lord with a sound heart.", "verses": [{ "surah": 37, "from": 83, "to": 84 }], "evidence": "quran" }
+        {
+          "id": "c1",
+          "statement_en": "God gave Ibrahim his right judgement (rushd) before, and knew him.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 51,
+              "to": 51
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Ibrahim asked his father and his people what these images were to which they were devoted; they replied that they found their fathers worshipping them; he said that they and their fathers were in manifest error.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 52,
+              "to": 54
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They asked whether he had brought the truth or was playing; he said “Rather, your Lord is the Lord of the heavens and the earth, who originated them, and I am a witness to that.”",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 55,
+              "to": 56
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "In another passage, he asked his father and people what they worshipped; they said they worshipped idols and stayed devoted to them; he asked whether the idols hear them when they call, or benefit or harm; they said they found their fathers doing the same.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 70,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Ibrahim said that all they worshipped, they and their earlier fathers, were enemies to him except the Lord of the worlds, who created him and guides him, who feeds him and gives him drink, who heals him when he is ill, who will cause him to die and then give him life, and from whom he hopes forgiveness of his fault on the Day of Recompense.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 75,
+              "to": 82
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "In another passage, Ibrahim told his people to worship God and be mindful of Him, said they worship idols besides God and invent falsehood, that those they worship do not own any provision for them, and told them to seek provision from God, worship Him and be grateful to Him.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 16,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "In another passage, Ibrahim asked his father and his people what they worshipped, asked whether they wanted false gods besides God, and asked what they thought of the Lord of the worlds.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 85,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Ibrahim came to his Lord with a sound heart.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 83,
+              "to": 84
+            }
+          ],
+          "evidence": "quran"
+        }
       ],
-      "summary_md": "Four surahs record Ibrahim asking his people what they worshipped [c2][c4][c6][c7]. They answered that they followed their fathers [c2][c4]. He said that his Lord is the Lord of the heavens and the earth [c3], who created him, guides him, feeds him, heals him, and will cause him to die and live again [c5].",
-      "body_md": "Allah says He gave Ibrahim his right judgement before, and knew him [c1]. In Surah Al-Anbiya, Ibrahim asked his father and his people what the images were to which they were devoted. They said they found their fathers worshipping them, and he told them they and their fathers were in manifest error [c2]. They asked whether he came with the truth or was playing, and he said their Lord is the Lord of the heavens and the earth, who originated them, and that he was a witness to that [c3].\n\nIn Surah Ash-Shu'ara, he asked what they worshipped; they said they worshipped idols and stayed devoted to them. He asked whether the idols hear when they are called, or benefit or harm, and they answered that they found their fathers doing so [c4]. He then said all they worshipped were enemies to him except the Lord of the worlds, who created him and guides him, feeds him and gives him drink, heals him when he is ill, causes him to die and then gives life, and from whom he hopes forgiveness on the Day of Recompense [c5].\n\nIn Surah Al-Ankabut he tells them to worship Allah and be mindful of Him, says that those they worship besides Allah own no provision for them, and tells them to seek provision from Allah, worship Him and be grateful [c6]. In Surah As-Saffat, which says he came to his Lord with a sound heart [c8], he asks what they worship, whether they want false gods besides Allah, and what they think of the Lord of the worlds [c7].",
-      "deep_md": "The accounts are not copies of one another, and the text does not say which came first. Surah Al-Anbiya gives the question about the images and the people's reply about their fathers [c2]. Surah Ash-Shu'ara gives the same exchange with the additional question about hearing, benefit and harm [c4] and a long statement about the Lord who creates, guides, feeds, heals and gives life after death [c5]. Surah Al-Ankabut stresses provision [c6]. Surah As-Saffat opens with the sound heart [c8] and ends in a question to the people [c7]. The people's defence is the same in two surahs: the practice of their fathers [c2][c4].",
-      "kids_md": "Ibrahim asked his people, “What do you worship?” They said they followed what their fathers did [c2][c4]. Ibrahim said that his Lord made him, feeds him, helps him when he is ill, and will bring him back to life [c5].",
-      "lessons_md": "Educational interpretation, not scripture: the people's reply, “our fathers did this”, is a reason that is only about habit and not about truth [c2][c4]. Ibrahim answers by naming what his Lord does for him [c5]. A reader may reflect on which of their own habits they have examined.",
-      "unknowns_md": "Not established: the place, the date, and the order of the four accounts. Al-Ankabut 29:18 onward continues the discourse; whether those ayat are Ibrahim's continuing speech or an address to the later audience is read differently by interpreters, so this draft makes no claim from 29:18-23 and leaves them to a scholar. Names of the people's idols are not given in these ayat."
+      "summary_md": "The Quran records Ibrahim asking his people what they worshipped [c2][c4][c6][c7]. They answered that they followed their fathers [c2][c4]. He said that his Lord is the Lord of the heavens and the earth [c3], who created him, guides him, feeds him, heals him, and will cause him to die and live again [c5].",
+      "body_md": "God says He gave Ibrahim his right judgement before, and knew him [c1]. In another passage, Ibrahim asked his father and his people what the images were to which they were devoted [c2]. They said they found their fathers worshipping them, and he told them they and their fathers were in manifest error [c2]. They asked whether he came with the truth or was playing, and he said their Lord is the Lord of the heavens and the earth, who originated them, and that he was a witness to that [c3].\n\nIn another passage, he asked what they worshipped; they said they worshipped idols and stayed devoted to them [c4]. He asked whether the idols hear when they are called, or benefit or harm, and they answered that they found their fathers doing so [c4]. He then said all they worshipped were enemies to him except the Lord of the worlds, who created him and guides him, feeds him and gives him drink, heals him when he is ill, causes him to die and then gives life, and from whom he hopes forgiveness on the Day of Recompense [c5].\n\nIn another passage, he tells them to worship God and be mindful of Him, says that those they worship besides God own no provision for them, and tells them to seek provision from God, worship Him and be grateful [c6]. In another passage, which says he came to his Lord with a sound heart [c8], he asks what they worship, whether they want false gods besides God, and what they think of the Lord of the worlds [c7].",
+      "deep_md": "The question about the images and the people's reply about their fathers are told in one passage [c2]. Another adds the question whether the idols hear, benefit or harm [c4] and a long statement about the Lord who creates, guides, feeds, heals and gives life after death [c5]. A further passage stresses provision [c6], and the last opens with the sound heart [c8] and ends in a question to the people [c7].",
+      "kids_md": "Ibrahim asked his people what they worshipped [c4]. They said they followed what their fathers did [c2][c4]. Ibrahim said that his Lord made him, feeds him, helps him when he is ill, and will bring him back to life [c5].",
+      "lessons_md": "Educational interpretation (not scripture): the people's reply, that they found their fathers doing the same, is a reason of habit and not of truth [c2][c4]. Ibrahim answers by naming what his Lord does for him [c5].",
+      "unknowns_md": "Not established: the place, the date, and the order of the accounts. The ayat from 29:18 onward continue the discourse; whether they are Ibrahim's continuing speech or an address to the later audience is read differently by interpreters, so this draft makes no claim from 29:18-23 and leaves them to a scholar. The names of the people's idols are not given in these ayat."
     },
     {
       "anchor": "the-idols-broken",
@@ -88,93 +405,433 @@
       "title_en": "The idols and the one left whole",
       "event_slug": "people-of-ibrahim",
       "verses": [
-        { "surah": 21, "from": 57, "to": 67 },
-        { "surah": 37, "from": 88, "to": 96 }
+        {
+          "surah": 21,
+          "from": 57,
+          "to": 67
+        },
+        {
+          "surah": 37,
+          "from": 88,
+          "to": 96
+        }
       ],
       "claims": [
-        { "id": "c1", "statement_en": "Ibrahim said “By Allah, I will plan against your idols after you have turned your backs and gone away.”", "verses": [{ "surah": 21, "from": 57, "to": 57 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "He made the idols into pieces, except the largest of them, so that they might return to it.", "verses": [{ "surah": 21, "from": 58, "to": 58 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "The people asked who had done this to their gods and said he must be one of the wrongdoers; some said they had heard a young man mention them, who was called Ibrahim.", "verses": [{ "surah": 21, "from": 59, "to": 60 }], "evidence": "quran" },
-        { "id": "c4", "statement_en": "They said to bring him before the eyes of the people so that they might testify, and asked him “Was it you who did this to our gods, Ibrahim?”", "verses": [{ "surah": 21, "from": 61, "to": 62 }], "evidence": "quran" },
-        { "id": "c5", "statement_en": "He replied “Rather, the largest of them did it; ask them, if they can speak.”", "verses": [{ "surah": 21, "from": 63, "to": 63 }], "evidence": "quran" },
-        { "id": "c6", "statement_en": "They turned to themselves and said “You yourselves are the wrongdoers”; then they were turned upside down in their heads and said “You know well that these do not speak.”", "verses": [{ "surah": 21, "from": 64, "to": 65 }], "evidence": "quran" },
-        { "id": "c7", "statement_en": "He asked whether they worshipped besides Allah what neither benefits nor harms them, and said “Fie upon you and upon what you worship besides Allah. Will you not reason?”", "verses": [{ "surah": 21, "from": 66, "to": 67 }], "evidence": "quran" },
-        { "id": "c8", "statement_en": "In Surah As-Saffat, he cast a glance at the stars and said “I am ill”; they turned away from him, going away.", "verses": [{ "surah": 37, "from": 88, "to": 90 }], "evidence": "quran" },
-        { "id": "c9", "statement_en": "He turned to their gods and asked “Will you not eat? What is the matter with you that you do not speak?” and turned upon them striking with the right hand.", "verses": [{ "surah": 37, "from": 91, "to": 93 }], "evidence": "quran" },
-        { "id": "c10", "statement_en": "They came to him hurrying; he asked “Do you worship what you carve, while Allah created you and what you do?”", "verses": [{ "surah": 37, "from": 94, "to": 96 }], "evidence": "quran" }
+        {
+          "id": "c1",
+          "statement_en": "Ibrahim said “By God, I will plan against your idols after you have turned your backs and gone away.”",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 57,
+              "to": 57
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He made the idols into pieces, except the largest of them, so that they might return to it.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 58,
+              "to": 58
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The people asked who had done this to their gods and said he must be one of the wrongdoers; some said they had heard a young man mention them, who was called Ibrahim.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 59,
+              "to": 60
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They said to bring him in front of the people so that they might testify, and asked him “Was it you who did this to our gods, Ibrahim?”",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 61,
+              "to": 62
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He replied “Rather, the largest of them did it; ask them, if they can speak.”",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 63,
+              "to": 63
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They turned to themselves and said “You yourselves are the wrongdoers”; then they were turned upside down in their heads and said “You know well that these do not speak.”",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 64,
+              "to": 65
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "He asked whether they worshipped besides God what neither benefits nor harms them, and said “Fie upon you and upon what you worship besides God. Will you not reason?”",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 66,
+              "to": 67
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "In another passage, he cast a glance at the stars and said “I am ill”; they turned away from him, going away.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 88,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "He turned to their gods and asked “Will you not eat? What is the matter with you that you do not speak?” and turned upon them and hit them with the right hand.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 91,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "They came to him hurrying; he asked “Do you worship what you carve, while God created you and what you do?”",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 94,
+              "to": 96
+            }
+          ],
+          "evidence": "quran"
+        }
       ],
-      "summary_md": "Ibrahim said he would plan against the idols once the people had gone [c1]. He made them into pieces but left the largest [c2]. When the people asked him, he pointed to the largest [c5], and they admitted that the idols do not speak [c6]. He asked why they worship what neither benefits nor harms [c7]. Surah As-Saffat tells the same scene with other details [c8][c9][c10].",
-      "body_md": "Ibrahim said he would plan against the idols after the people turned their backs and left [c1]. He made them into pieces, except the largest of them, so that they might return to it [c2]. The people asked who had done this to their gods and said he must be a wrongdoer; some said they had heard a young man called Ibrahim mention them [c3]. They brought him before the people and asked if he had done it [c4]. He said “Rather, the largest of them did it; ask them, if they can speak” [c5]. They turned to themselves and said they were the wrongdoers; then they were turned upside down in their heads and said “You know well that these do not speak” [c6]. He asked why they worshipped besides Allah what neither benefits nor harms them [c7].\n\nSurah As-Saffat describes the same moment in other words. He cast a glance at the stars and said “I am ill”, and they turned away [c8]. He turned to their gods, asked them if they would not eat and why they did not speak, and struck them with the right hand [c9]. The people came hurrying, and he asked “Do you worship what you carve, while Allah created you and what you do?” [c10].",
-      "deep_md": "Surah Al-Anbiya and Surah As-Saffat both place Ibrahim alone with the idols after the people have gone away [c1][c8], and both end with the people's own failure to answer: they say that the idols do not speak [c6], and in As-Saffat Ibrahim's last question makes the same point [c10]. Details that appear in only one account are not added to the other: the largest idol left whole [c2] is only in Al-Anbiya; the glance at the stars and the words “I am ill” [c8] and the striking with the right hand [c9] are only in As-Saffat. The text does not say that the two scenes are the same hour or two different times.",
-      "kids_md": "Ibrahim wanted his people to see that their idols could not help anyone. He made the idols into pieces but left the biggest one [c2]. The people came and asked him who did it. He told them to ask the idols, if they could speak [c5]. The people had to say that the idols do not speak [c6].",
-      "lessons_md": "Educational interpretation, not scripture: the people admit, in their own words, that the idols cannot speak [c6], a reminder that clear evidence can be known and yet not followed. This is for reflection and is not a rule from the ayat.",
-      "unknowns_md": "Not established: the day or occasion on which the people left, the number of idols, and what “turned upside down in their heads” means (interpreters take it in different ways). The words “Rather, the largest of them did it” [c5] and “I am ill” [c8] have been discussed at length by interpreters; this draft states only the words and context. Hadith to add later: the reports on these words, with their gradings. Named in later tradition, not in the Quranic text: the name of the festival or of the temple."
+      "summary_md": "Ibrahim said he would plan against the idols once the people had gone [c1]. He made them into pieces but left the largest [c2]. When the people asked him, he pointed to the largest [c5], and they admitted that the idols do not speak [c6]. He asked why they worship what neither benefits nor harms [c7]. Another passage tells the same scene with other details [c8][c9][c10].",
+      "body_md": "Ibrahim said he would plan against the idols after the people turned their backs and left [c1]. He made them into pieces, except the largest of them, so that they might return to it [c2]. The people asked who had done this to their gods and said he must be a wrongdoer; some said they had heard a young man called Ibrahim mention them [c3]. They brought him before the people and asked if he had done it [c4]. He said “Rather, the largest of them did it; ask them, if they can speak” [c5]. They turned to themselves and said they were the wrongdoers; then they were turned upside down in their heads and said “You know well that these do not speak” [c6]. He asked why they worshipped besides God what neither benefits nor harms them [c7].\n\nHe cast a glance at the stars and said “I am ill”, and they turned away [c8]. He turned to their gods, asked them if they would not eat and why they did not speak, and struck them with the right hand [c9]. The people came hurrying, and he asked “Do you worship what you carve, while God created you and what you do”? [c10].",
+      "deep_md": "Passages in different places describe the idols being broken, and each adds details the other lacks [c2][c8]. The largest idol being left whole [c2] is stated in only one, and the glance at the stars with the words about being ill [c8] in only the other. In both, the people end by being confronted with what the idols cannot do [c6][c10].",
+      "kids_md": "He made the idols into pieces but left the biggest one [c2]. The people came and asked him who did it [c3]. He told them to ask the idols, if they could speak [c5]. The people had to say that the idols do not speak [c6].",
+      "lessons_md": "Educational interpretation (not scripture): the people admit, in their own words, that the idols cannot speak [c6], a reminder that clear evidence can be known and yet not followed.",
+      "unknowns_md": "Not established: the day or occasion on which the people left, the number of idols, and what ‘turned upside down in their heads’ means, which interpreters take in different ways. The words ‘rather, the largest of them did it’ and ‘i am ill’ have been discussed at length by interpreters; this draft states only the words and context. Named in later tradition, not in the Quranic text: the name of the festival or of the temple."
     },
     {
       "anchor": "his-prayer-and-the-day",
       "position": 5,
       "title_en": "Ibrahim's prayer and the Day it speaks of",
       "event_slug": "people-of-ibrahim",
-      "verses": [{ "surah": 26, "from": 83, "to": 104 }],
+      "verses": [
+        {
+          "surah": 26,
+          "from": 83,
+          "to": 104
+        }
+      ],
       "claims": [
-        { "id": "c1", "statement_en": "Ibrahim prayed: “My Lord, grant me judgement and join me with the righteous; make for me a truthful reputation among later generations; make me among the inheritors of the Garden of Bliss.”", "verses": [{ "surah": 26, "from": 83, "to": 85 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "He prayed “Forgive my father; he was among those who have gone astray” and “Do not disgrace me on the day they are raised.”", "verses": [{ "surah": 26, "from": 86, "to": 87 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "The passage states that on the Day neither wealth nor children will avail, except one who comes to Allah with a sound heart; the speaker of these two ayat is not marked in the text.", "verses": [{ "surah": 26, "from": 88, "to": 89 }], "evidence": "quran" },
-        { "id": "c4", "statement_en": "The Garden will be brought near for the mindful and the Blaze made manifest for the astray.", "verses": [{ "surah": 26, "from": 90, "to": 91 }], "evidence": "quran" },
-        { "id": "c5", "statement_en": "It will be said to the astray “Where is what you used to worship besides Allah? Can they help you or help themselves?” and they will be thrown into it, they and the astray and all the soldiers of Iblis.", "verses": [{ "surah": 26, "from": 92, "to": 95 }], "evidence": "quran" },
-        { "id": "c6", "statement_en": "Disputing in it, they will say “By Allah, we were in manifest error when we made you equal with the Lord of the worlds; only the criminals misled us; now we have no intercessors and no close friend; if only we had a return, we would be among the believers.”", "verses": [{ "surah": 26, "from": 96, "to": 102 }], "evidence": "quran" },
-        { "id": "c7", "statement_en": "In this is a sign, and most of them were not believers; and your Lord is the Almighty, the Merciful.", "verses": [{ "surah": 26, "from": 103, "to": 104 }], "evidence": "quran" }
+        {
+          "id": "c1",
+          "statement_en": "Ibrahim prayed: “My Lord, grant me judgement and join me with the righteous; make for me a truthful reputation among later generations; make me among the inheritors of the Garden of Bliss.”",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 83,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He prayed “Forgive my father; he was among those who have gone astray” and “Do not disgrace me on the day they are raised.”",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 86,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The passage states that on the Day neither wealth nor children will avail, except one who comes to God with a sound heart; the speaker of these a pair of ayat is not marked in the text.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 88,
+              "to": 89
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The Garden will be brought near for the mindful and the Blaze made manifest for the astray.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 90,
+              "to": 91
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "It will be said to the astray “Where is what you used to worship besides God? Can they help you or help themselves?” and they will be thrown into it, they and the astray and all the soldiers of Iblis.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 92,
+              "to": 95
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They will dispute in it and say “By God, we were in manifest error when we made you equal with the Lord of the worlds; only the criminals misled us; now we have no intercessors and no close friend; if only we had a return, we would be among the believers.”",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 96,
+              "to": 102
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "In this is a sign, and most of them were not believers; and your Lord is the Almighty, the Merciful.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 103,
+              "to": 104
+            }
+          ],
+          "evidence": "quran"
+        }
       ],
       "summary_md": "After speaking of his Lord, Ibrahim prays for judgement, for the righteous company, and for his father [c1][c2]. The passage then describes the Day: wealth and children do not avail, only a sound heart [c3]. It describes the Garden brought near, the Blaze made manifest [c4], and the regret of the astray [c5][c6]. It closes by calling this a sign [c7].",
-      "body_md": "Ibrahim prayed for judgement and for joining the righteous, for a truthful reputation among later generations, and to be among the inheritors of the Garden of Bliss [c1]. He prayed for his father, saying he was among the astray, and asked not to be disgraced on the day they are raised [c2]. The next two ayat state that on that Day neither wealth nor children avail, except one who comes to Allah with a sound heart [c3]. The text does not mark whether these are Ibrahim's continuing words.\n\nThe passage then describes the Garden brought near for the mindful and the Blaze made manifest for the astray [c4]. The astray are asked where what they worshipped is, and are thrown into the Blaze together with the soldiers of Iblis [c5]. They dispute there, say they were in manifest error in making others equal with the Lord of the worlds, say only the criminals misled them, that they have no intercessor or close friend, and wish for a return so as to be believers [c6]. The passage ends with the statement that this is a sign, that most were not believers, and that the Lord is the Almighty, the Merciful [c7].",
-      "deep_md": "The prayer in Ash-Shu'ara follows the statement about the Lord who creates and guides [see the chapter “What do you worship?”]. The prayer [c1][c2] and the picture of the Day [c3][c4][c5][c6] share the words “sound heart” with the opening of the account in As-Saffat. Compare the request for forgiveness for the father here [c2] with the other places where Ibrahim speaks about his father; those places are not merged in this draft.",
-      "kids_md": "Ibrahim prayed to his Lord. He asked to be with good people [c1]. He asked not to be shamed on the Day when people are raised [c2]. The ayat say that on that Day the thing that matters is a sound heart [c3].",
-      "lessons_md": "Educational interpretation, not scripture: the prayer asks for both a good end and a good name among later people [c1], and the passage reminds readers that the thing that counts on that Day is a sound heart [c3].",
-      "unknowns_md": "Not established: whether 26:88-89 are Ibrahim's words or Allah's; interpreters differ and the text does not mark it. Whether the people who regret in 26:96-102 are specifically Ibrahim's people is not stated by the ayat; they are described as the astray in general. The reconciliation of Ibrahim's prayer for his father here with the later ayat about it (60:4, and 9:114 in the Azar record) is for a scholar."
+      "body_md": "Ibrahim prayed for judgement and for joining the righteous, for a truthful reputation among later generations, and to be among the inheritors of the Garden of Bliss [c1]. He prayed for his father, saying he was among the astray, and asked not to be disgraced on the day they are raised [c2]. The next a pair of ayat state that on that Day neither wealth nor children avail, except one who comes to God with a sound heart [c3].\n\nThe passage then describes the Garden brought near for the mindful and the Blaze made manifest for the astray [c4]. The astray are asked where what they worshipped is, and are thrown into the Blaze together with the soldiers of Iblis [c5]. They dispute there, say they were in manifest error in making others equal with the Lord of the worlds, say only the criminals misled them, that they have no intercessor or close friend, and wish for a return so as to be believers [c6]. The passage ends with the statement that this is a sign, that most were not believers, and that the Lord is the Almighty, the Merciful [c7].",
+      "deep_md": "The prayer asks for judgement, a good name among later generations and the Garden of Bliss [c1], and for forgiveness for his father [c2]. The passage then describes the Day on which only a sound heart avails [c3], with the Garden near for the mindful and the Blaze displayed for the astray [c4].",
+      "kids_md": "Ibrahim prayed to his Lord [c1]. He asked to be with good people [c1]. He asked not to be shamed on the Day when people are raised [c2]. The ayat say that on that Day the thing that matters is a sound heart [c3].",
+      "lessons_md": "Educational interpretation (not scripture): the prayer asks for both a good end and a good name among later people [c1], and the passage reminds readers that the thing that counts on that Day is a sound heart [c3].",
+      "unknowns_md": "Not established: whether 26:88-89 are Ibrahim's words or God's, since the text does not mark it. Whether the people who regret in 26:96-102 are specifically Ibrahim's people is not stated; they are described as the astray in general. How Ibrahim's prayer for his father here relates to the later passages about his father is for a scholar."
     },
     {
       "anchor": "the-fire",
       "position": 6,
       "title_en": "The fire",
-      "event_slug": "fire-for-ibrahim",
+      "event_slug": null,
       "verses": [
-        { "surah": 21, "from": 68, "to": 71 },
-        { "surah": 29, "from": 24, "to": 25 },
-        { "surah": 37, "from": 97, "to": 98 }
+        {
+          "surah": 21,
+          "from": 68,
+          "to": 71
+        },
+        {
+          "surah": 29,
+          "from": 24,
+          "to": 25
+        },
+        {
+          "surah": 37,
+          "from": 97,
+          "to": 98
+        }
       ],
       "claims": [
-        { "id": "c1", "statement_en": "The people said “Burn him and support your gods, if you are going to act.”", "verses": [{ "surah": 21, "from": 68, "to": 68 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "Allah said “O fire, be coolness and safety upon Ibrahim.”", "verses": [{ "surah": 21, "from": 69, "to": 69 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "They wished to plot against him, and Allah made them the greater losers.", "verses": [{ "surah": 21, "from": 70, "to": 70 }], "evidence": "quran" },
-        { "id": "c4", "statement_en": "Allah delivered Ibrahim and Lut to the land which He had blessed for the worlds.", "verses": [{ "surah": 21, "from": 71, "to": 71 }], "evidence": "quran" },
-        { "id": "c5", "statement_en": "In Surah Al-Ankabut, the only answer of his people was to say “Kill him or burn him”, and Allah saved him from the fire; in that are signs for a people who believe.", "verses": [{ "surah": 29, "from": 24, "to": 24 }], "evidence": "quran" },
-        { "id": "c6", "statement_en": "Ibrahim said to them that they had taken idols besides Allah as a bond of affection between themselves in the life of this world, but on the Day of Resurrection they will disown and curse one another, their refuge will be the Fire, and they will have no helpers.", "verses": [{ "surah": 29, "from": 25, "to": 25 }], "evidence": "quran" },
-        { "id": "c7", "statement_en": "In Surah As-Saffat, they said “Build for him a structure and throw him into the blaze”; they wished to plot against him, and Allah made them the lowest.", "verses": [{ "surah": 37, "from": 97, "to": 98 }], "evidence": "quran" }
+        {
+          "id": "c1",
+          "statement_en": "The people said “Burn him and support your gods, if you are going to act.”",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 68,
+              "to": 68
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God said “O fire, be coolness and safety upon Ibrahim.”",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 69,
+              "to": 69
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They wished to plot against him, and God made them the greater losers.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God delivered Ibrahim and Lut to the land which He had blessed for the worlds.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 71,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "In another passage, the only answer of his people was to say “Kill him or burn him”, and God saved him from the fire; in that are signs for a people who believe.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Ibrahim said to them that they had taken idols besides God as a bond of affection between themselves in the life of this world, but on the Day of Resurrection they will disown and curse one another, their refuge will be the Fire, and they will have no helpers.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "In another passage, they said “Build for him a structure and throw him into the blaze”; they wished to plot against him, and God made them the lowest.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 97,
+              "to": 98
+            }
+          ],
+          "evidence": "quran"
+        }
       ],
-      "summary_md": "His people decided to burn Ibrahim [c1][c5][c7]. Allah told the fire to be coolness and safety upon him [c2], saved him [c5], and made the plotters the losers [c3][c7]. Allah delivered Ibrahim and Lut to a blessed land [c4].",
-      "body_md": "His people said “Burn him and support your gods, if you are going to act” [c1]. Allah said “O fire, be coolness and safety upon Ibrahim” [c2]. They wished to plot against him, and Allah made them the greater losers [c3]. In Surah Al-Ankabut their only answer is “Kill him or burn him”, and Allah saved him from the fire, a sign for believers [c5]. In Surah As-Saffat they say to build a structure for him and throw him into the blaze, and Allah makes them the lowest [c7].\n\nIbrahim told them that they had taken idols besides Allah as a bond of affection among themselves in this world, but on the Day of Resurrection they will disown and curse one another and their refuge will be the Fire [c6]. Allah delivered Ibrahim and Lut to the land He had blessed for the worlds [c4].",
-      "deep_md": "Three surahs give three different lines of the people's decision: “Burn him” [c1], “Kill him or burn him” [c5], “Build for him a structure and throw him into the blaze” [c7]. They agree on the fire and on the outcome: Allah protected Ibrahim [c2][c5] and the plotters lost [c3][c7]. The order in Surah Al-Anbiya, where the delivery to the blessed land follows the fire [c4], is a statement in that surah's text and not a claim about order across surahs.",
-      "kids_md": "Ibrahim's people were angry and wanted to burn him in a fire. Allah said to the fire, “Be coolness and safety upon Ibrahim” [c2]. Ibrahim was saved, and Allah took him and Lut to a blessed land [c4][c5].",
-      "lessons_md": "Educational interpretation, not scripture: the account shows that the plan of those who wish harm can fail by Allah's will [c3][c7]. It invites a reader to reflect on trust.",
-      "unknowns_md": "Not established: the size, place, and duration of the fire, the form of the structure [c7], who gave the command, the name of any ruler, and the name of the blessed land [c4]. Named in later tradition, not in the Quranic text: the name of the ruler, the name of the land, and accounts of how the fire was prepared or of what happened at the pyre; these are not used here. Whether the ruler in this account is the same as the one in Surah Al-Baqarah is not stated."
+      "summary_md": "His people decided to burn Ibrahim [c1][c5][c7]. God told the fire to be coolness and safety upon him [c2], saved him [c5], and made the plotters the losers [c3][c7]. God delivered Ibrahim and Lut to a blessed land [c4].",
+      "body_md": "His people said “Burn him and support your gods, if you are going to act” [c1]. God said “O fire, be coolness and safety upon Ibrahim” [c2]. They wished to plot against him, and God made them the greater losers [c3]. In another passage, their only answer is “Kill him or burn him”, and God saved him from the fire, a sign for believers [c5]. In another passage, they say to build a structure for him and throw him into the blaze, and God makes them the lowest [c7].\n\nIbrahim told them that they had taken idols besides God as a bond of affection among themselves in this world, but on the Day of Resurrection they will disown and curse one another and their refuge will be the Fire [c6]. God delivered Ibrahim and Lut to the land He had blessed for the worlds [c4].",
+      "deep_md": "The people's decision is recorded as burn him [c1], kill him or burn him [c5], and build a structure for him and throw him into the blaze [c7]. In each record God saved Ibrahim [c2][c5] and the plotters lost [c3][c7].",
+      "kids_md": "Ibrahim's people said to kill him or burn him [c5]. God said to the fire, “Be coolness and safety upon Ibrahim” [c2]. Ibrahim was saved, and God took him and Lut to a blessed land [c4][c5].",
+      "lessons_md": "Educational interpretation (not scripture): the account shows that the plan of those who wish harm can fail by God's will [c3][c7].",
+      "unknowns_md": "Not established: the size, place and duration of the fire, the form of the structure, who gave the command, the name of any ruler and the name of the blessed land. Named in later tradition, not in the Quranic text: the name of the ruler, the name of the land, and accounts of how the fire was prepared; these are not used here. Whether the ruler in this account is the same as the man who argued about his Lord is not stated."
     },
     {
       "anchor": "the-disputant-with-the-ruler",
       "position": 7,
       "title_en": "The man who argued about his Lord",
       "event_slug": "man-who-disputed-ibrahim",
-      "verses": [{ "surah": 2, "from": 258, "to": 258 }],
-      "claims": [
-        { "id": "c1", "statement_en": "Allah draws attention to the one who argued with Ibrahim about his Lord because Allah had given him kingship.", "verses": [{ "surah": 2, "from": 258, "to": 258 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "Ibrahim said “My Lord is the One who gives life and causes death”; the other said “I give life and cause death.”", "verses": [{ "surah": 2, "from": 258, "to": 258 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "Ibrahim said “Allah brings the sun from the east, so bring it from the west”, and the one who disbelieved was confounded.", "verses": [{ "surah": 2, "from": 258, "to": 258 }], "evidence": "quran" },
-        { "id": "c4", "statement_en": "Allah does not guide the wrongdoing people.", "verses": [{ "surah": 2, "from": 258, "to": 258 }], "evidence": "quran" }
+      "verses": [
+        {
+          "surah": 2,
+          "from": 258,
+          "to": 258
+        }
       ],
-      "summary_md": "A man to whom Allah had given kingship argued with Ibrahim about his Lord [c1]. Ibrahim said his Lord gives life and causes death, and the man claimed the same [c2]. Ibrahim then asked him to bring the sun from the west, and the man was confounded [c3].",
-      "body_md": "The ayah draws attention to a man who argued with Ibrahim about his Lord, because Allah had given him kingship [c1]. Ibrahim said “My Lord is the One who gives life and causes death.” The man said “I give life and cause death” [c2]. Ibrahim said “Allah brings the sun from the east, so bring it from the west.” The one who disbelieved was confounded [c3]. The ayah ends with the statement that Allah does not guide the wrongdoing people [c4].",
-      "deep_md": "The exchange has two turns of argument [c2][c3]: a claim to life and death, and a challenge based on the sun, which the man cannot meet. The ayah does not say how the man claimed to give life and death, nor does it quote his answer to the second challenge, only that he was confounded [c3]. The text links his dispute to the kingship he had received [c1].",
-      "kids_md": "A king argued with Ibrahim about his Lord [c1]. Ibrahim said that Allah brings the sun from the east, and asked the king to bring it from the west. The king did not know what to say [c3].",
-      "lessons_md": "Educational interpretation, not scripture: the account shows an argument won by a plain challenge that the other side cannot meet [c3], and it warns that power does not by itself bring a person to the truth [c1][c4].",
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God draws attention to the one who argued with Ibrahim about his Lord because God had given him kingship.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 258,
+              "to": 258
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Ibrahim said “My Lord is the One who gives life and causes death”; the other said “I give life and cause death.”",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 258,
+              "to": 258
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Ibrahim said “God brings the sun from the east, so bring it from the west”, and the one who disbelieved was confounded.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 258,
+              "to": 258
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God does not guide the wrongdoing people.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 258,
+              "to": 258
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "A man to whom God had given kingship argued with Ibrahim about his Lord [c1]. Ibrahim said his Lord gives life and causes death, and the man claimed the same [c2]. Ibrahim then asked him to bring the sun from the west, and the man was confounded [c3].",
+      "body_md": "The ayah draws attention to a man who argued with Ibrahim about his Lord, because God had given him kingship [c1]. Ibrahim said “My Lord is the One who gives life and causes death” [c2]. The man said “I give life and cause death” [c2]. Ibrahim said “God brings the sun from the east, so bring it from the west” [c3]. The one who disbelieved was confounded [c3]. The ayah ends with the statement that God does not guide the wrongdoing people [c4].",
+      "deep_md": "The exchange has a claim to give life and death [c2] and a challenge about the sun that the man cannot meet [c3]. The ayah does not say how the man claimed to give life and death, and records only that he was confounded [c3]. His dispute is linked to the kingship he had received [c1].",
+      "kids_md": "A king argued with Ibrahim about his Lord [c1]. Ibrahim said that God brings the sun from the east, and asked the king to bring it from the west [c3]. The king did not know what to say [c3].",
+      "lessons_md": "Educational interpretation (not scripture): the account shows an argument won by a plain challenge that the other side cannot meet [c3], and it warns that power does not by itself bring a person to the truth [c1][c4].",
       "unknowns_md": "Not established in the ayah: the man's name, his place, the time, how he claimed to give life and death, and whether he is the same ruler as in the account of the fire. Named in later tradition, not in the Quranic text: the name given to this man; it is not used here."
     },
     {
@@ -182,18 +839,57 @@
       "position": 8,
       "title_en": "The four birds",
       "event_slug": "the-four-birds",
-      "verses": [{ "surah": 2, "from": 260, "to": 260 }],
-      "claims": [
-        { "id": "c1", "statement_en": "Ibrahim said “My Lord, show me how You give life to the dead.”", "verses": [{ "surah": 2, "from": 260, "to": 260 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "Allah asked “Do you not believe?” and he said “Yes, but so that my heart may be at ease.”", "verses": [{ "surah": 2, "from": 260, "to": 260 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "Allah told him to take four of the birds and draw them to himself (the word fa-surhunna), then place a portion of them on every mountain, then call them, and they would come to him hastening; and to know that Allah is Almighty, Wise.", "verses": [{ "surah": 2, "from": 260, "to": 260 }], "evidence": "quran" }
+      "verses": [
+        {
+          "surah": 2,
+          "from": 260,
+          "to": 260
+        }
       ],
-      "summary_md": "Ibrahim asked his Lord to show how He gives life to the dead [c1]. He said he believed, and asked only so that his heart would be at ease [c2]. Allah gave him a command about four birds and a mountain, and a promise that they would come to him hastening [c3].",
-      "body_md": "Ibrahim said “My Lord, show me how You give life to the dead” [c1]. Allah asked “Do you not believe?” and Ibrahim said “Yes, but so that my heart may be at ease” [c2]. Allah told him to take four of the birds and draw them to himself, then place a portion of them on every mountain, then call them, and they would come to him hastening; and to know that Allah is Almighty, Wise [c3].",
-      "deep_md": "The ayah has a question [c1], a gentle reply from Allah that Ibrahim answers with a statement of his belief [c2], and then an instruction [c3]. The ayah gives the instruction and the promise; it does not narrate Ibrahim carrying it out or what he saw. The preceding ayah, 2:259, tells of another person, not named, who passed by a ruined town; it is not part of this chapter.",
-      "kids_md": "Ibrahim asked Allah to show him how Allah gives life to the dead. He said he believed, but he wanted his heart to be at ease [c1][c2]. Allah told him to take four birds and then call them. Allah promised that they would come to him [c3].",
-      "lessons_md": "Educational interpretation, not scripture: the ayah shows that a believer can ask a sincere question and be answered gently, and that wanting more reassurance is distinguished from a lack of belief [c2].",
-      "unknowns_md": "Not established: which birds, which mountains or how many, how Ibrahim carried out the command, and what the ayah's word fa-surhunna means exactly (interpreters discuss whether it means draw them to himself or cut them up; this draft keeps the Arabic word). The ayah does not narrate the outcome. Hadith to add later: any report on this ayah."
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ibrahim said “My Lord, show me how You give life to the dead.”",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 260,
+              "to": 260
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God asked “Do you not believe?” and he said “Yes, but so that my heart may be at ease.”",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 260,
+              "to": 260
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God told him to take four of the birds and draw them to himself (the word fa-surhunna), then place a portion of them on every mountain, then call them, and they would come to him hastening; and to know that God is Almighty, Wise.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 260,
+              "to": 260
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Ibrahim asked his Lord to show how He gives life to the dead [c1]. He said he believed, and asked only so that his heart would be at ease [c2]. God gave him a command about four birds and a mountain, and a promise that they would come to him hastening [c3].",
+      "body_md": "Ibrahim said “My Lord, show me how You give life to the dead” [c1]. God asked “Do you not believe”? and Ibrahim said “Yes, but so that my heart may be at ease” [c2]. God told him to take four of the birds and draw them to himself, then place a portion of them on every mountain, then call them, and they would come to him hastening; and to know that God is Almighty, Wise [c3].",
+      "deep_md": "The ayah has a question [c1], a reply from God that Ibrahim answers with a statement of belief [c2], and an instruction with a promise [c3]. It gives the instruction and the promise and does not narrate Ibrahim carrying it out [c3].",
+      "kids_md": "Ibrahim asked God to show him how God gives life to the dead [c1]. He said he believed, but he wanted his heart to be at ease [c2]. God told him to take four birds and then call them, and promised that they would come to him [c3].",
+      "lessons_md": "Educational interpretation (not scripture): the ayah shows that a believer can ask a sincere question and be answered gently, and that wanting more reassurance is distinguished from a lack of belief [c2].",
+      "unknowns_md": "Not established: which birds, which mountains or how many, how Ibrahim carried out the command, and what the Arabic word fa-surhunna means exactly, since interpreters discuss whether it means to draw them to himself or to cut them up. The ayah does not narrate the outcome. The preceding ayah, 2:259, concerns another unnamed person and is not part of this chapter."
     },
     {
       "anchor": "the-guests-and-the-glad-tidings",
@@ -201,32 +897,198 @@
       "title_en": "The guests and the glad tidings",
       "event_slug": "ibrahims-guests",
       "verses": [
-        { "surah": 11, "from": 69, "to": 76 },
-        { "surah": 15, "from": 51, "to": 60 },
-        { "surah": 51, "from": 24, "to": 37 }
+        {
+          "surah": 11,
+          "from": 69,
+          "to": 76
+        },
+        {
+          "surah": 15,
+          "from": 51,
+          "to": 60
+        },
+        {
+          "surah": 51,
+          "from": 24,
+          "to": 37
+        }
       ],
       "claims": [
-        { "id": "c1", "statement_en": "Messengers of Allah came to Ibrahim with glad tidings, said “Peace”, he said “Peace”, and he soon brought a roasted calf.", "verses": [{ "surah": 11, "from": 69, "to": 69 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "When he saw that their hands did not reach toward it, he found them strange and felt fear of them; they said “Do not fear; we have been sent to the people of Lut.”", "verses": [{ "surah": 11, "from": 70, "to": 70 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "His wife was standing and laughed; they gave her glad tidings of Ishaq and, after Ishaq, of Yaqub.", "verses": [{ "surah": 11, "from": 71, "to": 71 }], "evidence": "quran" },
-        { "id": "c4", "statement_en": "She said “Woe to me! Shall I bear a child while I am old and this my husband is an old man? This is a strange thing.” They said “Do you wonder at the command of Allah? The mercy of Allah and His blessings be upon you, people of the house. He is Praiseworthy, Glorious.”", "verses": [{ "surah": 11, "from": 72, "to": 73 }], "evidence": "quran" },
-        { "id": "c5", "statement_en": "When the fear left Ibrahim and the glad tidings reached him, he began to plead with Allah concerning the people of Lut; Allah describes Ibrahim as forbearing, tender-hearted and turning back.", "verses": [{ "surah": 11, "from": 74, "to": 75 }], "evidence": "quran" },
-        { "id": "c6", "statement_en": "It was said to him “Ibrahim, turn away from this. The command of your Lord has come, and a punishment that cannot be turned back is coming to them.”", "verses": [{ "surah": 11, "from": 76, "to": 76 }], "evidence": "quran" },
-        { "id": "c7", "statement_en": "In Surah Al-Hijr, guests entered upon him and said “Peace”; he said “We are afraid of you.” They said “Do not be afraid; we give you glad tidings of a knowledgeable boy.”", "verses": [{ "surah": 15, "from": 51, "to": 53 }], "evidence": "quran" },
-        { "id": "c8", "statement_en": "He said “Do you give me glad tidings though old age has touched me? What are you giving glad tidings of?” They said “We gave you glad tidings in truth, so do not be among the despairing”, and he said “Who despairs of the mercy of his Lord except those who are astray?”", "verses": [{ "surah": 15, "from": 54, "to": 56 }], "evidence": "quran" },
-        { "id": "c9", "statement_en": "He asked “What is your business, messengers?” They said they were sent to a criminal people, except the family of Lut, all of whom they would save, except his wife, who was decreed to be among those who remain behind.", "verses": [{ "surah": 15, "from": 57, "to": 60 }], "evidence": "quran" },
-        { "id": "c10", "statement_en": "In Surah Adh-Dhariyat, Allah asks whether the story of the honoured guests of Ibrahim has reached the listener; they entered, said “Peace”, he said “Peace, a people unfamiliar”, and he slipped away to his family and returned with a fat calf.", "verses": [{ "surah": 51, "from": 24, "to": 26 }], "evidence": "quran" },
-        { "id": "c11", "statement_en": "He placed it near them and said “Will you not eat?”, then felt fear of them; they said “Do not fear” and gave him glad tidings of a knowledgeable boy.", "verses": [{ "surah": 51, "from": 27, "to": 28 }], "evidence": "quran" },
-        { "id": "c12", "statement_en": "His wife came forward in a cry, struck her face and said “An old barren woman!”; they said “So said your Lord; He is the Wise, the Knowing.”", "verses": [{ "surah": 51, "from": 29, "to": 30 }], "evidence": "quran" },
-        { "id": "c13", "statement_en": "He asked “What is your business, messengers?” They said they were sent to a criminal people to send down upon them stones of clay, marked by your Lord for the transgressors.", "verses": [{ "surah": 51, "from": 31, "to": 34 }], "evidence": "quran" },
-        { "id": "c14", "statement_en": "Allah brought out those who believed in it, found in it only one house of Muslims, and left in it a sign for those who fear the painful punishment.", "verses": [{ "surah": 51, "from": 35, "to": 37 }], "evidence": "quran" }
+        {
+          "id": "c1",
+          "statement_en": "Messengers of God came to Ibrahim with glad tidings, said “Peace”, he said “Peace”, and he soon brought a roasted calf.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 69,
+              "to": 69
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When he saw that their hands did not reach toward it, he found them strange and felt fear of them; they said “Do not fear; we have been sent to the people of Lut.”",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "His wife was standing and laughed; they gave her glad tidings of Ishaq and, after Ishaq, of Yaqub.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 71,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "She said “Woe to me! Shall I bear a child while I am old and this my husband is an old man? This is a strange thing.” they said “Do you wonder at the command of God? The mercy of God and His blessings be upon you, people of the house. He is Praiseworthy, Glorious.”",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 72,
+              "to": 73
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "When the fear left Ibrahim and the glad tidings reached him, he began to plead with God concerning the people of Lut; God describes Ibrahim as forbearing, tender-hearted and turning back.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 74,
+              "to": 75
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "He was told “Ibrahim, turn away from this. The command of your Lord has come, and a punishment that cannot be turned back is coming to them.”",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 76,
+              "to": 76
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "In another passage, guests entered upon him and said “Peace”; he said “We are afraid of you.” they said “Do not be afraid; we give you glad tidings of a knowledgeable boy.”",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 51,
+              "to": 53
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "He said “Do you give me glad tidings though old age has touched me? What are you giving glad tidings of?” they said “We gave you glad tidings in truth, so do not be among the despairing”, and he said “Who despairs of the mercy of his Lord except those who are astray?”",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 54,
+              "to": 56
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "He asked “What is your business, messengers?” they said they were sent to a criminal people, except the family of Lut, all of whom they would save, except his wife, who was decreed to be among those who remain behind.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 57,
+              "to": 60
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "In another passage, God asks whether the story of the honoured guests of Ibrahim has reached the listener; they entered, said “Peace”, he said “Peace, a people unfamiliar”, and he slipped away to his family and returned with a fat calf.",
+          "verses": [
+            {
+              "surah": 51,
+              "from": 24,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "He placed it near them and said “Will you not eat?”, then felt fear of them; they said “Do not fear” and gave him glad tidings of a knowledgeable boy.",
+          "verses": [
+            {
+              "surah": 51,
+              "from": 27,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "His wife came forward in a cry, struck her face and said “An old barren woman!”; they said “So said your Lord; he is the Wise, the Knowing.”",
+          "verses": [
+            {
+              "surah": 51,
+              "from": 29,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "He asked “What is your business, messengers?” they said they were sent to a criminal people to send down upon them stones of clay, marked by your Lord for the transgressors.",
+          "verses": [
+            {
+              "surah": 51,
+              "from": 31,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "God brought out those who believed in it, found in it only one house of Muslims, and left in it a sign for those who fear the painful punishment.",
+          "verses": [
+            {
+              "surah": 51,
+              "from": 35,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        }
       ],
       "summary_md": "Messengers came to Ibrahim with peace and glad tidings [c1][c7][c10]. He brought them a calf [c1][c10]. They told him of a son to come [c3][c7][c11] and of their mission to the people of Lut [c2][c9][c13]. He pleaded about Lut's people and was told the command had come [c5][c6].",
-      "body_md": "Three surahs tell of Ibrahim's guests. In Surah Hud, messengers came to him with glad tidings and said “Peace”, he said “Peace”, and soon brought a roasted calf [c1]. Seeing their hands did not reach toward it, he felt fear, and they told him they were sent to the people of Lut [c2]. His wife, standing, laughed, and was given glad tidings of Ishaq and after him Yaqub [c3]. She said it was strange that she would bear while old and her husband an old man; they answered “Do you wonder at the command of Allah?” [c4]. When the fear left Ibrahim and the glad tidings came, he began to plead about the people of Lut, and Allah describes him as forbearing, tender-hearted and turning back [c5]. He was told to turn away, for the command had come and a punishment that cannot be turned back was coming to them [c6].\n\nIn Surah Al-Hijr the guests said “Peace” and he said “We are afraid of you”; they gave glad tidings of a knowledgeable boy [c7]. He asked how, given old age, and they said they spoke the truth and he should not despair; he said only the astray despair of the mercy of their Lord [c8]. They said they were sent to a criminal people, except the family of Lut, all of whom they would save, except his wife [c9].\n\nIn Surah Adh-Dhariyat the guests are called honoured; he greeted them as a people unfamiliar, slipped away to his family and brought a fat calf [c10], set it near them, and asked if they would not eat; he felt fear, and they gave glad tidings of a knowledgeable boy [c11]. His wife came forward in a cry, struck her face and said “An old barren woman!” [c12]. They said they were sent to a criminal people to send down stones of clay [c13]. Allah brought out the believers there, found only one house of Muslims, and left a sign [c14].",
-      "deep_md": "The three accounts agree on peace, the calf, fear, glad tidings of a son, and a mission to the people of Lut [c1][c2][c7][c9][c10][c11][c13]. They differ in what each adds: Hud names Ishaq and Yaqub [c3] and has Ibrahim plead for Lut's people [c5][c6]; Al-Hijr includes Ibrahim's reply about despair [c8] and the exception of Lut's wife [c9]; Adh-Dhariyat gives the stones of clay and the one house of Muslims [c13][c14]. The accounts are complementary; the text does not say that they are separate visits, and a reviewer should not assume that either. The name Ishaq is given only in Hud [c3]; whether the knowledgeable boy in Al-Hijr and Adh-Dhariyat [c7][c11] is that same child is a matter for scholarly interpretation.",
-      "kids_md": "Visitors came to Ibrahim and said “Peace”. He brought them a calf [c1][c10]. They were messengers, and they brought good news that Ibrahim would have a son [c3][c7]. They also said they were sent to the people of Lut [c2]. Ibrahim worried about Lut's people and asked about them [c5].",
-      "lessons_md": "Educational interpretation, not scripture: the passage shows how Ibrahim welcomed guests, with a greeting and a meal [c1][c10], and how he was moved by concern for others even after his own good news [c5].",
-      "unknowns_md": "Not established in the ayat: the names of the guests, their number, the place, and the wife's name. Whether the guests are angels is not stated in the wording of these ayat (they are called messengers, rusul); the identification and the names given to them are Named in later tradition, not in the Quranic text. The wife's name is likewise Named in later tradition, not in the Quranic text. Ages and years are not given. Hadith to add later: reports on this story and on what is said of the guests."
+      "body_md": "In another passage, messengers came to him with glad tidings and said “Peace”, he said “Peace”, and soon brought a roasted calf [c1]. Seeing their hands did not reach toward it, he felt fear, and they told him they were sent to the people of Lut [c2]. His wife, standing, laughed, and was given glad tidings of Ishaq and after him Yaqub [c3]. She said it was strange that she would bear while old and her husband an old man; they answered “Do you wonder at the command of God”? [c4]. When the fear left Ibrahim and the glad tidings came, he began to plead about the people of Lut, and God describes him as forbearing, tender-hearted and turning back [c5]. He was told to turn away, for the command had come and a punishment that cannot be turned back was coming to them [c6].\n\nIn another passage, the guests said “Peace” and he said “We are afraid of you”; they gave glad tidings of a knowledgeable boy [c7]. He asked how, given old age, and they said they spoke the truth and he should not despair; he said only the astray despair of the mercy of their Lord [c8]. They said they were sent to a criminal people, except the family of Lut, all of whom they would save, except his wife [c9].\n\nIn another passage, the guests are called honoured; he greeted them as a people unfamiliar, slipped away to his family and brought a fat calf [c10], set it near them, and asked if they would not eat; he felt fear, and they gave glad tidings of a knowledgeable boy [c11]. His wife came forward in a cry, struck her face and said “An old barren woman”! [c12]. They said they were sent to a criminal people to send down stones of clay [c13]. God brought out the believers there, found only one house of Muslims, and left a sign [c14].",
+      "deep_md": "The accounts agree on peace, the calf, fear, glad tidings of a son and a mission to the people of Lut [c1][c2][c7][c9][c10][c11][c13]. One names Ishaq and Yaqub [c3] and has Ibrahim plead for Lut's people [c5][c6]; another has his reply about despair [c8] and the exception of Lut's wife [c9]; another has the stones of clay and the one house of Muslims [c13][c14].",
+      "kids_md": "Visitors came to Ibrahim and said “Peace” [c1]. He brought them a calf [c1][c10]. They were messengers, and they brought good news that Ibrahim would have a son [c3][c7]. They also said they were sent to the people of Lut [c2]. Ibrahim worried about Lut's people and asked about them [c5].",
+      "lessons_md": "Educational interpretation (not scripture): the passage shows how Ibrahim welcomed guests, with a greeting and a meal [c1][c10], and how he was moved by concern for others even after his own good news [c5].",
+      "unknowns_md": "Not established in the ayat: the names of the guests, their number, the place and the wife's name. Whether the guests are angels is not stated in the wording of these ayat, which call them messengers, rusul. Named in later tradition, not in the Quranic text: the identification and names given to the guests and the wife's name. No ages or years are given."
     },
     {
       "anchor": "emigration-and-the-gifts",
@@ -234,20 +1096,72 @@
       "title_en": "Emigration and the gifts",
       "event_slug": null,
       "verses": [
-        { "surah": 21, "from": 72, "to": 73 },
-        { "surah": 29, "from": 26, "to": 27 }
+        {
+          "surah": 21,
+          "from": 72,
+          "to": 73
+        },
+        {
+          "surah": 29,
+          "from": 26,
+          "to": 27
+        }
       ],
       "claims": [
-        { "id": "c1", "statement_en": "Lut believed him; then a speaker said “I am emigrating to my Lord; He is the Almighty, the Wise.”", "verses": [{ "surah": 29, "from": 26, "to": 26 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "Allah granted him Ishaq and Yaqub, placed prophethood and the Book among his offspring, gave him his reward in this world, and he is among the righteous in the Hereafter.", "verses": [{ "surah": 29, "from": 27, "to": 27 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "Allah granted him Ishaq and Yaqub as an additional gift and made each of them righteous.", "verses": [{ "surah": 21, "from": 72, "to": 72 }], "evidence": "quran" },
-        { "id": "c4", "statement_en": "Allah made them leaders who guide by His command, inspired them to do good deeds, to establish prayer and give zakat, and they were worshippers of Him.", "verses": [{ "surah": 21, "from": 73, "to": 73 }], "evidence": "quran" }
+        {
+          "id": "c1",
+          "statement_en": "Lut believed him; then a speaker said “I am emigrating to my Lord; he is the Almighty, the Wise.”",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God granted him Ishaq and Yaqub, placed prophethood and the Book among his offspring, gave him his reward in this world, and he is among the righteous in the Hereafter.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God granted him Ishaq and Yaqub as an additional gift and made each of them righteous.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 72,
+              "to": 72
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God made them leaders who guide by His command, inspired them to do good deeds, to establish prayer and give zakat, and they were worshippers of Him.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 73,
+              "to": 73
+            }
+          ],
+          "evidence": "quran"
+        }
       ],
-      "summary_md": "Lut believed him [c1]. A speaker says “I am emigrating to my Lord” [c1]. Allah granted him Ishaq and Yaqub [c2][c3], placed prophethood and the Book in his offspring [c2], and made Ishaq and Yaqub leaders who guide by His command [c4].",
-      "body_md": "In Surah Al-Ankabut, Lut believed him, and a speaker says “I am emigrating to my Lord; He is the Almighty, the Wise” [c1]. Allah granted him Ishaq and Yaqub, placed prophethood and the Book among his offspring, gave him his reward in the world, and he is among the righteous in the Hereafter [c2]. Surah Al-Anbiya adds that Ishaq and Yaqub were an additional gift and each was made righteous [c3], made leaders who guide by Allah's command, inspired to do good, to establish prayer and give zakat, and they were worshippers [c4].",
-      "deep_md": "The two passages join in the gift of Ishaq and Yaqub [c2][c3] and in their role after him [c2][c4]. The Ankabut passage states the lasting effect on the line that follows: prophethood and the Book are placed among his offspring [c2].",
-      "kids_md": "Lut believed in Ibrahim. Someone said, “I am going to my Lord” [c1]. Allah gave Ibrahim Ishaq and Yaqub, and made them good leaders who guide people [c3][c4].",
-      "lessons_md": "Educational interpretation, not scripture: the ayat tie leaving one's setting for the sake of one's Lord [c1] to the blessings that follow [c2]. This is a reflection and not a rule.",
+      "summary_md": "Lut believed him [c1]. A speaker says “I am emigrating to my Lord” [c1]. God granted him Ishaq and Yaqub [c2][c3], placed prophethood and the Book in his offspring [c2], and made Ishaq and Yaqub leaders who guide by His command [c4].",
+      "body_md": "In another passage, Lut believed him, and a speaker says “I am emigrating to my Lord; He is the Almighty, the Wise” [c1]. God granted him Ishaq and Yaqub, placed prophethood and the Book among his offspring, gave him his reward in the world, and he is among the righteous in the Hereafter [c2]. Another passage adds that Ishaq and Yaqub were an additional gift and each was made righteous [c3], made leaders who guide by God's command, inspired to do good, to establish prayer and give zakat, and they were worshippers [c4].",
+      "deep_md": "These passages join in the gift of Ishaq and Yaqub [c2][c3] and in their role after him [c2][c4]. One states the lasting effect: prophethood and the Book are placed among his offspring [c2].",
+      "kids_md": "Lut believed him [c1]. A speaker said that he was emigrating to his Lord [c1]. God gave Ishaq and Yaqub, and made them good leaders who guide people [c3][c4].",
+      "lessons_md": "Educational interpretation (not scripture): the ayat tie leaving one's setting for the sake of one's Lord [c1] to the blessings that follow [c2].",
       "unknowns_md": "Not established: who is the speaker in 29:26 (many read it as Ibrahim, some as Lut; the grammar leaves it open and this draft does not decide), where the emigration began and ended, when it happened, and which land is meant (21:71 in the chapter on the fire says only 'the land which We blessed'). Named in later tradition, not in the Quranic text: the names of the places of departure and arrival."
     },
     {
@@ -256,24 +1170,109 @@
       "title_en": "Supplication for the land",
       "event_slug": null,
       "verses": [
-        { "surah": 14, "from": 35, "to": 41 },
-        { "surah": 2, "from": 126, "to": 126 }
+        {
+          "surah": 14,
+          "from": 35,
+          "to": 41
+        },
+        {
+          "surah": 2,
+          "from": 126,
+          "to": 126
+        }
       ],
       "claims": [
-        { "id": "c1", "statement_en": "Ibrahim prayed “My Lord, make this land secure, and keep me and my sons away from worshipping idols.”", "verses": [{ "surah": 14, "from": 35, "to": 35 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "He said the idols have led many people astray, that whoever follows him is of him, and that whoever disobeys him, Allah is Forgiving, Merciful.", "verses": [{ "surah": 14, "from": 36, "to": 36 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "He said “Our Lord, I have settled some of my offspring in a valley with no crops near Your Sacred House, our Lord, so that they may establish prayer; so make the hearts of some people incline toward them and provide them with fruits that they may be grateful.”", "verses": [{ "surah": 14, "from": 37, "to": 37 }], "evidence": "quran" },
-        { "id": "c4", "statement_en": "He said “Our Lord, You know what we conceal and what we reveal; nothing is hidden from Allah on earth or in heaven.”", "verses": [{ "surah": 14, "from": 38, "to": 38 }], "evidence": "quran" },
-        { "id": "c5", "statement_en": "He said “Praise be to Allah, who gave me in old age Ismail and Ishaq; my Lord is the Hearer of supplication.”", "verses": [{ "surah": 14, "from": 39, "to": 39 }], "evidence": "quran" },
-        { "id": "c6", "statement_en": "He prayed “My Lord, make me an establisher of prayer, and from my offspring; our Lord, accept my prayer. Our Lord, forgive me and my parents and the believers on the day the reckoning is established.”", "verses": [{ "surah": 14, "from": 40, "to": 41 }], "evidence": "quran" },
-        { "id": "c7", "statement_en": "In Surah Al-Baqarah, he prayed “My Lord, make this a secure land and provide its people with fruits, those of them who believe in Allah and the Last Day”; Allah answered that He would give a little enjoyment even to the one who disbelieved, then drive him to the punishment of the Fire.", "verses": [{ "surah": 2, "from": 126, "to": 126 }], "evidence": "quran" }
+        {
+          "id": "c1",
+          "statement_en": "Ibrahim prayed “My Lord, make this land secure, and keep me and my sons away from worshipping idols.”",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He said the idols have led many people astray, that whoever follows him is of him, and that whoever disobeys him, God is Forgiving, Merciful.",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He said “Our Lord, I have settled some of my offspring in a valley with no crops near Your Sacred House, our Lord, so that they may establish prayer; so make the hearts of some people incline toward them and provide them with fruits that they may be grateful.”",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He said “Our Lord, You know what we conceal and what we reveal; nothing is hidden from God on earth or in heaven.”",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He said “Praise be to God, who gave me in old age Ismail and Ishaq; my Lord is the Hearer of supplication.”",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "He prayed “My Lord, make me an establisher of prayer, and from my offspring; our Lord, accept my prayer. Our Lord, forgive me and my parents and the believers on the day the reckoning is established.”",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 40,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "In another passage, he prayed “My Lord, make this a secure land and provide its people with fruits, those of them who believe in God and the Last Day”; God answered that He would give a little enjoyment even to the one who disbelieved, then drive him to the punishment of the Fire.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 126,
+              "to": 126
+            }
+          ],
+          "evidence": "quran"
+        }
       ],
-      "summary_md": "Ibrahim prayed that “this land” be made secure and that he and his sons be kept from idols [c1]. He said he had settled some of his offspring in a valley with no crops near the Sacred House so that they might establish prayer [c3]. He thanked Allah for Ismail and Ishaq [c5] and prayed for himself, his offspring, his parents and the believers [c6].",
-      "body_md": "Ibrahim prayed “My Lord, make this land secure, and keep me and my sons away from worshipping idols” [c1]. He said idols have led many astray, that whoever follows him is of him, and that, for whoever disobeys him, Allah is Forgiving and Merciful [c2]. He said he had settled some of his offspring in a valley with no crops near Allah's Sacred House so that they might establish prayer, and asked that hearts incline to them and that they be provided with fruits [c3]. He acknowledged that Allah knows what is hidden and what is revealed [c4], and praised Allah for giving him, in old age, Ismail and Ishaq [c5]. He prayed to be an establisher of prayer, and his offspring too, and for forgiveness for himself, his parents and the believers on the day of reckoning [c6].\n\nIn Surah Al-Baqarah he prayed for a secure land and for provision of fruits for those of its people who believe in Allah and the Last Day; Allah's reply speaks of a little enjoyment even for the one who disbelieves, followed by the punishment of the Fire [c7].",
-      "deep_md": "The Ibrahim prayer in Surah Ibrahim [c1]-[c6] and in Surah Al-Baqarah [c7] share two requests: security for the land and provision of fruits [c1][c3][c7]. Only Al-Baqarah has Allah's reply, which widens the provision beyond believers while stating the end of the one who disbelieves [c7]. Only Surah Ibrahim has the thanks for Ismail and Ishaq [c5] and the prayer for his parents [c6].",
-      "kids_md": "Ibrahim asked Allah to make the land safe [c1]. He said he had settled some of his family in a valley with no crops near the Sacred House, so they could pray [c3]. He asked Allah to give them fruits and to make people love them. He thanked Allah for his sons Ismail and Ishaq [c5].",
-      "lessons_md": "Educational interpretation, not scripture: this is a prayer for safety, provision, and prayer itself; it joins care for one's family with a request for the wider community [c1][c3][c6].",
-      "unknowns_md": "Not established in the ayat: the name of the land (the ayat say 'this land' and 'a valley with no crops'; Named in later tradition, not in the Quranic text: Makkah), the names of the family members he settled there, when this was, and how the settling happened. The prayer for his parents [c6] stands next to ayat where he separates from his father (60:4, and 9:114 in the Azar record); this needs a scholarly note. Hadith to add later: reports on the settling of the family and on the place."
+      "summary_md": "Ibrahim prayed that “this land” be made secure and that he and his sons be kept from idols [c1]. He said he had settled some of his offspring in a valley with no crops near the Sacred House so that they might establish prayer [c3]. He thanked God for Ismail and Ishaq [c5] and prayed for himself, his offspring, his parents and the believers [c6].",
+      "body_md": "Ibrahim prayed “My Lord, make this land secure, and keep me and my sons away from worshipping idols” [c1]. He said idols have led many astray, that whoever follows him is of him, and that, for whoever disobeys him, God is Forgiving and Merciful [c2]. He said he had settled some of his offspring in a valley with no crops near God's Sacred House so that they might establish prayer, and asked that hearts incline to them and that they be provided with fruits [c3]. He acknowledged that God knows what is hidden and what is revealed [c4], and praised God for giving him, in old age, Ismail and Ishaq [c5]. He prayed to be an establisher of prayer, and his offspring too, and for forgiveness for himself, his parents and the believers on the day of reckoning [c6].\n\nIn another passage, he prayed for a secure land and for provision of fruits for those of its people who believe in God and the Last Day; God's reply speaks of a little enjoyment even for the one who disbelieves, followed by the punishment of the Fire [c7].",
+      "deep_md": "This prayer and another prayer share these requests: security for the land and provision of fruits [c1][c3][c7]. Only the other has God's reply, which widens the provision beyond believers while stating the end of the one who disbelieves [c7]. Only this one has the thanks for Ismail and Ishaq [c5] and the prayer for his parents [c6].",
+      "kids_md": "Ibrahim asked God to make the land safe [c1]. He said he had settled some of his family in a valley with no crops near the Sacred House, so they could pray [c3]. He asked God to give them fruits and to make the hearts of some people incline to them [c3]. He thanked God for his sons Ismail and Ishaq [c5].",
+      "lessons_md": "Educational interpretation (not scripture): this is a prayer for safety, provision, and prayer itself; it joins care for one's family with a request for the wider community [c1][c3][c6].",
+      "unknowns_md": "Not established in the ayat: the names of the family members he settled there, when this was, and how the settling happened. The ayat say this land and a valley with no crops; Named in later tradition, not in the Quranic text: Makkah. The prayer for his parents stands next to passages where he separates from his father; this needs a scholarly note."
     },
     {
       "anchor": "raising-the-house",
@@ -281,78 +1280,321 @@
       "title_en": "Raising the House with Ismail",
       "event_slug": null,
       "verses": [
-        { "surah": 2, "from": 124, "to": 125 },
-        { "surah": 2, "from": 127, "to": 129 },
-        { "surah": 22, "from": 26, "to": 29 }
+        {
+          "surah": 2,
+          "from": 124,
+          "to": 125
+        },
+        {
+          "surah": 2,
+          "from": 127,
+          "to": 129
+        },
+        {
+          "surah": 22,
+          "from": 26,
+          "to": 29
+        }
       ],
       "claims": [
-        { "id": "c1", "statement_en": "His Lord tested Ibrahim with words and he fulfilled them; Allah said “I will make you a leader for the people.” He asked “And from my offspring?” and Allah said “My covenant does not reach the wrongdoers.”", "verses": [{ "surah": 2, "from": 124, "to": 124 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "Allah made the House a place of return and a place of safety for the people, told them to take the standing place of Ibrahim as a place of prayer, and charged Ibrahim and Ismail to purify His House for those who circle, those who stay, and those who bow and prostrate.", "verses": [{ "surah": 2, "from": 125, "to": 125 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "Ibrahim, with Ismail, raised the foundations of the House, saying “Our Lord, accept from us; You are the Hearing, the Knowing.”", "verses": [{ "surah": 2, "from": 127, "to": 127 }], "evidence": "quran" },
-        { "id": "c4", "statement_en": "They prayed “Our Lord, make us submissive to You, and from our offspring a community submissive to You, show us our rites, and accept our repentance; You are the Accepting of repentance, the Merciful.”", "verses": [{ "surah": 2, "from": 128, "to": 128 }], "evidence": "quran" },
-        { "id": "c5", "statement_en": "They prayed “Our Lord, send among them a messenger from among them, who will recite to them Your verses, teach them the Book and wisdom, and purify them; You are the Almighty, the Wise.”", "verses": [{ "surah": 2, "from": 129, "to": 129 }], "evidence": "quran" },
-        { "id": "c6", "statement_en": "Allah settled the place of the House for Ibrahim, saying not to associate anything with Him and to purify His House for those who circle, stand, bow and prostrate.", "verses": [{ "surah": 22, "from": 26, "to": 26 }], "evidence": "quran" },
-        { "id": "c7", "statement_en": "Ibrahim was told to proclaim the pilgrimage to the people; they would come to him on foot and on every lean mount, from every deep pass.", "verses": [{ "surah": 22, "from": 27, "to": 27 }], "evidence": "quran" },
-        { "id": "c8", "statement_en": "The passage goes on to speak of the pilgrims: that they may witness benefits for themselves, mention Allah's name on known days over the livestock He provided, eat from them and feed the needy poor, then complete their rites, fulfil their vows and circle the Ancient House.", "verses": [{ "surah": 22, "from": 28, "to": 29 }], "evidence": "quran" }
+        {
+          "id": "c1",
+          "statement_en": "His Lord tested Ibrahim with words and he fulfilled them; God said “I will make you a leader for the people.” he asked “And from my offspring?” and God said “My covenant does not reach the wrongdoers.”",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 124,
+              "to": 124
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God made the House a place of return and a place of safety for the people, told them to take the standing place of Ibrahim as a place of prayer, and charged Ibrahim and Ismail to purify His House for those who circle, those who stay, and those who bow and prostrate.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 125,
+              "to": 125
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Ibrahim, with Ismail, raised the foundations of the House, and said “Our Lord, accept from us; You are the Hearing, the Knowing.”",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 127,
+              "to": 127
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They prayed “Our Lord, make us submissive to You, and from our offspring a community submissive to You, show us our rites, and accept our repentance; You are the Accepting of repentance, the Merciful.”",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 128,
+              "to": 128
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They prayed “Our Lord, send among them a messenger from among them, who will recite to them Your verses, teach them the Book and wisdom, and purify them; You are the Almighty, the Wise.”",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 129,
+              "to": 129
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God settled the place of the House for Ibrahim, saying not to associate anything with Him and to purify His House for those who circle, stand, bow and prostrate.",
+          "verses": [
+            {
+              "surah": 22,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Ibrahim was told to proclaim the pilgrimage to the people; they would come to him on foot and on every lean mount, from every deep pass.",
+          "verses": [
+            {
+              "surah": 22,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "The passage goes on to speak of the pilgrims: that they may witness benefits for themselves, mention God's name on known days over the livestock He provided, eat from them and feed the needy poor, then complete their rites, fulfil their vows and circle the Ancient House.",
+          "verses": [
+            {
+              "surah": 22,
+              "from": 28,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        }
       ],
-      "summary_md": "Allah tested Ibrahim with words and made him a leader for the people [c1]. Ibrahim and Ismail raised the foundations of the House [c3] and prayed for a community and a messenger from among their offspring [c4][c5]. Allah told Ibrahim to purify the House [c2][c6] and to proclaim the pilgrimage [c7].",
-      "body_md": "Allah tested Ibrahim with words and he fulfilled them. Allah said He would make him a leader for the people; Ibrahim asked about his offspring, and Allah said His covenant does not reach the wrongdoers [c1]. Allah made the House a place of return and safety, told the people to take the standing place of Ibrahim as a place of prayer, and charged Ibrahim and Ismail to purify the House for those who circle, those who stay and those who bow and prostrate [c2]. Surah Al-Hajj says that Allah settled the place of the House for Ibrahim, with the same charge to purify it and not to associate anything with Him [c6].\n\nIbrahim, with Ismail, raised the foundations of the House, saying “Our Lord, accept from us” [c3]. They prayed to be made submissive, for a submissive community from their offspring, to be shown their rites, and for acceptance of repentance [c4]. They prayed for a messenger from among them who would recite Allah's verses, teach the Book and wisdom, and purify them [c5].\n\nIbrahim was told to proclaim the pilgrimage to the people, who would come on foot and on every lean mount from every deep pass [c7]. The ayat go on to describe the benefits, the mention of Allah's name over livestock, the feeding of the needy, the completing of rites and vows and the circling of the Ancient House [c8].",
-      "deep_md": "Two lines run through the passage. The first is a charge and a prayer: Ibrahim and Ismail are charged to purify the House [c2][c6], and they pray as they raise it [c3][c4][c5]. The second is the future of the place: Allah says it is a place of return and safety [c2] and says that people will come from every deep pass [c7]. The prayer for “a messenger from among them” [c5] is stated here as part of their prayer. The ayat do not name that messenger here; whether and how this is read in relation to the Prophet Muhammad is a matter that the chapter on Muhammad treats from other ayat, and the draft here does not claim it.",
-      "kids_md": "Ibrahim and Ismail built the House together [c3]. They asked Allah to accept it from them [c3]. Allah told Ibrahim to keep His House clean for people who come to pray [c2][c6]. Allah told Ibrahim to call the people to the pilgrimage, and they would come from far away [c7].",
-      "lessons_md": "Educational interpretation, not scripture: the ayat show a father and son working together on something and praying while they work, asking that Allah accept it from them [c3]. The wish for a community and a teacher for those who come after them [c4][c5] invites a reader to think about what they would leave for later generations.",
-      "unknowns_md": "Not established in these ayat: the House is called 'the House' and 'the Ancient House'; the name Kaaba and the city name are Named in later tradition, not in the Quranic text (and not used in this draft). Ismail is named as working with Ibrahim [c3] but these ayat do not state his relation to Ibrahim; 14:39 (see the chapter on the supplication) names Ismail as given to him. The 'words' with which Ibrahim was tested [c1] are not listed. How the building was done, the materials, the standing place, and how the call to pilgrimage was made and heard are not described. Hadith to add later: the reports on the building, the standing place, and the proclamation."
+      "summary_md": "God tested Ibrahim with words and made him a leader for the people [c1]. Ibrahim and Ismail raised the foundations of the House [c3] and prayed for a community and a messenger from among their offspring [c4][c5]. God told Ibrahim to purify the House [c2][c6] and to proclaim the pilgrimage [c7].",
+      "body_md": "God tested Ibrahim with words and he fulfilled them [c1]. God said He would make him a leader for the people; Ibrahim asked about his offspring, and God said His covenant does not reach the wrongdoers [c1]. God made the House a place of return and safety, told the people to take the standing place of Ibrahim as a place of prayer, and charged Ibrahim and Ismail to purify the House for those who circle, those who stay and those who bow and prostrate [c2]. Another passage says that God settled the place of the House for Ibrahim, with the same charge to purify it and not to associate anything with Him [c6].\n\nIbrahim, with Ismail, raised the foundations of the House, saying “Our Lord, accept from us” [c3]. They prayed to be made submissive, for a submissive community from their offspring, to be shown their rites, and for acceptance of repentance [c4]. They prayed for a messenger from among them who would recite God's verses, teach the Book and wisdom, and purify them [c5].\n\nIbrahim was told to proclaim the pilgrimage to the people, who would come on foot and on every lean mount from every deep pass [c7]. The ayat go on to describe the benefits, the mention of God's name over livestock, the feeding of the needy, the completing of rites and vows and the circling of the Ancient House [c8].",
+      "deep_md": "Ibrahim and Ismail are charged to purify the House [c2][c6], and they pray as they raise it [c3][c4][c5]. God says the House is a place of return and safety [c2] and that people will come from every deep pass [c7].",
+      "kids_md": "Ibrahim and Ismail built the House together [c3]. They asked God to accept it from them [c3]. God told Ibrahim to keep His House clean for people who come to pray [c2][c6]. God told Ibrahim to call the people to the pilgrimage, and they would come from every deep pass [c7].",
+      "lessons_md": "Educational interpretation (not scripture): the ayat show a father and son working together on something and praying while they work, asking that God accept it from them [c3]. The wish for a community and a teacher for those who come after them [c4][c5] invites a reader to think about what they would leave for later generations.",
+      "unknowns_md": "Not established in these ayat: the House is called 'the House' and 'the Ancient House'; the name Kaaba and the city name are Named in later tradition, not in the Quranic text (and not used in this draft). Ismail is named as working with Ibrahim but these ayat do not state his relation to Ibrahim; 14:39 (see the chapter on the supplication) names Ismail as given to him. The 'words' with which Ibrahim was tested are not listed. How the building was done, the materials, the standing place, and how the call to pilgrimage was made and heard are not described."
     },
     {
       "anchor": "the-vision-of-the-sacrifice",
       "position": 13,
       "title_en": "The vision of the sacrifice",
       "event_slug": "vision-of-the-sacrifice",
-      "verses": [{ "surah": 37, "from": 99, "to": 113 }],
-      "claims": [
-        { "id": "c1", "statement_en": "Ibrahim said “I am going to my Lord; He will guide me” and prayed “My Lord, grant me one of the righteous.”", "verses": [{ "surah": 37, "from": 99, "to": 100 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "Allah gave him glad tidings of a forbearing boy.", "verses": [{ "surah": 37, "from": 101, "to": 101 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "When the boy reached the stage of working with him, Ibrahim said “My son, I see in a dream that I am slaughtering you, so look at what you think”; he said “My father, do what you are commanded; you will find me, if Allah wills, among the steadfast.”", "verses": [{ "surah": 37, "from": 102, "to": 102 }], "evidence": "quran" },
-        { "id": "c4", "statement_en": "When both had submitted and he had laid him down on his brow, Allah called to him: “Ibrahim, you have fulfilled the vision; thus We reward the doers of good. This was the clear test.”", "verses": [{ "surah": 37, "from": 103, "to": 106 }], "evidence": "quran" },
-        { "id": "c5", "statement_en": "Allah ransomed him with a great sacrifice.", "verses": [{ "surah": 37, "from": 107, "to": 107 }], "evidence": "quran" },
-        { "id": "c6", "statement_en": "Allah left on him a good mention among later generations: “Peace be upon Ibrahim”; thus He rewards the doers of good; he was among His believing servants.", "verses": [{ "surah": 37, "from": 108, "to": 111 }], "evidence": "quran" },
-        { "id": "c7", "statement_en": "Allah gave him glad tidings of Ishaq, a prophet from among the righteous, and blessed him and Ishaq; among their offspring are the good and the one who clearly wrongs himself.", "verses": [{ "surah": 37, "from": 112, "to": 113 }], "evidence": "quran" }
+      "verses": [
+        {
+          "surah": 37,
+          "from": 99,
+          "to": 113
+        }
       ],
-      "summary_md": "Ibrahim prayed for a righteous child and was given glad tidings of a forbearing boy [c1][c2]. He told the boy of a dream in which he was slaughtering him, and the boy answered that he should do as commanded [c3]. When both had submitted, Allah called to Ibrahim that he had fulfilled the vision [c4] and ransomed the boy with a great sacrifice [c5].",
-      "body_md": "Ibrahim said “I am going to my Lord; He will guide me” and prayed “My Lord, grant me one of the righteous” [c1]. Allah gave him glad tidings of a forbearing boy [c2]. When the boy reached the stage of working with him, Ibrahim said “My son, I see in a dream that I am slaughtering you, so look at what you think.” The boy said “My father, do what you are commanded; you will find me, if Allah wills, among the steadfast” [c3]. When both had submitted and he had laid him down on his brow, Allah called to him: “Ibrahim, you have fulfilled the vision; thus We reward the doers of good. This was the clear test” [c4]. Allah ransomed him with a great sacrifice [c5].\n\nAllah left a good mention of Ibrahim among later generations, with “Peace be upon Ibrahim”, and described him as among His believing servants [c6]. He then gave glad tidings of Ishaq, a prophet from among the righteous, blessed him and Ishaq, and said that among their offspring are the good and those who clearly wrong themselves [c7].",
-      "deep_md": "The passage has a fixed order of speech: Ibrahim's prayer [c1], the glad tidings [c2], Ibrahim's words to the boy and the boy's answer [c3], the call from Allah [c4], the ransom [c5], and the closing praise [c6]. The ayat call the command a vision (ru'ya) and the test clear [c3][c4]. The glad tidings of a boy [c2] and of Ishaq [c7] are two separate announcements in the text, one before the vision and one after the ransom. Whether the boy of the vision is the child announced in [c2], and who that boy is, is not stated; see the unknowns.",
-      "kids_md": "Ibrahim wanted a good child, and Allah gave him good news of a patient boy [c1][c2]. One day Ibrahim told his son about a dream and asked what he thought. The son said, “Do what you are commanded” [c3]. Allah called out to Ibrahim and said he had passed the test, and gave a great sacrifice in place of the boy [c4][c5].",
-      "lessons_md": "Educational interpretation, not scripture: the passage shows trust between a father and son, and between both and their Lord, in a very hard test [c3][c4]. The boy's reply puts his patience in the hand of Allah's will [c3]. This is a reflection, and not a command to be copied.",
-      "unknowns_md": "Not established in these ayat: the NAME of the son. The ayat do not name him. Scholars differ on whether he is Ismail or Ishaq; one point raised by those who hold Ismail is that Ishaq is announced separately after the ransom [c7]. This draft does not decide and a scholar must handle it. Also not established: the place, the time, the age of the boy, what the great sacrifice was (the animal is Named in later tradition, not in the Quranic text), and how the ransom was provided. Hadith to add later: the reports on the sacrifice and the rites that are linked to it by tradition."
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ibrahim said “I am going to my Lord; he will guide me” and prayed “My Lord, grant me one of the righteous.”",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 99,
+              "to": 100
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God gave him glad tidings of a forbearing boy.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 101,
+              "to": 101
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When the boy reached the stage of working with him, Ibrahim said “My son, I see in a dream that I am slaughtering you, so look at what you think”; he said “My father, do what you are commanded; you will find me, if God wills, among the steadfast.”",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 102,
+              "to": 102
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "When both had submitted and he had laid him down on his brow, God called to him: “Ibrahim, you have fulfilled the vision; thus We reward the doers of good. This was the clear test.”",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 103,
+              "to": 106
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God ransomed him with a great sacrifice.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 107,
+              "to": 107
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God left on him a good mention among later generations, and said “Peace be upon Ibrahim”; thus He rewards the doers of good; he was among His believing servants.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 108,
+              "to": 111
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God gave him glad tidings of Ishaq, a prophet from among the righteous, and blessed him and Ishaq; among their offspring are the good and the one who clearly wrongs himself.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 112,
+              "to": 113
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Ibrahim prayed for a righteous child and was given glad tidings of a forbearing boy [c1][c2]. He told the boy of a dream in which he was slaughtering him, and the boy answered that he should do as commanded [c3]. When both had submitted, God called to Ibrahim that he had fulfilled the vision [c4] and ransomed the boy with a great sacrifice [c5].",
+      "body_md": "Ibrahim said “I am going to my Lord; He will guide me” and prayed “My Lord, grant me one of the righteous” [c1]. God gave him glad tidings of a forbearing boy [c2]. When the boy reached the stage of working with him, Ibrahim said “My son, I see in a dream that I am slaughtering you, so look at what you think” [c3]. The boy said “My father, do what you are commanded; you will find me, if God wills, among the steadfast” [c3]. When both had submitted and he had laid him down on his brow, God called to him: “Ibrahim, you have fulfilled the vision; thus We reward the doers of good [c4]. This was the clear test” [c4]. God ransomed him with a great sacrifice [c5].\n\nGod left a good mention of Ibrahim among later generations, with “Peace be upon Ibrahim”, and described him as among His believing servants [c6]. He then gave glad tidings of Ishaq, a prophet from among the righteous, blessed him and Ishaq, and said that among their offspring are the good and those who clearly wrong themselves [c7].",
+      "deep_md": "The passage has a fixed order of speech: Ibrahim's prayer [c1], the glad tidings [c2], Ibrahim's words to the boy and the boy's answer [c3], the call from God [c4], the ransom [c5], and the closing praise [c6]. The ayat call the command a vision (ru'ya) and the test clear [c3][c4]. The glad tidings of a boy [c2] and of Ishaq [c7] are a pair of separate announcements in the text, one before the vision and one after the ransom. Whether the boy of the vision is the child announced in [c2], and who that boy is, is not stated; see the unknowns.",
+      "kids_md": "Ibrahim wanted a good child, and God gave him good news of a patient boy [c1][c2]. The son said, “Do what you are commanded” [c3]. God called out to Ibrahim and said he had passed the test, and gave a great sacrifice in place of the boy [c4][c5].",
+      "lessons_md": "Educational interpretation (not scripture): the passage shows trust between a father and son, and between both and their Lord, in a very hard test [c3][c4]. The boy's reply puts his patience in the hand of God's will [c3].",
+      "unknowns_md": "Not established in these ayat: the name of the son, since the ayat do not name him. Named in later tradition, not in the Quranic text: the identification of the son as Ismail or as Ishaq, on which scholars differ; Ishaq is named in these ayat only as announced separately after the ransom. This draft does not decide and a scholar must handle it. Not established either: the place, the time, the age of the boy, what the great sacrifice was and how the ransom was provided."
     },
     {
       "anchor": "a-model-for-believers",
       "position": 14,
       "title_en": "A model for believers",
       "event_slug": null,
-      "verses": [{ "surah": 60, "from": 4, "to": 6 }],
-      "claims": [
-        { "id": "c1", "statement_en": "There is an excellent example in Ibrahim and those with him, when they said to their people “We are free of you and of what you worship besides Allah; we reject you; enmity and hatred have appeared between us forever until you believe in Allah alone.”", "verses": [{ "surah": 60, "from": 4, "to": 4 }], "evidence": "quran" },
-        { "id": "c2", "statement_en": "The exception is Ibrahim's saying to his father “I will ask forgiveness for you, though I have no power to avail you anything against Allah.”", "verses": [{ "surah": 60, "from": 4, "to": 4 }], "evidence": "quran" },
-        { "id": "c3", "statement_en": "They said “Our Lord, in You we put our trust, to You we turn, and to You is the final return.”", "verses": [{ "surah": 60, "from": 4, "to": 4 }], "evidence": "quran" },
-        { "id": "c4", "statement_en": "They said “Our Lord, do not make us a trial for those who disbelieve, and forgive us; You are the Almighty, the Wise.”", "verses": [{ "surah": 60, "from": 5, "to": 5 }], "evidence": "quran" },
-        { "id": "c5", "statement_en": "In them is an excellent example for whoever hopes for Allah and the Last Day; and whoever turns away, Allah is the Self-Sufficient, the Praiseworthy.", "verses": [{ "surah": 60, "from": 6, "to": 6 }], "evidence": "quran" }
+      "verses": [
+        {
+          "surah": 60,
+          "from": 4,
+          "to": 6
+        }
       ],
-      "summary_md": "Surah Al-Mumtahanah holds up Ibrahim and those with him as an excellent example [c1][c5]. They declared themselves free of their people's worship [c1], put their trust in Allah [c3] and prayed not to be made a trial for the disbelievers [c4]. The one exception named is Ibrahim's promise to ask forgiveness for his father [c2].",
-      "body_md": "The ayat say there is an excellent example for believers in Ibrahim and those with him, when they said to their people that they were free of them and of what they worshipped besides Allah, that they rejected them, and that enmity and hatred had appeared between them until they believe in Allah alone [c1]. The exception is Ibrahim's saying to his father that he would ask forgiveness for him, though he had no power to avail him anything against Allah [c2]. They said “Our Lord, in You we put our trust, to You we turn, and to You is the final return” [c3] and “Our Lord, do not make us a trial for those who disbelieve, and forgive us” [c4]. The example is for whoever hopes for Allah and the Last Day; whoever turns away, Allah is Self-Sufficient and Praiseworthy [c5].",
-      "deep_md": "The passage separates two things Ibrahim and those with him said: the declaration to their people [c1] and the promise to the father [c2], which the text sets apart as an exception. It follows with a prayer of trust and turning [c3] and a prayer not to become a trial for the disbelievers [c4]. The passage in Surah Al-Mumtahanah is addressed to the believers of that surah's time and draws a lesson [c5]; the same example is repeated in 60:6.",
-      "kids_md": "Allah tells us that Ibrahim and the people with him are a good example for us [c1][c5]. They put their trust in Allah, and they asked Him to forgive them [c3][c4].",
-      "lessons_md": "Educational interpretation, not scripture: the ayat hold up trust in Allah and turning to Him as the part of Ibrahim's story that believers are asked to take as an example [c3][c5].",
-      "unknowns_md": "Not established in these ayat: who is meant by 'those with him', and when this declaration was made. The occasion of this surah is given by later sources; hadith to add later. Ibrahim's promise to his father [c2] is read together with other ayat on the same father (19:47, 14:41 in other chapters, and 9:114 in the Azar record, where a later disavowal is stated); this needs a scholarly note."
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "There is an excellent example in Ibrahim and those with him, when they said to their people “We are free of you and of what you worship besides God; we reject you; enmity and hatred have appeared between us forever until you believe in God alone.”",
+          "verses": [
+            {
+              "surah": 60,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The exception is that Ibrahim said to his father “I will ask forgiveness for you, though I have no power to avail you anything against God.”",
+          "verses": [
+            {
+              "surah": 60,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They said “Our Lord, in You we put our trust, to You we turn, and to You is the final return.”",
+          "verses": [
+            {
+              "surah": 60,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They said “Our Lord, do not make us a trial for those who disbelieve, and forgive us; You are the Almighty, the Wise.”",
+          "verses": [
+            {
+              "surah": 60,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "In them is an excellent example for whoever hopes for God and the Last Day; and whoever turns away, God is the Self-Sufficient, the Praiseworthy.",
+          "verses": [
+            {
+              "surah": 60,
+              "from": 6,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Another passage holds up Ibrahim and those with him as an excellent example [c1][c5]. They declared themselves free of their people's worship [c1], put their trust in God [c3] and prayed not to be made a trial for the disbelievers [c4]. The one exception named is Ibrahim's promise to ask forgiveness for his father [c2].",
+      "body_md": "The ayat say there is an excellent example for believers in Ibrahim and those with him, when they said to their people that they were free of them and of what they worshipped besides God, that they rejected them, and that enmity and hatred had appeared between them until they believe in God alone [c1]. The exception is Ibrahim's saying to his father that he would ask forgiveness for him, though he had no power to avail him anything against God [c2]. They said “Our Lord, in You we put our trust, to You we turn, and to You is the final return” [c3] and “Our Lord, do not make us a trial for those who disbelieve, and forgive us” [c4]. The example is for whoever hopes for God and the Last Day; whoever turns away, God is Self-Sufficient and Praiseworthy [c5].",
+      "deep_md": "The passage separates the declaration of Ibrahim and those with him to their people [c1] from the promise to the father, which it sets apart as an exception [c2]. It follows with a prayer of trust and turning [c3] and a prayer not to become a trial for the disbelievers [c4].",
+      "kids_md": "God tells us that Ibrahim and the people with him are a good example for us [c1][c5]. They put their trust in God, and they asked Him to forgive them [c3][c4].",
+      "lessons_md": "Educational interpretation (not scripture): the ayat hold up trust in God and turning to Him as the part of Ibrahim's story that believers are asked to take as an example [c3][c5].",
+      "unknowns_md": "Not established in these ayat: who is meant by those with him, and when this declaration was made. Ibrahim's promise to his father is read together with other passages on the same father, where a later disavowal is stated; this needs a scholarly note."
     }
   ],
   "uncertainties_en": [
-    "The identity of the son in the vision of the sacrifice (37:99-113) is not stated in the ayat; scholars differ between Ismail and Ishaq. This draft does not decide.",
-    "The words 'This is my Lord' in 6:76-78 are read differently by interpreters (a stage of search or an argument to his people). This draft gives the words and what followed only.",
-    "Named in later tradition, not in the Quranic text: the name of the king who argued with Ibrahim, of the land of the migration, of the place where the family was settled, of the wife of Ibrahim, of the guests, and the species of the sacrificial animal. None is used in the chapters.",
-    "The speaker of 'I am emigrating to my Lord' in 29:26 and of 26:88-89 is not marked in the text.",
+    "The identity of the son in the vision of the sacrifice is not stated in the ayat; scholars differ between Ismail and Ishaq. This draft does not decide.",
+    "The words of Ibrahim in 6:76-78 are read differently by interpreters, as a stage of search or as an argument to his people. This draft gives the words and what followed only.",
+    "Named in later tradition, not in the Quranic text: the name of the king who argued with Ibrahim, of the land of the migration, of the place where the family was settled, of the wife of Ibrahim, of the guests and the species of the sacrificial animal. None is used in the chapters.",
+    "The speaker of the words about emigrating to his Lord in 29:26 and of 26:88-89 is not marked in the text.",
     "The order of events across surahs is not established; surah order is not chronology.",
-    "The words in 21:63 and 37:89 have a long history of interpretation; hadith reports on them are to be added later with their gradings.",
-    "Ayat 29:18-23 are not used because their speaker is read differently by interpreters.",
-    "Hadith to add later: reports about the building of the House, the standing place, the proclamation of the pilgrimage, the settling of the family, the sacrifice, and the occasion of Surah 60."
+    "The ayat 29:18-23 are not used because their speaker is read differently by interpreters.",
+    "Hadith to add later: reports on Ibrahim's words in 21:63 and 37:89, the building of the House and the standing place, the proclamation of the pilgrimage, the settling of the family, the sacrifice, and the occasion of 60:4-6, each with its grading."
   ]
 }
