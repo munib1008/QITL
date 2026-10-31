@@ -1,0 +1,255 @@
+{
+  "slug": "muhammad",
+  "title_en": "Muhammad",
+  "title_ar": "محمد",
+  "subject": { "type": "prophet", "event_slug": "muhammad" },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review. QURAN ONLY. English only; Arabic and Urdu are left for translators. IMPORTANT: the detailed Seerah (birth and family, the years in Makkah, the place and manner of the first revelation, the Hijrah route and the companions, the events at Madinah, the battles in detail, the treaties, the farewell and the death) rests on hadith and sira that are NOT yet in the repo. This draft states only what the Quran states in the cited ayat, and the Quran often names no person, place or date; each chapter lists under unknowns_md what is missing and what hadith are to be added later. The inventory ties several events to ayat that do not name the event (Uhud, Hijrah, Tabuk, Badr in part); each chapter says so. Honorific formulae (peace be upon him) are not written into the draft text; the editors should decide the house style. Quotation marks surround only speech recorded in the cited ayat (English renderings are drafts for translator and scholar review). Nothing here is reviewed or published.",
+  "chapters": [
+    {
+      "anchor": "his-name-and-role",
+      "position": 1,
+      "title_en": "His name and role in the Quran",
+      "event_slug": null,
+      "verses": [
+        { "surah": 3, "from": 144, "to": 144 },
+        { "surah": 33, "from": 40, "to": 40 },
+        { "surah": 47, "from": 2, "to": 2 },
+        { "surah": 48, "from": 29, "to": 29 },
+        { "surah": 61, "from": 6, "to": 6 }
+      ],
+      "claims": [
+        { "id": "c1", "statement_en": "Muhammad is only a messenger; messengers have passed away before him. Allah asks whether, if he died or were killed, they would turn back on their heels; whoever turns back does no harm to Allah at all, and Allah will reward the grateful.", "verses": [{ "surah": 3, "from": 144, "to": 144 }], "evidence": "quran" },
+        { "id": "c2", "statement_en": "Muhammad is not the father of any of your men, but he is the Messenger of Allah and the khatam (rendered here ‘seal’) of the prophets; Allah is Knowing of all things.", "verses": [{ "surah": 33, "from": 40, "to": 40 }], "evidence": "quran" },
+        { "id": "c3", "statement_en": "Those who believe, do righteous deeds and believe in what was sent down upon Muhammad — and it is the truth from their Lord — Allah removes their misdeeds and sets right their condition.", "verses": [{ "surah": 47, "from": 2, "to": 2 }], "evidence": "quran" },
+        { "id": "c4", "statement_en": "Muhammad is the Messenger of Allah; and those with him are firm against the disbelievers and merciful among themselves; you see them bowing and prostrating, seeking bounty from Allah and His pleasure.", "verses": [{ "surah": 48, "from": 29, "to": 29 }], "evidence": "quran" },
+        { "id": "c5", "statement_en": "The ayah says this is their likeness in the Torah and their likeness in the Injil: like a seed that sends out its shoot and strengthens it, then it grows thick and stands on its stem, pleasing the sowers, so that Allah may enrage the disbelievers through them; Allah has promised those among them who believe and do righteous deeds forgiveness and a great reward.", "verses": [{ "surah": 48, "from": 29, "to": 29 }], "evidence": "quran" },
+        { "id": "c6", "statement_en": "In Surah As-Saff, Isa son of Maryam says to the Children of Israel that he is the messenger of Allah to them, confirming the Torah, and giving glad tidings of a messenger to come after him whose name is Ahmad; and when that messenger came to them with clear proofs, they said “This is clear magic.”", "verses": [{ "surah": 61, "from": 6, "to": 6 }], "evidence": "quran" }
+      ],
+      "summary_md": "The Quran names Muhammad four times and calls him a messenger [c1][c2][c4]. It says messengers passed before him [c1], that he is the seal of the prophets [c2], that what was sent down upon him is the truth [c3], and that those with him are firm and merciful [c4]. In As-Saff, Isa gives glad tidings of a messenger named Ahmad [c6].",
+      "body_md": "Surah Al Imran says that Muhammad is only a messenger, that messengers passed before him, and asks whether, if he died or were killed, they would turn back on their heels [c1]. Surah Al-Ahzab says he is not the father of any of their men, but the Messenger of Allah and the seal of the prophets [c2]. Surah Muhammad says that those who believe and do righteous deeds and believe in what was sent down upon Muhammad, which is the truth from their Lord, will have their misdeeds removed [c3]. Surah Al-Fath says Muhammad is the Messenger of Allah and that those with him are firm against the disbelievers, merciful among themselves, bowing and prostrating, seeking bounty and pleasure from Allah [c4]; and gives their likeness in the Torah and the Injil as a seed that grows strong, with forgiveness and a great reward promised to the believers among them [c5].\n\nSurah As-Saff records Isa saying that he is the messenger of Allah to the Children of Israel, confirming the Torah, and giving glad tidings of a messenger after him whose name is Ahmad; when that messenger came with clear proofs they said it was clear magic [c6].",
+      "deep_md": "The Quran uses the name Muhammad in four ayat [c1][c2][c3][c4] and, in addition, speaks of ‘the Messenger’ and ‘the Prophet’ in many ayat without naming him. The four ayat give four different aspects: a messenger like earlier messengers [c1]; the seal of the prophets and a statement that he is not anyone's father among them [c2]; the one on whom the truth was sent down [c3]; the messenger with a community of followers [c4][c5]. The use of ‘Ahmad’ in 61:6 [c6] is a different name from Muhammad in the Arabic text. The identification of the two is made by interpreters and is not stated in the ayah itself (see unknowns).",
+      "kids_md": "The Quran says that Muhammad is the Messenger of Allah [c2][c4]. It says that messengers came before him [c1]. It says that those who were with him were kind to one another and bowed and prostrated to Allah [c4]. Isa said that a messenger named Ahmad would come after him [c6].",
+      "lessons_md": "Educational interpretation, not scripture: 3:144 reminds readers to hold to the message and not to the person, since messengers pass away [c1]. Surah Al-Fath offers the image of a growing seed for the community [c5].",
+      "unknowns_md": "Not established in these ayat: Muhammad's family, birth, years, the place where he lived, and the circumstances of each ayah. The occasion of 3:144 is given by later tradition (and the inventory connects it with the passage on Uhud; the ayah itself names no battle). The identification of ‘Ahmad’ (61:6) with Muhammad is by interpreters and tradition; hadith to add later. The meaning of ‘khatam’ in 33:40 (a reading with fatha or with kasra exists; rendered ‘seal’ here) is for scholarly review. IMPORTANT: the detailed Seerah rests on hadith and sira that are not yet in the repo; this draft does not use them. Hadith and sira to add later: birth and early life, the years before revelation, the Quraysh, the events at Madinah, the treaties, the farewell pilgrimage and the death. The 'Torah and Injil likeness' in 48:29 is stated in the ayah without naming a passage."
+    },
+    {
+      "anchor": "the-first-words",
+      "position": 2,
+      "title_en": "“Read”: the opening ayat of Surat Al-Alaq",
+      "event_slug": "first-revelation",
+      "verses": [{ "surah": 96, "from": 1, "to": 5 }],
+      "claims": [
+        { "id": "c1", "statement_en": "The ayat command “Read in the name of your Lord who created.”", "verses": [{ "surah": 96, "from": 1, "to": 1 }], "evidence": "quran" },
+        { "id": "c2", "statement_en": "They say that He created the human being from an alaq (a word left untranslated here).", "verses": [{ "surah": 96, "from": 2, "to": 2 }], "evidence": "quran" },
+        { "id": "c3", "statement_en": "They command “Read, and your Lord is the Most Generous,” who taught by the pen and taught the human being what he did not know.", "verses": [{ "surah": 96, "from": 3, "to": 5 }], "evidence": "quran" }
+      ],
+      "summary_md": "These five ayat command the reader to read in the name of the Lord who created [c1], say the human being was created from an alaq [c2], and say the Lord is the Most Generous, who taught by the pen and taught what the human being did not know [c3].",
+      "body_md": "The ayat open with the command to read in the name of the Lord who created [c1]. They say He created the human being from an alaq [c2]. They repeat the command to read, say that the Lord is the Most Generous, who taught by the pen, and who taught the human being what he did not know [c3].",
+      "deep_md": "The passage has two commands to read [c1][c3] and two statements of what the Lord did: He created [c1][c2], and He taught [c3]. The word alaq is left untranslated here because its English renderings differ. The ayat are addressed to one person in the singular; they do not name the person. The tradition (and the inventory entry for this event) calls these the opening verses of Surat Al-Alaq and, traditionally, the first revelation; the ayat themselves do not say that they are the first.",
+      "kids_md": "The ayat tell the reader to read in the name of the Lord who created. They say the Lord is the Most Generous. He taught by the pen and taught people what they did not know [c1][c3].",
+      "lessons_md": "Educational interpretation, not scripture: the ayat join reading, teaching and the pen to the Lord's act of creating [c1][c3]. A reader may reflect on the place of learning in the passage.",
+      "unknowns_md": "Not established by the ayat: who is addressed (not named), where and when, by whom the words were brought, that these are the first revelation (that is a later tradition; the inventory says ‘traditionally’), and the response of the one addressed. Named in later tradition, not in the Quranic text: the cave, the angel who brought them, and the people present. Hadith to add later: the reports on the beginning of revelation, to be added with their gradings."
+    },
+    {
+      "anchor": "the-night-of-the-sending-down",
+      "position": 3,
+      "title_en": "The night of the sending down",
+      "event_slug": "night-of-power",
+      "verses": [
+        { "surah": 97, "from": 1, "to": 5 },
+        { "surah": 44, "from": 1, "to": 6 },
+        { "surah": 2, "from": 185, "to": 185 }
+      ],
+      "claims": [
+        { "id": "c1", "statement_en": "Allah says “We sent it down in the Night of Qadr.” (The ayah does not name what was sent down; the context and other ayat refer to the Quran.)", "verses": [{ "surah": 97, "from": 1, "to": 1 }], "evidence": "quran" },
+        { "id": "c2", "statement_en": "The Night of Qadr is better than a thousand months.", "verses": [{ "surah": 97, "from": 2, "to": 3 }], "evidence": "quran" },
+        { "id": "c3", "statement_en": "In it the angels and the Spirit descend by permission of their Lord, with every matter; it is peace until the rising of the dawn.", "verses": [{ "surah": 97, "from": 4, "to": 5 }], "evidence": "quran" },
+        { "id": "c4", "statement_en": "In Surah Ad-Dukhan, by the clear Book, Allah says “We sent it down in a blessed night; indeed We were warning.”", "verses": [{ "surah": 44, "from": 2, "to": 3 }], "evidence": "quran" },
+        { "id": "c5", "statement_en": "In it every wise matter is made distinct, a command from Allah; Allah was sending (messengers), as a mercy from your Lord; He is the Hearing, the Knowing.", "verses": [{ "surah": 44, "from": 4, "to": 6 }], "evidence": "quran" },
+        { "id": "c6", "statement_en": "In Surah Al-Baqarah, Allah says the month of Ramadan is the month in which the Quran was sent down, as guidance for the people and clear proofs of guidance and the criterion.", "verses": [{ "surah": 2, "from": 185, "to": 185 }], "evidence": "quran" }
+      ],
+      "summary_md": "Three surahs speak of the sending down of the Quran: in the Night of Qadr [c1], in a blessed night [c4], and in the month of Ramadan [c6]. The Night of Qadr is better than a thousand months [c2], and the angels and the Spirit descend in it [c3]. In the blessed night every wise matter is made distinct [c5].",
+      "body_md": "Surah Al-Qadr says Allah sent it down in the Night of Qadr [c1], that this night is better than a thousand months [c2], and that in it the angels and the Spirit descend by permission of their Lord with every matter, and it is peace until the rising of the dawn [c3]. Surah Ad-Dukhan, swearing by the clear Book, says Allah sent it down in a blessed night [c4], in which every wise matter is made distinct as a command from Him and a mercy from the Lord [c5]. Surah Al-Baqarah says the month of Ramadan is the month in which the Quran was sent down, as guidance for the people, clear proofs of guidance and the criterion [c6].",
+      "deep_md": "Three statements of time are made: a night named Qadr [c1], a blessed night [c4], and a month, Ramadan [c6]. The ayat do not say in so many words that the three describe the same night; the identification is made by combining them, as interpreters do. The first ayah of Al-Qadr says ‘it’ without naming the Quran [c1]; the Ad-Dukhan passage swears by the Book before saying ‘it’ [c4]; Al-Baqarah names the Quran [c6]. Compare the next chapter, where the same Quran is described as sent down in parts.",
+      "kids_md": "The Quran says that Allah sent down the Quran in a blessed night, the Night of Qadr, and in the month of Ramadan [c1][c4][c6]. The Night of Qadr is better than a thousand months [c2]. It is peace until the dawn [c3].",
+      "lessons_md": "Educational interpretation, not scripture: the ayat tie the month of Ramadan to the Quran's being sent down [c6], and give the night a greater value than a thousand months [c2]. A reader may reflect on the care the Quran takes to mark when it was sent down.",
+      "unknowns_md": "Not established by the ayat: which night of Ramadan the Night of Qadr is, the year, the place, and how the sending down in this night relates to the sending down in parts (see the next chapter). Whether the ‘blessed night’ of 44:3 is the Night of Qadr is a reading made by combining the ayat. Named in later tradition, not in the Quranic text: any date within the month. The ayah 2:185 continues with rules for fasting, which are not part of this draft. Hadith to add later: the reports on the Night of Qadr and on the sending down."
+    },
+    {
+      "anchor": "sent-down-in-parts",
+      "position": 4,
+      "title_en": "Sent down in parts",
+      "event_slug": "gradual-revelation",
+      "verses": [
+        { "surah": 17, "from": 106, "to": 106 },
+        { "surah": 25, "from": 32, "to": 32 }
+      ],
+      "claims": [
+        { "id": "c1", "statement_en": "Allah says it is a Quran which He has divided so that the listener may recite it to the people over a period, and He sent it down progressively.", "verses": [{ "surah": 17, "from": 106, "to": 106 }], "evidence": "quran" },
+        { "id": "c2", "statement_en": "Those who disbelieved said “Why was the Quran not sent down to him all at once?” and the ayah answers “Thus, that We may strengthen your heart with it,” and says Allah arranged it in a recitation in due order.", "verses": [{ "surah": 25, "from": 32, "to": 32 }], "evidence": "quran" }
+      ],
+      "summary_md": "The Quran says Allah divided it so that it could be recited to the people over a period and sent down progressively [c1]. When the disbelievers asked why it was not sent down all at once, the ayah answers that it was so that Allah would strengthen the heart with it [c2].",
+      "body_md": "Surah Al-Isra says that it is a Quran which Allah divided so that it may be recited to the people over a period, and which He sent down progressively [c1]. Surah Al-Furqan records the disbelievers asking why the Quran was not sent down to him all at once, and answers “Thus, that We may strengthen your heart with it”, adding that Allah arranged it in a recitation in due order [c2].",
+      "deep_md": "The two ayat give a reason for the manner of revelation: it was meant to be recited to people over a period [c1], and to strengthen the heart [c2]. The ayat do not give the length of the period, and the objection of the disbelievers in 25:32 is stated without their further speech. The relation between this ‘progressive’ sending down and the ‘sending down in a night’ of the previous chapter is not explained in these ayat.",
+      "kids_md": "The Quran was not sent down all at once. Allah sent it down in parts so that it could be recited to the people slowly, and so that the heart of the Prophet would be made firm [c1][c2].",
+      "lessons_md": "Educational interpretation, not scripture: the ayat give the gradual manner of the revelation a purpose, to strengthen the heart [c2]. A reader may reflect on learning in steps.",
+      "unknowns_md": "Not established by the ayat: the length of the period over which the Quran was sent down, the order of its parts, and the occasions of particular ayat. The way in which the sending down in a night and the sending down in parts are both true is explained in later tradition (Named in later tradition, not in the Quranic text); hadith and early reports to add later, with their gradings."
+    },
+    {
+      "anchor": "the-night-journey",
+      "position": 5,
+      "title_en": "The night journey",
+      "event_slug": "the-night-journey",
+      "verses": [{ "surah": 17, "from": 1, "to": 1 }],
+      "claims": [
+        { "id": "c1", "statement_en": "Glory be to the One who took His servant by night from the Masjid al-Haram to the Masjid al-Aqsa, whose surroundings Allah has blessed.", "verses": [{ "surah": 17, "from": 1, "to": 1 }], "evidence": "quran" },
+        { "id": "c2", "statement_en": "The purpose stated is to show him some of Allah's signs; He is the Hearing, the Seeing.", "verses": [{ "surah": 17, "from": 1, "to": 1 }], "evidence": "quran" }
+      ],
+      "summary_md": "The ayah says that Allah took His servant by night from the Masjid al-Haram to the Masjid al-Aqsa, whose surroundings He has blessed [c1], in order to show him some of His signs [c2].",
+      "body_md": "The ayah opens with glory to the One who took His servant by night from the Masjid al-Haram to the Masjid al-Aqsa, whose surroundings He blessed [c1], so that He might show him some of His signs; He is the Hearing, the Seeing [c2].",
+      "deep_md": "The ayah is a single sentence: a glorification, an act (‘took by night’), a starting point and a destination, and a stated purpose [c1][c2]. The place names are stated as the Masjid al-Haram and the Masjid al-Aqsa and the ayah says nothing of the means of travel. It does not use the word ascent and does not mention the heavens.",
+      "kids_md": "Allah took His servant by night from one mosque to another mosque. Allah blessed the area around it. He did this to show His servant some of His signs [c1][c2].",
+      "lessons_md": "Educational interpretation, not scripture: the ayah begins with glory to Allah and ends with a reminder that He hears and sees [c2]. A reader may reflect on a journey whose stated purpose is to be shown signs.",
+      "unknowns_md": "Not established by the ayah: that the servant is Muhammad (the ayah says ‘His servant’; the identification is made by the tradition and the surrounding surah), the year, the means, the duration, where the Masjid al-Aqsa is, and what signs were shown. The ascent through the heavens (mi'raj) is not stated in this ayah; other ayat and a large body of hadith are involved and are outside this draft. Named in later tradition, not in the Quranic text: the names of the places, the creature, and the events of the night. Hadith to add later: the reports on the night journey and the ascent, with their gradings."
+    },
+    {
+      "anchor": "the-plot-and-the-cave",
+      "position": 6,
+      "title_en": "The plot and the cave",
+      "event_slug": "the-hijrah",
+      "verses": [
+        { "surah": 8, "from": 30, "to": 30 },
+        { "surah": 9, "from": 40, "to": 40 }
+      ],
+      "claims": [
+        { "id": "c1", "statement_en": "Allah recalls when those who disbelieved plotted against the one addressed, to restrain him, or kill him, or expel him; they plotted, and Allah plotted, and Allah is the best of plotters.", "verses": [{ "surah": 8, "from": 30, "to": 30 }], "evidence": "quran" },
+        { "id": "c2", "statement_en": "Allah says that if they do not help him, Allah has already helped him when those who disbelieved drove him out, the second of two, when they were in the cave.", "verses": [{ "surah": 9, "from": 40, "to": 40 }], "evidence": "quran" },
+        { "id": "c3", "statement_en": "He said to his companion “Do not grieve; indeed Allah is with us.”", "verses": [{ "surah": 9, "from": 40, "to": 40 }], "evidence": "quran" },
+        { "id": "c4", "statement_en": "Allah sent down His tranquillity upon him, supported him with soldiers that the listeners did not see, and made the word of those who disbelieved the lowest, while the word of Allah is the highest; Allah is Mighty, Wise.", "verses": [{ "surah": 9, "from": 40, "to": 40 }], "evidence": "quran" }
+      ],
+      "summary_md": "Allah recalls a plot of those who disbelieved to restrain, kill or expel the one addressed [c1]. Another ayah recalls that Allah helped him when those who disbelieved drove him out, the second of two in the cave [c2]. He told his companion not to grieve because Allah was with them [c3], and Allah sent down His tranquillity upon him [c4].",
+      "body_md": "Surah Al-Anfal recalls when those who disbelieved plotted against the one addressed to restrain him, or kill him, or expel him; they plotted, and Allah plotted, and He is the best of plotters [c1]. Surah At-Tawbah says that if they do not help him, Allah has already helped him when those who disbelieved drove him out, the second of two, when they were in the cave [c2]. He said to his companion “Do not grieve; Allah is with us” [c3]. Allah sent down His tranquillity upon him, supported him with soldiers they did not see, and made the word of those who disbelieved the lowest and the word of Allah the highest [c4].",
+      "deep_md": "The two ayat are in different surahs and neither uses the word hijrah of this event. 8:30 states a plot with three possible outcomes [c1]; 9:40 states that they drove him out and describes a moment in a cave [c2][c3][c4]. The pronouns in both are singular and neither ayah names the person; the inventory links both to the Hijrah, and the tradition identifies the person as the Prophet. The phrase ‘the second of two’ [c2] tells of two people in the cave.",
+      "kids_md": "Some people planned to restrain, harm or expel the one the ayah speaks to, but Allah says He is the best of planners [c1]. When he and his companion were in a cave, he said, “Do not be sad; Allah is with us” [c3]. Allah made him feel calm and safe [c4].",
+      "lessons_md": "Educational interpretation, not scripture: the words recorded in the cave are a short statement of reliance, ‘Allah is with us’ [c3], offered to a worried companion. A reader may reflect on the use of simple words in a moment of fear.",
+      "unknowns_md": "Not established by the ayat: the names of the Prophet and of the companion (neither is named in these ayat), the name or place of the cave, the city he left or his destination, the date, the route, how long they stayed, and the form of the plot. The identification of the person addressed with Muhammad, of the companion, of the plot and of the whole event as the Hijrah is by the inventory and later tradition. Hadith and sira to add later: the account of the Hijrah, to be added with gradings; the other ayat linked to emigration (such as 8:72-75, 59:8-9, 2:218) are not used here."
+    },
+    {
+      "anchor": "badr",
+      "position": 7,
+      "title_en": "Badr",
+      "event_slug": "battle-of-badr",
+      "verses": [
+        { "surah": 3, "from": 13, "to": 13 },
+        { "surah": 3, "from": 123, "to": 127 },
+        { "surah": 8, "from": 5, "to": 19 },
+        { "surah": 8, "from": 41, "to": 48 }
+      ],
+      "claims": [
+        { "id": "c1", "statement_en": "Allah says there was a sign for them in the two groups that met: one fighting in the cause of Allah and the other disbelieving, who saw them as twice their number with their own eyes; Allah supports with His help whom He wills; in that is a lesson.", "verses": [{ "surah": 3, "from": 13, "to": 13 }], "evidence": "quran" },
+        { "id": "c2", "statement_en": "Allah says He gave them victory at Badr when they were weak, so they should be mindful of Allah that they may be grateful.", "verses": [{ "surah": 3, "from": 123, "to": 123 }], "evidence": "quran" },
+        { "id": "c3", "statement_en": "The one addressed said to the believers “Is it not enough for you that your Lord should reinforce you with three thousand angels sent down?”; and if they are patient and mindful and the enemy come at them immediately, their Lord will reinforce them with five thousand angels marked. Allah made it only as glad tidings and for their hearts to be at rest; victory is only from Allah, the Almighty, the Wise.", "verses": [{ "surah": 3, "from": 124, "to": 126 }], "evidence": "quran" },
+        { "id": "c4", "statement_en": "In Surah Al-Anfal, Allah recalls that He brought the one addressed out of his home with the truth while a party of the believers disliked it; they argued with him about the truth after it had become clear, as if being driven to death while looking on.", "verses": [{ "surah": 8, "from": 5, "to": 6 }], "evidence": "quran" },
+        { "id": "c5", "statement_en": "Allah promised them that one of the two groups would be theirs; they wished that the one without the sharp edge would be theirs, and Allah wished to establish the truth by His words and to cut off the roots of the disbelievers.", "verses": [{ "surah": 8, "from": 7, "to": 8 }], "evidence": "quran" },
+        { "id": "c6", "statement_en": "When they asked their Lord for help, He answered that He would reinforce them with a thousand angels following one another; Allah made it only as glad tidings and for their hearts to be at rest.", "verses": [{ "surah": 8, "from": 9, "to": 10 }], "evidence": "quran" },
+        { "id": "c7", "statement_en": "Allah covered them with slumber as security from Him, sent down water from the sky to purify them, to remove the whisper of Shaytan, to strengthen their hearts and make their feet firm.", "verses": [{ "surah": 8, "from": 11, "to": 11 }], "evidence": "quran" },
+        { "id": "c8", "statement_en": "Allah inspired the angels “I am with you, so make firm those who believed; I will cast terror into the hearts of those who disbelieved.”", "verses": [{ "surah": 8, "from": 12, "to": 12 }], "evidence": "quran" },
+        { "id": "c9", "statement_en": "Allah says they did not kill them, but Allah killed them; and the one addressed did not throw when he threw, but Allah threw, so that He might test the believers with a good trial.", "verses": [{ "surah": 8, "from": 17, "to": 17 }], "evidence": "quran" },
+        { "id": "c10", "statement_en": "Allah says it was on the ‘day of the criterion’, the day the two groups met; the two sides were on the nearer and the farther bank with the caravan lower than them; had they made an appointment, they would have differed about the time, but it was so that Allah might accomplish a matter already decreed.", "verses": [{ "surah": 8, "from": 41, "to": 42 }], "evidence": "quran" },
+        { "id": "c11", "statement_en": "Allah showed the enemy as few in the dream of the one addressed, and showed each side as few in the eyes of the other when they met, so that He might accomplish a matter already decreed.", "verses": [{ "surah": 8, "from": 43, "to": 44 }], "evidence": "quran" },
+        { "id": "c12", "statement_en": "The believers are told, when they meet a group, to be firm and remember Allah much, to obey Allah and His Messenger and not to dispute, lest they lose heart and their strength go; and to be patient.", "verses": [{ "surah": 8, "from": 45, "to": 46 }], "evidence": "quran" },
+        { "id": "c13", "statement_en": "They are told not to be like those who came out of their homes boastfully and to be seen by people; and Shaytan made their deeds seem attractive and said “No one can overcome you today; I am your protector”; when the two groups sighted each other he turned on his heels and said “I am free of you; I see what you do not see; I fear Allah.”", "verses": [{ "surah": 8, "from": 47, "to": 48 }], "evidence": "quran" }
+      ],
+      "summary_md": "The Quran names Badr once, saying Allah gave the believers victory there when they were weak [c2]. Other ayat speak of the two groups that met [c1][c10]: of reinforcement [c3][c6][c8], slumber and water [c7], and a lesson about who gives victory [c9]. The believers are told to be firm, obey and not dispute [c12].",
+      "body_md": "Surah Al Imran says there was a sign in the two groups that met, one fighting in the cause of Allah and the other disbelieving [c1], and names Badr: Allah gave them victory there while they were weak, so they should be mindful and grateful [c2]. It records the one addressed telling the believers about reinforcement by three thousand angels, and five thousand if they were patient and mindful, and says that it was glad tidings and for their hearts to be at rest, since victory is from Allah alone [c3].\n\nSurah Al-Anfal recalls how the believers disliked going out and argued [c4], how Allah promised them one of the two groups and wished to establish the truth [c5], how He answered their call for help with a thousand angels following one another [c6], covered them with slumber and sent water [c7], and inspired the angels with ‘I am with you’ [c8]. It says that the believers did not kill them, but Allah did, and that what the one addressed threw, Allah threw [c9]. It calls the day the ‘day of the criterion’, the day the two groups met, and tells how the sides were placed and that Allah accomplished a matter already decreed [c10]. It says Allah showed the enemy as few [c11]. It instructs the believers to be firm, obey and not dispute [c12], and warns against being like those who came out boastfully, whose protector, Shaytan, left them when the two groups sighted each other [c13].",
+      "deep_md": "Only 3:123 uses the word Badr [c2]. The inventory also links 3:13 [c1] and the ayat of Al-Anfal [c4]-[c13] to the same event; the ayat of Al-Anfal call it the ‘day of the criterion’ and the ‘day the two groups met’ [c10] and do not use the name. The statements about angels differ in number and condition: three thousand and five thousand in Al Imran [c3] and a thousand in Al-Anfal [c6]; the ayat do not explain how they relate, and this draft does not attempt to reconcile them. The ayat do not describe the angels. Al-Anfal 8:67-71 (the captives) is in the inventory range and is not covered in this draft.",
+      "kids_md": "At Badr, Allah gave the believers victory when they were weak [c2]. The Quran says that help comes only from Allah [c3][c6]. Allah made the believers calm and sent them rain [c7]. The believers were told to be firm, to remember Allah, and not to argue with one another [c12].",
+      "lessons_md": "Educational interpretation, not scripture: the ayat repeat that victory is from Allah [c3][c6][c9], and tell the believers to hold together and not dispute [c12]. A reader may reflect on the way the passage ties confidence to obedience.",
+      "unknowns_md": "Not established by the ayat: the date, the number of fighters on either side, the places (apart from the banks of the valley described in 8:42, which are not named), the names of any fighter, the course of the fighting, the number of dead and captives, and the leaders. Named in later tradition, not in the Quranic text: the year, the numbers, the names. The inventory's link between the Al-Anfal ayat and Badr is by later tradition. Hadith and sira to add later: the account of Badr and its aftermath, with gradings; 8:67-71."
+    },
+    {
+      "anchor": "uhud",
+      "position": 8,
+      "title_en": "The passage tied to Uhud",
+      "event_slug": "battle-of-uhud",
+      "verses": [
+        { "surah": 3, "from": 121, "to": 122 },
+        { "surah": 3, "from": 139, "to": 146 },
+        { "surah": 3, "from": 152, "to": 155 }
+      ],
+      "claims": [
+        { "id": "c1", "statement_en": "Allah recalls when the one addressed set out early from his family to station the believers at their positions for fighting; Allah is the Hearing, the Knowing.", "verses": [{ "surah": 3, "from": 121, "to": 121 }], "evidence": "quran" },
+        { "id": "c2", "statement_en": "Two parties among them were about to lose heart, and Allah was the ally of both; in Allah let the believers put their trust.", "verses": [{ "surah": 3, "from": 122, "to": 122 }], "evidence": "quran" },
+        { "id": "c3", "statement_en": "They are told not to weaken and not to grieve, for they are the uppermost if they are believers; if a wound has touched them, a similar wound has touched the other people; such days Allah rotates among the people, so that Allah may know those who believe and take witnesses from among them.", "verses": [{ "surah": 3, "from": 139, "to": 140 }], "evidence": "quran" },
+        { "id": "c4", "statement_en": "Allah says it is so that He may purify the believers and destroy the disbelievers, and asks whether they thought they would enter the Garden while Allah had not yet known those who strove and were patient.", "verses": [{ "surah": 3, "from": 141, "to": 142 }], "evidence": "quran" },
+        { "id": "c5", "statement_en": "They had wished for death before they met it, and now they have seen it while looking on.", "verses": [{ "surah": 3, "from": 143, "to": 143 }], "evidence": "quran" },
+        { "id": "c6", "statement_en": "Muhammad is only a messenger; messengers have passed before him; if he died or were killed, would they turn back on their heels?", "verses": [{ "surah": 3, "from": 144, "to": 144 }], "evidence": "quran" },
+        { "id": "c7", "statement_en": "No soul dies except by Allah's permission, a decree with an appointed term.", "verses": [{ "surah": 3, "from": 145, "to": 145 }], "evidence": "quran" },
+        { "id": "c8", "statement_en": "Allah recalls many prophets alongside whom many devoted people fought, who did not lose heart at what struck them in the cause of Allah, did not weaken and did not give in; Allah loves the patient.", "verses": [{ "surah": 3, "from": 146, "to": 146 }], "evidence": "quran" },
+        { "id": "c9", "statement_en": "Allah says He had fulfilled His promise to them when they were striking down the enemy by His permission, until they lost courage and disputed about the matter and disobeyed after He had shown them what they love; some of them wanted this world and some wanted the Hereafter; then He turned them away from the enemy to test them; and He forgave them.", "verses": [{ "surah": 3, "from": 152, "to": 152 }], "evidence": "quran" },
+        { "id": "c10", "statement_en": "They were going up the slope and not turning to anyone while the Messenger was calling them from behind; so Allah repaid them with distress upon distress.", "verses": [{ "surah": 3, "from": 153, "to": 153 }], "evidence": "quran" },
+        { "id": "c11", "statement_en": "Then Allah sent down upon them after the distress a security, a slumber that covered a party of them, while another party were preoccupied with themselves.", "verses": [{ "surah": 3, "from": 154, "to": 154 }], "evidence": "quran" },
+        { "id": "c12", "statement_en": "Those of them who turned away on the day the two groups met, Shaytan caused to slip because of some of what they had earned; Allah has forgiven them; Allah is Forgiving, Forbearing.", "verses": [{ "surah": 3, "from": 155, "to": 155 }], "evidence": "quran" }
+      ],
+      "summary_md": "The passage recalls a morning in which the one addressed stationed the believers for fighting [c1]. It tells them not to weaken, for such days are rotated among people [c3], and says that Muhammad is only a messenger [c6]. It says that no soul dies except by Allah's permission [c7], recalls the earlier prophets' followers who were patient [c8], and says Allah forgave those who turned away [c9][c12].",
+      "body_md": "Surah Al Imran recalls when the one addressed set out early from his family to station the believers at positions for fighting [c1], and when two parties among them were about to lose heart, though Allah was the ally of both [c2]. The believers are told not to weaken or grieve; if a wound touched them, a similar wound touched the others; such days are rotated among the people, so that Allah may know the believers and take witnesses from among them [c3]. This is to purify the believers and destroy the disbelievers; and they should not think they will enter the Garden before Allah knows those who strove and were patient [c4]. They had wished for death before meeting it and now saw it [c5]. Then the ayah: Muhammad is only a messenger, messengers have passed before him; if he died or were killed would they turn back on their heels? [c6] No soul dies except by Allah's permission, a decree with an appointed term [c7]. Many prophets had devoted people fight with them who did not weaken in the cause of Allah, and Allah loves the patient [c8].\n\nLater ayat say that Allah had fulfilled His promise while they were striking the enemy until they lost courage, disputed and disobeyed, some wanting this world and some the Hereafter; then He turned them away from the enemy to test them, and forgave them [c9]. They went up the slope not turning to anyone while the Messenger called them from behind; so Allah repaid them with distress upon distress [c10]. Then He sent down a security, a slumber for a party of them [c11]. Those who turned away on the day the two groups met were caused to slip by Shaytan for some of what they had earned, and Allah has forgiven them [c12].",
+      "deep_md": "The passage is addressed to a community after a setback, though the ayat do not name the battle or say that there was a setback in so many words; the setback is read from [c3] ‘if a wound has touched you’ and [c9]-[c12]. The ayat state three purposes: that Allah may know the believers and take witnesses [c3], that He may purify the believers [c4], and that He may test them [c9]. 3:144 [c6] is the ayah that names Muhammad and is addressed to the community; it says what they should do if he died or were killed, and is followed by the general statement about death [c7] and the example of earlier prophets' followers [c8]. The ayat cited here do not say that he was killed or that anyone said so.",
+      "kids_md": "After a hard day, Allah reminded the believers not to be sad or weak [c3]. Allah said that Muhammad is a messenger, like the messengers before him [c6]. Allah said that people who were patient before them were loved by Allah [c8]. Allah forgave those who had turned away [c12].",
+      "lessons_md": "Educational interpretation, not scripture: the passage tells a community not to rest its faith on one person's life [c6] and describes hardship as part of how Allah tests and purifies [c3][c4]. These lines are for reflection and are not drawn from the ayat as rules.",
+      "unknowns_md": "Not established by the ayat: the name of the battle (the ayat do not say Uhud; the inventory ties them to it, and the name is Named in later tradition, not in the Quranic text), the date, the place, the numbers, the names of any fighter, the course of the fighting, and what was said about the Prophet. The sections 3:128-138 and 3:156-175 are in the inventory range and are not covered in this draft. Hadith and sira to add later: the account of the battle, with gradings."
+    },
+    {
+      "anchor": "hunayn",
+      "position": 9,
+      "title_en": "The day of Hunayn",
+      "event_slug": "battle-of-hunayn",
+      "verses": [{ "surah": 9, "from": 25, "to": 27 }],
+      "claims": [
+        { "id": "c1", "statement_en": "Allah says He has given them victory in many places, and on the day of Hunayn, when their great number pleased them but did not avail them at all, and the earth became narrow for them despite its vastness, and then they turned back, retreating.", "verses": [{ "surah": 9, "from": 25, "to": 25 }], "evidence": "quran" },
+        { "id": "c2", "statement_en": "Then Allah sent down His tranquillity upon His Messenger and upon the believers, and sent down soldiers that they did not see, and punished those who disbelieved; that is the recompense of the disbelievers.", "verses": [{ "surah": 9, "from": 26, "to": 26 }], "evidence": "quran" },
+        { "id": "c3", "statement_en": "Then, after that, Allah accepts repentance from whom He wills; Allah is Forgiving, Merciful.", "verses": [{ "surah": 9, "from": 27, "to": 27 }], "evidence": "quran" }
+      ],
+      "summary_md": "The Quran names the day of Hunayn: their great number pleased them but did not avail them, and they turned back [c1]. Allah then sent down His tranquillity upon His Messenger and the believers [c2], and accepts repentance from whom He wills [c3].",
+      "body_md": "Surah At-Tawbah says that Allah has given them victory in many places and on the day of Hunayn, when their great number pleased them but did not avail them at all, the earth became narrow for them despite its vastness, and they turned back [c1]. Then Allah sent down His tranquillity upon His Messenger and upon the believers, and sent down soldiers they did not see, and punished those who disbelieved [c2]. After that Allah accepts repentance from whom He wills [c3].",
+      "deep_md": "The three ayat have a pattern of a boast that fails [c1], help that comes [c2], and forgiveness afterwards [c3]. The ayah names Hunayn once and uses the second person throughout, and does not name any person among the believers or the opposing side. The phrase ‘soldiers they did not see’ [c2] is also used in 9:40 in the chapter on the cave.",
+      "kids_md": "On the day of Hunayn, the believers were pleased with how many they were, but this did not help them [c1]. Then Allah sent calm to the Messenger and the believers, and helped them [c2]. Allah forgives whom He wills [c3].",
+      "lessons_md": "Educational interpretation, not scripture: the passage warns against relying on numbers [c1] and follows the lapse with calm and then with forgiveness [c2][c3].",
+      "unknowns_md": "Not established by the ayat: the date, the place of Hunayn, the opposing side, the course of the fighting, the numbers, and who turned back. Named in later tradition, not in the Quranic text: the account of the battle and its aftermath. Hadith and sira to add later."
+    },
+    {
+      "anchor": "the-hour-of-hardship",
+      "position": 10,
+      "title_en": "The hour of hardship",
+      "event_slug": "expedition-of-tabuk",
+      "verses": [
+        { "surah": 9, "from": 38, "to": 42 },
+        { "surah": 9, "from": 117, "to": 118 }
+      ],
+      "claims": [
+        { "id": "c1", "statement_en": "Believers are asked why, when told to go out in the cause of Allah, they weighed down to the earth; whether they preferred the life of this world to the Hereafter; the enjoyment of this world is little compared with the Hereafter.", "verses": [{ "surah": 9, "from": 38, "to": 38 }], "evidence": "quran" },
+        { "id": "c2", "statement_en": "If they do not go out, Allah will punish them with a painful punishment and replace them with another people, and they cannot harm Him at all; Allah is over all things Able.", "verses": [{ "surah": 9, "from": 39, "to": 39 }], "evidence": "quran" },
+        { "id": "c3", "statement_en": "They are told to go out, light and heavy, and strive with their wealth and their selves in the cause of Allah; that is better for them if they only knew.", "verses": [{ "surah": 9, "from": 41, "to": 41 }], "evidence": "quran" },
+        { "id": "c4", "statement_en": "Allah says that if it had been a near gain and a moderate journey, they would have followed the one addressed, but the distance was far for them; and they will swear by Allah “If we could, we would have gone out with you”, destroying themselves; Allah knows that they are liars.", "verses": [{ "surah": 9, "from": 42, "to": 42 }], "evidence": "quran" },
+        { "id": "c5", "statement_en": "Allah turned in mercy to the Prophet and to the emigrants and the helpers who followed him in the hour of hardship, after the hearts of a party of them had almost deviated; then He turned to them; He is Kind and Merciful to them.", "verses": [{ "surah": 9, "from": 117, "to": 117 }], "evidence": "quran" },
+        { "id": "c6", "statement_en": "He also turned in mercy to the three who were left behind, until the earth became narrow for them despite its vastness and their own selves became narrow, and they realised there was no refuge from Allah except in Him; then He turned to them that they might repent; Allah is the Accepting of repentance, the Merciful.", "verses": [{ "surah": 9, "from": 118, "to": 118 }], "evidence": "quran" }
+      ],
+      "summary_md": "The believers are asked why they weighed down to the earth when told to go out [c1], and are warned [c2] and told to go out light and heavy [c3]. Some who stayed behind give excuses that Allah calls false [c4]. Allah turned in mercy to the Prophet and those who followed him in the hour of hardship [c5], and to the three left behind [c6].",
+      "body_md": "Surah At-Tawbah asks the believers why, when told to go out in the cause of Allah, they weighed down to the earth, and whether they preferred this world to the Hereafter [c1]. It warns that if they do not go out Allah will punish them and replace them with another people [c2], and tells them to go out, light and heavy, and strive with wealth and selves [c3]. It says that had the gain been near and the journey moderate they would have followed, but the distance was far, and that they would swear they would have gone if they could, and Allah knows they are liars [c4].\n\nLater, Allah is said to have turned in mercy to the Prophet and the emigrants and helpers who followed him in the hour of hardship, after the hearts of a party of them had almost deviated [c5]. He also turned in mercy to the three who were left behind, until the earth became narrow for them and they realised there was no refuge from Allah except in Him [c6].",
+      "deep_md": "The passage runs from command [c1][c2][c3] to excuse [c4] to repentance accepted [c5][c6]. The ayat do not name the expedition, the destination or the enemy; the inventory's title says it is ‘identified in later tradition as Tabuk’. The phrase ‘hour of hardship’ (sa'at al-'usra) is in 9:117 [c5]. The three of 9:118 [c6] are not named and the ayah does not say why they were left behind beyond ‘left behind’. The rest of the inventory range (9:43-59 and 9:81-96) is not covered in this draft.",
+      "kids_md": "Allah called the believers to go out in His cause. Some found it hard and stayed behind [c1][c4]. Later Allah accepted the repentance of the Prophet's followers who had gone in the hard hour, and of three who were left behind [c5][c6].",
+      "lessons_md": "Educational interpretation, not scripture: the passage sets the ease of staying behind against the call to go out [c1][c3], and ends with Allah's acceptance of repentance [c5][c6]. These lines are for reflection and are not drawn from the ayat as rules.",
+      "unknowns_md": "Not established by the ayat: the name of the expedition (Named in later tradition, not in the Quranic text: Tabuk), the destination, the opponents (the Byzantines are Named in later tradition, not in the Quranic text), the date, the numbers, and the names of the three left behind (Named in later tradition, not in the Quranic text). The ayat 9:43-59 and 9:81-96 of the inventory range are not covered. Hadith and sira to add later: the account of the expedition and of the three, with gradings."
+    }
+  ],
+  "uncertainties_en": [
+    "The detailed Seerah rests on hadith and sira that are not yet in the repo. This draft covers only what the Quran states in the cited ayat; hadith and sira to add later: birth and early life, the first revelation as a scene, the years in Makkah, the Hijrah in detail, the events at Madinah, the battles in detail, the treaties, the farewell pilgrimage, the death.",
+    "The Quran names Muhammad in only four ayat (3:144, 33:40, 47:2, 48:29). Most ayat in the other chapters speak of 'the Messenger', 'the servant' or 'you' and are tied to the Prophet by the inventory and by tradition; the chapters mark this under unknowns.",
+    "The identification of 'Ahmad' (61:6) with Muhammad is by interpreters, not stated in the ayah.",
+    "The identification of the servant of 17:1, the addressee of 96:1-5 and the persons of 9:40 with the Prophet and his companion is by tradition; their names, the cave and the places are not in the ayat.",
+    "The ayat on Badr (apart from 3:123), Uhud, the Hijrah and Tabuk do not name the events; the links are made by the inventory and by later tradition.",
+    "The relation between the Night of Qadr (97:1), the blessed night (44:3), Ramadan (2:185) and the sending down in parts (17:106, 25:32) is made by combining ayat and is explained in later tradition.",
+    "Numbers in the chapters (three thousand, five thousand, a thousand, a thousand months, the three) appear only as the ayat state them.",
+    "Honorific formulae are not in the draft text; house style to be decided by the editors."
+  ]
+}
