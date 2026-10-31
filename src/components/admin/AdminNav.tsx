@@ -18,6 +18,7 @@ const LINKS: Array<{ href: string; label: string; roles: Role[] }> = [
   { href: "/admin/studio/translations", label: "Translation review", roles: ["translation_reviewer", "scholarly_reviewer", "admin"] },
   { href: "/admin/studio/audio", label: "Audio QA & ambience", roles: ["audio_producer", "admin"] },
   { href: "/admin/relationships", label: "Genealogy edges", roles: ["editor", "admin"] },
+  { href: "/admin/media", label: "Media Library", roles: ["editor", "scholarly_reviewer", "admin"] },
   { href: "/admin/creation", label: "Creation Atlas", roles: ["editor", "scholarly_reviewer", "admin"] },
   { href: "/admin/moderation", label: "Moderation", roles: ["moderator", "admin"] },
   { href: "/admin/mufti", label: "Mufti Q&A", roles: ["moderator", "admin"] },
