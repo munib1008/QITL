@@ -3,7 +3,6 @@
  * first draft awaiting a qualified translator's review (as with the rest of the Arabic interface).
  * These are interface labels only: no story narration, translation or religious text lives here.
  */
-import type { Locale } from "@/lib/i18n/dict";
 
 const en = {
   player: {

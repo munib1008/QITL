@@ -3,7 +3,6 @@
  * by a qualified translator (as for the rest of the Arabic interface). These are interface words only: lesson text,
  * verses and advice come from reviewed database rows, never from this file.
  */
-import type { Locale } from "../dict";
 
 const en = {
   nav: "Life Guidance",

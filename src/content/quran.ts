@@ -110,3 +110,31 @@ export function surahList(): SurahMeta[] | null {
   metaCache = list.length === 114 ? list : null;
   return metaCache;
 }
+
+const Pos = z.tuple([z.number().int().min(1).max(114), z.number().int().min(1).max(286)]);
+const StructureSchema = z.object({
+  source: z.string(),
+  license: z.string().regex(/Creative Commons Attribution 3\.0/),
+  url: z.string().url(),
+  sha256: z.string().regex(/^[0-9a-f]{64}$/),
+  juz: z.array(Pos).length(30),
+  hizbQuarters: z.array(Pos).length(240),
+  pages: z.array(Pos).length(604),
+});
+export type QuranStructure = z.infer<typeof StructureSchema>;
+
+let structureCache: QuranStructure | null | undefined;
+/**
+ * Juz, hizb-quarter and mushaf-page boundaries (content/quran/structure.json, from Tanzil's quran-data.js under CC BY
+ * 3.0, written by scripts/import-quran.ts). Null when absent or malformed: the reader then shows no markers.
+ */
+export function quranStructure(): QuranStructure | null {
+  if (structureCache !== undefined) return structureCache;
+  structureCache = null;
+  const p = join(dir, "structure.json");
+  if (!existsSync(p) || !load()) return structureCache;
+  const r = StructureSchema.safeParse(JSON.parse(readFileSync(p, "utf8")));
+  structureCache = r.success ? r.data : null;
+  if (!r.success) console.error("[quran] structure.json is malformed; reading divisions hidden");
+  return structureCache;
+}

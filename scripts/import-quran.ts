@@ -9,12 +9,17 @@
  *     pnpm tsx scripts/import-quran.ts --format tanzil-uthmani [--file <quran-uthmani.txt|.xml> --retrieved-from <url>] \
  *       --accept-terms (--pin | --expect-sha256 <hex>) [--version <label>] [--db]
  *
+ *   Reading divisions only (juz, hizb quarters, mushaf pages), from Tanzil's quran-data.js, for an existing Tanzil
+ *   import; quran.txt is not fetched, read for changes or written:
+ *     pnpm tsx scripts/import-quran.ts --structure-only --accept-terms
+ *
  * --accept-terms is required: it records that the owner read and accepts the provider's terms (Tanzil: CC BY 3.0,
  * verbatim only, https://tanzil.net/download/; King Fahd Complex: its published terms of use). Without it nothing is
  * fetched or written.
  *
  * Writes content/quran/quran.txt (surah|ayah|text, each ayah string exactly as the provider published it),
- * content/quran/surahs.json and content/quran/source.json (source, version, licence, checksums, retrieved date). With
+ * content/quran/surahs.json, content/quran/structure.json (Tanzil only: juz / hizb / page boundaries, numbers only,
+ * from the same project's metadata file under the same CC BY 3.0 licence) and content/quran/source.json (source, version, licence, checksums, retrieved date). With
  * --db it also records the source, the pinned source version (version, sha256, retrieved date and URL) and the verses
  * into Supabase (NEXT_PUBLIC_SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY).
  *
@@ -26,7 +31,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
 import { ImportRefused, parseFlags, requireEnv, requireHttps, sha256 } from "../src/lib/importers/common";
-import { QURAN_SOURCES, diffVerses, importQuran, parseQuran, parseTanzilMetadata, toPipeText, validateVerses, type QuranFormat, type SurahMeta } from "../src/lib/importers/quran";
+import { QURAN_SOURCES, diffVerses, importQuran, parseQuran, parseTanzilMetadata, parseTanzilStructure, toPipeText, validateVerses, type QuranFormat, type SurahMeta } from "../src/lib/importers/quran";
 import { supabaseSink } from "../src/lib/importers/supabase-sink";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -40,8 +45,33 @@ async function get(url: string): Promise<Buffer> {
   return Buffer.from(await r.arrayBuffer());
 }
 
+function writeStructure(js: string, surahs: SurahMeta[]) {
+  const structure = parseTanzilStructure(js, surahs);
+  mkdirSync(out, { recursive: true });
+  // One key per line, each list on a single line (numbers only; keeps the file small and diffable).
+  const doc: Record<string, unknown> = { ...structure, retrievedAt: new Date().toISOString() };
+  const body = Object.entries(doc).map(([k, v]) => `  ${JSON.stringify(k)}: ${JSON.stringify(v)}`);
+  writeFileSync(join(out, "structure.json"), `{\n${body.join(",\n")}\n}\n`);
+  console.log(`Structure: ${structure.juz.length} juz, ${structure.hizbQuarters.length} hizb quarters, ${structure.pages.length} pages (${structure.license}).`);
+}
+
+/** Juz / hizb / page boundaries for an existing Tanzil import. Never fetches or writes the text. */
+async function structureOnly() {
+  const manifest = JSON.parse(readFileSync(join(out, "source.json"), "utf8")) as { format?: string };
+  if (manifest.format !== "tanzil-uthmani") throw new ImportRefused("usage", "--structure-only needs an existing Tanzil import (content/quran/source.json).");
+  const js = (await get(TANZIL_META_URL)).toString("utf8");
+  const surahs = parseTanzilMetadata(js);
+  const local = JSON.parse(readFileSync(join(out, "surahs.json"), "utf8")) as Array<{ number: number; ayahs: number }>;
+  if (local.length !== 114 || surahs.some((s, i) => local[i]?.ayahs !== s.ayahCount)) throw new ImportRefused("mismatch", "quran-data.js ayah counts differ from content/quran/surahs.json. Nothing written.");
+  writeStructure(js, surahs);
+}
+
 async function main() {
   const f = parseFlags(process.argv.slice(2));
+  if (f.has("structure-only")) {
+    if (!f.has("accept-terms")) throw new ImportRefused("terms_not_accepted", `Read ${QURAN_SOURCES["tanzil-uthmani"].termsUrl}, then pass --accept-terms. Nothing fetched or written.`);
+    return structureOnly();
+  }
   const format = f.get("format") as QuranFormat | undefined;
   if (format !== "kfgqpc-hafs" && format !== "tanzil-uthmani") throw new ImportRefused("usage", "Pass --format kfgqpc-hafs or --format tanzil-uthmani (see the header of this script).");
   if (!f.has("accept-terms")) throw new ImportRefused("terms_not_accepted", `Read ${QURAN_SOURCES[format].termsUrl}, then pass --accept-terms. Nothing fetched or written.`);
@@ -55,7 +85,8 @@ async function main() {
   const checksum = sha256(raw);
   if (expect && checksum !== expect) throw new ImportRefused("checksum", `Checksum mismatch: got ${checksum}, expected ${expect}. Nothing written.`);
 
-  const metadata: SurahMeta[] | undefined = format === "tanzil-uthmani" ? parseTanzilMetadata((await get(TANZIL_META_URL)).toString("utf8")) : undefined;
+  const metadataJs = format === "tanzil-uthmani" ? (await get(TANZIL_META_URL)).toString("utf8") : undefined;
+  const metadata: SurahMeta[] | undefined = metadataJs ? parseTanzilMetadata(metadataJs) : undefined;
   const parsed = parseQuran({ format, raw, metadata, version: f.get("version") });
   if (!parsed.version) throw new ImportRefused("no_version", "Pass --version <label>: the source's version is required to pin the import.");
   validateVerses(parsed.verses, parsed.surahs);
@@ -119,6 +150,7 @@ async function main() {
       2,
     ) + "\n",
   );
+  if (metadataJs) writeStructure(metadataJs, surahs);
   console.log(`Imported ${parsed.verses.length} ayat from ${def.work}, version ${parsed.version}, source sha256 ${checksum}`);
 }
 

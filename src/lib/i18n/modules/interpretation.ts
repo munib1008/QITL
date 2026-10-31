@@ -3,7 +3,6 @@
  * English is the reviewed source; the Arabic strings are a first draft pending review by a qualified translator,
  * like the rest of the Arabic interface (src/lib/i18n/dict.ts). Urdu slots in as another key with the same shape.
  */
-import type { Locale } from "../dict";
 
 const en = {
   study: "Study",

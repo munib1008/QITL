@@ -636,7 +636,6 @@ export function StudyLayout({ target, locale, onClose, children }: { target: Stu
     if (!open) return;
     if (!opener.current && document.activeElement instanceof HTMLElement) opener.current = document.activeElement;
     heading.current?.focus();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, target?.surah, target?.ayah]);
 
   useEffect(() => {
