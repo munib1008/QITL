@@ -1,0 +1,177 @@
+{
+  "note": "Narrative passages found while reading the imported Quran text surah by surah that the inventory does not cover yet, and passages that were reviewed and deliberately not counted. The narrative total used by the coverage report is the inventory plus the 'toResearch' ranges. 'Narrative' is an editorial judgement, not a proof of completeness: the report says so.",
+  "toResearch": [
+    {
+      "ref": "2:217",
+      "label": "The question about fighting in the sacred month",
+      "why": "Tied to an occasion by later sources; the passage names no event."
+    },
+    {
+      "ref": "4:60-65",
+      "label": "Those who went to a false judge",
+      "why": "The occasion is given only by later sources."
+    },
+    {
+      "ref": "4:105-113",
+      "label": "The case of the one who wronged others and blamed the innocent",
+      "why": "The occasion is given only by later sources."
+    },
+    {
+      "ref": "5:11",
+      "label": "A people who intended to stretch out their hands",
+      "why": "No event is named; identification is from later sources."
+    },
+    {
+      "ref": "8:26",
+      "label": "The reminder of being few and weak in the land",
+      "why": "Relates to the period before the emigration; the passage names no place."
+    },
+    {
+      "ref": "9:13-15",
+      "label": "A people who broke their oaths and plotted to expel the Messenger",
+      "why": "Identification of the people and the plot is from later sources."
+    },
+    {
+      "ref": "16:106-110",
+      "label": "Those compelled to utter disbelief and those who emigrated after being tried",
+      "why": "The occasion is given only by later sources."
+    },
+    {
+      "ref": "17:60",
+      "label": "The vision shown as a trial",
+      "why": "Whether it is the Night Journey vision is disputed."
+    },
+    {
+      "ref": "17:73-77",
+      "label": "The attempt to tempt the Messenger away and to drive him from the land",
+      "why": "The occasion is given only by later sources."
+    },
+    {
+      "ref": "17:85",
+      "label": "The question about the Spirit",
+      "why": "The occasion is given only by later sources."
+    },
+    {
+      "ref": "33:28-34",
+      "label": "The Prophet's wives offered a choice",
+      "why": "A household matter; needs scholarly framing before it is an item."
+    },
+    {
+      "ref": "33:50-55",
+      "label": "Marriage permissions and the etiquette of visiting",
+      "why": "A household matter; needs scholarly framing before it is an item."
+    },
+    {
+      "ref": "48:10-17",
+      "label": "The pledge and those left behind",
+      "why": "Linked to Hudaybiyyah by later sources; the passage names no event."
+    },
+    {
+      "ref": "49:6-8",
+      "label": "The report brought by a wrongdoer",
+      "why": "The occasion is given only by later sources."
+    },
+    {
+      "ref": "54:1-2",
+      "label": "The Hour has drawn near and the moon was split",
+      "why": "Whether this is a past event is disputed among interpreters."
+    },
+    {
+      "ref": "60:1-3",
+      "label": "Those who sent news to the enemy",
+      "why": "The occasion is given only by later sources."
+    },
+    {
+      "ref": "60:10-11",
+      "label": "Believing women who came as emigrants",
+      "why": "The occasion is given only by later sources."
+    },
+    {
+      "ref": "62:11",
+      "label": "Those who left the gathering for trade",
+      "why": "The occasion is given only by later sources."
+    },
+    {
+      "ref": "63:1-8",
+      "label": "The hypocrites and what they said about the city",
+      "why": "The occasion is given only by later sources."
+    },
+    {
+      "ref": "66:1-5",
+      "label": "The Prophet and his wives: a matter and its repentance",
+      "why": "A household matter; needs scholarly framing before it is an item."
+    },
+    {
+      "ref": "74:11-26",
+      "label": "The one created alone who plotted",
+      "why": "His identity is given only by later sources."
+    },
+    {
+      "ref": "93:1-11",
+      "label": "The oath by the morning and the reassurance",
+      "why": "Its occasion (a pause in revelation) is given only by later sources."
+    },
+    {
+      "ref": "96:6-19",
+      "label": "The one who forbids a servant from praying",
+      "why": "His identity is given only by later sources."
+    },
+    {
+      "ref": "108:1-3",
+      "label": "The gift of abundance",
+      "why": "The occasion is given only by later sources."
+    },
+    {
+      "ref": "109:1-6",
+      "label": "The declaration to the disbelievers",
+      "why": "The occasion is given only by later sources."
+    }
+  ],
+  "reviewedNotCounted": [
+    {
+      "ref": "7:44-53",
+      "label": "The exchange between the people of the Garden and the people of the Fire",
+      "reason": "A scene of the Hereafter: belongs to the Last Hour explorer, not the timeline."
+    },
+    {
+      "ref": "34:31-33",
+      "label": "The disputing of the disbelievers on the Day",
+      "reason": "A scene of the Hereafter."
+    },
+    {
+      "ref": "37:50-61",
+      "label": "The two companions, one in the Garden",
+      "reason": "A scene of the Hereafter."
+    },
+    {
+      "ref": "40:47-52",
+      "label": "Those arguing in the Fire",
+      "reason": "A scene of the Hereafter."
+    },
+    {
+      "ref": "4:163-165",
+      "label": "A list of the prophets to whom revelation was sent",
+      "reason": "A list of names without a narrative; used by the Prophets track for the names only."
+    },
+    {
+      "ref": "6:87-90",
+      "label": "The continuation of the list of prophets and their forebears",
+      "reason": "A list (the names in 6:84-86 are already used by the Prophets track); the lineage belongs to the genealogy module, which needs its own cited claims."
+    },
+    {
+      "ref": "25:4-8",
+      "label": "Accusations made against the Messenger",
+      "reason": "Statements of opposition, not an event."
+    },
+    {
+      "ref": "34:34-35",
+      "label": "The wealthy of every town reject the warner",
+      "reason": "A general statement, not an event."
+    },
+    {
+      "ref": "38:55-64",
+      "label": "The people of the Fire disputing",
+      "reason": "A scene of the Hereafter."
+    }
+  ]
+}

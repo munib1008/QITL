@@ -42,6 +42,9 @@ const TABLE = {
   shifa_entry: "shifa_entries",
   shifa_safety_note: "shifa_safety_notes",
   shifa_link: "shifa_links",
+  // Complete Timeline & Event Universe (each is reviewed under its own entity type)
+  event_identification: "event_identifications",
+  event_connection: "event_connections",
   // Life Through the Ages (publishing also needs the religious and/or historical-scientific review).
   ...RECORD_TYPES,
 } as const;

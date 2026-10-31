@@ -23,15 +23,20 @@ export interface PublishedEvent {
   evidence_claims: { evidence: EvidenceKind } | null;
 }
 
-/** Published events (never the Last Hour, which has no place on a dated timeline). */
-export async function publishedEvents(): Promise<PublishedEvent[] | null> {
+/**
+ * Published events (never the Last Hour, which has no place on a dated timeline). `universe: false` leaves out the
+ * items of the Complete Timeline (those with a track), which have their own view; the guided Journey uses that.
+ */
+export async function publishedEvents(opts: { universe?: boolean } = {}): Promise<PublishedEvent[] | null> {
   const sb = getPublicSupabase();
   if (!sb) return null;
-  const { data, error } = await sb
+  let q = sb
     .from("historical_events")
     .select("id, slug, title, title_ar, summary, category, date_precision, relative_order, start_year, end_year, start_ah, end_ah, evidence_claims(evidence)")
     .eq("status", "published")
-    .in("category", ["sacred_history", "prophetic_life", "islamic_history"])
+    .in("category", ["sacred_history", "prophetic_life", "islamic_history"]);
+  if (opts.universe === false) q = q.is("track", null);
+  const { data, error } = await q
     .order("relative_order", { ascending: true, nullsFirst: false })
     .order("start_year", { ascending: true, nullsFirst: true })
     .limit(500);

@@ -2,6 +2,10 @@
 export const ROUTES = [
   "/",
   "/timeline",
+  "/timeline?view=complete",
+  "/timeline?view=complete&tracks=prophets,events",
+  "/admin/events/universe",
+  "/admin/events/coverage",
   "/prophets",
   "/prophets/nuh",
   "/prophets/yusuf",

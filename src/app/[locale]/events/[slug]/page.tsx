@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { StoryView } from "@/components/story/StoryView";
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
@@ -16,6 +16,9 @@ import { getPlayerBundle } from "@/lib/data/player";
 import { StoryPlayerSection } from "@/components/player/StoryPlayerSection";
 import { formatRange } from "@/lib/years";
 import type { EvidenceKind } from "@/content/labels";
+import { UniverseOnlyPage, UniverseSections, orderingText } from "@/components/timeline/UniverseSections";
+import { redirectTarget, universeEventBySlug } from "@/lib/events/universe";
+import { timelineStrings } from "@/lib/i18n/modules/timeline";
 
 export const revalidate = 300;
 
@@ -62,8 +65,8 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
   const t = eventStrings(locale);
   const u = uiStrings(locale);
   const en = englishContent(locale);
-  const e = await load(slug);
-  if (e === "not_configured")
+  const [e, uv] = await Promise.all([load(slug), universeEventBySlug(slug)]);
+  if (e === "not_configured" && !uv)
     return (
       <ReadingPage locale={locale} crumbs={[{ href: "/events", label: t.title }, { label: t.eventCrumb }]} title={t.event}>
         <div className="zq-pagebody">
@@ -71,9 +74,16 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
         </div>
       </ReadingPage>
     );
-  if (!e) notFound();
+  if ((!e || e === "not_configured") && !uv) {
+    // A merged-away event keeps its address: it redirects to the event it was merged into.
+    const to = await redirectTarget(slug);
+    if (to && to !== slug) redirect(`/events/${to}`);
+    notFound();
+  }
+  if (!e || e === "not_configured") return <UniverseOnlyPage u={uv!} locale={locale} />;
   const [story, player] = await Promise.all([getStory({ event: slug }), getPlayerBundle({ event: slug })]);
-  const when = formatRange(e.start_year, e.end_year, e.start_ah, e.end_ah, e.date_precision === "estimated") ?? u.precision[e.date_precision];
+  // Items of the Complete Timeline say how they are ordered; a year appears only for a historians' dated estimate.
+  const when = uv ? orderingText(uv, timelineStrings(locale)) : (formatRange(e.start_year, e.end_year, e.start_ah, e.end_ah, e.date_precision === "estimated") ?? u.precision[e.date_precision]);
   return (
     <ReadingPage
       locale={locale}
@@ -94,6 +104,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
     >
       <div className="pp-grid">
         <div>
+          {uv ? <UniverseSections u={uv} locale={locale} /> : null}
           {player?.scripts.length ? <StoryPlayerSection bundle={player} locale={locale} /> : null}
           {story.state === "ok" && story.story ? (
             <StoryView story={story.story} name={e.title} chapterKey={`event:${e.slug}`} />
