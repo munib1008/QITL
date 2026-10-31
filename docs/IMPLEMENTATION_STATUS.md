@@ -148,12 +148,13 @@ Migrations 1150–1600 are applied to Supabase and covered by `tests/db/producti
 | Qualified scholarly reviewers, translation reviewers and verified muftis | Every publish step; no religious content can go live without them |
 | Supabase Auth URL settings (Site URL and `/auth/callback` redirect) and the first admin grant | Sign-in on qitl.vercel.app |
 
-### Not built yet (the next sessions)
+### Superseded: "Not built yet"
 
-Story Production Studio (admin) and the server workers for Lara and TTS; the QITL Story Player (Read / Listen / Immersive,
-captions, ducking, preferences); the
-Creation Atlas pages, comparison and relationship graph; Mufti Q&A pages and admin assignment; the reviewed reference
-story for Nuh (needs real sources, review and a voice licence before it can exist).
+This list was true on 2026-10-31 morning. Since then the Story Production Studio and Story Player, Creation Atlas pages,
+Mufti Q&A and Dream Understanding pages, Life Guidance, Life Through the Ages, the Quran study panel, search, the media
+library, the Quran reader, three-language support and security hardening have all been built and merged. The authoritative,
+per-feature status is `docs/FEATURE_ACCEPTANCE_MATRIX.md`; what is still open is in `docs/MASTER_COMPLETION_BACKLOG.md`;
+how to deploy and what needs the owner is in `docs/PRODUCTION_READINESS.md`.
 
 ## Qira'at & Ahruf Learning Centre and the content licence registry (branch mod/qiraat, 2026-10-31)
 
