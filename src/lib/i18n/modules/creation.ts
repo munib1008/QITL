@@ -4,7 +4,6 @@
  * citation. English is the reviewed source; the Arabic strings are a first draft pending a qualified translator's
  * review, like the rest of the Arabic interface (src/lib/i18n/dict.ts).
  */
-import type { Locale } from "../dict";
 
 const en = {
   nav: { label: "Creation Atlas", note: "Humans, jinn, angels and more, with evidence" },

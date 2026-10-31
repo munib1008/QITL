@@ -21,8 +21,8 @@ export function Logo({
   return (
     <span className={`qitl-logo qitl-logo-${tone}`} style={{ ["--logo-h" as string]: `${height}px` }}>
       <span className="qitl-logo-mark">
-        {tone !== "dark" ? <Image className="qitl-logo-on-light" src="/brand/qitl-mark.webp" {...common} /> : null}
-        {tone !== "light" ? <Image className="qitl-logo-on-dark" src="/brand/qitl-mark-dark.webp" {...common} /> : null}
+        {tone !== "dark" ? <Image className="qitl-logo-on-light" src="/brand/qitl-mark.webp" {...common} alt={common.alt} /> : null}
+        {tone !== "light" ? <Image className="qitl-logo-on-dark" src="/brand/qitl-mark-dark.webp" {...common} alt={common.alt} /> : null}
       </span>
       <span className="qitl-word" aria-hidden="true">
         <b>QITL</b>

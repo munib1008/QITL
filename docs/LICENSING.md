@@ -17,6 +17,7 @@ not legal advice.
 | Source | Asset | Status | One-line reason | Evidence |
 |---|---|---|---|---|
 | Tanzil Quran Text (Uthmani 1.1) | text (Hafs) | CONDITIONAL (attribution recorded → allowed) | CC BY 3.0: verbatim copies only, credit Tanzil, link tanzil.net, keep the notice | https://tanzil.net/docs/text_license |
+| Tanzil Quran Metadata 1.0 (`quran-data.js`) | metadata: juz / hizb-quarter / page boundaries | CONDITIONAL (attribution shown → allowed) | The file's own header: "License: Creative Commons Attribution 3.0", © 2008-2009 Tanzil.info; numbers only | https://tanzil.net/res/text/metadata/quran-data.js |
 | King Fahd Complex developer platform | text: Hafs, Warsh, Shu'bah, Qalun, al-Susi, al-Bazzi, al-Duri | PERMISSION_REQUIRED | Files offered, but no licence or terms; footer "all rights reserved" | https://qurancomplex.gov.sa/quran-dev/ |
 | King Fahd Complex developer platform | fonts; Tafseer Muyassar | PERMISSION_REQUIRED | Same page, no licence | https://qurancomplex.gov.sa/quran-dev/ |
 | King Fahd Complex audio library | recordings: Hafs, Shu'bah, Qalun, al-Susi, al-Duri 'an Abi 'Amr | CONDITIONAL (no attribution yet → not allowed) | Free public use in apps, broadcast and websites, inside and outside KSA; hosting/redistribution not stated | https://qurancomplex.gov.sa/quran-audios/ |
@@ -44,6 +45,17 @@ not legal advice.
 - **Registry:** text / hafs, CONDITIONAL, attribution text recorded (so it is allowed for display). It is the one
   `quran_text_editions` row (Hafs 'an 'Asim, linked to the Tanzil source, source version `Uthmani 1.1`, sha256
   `bf4f57b9…312c8`).
+
+### Tanzil Quran Metadata (quran-data.js), version 1.0 — reading divisions
+- **File:** https://tanzil.net/res/text/metadata/quran-data.js (read 2026-10-31). The importer already fetched it for the
+  surah names. Its header reads "Quran Metadata (ver 1.0)", "Copyright (C) 2008-2009 Tanzil.info", "License: Creative
+  Commons Attribution 3.0": the same project and licence as the text.
+- **Used:** only the boundary numbers of the 30 juz, 240 hizb quarters and 604 Madinah-mushaf pages, saved by
+  `scripts/import-quran.ts` (`--structure-only` for an existing import) to `content/quran/structure.json` with the
+  file's sha256 and licence line. `quran.txt` is not touched. The importer refuses a metadata file whose header does
+  not state CC BY 3.0.
+- **Attribution:** the reader and the surah index print "Juz, hizb and page divisions: Tanzil Quran Metadata (CC BY
+  3.0)" beside the Tanzil text attribution.
 
 ### King Fahd Glorious Qur'an Printing Complex — developer platform
 - **Pages:** https://qurancomplex.gov.sa/quran-dev/ (read); https://qurancomplex.gov.sa/techquran/dev and

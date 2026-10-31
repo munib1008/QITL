@@ -19,6 +19,7 @@ import { muftiStrings } from "@/lib/i18n/modules/mufti";
 import { dreamStrings } from "@/lib/i18n/modules/dreams";
 import { DreamRequestForm } from "@/components/dreams/DreamRequestForm";
 import { CitationList } from "@/components/mufti/ui";
+import { quranHref } from "@/lib/refs";
 
 vi.mock("next/navigation", () => ({
   useRouter: () => ({ push: vi.fn(), replace: vi.fn(), refresh: vi.fn() }),
@@ -128,7 +129,9 @@ describe("Dream Centre schemas and references", () => {
 
   test("the Quranic examples are exactly the reviewed references, linked to the reader", () => {
     expect(QURAN_DREAM_REFERENCES.map(quranRefLabel)).toEqual(["Q 12:4–6", "Q 12:36–42", "Q 12:43–49", "Q 12:100", "Q 37:102–107", "Q 48:27"]);
-    expect(quranRefHref(QURAN_DREAM_REFERENCES[4])).toBe("/quran/37#ayah-102");
+    expect(quranRefHref(QURAN_DREAM_REFERENCES[4])).toBe("/quran/37#ayah-102-107");
+    expect(quranRefHref(QURAN_DREAM_REFERENCES[3])).toBe("/quran/12#ayah-100");
+    expect(QURAN_DREAM_REFERENCES.map(quranRefHref)).toEqual(QURAN_DREAM_REFERENCES.map((r) => quranHref(`${r.surah}:${r.from}-${r.to}`)));
   });
 
   test("hadith references carry no text", () => {

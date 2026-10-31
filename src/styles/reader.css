@@ -1,0 +1,44 @@
+/* ---------- Quran reader: navigation, divisions, progress (tokens only, logical properties) ---------- */
+.qr-tools { display: grid; gap: 12px; margin-block-end: 16px; }
+@media (min-width: 900px) { .qr-tools { grid-template-columns: minmax(0, 1fr) auto; align-items: end; } }
+.qr-jump { display: flex; flex-wrap: wrap; align-items: end; gap: 8px; margin: 0; }
+.qr-jump .zq-field { display: grid; gap: 4px; margin: 0; }
+.qr-jump label { font: 500 13px/18px var(--font-sans); color: var(--ink-muted); }
+.qr-jump select, .qr-jump input { min-height: var(--tap); }
+.qr-jump select { max-inline-size: 15rem; }
+.qr-jump input { inline-size: 6.5rem; }
+.qr-jump .zq-btn { min-height: var(--tap); }
+.qr-jump-err { flex-basis: 100%; margin: 0; }
+.qr-keys { margin: 0; font: 400 13px/18px var(--font-sans); color: var(--ink-muted); }
+.qr-keys kbd { font: 500 12px/1 var(--font-mono); padding: 2px 5px; border: 1px solid var(--hairline); border-radius: 4px; background: var(--surface-raised); color: var(--ink); }
+
+.qr-markers { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; padding: 0; list-style: none; }
+.qr-marker { display: inline-flex; align-items: center; min-height: 24px; padding-inline: 8px; border: 1px solid var(--hairline); border-radius: var(--radius-pill); font: 500 12px/1 var(--font-sans); color: var(--ink-muted); background: var(--surface-raised); }
+.qr-marker[data-kind="juz"] { border-color: var(--brass); color: var(--ink); }
+
+/* Long surahs: the browser skips layout and paint for ayat far off screen (find-in-page and #ayah-N anchors still work).
+   The rule is lifted while an ayah glows so its outer glow is not clipped. */
+.qr-list > .zq-ayah { content-visibility: auto; contain-intrinsic-size: auto 240px; }
+.qr-list > .zq-ayah.qr-flash, .qr-list > .zq-ayah:focus-within { content-visibility: visible; }
+.qr-list > .zq-ayah:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+.qr-list .zq-ar-quran { font-size: var(--qr-size, 32px); max-inline-size: var(--measure-arabic); }
+
+.qr-continue { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.qr-continue h2, .qr-continue h3 { margin: 0; font: 600 16px/22px var(--font-sans); }
+.qr-continue .zq-meta { margin: 0; }
+.qr-resume { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-block-end: 12px; padding: 10px 14px; border: 1px solid var(--hairline); border-radius: var(--radius-md); background: var(--surface-raised); }
+.qr-resume p { margin: 0; }
+
+.qr-find { display: grid; gap: 6px; margin-block-end: 12px; max-inline-size: 32rem; }
+.qr-find input { min-height: var(--tap); }
+.qr-juz { margin-block: 16px; }
+.qr-juz summary { min-height: var(--tap); display: flex; align-items: center; cursor: pointer; font: 600 15px/22px var(--font-sans); }
+.qr-juz ol { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); gap: 6px; }
+.qr-juz a { display: flex; justify-content: space-between; gap: 8px; min-height: var(--tap); align-items: center; padding-inline: 10px; border: 1px solid var(--hairline); border-radius: var(--radius-md); background: var(--surface-raised); color: var(--ink); text-decoration: none; }
+
+.qr-saved { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.qr-saved li { display: grid; gap: 6px; padding: 12px 14px; border: 1px solid var(--hairline); border-radius: var(--radius-md); background: var(--surface-raised); }
+.qr-saved-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
+.qr-saved .zq-ar-quran { font-size: 24px; margin: 0; }
+.qr-sr { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.qr-list > .zq-ayah[data-light] .zq-actions { min-block-size: 44px; }

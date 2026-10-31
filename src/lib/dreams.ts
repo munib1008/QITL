@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { CitationInput } from "@/lib/mufti";
+import { ayahHash } from "@/lib/refs";
 
 /**
  * Dream Understanding Centre: request schemas and the reference lists shown on /dreams.
@@ -105,6 +106,7 @@ export const HADITH_DREAM_REFERENCES = [
 export function quranRefLabel(r: { surah: number; from: number; to: number }): string {
   return r.from === r.to ? `Q ${r.surah}:${r.from}` : `Q ${r.surah}:${r.from}–${r.to}`;
 }
-export function quranRefHref(r: { surah: number; from: number }): string {
-  return `/quran/${r.surah}#ayah-${r.from}`;
+/** Opens the reader on the passage; a range lights every ayah in it, like every other Quran link (src/lib/refs.ts). */
+export function quranRefHref(r: { surah: number; from: number; to?: number }): string {
+  return `/quran/${r.surah}${ayahHash(r.from, r.to)}`;
 }
