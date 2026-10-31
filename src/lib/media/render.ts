@@ -39,6 +39,16 @@ export function publicObjectUrl(supabaseUrl: string, path: string): string {
   return `${supabaseUrl.replace(/\/$/, "")}/storage/v1/object/public/media/${path.split("/").map(encodeURIComponent).join("/")}`;
 }
 
+/** The video types a published clip can have (the media_public view only lists these for kind video). */
+export const VIDEO_MIME_TYPES = ["video/webm", "video/mp4"] as const;
+export const isVideoRow = (row: Pick<PublicMediaRow, "mime_type">): boolean => (VIDEO_MIME_TYPES as readonly string[]).includes(row.mime_type);
+
+/** The public URL and type of a published clip's file; null for anything still in pending/ or not a video. */
+export function videoSource(supabaseUrl: string, row: Pick<PublicMediaRow, "storage_path" | "mime_type">): { url: string; type: string } | null {
+  if (!isVideoRow(row) || !row.storage_path.startsWith("assets/")) return null;
+  return { url: publicObjectUrl(supabaseUrl, row.storage_path), type: row.mime_type };
+}
+
 /** Variants sorted by width, each with its public URL. Only files outside pending/ have public URLs. */
 export function variantUrls(supabaseUrl: string, row: Pick<PublicMediaRow, "storage_path" | "variants">): Array<{ w: number; h: number; url: string }> {
   if (!row.storage_path.startsWith("assets/")) return [];

@@ -6,7 +6,7 @@ import type { PublicMediaRow } from "@/lib/media/render";
 import { MediaFigure } from "./MediaFigure";
 
 /**
- * A Media Library image for public pages. It reads the media_public view, which holds only published assets with an
+ * A Media Library image (or short video clip: it renders a player for a published WebM/MP4 asset) for public pages. It reads the media_public view, which holds only published assets with an
  * active file outside pending/ and a licence that allows display (rechecked on every read, so a revoked licence hides
  * the image). Anything else renders the fallback (by default nothing): never a placeholder pretending to be the image.
  */

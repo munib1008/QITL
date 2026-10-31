@@ -66,6 +66,35 @@ Override any HTTP bucket with `RATE_LIMIT_<BUCKET>="<n>/<seconds>"`. The IP is t
 host that does not set that header itself (Vercel, Netlify and most proxies do), clients could rotate it, so keep the
 host's own DDoS protection on. A failing remote store fails open and logs `rate_limit_store_failed`.
 
+## Media uploads: images and video clips
+
+Staff-only (`/api/admin/media/upload`, editor role). The type is decided by the file's magic bytes; the file name and the
+browser's declared type are never trusted, an executable, archive, script or PDF signature is refused, and a declared type
+that disagrees with the bytes is refused (`type_mismatch`).
+
+- **Images:** PNG, JPEG, WebP, GIF, SVG. Re-encoded (EXIF/GPS and appended data dropped), SVG sanitised, WebP renditions.
+- **Video clips (new):** WebM (EBML header `1A45DFA3`, DocType `webm`, VP8/VP9/AV1) and MP4 (an `ftyp` box at offset 4 with
+  an MP4 brand, H.264 `avc1`/`avc3`) only. QuickTime, 3GP, HEIC, Matroska, Ogg, H.265 and audio-only files are refused.
+  At most **8 MB**, 16 to 4096 px a side, and at most **20 seconds when the container states its duration** (read from the
+  WebM `Info/Duration` or the MP4 `mvhd`, no decoding). A WebM written by a live recorder often has no duration: the limit
+  for such a clip is bytes-only (8 MB); this is stated, not hidden. The duration is checked at upload and not stored.
+- **No transcoding.** There is no ffmpeg in the stack, so a clip is stored byte for byte: it is not re-encoded or re-muxed,
+  its metadata (an MP4 `udta`/`meta` box can hold GPS or device data) is not stripped, no poster or rendition is made, and
+  a clip can carry an audio track that the reviewer must listen to. Reviewers see and hear exactly what the public would.
+  The container parse is a header check, not a proof that the stream is well formed; malware scanning (`MALWARE_SCAN_URL`)
+  applies to clips like images, and without it an admin must acknowledge "scan skipped".
+- **Same gates as images:** private `pending/` folder, scan, non-figurative confirmation (a clip adds the required tick
+  "This clip depicts no prophet, angel, jinn or unseen being", stored as the same `non_figurative_confirmed` stamp of the
+  file version), a religious review by a scholarly reviewer who did not upload it, an editor's approval stamped by the
+  database, a cleared licence, then publish. Nothing is seeded; no clip exists in the repository content. `design/concepts`
+  stays blocked from the site (`tests/unit/concepts.test.ts`).
+- **Database rules (migration `20261031002510_media_video.sql`):** the mime allow-list, the file extension matching the type,
+  8 MB for a clip, no renditions, and a video asset needs a description of at least 20 characters and an English caption;
+  an asset's kind (`video`) must match its file, so a file swap cannot turn an image into a clip.
+- **Playback:** `<video controls preload="metadata" playsinline>`, no autoplay, no loop, no poster; the description is shown
+  as text beside the player and linked with `aria-describedby`, then the caption and credit. `media-src` is unchanged
+  (`'self' blob: <supabase>`): the storage origin only, no third party.
+
 ## Content sanitisation
 
 Every place editor or user text reaches the page:
@@ -97,7 +126,7 @@ There is no `dangerouslySetInnerHTML` with user or editor content (only the cons
 
 - Pages are dynamically rendered because of the nonce (see CSP, "Cost").
 - In-memory rate limits are per server instance; use the Upstash-compatible store for a hard limit across instances.
-- Upload malware scanning is still not implemented (uploads are staff-only, image/PDF/audio types).
+- Upload malware scanning needs `MALWARE_SCAN_URL` (uploads are staff-only: images, video clips, PDF, audio); without it an admin acknowledges each skipped scan. Video clips are not transcoded or stripped of metadata (see "Media uploads").
 - Reviewer identity verification remains a manual admin process by design.
 - pg_cron must be enabled on the Supabase project for retention to run (`docs/OPERATIONS.md`); without it the jobs must
   be run by another trusted scheduler.
