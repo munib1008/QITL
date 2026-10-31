@@ -33,7 +33,7 @@ export function JourneyHeader({ locale }: { locale: string }) {
   return (
     <header className="zq-nav">
       <Link className="zq-brand" href="/" aria-label="QITL — Quran in Timeline, home">
-        <Logo height={52} tone="dark" priority />
+        <Logo height={52} tone="dark" priority tagline={t.brandTagline} />
       </Link>
       <nav className="zq-links" aria-label="Main">
         <a href="#journey">{t.nav.journey}</a>
@@ -57,7 +57,7 @@ export function ReadingHeader({ locale, query }: { locale: string; query?: strin
   return (
     <header className="pp-nav">
       <Link className="pp-brand" href="/" aria-label="QITL — Quran in Timeline, home">
-        <Logo height={44} priority />
+        <Logo height={44} priority tagline={t.brandTagline} />
       </Link>
       <SearchField maxWidth={420} defaultValue={query} id="hdr-q" />
       <div className="pp-navact">

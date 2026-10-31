@@ -114,8 +114,18 @@
 .qp-section h3 { margin: 0; font: 600 20px/28px var(--font-display); }
 
 /* Logo: the right variant per surface */
-.qitl-logo { display: inline-flex; align-items: center; }
-.qitl-logo img { height: 100%; width: auto; }
+.qitl-logo { display: inline-flex; align-items: center; gap: calc(var(--logo-h, 44px) * .22); height: var(--logo-h, 44px); }
+.qitl-logo-mark { display: inline-flex; height: 100%; flex: none; }
+.qitl-logo-mark img { height: 100%; width: auto; }
+/* Live-text wordmark: the emblem's serif, gold rule, theme-aware ink. */
+.qitl-word { display: inline-flex; flex-direction: column; justify-content: center; line-height: 1; white-space: nowrap; }
+.qitl-word b { font: 600 calc(var(--logo-h, 44px) * .5)/1 var(--font-display); letter-spacing: .14em; color: var(--brand); margin-inline-end: -.14em; }
+.qitl-word small { margin-top: calc(var(--logo-h, 44px) * .1); padding-top: calc(var(--logo-h, 44px) * .07); border-top: 1px solid var(--brass); font: 600 calc(var(--logo-h, 44px) * .2)/1 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-muted); }
+[dir="rtl"] .qitl-word small { letter-spacing: 0; text-transform: none; }
+.qitl-logo-dark .qitl-word b, [data-theme="dark"] .qitl-logo-auto .qitl-word b, [data-theme="journey"] .qitl-word b { color: #f2f5ee; }
+.qitl-logo-dark .qitl-word small, [data-theme="journey"] .qitl-word small { color: rgba(242, 245, 238, .72); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) .qitl-logo-auto .qitl-word b { color: #f2f5ee; } }
+@media (max-width: 359px) { .qitl-word small { display: none; } }
 .qitl-logo-auto .qitl-logo-on-dark { display: none; }
 [data-theme="dark"] .qitl-logo-auto .qitl-logo-on-light, [data-theme="journey"] .qitl-logo-auto .qitl-logo-on-light { display: none; }
 [data-theme="dark"] .qitl-logo-auto .qitl-logo-on-dark, [data-theme="journey"] .qitl-logo-auto .qitl-logo-on-dark { display: block; }

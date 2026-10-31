@@ -26,6 +26,14 @@ async function rgba(input) {
 async function recolour(input) {
   const { data, info } = await rgba(input);
   for (let i = 0; i < data.length; i += 4) {
+    const [r, g, b] = [data[i], data[i + 1], data[i + 2]];
+    // The source was cut from a white ground: neutral light-grey edge pixels are that ground's halo. Invisible on
+    // light surfaces, they read as a grey fringe on dark ones, so the dark variant drops them (cream pages and gold
+    // are warm, not neutral, and stay).
+    if (data[i + 3] > 0 && Math.max(r, g, b) - Math.min(r, g, b) < 14 && Math.min(r, g, b) > 150) {
+      data[i + 3] = 0;
+      continue;
+    }
     if (data[i + 3] > 0 && isGreenInk(data[i], data[i + 1], data[i + 2])) {
       // Keep shading: lighter for lighter greens.
       const shade = Math.min(1, 0.82 + (data[i + 1] / 140) * 0.18);

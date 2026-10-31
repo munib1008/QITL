@@ -1,16 +1,33 @@
 import Image from "next/image";
 
 /**
- * The approved QITL logo. "auto" shows the green artwork on light surfaces and the ivory variant on dark ones
- * (dark theme, or the journey's dark ground); the two images swap with CSS, so the right one paints first.
+ * The QITL lockup: the approved emblem (raster, from brand/source) beside a live-text wordmark. Text stays sharp at
+ * every size, follows the theme and can be localised; the raster wordmark in public/brand/qitl-logo*.png is kept for
+ * large uses (social card, print). "auto" shows the green emblem on light surfaces and the ivory one on dark ones.
  */
-export function Logo({ height = 44, tone = "auto", priority = false }: { height?: number; tone?: "auto" | "dark" | "light"; priority?: boolean }) {
-  const width = Math.round(height * 2.05);
-  const common = { width, height, priority, sizes: `${width}px` } as const;
+export function Logo({
+  height = 44,
+  tone = "auto",
+  priority = false,
+  tagline = "Quran in Timeline",
+}: {
+  height?: number;
+  tone?: "auto" | "dark" | "light";
+  priority?: boolean;
+  tagline?: string;
+}) {
+  const w = Math.round(height * 0.89);
+  const common = { width: w, height, priority, sizes: `${w}px`, alt: "QITL — Quran in Timeline" } as const;
   return (
-    <span className={`qitl-logo qitl-logo-${tone}`} style={{ height }}>
-      {tone !== "dark" ? <Image className="qitl-logo-on-light" src="/brand/qitl-logo.webp" alt="QITL — Quran in Timeline" {...common} /> : null}
-      {tone !== "light" ? <Image className="qitl-logo-on-dark" src="/brand/qitl-logo-dark.webp" alt="QITL — Quran in Timeline" {...common} /> : null}
+    <span className={`qitl-logo qitl-logo-${tone}`} style={{ ["--logo-h" as string]: `${height}px` }}>
+      <span className="qitl-logo-mark">
+        {tone !== "dark" ? <Image className="qitl-logo-on-light" src="/brand/qitl-mark.webp" {...common} /> : null}
+        {tone !== "light" ? <Image className="qitl-logo-on-dark" src="/brand/qitl-mark-dark.webp" {...common} /> : null}
+      </span>
+      <span className="qitl-word" aria-hidden="true">
+        <b>QITL</b>
+        <small>{tagline}</small>
+      </span>
     </span>
   );
 }

@@ -80,7 +80,7 @@ body { padding-bottom: calc(var(--bottom-nav-h) + var(--safe-bottom)); }
 }
 @media (max-width: 479px) {
   .pp-nav { min-height: 56px; padding-block: 6px; }
-  .pp-brand .qitl-logo { height: 32px !important; }
+  .pp-brand .qitl-logo { --logo-h: 36px !important; }
 }
 
 /* ---------- Footer: comfortable targets on touch ---------- */
