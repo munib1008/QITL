@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
+import { headers } from "next/headers";
 import { fontVariables } from "../fonts";
 import { getDict, isLocale, LOCALES } from "@/lib/i18n";
 import { creationStrings } from "@/lib/i18n/modules/creation";
@@ -11,6 +12,7 @@ import { qiraatStrings } from "@/lib/i18n/modules/qiraat";
 import { lifestyleStrings } from "@/lib/i18n/modules/lifestyle";
 import { muftiT } from "@/lib/i18n/modules/mufti";
 import { dreamsT } from "@/lib/i18n/modules/dreams";
+import { Analytics } from "@/components/shell/Analytics";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -48,13 +50,16 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const { dir, t } = getDict(locale);
+  // The per-request CSP nonce from the middleware (src/middleware.ts). Reading it makes every page render per request:
+  // a nonce-based policy cannot be served from a prebuilt HTML file (docs/SECURITY.md, "CSP").
+  const nonce = (await headers()).get("x-nonce") ?? undefined;
   const creation = creationStrings(locale).nav;
   const mufti = muftiT(locale).explore;
   const dreams = dreamsT(locale).explore;
   return (
     <html lang={locale} dir={dir} className={fontVariables} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
+        <script nonce={nonce} dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
       </head>
       <body>
         <a className="zq-skip" href="#main">
@@ -85,6 +90,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           ]}
         />
         <ServiceWorker />
+        <Analytics />
       </body>
     </html>
   );

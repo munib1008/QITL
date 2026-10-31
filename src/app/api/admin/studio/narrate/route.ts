@@ -1,5 +1,5 @@
 import type { NextRequest } from "next/server";
-import { dbError, fail, isResponse, json, parseBody } from "@/lib/api";
+import { dbError, dbThrottle, fail, isResponse, json, parseBody } from "@/lib/api";
 import { requireRole } from "@/lib/admin";
 import { MAX_ATTEMPTS, sha256 } from "@/lib/production/lara";
 import { EXT, getNarrationProvider, narrationIdempotencyKey } from "@/lib/production/narration";
@@ -18,6 +18,8 @@ export async function POST(req: NextRequest) {
   if (!provider) return fail(503, "not_configured", "No narration provider is configured on this deployment.");
   const a = await requireRole(req, "audio_producer");
   if (isResponse(a)) return a;
+  const throttled = await dbThrottle(a.sb, "narrate");
+  if (throttled) return throttled;
   const b = await parseBody(req, NarrateRequest);
   if (isResponse(b)) return b;
 

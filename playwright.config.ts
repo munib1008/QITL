@@ -20,7 +20,8 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
     // Test-only fixtures (placeholder data, ignored when Supabase is configured): the /player-fixture page and the
     // synthetic genealogy graph (src/lib/e2e-fixtures.ts).
-    env: { QITL_E2E_FIXTURES: "1" },
+    // CSP_MODE=report-only trials a policy change without enforcing it (tests/e2e/csp.spec.ts runs in both modes).
+    env: { QITL_E2E_FIXTURES: "1", ...(process.env.CSP_MODE ? { CSP_MODE: process.env.CSP_MODE } : {}) },
     timeout: 120_000,
   },
 });

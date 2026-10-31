@@ -1,31 +1,16 @@
 import type { NextConfig } from "next";
 
 const dev = process.env.NODE_ENV !== "production";
-const supabase = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
-const tiles = process.env.NEXT_PUBLIC_MAP_TILES_URL ? new URL(process.env.NEXT_PUBLIC_MAP_TILES_URL).origin : "";
 
 /**
- * Content Security Policy. Scripts: self plus inline (Next's hydration payload and the pre-paint theme script);
- * a nonce-based policy is tracked in docs/security/threat-model.md. No third-party script origins.
+ * Security headers for every response. The Content-Security-Policy of pages is NOT set here: the middleware builds it
+ * per request with a nonce (src/middleware.ts, src/lib/security/csp.ts). Responses the middleware does not render
+ * (API JSON, route handlers, files) get API_CSP below, under which nothing can run.
  */
-const csp = [
-  "default-src 'self'",
-  `script-src 'self' 'unsafe-inline'${dev ? " 'unsafe-eval'" : ""}`,
-  "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob:" + (supabase ? ` ${supabase}` : "") + (tiles ? ` ${tiles}` : ""),
-  "font-src 'self'",
-  "connect-src 'self'" + (supabase ? ` ${supabase} ${supabase.replace(/^http/, "ws")}` : "") + (tiles ? ` ${tiles}` : ""),
-  "worker-src 'self' blob:",
-  "frame-ancestors 'none'",
-  "base-uri 'self'",
-  "form-action 'self'",
-  "object-src 'none'",
-  // Only on an https site: on plain-http localhost it would break the service worker and assets.
-  ...(!dev && (process.env.NEXT_PUBLIC_SITE_URL ?? "").startsWith("https://") ? ["upgrade-insecure-requests"] : []),
-].join("; ");
+// Kept in step with API_CSP in src/lib/security/csp.ts (tests/unit/security.test.ts checks they match).
+const API_CSP = "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'";
 
 const securityHeaders = [
-  { key: "Content-Security-Policy", value: csp },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "DENY" },
@@ -42,7 +27,13 @@ const config: NextConfig = {
   poweredByHeader: false,
   typedRoutes: false,
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [
+      { source: "/:path*", headers: securityHeaders },
+      { source: "/api/:path*", headers: [{ key: "Content-Security-Policy", value: API_CSP }] },
+      { source: "/auth/:path*", headers: [{ key: "Content-Security-Policy", value: API_CSP }] },
+      // The service worker script: its own policy governs the worker; it only fetches same-origin pages.
+      { source: "/sw.js", headers: [{ key: "Content-Security-Policy", value: "default-src 'self'; script-src 'self'" }] },
+    ];
   },
 };
 

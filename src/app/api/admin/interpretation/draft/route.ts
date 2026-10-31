@@ -1,7 +1,7 @@
 import type { NextRequest } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
-import { dbError, fail, isResponse, json, parseBody } from "@/lib/api";
+import { dbError, dbThrottle, fail, isResponse, json, parseBody } from "@/lib/api";
 import { requireRole } from "@/lib/admin";
 import { ayahArabic, quranSource } from "@/content/quran";
 import { DEFAULT_MODEL, PROMPT_VERSION, SYSTEM_PROMPT, buildDraftPrompt, checkDraft, inputsRecord, type DraftInputs } from "@/lib/interpretation/draft";
@@ -31,6 +31,8 @@ type Ed = { id: string; title: string; registry_status: string; publication_year
 export async function POST(req: NextRequest) {
   const a = await requireRole(req, "editor");
   if (isResponse(a)) return a;
+  const throttled = await dbThrottle(a.sb, "ai_draft");
+  if (throttled) return throttled;
   const key = process.env.ANTHROPIC_API_KEY;
   if (!key) return fail(503, "ai_not_configured", "AI-assisted drafting is off: ANTHROPIC_API_KEY is not set on this deployment.");
   const b = await parseBody(req, Body);

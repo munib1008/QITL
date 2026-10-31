@@ -4,6 +4,8 @@ import type { SupabaseClient, User } from "@supabase/supabase-js";
 import type { z, ZodTypeAny } from "zod";
 import { publicEnv } from "@/lib/env";
 import { getUser } from "@/lib/supabase/server";
+import { logError } from "@/lib/observability/errors";
+import { check as rateCheck } from "@/lib/security/rate-limit";
 
 export type ApiError = { error: string; code: string; issues?: unknown };
 
@@ -42,16 +44,56 @@ export function sameOrigin(req: NextRequest): boolean {
 
 type Authed = { sb: SupabaseClient; user: User };
 
+/** 429 with Retry-After (seconds) and RateLimit-* headers. */
+export function rateLimited(retryAfter: number, limit?: number) {
+  const res = fail(429, "rate_limited", "Too many requests. Try again shortly.");
+  res.headers.set("Retry-After", String(Math.max(1, Math.ceil(retryAfter))));
+  if (limit !== undefined) {
+    res.headers.set("RateLimit-Limit", String(limit));
+    res.headers.set("RateLimit-Remaining", "0");
+  }
+  return res;
+}
+
 /**
  * Resolve the signed-in user for a mutation: 503 when not configured, 403 on a cross-site request,
- * 401 when signed out. Authorization beyond "signed in" is enforced by RLS in the database.
+ * 401 when signed out, 429 when this user is over the per-user rate limit (src/lib/security/rate-limit.ts).
+ * Authorization beyond "signed in" is enforced by RLS in the database.
  */
 export async function requireUser(req: NextRequest, { mutation = true } = {}): Promise<Authed | NextResponse> {
   if (mutation && !sameOrigin(req)) return fail(403, "bad_origin", "Cross-site request refused.");
   const { sb, user } = await getUser();
   if (!sb) return notConfigured();
   if (!user) return fail(401, "unauthorized", "Sign in to do this.");
+  const limited = await userRateLimit(user.id, req.method);
+  if (limited) return limited;
   return { sb, user };
+}
+
+/** Per-user sliding window: every call counts toward "user", writes also toward "userMutation". */
+export async function userRateLimit(userId: string, method: string): Promise<NextResponse | null> {
+  const all = await rateCheck("user", userId);
+  if (!all.allowed) return rateLimited(all.retryAfter, all.limit);
+  if (method !== "GET" && method !== "HEAD") {
+    const w = await rateCheck("userMutation", userId);
+    if (!w.allowed) return rateLimited(w.retryAfter, w.limit);
+  }
+  return null;
+}
+
+/**
+ * The database throttle for costly actions (paid AI drafts, machine translation, narration, exports), per user,
+ * enforced in Postgres by public.throttle_action() so it holds across server instances. Null when allowed.
+ */
+export async function dbThrottle(sb: SupabaseClient, action: "ai_draft" | "translate" | "narrate" | "export"): Promise<NextResponse | null> {
+  const { error } = await sb.rpc("throttle_action", { p_action: action });
+  if (!error) return null;
+  // An older database without the function must not block staff work: log it and allow.
+  if (error.code === "PGRST202" || error.code === "42883") {
+    logError("db_throttle_missing", { code: error.code });
+    return null;
+  }
+  return dbError(error);
 }
 
 export async function parseBody<S extends ZodTypeAny>(req: NextRequest, schema: S): Promise<z.output<S> | NextResponse> {
@@ -76,14 +118,18 @@ export function parseQuery<S extends ZodTypeAny>(req: NextRequest, schema: S): z
 export function dbError(e: { code?: string; message?: string } | null | undefined) {
   const code = e?.code ?? "";
   const msg = e?.message ?? "";
-  if (code === "P0429" || msg.startsWith("rate_limited")) return fail(429, "rate_limited", "Too many requests. Try again in a minute.");
+  if (code === "P0429" || msg.startsWith("rate_limited")) {
+    const res = fail(429, "rate_limited", "Too many requests. Try again in a minute.");
+    res.headers.set("Retry-After", "60");
+    return res;
+  }
   if (code === "42501" || /row-level security|permission denied/.test(msg)) return fail(403, "forbidden", "You do not have permission to do this.");
   if (code === "23505") return fail(409, "duplicate", "That already exists.");
   if (code === "23503") return fail(422, "missing_reference", "Something this refers to does not exist.");
   if (code === "23514") return fail(422, "constraint", "That would break a data rule.");
   if (code === "P0001") return fail(422, "rule", msg.replace(/^.*?: /, "") || "That would break an editorial rule.");
   if (code === "PGRST116") return fail(404, "not_found", "Not found.");
-  console.error("[api] database error", code);
+  logError("db_error", { code });
   return fail(500, "server_error", "Something went wrong on our side.");
 }
 

@@ -23,7 +23,13 @@ export function Markdown({ source }: { source: string }) {
   );
 }
 
+/**
+ * Links allowed in rendered Markdown: same-site paths, in-page anchors and https URLs. Everything else is dropped
+ * (the link text stays as plain text): javascript:, data:, vbscript:, http:, protocol-relative "//host", and
+ * backslash or control-character tricks such as "/\host" that browsers treat as another origin.
+ */
 export function safeHref(href: string): string | null {
+  if (/[\\\u0000-\u001f\u007f]/.test(href)) return null;
   if (href.startsWith("/") && !href.startsWith("//")) return href;
   if (href.startsWith("#")) return href;
   try {
