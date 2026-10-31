@@ -59,6 +59,7 @@ const PUBLIC_BY_DESIGN: Record<string, string> = {
   taggings: "link table",
   asset_links: "link table",
   topics: "taxonomy",
+  event_universe_stats: "per-track counts only (published, under review); no titles or content",
   translator_profiles: "translator biographies",
   translation_editions: "edition catalogue; the text itself is licence-gated",
   riwayat: "reference catalogue of riwayat",

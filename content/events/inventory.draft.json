@@ -1,0 +1,1897 @@
+{
+ "status": "draft",
+ "note": "Draft inventory shells: title, track and verified verse ranges only. Every row is seeded as status 'draft'; nothing here is public until reviewed.",
+ "items": [
+  {
+   "slug": "adam",
+   "title": "Adam: the first human and the test in the garden",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:30-39",
+    "3:59",
+    "7:11-25",
+    "15:26-44",
+    "20:115-123",
+    "38:71-85"
+   ]
+  },
+  {
+   "slug": "idris",
+   "title": "Idris",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "19:56-57",
+    "21:85-86"
+   ]
+  },
+  {
+   "slug": "nuh",
+   "title": "Nuh and his people",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:59-64",
+    "10:71-73",
+    "11:25-49",
+    "23:23-30",
+    "26:105-122",
+    "29:14-15",
+    "37:75-82",
+    "54:9-17",
+    "71:1-28"
+   ]
+  },
+  {
+   "slug": "hud",
+   "title": "Hud",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:65-72",
+    "11:50-60",
+    "26:123-140",
+    "46:21-26"
+   ]
+  },
+  {
+   "slug": "salih",
+   "title": "Salih",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:73-79",
+    "11:61-68",
+    "26:141-159",
+    "27:45-53",
+    "54:23-31",
+    "91:11-15"
+   ]
+  },
+  {
+   "slug": "ibrahim",
+   "title": "Ibrahim",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:124-129",
+    "2:258-260",
+    "6:74-83",
+    "11:69-76",
+    "14:35-41",
+    "15:51-60",
+    "19:41-50",
+    "21:51-73",
+    "22:26-29",
+    "26:69-104",
+    "29:16-27",
+    "37:83-113",
+    "51:24-37",
+    "60:4-6"
+   ]
+  },
+  {
+   "slug": "lut",
+   "title": "Lut",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:80-84",
+    "11:77-83",
+    "15:61-77",
+    "21:74-75",
+    "26:160-175",
+    "27:54-58",
+    "29:28-35",
+    "37:133-138",
+    "54:33-39"
+   ]
+  },
+  {
+   "slug": "ismail",
+   "title": "Ismail",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:125-129",
+    "14:35-41",
+    "19:54-55",
+    "21:85-86",
+    "38:48"
+   ]
+  },
+  {
+   "slug": "ishaq",
+   "title": "Ishaq",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "11:69-73",
+    "19:49-50",
+    "21:72-73",
+    "29:27",
+    "37:112-113",
+    "38:45-47"
+   ]
+  },
+  {
+   "slug": "yaqub",
+   "title": "Yaqub",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:132-133",
+    "19:49-50",
+    "21:72-73",
+    "29:27",
+    "38:45-47"
+   ]
+  },
+  {
+   "slug": "yusuf",
+   "title": "Yusuf",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "12:4-101",
+    "40:34"
+   ]
+  },
+  {
+   "slug": "ayyub",
+   "title": "Ayyub",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "21:83-84",
+    "38:41-44"
+   ]
+  },
+  {
+   "slug": "shuayb",
+   "title": "Shuayb",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:85-93",
+    "11:84-95",
+    "26:176-191",
+    "29:36-37"
+   ]
+  },
+  {
+   "slug": "musa",
+   "title": "Musa",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:49-61",
+    "5:20-26",
+    "7:103-162",
+    "10:75-93",
+    "14:5-8",
+    "17:101-104",
+    "18:60-82",
+    "20:9-98",
+    "23:45-49",
+    "26:10-68",
+    "27:7-14",
+    "28:3-43",
+    "40:23-46",
+    "43:46-56",
+    "37:114-122",
+    "61:5",
+    "79:15-26"
+   ]
+  },
+  {
+   "slug": "harun",
+   "title": "Harun",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:142",
+    "19:53",
+    "20:29-36",
+    "20:90-94",
+    "25:35",
+    "26:12-13",
+    "28:34-35",
+    "37:114-122"
+   ]
+  },
+  {
+   "slug": "dhul-kifl",
+   "title": "Dhul-Kifl",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "21:85-86",
+    "38:48"
+   ]
+  },
+  {
+   "slug": "dawud",
+   "title": "Dawud",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:251",
+    "21:78-80",
+    "27:15-16",
+    "34:10-11",
+    "38:17-26"
+   ]
+  },
+  {
+   "slug": "sulayman",
+   "title": "Sulayman",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:102",
+    "21:78-82",
+    "27:15-44",
+    "34:12-14",
+    "38:30-40"
+   ]
+  },
+  {
+   "slug": "ilyas",
+   "title": "Ilyas",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "6:85",
+    "37:123-132"
+   ]
+  },
+  {
+   "slug": "alyasa",
+   "title": "Alyasa",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "6:86",
+    "38:48"
+   ]
+  },
+  {
+   "slug": "yunus",
+   "title": "Yunus",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "10:98",
+    "21:87-88",
+    "37:139-148",
+    "68:48-50"
+   ]
+  },
+  {
+   "slug": "zakariyya",
+   "title": "Zakariyya",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "3:37-41",
+    "6:85",
+    "19:2-15",
+    "21:89-90"
+   ]
+  },
+  {
+   "slug": "yahya",
+   "title": "Yahya",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "3:39",
+    "6:85",
+    "19:7-15",
+    "21:90"
+   ]
+  },
+  {
+   "slug": "isa",
+   "title": "Isa",
+   "track": "prophets",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:87",
+    "2:253",
+    "3:45-59",
+    "4:157-159",
+    "4:171-172",
+    "5:46",
+    "5:110-120",
+    "19:27-36",
+    "43:57-65",
+    "57:27",
+    "61:6",
+    "61:14"
+   ]
+  },
+  {
+   "slug": "muhammad",
+   "title": "Muhammad, the Messenger, named in the Quran",
+   "track": "prophets",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "3:144",
+    "33:40",
+    "47:2",
+    "48:29",
+    "61:6"
+   ]
+  },
+  {
+   "slug": "habil-and-qabil",
+   "title": "Habil and Qabil, the two sons of Adam",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "later_tradition",
+   "refs": [
+    "5:27-31"
+   ]
+  },
+  {
+   "slug": "nuhs-son",
+   "title": "Nuh's son who would not board",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "11:42-47"
+   ]
+  },
+  {
+   "slug": "azar",
+   "title": "Ibrahim's father, Azar",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "6:74",
+    "9:114",
+    "19:41-48"
+   ]
+  },
+  {
+   "slug": "man-who-disputed-ibrahim",
+   "title": "The man who disputed with Ibrahim about his Lord",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:258"
+   ]
+  },
+  {
+   "slug": "wife-of-imran",
+   "title": "The wife of Imran and the dedication of her child",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "3:35-36"
+   ]
+  },
+  {
+   "slug": "maryam",
+   "title": "Maryam",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "3:35-37",
+    "3:44",
+    "3:42-47",
+    "4:156",
+    "19:16-34",
+    "21:91",
+    "23:50",
+    "66:12"
+   ]
+  },
+  {
+   "slug": "ruler-of-saba",
+   "title": "The woman who ruled Saba (the Queen of Saba)",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "27:22-44"
+   ]
+  },
+  {
+   "slug": "mother-of-musa",
+   "title": "The mother of Musa",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "20:37-40",
+    "28:7-13"
+   ]
+  },
+  {
+   "slug": "two-women-of-madyan",
+   "title": "The two women of Madyan and their father",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "28:23-28"
+   ]
+  },
+  {
+   "slug": "man-who-warned-musa",
+   "title": "The man who came running to warn Musa",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "28:20-21"
+   ]
+  },
+  {
+   "slug": "musa-and-the-servant",
+   "title": "Musa and the servant of Allah (named al-Khidr in later tradition)",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "later_tradition",
+   "refs": [
+    "18:60-82"
+   ]
+  },
+  {
+   "slug": "samiri",
+   "title": "The Samiri",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "20:85-97"
+   ]
+  },
+  {
+   "slug": "pharaoh",
+   "title": "Fir'awn (Pharaoh)",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "28:4-6",
+    "28:38-42",
+    "40:23-46",
+    "43:46-56",
+    "73:15-16",
+    "79:15-26",
+    "85:17-20"
+   ]
+  },
+  {
+   "slug": "haman",
+   "title": "Haman",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "28:6-8",
+    "28:38",
+    "40:36-37"
+   ]
+  },
+  {
+   "slug": "wife-of-pharaoh",
+   "title": "The wife of Fir'awn",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "28:9",
+    "66:11"
+   ]
+  },
+  {
+   "slug": "believer-of-pharaohs-family",
+   "title": "The believer from Fir'awn's household",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "40:28-45"
+   ]
+  },
+  {
+   "slug": "qarun",
+   "title": "Qarun",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "28:76-82",
+    "29:39-40",
+    "40:24-25"
+   ]
+  },
+  {
+   "slug": "people-of-the-cave",
+   "title": "The People of the Cave",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "18:9-26"
+   ]
+  },
+  {
+   "slug": "dhul-qarnayn",
+   "title": "Dhul-Qarnayn",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "18:83-98"
+   ]
+  },
+  {
+   "slug": "talut-and-jalut",
+   "title": "Talut and Jalut",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:246-252",
+    "2:249-251"
+   ]
+  },
+  {
+   "slug": "luqman",
+   "title": "Luqman",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "31:12-19"
+   ]
+  },
+  {
+   "slug": "harut-and-marut",
+   "title": "Harut and Marut",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:102"
+   ]
+  },
+  {
+   "slug": "hawariyyun",
+   "title": "The disciples of Isa (al-hawariyyun)",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "3:52-53",
+    "5:111",
+    "61:14"
+   ]
+  },
+  {
+   "slug": "man-from-the-farthest-city",
+   "title": "The man who came from the farthest part of the city (Ya-Sin)",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "36:20-27"
+   ]
+  },
+  {
+   "slug": "man-passing-the-ruined-town",
+   "title": "The man who passed by a ruined town",
+   "track": "people",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:259"
+   ]
+  },
+  {
+   "slug": "abu-lahab",
+   "title": "Abu Lahab",
+   "track": "people",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "111:1-5"
+   ]
+  },
+  {
+   "slug": "ad",
+   "title": "The people of 'Ad",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:65-72",
+    "11:50-60",
+    "26:123-140",
+    "41:13-16",
+    "46:21-26",
+    "51:41-42",
+    "53:50",
+    "54:18-22",
+    "69:4-8",
+    "89:6-8"
+   ]
+  },
+  {
+   "slug": "thamud",
+   "title": "The people of Thamud",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:73-79",
+    "11:61-68",
+    "15:80-84",
+    "17:59",
+    "26:141-159",
+    "27:45-53",
+    "41:17-18",
+    "51:43-45",
+    "54:23-31",
+    "69:4-5",
+    "85:17-18",
+    "91:11-15"
+   ]
+  },
+  {
+   "slug": "madyan",
+   "title": "The people of Madyan",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:85-93",
+    "11:84-95",
+    "29:36-37"
+   ]
+  },
+  {
+   "slug": "aykah",
+   "title": "The Companions of the Thicket (Ashab al-Aykah)",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "15:78-79",
+    "26:176-191",
+    "38:13",
+    "50:14"
+   ]
+  },
+  {
+   "slug": "people-of-lut",
+   "title": "The people of Lut",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:80-84",
+    "11:77-83",
+    "15:61-77",
+    "26:160-175",
+    "27:54-58",
+    "29:28-35",
+    "37:133-138",
+    "51:31-37",
+    "54:33-39"
+   ]
+  },
+  {
+   "slug": "people-of-nuh",
+   "title": "The people of Nuh",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:59-64",
+    "11:25-49",
+    "23:23-30",
+    "25:37",
+    "26:105-122",
+    "29:14-15",
+    "54:9-17",
+    "71:1-28"
+   ]
+  },
+  {
+   "slug": "saba",
+   "title": "The people of Saba",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "34:15-21"
+   ]
+  },
+  {
+   "slug": "banu-israil",
+   "title": "Banu Isra'il (the Children of Isra'il)",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:47-74",
+    "2:83-93",
+    "5:12-13",
+    "5:20-26",
+    "7:137-171",
+    "10:90-93",
+    "17:2-8",
+    "17:101-104",
+    "20:80-82",
+    "44:30-33",
+    "61:5",
+    "45:16-17"
+   ]
+  },
+  {
+   "slug": "people-of-pharaoh",
+   "title": "The people of Fir'awn (Al Fir'awn)",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:49-50",
+    "7:103-137",
+    "10:75-92",
+    "14:6-8",
+    "20:43-79",
+    "23:45-48",
+    "26:10-68",
+    "28:3-43",
+    "40:23-46",
+    "43:46-56",
+    "44:17-33",
+    "51:38-40",
+    "54:41-42",
+    "69:9-10",
+    "73:15-16",
+    "79:15-26",
+    "85:17-20",
+    "89:10-13"
+   ]
+  },
+  {
+   "slug": "people-of-ibrahim",
+   "title": "The people of Ibrahim",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "19:41-50",
+    "21:51-70",
+    "26:69-104",
+    "29:16-27",
+    "37:83-98",
+    "43:26-28"
+   ]
+  },
+  {
+   "slug": "ashab-al-ukhdud",
+   "title": "The Companions of the Ditch (Ashab al-Ukhdud)",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "85:4-9"
+   ]
+  },
+  {
+   "slug": "ashab-al-rass",
+   "title": "The Companions of al-Rass",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "25:38-39",
+    "50:12-14"
+   ]
+  },
+  {
+   "slug": "people-of-tubba",
+   "title": "The people of Tubba'",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "44:37",
+    "50:14"
+   ]
+  },
+  {
+   "slug": "people-of-yunus",
+   "title": "The people sent to Yunus",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "10:98",
+    "37:147-148"
+   ]
+  },
+  {
+   "slug": "sabbath-breakers",
+   "title": "The Sabbath-breakers",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:65-66",
+    "4:47",
+    "4:154",
+    "7:163-166",
+    "16:124"
+   ]
+  },
+  {
+   "slug": "yajuj-and-majuj",
+   "title": "Ya'juj and Ma'juj (Gog and Magog)",
+   "track": "communities",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "18:94-99",
+    "21:96-97"
+   ]
+  },
+  {
+   "slug": "quraysh",
+   "title": "Quraysh",
+   "track": "communities",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "106:1-4"
+   ]
+  },
+  {
+   "slug": "prostration-to-adam-and-iblis",
+   "title": "The prostration to Adam and Iblis's refusal",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:34",
+    "7:11-18",
+    "15:28-44",
+    "17:61-65",
+    "18:50",
+    "20:116",
+    "38:71-85"
+   ]
+  },
+  {
+   "slug": "covenant-of-alast",
+   "title": "The covenant taken from the descendants of Adam",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:172-174"
+   ]
+  },
+  {
+   "slug": "the-flood",
+   "title": "The Flood and the Ark",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:64",
+    "11:36-48",
+    "21:76-77",
+    "23:23-30",
+    "26:118-120",
+    "29:14-15",
+    "54:9-15",
+    "69:11-12"
+   ]
+  },
+  {
+   "slug": "fire-for-ibrahim",
+   "title": "The fire prepared for Ibrahim",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "21:68-70",
+    "29:24",
+    "37:97-98"
+   ]
+  },
+  {
+   "slug": "ibrahims-guests",
+   "title": "Ibrahim's guests and the glad tidings",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "11:69-76",
+    "15:51-60",
+    "51:24-37"
+   ]
+  },
+  {
+   "slug": "the-four-birds",
+   "title": "Ibrahim and the four birds",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:260"
+   ]
+  },
+  {
+   "slug": "building-of-the-house",
+   "title": "The raising of the foundations of the House",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:125-129",
+    "3:96-97",
+    "14:35-37",
+    "22:26-29"
+   ]
+  },
+  {
+   "slug": "vision-of-the-sacrifice",
+   "title": "Ibrahim's vision of sacrificing his son",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "37:99-113"
+   ]
+  },
+  {
+   "slug": "yusufs-dream",
+   "title": "Yusuf's dream",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "12:4-6"
+   ]
+  },
+  {
+   "slug": "yusuf-and-the-well",
+   "title": "Yusuf and the well",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "12:7-20"
+   ]
+  },
+  {
+   "slug": "yusuf-in-the-house-of-the-aziz",
+   "title": "Yusuf in the house of the Aziz",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "12:21-34"
+   ]
+  },
+  {
+   "slug": "yusuf-in-prison",
+   "title": "Yusuf in prison",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "12:35-42"
+   ]
+  },
+  {
+   "slug": "the-kings-dream",
+   "title": "The king's dream and Yusuf's rise",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "12:43-57"
+   ]
+  },
+  {
+   "slug": "brothers-journeys-to-egypt",
+   "title": "The brothers' journeys to Egypt",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "12:58-93"
+   ]
+  },
+  {
+   "slug": "reunion-of-yaqub-and-yusuf",
+   "title": "The reunion of Yaqub and Yusuf",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "12:94-101"
+   ]
+  },
+  {
+   "slug": "birth-of-musa",
+   "title": "The birth of Musa and the river",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "20:37-40",
+    "28:3-13"
+   ]
+  },
+  {
+   "slug": "musa-and-the-egyptian",
+   "title": "Musa kills a man and flees",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "28:14-21"
+   ]
+  },
+  {
+   "slug": "call-at-the-mountain",
+   "title": "The call to Musa at the mountain",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "19:51-53",
+    "20:9-24",
+    "27:7-12",
+    "28:29-35",
+    "79:15-16"
+   ]
+  },
+  {
+   "slug": "musa-before-pharaoh-and-the-magicians",
+   "title": "Musa before Fir'awn and the magicians",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:103-126",
+    "10:75-82",
+    "20:42-73",
+    "26:10-51"
+   ]
+  },
+  {
+   "slug": "the-plagues",
+   "title": "The signs sent upon the people of Fir'awn",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:130-135",
+    "17:101",
+    "27:12"
+   ]
+  },
+  {
+   "slug": "splitting-of-the-sea",
+   "title": "The exodus and the splitting of the sea",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:50",
+    "7:136-137",
+    "10:90-92",
+    "20:77-79",
+    "26:52-68",
+    "44:23-31"
+   ]
+  },
+  {
+   "slug": "the-golden-calf",
+   "title": "The calf and the return of Musa",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:51-54",
+    "7:148-153",
+    "20:83-98"
+   ]
+  },
+  {
+   "slug": "musa-appointed-time",
+   "title": "Musa's appointed time with his Lord and the tablets",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:142-147"
+   ]
+  },
+  {
+   "slug": "mountain-raised-over-banu-israil",
+   "title": "The covenant and the mountain raised above them",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:63",
+    "2:93",
+    "4:154",
+    "7:171"
+   ]
+  },
+  {
+   "slug": "sinai-provision",
+   "title": "The provision in the wilderness: the water, the manna and the quails",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:57",
+    "2:60",
+    "7:160"
+   ]
+  },
+  {
+   "slug": "the-cow",
+   "title": "The cow of Banu Isra'il",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:67-73"
+   ]
+  },
+  {
+   "slug": "entering-the-town",
+   "title": "Entering the town and the changed word",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:58-59",
+    "7:161-162"
+   ]
+  },
+  {
+   "slug": "refusal-of-the-holy-land",
+   "title": "The refusal to enter the holy land",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "5:20-26"
+   ]
+  },
+  {
+   "slug": "those-who-left-in-thousands",
+   "title": "Those who left their homes by the thousands",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:243"
+   ]
+  },
+  {
+   "slug": "death-of-sulayman",
+   "title": "The death of Sulayman and the staff",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "34:14"
+   ]
+  },
+  {
+   "slug": "the-two-disputants",
+   "title": "The two disputants who came to Dawud",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "38:21-25"
+   ]
+  },
+  {
+   "slug": "yunus-and-the-fish",
+   "title": "Yunus and the fish",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "21:87-88",
+    "37:139-148",
+    "68:48-50"
+   ]
+  },
+  {
+   "slug": "glad-tidings-of-yahya",
+   "title": "The glad tidings of Yahya to Zakariyya",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "3:38-41",
+    "19:2-15"
+   ]
+  },
+  {
+   "slug": "annunciation-and-birth-of-isa",
+   "title": "The annunciation to Maryam and the birth of Isa",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "3:42-47",
+    "19:16-34",
+    "21:91",
+    "23:50",
+    "66:12"
+   ]
+  },
+  {
+   "slug": "the-table",
+   "title": "The table sent down to the disciples",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "5:112-115"
+   ]
+  },
+  {
+   "slug": "raising-of-isa",
+   "title": "The raising of Isa",
+   "track": "events",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "3:55",
+    "4:157-158"
+   ]
+  },
+  {
+   "slug": "companions-of-the-elephant",
+   "title": "The Companions of the Elephant",
+   "track": "events",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "105:1-5"
+   ]
+  },
+  {
+   "slug": "defeat-of-the-rum",
+   "title": "The defeat and expected victory of the Rum (Byzantines)",
+   "track": "events",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "30:1-7"
+   ]
+  },
+  {
+   "slug": "the-night-journey",
+   "title": "The Night Journey",
+   "track": "events",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "17:1"
+   ]
+  },
+  {
+   "slug": "battle-of-badr",
+   "title": "The battle of Badr",
+   "track": "events",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "3:13",
+    "3:123-127",
+    "8:5-19",
+    "8:41-48",
+    "8:67-71"
+   ]
+  },
+  {
+   "slug": "battle-of-uhud",
+   "title": "The battle of Uhud",
+   "track": "events",
+   "category": "prophetic_life",
+   "name_source": "later_tradition",
+   "refs": [
+    "3:121-129",
+    "3:139-175"
+   ]
+  },
+  {
+   "slug": "hudaybiyyah",
+   "title": "The pledge under the tree and the treaty at Hudaybiyyah",
+   "track": "events",
+   "category": "prophetic_life",
+   "name_source": "later_tradition",
+   "refs": [
+    "48:18-26",
+    "48:27"
+   ]
+  },
+  {
+   "slug": "the-hijrah",
+   "title": "The Hijrah (emigration)",
+   "track": "events",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "2:218",
+    "8:30",
+    "8:72-75",
+    "9:40",
+    "16:41",
+    "22:39-41",
+    "59:8-9"
+   ]
+  },
+  {
+   "slug": "battle-of-the-confederates",
+   "title": "The Confederates (al-Ahzab)",
+   "track": "events",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "33:9-27"
+   ]
+  },
+  {
+   "slug": "expulsion-of-banu-nadir",
+   "title": "The expulsion of a party of the People of the Book from their homes (identified in later tradition as Banu al-Nadir)",
+   "track": "events",
+   "category": "prophetic_life",
+   "name_source": "later_tradition",
+   "refs": [
+    "59:2-17"
+   ]
+  },
+  {
+   "slug": "battle-of-hunayn",
+   "title": "The day of Hunayn",
+   "track": "events",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "9:25-27"
+   ]
+  },
+  {
+   "slug": "expedition-of-tabuk",
+   "title": "The expedition against the Byzantines in the hardship (identified in later tradition as Tabuk)",
+   "track": "events",
+   "category": "prophetic_life",
+   "name_source": "later_tradition",
+   "refs": [
+    "9:38-59",
+    "9:81-96",
+    "9:117-118"
+   ]
+  },
+  {
+   "slug": "the-victory-al-fath",
+   "title": "The victory and the people entering the religion in crowds (110:1-3)",
+   "track": "events",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "110:1-3"
+   ]
+  },
+  {
+   "slug": "first-revelation",
+   "title": "The opening verses of Surat al-Alaq (traditionally the first revelation)",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "96:1-5"
+   ]
+  },
+  {
+   "slug": "night-of-power",
+   "title": "The Night of Power and the sending down of the Quran",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "2:185",
+    "44:1-6",
+    "97:1-5"
+   ]
+  },
+  {
+   "slug": "gradual-revelation",
+   "title": "The Quran sent down in parts",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "17:106",
+    "25:32"
+   ]
+  },
+  {
+   "slug": "muzzammil-and-muddaththir",
+   "title": "The Prophet addressed as the wrapped one (73:1-8) and the cloaked one (74:1-7)",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "73:1-8",
+    "74:1-7"
+   ]
+  },
+  {
+   "slug": "prophets-vision",
+   "title": "The Prophet's vision described in Surat al-Najm",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "53:1-18"
+   ]
+  },
+  {
+   "slug": "blind-man-and-the-prophet",
+   "title": "The blind man who came to the Prophet",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "80:1-10"
+   ]
+  },
+  {
+   "slug": "jinn-listen-to-the-quran",
+   "title": "The jinn who listened to the Quran",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "46:29-32",
+    "72:1-15"
+   ]
+  },
+  {
+   "slug": "the-spirit-brings-the-revelation",
+   "title": "The Spirit brings down the revelation (Jibril)",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "2:97-98",
+    "16:102",
+    "26:192-195",
+    "53:5-12",
+    "81:19-25"
+   ]
+  },
+  {
+   "slug": "change-of-qibla",
+   "title": "The change of the direction of prayer",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "2:142-150"
+   ]
+  },
+  {
+   "slug": "mubahala",
+   "title": "The invitation to mutual invocation (mubahala)",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "3:59-61"
+   ]
+  },
+  {
+   "slug": "woman-who-disputed",
+   "title": "The woman who disputed with the Prophet about her husband",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "58:1-4"
+   ]
+  },
+  {
+   "slug": "the-slander",
+   "title": "The slander (al-ifk) and its refutation",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "24:11-20"
+   ]
+  },
+  {
+   "slug": "matter-of-zayd",
+   "title": "The matter of Zayd and adoptive sonship",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "33:36-40"
+   ]
+  },
+  {
+   "slug": "mosque-of-dirar",
+   "title": "The mosque built for harm",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "9:107-110"
+   ]
+  },
+  {
+   "slug": "declaration-of-release",
+   "title": "The declaration of release from the treaties (Bara'a)",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "9:1-6"
+   ]
+  },
+  {
+   "slug": "completion-of-the-religion",
+   "title": "The announcement that the religion is completed",
+   "track": "seerah",
+   "category": "prophetic_life",
+   "name_source": "quran",
+   "refs": [
+    "5:3"
+   ]
+  },
+  {
+   "slug": "two-owners-of-gardens",
+   "title": "The two owners of gardens",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "18:32-44"
+   ]
+  },
+  {
+   "slug": "owners-of-the-garden",
+   "title": "The owners of the garden (Ashab al-Jannah)",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "68:17-33"
+   ]
+  },
+  {
+   "slug": "companions-of-the-town",
+   "title": "The Companions of the Town and the messengers (Ashab al-Qaryah)",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "36:13-29"
+   ]
+  },
+  {
+   "slug": "seed-with-seven-ears",
+   "title": "The grain that grows seven ears",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:261"
+   ]
+  },
+  {
+   "slug": "smooth-rock",
+   "title": "The smooth rock with soil on it",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:264"
+   ]
+  },
+  {
+   "slug": "garden-on-a-height",
+   "title": "The garden on a height and the garden burned",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:265-266"
+   ]
+  },
+  {
+   "slug": "fire-kindler-and-rain-cloud",
+   "title": "The kindler of fire and the rain cloud",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:17-20"
+   ]
+  },
+  {
+   "slug": "one-who-shouts",
+   "title": "The one who shouts to what hears only a call",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "2:171"
+   ]
+  },
+  {
+   "slug": "wind-with-frost",
+   "title": "The wind with a biting frost",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "3:117"
+   ]
+  },
+  {
+   "slug": "water-and-foam",
+   "title": "The water and the foam",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "13:17"
+   ]
+  },
+  {
+   "slug": "good-word-and-evil-word",
+   "title": "The good word and the evil word",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "14:24-27"
+   ]
+  },
+  {
+   "slug": "ashes-in-the-storm",
+   "title": "Deeds like ashes on a stormy day",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "14:18"
+   ]
+  },
+  {
+   "slug": "slave-and-free-man",
+   "title": "The owned slave and the one given provision",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "16:75-76"
+   ]
+  },
+  {
+   "slug": "village-secure",
+   "title": "The town that was secure and content",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "16:112-113"
+   ]
+  },
+  {
+   "slug": "woman-who-undid-her-yarn",
+   "title": "The woman who undid her yarn",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "16:92"
+   ]
+  },
+  {
+   "slug": "spider-house",
+   "title": "The house of the spider",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "29:41"
+   ]
+  },
+  {
+   "slug": "flies",
+   "title": "Those they invoke cannot create a fly",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "22:73-74"
+   ]
+  },
+  {
+   "slug": "light",
+   "title": "The parable of light",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "24:35-38"
+   ]
+  },
+  {
+   "slug": "mirage-and-darkness",
+   "title": "The mirage and the layered darkness",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "24:39-40"
+   ]
+  },
+  {
+   "slug": "donkey-carrying-books",
+   "title": "The donkey carrying books",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "62:5"
+   ]
+  },
+  {
+   "slug": "one-given-the-signs",
+   "title": "The one given the signs who cast them off",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "7:175-176"
+   ]
+  },
+  {
+   "slug": "worldly-life-like-rain",
+   "title": "The life of this world like rain",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "10:24",
+    "18:45",
+    "57:20"
+   ]
+  },
+  {
+   "slug": "partners-in-one-slave",
+   "title": "The man shared among quarrelling partners",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "30:28",
+    "39:29"
+   ]
+  },
+  {
+   "slug": "blind-and-seeing",
+   "title": "The blind and deaf, and the seeing and hearing",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "11:24"
+   ]
+  },
+  {
+   "slug": "the-one-who-was-dead",
+   "title": "The one who was dead and was given life and light",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "6:122"
+   ]
+  },
+  {
+   "slug": "seed-in-the-torah-and-injil",
+   "title": "The sown seed in the Torah and the Injil",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "48:29"
+   ]
+  },
+  {
+   "slug": "examples-of-the-wives",
+   "title": "The examples given: the wives of Nuh and Lut, the wife of Fir'awn and Maryam",
+   "track": "parables",
+   "category": "sacred_history",
+   "name_source": "quran",
+   "refs": [
+    "66:10-12"
+   ]
+  }
+ ]
+}

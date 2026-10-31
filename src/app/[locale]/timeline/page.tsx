@@ -7,6 +7,10 @@ import { DraftBadge } from "@/components/ui/evidence";
 import { journeyTimeline, todayLabel } from "@/lib/timeline";
 import { eventEras, publishedEvents } from "@/lib/data/events";
 import { TimelineLayers } from "@/components/lifestyle/TimelineLayers";
+import { CompleteTimeline, ViewSwitch } from "@/components/timeline/CompleteTimeline";
+import { e2eFixturesEnabled } from "@/lib/e2e-fixtures";
+import { parseTracks } from "@/lib/events/tracks";
+import { publishedUniverse, universeCounts } from "@/lib/events/universe";
 
 export const metadata: Metadata = {
   title: "Timeline",
@@ -16,14 +20,31 @@ export const metadata: Metadata = {
 /** Reviewed events are read from the database; refresh every 5 minutes. */
 export const revalidate = 300;
 
-export default async function TimelinePage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ selected?: string; layer?: string }> }) {
+export default async function TimelinePage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ selected?: string; layer?: string; view?: string; tracks?: string | string[] }> }) {
   const { locale } = await params;
-  const { selected, layer } = await searchParams;
+  const { selected, layer, view, tracks } = await searchParams;
+  // The Complete Timeline (research atlas) is a second view of the same page; the guided Journey stays the default.
+  if (view === "complete") {
+    const [items, counts] = await Promise.all([publishedUniverse(), universeCounts()]);
+    return (
+      <ReadingPage
+        locale={locale}
+        crumbs={[{ label: "Timeline" }]}
+        title="Timeline"
+        lead="From Adam to today, in order and not to scale. Undated sacred history stays on a relative-order track."
+      >
+        <div className="zq-pagebody">
+          <ViewSwitch locale={locale} view="complete" />
+          <CompleteTimeline locale={locale} items={items} counts={counts} selected={parseTracks(tracks)} synthetic={e2eFixturesEnabled()} />
+        </div>
+      </ReadingPage>
+    );
+  }
   const j = getJourney();
   const pos = selected ? findStop(selected) : undefined;
   const s = pos?.item;
   // Reviewed events from the database sit on their own track below the journey.
-  const events = await publishedEvents();
+  const events = await publishedEvents({ universe: false });
   const ev = selected?.startsWith("event-") ? events?.find((e) => `event-${e.slug}` === selected) : undefined;
   return (
     <ReadingPage
@@ -34,6 +55,7 @@ export default async function TimelinePage({ params, searchParams }: { params: P
       lead="Ordered from Adam to today, not to scale. Sacred history before recorded chronology has no years; dated history shows CE and AH with how certain each date is."
     >
       <div className="zq-pagebody">
+        <ViewSwitch locale={locale} view="journey" />
         <div className="zq-split">
           <TimelineLayers locale={locale} layer={layer}>
           <div>

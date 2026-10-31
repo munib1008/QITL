@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { StoryView } from "@/components/story/StoryView";
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
@@ -13,6 +13,9 @@ import { getPlayerBundle } from "@/lib/data/player";
 import { StoryPlayerSection } from "@/components/player/StoryPlayerSection";
 import { formatRange } from "@/lib/years";
 import type { EvidenceKind } from "@/content/labels";
+import { UniverseOnlyPage, UniverseSections, orderingText } from "@/components/timeline/UniverseSections";
+import { redirectTarget, universeEventBySlug } from "@/lib/events/universe";
+import { timelineStrings } from "@/lib/i18n/modules/timeline";
 
 export const revalidate = 300;
 
@@ -55,8 +58,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function EventPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   if (!/^[a-z0-9-]{1,80}$/.test(slug)) notFound();
-  const e = await load(slug);
-  if (e === "not_configured")
+  const [e, u] = await Promise.all([load(slug), universeEventBySlug(slug)]);
+  if (e === "not_configured" && !u)
     return (
       <ReadingPage locale={locale} crumbs={[{ href: "/events", label: "Quranic events" }, { label: "Event" }]} title="Quranic event">
         <div className="zq-pagebody">
@@ -64,9 +67,16 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
         </div>
       </ReadingPage>
     );
-  if (!e) notFound();
+  if ((!e || e === "not_configured") && !u) {
+    // A merged-away event keeps its address: it redirects to the event it was merged into.
+    const to = await redirectTarget(slug);
+    if (to && to !== slug) redirect(`/events/${to}`);
+    notFound();
+  }
+  if (!e || e === "not_configured") return <UniverseOnlyPage u={u!} locale={locale} />;
   const [story, player] = await Promise.all([getStory({ event: slug }), getPlayerBundle({ event: slug })]);
-  const when = formatRange(e.start_year, e.end_year, e.start_ah, e.end_ah, e.date_precision === "estimated") ?? PRECISION_TEXT[e.date_precision];
+  // Items of the Complete Timeline say how they are ordered; a year appears only for a historians' dated estimate.
+  const when = u ? orderingText(u, timelineStrings(locale)) : (formatRange(e.start_year, e.end_year, e.start_ah, e.end_ah, e.date_precision === "estimated") ?? PRECISION_TEXT[e.date_precision]);
   return (
     <ReadingPage
       locale={locale}
@@ -87,6 +97,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
     >
       <div className="pp-grid">
         <div>
+          {u ? <UniverseSections u={u} locale={locale} /> : null}
           {player?.scripts.length ? <StoryPlayerSection bundle={player} locale={locale} /> : null}
           {story.state === "ok" && story.story ? (
             <StoryView story={story.story} name={e.title} chapterKey={`event:${e.slug}`} />
