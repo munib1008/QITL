@@ -37,6 +37,11 @@ const TABLE = {
   qiraat_misconception: "qiraat_misconceptions",
   reciter: "reciters",
   audio_recording: "audio_recordings",
+  // Shifa (publishing also needs the religious and/or clinical review, bound to the version being published)
+  shifa_topic: "shifa_topics",
+  shifa_entry: "shifa_entries",
+  shifa_safety_note: "shifa_safety_notes",
+  shifa_link: "shifa_links",
   // Life Through the Ages (publishing also needs the religious and/or historical-scientific review).
   ...RECORD_TYPES,
 } as const;

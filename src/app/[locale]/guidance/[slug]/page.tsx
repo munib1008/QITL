@@ -5,6 +5,7 @@ import { EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
 import { GuidanceNotice, LessonView, MuftiLink, RelatedLinks, SafetyNotice, TopicIcon } from "@/components/guidance/Guidance";
 import { topicPage } from "@/lib/data/guidance";
+import { ShifaRelated } from "@/components/shifa/Related";
 import { needsSafetyNotice, plannedTopic } from "@/lib/guidance/topics";
 import { getDict } from "@/lib/i18n";
 import { guidanceT } from "@/lib/i18n/modules/guidance";
@@ -57,6 +58,7 @@ export default async function GuidanceTopicPage({ params }: { params: Params }) 
           )}
         </section>
         {data ? <RelatedLinks links={data.links} s={s} locale={locale} /> : null}
+        {data ? <ShifaRelated locale={locale} guidanceTopicId={data.topic.id} /> : null}
         <MuftiLink s={s} />
       </div>
     </ReadingPage>
