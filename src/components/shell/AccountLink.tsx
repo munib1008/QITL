@@ -11,7 +11,7 @@ export function AccountLink({ signInLabel, accountLabel }: { signInLabel: string
   const pathname = usePathname();
   if (s.status === "signed_in")
     return (
-      <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" href="/account">
+      <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" href="/account" prefetch={false}>
         {accountLabel}
       </Link>
     );
@@ -22,7 +22,7 @@ export function AccountLink({ signInLabel, accountLabel }: { signInLabel: string
       </span>
     );
   return (
-    <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" href={`/sign-in?returnTo=${encodeURIComponent(stripLocale(pathname))}`} aria-disabled={s.status === "loading" || undefined}>
+    <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" prefetch={false} href={`/sign-in?returnTo=${encodeURIComponent(stripLocale(pathname))}`} aria-disabled={s.status === "loading" || undefined}>
       {signInLabel}
     </Link>
   );

@@ -74,7 +74,7 @@ function DateLegend() {
   ];
   return (
     <section className="zq-legend" aria-label="Timeline legend" style={{ boxShadow: "none" }}>
-      <h3>Date certainty</h3>
+      <h2>Date certainty</h2>
       <ul>
         {rows.map(([cls, label]) => (
           <li key={label}>

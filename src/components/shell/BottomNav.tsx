@@ -133,7 +133,7 @@ export function BottomNav({ labels, explore, locale, langLabels }: { labels: Bot
           {ICONS.explore}
           <span>{labels.explore}</span>
         </button>
-        <Link href={profileHref} className="qb-item" aria-current={is("/account") || is("/sign-in") ? "page" : undefined}>
+        <Link href={profileHref} prefetch={false} className="qb-item" aria-current={is("/account") || is("/sign-in") ? "page" : undefined}>
           {ICONS.profile}
           <span>{labels.profile}</span>
         </Link>

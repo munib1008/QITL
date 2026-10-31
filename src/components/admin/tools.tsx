@@ -229,7 +229,7 @@ export function VersionDiff({ versions }: { versions: Array<{ version: number; s
   const [b, a] = versions as [(typeof versions)[0], (typeof versions)[0]];
   const keys = Object.keys({ ...a.snapshot, ...b.snapshot }).filter((k) => !["updated_at"].includes(k) && JSON.stringify(a.snapshot[k]) !== JSON.stringify(b.snapshot[k]));
   return (
-    <div className="zq-tablewrap">
+    <div className="zq-tablewrap zq-table-scroll" role="region" aria-label={`Changes from version ${a.version} to ${b.version}`} tabIndex={0}>
       <table className="zq-table">
         <caption className="sr-only">Changes from version {a.version} to {b.version}</caption>
         <thead>
@@ -541,8 +541,8 @@ export function SourcesRegister() {
   return (
     <div style={{ display: "grid", gap: 24 }}>
       {error ? <p className="zq-error">{error}</p> : null}
-      <div className="zq-tablewrap">
-        <table className="zq-table">
+      <div className="zq-tablewrap zq-table-scroll" role="region" aria-label="Source and licence register" tabIndex={0}>
+        <table className="zq-table zq-table-cards">
           <caption className="sr-only">Source and licence register</caption>
           <thead>
             <tr>
@@ -556,7 +556,7 @@ export function SourcesRegister() {
           <tbody>
             {(rows ?? []).map((s) => (
               <tr key={s.id}>
-                <td>
+                <td data-label="Work">
                   {s.work}
                   {s.edition ? ` · ${s.edition}` : ""}
                   {s.license_url ? (
@@ -568,8 +568,8 @@ export function SourcesRegister() {
                     </>
                   ) : null}
                 </td>
-                <td>{s.type}</td>
-                <td>
+                <td data-label="Type">{s.type}</td>
+                <td data-label="Rights">
                   <select
                     aria-label={`Rights status of ${s.work}`}
                     className="zq-input"
@@ -586,8 +586,8 @@ export function SourcesRegister() {
                     ))}
                   </select>
                 </td>
-                <td>{s.verification_status}</td>
-                <td className="zq-order">{s.id.slice(0, 8)}</td>
+                <td data-label="Verification">{s.verification_status}</td>
+                <td data-label="Id" className="zq-order">{s.id.slice(0, 8)}</td>
               </tr>
             ))}
           </tbody>
@@ -645,8 +645,8 @@ export function RolesManager() {
   const [msg, setMsg] = useState<{ tone: "ok" | "err"; text: string } | null>(null);
   return (
     <div style={{ display: "grid", gap: 24 }}>
-      <div className="zq-tablewrap">
-        <table className="zq-table">
+      <div className="zq-tablewrap zq-table-scroll" role="region" aria-label="Role assignments" tabIndex={0}>
+        <table className="zq-table zq-table-cards">
           <caption className="sr-only">Role assignments</caption>
           <thead>
             <tr>
@@ -660,11 +660,11 @@ export function RolesManager() {
           <tbody>
             {(rows ?? []).map((r) => (
               <tr key={r.user_id + r.role}>
-                <td className="zq-order">{r.user_id}</td>
-                <td>{r.role.replace("_", " ")}</td>
-                <td>{r.credential_note ?? "—"}</td>
-                <td>{new Date(r.granted_at).toLocaleDateString()}</td>
-                <td>
+                <td data-label="User id" className="zq-order">{r.user_id}</td>
+                <td data-label="Role">{r.role.replace("_", " ")}</td>
+                <td data-label="Verification note">{r.credential_note ?? "—"}</td>
+                <td data-label="Granted">{new Date(r.granted_at).toLocaleDateString()}</td>
+                <td data-label="Actions">
                   <button
                     type="button"
                     className="zq-btn zq-btn-danger zq-btn-sm"
@@ -727,8 +727,8 @@ export function AuditTrail() {
   );
   if (error) return <p className="zq-error">{error}</p>;
   return (
-    <div className="zq-tablewrap">
-      <table className="zq-table">
+    <div className="zq-tablewrap zq-table-scroll" role="region" aria-label="Audit trail" tabIndex={0}>
+      <table className="zq-table zq-table-cards">
         <caption className="sr-only">Audit trail, newest first</caption>
         <thead>
           <tr>
@@ -742,13 +742,13 @@ export function AuditTrail() {
         <tbody>
           {(rows ?? []).map((r) => (
             <tr key={r.id}>
-              <td>{new Date(r.at).toLocaleString()}</td>
-              <td className="zq-order">{r.actor?.slice(0, 8) ?? "system"}</td>
-              <td>{r.action}</td>
-              <td>
+              <td data-label="When">{new Date(r.at).toLocaleString()}</td>
+              <td data-label="Who" className="zq-order">{r.actor?.slice(0, 8) ?? "system"}</td>
+              <td data-label="Action">{r.action}</td>
+              <td data-label="Entity">
                 {r.entity_type} <span className="zq-order">{r.entity_id.slice(0, 8)}</span>
               </td>
-              <td>{r.action === "update" && r.changes ? Object.keys(r.changes).join(", ") : "—"}</td>
+              <td data-label="Changed fields">{r.action === "update" && r.changes ? Object.keys(r.changes).join(", ") : "—"}</td>
             </tr>
           ))}
         </tbody>

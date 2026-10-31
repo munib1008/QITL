@@ -21,5 +21,7 @@ export default defineConfig({
     // Turns on the gated /player-fixture test page (placeholder data only) for this test server.
     env: { QITL_E2E_FIXTURES: "1" },
     timeout: 120_000,
+    // Synthetic genealogy data for the explorer tests; ignored whenever Supabase is configured (src/lib/e2e-fixtures.ts).
+    env: { QITL_E2E_FIXTURES: "1" },
   },
 });

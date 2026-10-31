@@ -5,33 +5,23 @@ import { ReadingPage } from "@/components/shell/ReadingPage";
 import { CitationChip, EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState, GenealogyLink } from "@/components/ui/misc";
 import { getServerSupabase } from "@/lib/supabase/server";
-import type { EvidenceKind } from "@/content/journey";
+import { GenealogyExplorer } from "@/components/genealogy/GenealogyExplorer";
+import { REL, type GenealogyGraph } from "@/components/genealogy/types";
+import { e2eFixturesEnabled, fixtureGraph } from "@/lib/e2e-fixtures";
 
 export const metadata: Metadata = {
   title: "Genealogy",
   description: "Family relationships between the prophets and the Prophet's household, each edge resting on a cited, reviewed claim.",
 };
 
-interface Graph {
-  focus: string;
-  nodes: Array<{ id: string; name: string; nameAr: string; kind: string; distance: number }>;
-  edges: Array<{
-    id: string;
-    from: string;
-    to: string;
-    kind: string;
-    confidence: EvidenceKind;
-    competingGroup: string | null;
-    claim: { id: string; statement: string; evidence: EvidenceKind; references: Array<{ kind: string; surah: number | null; from: number | null; to: number | null; locator: string | null }> };
-  }>;
-}
-const REL = { parent_of: "parent of", spouse_of: "spouse of", sibling_of: "sibling of", descendant_of: "descendant of" } as const;
 
 export default async function GenealogyPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ focus?: string }> }) {
   const { locale } = await params;
   const { focus = "ibrahim" } = await searchParams;
   const sb = await getServerSupabase();
-  const graph = sb ? ((await sb.rpc("person_graph", { person_slug: focus, depth: 2 })).data as Graph | null) : null;
+  const fixture = !sb && e2eFixturesEnabled();
+  const graph = sb ? ((await sb.rpc("person_graph", { person_slug: focus, depth: 2 })).data as GenealogyGraph | null) : fixture ? fixtureGraph(focus) : null;
+  const centre = graph?.focus ?? focus;
   const name = (slug: string) => graph?.nodes.find((n) => n.id === slug)?.name ?? slug;
   const stops = journeyStops().filter((s) => s.type === "prophet");
 
@@ -72,15 +62,20 @@ export default async function GenealogyPage({ params, searchParams }: { params: 
         {graph && graph.edges.length ? (
           <section aria-labelledby="g-h">
             <h2 id="g-h" className="zq-eyebrow">
-              Around {name(focus)}
+              Around {name(centre)}
             </h2>
+            {fixture ? <p className="zg-fixture">Test fixture: synthetic people and links used by the automated tests. These are not real relationships.</p> : null}
+            <GenealogyExplorer graph={{ ...graph, focus: centre }} centerable={stops.map((s) => s.id)} rtl={locale === "ar"} />
+            <h3 className="zq-eyebrow" style={{ marginTop: 24 }}>
+              Relationship list
+            </h3>
             {/* The list is the text alternative of the graph and its keyboard path. */}
             <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: 16 }}>
               {graph.edges.map((e) => (
                 <li key={e.id} className="pp-card">
                   <GenealogyLink
-                    from={{ name: name(e.from), href: findStop(e.from) ? `/genealogy?focus=${e.from}` : undefined, current: e.from === focus }}
-                    to={{ name: name(e.to), href: findStop(e.to) ? `/genealogy?focus=${e.to}` : undefined, current: e.to === focus }}
+                    from={{ name: name(e.from), href: findStop(e.from) ? `/genealogy?focus=${e.from}` : undefined, current: e.from === centre }}
+                    to={{ name: name(e.to), href: findStop(e.to) ? `/genealogy?focus=${e.to}` : undefined, current: e.to === centre }}
                     relation={REL[e.kind as keyof typeof REL] ?? e.kind}
                     status={e.confidence === "disputed" ? "disputed" : e.confidence === "unknown" ? "unknown" : "verified"}
                     evidence={
