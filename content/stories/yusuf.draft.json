@@ -1,0 +1,1457 @@
+{
+  "slug": "yusuf",
+  "title_en": "Yusuf",
+  "title_ar": "يوسف",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "yusuf"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Surah 12 tells the story as one narrative, so the chapters follow its order; 40:34 is a separate mention. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-dream",
+      "position": 1,
+      "title_en": "The dream",
+      "event_slug": "yusufs-dream",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 4,
+          "to": 6
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Yusuf told his father that he had seen eleven stars, the sun and the moon, and that he had seen them prostrating to him.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "His father told him not to relate his dream to his brothers, or they would plot a plot against him, and said that Satan is a clear enemy to the human being.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "His father said that in this way his Lord would choose him, teach him the interpretation of events, and complete His favour on him and on the family of Yaqub, as He had completed it before on his forefathers Ibrahim and Ishaq; his Lord is knowing and wise.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 6,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Yusuf told his father of a dream of eleven stars, the sun and the moon prostrating to him; his father told him to keep it from his brothers and spoke of God's favour on him [c1][c2][c3].",
+      "body_md": "Yusuf told his father that he had seen eleven stars, the sun and the moon, and that he had seen them prostrating to him [c1]. His father told him not to tell his brothers about his dream, or they would plot against him; Satan, he said, is a clear enemy to the human being [c2]. His father added that in this way his Lord would choose him, teach him the interpretation of events, and complete His favour on him and on the family of Yaqub, as He had completed it before on his forefathers Ibrahim and Ishaq; his Lord is knowing and wise [c3].",
+      "deep_md": "The dream is told in a single verse (12:4) [c1]. The father's reply contains a warning (12:5) [c2] and a statement about God's choosing and teaching Yusuf (12:6) [c3].",
+      "kids_md": "Yusuf told his father about a dream: eleven stars, the sun and the moon were bowing down to him [c1]. His father told him not to tell his brothers, because Satan is a clear enemy [c2].",
+      "lessons_md": "Educational interpretation (not scripture): The father's reply joins caution about telling the dream with trust in God's care for his son [c2][c3]. One reading is that wisdom can mean keeping something back when telling it could cause harm [c2].",
+      "unknowns_md": "- The Quran does not say how old Yusuf was when he saw the dream, or where the family lived in this passage.\n- It does not give the meaning of the dream here; Yusuf himself speaks of its interpretation later in the surah (12:100).\n- It does not say how the brothers first learned of the dream, or whether they did.\n- Named in later tradition, not in the Quranic text: later accounts name Yusuf's brothers and his mother; none is used here."
+    },
+    {
+      "anchor": "the-brothers-plot",
+      "position": 2,
+      "title_en": "The brothers' plot",
+      "event_slug": "yusuf-and-the-well",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 7,
+          "to": 18
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran says that in Yusuf and his brothers there are signs for those who ask.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "His brothers said that Yusuf and his brother were dearer to their father than they were, though they were a strong group, and that their father was in clear error.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 8,
+              "to": 8
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They proposed to kill Yusuf or to cast him out on some land, so that their father's attention would turn to them alone, and that afterwards they could be a righteous people.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 9,
+              "to": 9
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "One of them said not to kill Yusuf but to throw him into the bottom of the well, where some travellers might pick him up, if they were going to act.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They asked their father why he did not trust them with Yusuf, said that they wished him well, and asked him to send Yusuf with them the next day to enjoy himself and play, promising to guard him.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 11,
+              "to": 11
+            },
+            {
+              "surah": 12,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Their father said that it would grieve him for them to take Yusuf away, and that he feared a wolf would eat him while they were heedless of him.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "They said that if a wolf ate him while they were a strong group, they would be losers.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "When they had gone away with Yusuf and agreed to put him in the bottom of the well, God inspired Yusuf that he would one day tell them of this deed of theirs while they did not realise.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "They came to their father at nightfall, weeping, and said that they had gone off racing and left Yusuf with their belongings and a wolf had eaten him, and that he would not believe them even if they were truthful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 16,
+              "to": 16
+            },
+            {
+              "surah": 12,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "They brought Yusuf's shirt with false blood on it; their father said that rather their souls had made something appear fair to them, that his course was graceful patience, and that God is the one whose help is sought against what they described.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Yusuf's brothers said that Yusuf and his brother were dearer to their father than they were; they planned to be rid of Yusuf, persuaded their father to send him with them, put him in a well, and brought his shirt with false blood on it [c2][c3][c5][c8][c10].",
+      "body_md": "The Quran says that in Yusuf and his brothers there are signs for those who ask [c1]. His brothers said that Yusuf and his brother were dearer to their father than they were, although they were a strong group, and that their father was in clear error [c2]. They proposed to kill Yusuf or to cast him out on some land, so that their father's attention would turn to them alone and they could afterwards be a righteous people [c3]. One of them said not to kill him but to throw him into the bottom of the well, where some travellers might pick him up [c4].\n\nThey asked their father why he did not trust them with Yusuf, said they wished him well, and asked him to send Yusuf with them the next day to enjoy himself and play, promising to guard him [c5]. Their father said it would grieve him for them to take Yusuf away, and that he feared a wolf would eat him while they were heedless [c6]. They answered that if a wolf ate him while they were a strong group, they would be losers [c7].\n\nWhen they had gone away with him and agreed to put him in the bottom of the well, God inspired Yusuf that he would one day tell them of this deed of theirs while they did not realise [c8]. They came to their father at nightfall, weeping [c9]. They said they had gone off racing and left Yusuf with their belongings, and a wolf had eaten him, and that he would not believe them even if they were truthful [c9]. They brought his shirt with false blood on it [c10]. Their father said that rather their souls had made something appear fair to them, and that his course was graceful patience, with God the one whose help is sought against what they described [c10].",
+      "deep_md": "The brothers' plan is shown first as a proposal (12:9) [c3], then as a change suggested by one of them (12:10) [c4]. The text then shows the persuasion of the father (12:11-14) [c5][c6][c7] and the deed (12:15) [c8]. God's inspiration to Yusuf is told at the moment of the act [c8].",
+      "kids_md": "Yusuf's brothers said that their father loved Yusuf and his brother more than them [c2]. They decided to get rid of Yusuf, and one of them said to put him in the bottom of a well [c3][c4]. They asked their father to send Yusuf with them, and then they put him in the well [c5][c8]. They went home weeping, said a wolf had eaten Yusuf, and showed his shirt with blood on it [c9][c10]. Their father said he would be patient and ask God for help [c10].",
+      "lessons_md": "Educational interpretation (not scripture): The passage shows how a group can talk itself into harming one of its own: first by naming a grievance, then by a plan, then by a false story [c2][c3][c9][c10]. One reading is that the father's answer, patience and asking God's help, is set against it [c10].",
+      "unknowns_md": "- The Quran does not name the brothers, say how many were in the group, or say which one made the suggestion at 12:10 (it says only 'one of them'). It does not name the brother who is Yusuf's full brother; it says 'his brother'.\n- It does not say where the well was, how deep it was, or how far from home.\n- It does not name an emotion for the brothers. The grievance they state is that Yusuf and his brother were dearer to their father; to call it jealousy is an inference.\n- The wolf appears only in the father's fear and in the brothers' story. Named in later tradition, not in the Quranic text: later stories give the wolf a name and a speech; neither is used here.\n- The Quran says the blood on the shirt was false; it does not say what it was or how they got it.\n- It does not say how long the brothers were away or what the father did that night."
+    },
+    {
+      "anchor": "the-well-and-the-caravan",
+      "position": 3,
+      "title_en": "The well and the caravan",
+      "event_slug": "yusuf-and-the-well",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 19,
+          "to": 20
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "A caravan came and its people sent one to draw water; he let down his bucket and called out glad tidings that here was a boy (the boy is not named in these verses; the narrative before them makes him Yusuf); he was hidden away as merchandise, and God knows what they do.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He was sold for a low price, a few dirhams counted out, and they thought little of him.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "A caravan found Yusuf at the well; he was hidden away as merchandise and sold for a low price [c1][c2].",
+      "body_md": "A caravan came, and its people sent one to draw water [c1]. He let down his bucket and called out glad tidings that here was a boy (not named in these verses; the narrative before them makes him Yusuf) [c1]. He was hidden away as merchandise, and God knows what they do [c1]. He was sold for a low price, a few dirhams counted out, and they thought little of him [c2].",
+      "deep_md": "The passage is brief: the finding (12:19) [c1], the concealing [c1] and the sale (12:20) [c2].",
+      "kids_md": "A caravan came to the well, and one of them let down his bucket and found a boy [c1]. The boy was sold for a small price [c2].",
+      "lessons_md": "Educational interpretation (not scripture): The passage notes that God knows what is done [c1]. One reading is that nothing in the scene lies outside God's knowledge [c1].",
+      "unknowns_md": "- The Arabic does not make clear who 'they' are in 'hid him as merchandise' and in 'sold him' (the travellers, the brothers or others). This draft uses the passive and does not decide.\n- The Quran does not say how long Yusuf was in the well, where the caravan came from or was going, or who the water-drawer was.\n- The price is given as dirhams counted out; the verse gives no number."
+    },
+    {
+      "anchor": "into-the-household",
+      "position": 4,
+      "title_en": "Into the household",
+      "event_slug": "yusuf-in-the-house-of-the-aziz",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 21,
+          "to": 22
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The man in Egypt who bought him told his wife to give him an honourable place to stay, saying that he might benefit them or they might take him as a son.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God says that in this way He established Yusuf in the land so that He might teach him the interpretation of events; God prevails over His affair, but most people do not know.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When Yusuf reached his full strength, God gave him judgement and knowledge, and says that this is how He rewards those who do good.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "A man in Egypt bought Yusuf and told his wife to treat him honourably; God says He established Yusuf in the land and, when he reached his full strength, gave him judgement and knowledge [c1][c2][c3].",
+      "body_md": "The man in Egypt who bought him told his wife to give him an honourable place to stay, saying that he might benefit them or that they might take him as a son [c1]. God says that in this way He established Yusuf in the land so that He might teach him the interpretation of events; God prevails over His affair, but most people do not know [c2]. When Yusuf reached his full strength, God gave him judgement and knowledge, and God says that this is how He rewards those who do good [c3].",
+      "deep_md": "The verse 12:21 states Yusuf's placing in more than one way: the buyer's instruction and intention [c1], and God's purpose, that He might teach him the interpretation of events [c2].",
+      "kids_md": "A man in Egypt bought Yusuf and told his wife to look after him well [c1]. God says He gave Yusuf a place in the land and taught him [c2]. When Yusuf grew strong, God gave him judgement and knowledge [c3].",
+      "lessons_md": "Educational interpretation (not scripture): The verse sets the buyer's plan beside God's purpose: the buyer thinks of benefit or adoption, while God speaks of establishing and teaching [c1][c2]. One reading is that events can serve a purpose beyond what the people in them intend [c2]. The text also says that most people do not know this [c2].",
+      "unknowns_md": "- The Quran does not name the buyer, his wife, his position or the household in this passage. Named in later tradition, not in the Quranic text: later accounts give the buyer and his wife personal names and the buyer an office; none is used here.\n- It does not say how old Yusuf was when he was bought, when he reached his full strength, or how many years he spent in the household.\n- It does not say where in Egypt the household was.\n- It does not say what the judgement and knowledge given to Yusuf included."
+    },
+    {
+      "anchor": "the-trial-in-the-household",
+      "position": 5,
+      "title_en": "The trial in the household",
+      "event_slug": "yusuf-in-the-house-of-the-aziz",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 23,
+          "to": 29
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The woman in whose house Yusuf was staying tried to seduce him; she closed the doors and called him to her; Yusuf said that he sought refuge in God, that his lord had made his stay good (the Arabic word can mean his master or his Lord), and that the wrongdoers do not succeed.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The verse says that she was set on him, and that he would have inclined toward her had he not seen a proof from his Lord; in this way God turned evil and indecency away from him, for he was among His sincere servants.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They raced to the door, and she tore his shirt from behind, and they met her husband (the Arabic says her master) at the door; she said that the penalty for one who wanted evil for his family should be prison or a painful punishment.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Yusuf said that she had tried to seduce him; a witness from her household testified that if his shirt was torn from the front she spoke truly and he was a liar, and if it was torn from behind she had lied and he was truthful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 26,
+              "to": 26
+            },
+            {
+              "surah": 12,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "When her husband saw that the shirt was torn from behind, he said that this was from their plotting, and that their plotting was great.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 28,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "He told Yusuf to turn away from this, and told her to ask forgiveness for her sin, for she was among the wrongdoers.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The woman of the house tried to seduce Yusuf and he sought refuge in God; the shirt was found torn from behind, and her husband told her to ask forgiveness [c1][c3][c4][c5][c6].",
+      "body_md": "The woman in whose house Yusuf was staying tried to seduce him; she closed the doors and called him to her [c1]. Yusuf said that he sought refuge in God, that his lord had made his stay good (the Arabic word can mean his master or his Lord), and that the wrongdoers do not succeed [c1]. The verse says that she was set on him, and that he would have inclined toward her had he not seen a proof from his Lord; in this way, it says, God turned evil and indecency away from him, for he was among His sincere servants [c2].\n\nThey raced to the door, and she tore his shirt from behind, and they met her husband (the Arabic says her master) at the door [c3]. She said that the penalty for one who wanted evil for his family should be prison or a painful punishment [c3]. Yusuf said that she had tried to seduce him [c4]. A witness from her household testified that if his shirt was torn from the front she spoke truly and he was a liar, and if it was torn from behind she had lied and he was truthful [c4]. When her husband saw that the shirt was torn from behind, he said that this was from their plotting, and that their plotting was great [c5]. He told Yusuf to turn away from this, and told her to ask forgiveness for her sin, for she was among the wrongdoers [c6].",
+      "deep_md": "The test offered by the witness is whether the shirt was torn from the front or from the back [c4]; it was found torn from behind [c5]. Yusuf's first recorded words are a seeking of refuge in God [c1].",
+      "kids_md": "The woman of the house tried to make Yusuf do wrong, but he said he sought God's protection [c1]. They ran to the door, and she tore his shirt from behind [c3]. A witness from her household said the torn shirt would show who spoke truthfully [c4]. The shirt was torn from behind [c5]. Her husband told her to ask forgiveness for her wrong [c6].",
+      "lessons_md": "Educational interpretation (not scripture): Yusuf's first recorded response is to seek refuge in God [c1]. One reading is that the passage presents seeking refuge in God as the response to temptation [c1]. The matter in the household was settled by evidence, the shirt, and not by assertion alone [c4][c5].",
+      "unknowns_md": "- The Quran does not name the woman, her husband or the witness, and does not say whether the witness was a man or a woman or how related to her. Named in later tradition, not in the Quranic text: later accounts give the woman and her husband names; none is used here.\n- The Arabic of 12:24 about Yusuf's part is read in more than one way. This draft states only the verse's condition (had he not seen a proof from his Lord) and decides nothing more; a reviewer must check the wording against the classical readings.\n- The verse does not say what the proof from his Lord was.\n- The verses 12:28-29 do not name the speaker; the draft reads them as her husband's words.\n- The Arabic word translated 'lord' in 12:23 can mean his master or his Lord; this draft keeps both.\n- It does not say how old either of them was or how long Yusuf had been in the household.\n- It does not say what became of the woman after this passage."
+    },
+    {
+      "anchor": "the-women-of-the-city",
+      "position": 6,
+      "title_en": "The women of the city",
+      "event_slug": "yusuf-in-the-house-of-the-aziz",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 30,
+          "to": 34
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Women in the city said that the wife of the Aziz was seducing her young manservant, that love for him had gripped her, and that they saw her in clear error.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When she heard of their scheming she sent for them, prepared a place for them to recline, gave each of them a knife, and told Yusuf to come out before them; when they saw him they were amazed at him and cut their hands, and said, glorifying God, that this was no human being but a noble angel.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "She told them that this was the one they had blamed her for, that she had tried to seduce him and he had held back, and that if he did not do what she ordered him he would be imprisoned and be among the humiliated.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 32,
+              "to": 32
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Yusuf said to his Lord that prison was dearer to him than what they called him to, and that unless God turned their plotting away from him he might incline to them and be among the ignorant.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 33,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "His Lord answered him and turned their plotting away from him; He hears and knows.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 34,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Women of the city blamed the wife of the Aziz; she gathered them, they were amazed at Yusuf, and she threatened him with prison; Yusuf asked God to turn their plotting away from him, and God answered him [c1][c2][c3][c4][c5].",
+      "body_md": "Women in the city said that the wife of the Aziz was seducing her young manservant, that love for him had gripped her, and that they saw her in clear error [c1]. When she heard of their scheming, she sent for them and prepared a place for them to recline, and gave each of them a knife; then she told Yusuf to come out before them [c2]. When they saw him they were amazed at him and cut their hands, and they said, glorifying God, that this was no human being but a noble angel [c2]. She told them that this was the one they had blamed her for, that she had tried to seduce him and he had held back, and that if he did not do what she ordered him, he would be imprisoned and be among the humiliated [c3].\n\nYusuf said to his Lord that prison was dearer to him than what they called him to, and that unless God turned their plotting away from him he might incline to them and be among the ignorant [c4]. His Lord answered him and turned their plotting away from him; He hears and knows [c5].",
+      "deep_md": "The scene turns on the women's remark (12:30) [c1] and the gathering she arranged in reply (12:31) [c2]. Yusuf's words in 12:33 prefer prison to what he is called to and ask God for protection [c4]; 12:34 gives the answer [c5].",
+      "kids_md": "Some women in the city blamed the wife of the Aziz [c1]. She invited them and gave each a knife, then told Yusuf to come out; they were so amazed that they cut their hands [c2]. Yusuf asked God to keep their plotting away from him, and God answered his prayer [c4][c5].",
+      "lessons_md": "Educational interpretation (not scripture): In this scene Yusuf's words are a prayer: he prefers prison to wrongdoing and asks God to turn the plotting away from him [c4]. One reading is that the passage holds up asking God for protection when one fears one's own weakness [c4]. The text says God answered him [c5].",
+      "unknowns_md": "- The Quran does not say who the women were or how many, or what the knives were for beyond giving each one a knife. It says they cut their hands and gives no further detail.\n- It does not describe Yusuf, or what the women saw; the verses record only their amazement and their words.\n- It does not say how long after the previous events this was.\n- 'Aziz' is a title; the Quran does not say what office it names. Named in later tradition, not in the Quranic text: later accounts give the Aziz and his wife personal names; none is used here."
+    },
+    {
+      "anchor": "prison-and-the-two-companions",
+      "position": 7,
+      "title_en": "Prison and the two companions",
+      "event_slug": "yusuf-in-prison",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 35,
+          "to": 42
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "After they had seen the signs, it occurred to them to imprison Yusuf for a time.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Two young men entered the prison with him; one said he saw himself pressing wine, and the other that he saw himself carrying bread on his head, from which birds were eating; they asked Yusuf to tell them the interpretation, for they saw him as one of those who do good.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Yusuf said that no food provided for them would come before he had informed them of its interpretation; this, he said, was from what his Lord had taught him; and he had left the way of a people who do not believe in God and who deny the Hereafter.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He said that he followed the way of his forefathers Ibrahim, Ishaq and Yaqub, that it was not for them to associate anything with God, and that this was from God's favour on them and on people, though most people are not thankful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Speaking to his companions in prison, Yusuf asked whether scattered lords were better, or God, who is one and prevails over all; he said that what they worshipped besides Him were only names that they and their fathers had given, for which God had sent down no authority; that judgement belongs to God alone, who had commanded them to worship none but Him; and that this is the right religion, though most people do not know.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 39,
+              "to": 39
+            },
+            {
+              "surah": 12,
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Yusuf gave the interpretation: one of them would serve wine to his lord, and the other would be crucified and the birds would eat from his head; the matter about which they asked was decided.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 41,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Yusuf said to the one he thought would be saved that he should mention him to his lord; Satan caused a forgetting of the mention of his lord (the Arabic can be read as the freed man forgetting to mention Yusuf to his master, or as Yusuf forgetting to mention his own Lord), and Yusuf remained in prison for several years.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Yusuf was imprisoned; two young men there told him dreams, and he called them to worship God alone and gave the interpretations: one would serve wine, the other would be crucified [c1][c2][c5][c6]. He asked the one who would be saved to mention him, and stayed in prison for several years [c7].",
+      "body_md": "After they had seen the signs, it occurred to them to imprison Yusuf for a time [c1]. Two young men entered the prison with him [c2]. One said he saw himself pressing wine; the other that he saw himself carrying bread on his head, from which birds were eating [c2]. They asked Yusuf to tell them the interpretation, for they saw him as one of those who do good [c2].\n\nYusuf told them that no food provided for them would come before he had informed them of its interpretation; this, he said, was from what his Lord had taught him, and he had left the way of a people who do not believe in God and who deny the Hereafter [c3]. He said he followed the way of his forefathers Ibrahim, Ishaq and Yaqub, that it was not for them to associate anything with God, and that this was from God's favour on them and on people, though most people are not thankful [c4]. Speaking to his companions in prison, he asked whether scattered lords were better, or God, who is one and prevails over all; he said that what they worshipped besides Him were only names that they and their fathers had given, for which God had sent down no authority; that judgement belongs to God alone, who had commanded them to worship none but Him; and that this is the right religion, though most people do not know [c5].\n\nThen he gave the interpretation: one of them would serve wine to his lord, and the other would be crucified and the birds would eat from his head; the matter about which they asked was decided [c6]. He said to the one he thought would be saved that he should mention him to his lord [c7]. Satan caused a forgetting of the mention of his lord (the Arabic can be read as the freed man forgetting to mention Yusuf to his master, or as Yusuf forgetting to mention his own Lord), and Yusuf remained in prison for several years [c7].",
+      "deep_md": "Yusuf prefaces the interpretation with what his Lord taught him and the way he follows (12:37-38) [c3][c4], then a call to worship God alone (12:39-40) [c5], and only then gives the interpretation (12:41) [c6]. The request itself is in 12:36 [c2].",
+      "kids_md": "Two young men came into the prison with Yusuf and told him their dreams [c2]. Yusuf told them first that he followed the way of Ibrahim, Ishaq and Yaqub and worshipped God alone [c4][c5]. Then he told them what their dreams meant [c6]. He asked the one who would be freed to mention him, but Yusuf stayed in prison for several years [c7].",
+      "lessons_md": "Educational interpretation (not scripture): Yusuf is asked for help with a dream and first speaks about worship of God alone [c2][c5]. One reading is that he treats the request as a chance to state his belief, and then gives the interpretation [c3][c5][c6]. The passage also records that he stayed in prison for several years after asking [c7].",
+      "unknowns_md": "- The Quran does not name the two young men or say what they had done; it does not say who 'his lord' in 12:41 is.\n- It does not say how long 'a time' (12:35) was, how old Yusuf was when he was imprisoned, what the signs were that they had seen, or who 'they' are who decided on the prison.\n- The Arabic for 'several years' does not give an exact number of years.\n- The reference of 'his lord' in 12:42 can be read in two ways, as noted in the text; the verse does not settle it."
+    },
+    {
+      "anchor": "the-kings-dream",
+      "position": 8,
+      "title_en": "The king's dream",
+      "event_slug": "the-kings-dream",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 43,
+          "to": 49
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The king said that he saw seven fat cows being eaten by seven lean ones, and seven green ears of grain and other dry ones; he asked his chiefs to explain his vision if they could interpret visions.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 43,
+              "to": 43
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They said that it was a confusion of dreams and that they had no knowledge of the interpretation of such dreams.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 44,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The one who had been saved remembered after a period, said that he would inform them of its interpretation and asked to be sent; he came to Yusuf, addressed him as the truthful one, and asked for the interpretation of the cows and the ears, so that he might return to the people and they might know.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 45,
+              "to": 45
+            },
+            {
+              "surah": 12,
+              "from": 46,
+              "to": 46
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Yusuf said that they would sow for seven years continuously, and that what they harvested they should leave in its ear, except a little for eating.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 47,
+              "to": 47
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Yusuf said that after that would come seven hard years that would eat what they had stored for them, except a little of what they preserved.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 48,
+              "to": 48
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Yusuf said that after that would come a year in which people would be given relief and in which they would press.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 49,
+              "to": 49
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The king dreamed of seven fat cows eaten by seven lean ones, and of seven green ears and dry ones; the man who had been saved from prison came to Yusuf, who gave the interpretation: seven years of sowing, seven hard years, then a year of relief [c1][c3][c4][c5][c6].",
+      "body_md": "The king said that he saw seven fat cows being eaten by seven lean ones, and seven green ears of grain and other dry ones; he asked his chiefs to explain his vision if they could interpret visions [c1]. They said it was a confusion of dreams and that they had no knowledge of the interpretation of such dreams [c2]. The one who had been saved remembered after a period, said that he would inform them of its interpretation, and asked to be sent; he came to Yusuf, addressed him as the truthful one, and asked for the interpretation of the cows and the ears, so that he might return to the people and they might know [c3].\n\nYusuf said that they would sow for seven years continuously, and that what they harvested they should leave in its ear, except a little for eating [c4]. After that, he said, would come seven hard years that would eat what they had stored for them, except a little of what they preserved [c5]. After that would come a year in which people would be given relief and in which they would press [c6].",
+      "deep_md": "The king's dream has a part about cows and a part about ears [c1]. Yusuf's interpretation follows the dream in order: seven years of growing (12:47) [c4], seven hard years (12:48) [c5], then a year of relief (12:49) [c6]. In it Yusuf also gives instructions: leave the harvest in its ear except a little to eat [c4], and preserve a little [c5].",
+      "kids_md": "The king dreamed of seven fat cows eaten by seven thin ones, and seven green ears of grain with dry ones [c1]. His chiefs could not explain it [c2]. The man who had left prison remembered Yusuf and asked him [c3]. Yusuf said there would be seven years of growing, then seven hard years, then a year of relief [c4][c5][c6].",
+      "lessons_md": "Educational interpretation (not scripture): Yusuf's interpretation includes what to do in the good years: leave the harvest in its ear and keep only a little to eat [c4][c5]. One reading is that preparing in good times for hard times is presented as part of the interpretation [c4][c5].",
+      "unknowns_md": "- The Quran does not name the king or the land he ruled. It uses the word king for the ruler in this account. Named in later tradition, not in the Quranic text: later accounts name the king and give him a dynasty and a title; none is used here.\n- It does not say who the chiefs were or how long the 'period' of 12:45 was.\n- The Arabic for 'press' does not say what was pressed (grapes, olives or something else).\n- It does not say how the king knew to ask for an interpretation, or how long after the prison scene this came."
+    },
+    {
+      "anchor": "from-prison-to-authority",
+      "position": 9,
+      "title_en": "From prison to authority",
+      "event_slug": "the-kings-dream",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 50,
+          "to": 57
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The king ordered that Yusuf be brought to him; when the messenger came, Yusuf told him to return to his lord and ask him about the women who had cut their hands, for Yusuf's Lord knows their plotting.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The king asked the women what their affair was when they tried to seduce Yusuf; they said that, God forbid, they knew no evil against him; and the wife of the Aziz said that now the truth had become clear: she was the one who had tried to seduce him, and he was among the truthful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 51,
+              "to": 51
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "A speech follows, in which the speaker says that this was so that the master would know that he had not betrayed him in his absence, and that God does not guide the plotting of the betrayers; and that he does not declare himself innocent, for the self commands evil except where his Lord has mercy, and his Lord is forgiving and merciful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 52,
+              "to": 52
+            },
+            {
+              "surah": 12,
+              "from": 53,
+              "to": 53
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The king said to bring Yusuf to him, that he would take him for himself; and when he had spoken with him, he told Yusuf that he was that day established with them and trusted.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 54,
+              "to": 54
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Yusuf asked to be set over the storehouses of the land, saying that he was a knowing guardian.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 55,
+              "to": 55
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God says that in this way He established Yusuf in the land, where he could settle wherever he wished; He reaches with His mercy whomever He wills and does not waste the reward of those who do good.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 56,
+              "to": 56
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The reward of the Hereafter is better for those who believe and are mindful of God.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 57,
+              "to": 57
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The king sent for Yusuf; Yusuf asked first about the women who had cut their hands; the wife of the Aziz admitted she had tried to seduce him; the king found him trusted, Yusuf asked to be set over the storehouses of the land, and God says He established him in the land [c1][c2][c4][c5][c6].",
+      "body_md": "The king ordered that Yusuf be brought to him [c1]. When the messenger came, Yusuf told him to return to his lord and ask him about the women who had cut their hands, for Yusuf's Lord knows their plotting [c1]. The king asked the women what their affair was when they tried to seduce Yusuf; they said that, God forbid, they knew no evil against him; and the wife of the Aziz said that now the truth had become clear: she was the one who had tried to seduce him, and he was among the truthful [c2].\n\nA speech follows, read here as Yusuf's: this was so that the master would know that he had not betrayed him in his absence, and that God does not guide the plotting of the betrayers; and he does not declare himself innocent, for the self commands evil except where his Lord has mercy, and his Lord is forgiving and merciful [c3].\n\nThe king said to bring Yusuf to him, that he would take him for himself; and when he had spoken with him, he told Yusuf that he was that day established with them and trusted [c4]. Yusuf asked to be set over the storehouses of the land, saying that he was a knowing guardian [c5]. God says that in this way He established Yusuf in the land, where he could settle wherever he wished; He reaches with His mercy whomever He wills and does not waste the reward of those who do good [c6]. The reward of the Hereafter, the Quran adds, is better for those who believe and are mindful of God [c7].",
+      "deep_md": "The central scene is the king's questioning of the women (12:51) [c2]. Yusuf's request in 12:50 comes before it [c1], and the speech in 12:52-53 after it [c3]. The passage ends with Yusuf's request for a post (12:55) [c5] and God's statement about establishing him (12:56) [c6].",
+      "kids_md": "The king asked for Yusuf to be brought out, and Yusuf asked him to find out the truth about the women first [c1]. The wife of the Aziz said that she had been the one at fault and that Yusuf was truthful [c2]. The king trusted Yusuf, and Yusuf asked to look after the storehouses of the land [c4][c5].",
+      "lessons_md": "Educational interpretation (not scripture): Yusuf asks that the truth of the matter be examined before he comes out [c1], and the truth is stated aloud [c2]. One reading is that the passage values clearing a matter openly [c1][c2]. In the speech that follows, the speaker does not declare himself innocent and says that the self commands evil unless God has mercy [c3].",
+      "unknowns_md": "- The Quran does not say how long after the dream these events came, or give the title or rank of the post Yusuf asked for; it says 'the storehouses of the land'.\n- The verses do not say who speaks 12:52-53. This draft reads them as Yusuf's; a reviewer must confirm, because the verses do not name the speaker.\n- The Quran does not narrate the moment of Yusuf's release; he says later (12:100) that God brought him out of the prison.\n- It does not say in so many words that the king granted the post; 12:56 says God established Yusuf in the land."
+    },
+    {
+      "anchor": "the-brothers-come-for-supplies",
+      "position": 10,
+      "title_en": "The brothers come for supplies",
+      "event_slug": "brothers-journeys-to-egypt",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 58,
+          "to": 68
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Yusuf's brothers came and entered where he was; he recognised them, but they did not recognise him.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 58,
+              "to": 58
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When Yusuf had supplied them with their provisions, he told them to bring him a brother of theirs from their father, and asked whether they did not see that he gave full measure and was the best of hosts.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 59,
+              "to": 59
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He said that if they did not bring him, there would be no measure for them from him and they should not come near him.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 60,
+              "to": 60
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They said that they would try to persuade his father about him and would do so.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 61,
+              "to": 61
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Yusuf told his servants to put the brothers' goods back in their saddlebags, so that they would recognise them when they returned to their family and might come back.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 62,
+              "to": 62
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "When they went back to their father they said that the measure had been withheld from them, and asked him to send their brother with them so that they could have their measure, promising to guard him.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 63,
+              "to": 63
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Their father asked whether he should entrust him to them as he had entrusted them with his brother before, and said that God is the best guardian and the most merciful of the merciful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 64,
+              "to": 64
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "When they opened their goods and found their merchandise returned, they said that they wanted nothing more: they would bring supplies for their family, guard their brother, and add a camel's load, which was an easy measure.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 65,
+              "to": 65
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "Their father said that he would not send him with them until they gave him a pledge by God that they would bring him back unless they were surrounded; when they gave their pledge, he said that God was guardian over what they said.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 66,
+              "to": 66
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "He told them not to enter by one gate but by different gates, though he could avail them nothing against God, for judgement belongs to God alone and in Him he put his trust; and when they entered as their father had ordered, it availed them nothing against God, but it met a need in Yaqub's soul which he fulfilled; he had knowledge because God had taught him, though most people do not know.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 67,
+              "to": 67
+            },
+            {
+              "surah": 12,
+              "from": 68,
+              "to": 68
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Yusuf's brothers came to him for supplies; he recognised them and they did not recognise him; he asked them to bring their other brother, and their father agreed only after a pledge by God [c1][c2][c3][c9].",
+      "body_md": "Yusuf's brothers came and entered where he was; he recognised them, but they did not recognise him [c1]. When he had supplied them with their provisions, he told them to bring him a brother of theirs from their father, and asked whether they did not see that he gave full measure and was the best of hosts [c2]. If they did not bring him, he said, there would be no measure for them from him and they should not come near him [c3]. They said they would try to persuade his father about him [c4]. Yusuf told his servants to put the brothers' goods back in their saddlebags, so that they would recognise them when they returned to their family and might come back [c5].\n\nWhen they went back to their father, they said that the measure had been withheld from them, and asked him to send their brother with them so that they could have their measure, promising to guard him [c6]. Their father asked whether he should entrust him to them as he had entrusted them with his brother before; God, he said, is the best guardian and the most merciful of the merciful [c7]. When they opened their goods and found their merchandise returned, they said they wanted nothing more: they would bring supplies for their family, guard their brother, and add a camel's load, which was an easy measure [c8]. Their father said he would not send him with them until they gave him a pledge by God that they would bring him back unless they were surrounded; when they gave their pledge, he said that God was guardian over what they said [c9].\n\nHe told them not to enter by one gate but by different gates, though he could avail them nothing against God, for judgement belongs to God alone and in Him he put his trust [c10]. When they entered as their father had ordered, it availed them nothing against God, but it met a need in Yaqub's soul which he fulfilled; he had knowledge because God had taught him, though most people do not know [c10].",
+      "deep_md": "The passage shows Yusuf's request (12:59-60) [c2][c3], the brothers' agreement (12:61) [c4], the return of their goods (12:62) [c5], and the father's conditions (12:64-68) [c7][c9][c10].",
+      "kids_md": "Yusuf's brothers came to him for food [c1]. He knew them, but they did not know him [c1]. He asked them to bring their other brother [c2]. Their father said he would send him only if they promised before God to bring him back [c9].",
+      "lessons_md": "Educational interpretation (not scripture): Their father ties his agreement to a pledge by God and also gives practical advice, to enter by different gates, while saying that judgement belongs to God alone [c9][c10]. One reading is that taking precautions and trusting God are presented together in this passage [c10].",
+      "unknowns_md": "- The Quran does not say how Yusuf knew of the brother or why he asked for him.\n- It does not say when the brothers came, how many years it had been since they parted from Yusuf, or how many came.\n- It gives no reason why the brothers did not recognise Yusuf; it says only that they did not.\n- It does not say why the father told them to enter by different gates, or what the need in Yaqub's soul was.\n- It does not name the brother. Named in later tradition, not in the Quranic text: later accounts name Yusuf's full brother; the name is not used here."
+    },
+    {
+      "anchor": "the-brother-and-the-kings-cup",
+      "position": 11,
+      "title_en": "The brother and the king's cup",
+      "event_slug": "brothers-journeys-to-egypt",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 69,
+          "to": 82
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "When the brothers came in to Yusuf, he took his brother aside and told him that he was his brother, so he should not grieve over what the others had been doing.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 69,
+              "to": 69
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When Yusuf had supplied them with provisions, he placed the drinking cup in his brother's saddlebag, and then a caller cried out that the caravan were thieves.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The brothers turned and asked what they were missing; they were told that the king's measuring cup was missing, that whoever brought it would have a camel's load, and that the speaker was responsible for it.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 71,
+              "to": 71
+            },
+            {
+              "surah": 12,
+              "from": 72,
+              "to": 72
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The brothers said, by God, that they knew they had not come to cause corruption in the land and were not thieves.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 73,
+              "to": 73
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They asked what the penalty would be if they were found to be liars; the answer was that the penalty would be the one in whose saddlebag it was found, who himself would be the penalty, for that is how they penalise wrongdoers.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 74,
+              "to": 74
+            },
+            {
+              "surah": 12,
+              "from": 75,
+              "to": 75
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Yusuf began with their bags before his brother's bag, and then brought the cup out of his brother's bag; God says that in this way He devised for Yusuf; he could not have taken his brother under the king's law unless God willed; God raises in degrees whom He wills, and above every possessor of knowledge is one who knows more.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 76,
+              "to": 76
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The brothers said that if he had stolen, a brother of his had stolen before; Yusuf kept this in himself and did not reveal it to them, and said that they were in a worse position and that God knew best what they described.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 77,
+              "to": 77
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "They addressed Yusuf as the Aziz and said that the boy had a very old father, and asked him to take one of them in his place, since they saw him as one of those who do good; he said that God forbid that they should take anyone but the one in whose possession they had found their property, for then they would be wrongdoers.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 78,
+              "to": 78
+            },
+            {
+              "surah": 12,
+              "from": 79,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "When they despaired of him, they withdrew to confer privately; the eldest of them reminded the rest that their father had taken a pledge from them before God and that they had failed regarding Yusuf before; he said that he would not leave the land until his father permitted him or God judged for him, for God is the best of judges.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 80,
+              "to": 80
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "The eldest told them to return to their father and say that his son had stolen, that they testified only to what they knew and had not been guardians of the unseen, and that he could ask the town where they had been and the caravan with which they came, for they were truthful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 81,
+              "to": 81
+            },
+            {
+              "surah": 12,
+              "from": 82,
+              "to": 82
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Yusuf told his brother privately that he was his brother, then the king's cup was placed in his brother's bag and found there; Yusuf kept his brother and refused the others' plea to take another in his place [c1][c2][c6][c8].",
+      "body_md": "When the brothers came in to Yusuf, he took his brother aside and told him that he was his brother, so he should not grieve over what the others had been doing [c1]. When he had supplied them with provisions, he placed the drinking cup in his brother's saddlebag, and then a caller cried out that the caravan were thieves [c2]. The brothers turned and asked what they were missing; they were told that the king's measuring cup was missing, that whoever brought it would have a camel's load, and that the speaker was responsible for it [c3]. The brothers said, by God, that they knew they had not come to cause corruption in the land and were not thieves [c4]. They asked what the penalty would be if they were found to be liars; the answer was that the penalty would be the one in whose saddlebag it was found, who himself would be the penalty, for that is how they penalise wrongdoers [c5].\n\nYusuf began with their bags before his brother's bag, and then brought the cup out of his brother's bag [c6]. God says that in this way He devised for Yusuf; he could not have taken his brother under the king's law unless God willed; God raises in degrees whom He wills, and above every possessor of knowledge is one who knows more [c6]. The brothers said that if he had stolen, a brother of his had stolen before; Yusuf kept this in himself and did not reveal it to them, and said that they were in a worse position and that God knew best what they described [c7]. They addressed Yusuf as the Aziz and said that the boy had a very old father, and asked him to take one of them in his place, since they saw him as one of those who do good; he said that God forbid that they should take anyone but the one in whose possession they had found their property, for then they would be wrongdoers [c8].\n\nWhen they despaired of him, they withdrew to confer privately [c9]. The eldest of them reminded the rest that their father had taken a pledge from them before God and that they had failed regarding Yusuf before; he said that he would not leave the land until his father permitted him or God judged for him, for God is the best of judges [c9]. He told them to return to their father and say that his son had stolen, that they testified only to what they knew and had not been guardians of the unseen, and that he could ask the town where they had been and the caravan with which they came, for they were truthful [c10].",
+      "deep_md": "The scene is told in a sequence of statements: the private word to the brother (12:69) [c1], the cup and the cry (12:70-72) [c2][c3], the protest and the agreed penalty (12:73-75) [c4][c5], the search (12:76) [c6], the remark about an earlier theft (12:77) [c7], the plea and the refusal (12:78-79) [c8], and the decision of the eldest (12:80-82) [c9][c10]. The verse 12:76 states that the device was God's, and that Yusuf could not have kept his brother under the king's law unless God willed [c6].",
+      "kids_md": "Yusuf told his brother quietly that he was his brother [c1]. The king's cup was found in his brother's bag, and Yusuf kept him there [c2][c6]. The other brothers asked Yusuf to take one of them instead, but Yusuf said no [c8]. The eldest brother decided to stay in the land until his father allowed him to leave or God judged for him [c9].",
+      "lessons_md": "Educational interpretation (not scripture): The eldest brother's words recall the pledge to their father and the earlier failure over Yusuf [c9]. One reading is that the brothers, facing a similar loss, now plead to protect the one who remains [c8][c9].",
+      "unknowns_md": "- The Quran does not say who the caller was, or whether Yusuf's brother knew of the plan beforehand; it says only that Yusuf told him who he was.\n- It does not describe the cup (it uses different words for it), or say what material it was.\n- It does not say what the earlier theft by 'a brother of his' (12:77) was. Named in later tradition, not in the Quranic text: later accounts tell a story to explain this remark; none is used here.\n- It does not say which brother is 'the eldest' or how the decision was reached.\n- How the 'king's law' of 12:76 worked is not described.\n- How Yusuf's placing of the cup (12:70-76) is to be assessed is not discussed in the verses beyond saying that it was God's device; this draft gives no verdict on it and leaves the matter to the scholarly reviewer."
+    },
+    {
+      "anchor": "the-fathers-patience",
+      "position": 12,
+      "title_en": "The father's patience",
+      "event_slug": "brothers-journeys-to-egypt",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 83,
+          "to": 87
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The father said that rather their souls had enticed them to something, that his course was graceful patience, and that perhaps God would bring them all to him; God, he said, is the knowing, the wise.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 83,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He turned away from them and said how great was his sorrow over Yusuf; his eyes turned white from grief, and he was suppressing it.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 84,
+              "to": 84
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "His sons said that, by God, he would not cease remembering Yusuf until he was ruined or among the perishing.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 85,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He answered that he complained of his distress and sorrow only to God, and that he knew from God what they did not know.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 86,
+              "to": 86
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He told his sons to go and inquire about Yusuf and his brother, and not to despair of God's mercy, for none despairs of God's mercy except the disbelieving people.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 87,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "On hearing the brothers' report, their father said again that his course was graceful patience; he grieved over Yusuf, complained only to God, and told his sons to search for Yusuf and his brother and not to despair of God's mercy [c1][c2][c4][c5].",
+      "body_md": "The father said to his sons that rather their souls had enticed them to something, that his course was graceful patience, and that perhaps God would bring them all to him; God, he said, is the knowing, the wise [c1]. He turned away from them and said how great was his sorrow over Yusuf; his eyes turned white from grief, and he was suppressing it [c2]. His sons said that, by God, he would not cease remembering Yusuf until he was ruined or among the perishing [c3]. He answered that he complained of his distress and sorrow only to God, and that he knew from God what they did not know [c4]. He told them to go and inquire about Yusuf and his brother, and not to despair of God's mercy, for none despairs of God's mercy except the disbelieving people [c5].",
+      "deep_md": "The passage joins the father's grief (12:84) [c2], the sons' reproach (12:85) [c3], his reply that he complains only to God (12:86) [c4], and his instruction not to despair of God's mercy (12:87) [c5].",
+      "kids_md": "Their father said he would be patient, and that God might bring them all back to him [c1]. He was very sad about Yusuf, and he told God about his sadness [c2][c4]. He told his sons to go and look for Yusuf and his brother, and never to give up hope in God's mercy [c5].",
+      "lessons_md": "Educational interpretation (not scripture): The father's grief is stated plainly, and so is where he takes it: he complains only to God and tells his sons not to despair of God's mercy [c2][c4][c5]. One reading is that the passage joins honest sorrow with continued hope [c2][c5].",
+      "unknowns_md": "- The Quran does not say how long it had been since Yusuf was lost.\n- The verse says his eyes turned white from grief; it does not say whether he lost his sight (a later verse, 12:96, speaks of his returning seeing).\n- It does not say what the father knew from God (12:86).\n- The father's first sentence repeats the words he used at 12:18.\n- The father is not named in these verses; he is named elsewhere in the surah (12:6, 12:38, 12:68)."
+    },
+    {
+      "anchor": "yusuf-makes-himself-known",
+      "position": 13,
+      "title_en": "Yusuf makes himself known",
+      "event_slug": "brothers-journeys-to-egypt",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 88,
+          "to": 93
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The brothers entered on Yusuf and addressed him as the Aziz, saying that hardship had touched them and their family; they had brought poor merchandise, and asked him to give them full measure and to be charitable to them, for God rewards the charitable.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 88,
+              "to": 88
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Yusuf asked whether they knew what they had done with Yusuf and his brother when they were ignorant.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 89,
+              "to": 89
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They asked whether he was indeed Yusuf, and he said that he was Yusuf and that this was his brother, that God had been gracious to them, and that whoever is mindful of God and patient finds that God does not waste the reward of those who do good.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 90,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They said, by God, that God had preferred him over them, and that they had been sinners.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 91,
+              "to": 91
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Yusuf said that there was no blame on them that day, that God forgives them, and that He is the most merciful of the merciful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 92,
+              "to": 92
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Yusuf told them to take his shirt and throw it over his father's face, and he would come seeing; and to bring all their family to him.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 93,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The brothers came back in need; Yusuf asked whether they knew what they had done with Yusuf and his brother, and told them who he was; they admitted their wrong, he said there was no blame on them that day, and he sent his shirt to his father [c2][c3][c4][c5][c6].",
+      "body_md": "The brothers entered on Yusuf and addressed him as the Aziz, saying that hardship had touched them and their family; they had brought poor merchandise, and they asked him to give them full measure and to be charitable to them, for God rewards the charitable [c1]. He asked whether they knew what they had done with Yusuf and his brother when they were ignorant [c2]. They asked whether he was indeed Yusuf, and he said that he was Yusuf and that this was his brother, that God had been gracious to them, and that whoever is mindful of God and patient finds that God does not waste the reward of those who do good [c3]. They said, by God, that God had preferred him over them, and that they had been sinners [c4]. He said there was no blame on them that day, that God forgives them, and that He is the most merciful of the merciful [c5]. He told them to take his shirt and throw it over his father's face, and he would come seeing; and to bring all their family to him [c6].",
+      "deep_md": "Yusuf's making himself known moves in short steps: the plea (12:88) [c1], his question (12:89) [c2], their question and his answer (12:90) [c3], their acknowledgement (12:91) [c4], and his words of release (12:92) [c5]. The instruction about the shirt in 12:93 sends the news to the father [c6].",
+      "kids_md": "The brothers came back needing help [c1]. Yusuf asked if they knew what they had done to Yusuf and his brother [c2]. They asked if he was Yusuf, and he said he was, and that this was his brother [c3]. They said they had been wrong [c4]. Yusuf said there was no blame on them that day and that God forgives them [c5]. He sent his shirt for his father [c6].",
+      "lessons_md": "Educational interpretation (not scripture): Yusuf answers their admission with the words that there is no blame on them that day and that God forgives them [c4][c5]. One reading is that the text places forgiveness at the moment when the wrong is acknowledged [c4][c5]. He also names patience and mindfulness of God as the way in which God does not waste the reward of those who do good [c3].",
+      "unknowns_md": "- The Quran does not say what led them to ask whether he was Yusuf.\n- It does not say how many years had passed since the first visit, or where the meeting took place beyond 'before him'.\n- It does not say whether the shirt is the same shirt as in the earlier scenes, or that it had any property beyond Yusuf's instruction."
+    },
+    {
+      "anchor": "reunion-and-forgiveness",
+      "position": 14,
+      "title_en": "Reunion and forgiveness",
+      "event_slug": "reunion-of-yaqub-and-yusuf",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 94,
+          "to": 101
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "When the caravan set out, their father said that he found the scent of Yusuf, unless they thought him weak-minded.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 94,
+              "to": 94
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Others said that, by God, he was in his old error.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 95,
+              "to": 95
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When the bearer of good news came, he cast the shirt on the father's face, and the father returned seeing; he said, did he not tell them that he knew from God what they did not know.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 96,
+              "to": 96
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "His sons asked their father to ask forgiveness for their sins, since they had been sinners, and he said he would ask forgiveness for them from his Lord, who is forgiving and merciful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 97,
+              "to": 97
+            },
+            {
+              "surah": 12,
+              "from": 98,
+              "to": 98
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "When they entered on Yusuf, he took his parents to himself and told them to enter Egypt, if God willed, in safety.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 99,
+              "to": 99
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Yusuf raised his parents upon the throne, and they fell down before him in prostration; he said that this was the interpretation of his dream of before, which his Lord had made true; that his Lord had been good to him in bringing him out of the prison and in bringing them from the desert, after Satan had stirred up enmity between him and his brothers; and that his Lord is subtle in what He wills, the knowing, the wise.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 100,
+              "to": 100
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Yusuf prayed that God, who had given him of the kingdom and taught him the interpretation of events, and who is the creator of the heavens and the earth, would take him as one who submits and join him with the righteous.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 101,
+              "to": 101
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "As the caravan set out, the father said he found the scent of Yusuf; when the shirt was cast on his face he returned seeing; the sons asked his forgiveness; the family came to Yusuf, who said his dream of before had come true and prayed to be taken as one who submits and joined with the righteous [c1][c3][c4][c5][c6][c7].",
+      "body_md": "When the caravan set out, their father said that he found the scent of Yusuf, unless they thought him weak-minded [c1]. Others said that, by God, he was in his old error [c2]. When the bearer of good news came, he cast the shirt on the father's face, and the father returned seeing; he said, did he not tell them that he knew from God what they did not know [c3]. His sons asked their father to ask forgiveness for their sins, since they had been sinners, and he said he would ask forgiveness for them from his Lord, who is forgiving and merciful [c4].\n\nWhen they entered on Yusuf, he took his parents to himself and told them to enter Egypt, if God willed, in safety [c5]. He raised his parents upon the throne, and they fell down before him in prostration [c6]. Yusuf said that this was the interpretation of his dream of before, which his Lord had made true; that his Lord had been good to him in bringing him out of the prison and in bringing them from the desert, after Satan had stirred up enmity between him and his brothers; and that his Lord is subtle in what He wills, the knowing, the wise [c6]. He prayed that God, who had given him of the kingdom and taught him the interpretation of events, and who is the creator of the heavens and the earth, would take him as one who submits and join him with the righteous [c7].",
+      "deep_md": "The passage runs from the sign of the shirt (12:94-96) [c1][c3] to the father's promise (12:97-98) [c4], the family's arrival (12:99-100) [c5][c6] and Yusuf's prayer (12:101) [c7]. At 12:100 Yusuf calls the scene the interpretation of his dream of before [c6].",
+      "kids_md": "When the caravan set out, Yusuf's father said he found the scent of Yusuf [c1]. The shirt was put on his face, and he returned seeing [c3]. The brothers asked him to ask for forgiveness for them, and he said he would [c4]. When the family came to Yusuf, he took his parents to himself [c5]. Yusuf said that his dream of before had come true [c6].",
+      "lessons_md": "Educational interpretation (not scripture): The brothers ask for forgiveness and the father promises to ask it from his Lord [c4]. Yusuf calls the reunion the interpretation of his earlier dream and credits it to his Lord [c6]. One reading is that the passage ends not with triumph but with a prayer to be taken as one who submits [c7].",
+      "unknowns_md": "- The Quran does not say how much time passed between the first dream and the reunion; Yusuf calls the dream one 'of before'.\n- It does not say who 'others' are in 12:95.\n- It does not say how many people were in the family. Later accounts differ on who 'his parents' (12:99-100) were; the verses do not say.\n- The father is not named in these verses; he is named elsewhere in the surah (12:6, 12:38, 12:68).\n- It does not say what the prostration in 12:100 was, whether greeting, honour or something else.\n- The Arabic verb in Yusuf's prayer (12:101) is the one used for taking a soul; how to render it is left to the reviewer.\n- It does not narrate what became of the brothers, or Yusuf's death."
+    },
+    {
+      "anchor": "remembered-in-another-surah",
+      "position": 15,
+      "title_en": "Remembered in another surah",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 40,
+          "from": 34,
+          "to": 34
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Yusuf had come to those addressed before with clear proofs, but they stayed in doubt about what he brought until he died; then they said that God would never send a messenger after him; in this way, the verse says, God leaves in error whoever is a transgressor and a doubter.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 34,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Another surah recalls that Yusuf came with clear proofs, that those addressed doubted what he brought until he died, and that they then said God would send no messenger after him [c1].",
+      "body_md": "A verse in another surah speaks of Yusuf: he had come to those addressed with clear proofs before, but they stayed in doubt about what he brought, until he died; then they said that God would never send a messenger after him [c1]. The verse adds that in this way God leaves in error whoever is a transgressor and a doubter [c1].",
+      "deep_md": "The verse does not retell the story; it recalls one fact about Yusuf's mission, that he came with clear proofs, and one reaction after his death [c1].",
+      "kids_md": "Another surah says that Yusuf came with clear proofs, but the people kept doubting [c1].",
+      "lessons_md": "Educational interpretation (not scripture): The verse shows a people doubting what a messenger brought and then, after his death, speaking as if no messenger would follow [c1]. One reading is that the verse invites reflection on doubt that persists in the face of clear proofs [c1].",
+      "unknowns_md": "- The Quran does not say who those addressed are, or when this was; the verse belongs to a passage (around 40:28-35) outside this draft's range.\n- It does not say what the clear proofs were.\n- It does not say to whom Yusuf came in the sense of this verse, or where."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Yusuf. None is used in this draft.",
+    "The verses 12:1-3 (the framing of the surah) and 12:102-111 (the closing passage) are outside the inventory range for Yusuf and are not used. A reviewer should decide whether to extend the inventory and add framing and closing chapters.",
+    "12:24 (the verse about what she and he were set on): the Arabic about his part is read in more than one way; the draft states only the verse's condition and a reviewer must check the wording.",
+    "The speaker of 12:52-53 is not named in the verses; the draft reads it as Yusuf's and marks it so.",
+    "The reference of 'his lord' in 12:42 is open (the released man's master or Yusuf's own Lord); the draft keeps both readings.",
+    "The 'lord' of 12:23 can mean his master or his Lord; the draft keeps both.",
+    "How Yusuf's placing of the cup (12:70-76) is to be assessed is not given in the verses beyond calling it God's device; the draft gives no verdict and a scholar should look at it.",
+    "Who the 'parents' of 12:99-100 are is not stated; the draft does not decide.",
+    "Named in later tradition, not in the Quranic text: personal names for Yusuf's brothers, mother, the Aziz, his wife and the king; the name and the story of the wolf; where the well was; many details of the prison scenes. None is used in the story texts.",
+    "The only numbers used are those stated by the verses: eleven stars (12:4), seven cows and ears and years (12:43-49), several years in prison (12:42). No age, year or duration is given beyond these.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}
