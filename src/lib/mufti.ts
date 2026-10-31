@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { ayahHash } from "@/lib/refs";
 
 /** Mufti Q&A request schemas and pure helpers. Every API route validates with these; the database enforces the rules again. */
 
@@ -114,7 +115,7 @@ export interface CitationRow {
 export function citationDisplay(c: CitationRow): { label: string; href?: string } {
   if (c.kind === "quran" && c.quran_surah && c.quran_ayah_from) {
     const to = c.quran_ayah_to && c.quran_ayah_to !== c.quran_ayah_from ? `–${c.quran_ayah_to}` : "";
-    return { label: `Q ${c.quran_surah}:${c.quran_ayah_from}${to}`, href: `/quran/${c.quran_surah}#ayah-${c.quran_ayah_from}` };
+    return { label: `Q ${c.quran_surah}:${c.quran_ayah_from}${to}`, href: `/quran/${c.quran_surah}${ayahHash(c.quran_ayah_from ?? 1, c.quran_ayah_to)}` };
   }
   if (c.kind === "hadith" && c.hadith_id) return { label: `#${c.hadith_id.slice(0, 8)}` };
   return { label: [c.work, c.locator].filter(Boolean).join(", ") };

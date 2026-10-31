@@ -5,6 +5,7 @@
  * (and the safety guidance on distress topics) before anything is published.
  */
 import type { EvidenceKind } from "@/content/labels";
+import { ayahHash } from "@/lib/refs";
 
 export const ICON_KEYS = ["wave", "bond", "leaf", "scale", "flame", "return", "moon", "lantern", "shield", "home", "hourglass", "star"] as const;
 export type GuidanceIcon = (typeof ICON_KEYS)[number];
@@ -113,7 +114,7 @@ export interface TopicPage {
 export function citation(r: ClaimRef): { kind: string; label: string; href?: string } {
   if (r.kind === "quran" && r.quran_surah && r.quran_ayah_from) {
     const to = r.quran_ayah_to && r.quran_ayah_to !== r.quran_ayah_from ? `–${r.quran_ayah_to}` : "";
-    return { kind: "Quran", label: `Q ${r.quran_surah}:${r.quran_ayah_from}${to}`, href: `/quran/${r.quran_surah}#ayah-${r.quran_ayah_from}` };
+    return { kind: "Quran", label: `Q ${r.quran_surah}:${r.quran_ayah_from}${to}`, href: `/quran/${r.quran_surah}${ayahHash(r.quran_ayah_from ?? 1, r.quran_ayah_to)}` };
   }
   if (r.kind === "hadith" && r.hadith_entries) {
     const { collection_id: c, canonical_number: n } = r.hadith_entries;

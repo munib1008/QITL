@@ -1,5 +1,6 @@
 /** Story types, constants and helpers shared by server pages and client components (no data access). */
 import type { EvidenceKind } from "@/content/labels";
+import { ayahHash } from "@/lib/refs";
 
 export type Audience = "kids" | "young" | "full";
 export const AUDIENCES: Array<[Audience, string, string]> = [
@@ -101,7 +102,7 @@ const COLLECTION_NAME: Record<string, string> = { bukhari: "Bukhari", muslim: "M
 
 export function refLabel(r: Ref): { text: string; href?: string } {
   if (r.kind === "quran" && r.surah && r.from)
-    return { text: `Q ${r.surah}:${r.from}${r.to && r.to !== r.from ? `–${r.to}` : ""}`, href: `/quran/${r.surah}#ayah-${r.from}` };
+    return { text: `Q ${r.surah}:${r.from}${r.to && r.to !== r.from ? `–${r.to}` : ""}`, href: `/quran/${r.surah}${ayahHash(r.from, r.to)}` };
   if (r.kind === "hadith" && r.hadith)
     return { text: `${COLLECTION_NAME[r.hadith.collection] ?? r.hadith.collection} ${r.hadith.number}`, href: `/hadith/${r.hadith.collection}/${r.hadith.number}` };
   return { text: [r.work, r.locator].filter(Boolean).join(", ") || r.kind };

@@ -17,10 +17,15 @@ export function parseAyahRange(s: string): AyahRef | null {
   return { surah, from, to };
 }
 
-/** Link target for an ayah range in the Quran explorer. */
+/** Link target for an ayah or range in the Quran reader; a range marks every ayah in it ("#ayah-30-39"). */
 export function quranHref(range: string): string | undefined {
   const r = parseAyahRange(range);
-  return r ? `/quran/${r.surah}#ayah-${r.from}` : undefined;
+  return r ? `/quran/${r.surah}${ayahHash(r.from, r.to)}` : undefined;
+}
+
+/** "#ayah-4", or "#ayah-30-39" for a range. */
+export function ayahHash(from: number, to?: number | null): string {
+  return to && to > from ? `#ayah-${from}-${to}` : `#ayah-${from}`;
 }
 
 export function formatAyah(r: AyahRef): string {

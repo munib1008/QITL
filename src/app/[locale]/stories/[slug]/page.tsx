@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ayahHash } from "@/lib/refs";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { CitationChip, EvidenceLabel } from "@/components/ui/evidence";
 import { BookmarkButton } from "@/components/account/BookmarkButton";
@@ -39,7 +40,7 @@ function refLabel(r: Ref): { text: string; href?: string } {
   if (r.kind === "quran" && r.quran_surah)
     return {
       text: `Q ${r.quran_surah}:${r.quran_ayah_from}${r.quran_ayah_to && r.quran_ayah_to !== r.quran_ayah_from ? `–${r.quran_ayah_to}` : ""}`,
-      href: `/quran/${r.quran_surah}#ayah-${r.quran_ayah_from}`,
+      href: `/quran/${r.quran_surah}${ayahHash(r.quran_ayah_from ?? 1, r.quran_ayah_to)}`,
     };
   return { text: `${r.sources?.work ?? r.kind}${r.locator ? `, ${r.locator}` : ""}` };
 }

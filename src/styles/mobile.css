@@ -252,3 +252,23 @@ html.zq-noscroll, html.zq-noscroll body { overflow: hidden; }
 
 /* MapLibre zoom buttons (geographic atlas, when a tile provider is configured): 44px touch targets. */
 .zq-atlas .maplibregl-ctrl-group button { width: var(--tap); height: var(--tap); }
+
+/* ---------- Quran reference target: 3-second glow on the referenced ayah(s) ---------- */
+.zq-ayah { scroll-margin-top: 96px; border-radius: 14px; }
+@media (min-width: 1024px) { .zq-ayah { scroll-margin-top: 140px; } }
+.zq-ayah.qr-flash { animation: qr-flash 3s ease-out both; }
+.zq-ayah.qr-flash .zq-ar-quran { animation: qr-flash-text 3s ease-out both; }
+@keyframes qr-flash {
+  0%   { box-shadow: 0 0 0 2px var(--brass), 0 0 26px 4px color-mix(in srgb, var(--brass) 55%, transparent); background: color-mix(in srgb, var(--brass) 10%, transparent); }
+  70%  { box-shadow: 0 0 0 2px var(--brass), 0 0 18px 2px color-mix(in srgb, var(--brass) 35%, transparent); background: color-mix(in srgb, var(--brass) 6%, transparent); }
+  100% { box-shadow: 0 0 0 0 transparent; background: transparent; }
+}
+@keyframes qr-flash-text {
+  0%, 70% { text-shadow: 0 0 14px color-mix(in srgb, var(--brass) 70%, transparent); }
+  100%    { text-shadow: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  /* No animation: a plain border marks the ayah for the same 3 seconds (the class is removed after 3 s). */
+  .zq-ayah.qr-flash, .zq-ayah.qr-flash .zq-ar-quran { animation: none; }
+  .zq-ayah.qr-flash { box-shadow: 0 0 0 2px var(--brass); }
+}

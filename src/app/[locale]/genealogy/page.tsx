@@ -8,6 +8,7 @@ import { getServerSupabase } from "@/lib/supabase/server";
 import { GenealogyExplorer } from "@/components/genealogy/GenealogyExplorer";
 import { REL, type GenealogyGraph } from "@/components/genealogy/types";
 import { e2eFixturesEnabled, fixtureGraph } from "@/lib/e2e-fixtures";
+import { ayahHash } from "@/lib/refs";
 
 export const metadata: Metadata = {
   title: "Genealogy",
@@ -83,7 +84,7 @@ export default async function GenealogyPage({ params, searchParams }: { params: 
                         <EvidenceLabel kind={e.claim.evidence} />
                         {e.claim.references.map((r, i) =>
                           r.kind === "quran" && r.surah ? (
-                            <CitationChip key={i} href={`/quran/${r.surah}#ayah-${r.from}`}>{`Q ${r.surah}:${r.from}${r.to && r.to !== r.from ? `–${r.to}` : ""}`}</CitationChip>
+                            <CitationChip key={i} href={`/quran/${r.surah}${ayahHash(r.from ?? 1, r.to)}`}>{`Q ${r.surah}:${r.from}${r.to && r.to !== r.from ? `–${r.to}` : ""}`}</CitationChip>
                           ) : (
                             <CitationChip key={i}>{r.locator ?? r.kind}</CitationChip>
                           ),

@@ -9,7 +9,7 @@ import { StudyLauncher } from "@/components/quran/StudyLauncher";
 import { CitationChip, EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
 import { LanguageNote } from "@/components/i18n/LanguageNote";
-import { parseAyahRange } from "@/lib/refs";
+import { parseAyahRange, ayahHash } from "@/lib/refs";
 import { LOCALES } from "@/lib/i18n";
 import { QuranAttribution } from "@/components/quran/QuranAttribution";
 import { RiwayahIndicator } from "@/components/qiraat/RiwayahIndicator";
@@ -80,7 +80,7 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
                 <li key={r.s.id}>
                   <Link href={`/prophets/${r.s.id}`}>{r.s.name}</Link>
                   {r.passages.map((p) => (
-                    <CitationChip key={p} href={`#ayah-${parseAyahRange(p)?.from ?? 1}`}>{`Q ${p}`}</CitationChip>
+                    <CitationChip key={p} href={ayahHash(parseAyahRange(p)?.from ?? 1, parseAyahRange(p)?.to)}>{`Q ${p}`}</CitationChip>
                   ))}
                 </li>
               ))}

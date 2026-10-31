@@ -15,7 +15,7 @@ describe("references", () => {
     for (const bad of ["115:1", "0:1", "12:0", "12:9–3", "twelve:four", ""]) expect(parseAyahRange(bad), bad).toBeNull();
   });
   test("links and formats", () => {
-    expect(quranHref("2:30–39")).toBe("/quran/2#ayah-30");
+    expect(quranHref("2:30–39")).toBe("/quran/2#ayah-30-39");
     expect(formatAyah({ surah: 2, from: 30, to: 39 })).toBe("Q 2:30–39");
   });
 });

@@ -78,7 +78,7 @@ describe("Mufti Q&A schemas", () => {
 
   test("citation display links Quran references and never invents text", () => {
     const base = { hadith_id: null, work: null, locator: null, note: null };
-    expect(citationDisplay({ kind: "quran", quran_surah: 12, quran_ayah_from: 4, quran_ayah_to: 6, ...base })).toEqual({ label: "Q 12:4–6", href: "/quran/12#ayah-4" });
+    expect(citationDisplay({ kind: "quran", quran_surah: 12, quran_ayah_from: 4, quran_ayah_to: 6, ...base })).toEqual({ label: "Q 12:4–6", href: "/quran/12#ayah-4-6" });
     expect(citationDisplay({ kind: "scholar", quran_surah: null, quran_ayah_from: null, quran_ayah_to: null, ...base, work: "Fixture work", locator: "p. 3" }).label).toBe("Fixture work, p. 3");
   });
 
@@ -99,7 +99,7 @@ describe("Mufti Q&A schemas", () => {
       />,
     );
     const link = screen.getByRole("link", { name: /Q 37:102–107/ });
-    expect(link).toHaveAttribute("href", "/quran/37#ayah-102");
+    expect(link).toHaveAttribute("href", "/quran/37#ayah-102-107");
   });
 });
 

@@ -7,6 +7,7 @@ import { CitationChip } from "@/components/ui/evidence";
 import { Icon } from "@/components/ui/icons";
 import { interpretationT } from "@/lib/i18n/modules/interpretation";
 import { StudyLayout, type StudyTarget } from "./StudyPanel";
+import { useAyahHighlight } from "./useAyahHighlight";
 
 const SIZES = [24, 28, 32, 38, 44, 48];
 
@@ -20,6 +21,7 @@ export function AyahReader({ surah, surahName, verses, links, locale = "en" }: {
   const [study, setStudy] = useState<StudyTarget | null>(null);
   const t = interpretationT(locale);
   const [copied, setCopied] = useState<number | null>(null);
+  useAyahHighlight();
   useEffect(() => {
     try {
       const v = Number(localStorage.getItem("qitl-quran-size"));
@@ -54,7 +56,7 @@ export function AyahReader({ surah, surahName, verses, links, locale = "en" }: {
       </div>
       <ol style={{ listStyle: "none", margin: 0, padding: 0 }}>
         {verses.map((v) => (
-          <li key={v.ayah} id={`ayah-${v.ayah}`} className="zq-ayah" style={{ scrollMarginTop: 24 }}>
+          <li key={v.ayah} id={`ayah-${v.ayah}`} className="zq-ayah">
             <p className="zq-ar-quran" lang="ar" dir="rtl" style={{ fontSize: size, maxWidth: "var(--measure-arabic)" }}>
               {v.text}
             </p>

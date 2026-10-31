@@ -33,7 +33,7 @@ test("flow A: Adam → timeline → place → Quran → hadith section → next 
   await page.goto("/prophets/adam");
   await page.locator("#story-h").scrollIntoViewIfNeeded();
   await page.getByRole("link", { name: "Q 2:30–39" }).first().click();
-  await expect(page).toHaveURL(/\/quran\/2#ayah-30$/);
+  await expect(page).toHaveURL(/\/quran\/2#ayah-30-39$/);
   await page.goto("/prophets/adam#hadith");
   await expect(page.locator("#hadith")).toContainText("No narration is attached");
   await page.getByRole("navigation", { name: "Journey position" }).getByRole("link", { name: /Next/ }).click();
