@@ -1,0 +1,59 @@
+/*
+ * Hadith stories, People and Communities (/hadith-stories, /people, /communities). Mobile-first on the mobile.css tokens
+ * (--tap, --gutter), logical properties only so everything mirrors in Arabic and Urdu. A status is never colour alone:
+ * each carries a glyph and words.
+ */
+.he-page { display: grid; gap: 24px; }
+.he-rules { display: grid; gap: 8px; padding: 16px; background: var(--surface-raised); border: 1px solid var(--hairline); border-inline-start: 4px solid var(--slate); border-radius: var(--radius-md); }
+.he-rules h2 { margin: 0; font: 600 16px/22px var(--font-sans); }
+.he-rules ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 6px; font: 400 15px/24px var(--font-sans); }
+.he-filters { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); align-items: end; padding: 16px; border: 1px solid var(--hairline); border-radius: var(--radius-md); background: var(--surface-raised); }
+.he-filters label { display: grid; gap: 4px; font: 600 13px/18px var(--font-sans); color: var(--ink-muted); }
+.he-filters select { min-height: var(--tap); padding: 6px 10px; font: 400 15px/22px var(--font-sans); color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); max-width: 100%; }
+.he-filter-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.he-filter-actions .zq-btn { min-height: var(--tap); }
+.he-grid { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 12px; }
+.he-card { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; padding: 16px; background: var(--surface-raised); border: 1px solid var(--hairline); border-radius: var(--radius-md); min-width: 0; }
+.he-card p { margin: 0; overflow-wrap: anywhere; }
+.he-card-title { margin: 0; font: 600 19px/26px var(--font-display); overflow-wrap: anywhere; }
+.he-card-title a { color: var(--ink); text-decoration: none; display: inline-flex; flex-direction: column; min-height: 24px; }
+.he-card-title a:hover { text-decoration: underline; }
+.he-alt { display: block; font: 400 15px/22px var(--font-sans); color: var(--ink-muted); }
+.he-alt:lang(ar) { font-family: var(--font-naskh), var(--font-sans); font-size: 18px; }
+.he-kind, .he-ref { margin: 0; }
+.he-counts { margin: 4px 0 0; }
+.he-group h2 { margin: 0; font: 500 var(--fs-h2)/1.25 var(--font-display); }
+.he-group-note { margin: 4px 0 0; }
+
+.he-status { display: inline-flex; gap: 6px; align-items: baseline; font: 600 14px/20px var(--font-sans); margin: 0; }
+.he-status[data-status="named"] { color: var(--ev-quran); }
+.he-status[data-status="later"] { color: var(--brass-ink); }
+.he-status[data-status="unknown"] { color: var(--ink-muted); }
+.he-standing { display: inline-block; padding: 1px 8px; border: 1px solid var(--border); border-radius: var(--radius-pill); font: 600 12px/18px var(--font-sans); color: var(--brass-ink); }
+
+.he-sec { display: grid; gap: 8px; padding: 16px 0; border-top: 1px solid var(--hairline); }
+.he-sec h2 { margin: 0; font: 500 var(--fs-h2)/1.25 var(--font-display); }
+.he-sec h3 { margin: 4px 0 0; font: 600 15px/22px var(--font-sans); }
+.he-sec p { margin: 0; max-width: var(--reading-max); }
+.he-list { margin: 0; padding-inline-start: 20px; display: grid; gap: 8px; }
+.he-list li { max-width: var(--reading-max); }
+.he-list a { display: inline-flex; align-items: center; min-height: 24px; }
+.he-verses { display: flex; flex-wrap: wrap; gap: 8px; }
+.he-ident ul { margin: 4px 0 8px; padding-inline-start: 20px; }
+.he-facts { display: grid; gap: 8px; margin: 0; }
+.he-facts > div { display: grid; gap: 2px; padding: 8px 12px; border: 1px dashed var(--border); border-radius: var(--radius-sm); background: var(--surface); }
+.he-facts dt { font: 600 13px/18px var(--font-sans); color: var(--ink-muted); }
+.he-facts dd { margin: 0; font: 400 15px/24px var(--font-sans); }
+
+.he-narration { display: grid; gap: 8px; }
+.he-variants { display: grid; gap: 16px; }
+.he-layer { display: grid; gap: 8px; padding: 12px 14px; border-radius: var(--radius-sm); border: 1px solid var(--hairline); border-inline-start-width: 4px; background: var(--surface-raised); }
+.he-layer h3 { margin: 0; font: 600 13px/18px var(--font-sans); letter-spacing: .06em; text-transform: uppercase; }
+.he-layer-lesson { border-inline-start-color: var(--ev-scholar); }
+.he-layer-application { border-inline-start-color: var(--brass); border-style: dashed; border-inline-start-style: solid; background: var(--surface-sunken); }
+.he-layer p { margin: 0; font: 400 var(--fs-body)/1.6 var(--font-sans); max-width: var(--reading-max); }
+.he-layer-label { font: 600 13px/18px var(--font-sans); color: var(--brass-ink); }
+.he-facts-grid { display: grid; gap: 8px 16px; grid-template-columns: 1fr; margin: 0; }
+@media (min-width: 640px) { .he-facts-grid { grid-template-columns: max-content 1fr; } }
+.he-facts-grid dt { font: 600 13px/22px var(--font-sans); color: var(--ink-muted); }
+.he-facts-grid dd { margin: 0; }

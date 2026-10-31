@@ -1,6 +1,7 @@
 import { getDict } from "@/lib/i18n";
 import { creationStrings } from "@/lib/i18n/modules/creation";
 import { dreamsT } from "@/lib/i18n/modules/dreams";
+import { encyclopediaStrings } from "@/lib/i18n/modules/encyclopedia";
 import { guidanceT } from "@/lib/i18n/modules/guidance";
 import { lifestyleStrings } from "@/lib/i18n/modules/lifestyle";
 import { muftiT } from "@/lib/i18n/modules/mufti";
@@ -26,6 +27,7 @@ export function exploreLinks(locale: string): SiteLink[] {
   const qiraat = qiraatStrings(locale);
   const guidance = guidanceT(locale);
   const shifa = shifaStrings(locale);
+  const people = encyclopediaStrings(locale).people;
   return [
     { href: "/prophets", label: t.nav.prophets, note: t.exploreNotes.prophets },
     { href: "/quran", label: t.nav.quran },
@@ -36,6 +38,7 @@ export function exploreLinks(locale: string): SiteLink[] {
     { href: "/hadith", label: t.nav.hadith, note: t.exploreNotes.hadith },
     { href: "/atlas", label: t.nav.atlas, note: t.exploreNotes.atlas },
     { href: "/genealogy", label: t.nav.genealogy, note: t.exploreNotes.genealogy },
+    { href: "/people", label: people.nav, note: people.navNote },
     { href: "/last-hour", label: t.nav.lastHour, note: t.exploreNotes.lastHour },
     { href: "/life-through-ages", label: lifestyle.nav, note: lifestyle.navNote },
     { href: "/guidance", label: guidance.nav, note: guidance.exploreNote },

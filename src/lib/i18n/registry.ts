@@ -4,6 +4,8 @@ import { creationStrings } from "./modules/creation";
 import { dreamsT } from "./modules/dreams";
 import { eventStrings, lastHourStrings, timelineStrings } from "./modules/events";
 import { guidanceT } from "./modules/guidance";
+import { encyclopediaStrings } from "./modules/encyclopedia";
+import { hadithStoryStrings } from "./modules/hadithStories";
 import { hadithStrings } from "./modules/hadith";
 import { homeStrings, journeyStrings } from "./modules/home";
 import { interpretationT } from "./modules/interpretation";
@@ -50,6 +52,8 @@ export const STRING_FILES: Array<{ module: string; file: string; get: (locale: s
   { module: "creation", file: "modules/creation.ts", get: creationStrings },
   { module: "dreams", file: "modules/dreams.ts", get: dreamsT },
   { module: "guidance", file: "modules/guidance.ts", get: guidanceT },
+  { module: "hadith-stories", file: "modules/hadithStories.ts", get: hadithStoryStrings },
+  { module: "encyclopedia", file: "modules/encyclopedia.ts", get: encyclopediaStrings },
   { module: "interpretation", file: "modules/interpretation.ts", get: interpretationT },
   { module: "lifestyle", file: "modules/lifestyle.ts", get: lifestyleStrings },
   { module: "mufti", file: "modules/mufti.ts", get: muftiT },

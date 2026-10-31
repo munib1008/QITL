@@ -6,18 +6,21 @@ import { MAX_QUERY, unifiedSearch } from "@/lib/search-engine";
 const Query = z.object({
   q: z.string().trim().min(1).max(MAX_QUERY),
   facet: z.string().max(40).optional(),
+  type: z.string().max(40).optional(),
+  track: z.string().max(40).optional(),
+  surah: z.coerce.number().int().min(1).max(114).optional(),
   page: z.coerce.number().int().min(1).max(500).default(1),
   locale: z.enum(["en", "ar", "ur"]).optional(),
 });
 
 /**
  * Unified search (src/lib/search-engine.ts): journey, surahs, Quran text, static pages and the published database
- * index. Arabic and Urdu queries are normalised (vowel marks, letter forms); names match by alias, spelling key and
+ * index, with optional type, track and surah filters (typed results: prophet, person, community, event, parable, hadith story, story). Arabic and Urdu queries are normalised (vowel marks, letter forms); names match by alias, spelling key and
  * small typos. Only published, public content is ever returned, so the response is publicly cacheable.
  */
 export async function GET(req: NextRequest) {
   const q = parseQuery(req, Query);
   if (isResponse(q)) return q;
-  const r = await unifiedSearch({ q: q.q, facet: q.facet, page: q.page, locale: q.locale });
+  const r = await unifiedSearch({ q: q.q, facet: q.facet, page: q.page, locale: q.locale, kind: q.type, track: q.track, surah: q.surah });
   return publicJson(r, 60);
 }

@@ -39,3 +39,11 @@
 .sr-pager .sr-gap { color: var(--ink-muted); padding-inline: 4px; }
 .sr-attrib { margin-block-start: 16px; }
 html[lang="ur"] .sr-pager a, html[lang="ur"] .sr-pager span[aria-current], html[lang="ur"] .sr-facets .zq-pill { line-height: 2; }
+
+/* Typed results and the type / track / surah facets (unified story search). */
+.sr-typed { display: grid; gap: 4px; }
+.sr-type { font-weight: 700; color: var(--brass-ink); }
+.sr-surah { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-block: 8px; }
+.sr-surah label { font: 600 13px/18px var(--font-sans); color: var(--ink-muted); }
+.sr-surah select { min-block-size: var(--tap, 44px); max-inline-size: 100%; padding-inline: 10px; font: 400 15px/22px var(--font-sans); color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.sr-surah .zq-btn { min-block-size: var(--tap, 44px); }

@@ -42,6 +42,8 @@ const TABLE = {
   shifa_entry: "shifa_entries",
   shifa_safety_note: "shifa_safety_notes",
   shifa_link: "shifa_links",
+  // Hadith stories (publishing also needs the scholarly authenticity review, bound to the version)
+  hadith_story: "hadith_stories",
   // Complete Timeline & Event Universe (each is reviewed under its own entity type)
   event_identification: "event_identifications",
   event_connection: "event_connections",

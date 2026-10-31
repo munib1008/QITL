@@ -59,6 +59,7 @@ function ayahHit(surah: number, ayah: number, score: number, surahName?: string)
     arabic: text,
     facet: "ayahs",
     score,
+    surahs: [surah],
   };
 }
 
@@ -163,6 +164,9 @@ function pages(): StaticPage[] {
     mod("/hadith", "hadith", "hadith collections narrations sunnah"),
     mod("/events", "events", "events encyclopedia"),
     mod("/stories", "stories", "stories qisas"),
+    mod("/hadith-stories", "hadithStories", "hadith stories narrations authentic sunnah", "hadith_stories"),
+    mod("/people", "people", "people persons individuals family rulers unnamed names", "people"),
+    mod("/communities", "communities", "communities peoples nations qawm", "communities"),
     mod("/genealogy", "genealogy", "genealogy family tree lineage nasab"),
     mod("/last-hour", "lastHour", "last hour signs qiyamah day of judgement", "last_hour"),
     mod("/community", "community", "community discussion forum"),
