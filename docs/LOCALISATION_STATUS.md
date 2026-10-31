@@ -73,7 +73,7 @@ language (a leaf identical to English with Latin words does not count).
 | player | `modules/player.ts` | 128 | 100% | 100% | 100% | 0 |
 | qiraat | `modules/qiraat.ts` | 58 | 100% | 100% | 95% | 0 |
 | quran | `modules/reader.ts` | 32 | 100% | 100% | 100% | 0 |
-| search | `modules/search.ts (search)` | 60 | 98% | 90% | 90% | 1 |
+| search | `modules/search.ts (search)` | 60 | 98% | 98% | 98% | 1 |
 | shell | `dict.ts`, `modules/ui.ts` | 200 | 100% | 100% | 100% | 0 |
 | stories | `modules/prophets.ts`, `modules/story.ts` | 169 | 95% | 95% | 95% | 9 |
 | timeline | `modules/events.ts (timeline)` | 22 | 100% | 100% | 100% | 0 |
