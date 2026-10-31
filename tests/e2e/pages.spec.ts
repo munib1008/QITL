@@ -114,9 +114,9 @@ test.describe("narrow screens", () => {
 
 test("branding: the QITL logo with a text alternative, favicon, apple icon and social card", async ({ page, request }) => {
   await page.goto("/");
-  await expect(page.getByRole("link", { name: /QITL — Quran in Timeline, home/ })).toBeVisible();
-  await expect(page.locator('img[alt="QITL — Quran in Timeline"]').first()).toBeVisible();
-  await expect(page).toHaveTitle(/QITL — Quran in Timeline/);
+  await expect(page.getByRole("link", { name: /QITL — Quranic & Islamic TimeLine, home/ })).toBeVisible();
+  await expect(page.locator('img[alt="QITL — Quranic & Islamic TimeLine"]').first()).toBeVisible();
+  await expect(page).toHaveTitle(/QITL — Quranic & Islamic TimeLine/);
   for (const sel of ['link[rel="icon"]', 'link[rel="apple-touch-icon"]', 'meta[property="og:image"]']) expect(await page.locator(sel).count(), sel).toBeGreaterThan(0);
   const og = await page.locator('meta[property="og:image"]').first().getAttribute("content");
   expect((await request.get(new URL(og!).pathname)).status()).toBe(200);

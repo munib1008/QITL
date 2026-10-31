@@ -97,10 +97,23 @@ await icon(180, "src/app/apple-icon.png", 0.12);
 await icon(512, `${OUT}/qitl-icon-512.png`);
 await icon(192, `${OUT}/qitl-icon-192.png`);
 
-// Open Graph: the dark logo centred on the journey ground.
-const og = await sharp(fullDark).resize({ width: 820 }).png().toBuffer();
+// Open Graph: the ivory emblem, the name and the tagline (drawn as text, so a rename never needs new artwork).
+const NAME = "QITL";
+const TAGLINE = "Quranic & Islamic TimeLine"; // keep in step with src/lib/brand.ts
+const ogMark = await sharp(emblemDark).resize({ height: 330 }).png().toBuffer();
+const ogText = Buffer.from(
+  `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="330">
+    <text x="0" y="170" font-family="Georgia, 'Times New Roman', serif" font-size="150" font-weight="600" letter-spacing="14" fill="#f2f5ee">${NAME}</text>
+    <rect x="0" y="206" width="580" height="3" fill="#c9a764"/>
+    <text x="2" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="40" letter-spacing="2" fill="#cdd6cf">${TAGLINE.replace(/&/g, "&amp;")}</text>
+  </svg>`,
+);
+const ogMeta = await sharp(ogMark).metadata();
 await sharp({ create: { width: 1200, height: 630, channels: 4, background: EVERGREEN } })
-  .composite([{ input: og, gravity: "center" }])
+  .composite([
+    { input: ogMark, left: 90, top: Math.round((630 - ogMeta.height) / 2) },
+    { input: ogText, left: 90 + ogMeta.width + 50, top: Math.round((630 - 330) / 2) },
+  ])
   .png()
   .toFile("src/app/opengraph-image.png");
 

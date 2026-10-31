@@ -8,7 +8,7 @@ export type Locale = "en" | "ar" | "ur";
 
 const en = {
   skip: "Skip to content",
-  brandTagline: "Quran in Timeline",
+  brandTagline: "Quranic & Islamic TimeLine",
   nav: {
     journey: "The Journey",
     explore: "Explore",
@@ -75,7 +75,7 @@ const en = {
 
 const ar: typeof en = {
   skip: "تخطَّ إلى المحتوى",
-  brandTagline: "القرآن عبر الزمن",
+  brandTagline: "القرآن والتاريخ الإسلامي",
   nav: {
     journey: "الرحلة",
     explore: "استكشف",
@@ -143,7 +143,7 @@ const ar: typeof en = {
 /** Draft Urdu (first pass with Lara, corrected by hand): needs review by a qualified translator, like the Arabic. */
 const ur: typeof en = {
   skip: "مواد پر جائیں",
-  brandTagline: "قرآن، زمانی ترتیب میں",
+  brandTagline: "قرآنی و اسلامی تاریخ",
   nav: {
     journey: "سفر",
     explore: "دریافت کریں",

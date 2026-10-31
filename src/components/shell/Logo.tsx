@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BRAND_FULL, BRAND_TAGLINE } from "@/lib/brand";
 
 /**
  * The QITL lockup: the approved emblem (raster, from brand/source) beside a live-text wordmark. Text stays sharp at
@@ -9,7 +10,7 @@ export function Logo({
   height = 44,
   tone = "auto",
   priority = false,
-  tagline = "Quran in Timeline",
+  tagline = BRAND_TAGLINE,
 }: {
   height?: number;
   tone?: "auto" | "dark" | "light";
@@ -17,7 +18,7 @@ export function Logo({
   tagline?: string;
 }) {
   const w = Math.round(height * 0.89);
-  const common = { width: w, height, priority, sizes: `${w}px`, alt: "QITL — Quran in Timeline" } as const;
+  const common = { width: w, height, priority, sizes: `${w}px`, alt: BRAND_FULL } as const;
   return (
     <span className={`qitl-logo qitl-logo-${tone}`} style={{ ["--logo-h" as string]: `${height}px` }}>
       <span className="qitl-logo-mark">

@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
+import { BRAND_FULL } from "@/lib/brand";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "QITL — Quran in Timeline",
+    name: BRAND_FULL,
     short_name: "QITL",
     start_url: "/",
     display: "standalone",

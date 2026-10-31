@@ -9,14 +9,15 @@ import { BottomNav } from "@/components/shell/BottomNav";
 import { exploreLinks } from "@/lib/nav";
 import { Analytics } from "@/components/shell/Analytics";
 import "../globals.css";
+import { BRAND_FULL } from "@/lib/brand";
 
 export const metadata: Metadata = {
   metadataBase: new URL(publicEnv.siteUrl),
-  title: { default: "QITL — Quran in Timeline", template: "%s · QITL" },
+  title: { default: BRAND_FULL, template: "%s · QITL" },
   applicationName: "QITL",
   description:
     "Explore the story. Follow the evidence. The Quran, authenticated Hadith, the prophets, chronology and geography — every claim labelled by how certain it is.",
-  openGraph: { type: "website", siteName: "QITL — Quran in Timeline" },
+  openGraph: { type: "website", siteName: BRAND_FULL },
   twitter: { card: "summary_large_image" },
   alternates: { languages: { en: "/", ar: "/ar", ur: "/ur" } },
 };

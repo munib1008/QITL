@@ -8,6 +8,7 @@ import { LangToggle, ThemeToggle } from "./toggles";
 import { MobileMenu } from "./MobileMenu";
 import { Logo, Mark } from "./Logo";
 import { exploreLinks } from "@/lib/nav";
+import { BRAND_FULL } from "@/lib/brand";
 
 export interface NavLink {
   href: string;
@@ -40,7 +41,7 @@ export function JourneyHeader({ locale }: { locale: string }) {
   const { locale: l, t } = getDict(locale);
   return (
     <header className="zq-nav">
-      <Link className="zq-brand" href="/" aria-label="QITL — Quran in Timeline, home">
+      <Link className="zq-brand" href="/" aria-label={`${BRAND_FULL}, home`}>
         <Logo height={52} tone="dark" priority tagline={t.brandTagline} />
       </Link>
       <nav className="zq-links" aria-label="Main">
@@ -65,7 +66,7 @@ export function ReadingHeader({ locale, query }: { locale: string; query?: strin
   const st = searchStrings(l);
   return (
     <header className="pp-nav">
-      <Link className="pp-brand" href="/" aria-label="QITL — Quran in Timeline, home">
+      <Link className="pp-brand" href="/" aria-label={`${BRAND_FULL}, home`}>
         <Logo height={44} priority tagline={t.brandTagline} />
       </Link>
       <SearchField maxWidth={420} defaultValue={query} id="hdr-q" label={st.fieldLabel} placeholder={st.placeholder} />

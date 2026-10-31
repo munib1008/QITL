@@ -10,6 +10,7 @@ import { Rosette } from "@/components/ui/icons";
 import { Mark } from "@/components/shell/Logo";
 import { publicEnv } from "@/lib/env";
 import { jsonForScript } from "@/lib/security/html";
+import { BRAND_FULL } from "@/lib/brand";
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -23,7 +24,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "QITL — Quran in Timeline",
+    name: BRAND_FULL,
     url: publicEnv.siteUrl,
     inLanguage: ["en", "ar", "ur"],
     potentialAction: { "@type": "SearchAction", target: `${publicEnv.siteUrl}/search?q={query}`, "query-input": "required name=query" },
@@ -125,7 +126,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <footer className="zq-foot" id="method">
         <span className="zq-foot-mark">
           <Mark size={36} tone="dark" />
-          <span>QITL — Quran in Timeline</span>
+          <span>{BRAND_FULL}</span>
         </span>
         <span>Respecting evidence · Preserving uncertainty · Learning together</span>
         <nav className="zq-foot-links" aria-label="About">
