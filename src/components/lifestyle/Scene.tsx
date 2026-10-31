@@ -156,8 +156,9 @@ const SCENES: Record<string, { label: string; render: () => ReactNode }> = {
 
 export const SCENE_KEYS = Object.keys(SCENES);
 
-export function Scene({ scene, caption, labels }: { scene: string; caption?: string; labels: { note: string; play: string; pause: string; replay: string } }) {
-  const s = SCENES[scene];
+export function Scene({ scene, caption, labels }: { scene: string; caption?: string; labels: { note: string; play: string; pause: string; replay: string; scenes?: Record<string, string> } }) {
+  const found = SCENES[scene];
+  const s = found ? { ...found, label: labels.scenes?.[scene] ?? found.label } : undefined;
   const [playing, setPlaying] = useState(false);
   const [run, setRun] = useState(0);
   useEffect(() => {

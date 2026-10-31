@@ -3,12 +3,15 @@
 import { useId, useState } from "react";
 import { CitationChip } from "@/components/ui/evidence";
 import { refLabel, type Quiz } from "@/lib/data/story-types";
+import { storyStrings } from "@/lib/i18n/modules/story";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 /**
  * A quiz on verified story facts. Each answer shows whether it is right and the source it comes from.
  * No points, streaks or rewards: the aim is understanding, not a score.
  */
 export function QuizBlock({ quiz }: { quiz: Quiz }) {
+  const t = storyStrings(useLocale());
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [checked, setChecked] = useState<Record<string, boolean>>({});
   const uid = useId();
@@ -32,11 +35,11 @@ export function QuizBlock({ quiz }: { quiz: Quiz }) {
               </fieldset>
               {!done ? (
                 <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={chosen === undefined} onClick={() => setChecked((c) => ({ ...c, [q.id]: true }))}>
-                  Check
+                  {t.check}
                 </button>
               ) : (
                 <div className="qq-feedback" role="status">
-                  <b>{right ? "That's right." : `Not quite: the answer is “${q.options[q.correct]}”.`}</b>
+                  <b>{right ? t.right : t.wrong(q.options[q.correct] ?? "")}</b>
                   {q.explanation ? <p>{q.explanation}</p> : null}
                   <span className="qs-refs">
                     {q.refs.map((r, i) => {

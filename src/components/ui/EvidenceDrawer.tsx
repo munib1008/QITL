@@ -5,6 +5,8 @@ import { createPortal } from "react-dom";
 import type { EvidenceKind } from "@/content/journey";
 import { EvidenceLabel } from "./evidence";
 import { Icon } from "./icons";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export interface EvidenceTab {
   label: string;
@@ -30,6 +32,7 @@ const FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),select,t
  * Tabs follow the ARIA tab pattern (arrow keys, Home, End). Empty tabs say so; they are never hidden.
  */
 export function EvidenceDrawer({ claim, status, tabs, footer, onClose, theme }: EvidenceDrawerProps) {
+  const u = uiStrings(useLocale()).drawer;
   const [sel, setSel] = useState(0);
   const panel = useRef<HTMLDivElement>(null);
   const closeBtn = useRef<HTMLButtonElement>(null);
@@ -115,7 +118,7 @@ export function EvidenceDrawer({ claim, status, tabs, footer, onClose, theme }: 
         <div className="zq-drawer-head">
           <div>
             <p className="zq-eyebrow" id={`${id}-title`}>
-              Evidence
+              {u.title}
             </p>
             <p className="zq-drawer-claim" id={`${id}-claim`}>
               {claim}
@@ -126,11 +129,11 @@ export function EvidenceDrawer({ claim, status, tabs, footer, onClose, theme }: 
               </div>
             ) : null}
           </div>
-          <button ref={closeBtn} type="button" className="zq-iconbtn" aria-label="Close evidence" onClick={close}>
+          <button ref={closeBtn} type="button" className="zq-iconbtn" aria-label={u.close} onClick={close}>
             <Icon.close />
           </button>
         </div>
-        <div className="zq-tabs" role="tablist" aria-label="Evidence type" onKeyDown={onTabKey}>
+        <div className="zq-tabs" role="tablist" aria-label={u.tabs} onKeyDown={onTabKey}>
           {tabs.map((t, i) => (
             <button
               key={t.label}
@@ -154,7 +157,7 @@ export function EvidenceDrawer({ claim, status, tabs, footer, onClose, theme }: 
         <div className="zq-drawer-body" role="tabpanel" id={`${id}-panel`} aria-labelledby={`${id}-tab-${sel}`} tabIndex={0}>
           {tabs[sel]?.content}
         </div>
-        <div className="zq-drawer-foot">{footer ?? "Review status is shown on the page · see the methodology"}</div>
+        <div className="zq-drawer-foot">{footer ?? u.footer}</div>
       </div>
     </div>,
     document.body,

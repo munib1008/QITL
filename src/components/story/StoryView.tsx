@@ -9,7 +9,10 @@ import { AnimationPlayer } from "./AnimationPlayer";
 import { QuizBlock } from "./QuizBlock";
 import { LanguageNote } from "@/components/i18n/LanguageNote";
 import type { Audience, Ref, Section, Story } from "@/lib/data/story-types";
-import { AUDIENCES, FACT_KEYS, FACT_TITLE, NOT_ESTABLISHED, STEP_ROLES, STEP_TITLE, refLabel } from "@/lib/data/story-types";
+import { AUDIENCES, FACT_KEYS, STEP_ROLES, refLabel } from "@/lib/data/story-types";
+import { englishContent } from "@/lib/i18n/locales";
+import { storyStrings } from "@/lib/i18n/modules/story";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 function Refs({ refs, evidence }: { refs: Ref[]; evidence?: Section["evidence"] }) {
   return (
@@ -32,6 +35,9 @@ function Refs({ refs, evidence }: { refs: Ref[]; evidence?: Section["evidence"] 
  * adaptation of a full section on the same claim. Where no adaptation exists yet, the full text is shown and says so.
  */
 export function StoryView({ story, name, intro, chapterKey }: { story: Story; name: string; intro?: ReactNode; /** shows sticky chapter progress (pages without their own) */ chapterKey?: string }) {
+  const locale = useLocale();
+  const t = storyStrings(locale);
+  const en = englishContent(locale);
   const [level, setLevel] = useState<Audience>("full");
   useEffect(() => {
     try {
@@ -68,9 +74,9 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
           const { s, adapted } = pick(base);
           return (
             <div key={base.id} className="qs-block">
-              {s.title ? <h4>{s.title}</h4> : null}
-              {!adapted ? <p className="qs-level-note">Not yet written for this reading level — showing the full text.</p> : null}
-              <div className="zq-prose">
+              {s.title ? <h4 {...en}>{s.title}</h4> : null}
+              {!adapted ? <p className="qs-level-note">{t.notAdapted}</p> : null}
+              <div className="zq-prose" {...en}>
                 <Markdown source={s.bodyMd} />
               </div>
               <Refs refs={base.refs} evidence={base.evidence} />
@@ -93,29 +99,29 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
 
   return (
     <div className="qs" data-level={level}>
-      <div className="qs-levels" role="radiogroup" aria-label="Reading level">
-        {AUDIENCES.map(([a, label, hint]) => (
-          <button key={a} type="button" role="radio" aria-checked={level === a} className="zq-pill" onClick={() => choose(a)} title={hint}>
-            {label}
+      <div className="qs-levels" role="radiogroup" aria-label={t.levels}>
+        {AUDIENCES.map(([a]) => (
+          <button key={a} type="button" role="radio" aria-checked={level === a} className="zq-pill" onClick={() => choose(a)} title={t.audiences[a][1]}>
+            {t.audiences[a][0]}
           </button>
         ))}
-        <span className="zq-meta qs-levels-note">Reading levels change the presentation, never the evidence.</span>
+        <span className="zq-meta qs-levels-note">{t.levelsNote}</span>
       </div>
       <LanguageNote kind="narration" />
       {chapterKey ? (
         <ChapterNav
           storageKey={chapterKey}
           chapters={[
-            { id: "qs-quick", label: "Quick understanding" },
-            { id: "qs-a", label: "Introduction" },
-            { id: "qs-b", label: "Before the mission" },
-            { id: "qs-c", label: "The calling" },
-            { id: "qs-d", label: "Challenges" },
-            { id: "qs-e", label: "Outcome" },
-            { id: "qs-f", label: "Takeaways" },
-            { id: "qs-reflect", label: "Reflection" },
-            { id: "qs-quiz", label: "Quiz" },
-            { id: "qs-g", label: "Sources" },
+            { id: "qs-quick", label: t.chapters.quick },
+            { id: "qs-a", label: t.chapters.a },
+            { id: "qs-b", label: t.chapters.b },
+            { id: "qs-c", label: t.chapters.c },
+            { id: "qs-d", label: t.chapters.d },
+            { id: "qs-e", label: t.chapters.e },
+            { id: "qs-f", label: t.chapters.f },
+            { id: "qs-reflect", label: t.chapters.reflect },
+            { id: "qs-quiz", label: t.chapters.quiz },
+            { id: "qs-g", label: t.chapters.g },
           ]}
         />
       ) : null}
@@ -137,29 +143,41 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
       ) : null}
 
       <section className="qs-sec" aria-labelledby="qs-quick">
-        <h3 id="qs-quick">Quick understanding</h3>
-        <Prose list={of("summary")} empty="The one-minute summary is not written yet." />
+        <h3 id="qs-quick">{t.quick}</h3>
+        <Prose list={of("summary")} empty={t.quickEmpty} />
       </section>
 
       <section className="qs-sec" aria-labelledby="qs-a">
         <h3 id="qs-a">
-          <span className="qs-letter">A</span> Introduction
+          <span className="qs-letter">A</span> {t.introduction}
         </h3>
-        <div className="qp-facts" role="list" aria-label={`Facts about ${name}`}>
+        <div className="qp-facts" role="list" aria-label={t.factsAbout(name)}>
           {FACT_KEYS.map((k) => {
             const f = facts.find((x) => x.factKey === k);
             return (
               <div role="listitem" key={k}>
                 <div className="qp-fact" data-fact={k}>
-                  <span className="qp-fact-label">{FACT_TITLE[k]}</span>
+                  <span className="qp-fact-label">{t.facts[k]}</span>
                   {f ? (
                     <>
-                      <b className="qp-fact-value">{f.known ? f.valueText : "Not established"}</b>
-                      <span className="qp-fact-note">{f.known ? f.valueNote : (f.valueNote ?? NOT_ESTABLISHED)}</span>
+                      {f.known ? (
+                        <b className="qp-fact-value" {...en}>
+                          {f.valueText}
+                        </b>
+                      ) : (
+                        <b className="qp-fact-value">{t.notEstablishedShort}</b>
+                      )}
+                      {f.known || f.valueNote ? (
+                        <span className="qp-fact-note" {...en}>
+                          {f.valueNote}
+                        </span>
+                      ) : (
+                        <span className="qp-fact-note">{t.notEstablished}</span>
+                      )}
                       <Refs refs={f.refs} evidence={f.evidence} />
                     </>
                   ) : (
-                    <span className="qp-fact-pending">Not yet written</span>
+                    <span className="qp-fact-pending">{t.notWritten}</span>
                   )}
                 </div>
               </div>
@@ -169,41 +187,41 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
         {intro}
         {hadithRefs.length ? (
           <p className="qs-hadith-refs">
-            <span className="qp-fact-label">Authenticated Hadith cited</span> <Refs refs={hadithRefs} />
+            <span className="qp-fact-label">{t.hadithCited}</span> <Refs refs={hadithRefs} />
           </p>
         ) : null}
       </section>
 
       <section className="qs-sec" aria-labelledby="qs-b">
         <h3 id="qs-b">
-          <span className="qs-letter">B</span> Before the mission: what was happening?
+          <span className="qs-letter">B</span> {t.before}
         </h3>
-        <Prose list={of("before_mission")} empty="Not yet written. Only details the sources support will appear here." />
+        <Prose list={of("before_mission")} empty={t.beforeEmpty} />
       </section>
 
       <section className="qs-sec" aria-labelledby="qs-c">
         <h3 id="qs-c">
-          <span className="qs-letter">C</span> The calling and the message
+          <span className="qs-letter">C</span> {t.calling}
         </h3>
-        <Prose list={of("calling")} empty="Not yet written." />
+        <Prose list={of("calling")} empty={t.notWrittenDot} />
       </section>
 
       <section className="qs-sec" aria-labelledby="qs-d">
         <h3 id="qs-d">
-          <span className="qs-letter">D</span> Challenges and important decisions
+          <span className="qs-letter">D</span> {t.challenges}
         </h3>
         {groups.length ? (
           groups.map((g) => (
-            <ol key={g} className="qs-chain" aria-label={`Challenge ${g}`}>
+            <ol key={g} className="qs-chain" aria-label={t.challenge(g)}>
               {STEP_ROLES.map((role) => {
                 const base = steps.find((s) => s.stepGroup === g && s.stepRole === role);
                 if (!base) return null;
                 const { s, adapted } = pick(base);
                 return (
                   <li key={role} className="qs-step" data-role={role}>
-                    <span className="qs-step-role">{STEP_TITLE[role]}</span>
-                    {!adapted ? <p className="qs-level-note">Full text shown.</p> : null}
-                    <div className="zq-prose">
+                    <span className="qs-step-role">{t.steps[role]}</span>
+                    {!adapted ? <p className="qs-level-note">{t.fullShown}</p> : null}
+                    <div className="zq-prose" {...en}>
                       <Markdown source={s.bodyMd} />
                     </div>
                     <Refs refs={base.refs} evidence={base.evidence} />
@@ -213,20 +231,20 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
             </ol>
           ))
         ) : (
-          <p className="zq-meta">Not yet written. Each challenge will follow Situation → Challenge → Action → Response → Outcome → Lesson.</p>
+          <p className="zq-meta">{t.challengesEmpty}</p>
         )}
       </section>
 
       <section className="qs-sec" aria-labelledby="qs-e">
         <h3 id="qs-e">
-          <span className="qs-letter">E</span> Outcome of the mission
+          <span className="qs-letter">E</span> {t.outcome}
         </h3>
-        <Prose list={of("outcome")} empty="Not yet written. What remains unknown will be stated as unknown." />
+        <Prose list={of("outcome")} empty={t.outcomeEmpty} />
       </section>
 
       <section className="qs-sec" aria-labelledby="qs-f">
         <h3 id="qs-f">
-          <span className="qs-letter">F</span> Takeaways for everyday life
+          <span className="qs-letter">F</span> {t.takeaways}
         </h3>
         {of("takeaway").length ? (
           <ul className="qs-takeaways">
@@ -235,15 +253,17 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
               return (
                 <li key={base.id} className="qs-takeaway">
                   <p className="qs-tk-lesson">
-                    <span className="qp-fact-label">Lesson</span> {s.title}
+                    <span className="qp-fact-label">{t.lesson}</span> <span {...en}>{s.title}</span>
                   </p>
                   <div className="qs-tk-meaning">
-                    <span className="qp-fact-label">Meaning</span>
-                    <Markdown source={s.bodyMd} />
+                    <span className="qp-fact-label">{t.meaning}</span>
+                    <div {...en}>
+                      <Markdown source={s.bodyMd} />
+                    </div>
                   </div>
                   <p className="qs-tk-example">
-                    <span className="qp-fact-label">Everyday example</span> {s.everydayExample}{" "}
-                    <span className="zq-meta">(an educational application, not the wording of the source)</span>
+                    <span className="qp-fact-label">{t.example}</span> <span {...en}>{s.everydayExample}</span>{" "}
+                    <span className="zq-meta">{t.exampleNote}</span>
                   </p>
                   <Refs refs={base.refs} evidence={base.evidence} />
                 </li>
@@ -251,14 +271,14 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
             })}
           </ul>
         ) : (
-          <p className="zq-meta">Not yet written.</p>
+          <p className="zq-meta">{t.notWrittenDot}</p>
         )}
       </section>
 
       {of("reflection").length ? (
         <section className="qs-sec" aria-labelledby="qs-reflect">
-          <h3 id="qs-reflect">What would you learn?</h3>
-          <ol className="qs-reflect">
+          <h3 id="qs-reflect">{t.reflect}</h3>
+          <ol className="qs-reflect" {...en}>
             {of("reflection").map((base) => (
               <li key={base.id}>
                 <Markdown source={pick(base).s.bodyMd} />
@@ -270,7 +290,7 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
 
       {quizzes.length ? (
         <section className="qs-sec" aria-labelledby="qs-quiz">
-          <h3 id="qs-quiz">Quiz</h3>
+          <h3 id="qs-quiz">{t.quiz}</h3>
           {quizzes.map((q) => (
             <QuizBlock key={q.id} quiz={q} />
           ))}
@@ -279,21 +299,21 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
 
       {level === "full" && of("scholarly_note").length ? (
         <section className="qs-sec" aria-labelledby="qs-notes">
-          <h3 id="qs-notes">Scholarly notes</h3>
+          <h3 id="qs-notes">{t.scholarlyNotes}</h3>
           <Prose list={of("scholarly_note")} />
         </section>
       ) : null}
 
       <section className="qs-sec" aria-labelledby="qs-vocab">
-        <h3 id="qs-vocab">Vocabulary</h3>
-        <EmptyState tone="soon" label={<span className="zq-soon">Coming soon</span>} title="Word-by-word Arabic is not connected yet.">
-          <p>Key Arabic words from the passages appear here once a licensed word-by-word source is imported.</p>
+        <h3 id="qs-vocab">{t.vocabulary}</h3>
+        <EmptyState tone="soon" label={<span className="zq-soon">{t.soon}</span>} title={t.vocabTitle}>
+          <p>{t.vocabBody}</p>
         </EmptyState>
       </section>
 
       <section className="qs-sec" aria-labelledby="qs-g">
         <h3 id="qs-g">
-          <span className="qs-letter">G</span> Sources
+          <span className="qs-letter">G</span> {t.sources}
         </h3>
         {allRefs.size ? (
           <ul className="qs-sources">
@@ -304,7 +324,7 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
                   <CitationChip href={l.href}>{l.text}</CitationChip>
                   {r.kind === "hadith" && r.hadith ? (
                     <span className="zq-meta">
-                      {r.hadith.grade ?? "Grade"} — graded by {r.hadith.grader ?? "a named scholar"}
+                      {r.hadith.grade ?? t.grade} — {t.gradedBy} {r.hadith.grader ?? t.aScholar}
                     </span>
                   ) : null}
                 </li>
@@ -312,7 +332,7 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
             })}
           </ul>
         ) : (
-          <p className="zq-meta">Sources appear as sections are published.</p>
+          <p className="zq-meta">{t.sourcesEmpty}</p>
         )}
       </section>
     </div>

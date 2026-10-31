@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { ChapterNav } from "@/components/story/ChapterNav";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ERA_TEXT, PLACE_TEXT, findStop, journeyStops, getJourney } from "@/content/journey";
+import { findStop, journeyStops, getJourney } from "@/content/journey";
+import { englishContent } from "@/lib/i18n/locales";
+import { prophetStrings } from "@/lib/i18n/modules/prophets";
+import { uiStrings } from "@/lib/i18n/modules/ui";
 import { ayahArabic, quranSource } from "@/content/quran";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { BookmarkButton } from "@/components/account/BookmarkButton";
@@ -47,26 +50,29 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
   const firstRange = firstPassage ? parseAyahRange(firstPassage) : null;
   const opening = firstRange ? ayahArabic(firstRange.surah, firstRange.from) : null;
   const src = quranSource();
-  const place = p.place ?? { name: "Unknown", certainty: "unknown" as const };
+  const t = prophetStrings(locale);
+  const u = uiStrings(locale);
+  const en = englishContent(locale);
+  const place = p.place ?? { name: t.unknownPlace, certainty: "unknown" as const };
   const named = p.surahs?.find((s) => s.named);
   const hon = (x?: { honorific: string }) => (x?.honorific ? ` ${x.honorific}` : "");
   const story = ms ? null : await getStory({ person: p.id });
   const player = ms ? null : await getPlayerBundle({ person: p.id });
 
   return (
-    <ReadingPage locale={locale} crumbs={[{ href: "/prophets", label: "Prophets" }, { label: p.name }]}>
+    <ReadingPage locale={locale} crumbs={[{ href: "/prophets", label: t.title }, { label: p.name }]}>
       <header className="pp-head">
         <Rosette points={p.points ?? 8} className="pp-mark" />
         <div>
           <div className="pp-kick">
             <span className="pp-chap" data-testid="chapter-position">
-              {ms ? "Milestone" : "Chapter"} {index + 1} of {total}
+              {t.position(ms ? t.milestone : t.chapter, index + 1, total)}
             </span>
             <EraTag {...p.era} />
             <DraftBadge status={journey.status} />
           </div>
           <h1 className="pp-h1">
-            {p.name}{" "}
+            <span {...en}>{p.name}</span>{" "}
             {p.honorific ? (
               <small lang="ar">{p.honorific}</small>
             ) : null}
@@ -74,14 +80,18 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
           <p className="pp-ar" lang="ar" dir="rtl">
             {p.arabicName}
           </p>
-          {p.subtitle ? <p className="pp-sub">{p.subtitle}</p> : null}
+          {p.subtitle ? (
+            <p className="pp-sub" {...en}>
+              {p.subtitle}
+            </p>
+          ) : null}
         </div>
         <div className="pp-meta">
           {(p.evidence ?? ["quran"]).map((k) => (
             <EvidenceLabel key={k} kind={k} />
           ))}
           {named ? (
-            <CitationChip kind="Surah" href={`/quran/${named.number}`}>
+            <CitationChip kind={t.surah} href={`/quran/${named.number}`}>
               {`${named.number} ${named.name}`}
             </CitationChip>
           ) : null}
@@ -93,11 +103,11 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
         <div className="pp-acts">
           {named ? (
             <Link className="zq-btn zq-btn-primary zq-btn-link" href={`/quran/${named.number}`}>
-              Read Surah {named.name}
+              {t.readSurah(named.name)}
             </Link>
           ) : firstRange ? (
             <Link className="zq-btn zq-btn-primary zq-btn-link" href={`/quran/${firstRange.surah}#ayah-${firstRange.from}`}>
-              Read the ayat
+              {t.readAyat}
             </Link>
           ) : null}
           <BookmarkButton target={{ type: "journey_stop", id: p.id }} />
@@ -105,17 +115,22 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
           <ShareButton title={`${p.name} — QITL`} path={`/prophets/${p.id}`} />
           {!ms ? (
             <Link className="zq-btn zq-btn-secondary zq-btn-link" href={`/life-through-ages/prophets/${p.id}`} data-testid="life-times-tab">
-              Their Life &amp; Times
+              {t.lifeTimes}
             </Link>
           ) : null}
         </div>
       </header>
 
-      <nav className="pp-pos" aria-label="Journey position">
+      <nav className="pp-pos" aria-label={t.journeyPosition}>
         {prev ? (
           <Link href={`/prophets/${prev.id}`}>
-            <span><span className="zq-arrow" aria-hidden="true">←</span> Previous</span>
-            <b>
+            <span>
+              <span className="zq-arrow" aria-hidden="true">
+                {t.prevArrow}
+              </span>{" "}
+              {t.previous}
+            </span>
+            <b {...en}>
               {prev.name}
               <span lang="ar">{hon(prev)}</span>
             </b>
@@ -124,12 +139,17 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
           <span />
         )}
         <div className="pp-era">
-          {String(eraIndex + 1).padStart(2, "0")} / {era.title} · {indexInEra + 1} of {era.items.length}
+          {String(eraIndex + 1).padStart(2, "0")} / <span {...en}>{era.title}</span> · {t.ofCount(indexInEra + 1, era.items.length)}
         </div>
         {next ? (
           <Link href={`/prophets/${next.id}`} className="nx">
-            <span>Next <span className="zq-arrow" aria-hidden="true">→</span></span>
-            <b>
+            <span>
+              {t.next}{" "}
+              <span className="zq-arrow" aria-hidden="true">
+                {t.nextArrow}
+              </span>
+            </span>
+            <b {...en}>
               {next.name}
               <span lang="ar">{hon(next)}</span>
             </b>
@@ -141,23 +161,23 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
 
       <div className="pp-grid">
         <div>
-          <nav className="pp-toc" aria-label="On this page">
-            {!ms ? <a href="#full-story">Full story</a> : null}
-            <a href="#story">Story</a>
-            <a href="#quran">Quran</a>
-            <a href="#hadith">Sunnah</a>
-            <a href="#places">Places</a>
-            <a href="#discuss">Discussion</a>
+          <nav className="pp-toc" aria-label={t.onThisPage}>
+            {!ms ? <a href="#full-story">{t.toc.fullStory}</a> : null}
+            <a href="#story">{t.toc.story}</a>
+            <a href="#quran">{t.toc.quran}</a>
+            <a href="#hadith">{t.toc.hadith}</a>
+            <a href="#places">{t.toc.places}</a>
+            <a href="#discuss">{t.toc.discuss}</a>
           </nav>
           <ChapterNav
             storageKey={`prophet:${p.id}`}
             chapters={[
-              { id: "full-story", label: "The full story" },
-              { id: "story", label: "Outline" },
-              { id: "quran", label: "From the Quran" },
-              { id: "hadith", label: "From the Sunnah" },
-              { id: "places", label: "Places" },
-              { id: "discuss", label: "Discussion" },
+              { id: "full-story", label: t.chapters.fullStory },
+              { id: "story", label: t.chapters.outline },
+              { id: "quran", label: t.chapters.quran },
+              { id: "hadith", label: t.chapters.hadith },
+              { id: "places", label: t.chapters.places },
+              { id: "discuss", label: t.chapters.discuss },
             ]}
           />
 
@@ -165,11 +185,8 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
 
           {story ? (
             <section className="pp-sec" id="full-story" aria-labelledby="full-story-h">
-              <h2 id="full-story-h">The full story</h2>
-              <p className="lead">
-                Every prophet follows the same structure, A to G. Each part is written only from the Quran and authenticated narrations, cited,
-                and reviewed by a scholar before it appears.
-              </p>
+              <h2 id="full-story-h">{t.fullStory}</h2>
+              <p className="lead">{t.fullStoryLead}</p>
               {story.state === "ok" && story.story ? (
                 <StoryView
                   story={story.story}
@@ -177,9 +194,9 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
                   intro={
                     p.surahs?.length ? (
                       <p className="qs-hadith-refs">
-                        <span className="qp-fact-label">Quran chapters</span>
+                        <span className="qp-fact-label">{t.quranChapters}</span>
                         {p.surahs.map((su) => (
-                          <CitationChip key={su.number} kind="Surah" href={`/quran/${su.number}`}>{`${su.number} ${su.name}`}</CitationChip>
+                          <CitationChip key={su.number} kind={t.surah} href={`/quran/${su.number}`}>{`${su.number} ${su.name}`}</CitationChip>
                         ))}
                       </p>
                     ) : null
@@ -188,52 +205,54 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
               ) : (
                 <EmptyState
                   tone={story.state === "not_configured" ? "soon" : "unknown"}
-                  label={<EvidenceLabel kind="unknown">Not yet written</EvidenceLabel>}
-                  title={story.state === "error" ? "The story could not be loaded." : `The full story of ${p.name} is not published yet.`}
+                  label={<EvidenceLabel kind="unknown">{t.notWritten}</EvidenceLabel>}
+                  title={story.state === "error" ? t.storyError : t.storyPending(p.name)}
                 >
-                  <p>
-                    It is written section by section from cited sources and appears only after scholarly review. Anything the sources do not establish
-                    is shown as &ldquo;Not established in the Quran or selected authentic Hadith.&rdquo;
-                  </p>
+                  <p>{t.storyPendingBody}</p>
                 </EmptyState>
               )}
             </section>
           ) : null}
 
           <section className="pp-sec" id="story" aria-labelledby="story-h">
-            <h2 id="story-h">{p.story?.length ? `Outline in ${p.story.length} movements` : "Outline"}</h2>
-            <p className="lead">{p.summary}</p>
+            <h2 id="story-h">{p.story?.length ? t.outlineIn(p.story.length) : t.outline}</h2>
+            <p className="lead" {...en}>
+              {p.summary}
+            </p>
             {p.story?.length ? (
               <ol className="pp-steps" data-testid="story-steps">
                 {p.story.map((s) => (
                   <li key={s.title} className="pp-step">
-                    <h3>{s.title}</h3>
-                    {s.summary ? <p>{s.summary}</p> : <p className="zq-meta">Summary being drafted — read the ayat below.</p>}
+                    <h3 {...en}>{s.title}</h3>
+                    {s.summary ? <p {...en}>{s.summary}</p> : <p className="zq-meta">{t.summaryDrafting}</p>}
                     <div className="row">
                       <EvidenceLabel kind="quran" />
                       <CitationChip href={quranHref(s.ayat)}>{`Q ${s.ayat}`}</CitationChip>
                       <Link className="zq-iconbtn" href={quranHref(s.ayat) ?? "/quran"}>
-                        Read ayat <span className="zq-arrow" aria-hidden="true">→</span>
+                        {t.readAyatShort}{" "}
+                        <span className="zq-arrow" aria-hidden="true">
+                          {t.nextArrow}
+                        </span>
                       </Link>
                     </div>
                   </li>
                 ))}
               </ol>
             ) : (
-              <EmptyState label={<EvidenceLabel kind="unknown">Outline not written yet</EvidenceLabel>} title="No story outline is attached to this page yet.">
-                <p>An outline appears here only after it is written from the cited ayat and approved by the scholarly reviewers. Until then, read the passages listed under Related surahs.</p>
+              <EmptyState label={<EvidenceLabel kind="unknown">{t.outlineMissing}</EvidenceLabel>} title={t.outlineMissingTitle}>
+                <p>{t.outlineMissingBody}</p>
               </EmptyState>
             )}
           </section>
 
           <section className="pp-sec" id="quran" aria-labelledby="quran-h">
-            <h2 id="quran-h">From the Quran</h2>
+            <h2 id="quran-h">{t.fromQuran}</h2>
             <p className="lead">
-              {firstPassage ? `The opening ayah of the first passage, ${`Q ${firstPassage}`}.` : "No passage is attached."} Arabic is loaded from the verified Quran source; translations appear once licensed.
+              {firstPassage ? t.openingAyah(`Q ${firstPassage}`) : t.noPassage} {t.arabicNote}
             </p>
             {firstRange ? (
               <VerseCard
-                surahName={p.surahs?.[0]?.name ?? `Surah ${firstRange.surah}`}
+                surahName={p.surahs?.[0]?.name ?? `${t.surah} ${firstRange.surah}`}
                 reference={`Q ${firstRange.surah}:${firstRange.from}`}
                 arabic={opening}
                 licence="pending"
@@ -244,41 +263,50 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
           </section>
 
           <section className="pp-sec" id="hadith" aria-labelledby="hadith-h">
-            <h2 id="hadith-h">From the Sunnah</h2>
-            <EmptyState label={<EvidenceLabel kind="unknown">Not yet attached</EvidenceLabel>} title="No narration is attached to this page yet.">
+            <h2 id="hadith-h">{t.fromSunnah}</h2>
+            <EmptyState label={<EvidenceLabel kind="unknown">{t.notAttached}</EvidenceLabel>} title={t.noNarration}>
               <p>
-                Narrations about {p.name}
-                <span lang="ar">{hon(p)}</span> appear here only after each one is graded by a named scholar and approved by the review board.
+                {locale === "ur" ? (
+                  <>
+                    <span {...en}>{p.name}</span>
+                    <span lang="ar">{hon(p)}</span> {t.narrationsAbout}
+                  </>
+                ) : (
+                  <>
+                    {t.narrationsAbout} <span {...en}>{p.name}</span>
+                    <span lang="ar">{hon(p)}</span>
+                  </>
+                )}{" "}
+                {t.narrationsBody}
               </p>
             </EmptyState>
           </section>
 
           <section className="pp-sec" id="places" aria-labelledby="places-h">
-            <h2 id="places-h">Places</h2>
+            <h2 id="places-h">{t.places}</h2>
             <p className="lead">
-              {PLACE_TEXT[place.certainty]}: {place.name}.{" "}
-              {place.certainty === "unknown" ? "It is not placed on the map." : "Exact sites are shown only where a source supports them."}
+              {u.place[place.certainty]}: <span {...en}>{place.name}</span>. {place.certainty === "unknown" ? t.notPlaced : t.exactSites}
             </p>
-            <AtlasPreview name={place.name} certainty={place.certainty} />
+            <AtlasPreview name={place.name} certainty={place.certainty} locale={locale} />
           </section>
 
           <section className="pp-sec" id="discuss" aria-labelledby="discuss-h">
-            <h2 id="discuss-h">Discussion</h2>
-            <p className="lead">Reading is open to all. Sign in to ask a question or reply; every comment can cite a verse.</p>
+            <h2 id="discuss-h">{t.discussion}</h2>
+            <p className="lead">{t.discussionLead}</p>
             <DiscussionPreview contentType="journey_stop" contentId={p.id} />
           </section>
         </div>
 
-        <aside className="pp-side" aria-label={`About ${p.name}`}>
+        <aside className="pp-side" aria-label={t.about(p.name)}>
           {p.surahs?.length ? (
             <div className="pp-card">
-              <h3>Related surahs</h3>
+              <h3>{t.relatedSurahs}</h3>
               <ul className="pp-sur">
                 {p.surahs.map((s) => (
                   <li key={`${s.number}-${s.passages.join()}`}>
                     <span className="n">{s.number}</span>
                     <span className="t">
-                      <b>{s.name}</b>{" "}
+                      <b {...en}>{s.name}</b>{" "}
                       <span lang="ar" dir="rtl">
                         {s.arabic}
                       </span>
@@ -287,7 +315,7 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
                       {s.passages.map((ps) => (
                         <CitationChip key={ps} href={quranHref(ps)}>{`Q ${ps}`}</CitationChip>
                       ))}
-                      {s.named ? <span className="zq-jc-named">Named after him</span> : null}
+                      {s.named ? <span className="zq-jc-named">{t.namedAfterHim}</span> : null}
                     </span>
                   </li>
                 ))}
@@ -295,14 +323,14 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
             </div>
           ) : (
             <div className="pp-card">
-              <h3>Sources</h3>
+              <h3>{t.sources}</h3>
               <ul className="zq-jc-refs">
                 {(p.refs ?? []).map((r) => (
                   <li key={r.ref + r.label}>
-                    <CitationChip kind={r.kind === "quran" ? "Quran" : r.kind === "hadith" ? "Hadith" : "Scholarship"} href={r.kind === "quran" ? quranHref(r.ref.replace(/^Q\s*/, "")) : undefined}>
+                    <CitationChip kind={r.kind === "quran" ? t.refKinds.quran : r.kind === "hadith" ? t.refKinds.hadith : t.refKinds.scholar} href={r.kind === "quran" ? quranHref(r.ref.replace(/^Q\s*/, "")) : undefined}>
                       {r.ref}
                     </CitationChip>
-                    <span>{r.label}</span>
+                    <span {...en}>{r.label}</span>
                   </li>
                 ))}
               </ul>
@@ -310,27 +338,26 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
           )}
           {!ms ? (
             <div className="pp-card">
-              <h3>Family</h3>
+              <h3>{t.family}</h3>
               {/* Family edges come only from reviewed relationship claims (genealogy explorer); none are reviewed yet. */}
               <p className="zq-meta" style={{ margin: 0 }}>
-                No reviewed family relationship is attached yet. Relationships appear only with a cited, reviewed claim.{" "}
-                <Link href={`/genealogy?focus=${p.id}`}>Open the genealogy explorer</Link>
+                {t.familyNone} <Link href={`/genealogy?focus=${p.id}`}>{t.openGenealogy}</Link>
               </p>
             </div>
           ) : null}
           <NoteEditor target={{ type: "journey_stop", id: p.id }} />
           <div className="pp-card">
-            <h3>On the journey</h3>
+            <h3>{t.onTheJourney}</h3>
             <EraTag {...p.era} />
             <p className="zq-meta" style={{ margin: 0 }}>
-              {ERA_TEXT[p.era.certainty]}. {era.note}
+              {u.era[p.era.certainty]}. {era.note ? <span {...en}>{era.note}</span> : null}
             </p>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
               <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" href={`/#${p.id}`}>
-                See on the journey
+                {t.seeOnJourney}
               </Link>
               <Link className="zq-btn zq-btn-quiet zq-btn-sm zq-btn-link" href={`/timeline?selected=${p.id}`}>
-                On the timeline
+                {t.onTimeline}
               </Link>
             </div>
           </div>
@@ -341,7 +368,9 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
 }
 
 /** Static atlas preview. Regions are hatched; unknown places get a "?" ring and are never placed. */
-function AtlasPreview({ name, certainty }: { name: string; certainty: "point" | "region" | "hypothesis" | "disputed" | "unknown" }) {
+function AtlasPreview({ name, certainty, locale }: { name: string; certainty: "point" | "region" | "hypothesis" | "disputed" | "unknown"; locale: string }) {
+  const t = prophetStrings(locale);
+  const PLACE_TEXT = uiStrings(locale).place;
   return (
     <div className="pp-map">
       <svg className="base" viewBox="0 0 800 260" preserveAspectRatio="xMidYMid slice" role="img" aria-label={`${PLACE_TEXT[certainty]}: ${name}`}>
@@ -368,15 +397,18 @@ function AtlasPreview({ name, certainty }: { name: string; certainty: "point" | 
           </text>
         ) : null}
       </svg>
-      <span className="note">Schematic preview — not to scale; not a geographic position</span>
+      <span className="note">{t.schematicNote}</span>
       {certainty === "unknown" ? (
-        <ul className="pp-map-unknown" aria-label="Not mapped">
+        <ul className="pp-map-unknown" aria-label={t.notMapped}>
           <li>
-            <span className="pp-q" aria-hidden="true">?</span> {name} — location unknown, not placed
+            <span className="pp-q" aria-hidden="true">
+              ?
+            </span>{" "}
+            {name} — {t.locationUnknown}
           </li>
         </ul>
       ) : null}
-      <MapLegend items={certainty === "point" ? ["point", "unknown"] : certainty === "hypothesis" ? ["hypothesis", "unknown"] : ["region", "unknown"]} attribution="Schematic drawing by QITL · no map data" />
+      <MapLegend items={certainty === "point" ? ["point", "unknown"] : certainty === "hypothesis" ? ["hypothesis", "unknown"] : ["region", "unknown"]} attribution={t.schematicAttribution} />
     </div>
   );
 }

@@ -2,9 +2,10 @@
  * Creation Atlas (عالم الخلق) interface strings. These are interface words only: no religious statement is written
  * here. Every fact the module shows comes from a published, reviewed database row with its evidence class and
  * citation. English is the reviewed source; the Arabic strings are a first draft pending a qualified translator's
- * review, like the rest of the Arabic interface (src/lib/i18n/dict.ts).
+ * review, like the rest of the Arabic interface; the Urdu likewise (src/lib/i18n/dict.ts).
  */
 import type { Locale } from "../dict";
+import { resolveLocale } from "../locales";
 
 const en = {
   nav: { label: "Creation Atlas", note: "Humans, jinn, angels and more, with evidence" },
@@ -292,8 +293,151 @@ const ar: CreationStrings = {
   },
 };
 
-export const creation: Record<"en" | "ar", CreationStrings> = { en, ar }; // Urdu falls back to English until reviewed Urdu strings exist
+/** Draft Urdu (written by hand from the English): needs review by a qualified translator, like the Arabic. */
+const ur: CreationStrings = {
+  nav: { label: "اٹلسِ تخلیق", note: "انسان، جن، فرشتے اور مزید، دلیل کے ساتھ" },
+  title: "اٹلسِ تخلیق",
+  titleAr: "عالم الخلق",
+  lead: "قرآن اور صحیح احادیث مخلوقات اور تخلیق شدہ دنیا کے بارے میں کیا ثابت کرتے ہیں؛ ہر بیان پر اس دلیل کی قسم درج ہے جس پر وہ قائم ہے۔",
+  intro: {
+    heading: "اس اٹلس کے بارے میں",
+    body: [
+      "یہاں ہر اندراج ایک حوالہ شدہ ماخذ سے لکھا گیا، ایک علمی جائزہ کار نے اسے جانچا، اور اسی جائزے کے بعد شائع ہوا۔ ہر اندراج اپنی دلیل کی قسم اور اپنا حوالہ دکھاتا ہے۔",
+      "جہاں منتخب صحیح مآخذ کچھ نہیں کہتے، وہاں اٹلس صاف صاف یہی بتاتا ہے۔ وہ کبھی کسی خلا کو اندازے، کہانی یا عوامی عقیدے سے نہیں بھرتا۔",
+    ],
+    kids: "یہ صفحہ بتاتا ہے کہ قرآن اور معتبر احادیث اللہ کی پیدا کی ہوئی چیزوں کے بارے میں کیا سکھاتی ہیں۔ اگر مآخذ ہمیں کچھ نہیں بتاتے تو ہم کہتے ہیں “ہمیں معلوم نہیں”۔",
+    visualCaption: "مداروں کا ایک آرائشی تجریدی نمونہ۔",
+  },
+  notEstablished: "منتخب صحیح مآخذ سے ثابت نہیں۔",
+  evidence: {
+    revelation: "وحی (قرآن)",
+    authentic_hadith: "صحیح حدیث",
+    scholarly_interpretation: "علمی تشریح",
+    not_established: "ثابت نہیں",
+  },
+  evidenceLegend: "دلیل کی اقسام",
+  evidenceHelp: {
+    revelation: "قرآن میں بیان ہوا ہے۔",
+    authentic_hadith: "ایسی روایت سے، جسے کسی نامزد محدث نے صحیح قرار دیا ہو۔",
+    scholarly_interpretation: "علماء نصوص کی وضاحت کیسے کرتے ہیں؛ یہ بذاتِ خود وحی نہیں۔",
+    not_established: "منتخب صحیح مآخذ اسے ثابت نہیں کرتے۔",
+  },
+  sections: {
+    categories: "تخلیق کے چھ شعبے",
+    compare: "موازنہ: انسان، جن اور فرشتے",
+    graph: "ان کا باہمی تعلق",
+    stories: "قصوں کا ذخیرہ",
+    misconceptions: "ہم کیا جانتے ہیں — اور کیا نہیں جانتے",
+    sources: "تصدیق شدہ مآخذ",
+  },
+  jump: "اس صفحے پر",
+  kids: { label: "بچوں کا موڈ", on: "بچوں کا موڈ آن ہے: آسان الفاظ اور پُرسکون تصویریں۔ دلیل وہی رہتی ہے۔", off: "بچوں کا موڈ" },
+  categories: {
+    profiles: (n: number) => (n === 1 ? "۱ شائع شدہ پروفائل" : `${n} شائع شدہ پروفائل`),
+    none: "ابھی کوئی پروفائل شائع نہیں ہوا۔",
+  },
+  compare: {
+    help: "ہر خانہ ایک شائع شدہ، جائزہ شدہ اندراج اس کی دلیل کی قسم اور حوالے کے ساتھ دکھاتا ہے۔ خالی خانے کا مطلب ہے کہ منتخب صحیح مآخذ اسے ثابت نہیں کرتے — اسے کبھی کسی مفروضے سے نہیں بھرا جاتا۔",
+    aspect: "پہلو",
+    more: (n: number) => `پروفائل پر مزید ${n}`,
+    openProfile: "پروفائل کھولیں",
+    rows: {
+      origin: "اصل",
+      nature: "فطرت",
+      purpose: "مقصد",
+      abilities: "صلاحیتیں",
+      limitations: "حدود",
+      relationship_with_humans: "انسانوں سے تعلق",
+    },
+    kidsRows: {
+      origin: "یہ کہاں سے آئے",
+      nature: "یہ کیسے ہیں",
+      purpose: "یہ کیوں پیدا کیے گئے",
+      abilities: "یہ کیا کر سکتے ہیں",
+      limitations: "یہ کیا نہیں کر سکتے",
+      relationship_with_humans: "لوگوں سے ان کا تعلق",
+    },
+  },
+  graph: {
+    help: "ہر لکیر ایک تعلق ہے جو ایک جائزہ شدہ دعوے پر قائم ہے۔ خاکے کے بعد کی فہرست یہی تعلقات متن کی صورت میں دیتی ہے۔",
+    diagramLabel: (n: number) => `${n} تعلقات کا خاکہ۔ یہی تعلقات اس کے بعد فہرست میں ہیں۔`,
+    truncated: (n: number) => `خاکہ پہلے ${n} تعلقات دکھاتا ہے؛ فہرست میں سب موجود ہیں۔`,
+    list: "تعلقات بطورِ فہرست",
+    empty: "ابھی کوئی تعلق شائع نہیں ہوا۔",
+    kinds: { creation: "مخلوق", person: "شخص", event: "واقعہ", command: "حکم", community: "قوم", concept: "تصور" },
+  },
+  stories: {
+    help: "قصے جائزہ شدہ دعووں سے قصوں کے نظام کے ذریعے سنائے جاتے ہیں۔",
+    empty: "ابھی کوئی قصہ شائع نہیں ہوا۔",
+    about: "کے بارے میں",
+  },
+  misconceptions: {
+    help: "عام سوالات، جن کا جواب صرف منتخب صحیح مآخذ سے دیا گیا ہے۔ جہاں وہ خاموش ہیں، جواب یہی کہتا ہے۔",
+    caution:
+      "بے چینی، ڈراؤنے خواب، اداسی یا کسی بھی طبی علامت کو کبھی جنات کی کارروائی کی نشانی نہ سمجھیں۔ یہ صحت کے معاملات ہیں: کسی ڈاکٹر یا ذہنی صحت کے مستند ماہر سے بات کریں، اور ہنگامی صورت میں اپنی مقامی ہنگامی سروس سے رابطہ کریں۔",
+    cautionTitle: "براہِ کرم پڑھیں",
+    empty: "ابھی کوئی سوال شائع نہیں ہوا۔",
+    all: "سب",
+    filter: "ان کے بارے میں سوالات دکھائیں",
+  },
+  sources: {
+    help: "اس اٹلس کے کسی شائع شدہ اندراج میں استعمال ہونے والا ہر حوالہ۔ قرآن کے حوالے تصدیق شدہ متن کھولتے ہیں۔",
+    empty: "ابھی کوئی ماخذ نہیں: جب تک کوئی علمی جائزہ کار منظوری نہ دے، یہاں کچھ نہیں دکھایا جاتا۔",
+  },
+  empty: {
+    notConfigured: "اٹلسِ تخلیق ابھی منسلک نہیں ہوا۔",
+    notConfiguredBody: "یہ ڈیٹا بیس سے جائزہ شدہ اندراجات پڑھتا ہے۔ منسلک ہونے تک کچھ نہیں دکھایا جاتا — کوئی فرضی حقائق نہیں۔",
+    error: "اٹلسِ تخلیق لوڈ نہیں ہو سکا۔",
+    nothingPublished: "ابھی کچھ شائع نہیں ہوا۔",
+    nothingPublishedBody: "اندراجات تبھی ظاہر ہوتے ہیں جب ان کی دلیل کا حوالہ دیا جائے اور کوئی علمی جائزہ کار انہیں منظور کرے۔",
+  },
+  visual: {
+    play: "چلائیں",
+    pause: "روکیں",
+    replay: "دوبارہ چلائیں",
+    note: "تجریدی تصویر: اس میں کسی نبی، فرشتے، جن یا کسی غیبی چیز کی تصویر نہیں۔",
+  },
+  profile: {
+    crumb: "پروفائل",
+    fields: {
+      name: "نام",
+      classification: "درجہ بندی",
+      origin: "اصل",
+      purpose: "مقصد",
+      nature: "فطرت",
+      abilities: "صلاحیتیں",
+      limitations: "حدود",
+      relationship_with_humans: "انسانوں سے تعلق",
+      quranic_events: "قرآنی واقعات",
+      related_hadith: "متعلقہ احادیث",
+      chronological_position: "زمانی مقام",
+      location: "مقام",
+      misconceptions: "غلط فہمیاں",
+      lessons: "اسباق",
+      vocabulary: "الفاظ",
+      sources: "مآخذ",
+      review_status: "جائزے کی حالت",
+    },
+    kidsFields: {
+      origin: "یہ کہاں سے آئے",
+      purpose: "یہ کیوں پیدا کیے گئے",
+      nature: "یہ کیسے ہیں",
+      abilities: "یہ کیا کر سکتے ہیں",
+      limitations: "یہ کیا نہیں کر سکتے",
+      relationship_with_humans: "لوگوں سے ان کا تعلق",
+      lessons: "ہم کیا سیکھ سکتے ہیں",
+      vocabulary: "نئے الفاظ",
+    },
+    everyday: "روزمرہ زندگی میں",
+    reviewed: (v: number, date: string) => `علمی جائزے کے بعد شائع · ورژن ${v} · تازہ کاری ${date}`,
+    reviewedField: "جائزہ شدہ پروفائل خانہ",
+    contents: "پروفائل کے مندرجات",
+    notFound: "یہ پروفائل شائع نہیں ہوا۔",
+  },
+};
+
+export const creation: Record<Locale, CreationStrings> = { en, ar, ur };
 
 export function creationStrings(locale: string): CreationStrings {
-  return locale === "ar" ? ar : en;
+  return creation[resolveLocale(locale)];
 }

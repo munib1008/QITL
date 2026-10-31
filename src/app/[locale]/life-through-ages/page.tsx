@@ -7,11 +7,15 @@ import { journeyStops } from "@/content/journey";
 import { lifestyleStrings } from "@/lib/i18n/modules/lifestyle";
 import { CATEGORIES } from "@/lib/lifestyle/model";
 
-export const metadata: Metadata = {
-  title: "Life Through the Ages",
-  description: "How people lived, worked, ate and aged across the ages of the prophets, with every statement labelled by its evidence.",
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  const t = lifestyleStrings(l);
+  return {
+  title: t.title,
+  description: t.lead,
   alternates: { canonical: BASE },
 };
+}
 
 export default async function LifeThroughAgesHub({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

@@ -11,7 +11,10 @@ import { getUser } from "@/lib/supabase/server";
 import { muftiT } from "@/lib/i18n/modules/mufti";
 import { UUID_RE, type CitationRow } from "@/lib/mufti";
 
-export const metadata: Metadata = { title: "Question to muftis" };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  return { title: muftiT(l).crumbs.questions };
+}
 export const dynamic = "force-dynamic";
 
 interface Question {

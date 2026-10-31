@@ -21,8 +21,9 @@ const EMPTY: Atlas = { profiles: [], relationships: [], stories: [], visuals: []
 
 export default async function CreationHome({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: raw } = await params;
+  // Content language for names (Arabic or English rows); interface strings follow the interface language (en, ar, ur).
   const locale = raw === "ar" ? "ar" : "en";
-  const t = creationStrings(locale);
+  const t = creationStrings(raw);
   const res = await getAtlas();
   const atlas = res.state === "ok" ? res.atlas : EMPTY;
   const misconceptions: MisconceptionItem[] = atlas.profiles.flatMap((p) =>
@@ -42,7 +43,7 @@ export default async function CreationHome({ params }: { params: Promise<{ local
 
   return (
     <ReadingPage
-      locale={locale}
+      locale={raw}
       crumbs={[{ label: t.title }]}
       title={
         <>

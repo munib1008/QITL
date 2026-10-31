@@ -23,13 +23,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function CreationProfilePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale: raw, slug } = await params;
+  // Content language for names (Arabic or English rows); interface strings follow the interface language (en, ar, ur).
   const locale = raw === "ar" ? "ar" : "en";
-  const t = creationStrings(locale);
+  const t = creationStrings(raw);
   if (!SLUG.test(slug)) notFound();
   const r = await getCreationProfile(slug);
   if (r.state !== "ok")
     return (
-      <ReadingPage locale={locale} crumbs={[{ href: "/creation", label: t.title }, { label: t.profile.crumb }]} title={t.title}>
+      <ReadingPage locale={raw} crumbs={[{ href: "/creation", label: t.title }, { label: t.profile.crumb }]} title={t.title}>
         <div className="zq-pagebody">
           <EmptyState tone={r.state === "not_configured" ? "soon" : "unknown"} label={<span className="zq-soon">{t.evidence.not_established}</span>} title={r.state === "error" ? t.empty.error : t.empty.notConfigured}>
             <p>{t.empty.notConfiguredBody}</p>
@@ -44,7 +45,7 @@ export default async function CreationProfilePage({ params }: { params: Promise<
   const visuals = atlas.visuals.filter((v) => v.profileId === profile.id);
   return (
     <ReadingPage
-      locale={locale}
+      locale={raw}
       crumbs={[{ href: "/creation", label: t.title }, { label: locale === "ar" ? profile.nameAr : profile.nameEn }]}
       kicker={<span className="pp-chap">{locale === "ar" ? cat.nameAr : cat.nameEn}</span>}
       title={

@@ -9,7 +9,10 @@ import { getUser } from "@/lib/supabase/server";
 import { muftiT } from "@/lib/i18n/modules/mufti";
 import { UUID_RE } from "@/lib/mufti";
 
-export const metadata: Metadata = { title: "Answer composer", robots: { index: false, follow: false } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  return { title: muftiT(l).composer.title, robots: { index: false, follow: false } };
+}
 export const dynamic = "force-dynamic";
 
 /** The assigned mufti's composer for one question. */

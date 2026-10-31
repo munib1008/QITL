@@ -1,40 +1,33 @@
+"use client";
+
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { ERA_TEXT, type EraCertainty, type EvidenceKind } from "@/content/labels";
+import type { EraCertainty, EvidenceKind } from "@/content/labels";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 import { EvidenceMark } from "./icons";
 
-export const EVIDENCE_TEXT: Record<"en" | "ar", Record<EvidenceKind, string>> = {
-  en: {
-    quran: "Quran",
-    hadith: "Authentic Hadith",
-    scholar: "Scholarly interpretation",
-    estimate: "Historical estimate",
-    disputed: "Disputed",
-    unknown: "Unknown",
-  },
-  ar: {
-    quran: "القرآن",
-    hadith: "حديث صحيح",
-    scholar: "تفسير العلماء",
-    estimate: "تقدير تاريخي",
-    disputed: "مختلف فيه",
-    unknown: "غير معلوم",
-  },
-};
+/*
+ * Client components so their words follow the interface language (useLocale reads the [locale] segment) wherever they
+ * are rendered, from a server page or a client island. An explicit lang/locale prop wins.
+ */
 
 export interface EvidenceLabelProps {
   kind: EvidenceKind;
-  lang?: "en" | "ar" | "ur"; // Urdu labels fall back to English until reviewed
+  /** Interface language of the label; defaults to the page's. */
+  lang?: string;
   title?: string;
   children?: ReactNode;
 }
 
 /** What kind of knowledge a claim rests on: word + mark + border style, never colour alone. Always visible. */
-export function EvidenceLabel({ kind, lang = "en", title, children }: EvidenceLabelProps) {
+export function EvidenceLabel({ kind, lang, title, children }: EvidenceLabelProps) {
+  const page = useLocale();
+  const t = uiStrings(lang ?? page);
   return (
     <span className={`zq-ev zq-ev-${kind}`} title={title} data-evidence={kind}>
       <EvidenceMark kind={kind} />
-      <span>{children ?? EVIDENCE_TEXT[lang === "ar" ? "ar" : "en"][kind]}</span>
+      <span>{children ?? t.evidence[kind]}</span>
     </span>
   );
 }
@@ -85,62 +78,57 @@ export interface HadithGradeProps {
 
 /** One grading of one narration by one named scholar. Never inferred from the collection name. */
 export function HadithGrade({ grade, grader, source, authentic, varies }: HadithGradeProps) {
+  const t = uiStrings(useLocale());
   const kind: EvidenceKind = authentic && grader ? "hadith" : grade ? "scholar" : "unknown";
   return (
     <span className="zq-grade">
-      <EvidenceLabel kind={kind}>{grade ?? "Grade not recorded"}</EvidenceLabel>
+      <EvidenceLabel kind={kind}>{grade ?? t.grade.notRecorded}</EvidenceLabel>
       {grader ? (
         <span>
-          graded by <b>{grader}</b>
+          {t.grade.gradedBy} <b>{grader}</b>
         </span>
       ) : null}
       {source ? <CitationChip>{source}</CitationChip> : null}
-      {varies ? <span className="zq-grade-varies">· Graded differently by other scholars</span> : null}
+      {varies ? <span className="zq-grade-varies">{t.grade.varies}</span> : null}
     </span>
   );
 }
 
 /** Era tag with its certainty mark. */
 export function EraTag({ label, certainty }: { label: string; certainty: EraCertainty }) {
+  const t = uiStrings(useLocale());
   return (
     <span className={`zq-era zq-era-${certainty}`} data-certainty={certainty}>
       <span className="zq-era-mark" aria-hidden="true" />
       <span>{label}</span>
-      <span className="zq-era-kind">· {ERA_TEXT[certainty]}</span>
+      <span className="zq-era-kind">· {t.era[certainty]}</span>
     </span>
   );
 }
 
 export type EditorialState = "draft" | "in_review" | "approved" | "published" | "correction" | "rejected";
-const STATUS_TEXT: Record<EditorialState, string> = {
-  draft: "Draft",
-  in_review: "In scholarly review",
-  approved: "Approved",
-  published: "Published",
-  correction: "Correction pending",
-  rejected: "Changes requested",
-};
-
 /** Workflow state. The word is always shown; the dot fill repeats it for colour-blind readers. */
 export function EditorialStatus({ status, children }: { status: EditorialState; children?: ReactNode }) {
+  const t = uiStrings(useLocale());
   return (
     <span className={`zq-status zq-status-${status}`} data-status={status}>
       <span className="zq-status-dot" aria-hidden="true" />
-      {children ?? STATUS_TEXT[status]}
+      {children ?? t.status[status]}
     </span>
   );
 }
 
 /** The visible draft badge for content that has not passed scholarly review. */
 export function DraftBadge({ status }: { status: string }) {
+  const t = uiStrings(useLocale());
   if (status === "published" || status === "approved") return null;
   return (
     <span data-testid="draft-badge">
-      <EditorialStatus status="in_review">Draft content — pending scholarly review</EditorialStatus>
+      <EditorialStatus status="in_review">{t.draftContent}</EditorialStatus>
     </span>
   );
 }
 
 export function DemoTag() {
-  return <span className="zq-demo">DEMO</span>;
+  return <span className="zq-demo">{uiStrings(useLocale()).demo}</span>;
 }

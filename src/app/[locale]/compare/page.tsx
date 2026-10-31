@@ -7,8 +7,13 @@ import { EmptyState } from "@/components/ui/misc";
 import { getServerSupabase } from "@/lib/supabase/server";
 import { parseAyahRange } from "@/lib/refs";
 import { QuranAttribution } from "@/components/quran/QuranAttribution";
+import { englishContent } from "@/lib/i18n/locales";
+import { compareStrings } from "@/lib/i18n/modules/search";
 
-export const metadata: Metadata = { title: "Compare sources", description: "Translations and scholarly readings side by side, with licence and source dates shown." };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const t = compareStrings((await params).locale);
+  return { title: t.title, description: t.metaDescription };
+}
 
 interface Tr {
   translator: string;
@@ -22,6 +27,8 @@ interface Tr {
 export default async function ComparePage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ ref?: string }> }) {
   const { locale } = await params;
   const { ref = "1:1" } = await searchParams;
+  const s = compareStrings(locale);
+  const en = englishContent(locale);
   const r = parseAyahRange(ref);
   const arabic = r ? ayahArabic(r.surah, r.from) : null;
   const src = quranSource();
@@ -33,32 +40,32 @@ export default async function ComparePage({ params, searchParams }: { params: Pr
   return (
     <ReadingPage
       locale={locale}
-      crumbs={[{ label: "Compare sources" }]}
-      title="Compare sources"
-      lead="One ayah, every licensed translation beside the Arabic, each with its translator, edition, licence and the date the source was recorded."
+      crumbs={[{ label: s.title }]}
+      title={s.title}
+      lead={s.lead}
     >
       <div className="zq-pagebody">
-        <form method="get" className="zq-form" aria-label="Choose an ayah">
+        <form method="get" className="zq-form" aria-label={s.choose}>
           <div className="zq-field">
-            <label htmlFor="ref">Ayah reference</label>
+            <label htmlFor="ref">{s.ref}</label>
             <input id="ref" name="ref" className="zq-input" dir="ltr" defaultValue={ref} pattern="\d{1,3}:\d{1,3}" placeholder="12:4" />
-            <span className="zq-help">Surah and ayah, for example 12:4.</span>
+            <span className="zq-help">{s.refHelp}</span>
           </div>
           <div>
             <button type="submit" className="zq-btn zq-btn-secondary">
-              Compare
+              {s.compare}
             </button>
           </div>
         </form>
         {!r ? (
-          <EmptyState title="That is not an ayah reference.">
-            <p>Write it as surah:ayah, for example 12:4.</p>
+          <EmptyState title={s.notRef}>
+            <p>{s.notRefBody}</p>
           </EmptyState>
         ) : (
           <div className="zq-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))" }}>
-            <article className="zq-card" style={{ maxWidth: "none", background: "var(--surface-sunken)" }} aria-label="Arabic original">
+            <article className="zq-card" style={{ maxWidth: "none", background: "var(--surface-sunken)" }} aria-label={s.original}>
               <div className="zq-card-head">
-                <p className="zq-eyebrow">Arabic original</p>
+                <p className="zq-eyebrow">{s.original}</p>
                 <span style={{ display: "flex", gap: 6 }}>
                   <EvidenceLabel kind="quran" />
                   <CitationChip href={`/quran/${r.surah}#ayah-${r.from}`}>{`Q ${r.surah}:${r.from}`}</CitationChip>
@@ -69,7 +76,7 @@ export default async function ComparePage({ params, searchParams }: { params: Pr
                   {arabic}
                 </p>
               ) : (
-                <p className="zq-licence zq-licence-pending">Arabic not loaded — the verified source has not been imported yet.</p>
+                <p className="zq-licence zq-licence-pending">{s.arabicPending}</p>
               )}
               <QuranAttribution src={src} className="zq-licence" />
             </article>
@@ -78,24 +85,28 @@ export default async function ComparePage({ params, searchParams }: { params: Pr
                 <article key={t.translator + t.edition} className="zq-card" style={{ maxWidth: "none" }}>
                   <div className="zq-card-head">
                     <p className="zq-eyebrow">{t.language.toUpperCase()}</p>
-                    <span className="zq-meta">{t.translator}</span>
+                    <span className="zq-meta" {...en}>
+                      {t.translator}
+                    </span>
                   </div>
-                  <p className="zq-trans">{t.text}</p>
+                  <p className="zq-trans" lang={t.language} dir={t.language === "ar" || t.language === "ur" ? "rtl" : "ltr"}>
+                    {t.text}
+                  </p>
                   <dl className="zq-kv">
-                    <dt>Edition</dt>
-                    <dd>{t.edition}</dd>
-                    <dt>Licence</dt>
-                    <dd>{t.sources?.license_text ?? "Recorded in the source register"}</dd>
-                    <dt>Source recorded</dt>
-                    <dd>{t.sources?.updated_at ? new Date(t.sources.updated_at).toLocaleDateString() : "—"}</dd>
+                    <dt>{s.edition}</dt>
+                    <dd {...en}>{t.edition}</dd>
+                    <dt>{s.licence}</dt>
+                    <dd>{t.sources?.license_text ? <span {...en}>{t.sources.license_text}</span> : s.inRegister}</dd>
+                    <dt>{s.recorded}</dt>
+                    <dd>{t.sources?.updated_at ? new Date(t.sources.updated_at).toLocaleDateString(locale) : "—"}</dd>
                   </dl>
                 </article>
               ))
             ) : (
-              <EmptyState label={<span className="zq-licence zq-licence-pending">Licence pending</span>} title="No translation is licensed for display yet.">
+              <EmptyState label={<span className="zq-licence zq-licence-pending">{s.licencePending}</span>} title={s.noTranslation}>
                 <p>
-                  Translations appear here only after their rights are cleared in the <Link href="/methodology#licences">licence register</Link>. Comparing scholarly readings
-                  (tafsir) works the same way.
+                  {s.noTranslationBody} <Link href="/methodology#licences">{s.register}</Link>
+                  {s.tafsirToo}
                 </p>
               </EmptyState>
             )}

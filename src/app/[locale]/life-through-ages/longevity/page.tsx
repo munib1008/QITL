@@ -6,7 +6,11 @@ import { NuhNote } from "@/components/lifestyle/NuhNote";
 import { lifestyleStrings } from "@/lib/i18n/modules/lifestyle";
 import { getLifespanClaims } from "@/lib/lifestyle/data";
 
-export const metadata: Metadata = { title: "Human Longevity Research Center · Life Through the Ages", alternates: { canonical: `${BASE}/longevity` } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  const t = lifestyleStrings(l);
+  return { title: `${t.sections.longevity} · ${t.title}`, alternates: { canonical: `${BASE}/longevity` } };
+}
 export const revalidate = 300;
 
 /**

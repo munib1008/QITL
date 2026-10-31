@@ -2,9 +2,12 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 /** 500: says what failed and offers a retry. No stack traces or internals are shown. */
 export default function ErrorPage({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+  const u = uiStrings(useLocale());
   useEffect(() => {
     console.error("[qitl] page error", error.digest ?? "");
   }, [error]);
@@ -12,15 +15,19 @@ export default function ErrorPage({ error, reset }: { error: Error & { digest?: 
     <main className="pp-wrap" id="main">
       <div className="zq-status-page">
         <p className="zq-eyebrow">500</p>
-        <h1>Something went wrong on our side.</h1>
-        <p className="zq-meta">The page could not be loaded. Try again; if it keeps failing, the rest of QITL still works.</p>
-        {error.digest ? <p className="zq-order">Reference: {error.digest}</p> : null}
+        <h1>{u.errors.serverTitle}</h1>
+        <p className="zq-meta">{u.errors.serverBody}</p>
+        {error.digest ? (
+          <p className="zq-order">
+            {u.errors.reference} <span dir="ltr">{error.digest}</span>
+          </p>
+        ) : null}
         <p style={{ display: "flex", gap: 8, justifyContent: "center" }}>
           <button type="button" className="zq-btn zq-btn-primary" onClick={reset}>
-            Try again
+            {u.errors.retry}
           </button>
           <Link className="zq-btn zq-btn-secondary zq-btn-link" href="/">
-            Home
+            {u.shell.home}
           </Link>
         </p>
       </div>

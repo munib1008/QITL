@@ -6,6 +6,8 @@ import { Icon } from "@/components/ui/icons";
 import { decodeIntent, encodeIntent, type BookmarkTarget } from "@/lib/validation";
 import { stripLocale } from "@/lib/i18n";
 import { useSession } from "./useSession";
+import { accountStrings } from "@/lib/i18n/modules/account";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 type Saved = "unknown" | "saved" | "not_saved";
 
@@ -29,6 +31,7 @@ function savedKeys(): Promise<Set<string>> {
  */
 function BookmarkButtonInner({ target, variant = "button" }: { target: BookmarkTarget; variant?: "button" | "icon" }) {
   const session = useSession();
+  const t = accountStrings(useLocale());
   const router = useRouter();
   const params = useSearchParams();
   const [saved, setSaved] = useState<Saved>("unknown");
@@ -71,11 +74,11 @@ function BookmarkButtonInner({ target, variant = "button" }: { target: BookmarkT
         headers: { "content-type": "application/json" },
         body: JSON.stringify(target),
       });
-      if (!res.ok) throw new Error(res.status === 401 ? "Your session ended. Sign in again." : "Could not save. Try again.");
+      if (!res.ok) throw new Error(res.status === 401 ? t.sessionEnded : t.couldNotSave);
       savedPromise = null;
     } catch (e) {
       setSaved(before);
-      setError(e instanceof Error ? e.message : "Could not save. Try again.");
+      setError(e instanceof Error ? e.message : t.couldNotSave);
     } finally {
       busy.current = false;
     }
@@ -85,7 +88,7 @@ function BookmarkButtonInner({ target, variant = "button" }: { target: BookmarkT
     return (
       <button type="button" className={cls} disabled aria-busy="true">
         <Icon.bookmark />
-        Bookmark
+        {t.bookmark}
       </button>
     );
   if (session.status === "unavailable")
@@ -93,10 +96,10 @@ function BookmarkButtonInner({ target, variant = "button" }: { target: BookmarkT
       <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
         <button type="button" className={cls} disabled aria-describedby={`bm-na-${target.id}`}>
           <Icon.bookmark />
-          Bookmark
+          {t.bookmark}
         </button>
         <span id={`bm-na-${target.id}`} className="zq-soon">
-          Accounts coming soon
+          {t.accountsSoon}
         </span>
       </span>
     );
@@ -111,14 +114,14 @@ function BookmarkButtonInner({ target, variant = "button" }: { target: BookmarkT
         }}
       >
         <Icon.bookmark />
-        Bookmark
+        {t.bookmark}
       </button>
     );
 
   if (confirming)
     return (
-      <span role="group" aria-label="Confirm bookmark" style={{ display: "inline-flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>
-        <span className="zq-meta">You are signed in. Save this bookmark?</span>
+      <span role="group" aria-label={t.confirmBookmark} style={{ display: "inline-flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>
+        <span className="zq-meta">{t.saveThis}</span>
         <button
           type="button"
           className="zq-btn zq-btn-primary zq-btn-sm"
@@ -128,7 +131,7 @@ function BookmarkButtonInner({ target, variant = "button" }: { target: BookmarkT
             clearIntent();
           }}
         >
-          Save bookmark
+          {t.saveBookmark}
         </button>
         <button
           type="button"
@@ -138,7 +141,7 @@ function BookmarkButtonInner({ target, variant = "button" }: { target: BookmarkT
             clearIntent();
           }}
         >
-          Not now
+          {t.notNow}
         </button>
       </span>
     );
@@ -148,7 +151,7 @@ function BookmarkButtonInner({ target, variant = "button" }: { target: BookmarkT
     <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
       <button type="button" className={cls} aria-pressed={on} disabled={saved === "unknown" && !error} onClick={() => toggle(!on)}>
         {on ? <Icon.bookmarked /> : <Icon.bookmark />}
-        {on ? "Saved" : "Bookmark"}
+        {on ? t.bookmarkSaved : t.bookmark}
       </button>
       {error ? (
         <span role="alert" className="zq-error">
@@ -161,13 +164,14 @@ function BookmarkButtonInner({ target, variant = "button" }: { target: BookmarkT
 }
 
 export function BookmarkButton(props: { target: BookmarkTarget; variant?: "button" | "icon" }) {
+  const t = accountStrings(useLocale());
   const cls = props.variant === "icon" ? "zq-iconbtn" : "zq-btn zq-btn-secondary";
   return (
     <Suspense
       fallback={
         <button type="button" className={cls} disabled aria-busy="true">
           <Icon.bookmark />
-          Bookmark
+          {t.bookmark}
         </button>
       }
     >

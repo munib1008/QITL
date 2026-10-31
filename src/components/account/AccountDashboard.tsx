@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getBrowserSupabase } from "@/lib/supabase/browser";
 import { EmptyState, Skeleton } from "@/components/ui/misc";
+import { apiErrorText } from "@/lib/i18n/modules/api";
+import { accountStrings } from "@/lib/i18n/modules/account";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 interface Bookmark {
   id: string;
@@ -52,6 +55,8 @@ function targetLabel(type: string, id: string, names: Record<string, string>): s
 
 /** The signed-in reader's library, settings and data controls (export, delete). */
 export function AccountDashboard({ email, names }: { email: string; names: Record<string, string> }) {
+  const locale = useLocale();
+  const t = accountStrings(locale);
   const [bookmarks, setBookmarks] = useState<Bookmark[] | null>(null);
   const [progress, setProgress] = useState<Progress[] | null>(null);
   const [notes, setNotes] = useState<Note[] | null>(null);
@@ -83,12 +88,12 @@ export function AccountDashboard({ email, names }: { email: string; names: Recor
     <div style={{ display: "grid", gap: 32 }}>
       {error ? (
         <p className="zq-error" role="alert">
-          Some of your library could not be loaded. Refresh to try again.
+          {t.loadError}
         </p>
       ) : null}
       {resume?.chapters?.stories ? (
         <section className="pp-card" aria-labelledby="resume-h">
-          <h3 id="resume-h">Continue reading</h3>
+          <h3 id="resume-h">{t.continueReading}</h3>
           <Link className="zq-btn zq-btn-primary zq-btn-link" href={`/stories/${resume.chapters.stories.slug}?chapter=${resume.chapters.position}`}>
             {resume.chapters.stories.title}: {resume.chapters.title} ({Math.round(resume.percent)}%)
           </Link>
@@ -97,7 +102,7 @@ export function AccountDashboard({ email, names }: { email: string; names: Recor
 
       <section aria-labelledby="bm-h">
         <h2 id="bm-h" className="zq-eyebrow">
-          Bookmarks
+          {t.bookmarks}
         </h2>
         {bookmarks == null ? loading : bookmarks.length ? (
           <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -112,21 +117,21 @@ export function AccountDashboard({ email, names }: { email: string; names: Recor
                     if (r.ok) setBookmarks((x) => x?.filter((y) => y.id !== b.id) ?? null);
                   }}
                 >
-                  Remove
+                  {t.remove}
                 </button>
               </li>
             ))}
           </ul>
         ) : (
-          <EmptyState title="No bookmarks yet.">
-            <p>Use Bookmark on any prophet, ayah or story.</p>
+          <EmptyState title={t.noBookmarks}>
+            <p>{t.noBookmarksBody}</p>
           </EmptyState>
         )}
       </section>
 
       <section aria-labelledby="pr-h">
         <h2 id="pr-h" className="zq-eyebrow">
-          Reading progress
+          {t.progress}
         </h2>
         {progress == null ? loading : progress.length ? (
           <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -137,20 +142,20 @@ export function AccountDashboard({ email, names }: { email: string; names: Recor
                     {p.chapters.stories.title}: {p.chapters.title}
                   </Link>
                 ) : (
-                  <span>Chapter</span>
+                  <span>{t.chapter}</span>
                 )}
-                <span className="zq-meta">{p.completed_at ? "Completed" : `${Math.round(p.percent)}% read`}</span>
+                <span className="zq-meta">{p.completed_at ? t.completed : t.percentRead(Math.round(p.percent))}</span>
               </li>
             ))}
           </ul>
         ) : (
-          <p className="zq-meta">Progress is recorded as you read published stories.</p>
+          <p className="zq-meta">{t.progressEmpty}</p>
         )}
       </section>
 
       <section aria-labelledby="nt-h">
         <h2 id="nt-h" className="zq-eyebrow">
-          Private notes
+          {t.notes}
         </h2>
         {notes == null ? loading : notes.length ? (
           <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -165,14 +170,14 @@ export function AccountDashboard({ email, names }: { email: string; names: Recor
             ))}
           </ul>
         ) : (
-          <p className="zq-meta">No notes yet. Notes are private: only you can read them.</p>
+          <p className="zq-meta">{t.notesEmpty}</p>
         )}
       </section>
 
       <section aria-labelledby="set-h" className="pp-card">
-        <h3 id="set-h">Notifications</h3>
+        <h3 id="set-h">{t.notifications}</h3>
         <div className="zq-field">
-          <label htmlFor="digest">Email digest of followed discussions</label>
+          <label htmlFor="digest">{t.digest}</label>
           <select
             id="digest"
             className="zq-input"
@@ -180,30 +185,30 @@ export function AccountDashboard({ email, names }: { email: string; names: Recor
             onChange={async (e) => {
               const v = e.target.value;
               setDigest(v);
-              setPrefsState("Saving…");
+              setPrefsState(t.saving);
               const sb = getBrowserSupabase();
               const { error: err } = (await sb?.from("notification_prefs").update({ digest: v, updated_at: new Date().toISOString() }).not("user_id", "is", null)) ?? { error: true };
-              setPrefsState(err ? "Not saved. Try again." : "Saved.");
+              setPrefsState(err ? t.notSavedRetry : t.saved);
             }}
           >
-            <option value="off">Off</option>
-            <option value="daily">Daily</option>
-            <option value="weekly">Weekly</option>
+            <option value="off">{t.digestOptions.off}</option>
+            <option value="daily">{t.digestOptions.daily}</option>
+            <option value="weekly">{t.digestOptions.weekly}</option>
           </select>
           <span className="zq-help" role="status">
-            {prefsState ?? "Every digest has a one-click unsubscribe link."}
+            {prefsState ?? t.unsubscribeNote}
           </span>
         </div>
       </section>
 
       <section aria-labelledby="data-h" className="pp-card">
-        <h3 id="data-h">Your data</h3>
+        <h3 id="data-h">{t.yourData}</h3>
         <p className="zq-meta" style={{ margin: 0 }}>
-          Signed in as {email}.
+          {t.signedInAs(email)}
         </p>
         <form method="post" action="/api/me/export">
           <button type="submit" className="zq-btn zq-btn-secondary">
-            Export my data (JSON)
+            {t.export}
           </button>
         </form>
         <button
@@ -214,13 +219,14 @@ export function AccountDashboard({ email, names }: { email: string; names: Recor
             window.location.assign("/");
           }}
         >
-          Sign out
+          {t.signOut}
         </button>
         <div className="zq-field" style={{ marginTop: 16 }}>
-          <label htmlFor="del">Delete my account</label>
-          <input id="del" className="zq-input" value={confirm} onChange={(e) => setConfirm(e.target.value)} placeholder="DELETE MY ACCOUNT" aria-describedby="del-h" />
+          <label htmlFor="del">{t.deleteAccount}</label>
+          {/* The confirmation phrase is a fixed token checked by the server, in every interface language. */}
+          <input id="del" className="zq-input" dir="ltr" lang="en" value={confirm} onChange={(e) => setConfirm(e.target.value)} placeholder="DELETE MY ACCOUNT" aria-describedby="del-h" />
           <span className="zq-help" id="del-h">
-            Type DELETE MY ACCOUNT to confirm. Your bookmarks, notes, progress, follows and comments are deleted permanently.
+            {t.deleteHelp}
           </span>
         </div>
         <div>
@@ -229,14 +235,14 @@ export function AccountDashboard({ email, names }: { email: string; names: Recor
             className="zq-btn zq-btn-danger"
             disabled={confirm !== "DELETE MY ACCOUNT"}
             onClick={async () => {
-              setDelState("Deleting…");
+              setDelState(t.deleting);
               const r = await fetch("/api/me/delete", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ confirm }) });
-              const d = (await r.json().catch(() => ({}))) as { error?: string };
+              const d = (await r.json().catch(() => ({}))) as { error?: string; code?: string };
               if (r.ok) window.location.assign("/?deleted=1");
-              else setDelState(d.error ?? "Deletion failed. Nothing was deleted.");
+              else setDelState(apiErrorText(locale, d, t.deleteFailed));
             }}
           >
-            Delete account permanently
+            {t.deletePermanently}
           </button>
         </div>
         {delState ? (

@@ -6,11 +6,18 @@ import { ReadingPage } from "@/components/shell/ReadingPage";
 import { EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
 import { QuranAttribution } from "@/components/quran/QuranAttribution";
+import { englishContent } from "@/lib/i18n/locales";
+import { quranPageStrings } from "@/lib/i18n/modules/reader";
 
-export const metadata: Metadata = { title: "Quran", description: "The 114 surahs, with the Arabic from a verified source and translations shown only where licensed." };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const t = quranPageStrings((await params).locale);
+  return { title: t.title, description: t.metaDescription };
+}
 
 export default async function QuranIndex({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  const t = quranPageStrings(locale);
+  const en = englishContent(locale);
   const list = surahList();
   const src = quranSource();
   // Without the import, show the surahs the journey cites (names as written in the journey content).
@@ -20,24 +27,25 @@ export default async function QuranIndex({ params }: { params: Promise<{ locale:
   return (
     <ReadingPage
       locale={locale}
-      crumbs={[{ label: "Quran" }]}
-      title="Quran"
-      lead="Arabic first, from a verified source pinned by version and checksum. Translations appear beside it only when their licence is cleared."
+      crumbs={[{ label: t.title }]}
+      title={t.title}
+      lead={t.lead}
       meta={<EvidenceLabel kind="quran" />}
     >
       <div className="zq-pagebody">
         {list ? (
           <>
             <QuranAttribution src={src} />
-            <ol className="zq-surahs" aria-label="Surahs">
+            <ol className="zq-surahs" aria-label={t.surahs}>
               {list.map((s) => (
                 <li key={s.number}>
                   <Link href={`/quran/${s.number}`}>
                     <span className="zq-order">{s.number}</span>
                     <span>
-                      <b>{s.name}</b>
+                      <b {...en}>{s.name}</b>
                       <span className="zq-meta" style={{ display: "block" }}>
-                        {s.ayahs} ayat{s.revelation ? ` · ${s.revelation}` : ""}
+                        {t.ayat(s.ayahs)}
+                        {s.revelation ? ` · ${s.revelation}` : ""}
                       </span>
                     </span>
                     <span lang="ar" dir="rtl" className="zq-jc-sar">
@@ -50,12 +58,12 @@ export default async function QuranIndex({ params }: { params: Promise<{ locale:
           </>
         ) : (
           <>
-            <EmptyState label={<EvidenceLabel kind="unknown">Source not imported</EvidenceLabel>} title="The verified Quran text has not been imported on this site yet.">
-              <p>The Arabic is never typed in by hand. It is imported from a verified source (Tanzil), pinned by version and checksum, with scripts/import-quran.ts. Until then the reader cannot show the text.</p>
+            <EmptyState label={<EvidenceLabel kind="unknown">{t.sourceNotImported}</EvidenceLabel>} title={t.notImported}>
+              <p>{t.notImportedBody}</p>
             </EmptyState>
             <section aria-labelledby="cited-h">
               <h2 id="cited-h" className="zq-eyebrow">
-                Surahs cited on the journey
+                {t.cited}
               </h2>
               <ol className="zq-surahs">
                 {[...cited.entries()]
@@ -64,7 +72,7 @@ export default async function QuranIndex({ params }: { params: Promise<{ locale:
                     <li key={n}>
                       <Link href={`/quran/${n}`}>
                         <span className="zq-order">{n}</span>
-                        <b>{s.name}</b>
+                        <b {...en}>{s.name}</b>
                         <span lang="ar" dir="rtl" className="zq-jc-sar">
                           {s.arabic}
                         </span>

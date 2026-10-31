@@ -4,12 +4,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import type { NavLink } from "./SiteHeader";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 /** Below 1024px the section links fold into a disclosure menu. Esc closes and returns focus to the button. */
 export function MobileMenu({ links, label }: { links: NavLink[]; label: string }) {
   const [open, setOpen] = useState(false);
   const btn = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
+  const t = uiStrings(useLocale()).shell;
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
     if (!open) return;
@@ -30,7 +33,7 @@ export function MobileMenu({ links, label }: { links: NavLink[]; label: string }
         </svg>
         <span className="zq-hide-sm">{label}</span>
       </button>
-      <nav id="zq-mmenu-list" className="zq-mmenu-list" hidden={!open} aria-label="All sections">
+      <nav id="zq-mmenu-list" className="zq-mmenu-list" hidden={!open} aria-label={t.allSections}>
         {links.map((l) => (
           <Link key={l.href} href={l.href}>
             {l.label}

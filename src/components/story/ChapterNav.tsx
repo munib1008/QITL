@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { storyStrings } from "@/lib/i18n/modules/story";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export interface Chapter {
   id: string; // id of the section (or its heading) on the page
@@ -15,6 +17,7 @@ const KEY = "qitl-resume:";
  * progress is the account's job). Chapters missing from the page are skipped. Native scrolling only.
  */
 export function ChapterNav({ chapters, storageKey }: { chapters: Chapter[]; storageKey: string }) {
+  const t = storyStrings(useLocale());
   const [present, setPresent] = useState<Chapter[]>([]);
   const [current, setCurrent] = useState(0);
   const [resume, setResume] = useState<Chapter | null>(null);
@@ -82,13 +85,13 @@ export function ChapterNav({ chapters, storageKey }: { chapters: Chapter[]; stor
   const pct = present.length > 1 ? current / (present.length - 1) : 0;
 
   return (
-    <nav className="qc-nav" aria-label="Chapter progress">
-      <button type="button" className="qc-btn" onClick={() => go(current - 1)} disabled={current === 0} aria-label="Previous chapter">
+    <nav className="qc-nav" aria-label={t.progress}>
+      <button type="button" className="qc-btn" onClick={() => go(current - 1)} disabled={current === 0} aria-label={t.prevChapter}>
         <span aria-hidden="true">‹</span>
       </button>
       <div className="qc-mid">
         <span className="qc-count">
-          Chapter {current + 1} of {present.length}
+          {t.chapterOf(current + 1, present.length)}
         </span>
         <b className="qc-label">{cur.label}</b>
         <span className="qc-bar" aria-hidden="true">
@@ -97,10 +100,10 @@ export function ChapterNav({ chapters, storageKey }: { chapters: Chapter[]; stor
       </div>
       {resume ? (
         <button type="button" className="qc-resume" onClick={() => go(present.indexOf(resume))}>
-          Resume: {resume.label}
+          {t.resume} {resume.label}
         </button>
       ) : null}
-      <button type="button" className="qc-btn" onClick={() => go(current + 1)} disabled={current === present.length - 1} aria-label="Next chapter">
+      <button type="button" className="qc-btn" onClick={() => go(current + 1)} disabled={current === present.length - 1} aria-label={t.nextChapter}>
         <span aria-hidden="true">›</span>
       </button>
     </nav>

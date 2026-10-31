@@ -1,20 +1,22 @@
+"use client";
+
 import type { ReactNode } from "react";
 import { cx } from "@/lib/cx";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 import { Icon } from "./icons";
 
 /* ---------- Map legend ---------- */
 export type LegendItem = "point" | "region" | "unknown" | "hypothesis" | "route";
-const LEGEND: Array<[LegendItem, string, ReactNode]> = [
+const LEGEND: Array<[LegendItem, ReactNode]> = [
   [
     "point",
-    "Verified point",
     <svg viewBox="0 0 28 20" key="a" aria-hidden="true">
       <circle cx={14} cy={10} r={5} fill="var(--map-point)" stroke="var(--surface-raised)" strokeWidth={2} />
     </svg>,
   ],
   [
     "region",
-    "Approximate region",
     <svg viewBox="0 0 28 20" key="b" aria-hidden="true">
       <defs>
         <pattern id="zqh" width={4} height={4} patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -27,7 +29,6 @@ const LEGEND: Array<[LegendItem, string, ReactNode]> = [
   ],
   [
     "unknown",
-    "Unknown location",
     <svg viewBox="0 0 28 20" key="c" aria-hidden="true">
       <circle cx={14} cy={10} r={7} fill="none" stroke="var(--ev-unknown)" strokeWidth={2} strokeDasharray="2 3" />
       <text x={14} y={14} textAnchor="middle" fontSize={11} fontWeight={700} fill="var(--ev-unknown)" fontFamily="var(--font-sans)">
@@ -37,14 +38,12 @@ const LEGEND: Array<[LegendItem, string, ReactNode]> = [
   ],
   [
     "hypothesis",
-    "Historical hypothesis",
     <svg viewBox="0 0 28 20" key="d" aria-hidden="true">
       <rect x={3} y={3} width={22} height={14} rx={6} fill="none" stroke="var(--map-hypothesis)" strokeWidth={2} strokeDasharray="1 3" strokeLinecap="round" />
     </svg>,
   ],
   [
     "route",
-    "Approximate route",
     <svg viewBox="0 0 28 20" key="e" aria-hidden="true">
       <path d="M2 14C9 4 18 16 26 6" fill="none" stroke="var(--map-route)" strokeWidth={2.5} strokeDasharray="5 3" />
     </svg>,
@@ -52,15 +51,16 @@ const LEGEND: Array<[LegendItem, string, ReactNode]> = [
 ];
 
 /** Permanent atlas legend. Attribution is required and always visible. */
-export function MapLegend({ title = "Location certainty", items = ["point", "region", "unknown", "hypothesis"], attribution }: { title?: string; items?: LegendItem[]; attribution: string }) {
+export function MapLegend({ title, items = ["point", "region", "unknown", "hypothesis"], attribution }: { title?: string; items?: LegendItem[]; attribution: string }) {
+  const t = uiStrings(useLocale()).legend;
   return (
-    <section className="zq-legend" aria-label="Map legend">
-      <h3>{title}</h3>
+    <section className="zq-legend" aria-label={t.label}>
+      <h3>{title ?? t.title}</h3>
       <ul>
-        {LEGEND.filter(([k]) => items.includes(k)).map(([k, label, mark]) => (
+        {LEGEND.filter(([k]) => items.includes(k)).map(([k, mark]) => (
           <li key={k}>
             {mark}
-            {label}
+            {t[k]}
           </li>
         ))}
       </ul>
@@ -79,7 +79,7 @@ export interface GenealogyNodeData {
   unknown?: boolean;
   href?: string;
 }
-const LINK_TEXT = { verified: "Sourced link", disputed: "Disputed link", unknown: "Unknown link" } as const;
+type LinkStatus = "verified" | "disputed" | "unknown";
 
 function GNode(n: GenealogyNodeData) {
   const body = (
@@ -101,15 +101,16 @@ function GNode(n: GenealogyNodeData) {
 }
 
 /** Node–edge–node. Solid = sourced, double = disputed, dotted = unknown. Never auto-derived from text. */
-export function GenealogyLink({ from, to, relation = "parent of", status = "verified", evidence }: { from: GenealogyNodeData; to: GenealogyNodeData; relation?: string; status?: keyof typeof LINK_TEXT; evidence?: ReactNode }) {
+export function GenealogyLink({ from, to, relation, status = "verified", evidence }: { from: GenealogyNodeData; to: GenealogyNodeData; relation?: string; status?: LinkStatus; evidence?: ReactNode }) {
+  const t = uiStrings(useLocale()).links;
   return (
     <div>
-      <div className="zq-gen" role="group" aria-label={`${from.name} to ${to.name}: ${LINK_TEXT[status]}`}>
+      <div className="zq-gen" role="group" aria-label={`${from.name} ${t.to} ${to.name}: ${t[status]}`}>
         <GNode {...from} />
         <span className={`zq-edge zq-edge-${status}`}>
-          <span className="zq-edge-label">{relation}</span>
+          <span className="zq-edge-label">{relation ?? t.parentOf}</span>
           <span className="zq-edge-line" />
-          <span className="zq-edge-label">{LINK_TEXT[status]}</span>
+          <span className="zq-edge-label">{t[status]}</span>
         </span>
         <GNode {...to} />
       </div>
@@ -145,14 +146,15 @@ export function TextField({
 }
 
 /** Global search: a GET form to /search, so it works without JavaScript. */
-export function SearchField({ label = "Search QITL", placeholder = "Search prophets, surahs, hadith, places…", defaultValue, maxWidth = 520, id = "zq-q" }: { label?: string; placeholder?: string; defaultValue?: string; maxWidth?: number; id?: string }) {
+export function SearchField({ label, placeholder, defaultValue, maxWidth = 520, id = "zq-q" }: { label?: string; placeholder?: string; defaultValue?: string; maxWidth?: number; id?: string }) {
+  const t = uiStrings(useLocale()).shell;
   return (
     <form role="search" action="/search" method="get" className="zq-field zq-search" style={{ maxWidth }}>
       <label htmlFor={id} className="sr-only">
-        {label}
+        {label ?? t.searchLabel}
       </label>
       <Icon.search />
-      <input id={id} name="q" className="zq-input" type="search" placeholder={placeholder} defaultValue={defaultValue} autoComplete="off" />
+      <input id={id} name="q" className="zq-input" type="search" placeholder={placeholder ?? t.searchPlaceholder} defaultValue={defaultValue} autoComplete="off" />
     </form>
   );
 }
@@ -187,6 +189,7 @@ export function EmptyState({ label, title, children, tone = "unknown" }: { label
   );
 }
 
-export function ComingSoonTag({ children = "Coming soon" }: { children?: ReactNode }) {
-  return <span className="zq-soon">{children}</span>;
+export function ComingSoonTag({ children }: { children?: ReactNode }) {
+  const t = uiStrings(useLocale());
+  return <span className="zq-soon">{children ?? t.soon}</span>;
 }

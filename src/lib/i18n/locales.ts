@@ -43,3 +43,11 @@ export function localizedPath(path: string, locale: Locale): string {
   if (!PREFIXED_LOCALES.includes(locale)) return p;
   return p === "/" ? `/${locale}` : `/${locale}${p}`;
 }
+
+/**
+ * Attributes for English content shown inside an Arabic or Urdu page (database rows, editorial pages, names): marks it
+ * lang="en" dir="ltr" so full stops land on the right side and screen readers switch voice. Nothing in English.
+ */
+export function englishContent(locale: string): { lang?: "en"; dir?: "ltr" } {
+  return resolveLocale(locale) === "en" ? {} : { lang: "en", dir: "ltr" };
+}

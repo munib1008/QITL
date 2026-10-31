@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { resolveLocale, stripLocale } from "@/lib/i18n";
 import { LangToggle, type LangLabels } from "./toggles";
+import { uiStrings } from "@/lib/i18n/modules/ui";
 import { useSession } from "@/components/account/useSession";
 
 export interface BottomNavLabels {
@@ -122,7 +123,7 @@ export function BottomNav({ labels, explore, locale, langLabels }: { labels: Bot
 
   return (
     <>
-      <nav className="qb-nav" data-bottom-nav aria-label="Primary">
+      <nav className="qb-nav" data-bottom-nav aria-label={uiStrings(locale).shell.primary}>
         {items.map((it) => (
           <Link key={it.key} href={it.href} className="qb-item" aria-current={it.active ? "page" : undefined}>
             {ICONS[it.key]}

@@ -6,10 +6,11 @@ import "@/styles/qa.css";
 import { dreamsT } from "@/lib/i18n/modules/dreams";
 import { HADITH_DREAM_REFERENCES, QURAN_DREAM_REFERENCES, SURAH_NAMES, quranRefHref, quranRefLabel } from "@/lib/dreams";
 
-export const metadata: Metadata = {
-  title: "Understand Dreams in Islam",
-  description: "What the Quran and authentic Sunnah say about dreams, by reference, and a private request service with qualified scholars.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  const t = dreamsT(l).guide;
+  return { title: t.title, description: t.lead };
+}
 
 /**
  * "Understand Dreams in Islam". Static: references only, never Quran or hadith text typed into the page. Hadith
@@ -57,7 +58,7 @@ export default async function DreamsPage({ params }: { params: Promise<{ locale:
               <li key={h.key} className="qa-card">
                 <h3>{h.key === "kinds" ? g.kinds : g.goodBad}</h3>
                 <div className="qa-actions">
-                  <EvidenceLabel kind="hadith" lang={lang} />
+                  <EvidenceLabel kind="hadith" lang={locale} />
                   <Link className="zq-chip" href={h.href} data-citation="">
                     <span dir="ltr">
                       {h.collectionName}

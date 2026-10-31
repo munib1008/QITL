@@ -2,7 +2,11 @@
 
 import { useCallback, useMemo, useState, type MouseEvent } from "react";
 import Link from "next/link";
-import { PLACE_TEXT, type PlaceCertainty } from "@/content/labels";
+import type { PlaceCertainty } from "@/content/labels";
+import { englishContent } from "@/lib/i18n/locales";
+import { atlasStrings } from "@/lib/i18n/modules/atlas";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 import { EvidenceLabel } from "@/components/ui/evidence";
 import { Sheet } from "@/components/ui/Sheet";
 import { usePanZoom, ZoomControls, type Size } from "@/components/ui/panzoom";
@@ -29,6 +33,10 @@ const LANE_H = 78;
  * and a place panel (a bottom sheet on phones). The list of places on the page stays the text alternative.
  */
 export function AtlasSchematic({ stops, focus, rtl = false }: { stops: AtlasStop[]; focus?: string; rtl?: boolean }) {
+  const locale = useLocale();
+  const t = atlasStrings(locale);
+  const PLACE_TEXT = uiStrings(locale).place;
+  const en = englishContent(locale);
   const placed = useMemo(() => stops.filter((s) => s.certainty !== "unknown"), [stops]);
   const unknown = useMemo(() => stops.filter((s) => s.certainty === "unknown"), [stops]);
   const content: Size = useMemo(() => ({ w: PAD * 2 + Math.max(0, placed.length - 1) * DX, h: TOP + LANES.length * LANE_H + 12 }), [placed.length]);
@@ -75,8 +83,7 @@ export function AtlasSchematic({ stops, focus, rtl = false }: { stops: AtlasStop
   return (
     <div className="zx-atlas">
       <p id={describedBy} className="zq-meta zx-note">
-        Schematic, not a geographic map: left to right is journey order{rtl ? " (right to left in Arabic)" : ""} and each row is how certain the place is. No
-        position here is a coordinate. Drag or use the arrow keys to pan; pinch, or the buttons, to zoom.
+        {rtl ? t.helpRtl : t.help}
       </p>
       <div className="zx-stage">
         <div
@@ -84,14 +91,14 @@ export function AtlasSchematic({ stops, focus, rtl = false }: { stops: AtlasStop
           className="zx-viewport"
           tabIndex={0}
           role="group"
-          aria-label="Atlas schematic"
+          aria-label={t.schematic}
           aria-describedby={describedBy}
           data-scale={pz.view.s.toFixed(3)}
           data-x={pz.view.x.toFixed(1)}
           data-y={pz.view.y.toFixed(1)}
           {...pz.handlers}
         >
-          <svg className="zx-svg" width="100%" height="100%" role="group" aria-label="Places on the journey">
+          <svg className="zx-svg" width="100%" height="100%" role="group" aria-label={t.placesGroup}>
             <defs>
               <pattern id="zx-hatch" width={6} height={6} patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
                 <rect width={2} height={6} fill="var(--slate)" opacity={0.55} />
@@ -126,7 +133,7 @@ export function AtlasSchematic({ stops, focus, rtl = false }: { stops: AtlasStop
                     className="zx-node"
                     data-place={s.id}
                     data-focus={isFocus || undefined}
-                    aria-label={`${s.name}: ${s.place}. ${PLACE_TEXT[s.certainty]}. Open place details`}
+                    aria-label={`${s.name}: ${s.place}. ${PLACE_TEXT[s.certainty]}. ${t.openDetails}`}
                     onClick={open(s)}
                   >
                     <rect x={x - 32} y={y - 28} width={64} height={60} className="zx-hit" />
@@ -154,12 +161,14 @@ export function AtlasSchematic({ stops, focus, rtl = false }: { stops: AtlasStop
             </g>
           </svg>
         </div>
-        <ZoomControls label="Atlas zoom" view={pz.view} min={pz.min} max={pz.max} onIn={() => pz.zoomBy(1.25)} onOut={() => pz.zoomBy(0.8)} onReset={pz.reset} />
+        <ZoomControls label={t.zoom} view={pz.view} min={pz.min} max={pz.max} onIn={() => pz.zoomBy(1.25)} onOut={() => pz.zoomBy(0.8)} onReset={pz.reset} />
       </div>
       {unknown.length ? (
         <div className="zx-unplaced">
-          <EvidenceLabel kind="unknown">{PLACE_TEXT.unknown}: not placed</EvidenceLabel>
-          <ul>
+          <EvidenceLabel kind="unknown">
+            {PLACE_TEXT.unknown}: {t.notPlaced}
+          </EvidenceLabel>
+          <ul {...en}>
             {unknown.map((s) => (
               <li key={s.id} data-focus={s.id === focus || undefined}>
                 <Link href={`/prophets/${s.id}#places`}>{s.name}</Link>
@@ -174,17 +183,17 @@ export function AtlasSchematic({ stops, focus, rtl = false }: { stops: AtlasStop
           <div className="zx-place">
             <EvidenceLabel kind={KIND[sel.stop.certainty]}>{PLACE_TEXT[sel.stop.certainty]}</EvidenceLabel>
             <dl className="zq-kv">
-              <dt>On the journey</dt>
-              <dd>
+              <dt>{t.onJourney}</dt>
+              <dd {...en}>
                 {sel.stop.name} · {sel.stop.era}
               </dd>
-              <dt>Position</dt>
-              <dd>Schematic only. This drawing does not give a geographic coordinate for this place.</dd>
+              <dt>{t.position}</dt>
+              <dd>{t.schematicOnly}</dd>
             </dl>
             {samePlace.length ? (
               <>
-                <h3 className="zq-eyebrow">Also at this place</h3>
-                <ul className="zx-also">
+                <h3 className="zq-eyebrow">{t.alsoHere}</h3>
+                <ul className="zx-also" {...en}>
                   {samePlace.map((s) => (
                     <li key={s.id}>
                       <Link href={`/prophets/${s.id}#places`}>{s.name}</Link>
@@ -195,10 +204,10 @@ export function AtlasSchematic({ stops, focus, rtl = false }: { stops: AtlasStop
             ) : null}
             <div className="zx-actions">
               <Link className="zq-btn zq-btn-primary" href={`/prophets/${sel.stop.id}#places`}>
-                Read the story of {sel.stop.name}
+                {t.readStoryOf(sel.stop.name)}
               </Link>
               <Link className="zq-btn zq-btn-secondary" href={`/timeline?selected=${sel.stop.id}`}>
-                Show on the timeline
+                {t.showOnTimeline}
               </Link>
             </div>
           </div>

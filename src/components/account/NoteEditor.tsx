@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import type { BookmarkTarget } from "@/lib/validation";
 import { useSession } from "./useSession";
+import { accountStrings } from "@/lib/i18n/modules/account";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 type Status = "idle" | "loading" | "saving" | "saved" | "error";
 
@@ -14,6 +16,7 @@ type Status = "idle" | "loading" | "saving" | "saved" | "error";
  */
 export function NoteEditor({ target }: { target: BookmarkTarget }) {
   const session = useSession();
+  const strings = accountStrings(useLocale());
   const [body, setBody] = useState("");
   const [status, setStatus] = useState<Status>("loading");
   const dirty = useRef(false);
@@ -50,22 +53,23 @@ export function NoteEditor({ target }: { target: BookmarkTarget }) {
     }
   };
 
+  const t = strings;
   if (session.status === "loading") return null;
   if (session.status === "unavailable")
     return (
       <div className="pp-card">
-        <h3>Private note</h3>
+        <h3>{t.privateNote}</h3>
         <p className="zq-meta" style={{ margin: 0 }}>
-          Notes need an account, and accounts are not open on this site yet.
+          {t.notesNeedAccount}
         </p>
       </div>
     );
   if (session.status === "signed_out")
     return (
       <div className="pp-card">
-        <h3>Private note</h3>
+        <h3>{t.privateNote}</h3>
         <p className="zq-meta" style={{ margin: 0 }}>
-          <Link href={`/sign-in?returnTo=${encodeURIComponent(typeof window === "undefined" ? "/" : window.location.pathname + window.location.search)}`}>Sign in</Link> to keep private notes. Only you can read them.
+          <Link href={`/sign-in?returnTo=${encodeURIComponent(typeof window === "undefined" ? "/" : window.location.pathname + window.location.search)}`}>{t.signIn}</Link> {t.notesSignIn}
         </p>
       </div>
     );
@@ -74,7 +78,7 @@ export function NoteEditor({ target }: { target: BookmarkTarget }) {
   return (
     <div className="pp-card">
       <h3>
-        <label htmlFor={id}>Private note</label>
+        <label htmlFor={id}>{t.privateNote}</label>
       </h3>
       <textarea
         id={id}
@@ -96,10 +100,10 @@ export function NoteEditor({ target }: { target: BookmarkTarget }) {
         }}
       />
       <p id={`${id}-s`} className={status === "error" ? "zq-error" : "zq-help"} role="status" style={{ margin: 0 }}>
-        {status === "loading" ? "Loading…" : status === "saving" ? "Saving…" : status === "saved" ? "Saved. Only you can read this note." : status === "error" ? "Not saved. Your text is still here." : "Only you can read this note."}
+        {status === "loading" ? t.loading : status === "saving" ? t.saving : status === "saved" ? t.noteSaved : status === "error" ? t.noteError : t.noteIdle}
         {status === "error" ? (
           <button type="button" className="zq-btn zq-btn-quiet zq-btn-sm" onClick={() => void save(body)} style={{ marginInlineStart: 8 }}>
-            Retry
+            {t.retry}
           </button>
         ) : null}
       </p>

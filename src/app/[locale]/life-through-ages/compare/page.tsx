@@ -5,7 +5,11 @@ import { Scene } from "@/components/lifestyle/Scene";
 import { lifestyleStrings, type LifestyleStrings } from "@/lib/i18n/modules/lifestyle";
 import { getTopicRecords, type TopicRecord } from "@/lib/lifestyle/data";
 
-export const metadata: Metadata = { title: "Then and now · Life Through the Ages", alternates: { canonical: `${BASE}/compare` } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  const t = lifestyleStrings(l);
+  return { title: `${t.sections.compare} · ${t.title}`, alternates: { canonical: `${BASE}/compare` } };
+}
 export const revalidate = 300;
 
 const TOPICS = [

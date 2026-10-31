@@ -4,22 +4,21 @@ import { ReadingPage } from "@/components/shell/ReadingPage";
 import { EmptyState, SearchField } from "@/components/ui/misc";
 import { searchJourney, type SearchHit } from "@/lib/search";
 import { getServerSupabase } from "@/lib/supabase/server";
+import { englishContent } from "@/lib/i18n/locales";
+import { searchStrings } from "@/lib/i18n/modules/search";
 
-export const metadata: Metadata = { title: "Search", robots: { index: false } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  return { title: searchStrings((await params).locale).title, robots: { index: false } };
+}
 
-const FACETS: Array<[string, string]> = [
-  ["prophets", "Prophets"],
-  ["milestones", "Milestones"],
-  ["quran", "Quran"],
-  ["stories", "Stories"],
-  ["events", "Events"],
-  ["hadith", "Hadith"],
-  ["last_hour", "Last Hour"],
-];
+const FACET_IDS = ["prophets", "milestones", "quran", "stories", "events", "hadith", "last_hour"];
 
 export default async function SearchPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ q?: string; facet?: string }> }) {
   const { locale } = await params;
   const { q = "", facet } = await searchParams;
+  const t = searchStrings(locale);
+  const en = englishContent(locale);
+  const FACETS: Array<[string, string]> = FACET_IDS.map((f) => [f, t.facets[f] ?? f]);
   const query = q.trim().slice(0, 120);
   let hits: SearchHit[] = query ? searchJourney(query) : [];
   const sb = query ? await getServerSupabase() : null;
@@ -32,14 +31,14 @@ export default async function SearchPage({ params, searchParams }: { params: Pro
   if (facet) hits = hits.filter((h) => h.facet === facet);
 
   return (
-    <ReadingPage locale={locale} crumbs={[{ label: "Search" }]} query={query} title="Search" lead="Prophets, surahs, stories, events and narrations, in English or Arabic, with or without vowel marks.">
+    <ReadingPage locale={locale} crumbs={[{ label: t.title }]} query={query} title={t.title} lead={t.lead}>
       <div className="zq-pagebody">
         <SearchField id="page-q" defaultValue={query} maxWidth={640} />
         {query ? (
           <>
-            <nav className="zq-filters" aria-label="Filter results">
+            <nav className="zq-filters" aria-label={t.filter}>
               <Link className="zq-pill" href={`/search?q=${encodeURIComponent(query)}`} aria-current={!facet || undefined}>
-                All ({Object.values(counts).reduce((a, b) => a + b, 0)})
+                {t.all} ({Object.values(counts).reduce((a, b) => a + b, 0)})
               </Link>
               {FACETS.filter(([f]) => counts[f]).map(([f, label]) => (
                 <Link key={f} className="zq-pill" href={`/search?q=${encodeURIComponent(query)}&facet=${f}`} aria-current={facet === f || undefined}>
@@ -48,7 +47,8 @@ export default async function SearchPage({ params, searchParams }: { params: Pro
               ))}
             </nav>
             <p className="zq-meta" role="status">
-              {hits.length} result{hits.length === 1 ? "" : "s"} for “{query}”{sb ? "" : " in the journey content (the full index is not connected on this site yet)"}.
+              {t.results(hits.length, query)}
+              {sb ? "" : t.journeyOnly}.
             </p>
             {hits.length ? (
               <ol style={{ listStyle: "none", margin: 0, padding: 0 }}>
@@ -56,25 +56,29 @@ export default async function SearchPage({ params, searchParams }: { params: Pro
                   <li key={h.url} className="zq-result">
                     <span className="zq-eyebrow">{FACETS.find(([f]) => f === h.facet)?.[1] ?? h.facet}</span>
                     <Link className="title" href={h.url}>
-                      {h.title}{" "}
+                      <span {...en}>{h.title}</span>{" "}
                       {h.titleAr ? (
                         <span lang="ar" dir="rtl" className="zq-jc-sar">
                           {h.titleAr}
                         </span>
                       ) : null}
                     </Link>
-                    <span className="zq-meta">{h.snippet}</span>
+                    <span className="zq-meta" {...en}>
+                      {h.snippet}
+                    </span>
                   </li>
                 ))}
               </ol>
             ) : (
-              <EmptyState title={`Nothing matched “${query}”.`}>
-                <p>Try another spelling (Yusuf, Yousuf, Joseph), the Arabic name (يوسف), or a reference such as 12:4. Browse the <Link href="/prophets">prophets</Link> or the <Link href="/quran">surahs</Link>.</p>
+              <EmptyState title={t.nothing(query)}>
+                <p>
+                  {t.tryOther} <Link href="/prophets">{t.prophets}</Link> {t.or} <Link href="/quran">{t.surahs}</Link>.
+                </p>
               </EmptyState>
             )}
           </>
         ) : (
-          <p className="zq-meta">Type a name, a surah, a place or a reference.</p>
+          <p className="zq-meta">{t.prompt}</p>
         )}
       </div>
     </ReadingPage>

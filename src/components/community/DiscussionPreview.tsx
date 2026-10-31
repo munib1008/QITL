@@ -7,6 +7,9 @@ import { supabaseConfigured } from "@/lib/env";
 import { EmptyState, Skeleton } from "@/components/ui/misc";
 import { EvidenceLabel } from "@/components/ui/evidence";
 import type { BookmarkTargetType } from "@/lib/validation";
+import { apiErrorText } from "@/lib/i18n/modules/api";
+import { communityStrings } from "@/lib/i18n/modules/community";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 interface Thread {
   id: string;
@@ -21,6 +24,8 @@ type State = { s: "loading" } | { s: "unavailable" } | { s: "error" } | { s: "ok
 /** Threads attached to a piece of content. Reading is public; starting a thread needs an account. */
 export function DiscussionPreview({ contentType, contentId }: { contentType: BookmarkTargetType; contentId: string }) {
   const session = useSession();
+  const locale = useLocale();
+  const c = communityStrings(locale);
   const [st, setSt] = useState<State>({ s: "loading" });
   const [title, setTitle] = useState("");
   const [posting, setPosting] = useState(false);
@@ -52,15 +57,15 @@ export function DiscussionPreview({ contentType, contentId }: { contentType: Boo
     );
   if (st.s === "unavailable")
     return (
-      <EmptyState tone="soon" label={<span className="zq-soon">Coming soon</span>} title="Discussions are not open yet.">
-        <p>Discussion needs the community database, which is not connected on this site yet. Nothing here is mocked.</p>
+      <EmptyState tone="soon" label={<span className="zq-soon">{c.soon}</span>} title={c.notOpen}>
+        <p>{c.previewNotConnected}</p>
       </EmptyState>
     );
   if (st.s === "error")
     return (
-      <EmptyState label={<EvidenceLabel kind="unknown">Not loaded</EvidenceLabel>} title="Discussions could not be loaded.">
+      <EmptyState label={<EvidenceLabel kind="unknown">{c.notLoaded}</EvidenceLabel>} title={c.couldNotLoad}>
         <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => void load()}>
-          Retry
+          {c.retry}
         </button>
       </EmptyState>
     );
@@ -72,8 +77,8 @@ export function DiscussionPreview({ contentType, contentId }: { contentType: Boo
     const r = await fetch("/api/discussions", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ contentType, contentId, title }) });
     setPosting(false);
     if (!r.ok) {
-      const d = (await r.json().catch(() => ({}))) as { error?: string };
-      return setErr(d.error ?? "Could not start the discussion.");
+      const d = (await r.json().catch(() => ({}))) as { error?: string; code?: string };
+      return setErr(apiErrorText(locale, d, c.couldNotStart));
     }
     const d = (await r.json()) as { id: string };
     window.location.assign(`/community/${d.id}`);
@@ -85,24 +90,24 @@ export function DiscussionPreview({ contentType, contentId }: { contentType: Boo
         <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
           {st.threads.map((t) => (
             <li key={t.id} className="zq-result">
-              <Link className="title" href={`/community/${t.id}`}>
+              <Link className="title" href={`/community/${t.id}`} lang={locale === "en" ? undefined : "en"}>
                 {t.title}
               </Link>
               <span className="zq-meta">
-                {t.comments[0]?.count ?? 0} comments · {new Date(t.created_at).toLocaleDateString()}
-                {t.status === "locked" ? " · locked" : ""}
+                {c.comments(t.comments[0]?.count ?? 0)} · {new Date(t.created_at).toLocaleDateString(locale)}
+                {t.status === "locked" ? ` · ${c.locked}` : ""}
               </span>
             </li>
           ))}
         </ul>
       ) : (
-        <p className="zq-meta">No discussion yet.</p>
+        <p className="zq-meta">{c.noneYet}</p>
       )}
       {session.status === "signed_in" ? (
-        <form onSubmit={start} className="zq-form" aria-label="Start a discussion">
+        <form onSubmit={start} className="zq-form" aria-label={c.start}>
           <div className="zq-field">
-            <label htmlFor={`new-thread-${contentId}`}>Start a discussion</label>
-            <input id={`new-thread-${contentId}`} className="zq-input" value={title} onChange={(e) => setTitle(e.target.value)} minLength={4} maxLength={160} required placeholder="Ask a question about this page" />
+            <label htmlFor={`new-thread-${contentId}`}>{c.start}</label>
+            <input id={`new-thread-${contentId}`} className="zq-input" value={title} onChange={(e) => setTitle(e.target.value)} minLength={4} maxLength={160} required placeholder={c.startPlaceholder} />
           </div>
           {err ? (
             <p className="zq-error" role="alert">
@@ -111,19 +116,19 @@ export function DiscussionPreview({ contentType, contentId }: { contentType: Boo
           ) : null}
           <div>
             <button type="submit" className="zq-btn zq-btn-primary" disabled={posting || title.trim().length < 4} aria-busy={posting || undefined}>
-              {posting ? "Starting" : "Start discussion"}
+              {posting ? c.starting : c.startButton}
             </button>
           </div>
         </form>
       ) : session.status === "signed_out" ? (
         <div>
           <Link className="zq-btn zq-btn-secondary zq-btn-link" href={`/sign-in?returnTo=${encodeURIComponent(typeof window === "undefined" ? "/" : window.location.pathname + "#discuss")}`}>
-            Sign in to join the discussion
+            {c.signInToJoin}
           </Link>
         </div>
       ) : null}
       <p className="zq-meta">
-        Comments are readers&apos; views, not verified knowledge. <Link href="/community/guidelines">Discussion guidelines</Link>
+        {c.readersViews} <Link href="/community/guidelines">{c.guidelines}</Link>
       </p>
     </div>
   );

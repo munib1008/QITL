@@ -7,6 +7,7 @@ import { EvidenceLabel } from "@/components/ui/evidence";
 import { Icon } from "@/components/ui/icons";
 import { Markdown } from "@/components/ui/Markdown";
 import { interpretationT, type InterpretationStrings } from "@/lib/i18n/modules/interpretation";
+import { useLocale } from "@/lib/i18n/useLocale";
 import { askMuftiHref, attributionParts, groupDifferences } from "@/lib/interpretation/state";
 import type { EditionInfo, RelatedItem, SlotState, StudyData, TafsirFlag } from "@/lib/interpretation/types";
 
@@ -71,7 +72,7 @@ function Pending({ state, t }: { state: SlotState; t: InterpretationStrings }) {
 function Flags({ flags, t }: { flags: TafsirFlag[]; t: InterpretationStrings }) {
   if (!flags.length) return null;
   return (
-    <ul className="qs-flags" aria-label="Review flags">
+    <ul className="qs-flags" aria-label={t.reviewFlags}>
       {flags.map((f) => (
         <li key={f} className="qs-flag" data-flag={f}>
           <Icon.flag />
@@ -83,9 +84,10 @@ function Flags({ flags, t }: { flags: TafsirFlag[]; t: InterpretationStrings }) 
 }
 
 function Empty({ children }: { children: ReactNode }) {
+  const t = interpretationT(useLocale());
   return (
     <div className="qs-empty">
-      <EvidenceLabel kind="unknown">Not available yet</EvidenceLabel>
+      <EvidenceLabel kind="unknown">{t.notAvailable}</EvidenceLabel>
       <p>{children}</p>
     </div>
   );
@@ -360,7 +362,7 @@ function SummaryTab({ data, t }: { data: StudyData; t: InterpretationStrings }) 
             <Markdown source={e.bodyMd} />
             <p className="zq-meta">
               {t.summary.version(e.version)}
-              {e.promptVersion ? ` · prompt ${e.promptVersion}` : ""}
+              {e.promptVersion ? ` · ${t.prompt} ${e.promptVersion}` : ""}
             </p>
           </article>
         ))
@@ -508,7 +510,7 @@ export function StudyView({ target, data, status, locale, headingId, onClose, he
           </p>
         ) : (
           <div className="qs-empty">
-            <EvidenceLabel kind="unknown">Source not imported</EvidenceLabel>
+            <EvidenceLabel kind="unknown">{t.sourceNotImported}</EvidenceLabel>
             <p>{t.arabicNotLoaded}</p>
           </div>
         )}
@@ -636,7 +638,6 @@ export function StudyLayout({ target, locale, onClose, children }: { target: Stu
     if (!open) return;
     if (!opener.current && document.activeElement instanceof HTMLElement) opener.current = document.activeElement;
     heading.current?.focus();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, target?.surah, target?.ayah]);
 
   useEffect(() => {

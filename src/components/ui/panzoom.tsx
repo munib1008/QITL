@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent, type MouseEvent as RMouseEvent, type PointerEvent as RPointerEvent, type RefObject } from "react";
 import "@/styles/explorers.css";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 /** Pan/zoom state: content is drawn at `translate(x, y) scale(s)` inside the viewport (CSS pixels). */
 export interface View {
@@ -189,25 +191,26 @@ export function usePanZoom({ content, initial, min = 0.5, max = 3, ssrViewport =
 
 /** On-screen zoom buttons (44px) with a polite announcement of the zoom level. */
 export function ZoomControls({ label, view, min, max, onIn, onOut, onReset }: { label: string; view: View; min: number; max: number; onIn: () => void; onOut: () => void; onReset: () => void }) {
+  const t = uiStrings(useLocale()).zoom;
   return (
     <div className="zx-zoom" role="group" aria-label={label}>
-      <button type="button" className="zx-zbtn" onClick={onIn} disabled={view.s >= max - 1e-3} aria-label="Zoom in">
+      <button type="button" className="zx-zbtn" onClick={onIn} disabled={view.s >= max - 1e-3} aria-label={t.in}>
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 5v14M5 12h14" />
         </svg>
       </button>
-      <button type="button" className="zx-zbtn" onClick={onOut} disabled={view.s <= min + 1e-3} aria-label="Zoom out">
+      <button type="button" className="zx-zbtn" onClick={onOut} disabled={view.s <= min + 1e-3} aria-label={t.out}>
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M5 12h14" />
         </svg>
       </button>
-      <button type="button" className="zx-zbtn" onClick={onReset} aria-label="Reset view">
+      <button type="button" className="zx-zbtn" onClick={onReset} aria-label={t.reset}>
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4" />
         </svg>
       </button>
       <span className="sr-only" aria-live="polite">
-        Zoom {Math.round(view.s * 100)}%
+        {t.level} {Math.round(view.s * 100)}%
       </span>
     </div>
   );

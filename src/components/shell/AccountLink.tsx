@@ -4,11 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSession } from "@/components/account/useSession";
 import { stripLocale } from "@/lib/i18n";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 /** Optional account entry. Reading never needs it; when accounts are not configured it is not shown as working. */
 export function AccountLink({ signInLabel, accountLabel }: { signInLabel: string; accountLabel: string }) {
   const s = useSession();
   const pathname = usePathname();
+  const t = uiStrings(useLocale()).shell;
   if (s.status === "signed_in")
     return (
       <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" href="/account" prefetch={false}>
@@ -17,8 +20,8 @@ export function AccountLink({ signInLabel, accountLabel }: { signInLabel: string
     );
   if (s.status === "unavailable")
     return (
-      <span className="zq-soon" title="Reading never needs an account">
-        Accounts coming soon
+      <span className="zq-soon" title={t.accountsSoonTitle}>
+        {t.accountsSoon}
       </span>
     );
   return (

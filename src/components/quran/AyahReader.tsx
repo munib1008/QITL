@@ -6,6 +6,7 @@ import { BookmarkButton } from "@/components/account/BookmarkButton";
 import { CitationChip } from "@/components/ui/evidence";
 import { Icon } from "@/components/ui/icons";
 import { interpretationT } from "@/lib/i18n/modules/interpretation";
+import { quranPageStrings } from "@/lib/i18n/modules/reader";
 import { StudyLayout, type StudyTarget } from "./StudyPanel";
 import { useAyahHighlight } from "./useAyahHighlight";
 
@@ -20,6 +21,7 @@ export function AyahReader({ surah, surahName, verses, links, locale = "en" }: {
   const [size, setSize] = useState(32);
   const [study, setStudy] = useState<StudyTarget | null>(null);
   const t = interpretationT(locale);
+  const q = quranPageStrings(locale);
   const [copied, setCopied] = useState<number | null>(null);
   useAyahHighlight();
   useEffect(() => {
@@ -41,16 +43,16 @@ export function AyahReader({ surah, surahName, verses, links, locale = "en" }: {
   const i = SIZES.indexOf(size);
   return (
     <StudyLayout target={study} locale={locale} onClose={() => setStudy(null)}>
-    <section aria-label={`Surah ${surahName}, Arabic text`}>
-      <div className="zq-filters" role="group" aria-label="Arabic text size" style={{ marginBottom: 12 }}>
-        <span className="zq-eyebrow">Text size</span>
-        <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => set(SIZES[Math.max(0, i - 1)]!)} disabled={i <= 0} aria-label="Smaller Arabic text">
+    <section aria-label={q.arabicText(surahName)}>
+      <div className="zq-filters" role="group" aria-label={q.textSizeGroup} style={{ marginBottom: 12 }}>
+        <span className="zq-eyebrow">{q.textSize}</span>
+        <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => set(SIZES[Math.max(0, i - 1)]!)} disabled={i <= 0} aria-label={q.smaller}>
           A−
         </button>
         <output className="zq-order" aria-live="polite">
           {size}px
         </output>
-        <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => set(SIZES[Math.min(SIZES.length - 1, i + 1)]!)} disabled={i >= SIZES.length - 1} aria-label="Larger Arabic text">
+        <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => set(SIZES[Math.min(SIZES.length - 1, i + 1)]!)} disabled={i >= SIZES.length - 1} aria-label={q.larger}>
           A+
         </button>
       </div>
@@ -60,7 +62,7 @@ export function AyahReader({ surah, surahName, verses, links, locale = "en" }: {
             <p className="zq-ar-quran" lang="ar" dir="rtl" style={{ fontSize: size, maxWidth: "var(--measure-arabic)" }}>
               {v.text}
             </p>
-            <div className="zq-actions" role="group" aria-label={`Ayah ${v.ayah}`}>
+            <div className="zq-actions" role="group" aria-label={q.ayah(v.ayah)}>
               <CitationChip href={`#ayah-${v.ayah}`}>{`Q ${surah}:${v.ayah}`}</CitationChip>
               <button
                 type="button"
@@ -88,11 +90,11 @@ export function AyahReader({ surah, surahName, verses, links, locale = "en" }: {
                 }}
               >
                 {copied === v.ayah ? <Icon.check /> : <Icon.copy />}
-                {copied === v.ayah ? "Copied" : "Copy reference"}
+                {copied === v.ayah ? q.copied : q.copy}
               </button>
               {(links[v.ayah] ?? []).map((l) => (
-                <Link key={l.id} className="zq-iconbtn" href={`/prophets/${l.id}`}>
-                  {l.name} →
+                <Link key={l.id} className="zq-iconbtn" href={`/prophets/${l.id}`} lang={locale === "en" ? undefined : "en"}>
+                  {l.name} {q.next}
                 </Link>
               ))}
             </div>

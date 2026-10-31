@@ -114,12 +114,14 @@ describe("variant and recording rules", () => {
 });
 
 describe("strings", () => {
-  test("Arabic and Urdu only use English keys; Urdu falls back to English", () => {
+  test("Arabic and Urdu only use English keys; only the scholarly distinction points stay English in Urdu", () => {
     const keys = (o: object, p = ""): string[] => Object.entries(o).flatMap(([k, v]) => (v && typeof v === "object" && !Array.isArray(v) ? keys(v, `${p}${k}.`) : [`${p}${k}`]));
     const en = new Set(keys(qiraat.en));
     for (const k of keys(qiraat.ar)) expect(en.has(k)).toBe(true);
     for (const k of keys(qiraat.ur)) expect(en.has(k)).toBe(true);
-    expect(qiraatStrings("ur").compare.emptyTitle).toBe(qiraat.en.compare.emptyTitle);
+    expect(qiraatStrings("ur").compare.emptyTitle).not.toBe(qiraat.en.compare.emptyTitle);
+    // Scholarly statements are not translated here; they fall back to English (rendered lang="en").
+    expect(qiraatStrings("ur").distinction.points).toEqual(qiraat.en.distinction.points);
     expect(qiraatStrings("ur").riwayah.label).toBe("روایت");
     expect(qiraatStrings("ar").riwayah.current).toContain("حفص");
   });

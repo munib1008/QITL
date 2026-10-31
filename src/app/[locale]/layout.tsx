@@ -11,18 +11,22 @@ import { qiraatStrings } from "@/lib/i18n/modules/qiraat";
 import { lifestyleStrings } from "@/lib/i18n/modules/lifestyle";
 import { muftiT } from "@/lib/i18n/modules/mufti";
 import { dreamsT } from "@/lib/i18n/modules/dreams";
+import { uiStrings } from "@/lib/i18n/modules/ui";
 import "../globals.css";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(publicEnv.siteUrl),
-  title: { default: "QITL — Quran in Timeline", template: "%s · QITL" },
-  applicationName: "QITL",
-  description:
-    "Explore the story. Follow the evidence. The Quran, authenticated Hadith, the prophets, chronology and geography — every claim labelled by how certain it is.",
-  openGraph: { type: "website", siteName: "QITL — Quran in Timeline" },
-  twitter: { card: "summary_large_image" },
-  alternates: { languages: { en: "/", ar: "/ar", ur: "/ur" } },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const site = uiStrings(locale).site;
+  return {
+    metadataBase: new URL(publicEnv.siteUrl),
+    title: { default: site.title, template: "%s · QITL" },
+    applicationName: "QITL",
+    description: site.description,
+    openGraph: { type: "website", siteName: site.title },
+    twitter: { card: "summary_large_image" },
+    alternates: { languages: { en: "/", ar: "/ar", ur: "/ur" } },
+  };
+}
 
 export const viewport: Viewport = {
   width: "device-width",
