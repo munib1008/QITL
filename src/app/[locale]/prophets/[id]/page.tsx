@@ -15,6 +15,8 @@ import { ShifaRelated } from "@/components/shifa/Related";
 import { NoteEditor } from "@/components/account/NoteEditor";
 import { StoryView } from "@/components/story/StoryView";
 import { getStory } from "@/lib/data/story";
+import { getLinkedStories } from "@/lib/data/story-links";
+import { StoryChapterLinks } from "@/components/story/StoryChapterLinks";
 import { getPlayerBundle } from "@/lib/data/player";
 import { StoryPlayerSection } from "@/components/player/StoryPlayerSection";
 import { CitationChip, DraftBadge, EraTag, EvidenceLabel } from "@/components/ui/evidence";
@@ -59,6 +61,7 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
   const hon = (x?: { honorific: string }) => (x?.honorific ? ` ${x.honorific}` : "");
   const story = ms ? null : await getStory({ person: p.id });
   const player = ms ? null : await getPlayerBundle({ person: p.id });
+  const linked = ms ? [] : await getLinkedStories({ person: p.id });
 
   return (
     <ReadingPage locale={locale} crumbs={[{ href: "/prophets", label: t.title }, { label: p.name }]}>
@@ -214,6 +217,7 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
               )}
             </section>
           ) : null}
+          <StoryChapterLinks stories={linked} locale={locale} />
 
           <section className="pp-sec" id="story" aria-labelledby="story-h">
             <h2 id="story-h">{p.story?.length ? t.outlineIn(p.story.length) : t.outline}</h2>

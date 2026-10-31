@@ -5,6 +5,7 @@ import { CitationChip, EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
 import { Markdown } from "@/components/ui/Markdown";
 import { ChapterNav } from "./ChapterNav";
+import { ReaderModeSwitch, useReaderMode } from "./ReaderModeSwitch";
 import { AnimationPlayer } from "./AnimationPlayer";
 import { QuizBlock } from "./QuizBlock";
 import { LanguageNote } from "@/components/i18n/LanguageNote";
@@ -12,6 +13,7 @@ import type { Audience, Ref, Section, Story } from "@/lib/data/story-types";
 import { AUDIENCES, FACT_KEYS, STEP_ROLES, refLabel } from "@/lib/data/story-types";
 import { englishContent } from "@/lib/i18n/locales";
 import { storyStrings } from "@/lib/i18n/modules/story";
+import { storyChaptersStrings } from "@/lib/i18n/modules/storyChapters";
 import { useLocale } from "@/lib/i18n/useLocale";
 
 function Refs({ refs, evidence }: { refs: Ref[]; evidence?: Section["evidence"] }) {
@@ -38,22 +40,36 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
   const locale = useLocale();
   const t = storyStrings(locale);
   const en = englishContent(locale);
-  const [level, setLevel] = useState<Audience>("full");
+  const sc = storyChaptersStrings(locale);
+  const [mode, chooseMode] = useReaderMode();
+  // "Young learners" is a reading level of the complete story; Kids is its own mode.
+  const [young, setYoung] = useState(false);
   useEffect(() => {
     try {
-      const v = localStorage.getItem("qitl-level");
-      if (v === "kids" || v === "young" || v === "full") setLevel(v);
+      setYoung(localStorage.getItem("qitl-level") === "young");
     } catch {
       // storage unavailable
     }
   }, []);
-  const choose = (a: Audience) => {
-    setLevel(a);
+  const chooseYoung = (v: boolean) => {
+    setYoung(v);
     try {
-      localStorage.setItem("qitl-level", a);
+      localStorage.setItem("qitl-level", v ? "young" : "full");
     } catch {
       // ignore
     }
+  };
+  const level: Audience = mode === "kids" ? "kids" : young && (mode === "complete" || mode === "deep") ? "young" : "full";
+  // What each mode shows. The mode changes the presentation, never the evidence.
+  const show = {
+    media: mode !== "summary" && mode !== "lessons",
+    quick: mode !== "lessons",
+    story: mode === "complete" || mode === "deep" || mode === "kids", // A to E
+    takeaways: mode !== "summary",
+    reflection: mode !== "summary",
+    quiz: mode === "complete" || mode === "deep" || mode === "kids",
+    notes: mode === "deep",
+    vocab: mode === "complete" || mode === "deep" || mode === "kids",
   };
 
   const full = story.sections.filter((s) => s.audience === "full");
@@ -98,14 +114,15 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
   const quizzes = story.quizzes.filter((q) => level === "full" || q.audience === level || q.audience === "full");
 
   return (
-    <div className="qs" data-level={level}>
-      <div className="qs-levels" role="radiogroup" aria-label={t.levels}>
-        {AUDIENCES.map(([a]) => (
-          <button key={a} type="button" role="radio" aria-checked={level === a} className="zq-pill" onClick={() => choose(a)} title={t.audiences[a][1]}>
-            {t.audiences[a][0]}
+    <div className="qs" data-level={level} data-mode={mode}>
+      <div className="qs-levels">
+        <ReaderModeSwitch mode={mode} onChange={chooseMode} />
+        {mode === "complete" || mode === "deep" ? (
+          <button type="button" role="switch" aria-checked={young} className="zq-pill" onClick={() => chooseYoung(!young)} title={t.audiences.young[1]}>
+            {t.audiences.young[0]}
           </button>
-        ))}
-        <span className="zq-meta qs-levels-note">{t.levelsNote}</span>
+        ) : null}
+        <span className="zq-meta qs-levels-note">{sc.modeNote}</span>
       </div>
       <LanguageNote kind="narration" />
       {chapterKey ? (
@@ -126,7 +143,7 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
         />
       ) : null}
 
-      {story.media.length ? (
+      {show.media && story.media.length ? (
         <div className="qs-media">
           {story.media.map((m) =>
             m.animationKey ? (
@@ -142,10 +159,15 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
         </div>
       ) : null}
 
+      {show.quick ? (
       <section className="qs-sec" aria-labelledby="qs-quick">
         <h3 id="qs-quick">{t.quick}</h3>
         <Prose list={of("summary")} empty={t.quickEmpty} />
       </section>
+      ) : null}
+
+      {show.story ? (
+      <>
 
       <section className="qs-sec" aria-labelledby="qs-a">
         <h3 id="qs-a">
@@ -241,7 +263,10 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
         </h3>
         <Prose list={of("outcome")} empty={t.outcomeEmpty} />
       </section>
+      </>
+      ) : null}
 
+      {show.takeaways ? (
       <section className="qs-sec" aria-labelledby="qs-f">
         <h3 id="qs-f">
           <span className="qs-letter">F</span> {t.takeaways}
@@ -274,8 +299,9 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
           <p className="zq-meta">{t.notWrittenDot}</p>
         )}
       </section>
+      ) : null}
 
-      {of("reflection").length ? (
+      {show.reflection && of("reflection").length ? (
         <section className="qs-sec" aria-labelledby="qs-reflect">
           <h3 id="qs-reflect">{t.reflect}</h3>
           <ol className="qs-reflect" {...en}>
@@ -288,7 +314,7 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
         </section>
       ) : null}
 
-      {quizzes.length ? (
+      {show.quiz && quizzes.length ? (
         <section className="qs-sec" aria-labelledby="qs-quiz">
           <h3 id="qs-quiz">{t.quiz}</h3>
           {quizzes.map((q) => (
@@ -297,19 +323,21 @@ export function StoryView({ story, name, intro, chapterKey }: { story: Story; na
         </section>
       ) : null}
 
-      {level === "full" && of("scholarly_note").length ? (
+      {show.notes && level === "full" && of("scholarly_note").length ? (
         <section className="qs-sec" aria-labelledby="qs-notes">
           <h3 id="qs-notes">{t.scholarlyNotes}</h3>
           <Prose list={of("scholarly_note")} />
         </section>
       ) : null}
 
+      {show.vocab ? (
       <section className="qs-sec" aria-labelledby="qs-vocab">
         <h3 id="qs-vocab">{t.vocabulary}</h3>
         <EmptyState tone="soon" label={<span className="zq-soon">{t.soon}</span>} title={t.vocabTitle}>
           <p>{t.vocabBody}</p>
         </EmptyState>
       </section>
+      ) : null}
 
       <section className="qs-sec" aria-labelledby="qs-g">
         <h3 id="qs-g">

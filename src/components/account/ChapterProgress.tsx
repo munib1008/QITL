@@ -9,7 +9,7 @@ import { useLocale } from "@/lib/i18n/useLocale";
  * Records how far a signed-in reader got in a chapter (by scroll position, saved at most every 5 seconds and on
  * leaving the page). Shows the saved percentage; nothing is tracked for signed-out readers.
  */
-export function ChapterProgress({ chapterId }: { chapterId: string }) {
+export function ChapterProgress({ chapterId, elementId }: { chapterId: string; /** the chapter's element when a page holds several chapters */ elementId?: string }) {
   const session = useSession();
   const t = accountStrings(useLocale());
   const [saved, setSaved] = useState<number | null>(null);
@@ -18,7 +18,7 @@ export function ChapterProgress({ chapterId }: { chapterId: string }) {
 
   useEffect(() => {
     if (session.status !== "signed_in") return;
-    const article = document.querySelector("article");
+    const article = (elementId ? document.getElementById(elementId) : null) ?? document.querySelector("article");
     const measure = () => {
       if (!article) return 0;
       const r = article.getBoundingClientRect();
@@ -49,7 +49,7 @@ export function ChapterProgress({ chapterId }: { chapterId: string }) {
       clearInterval(t);
       send(true);
     };
-  }, [session.status, chapterId]);
+  }, [session.status, chapterId, elementId]);
 
   if (session.status !== "signed_in") return null;
   return (

@@ -12,6 +12,8 @@ import { eventStrings } from "@/lib/i18n/modules/events";
 import { uiStrings } from "@/lib/i18n/modules/ui";
 import { getPublicSupabase } from "@/lib/supabase/server";
 import { getStory } from "@/lib/data/story";
+import { getLinkedStories } from "@/lib/data/story-links";
+import { StoryChapterLinks } from "@/components/story/StoryChapterLinks";
 import { getPlayerBundle } from "@/lib/data/player";
 import { StoryPlayerSection } from "@/components/player/StoryPlayerSection";
 import { formatRange } from "@/lib/years";
@@ -81,7 +83,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
     notFound();
   }
   if (!e || e === "not_configured") return <UniverseOnlyPage u={uv!} locale={locale} />;
-  const [story, player] = await Promise.all([getStory({ event: slug }), getPlayerBundle({ event: slug })]);
+  const [story, player, linked] = await Promise.all([getStory({ event: slug }), getPlayerBundle({ event: slug }), getLinkedStories({ event: slug })]);
   // Items of the Complete Timeline say how they are ordered; a year appears only for a historians' dated estimate.
   const when = uv ? orderingText(uv, timelineStrings(locale)) : (formatRange(e.start_year, e.end_year, e.start_ah, e.end_ah, e.date_precision === "estimated") ?? u.precision[e.date_precision]);
   return (
@@ -111,6 +113,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
           ) : (
             <EmptyState label={<EvidenceLabel kind="unknown">{t.notWritten}</EvidenceLabel>} title={t.storyPending} />
           )}
+          <StoryChapterLinks stories={linked} locale={locale} />
           <section className="pp-sec" id="discuss" aria-labelledby="d-h">
             <h2 id="d-h">{t.discussion}</h2>
             <DiscussionPreview contentType="event" contentId={slug} />
