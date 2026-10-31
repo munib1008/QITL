@@ -1,0 +1,468 @@
+tokens: wrote src/styles/tokens.css and src/styles/tokens.generated.ts
+   ▲ Next.js 15.5.28
+
+   Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (114kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (268kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+read ECONNRESET
+
+Retrying 1/3...
+read ECONNRESET
+
+Retrying 1/3...
+read ECONNRESET
+
+Retrying 1/3...
+read ECONNRESET
+
+Retrying 1/3...
+read ECONNRESET
+
+Retrying 1/3...
+read ECONNRESET
+
+Retrying 1/3...
+read ECONNRESET
+
+Retrying 1/3...
+read ECONNRESET
+
+Retrying 1/3...
+read ECONNRESET
+
+Retrying 1/3...
+read ECONNRESET
+
+Retrying 1/3...
+read ECONNRESET
+
+Retrying 1/3...
+read ECONNRESET
+
+Retrying 1/3...
+ ✓ Compiled successfully in 3.3min
+   Linting and checking validity of types ...
+
+./src/components/quran/StudyPanel.tsx
+639:5  Warning: Unused eslint-disable directive (no problems were reported from 'react-hooks/exhaustive-deps').
+
+./src/components/shell/Logo.tsx
+24:28  Warning: Image elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+25:29  Warning: Image elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/lib/i18n/modules/creation.ts
+7:15  Warning: 'Locale' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/lib/i18n/modules/guidance.ts
+6:15  Warning: 'Locale' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/lib/i18n/modules/interpretation.ts
+6:15  Warning: 'Locale' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/lib/i18n/modules/player.ts
+6:15  Warning: 'Locale' is defined but never used.  @typescript-eslint/no-unused-vars
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/773) ...
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+   Generating static pages (193/773) 
+   Generating static pages (386/773) 
+   Generating static pages (579/773) 
+ ✓ Generating static pages (773/773)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                        Size  First Load JS
+┌ ○ /_not-found                                   996 B         105 kB
+├ ● /[locale]                                   7.81 kB         126 kB
+├   ├ /en
+├   ├ /ar
+├   └ /ur
+├ ƒ /[locale]/[...rest]                           300 B         104 kB
+├ ● /[locale]/about                             1.07 kB         119 kB
+├   ├ /en/about
+├   ├ /ar/about
+├   └ /ur/about
+├ ● /[locale]/accessibility                     1.07 kB         119 kB
+├   ├ /en/accessibility
+├   ├ /ar/accessibility
+├   └ /ur/accessibility
+├ ● /[locale]/account                           3.47 kB         222 kB
+├   ├ /en/account
+├   ├ /ar/account
+├   └ /ur/account
+├ ● /[locale]/account/unsubscribed              1.07 kB         119 kB
+├   ├ /en/account/unsubscribed
+├   ├ /ar/account/unsubscribed
+├   └ /ur/account/unsubscribed
+├ ● /[locale]/admin                               166 B         107 kB
+├   ├ /en/admin
+├   ├ /ar/admin
+├   └ /ur/admin
+├ ● /[locale]/admin/audit                         172 B         192 kB
+├   ├ /en/admin/audit
+├   ├ /ar/admin/audit
+├   └ /ur/admin/audit
+├ ● /[locale]/admin/corrections                   173 B         192 kB
+├   ├ /en/admin/corrections
+├   ├ /ar/admin/corrections
+├   └ /ur/admin/corrections
+├ ● /[locale]/admin/creation                    8.96 kB         187 kB
+├   ├ /en/admin/creation
+├   ├ /ar/admin/creation
+├   └ /ur/admin/creation
+├ ● /[locale]/admin/dreams                      4.53 kB         133 kB
+├   ├ /en/admin/dreams
+├   ├ /ar/admin/dreams
+├   └ /ur/admin/dreams
+├ ● /[locale]/admin/editions                      174 B         186 kB
+├   ├ /en/admin/editions
+├   ├ /ar/admin/editions
+├   └ /ur/admin/editions
+├ ● /[locale]/admin/events/new                    743 B         193 kB
+├   ├ /en/admin/events/new
+├   ├ /ar/admin/events/new
+├   └ /ur/admin/events/new
+├ ● /[locale]/admin/explanations                  174 B         186 kB
+├   ├ /en/admin/explanations
+├   ├ /ar/admin/explanations
+├   └ /ur/admin/explanations
+├ ● /[locale]/admin/guidance                    4.53 kB         182 kB
+├   ├ /en/admin/guidance
+├   ├ /ar/admin/guidance
+├   └ /ur/admin/guidance
+├ ● /[locale]/admin/licences                    4.19 kB         179 kB
+├   ├ /en/admin/licences
+├   ├ /ar/admin/licences
+├   └ /ur/admin/licences
+├ ● /[locale]/admin/life-through-ages           6.39 kB         184 kB
+├   ├ /en/admin/life-through-ages
+├   ├ /ar/admin/life-through-ages
+├   └ /ur/admin/life-through-ages
+├ ● /[locale]/admin/moderation                    175 B         192 kB
+├   ├ /en/admin/moderation
+├   ├ /ar/admin/moderation
+├   └ /ur/admin/moderation
+├ ● /[locale]/admin/mufti                       4.56 kB         201 kB
+├   ├ /en/admin/mufti
+├   ├ /ar/admin/mufti
+├   └ /ur/admin/mufti
+├ ● /[locale]/admin/profiles                       6 kB         187 kB
+├   ├ /en/admin/profiles
+├   ├ /ar/admin/profiles
+├   └ /ur/admin/profiles
+├ ● /[locale]/admin/qiraat                      6.34 kB         184 kB
+├   ├ /en/admin/qiraat
+├   ├ /ar/admin/qiraat
+├   └ /ur/admin/qiraat
+├ ● /[locale]/admin/relationships                 174 B         192 kB
+├   ├ /en/admin/relationships
+├   ├ /ar/admin/relationships
+├   └ /ur/admin/relationships
+├ ● /[locale]/admin/review                        174 B         192 kB
+├   ├ /en/admin/review
+├   ├ /ar/admin/review
+├   └ /ur/admin/review
+├ ● /[locale]/admin/sources                       174 B         192 kB
+├   ├ /en/admin/sources
+├   ├ /ar/admin/sources
+├   └ /ur/admin/sources
+├ ● /[locale]/admin/stories                       175 B         192 kB
+├   ├ /en/admin/stories
+├   ├ /ar/admin/stories
+├   └ /ur/admin/stories
+├ ● /[locale]/admin/studio                        190 B         211 kB
+├   ├ /en/admin/studio
+├   ├ /ar/admin/studio
+├   └ /ur/admin/studio
+├ ● /[locale]/admin/studio/audio                8.53 kB         183 kB
+├   ├ /en/admin/studio/audio
+├   ├ /ar/admin/studio/audio
+├   └ /ur/admin/studio/audio
+├ ● /[locale]/admin/studio/translations         1.41 kB         212 kB
+├   ├ /en/admin/studio/translations
+├   ├ /ar/admin/studio/translations
+├   └ /ur/admin/studio/translations
+├ ● /[locale]/admin/users                         174 B         192 kB
+├   ├ /en/admin/users
+├   ├ /ar/admin/users
+├   └ /ur/admin/users
+├ ● /[locale]/atlas                             4.49 kB         127 kB
+├   ├ /en/atlas
+├   ├ /ar/atlas
+├   └ /ur/atlas
+├ ● /[locale]/community                         1.07 kB         119 kB
+├   ├ /en/community
+├   ├ /ar/community
+├   └ /ur/community
+├ ƒ /[locale]/community/[id]                     6.9 kB         139 kB
+├ ● /[locale]/community/guidelines              1.07 kB         119 kB
+├   ├ /en/community/guidelines
+├   ├ /ar/community/guidelines
+├   └ /ur/community/guidelines
+├ ● /[locale]/community/questions               1.01 kB         119 kB
+├   ├ /en/community/questions
+├   ├ /ar/community/questions
+├   └ /ur/community/questions
+├ ƒ /[locale]/community/questions/[id]          1.28 kB         125 kB
+├ ● /[locale]/community/questions/ask           3.06 kB         139 kB
+├   ├ /en/community/questions/ask
+├   ├ /ar/community/questions/ask
+├   └ /ur/community/questions/ask
+├ ● /[locale]/compare                           1.07 kB         119 kB
+├   ├ /en/compare
+├   ├ /ar/compare
+├   └ /ur/compare
+├ ● /[locale]/contact                           1.07 kB         119 kB
+├   ├ /en/contact
+├   ├ /ar/contact
+├   └ /ur/contact
+├ ● /[locale]/corrections                       1.07 kB         119 kB
+├   ├ /en/corrections
+├   ├ /ar/corrections
+├   └ /ur/corrections
+├ ● /[locale]/creation                          10.4 kB         130 kB
+├   ├ /en/creation
+├   ├ /ar/creation
+├   └ /ur/creation
+├ ƒ /[locale]/creation/[slug]                   2.54 kB         120 kB
+├ ● /[locale]/dreams                            1.01 kB         119 kB
+├   ├ /en/dreams
+├   ├ /ar/dreams
+├   └ /ur/dreams
+├ ● /[locale]/dreams/my                           563 B         145 kB
+├   ├ /en/dreams/my
+├   ├ /ar/dreams/my
+├   └ /ur/dreams/my
+├ ƒ /[locale]/dreams/my/[id]                    2.29 kB         127 kB
+├ ● /[locale]/dreams/request                    3.78 kB         142 kB
+├   ├ /en/dreams/request
+├   ├ /ar/dreams/request
+├   └ /ur/dreams/request
+├ ● /[locale]/events                              137 B         135 kB
+├   ├ /en/events
+├   ├ /ar/events
+├   └ /ur/events
+├ ƒ /[locale]/events/[slug]                       236 B         156 kB
+├ ● /[locale]/genealogy                         4.28 kB         125 kB
+├   ├ /en/genealogy
+├   ├ /ar/genealogy
+├   └ /ur/genealogy
+├ ● /[locale]/guidance                          1.07 kB         119 kB
+├   ├ /en/guidance
+├   ├ /ar/guidance
+├   └ /ur/guidance
+├ ƒ /[locale]/guidance/[slug]                   1.07 kB         119 kB
+├ ● /[locale]/hadith                            1.07 kB         119 kB
+├   ├ /en/hadith
+├   ├ /ar/hadith
+├   └ /ur/hadith
+├ ● /[locale]/hadith/[collection]               1.07 kB         119 kB
+├   ├ /en/hadith/bukhari
+├   ├ /en/hadith/muslim
+├   ├ /en/hadith/tirmidhi
+├   └ [+9 more paths]
+├ ƒ /[locale]/hadith/[collection]/[number]      1.57 kB         138 kB
+├ ● /[locale]/last-hour                         1.07 kB         119 kB
+├   ├ /en/last-hour
+├   ├ /ar/last-hour
+├   └ /ur/last-hour
+├ ● /[locale]/learn                             1.07 kB         119 kB
+├   ├ /en/learn
+├   ├ /ar/learn
+├   └ /ur/learn
+├ ● /[locale]/life-through-ages                   223 B         121 kB
+├   ├ /en/life-through-ages
+├   ├ /ar/life-through-ages
+├   └ /ur/life-through-ages
+├ ● /[locale]/life-through-ages/compare           223 B         121 kB
+├   ├ /en/life-through-ages/compare
+├   ├ /ar/life-through-ages/compare
+├   └ /ur/life-through-ages/compare
+├ ● /[locale]/life-through-ages/day               223 B         121 kB
+├   ├ /en/life-through-ages/day
+├   ├ /ar/life-through-ages/day
+├   └ /ur/life-through-ages/day
+├ ● /[locale]/life-through-ages/food              223 B         121 kB
+├   ├ /en/life-through-ages/food
+├   ├ /ar/life-through-ages/food
+├   └ /ur/life-through-ages/food
+├ ● /[locale]/life-through-ages/longevity       1.01 kB         119 kB
+├   ├ /en/life-through-ages/longevity
+├   ├ /ar/life-through-ages/longevity
+├   └ /ur/life-through-ages/longevity
+├ ● /[locale]/life-through-ages/prophets/[id]   1.01 kB         119 kB
+├   ├ /en/life-through-ages/prophets/adam
+├   ├ /en/life-through-ages/prophets/idris
+├   ├ /en/life-through-ages/prophets/nuh
+├   └ [+69 more paths]
+├ ● /[locale]/methodology                       1.07 kB         119 kB
+├   ├ /en/methodology
+├   ├ /ar/methodology
+├   └ /ur/methodology
+├ ● /[locale]/mufti                             5.31 kB         142 kB
+├   ├ /en/mufti
+├   ├ /ar/mufti
+├   └ /ur/mufti
+├ ƒ /[locale]/mufti/dreams/[id]                 2.65 kB         151 kB
+├ ƒ /[locale]/mufti/questions/[id]              1.49 kB         143 kB
+├ ● /[locale]/offline                             167 B         107 kB
+├   ├ /en/offline
+├   ├ /ar/offline
+├   └ /ur/offline
+├ ● /[locale]/player-fixture                    1.95 kB         146 kB
+├   ├ /en/player-fixture
+├   ├ /ar/player-fixture
+├   └ /ur/player-fixture
+├ ● /[locale]/privacy                           1.07 kB         119 kB
+├   ├ /en/privacy
+├   ├ /ar/privacy
+├   └ /ur/privacy
+├ ● /[locale]/prophets                            137 B         135 kB
+├   ├ /en/prophets
+├   ├ /ar/prophets
+├   └ /ur/prophets
+├ ● /[locale]/prophets/[id]                     1.72 kB         157 kB
+├   ├ /en/prophets/adam
+├   ├ /en/prophets/idris
+├   ├ /en/prophets/nuh
+├   └ [+84 more paths]
+├ ● /[locale]/qiraat                            1.01 kB         119 kB
+├   ├ /en/qiraat
+├   ├ /ar/qiraat
+├   └ /ur/qiraat
+├ ● /[locale]/qiraat/compare                    1.01 kB         119 kB
+├   ├ /en/qiraat/compare
+├   ├ /ar/qiraat/compare
+├   └ /ur/qiraat/compare
+├ ● /[locale]/quran                             1.07 kB         119 kB
+├   ├ /en/quran
+├   ├ /ar/quran
+├   └ /ur/quran
+├ ● /[locale]/quran/[surah]                     17.1 kB         148 kB
+├   ├ /en/quran/1
+├   ├ /en/quran/2
+├   ├ /en/quran/3
+├   └ [+339 more paths]
+├ ● /[locale]/review-board                      1.07 kB         119 kB
+├   ├ /en/review-board
+├   ├ /ar/review-board
+├   └ /ur/review-board
+├ ● /[locale]/search                            1.07 kB         119 kB
+├   ├ /en/search
+├   ├ /ar/search
+├   └ /ur/search
+├ ● /[locale]/sign-in                           2.96 kB         204 kB
+├   ├ /en/sign-in
+├   ├ /ar/sign-in
+├   └ /ur/sign-in
+├ ● /[locale]/stories                           1.07 kB         119 kB
+├   ├ /en/stories
+├   ├ /ar/stories
+├   └ /ur/stories
+├ ƒ /[locale]/stories/[slug]                    2.76 kB         139 kB
+├ ● /[locale]/terms                             1.07 kB         119 kB
+├   ├ /en/terms
+├   ├ /ar/terms
+├   └ /ur/terms
+├ ● /[locale]/timeline                          4.68 kB         138 kB
+├   ├ /en/timeline
+├   ├ /ar/timeline
+├   └ /ur/timeline
+├ ƒ /api/admin/corrections                        300 B         104 kB
+├ ƒ /api/admin/dreams                             300 B         104 kB
+├ ƒ /api/admin/events                             300 B         104 kB
+├ ƒ /api/admin/interpretation/draft               300 B         104 kB
+├ ƒ /api/admin/licences                           300 B         104 kB
+├ ƒ /api/admin/lifestyle                          300 B         104 kB
+├ ƒ /api/admin/lifestyle/review                   300 B         104 kB
+├ ƒ /api/admin/moderate                           300 B         104 kB
+├ ƒ /api/admin/mufti/assign                       300 B         104 kB
+├ ƒ /api/admin/mufti/questions                    300 B         104 kB
+├ ƒ /api/admin/mufti/verify                       300 B         104 kB
+├ ƒ /api/admin/qiraat                             300 B         104 kB
+├ ƒ /api/admin/qiraat/reference                   300 B         104 kB
+├ ƒ /api/admin/review                             300 B         104 kB
+├ ƒ /api/admin/status                             300 B         104 kB
+├ ƒ /api/admin/studio/ambience                    300 B         104 kB
+├ ƒ /api/admin/studio/audio                       300 B         104 kB
+├ ƒ /api/admin/studio/claims                      300 B         104 kB
+├ ƒ /api/admin/studio/draft                       300 B         104 kB
+├ ƒ /api/admin/studio/narrate                     300 B         104 kB
+├ ƒ /api/admin/studio/review                      300 B         104 kB
+├ ƒ /api/admin/studio/scripts                     300 B         104 kB
+├ ƒ /api/admin/studio/translate                   300 B         104 kB
+├ ƒ /api/admin/studio/translation-review          300 B         104 kB
+├ ƒ /api/atlas/places                             300 B         104 kB
+├ ƒ /api/csp-report                               300 B         104 kB
+├ ƒ /api/discussions                              300 B         104 kB
+├ ƒ /api/discussions/[id]/comments                300 B         104 kB
+├ ƒ /api/discussions/[id]/comments/[commentId]    300 B         104 kB
+├ ƒ /api/dreams                                   300 B         104 kB
+├ ƒ /api/dreams/[id]                              300 B         104 kB
+├ ƒ /api/dreams/[id]/second-opinion               300 B         104 kB
+├ ƒ /api/dreams/export                            300 B         104 kB
+├ ƒ /api/dreams/preferences                       300 B         104 kB
+├ ƒ /api/dreams/responses                         300 B         104 kB
+├ ƒ /api/dreams/responses/[id]                    300 B         104 kB
+├ ƒ /api/dreams/responses/[id]/references         300 B         104 kB
+├ ƒ /api/dreams/reviews                           300 B         104 kB
+├ ƒ /api/events                                   300 B         104 kB
+├ ƒ /api/follows                                  300 B         104 kB
+├ ƒ /api/hadith/[collection]/[number]             300 B         104 kB
+├ ƒ /api/journey                                  300 B         104 kB
+├ ƒ /api/last-hour                                300 B         104 kB
+├ ƒ /api/me/bookmarks                             300 B         104 kB
+├ ƒ /api/me/delete                                300 B         104 kB
+├ ƒ /api/me/export                                300 B         104 kB
+├ ƒ /api/me/notes                                 300 B         104 kB
+├ ƒ /api/me/notes/[id]                            300 B         104 kB
+├ ƒ /api/me/playback/preferences                  300 B         104 kB
+├ ƒ /api/me/playback/progress                     300 B         104 kB
+├ ƒ /api/me/progress                              300 B         104 kB
+├ ƒ /api/mufti/answers                            300 B         104 kB
+├ ƒ /api/mufti/answers/[id]                       300 B         104 kB
+├ ƒ /api/mufti/answers/[id]/citations             300 B         104 kB
+├ ƒ /api/mufti/follows                            300 B         104 kB
+├ ƒ /api/mufti/profile                            300 B         104 kB
+├ ƒ /api/mufti/questions                          300 B         104 kB
+├ ƒ /api/mufti/reviews                            300 B         104 kB
+├ ƒ /api/people/[id]/graph                        300 B         104 kB
+├ ƒ /api/qiraat/recordings                        300 B         104 kB
+├ ƒ /api/quran/[surah]/[ayah]                     300 B         104 kB
+├ ƒ /api/quran/[surah]/[ayah]/study               300 B         104 kB
+├ ƒ /api/reports                                  300 B         104 kB
+├ ƒ /api/search                                   300 B         104 kB
+├ ƒ /api/stories/[slug]                           300 B         104 kB
+├ ƒ /api/story/[type]/[slug]                      300 B         104 kB
+├ ƒ /api/unsubscribe                              300 B         104 kB
+├ ○ /apple-icon.png                                 0 B            0 B
+├ ƒ /auth/callback                                300 B         104 kB
+├ ○ /icon.png                                       0 B            0 B
+├ ○ /manifest.webmanifest                         300 B         104 kB
+├ ○ /opengraph-image.png                            0 B            0 B
+├ ○ /robots.txt                                   300 B         104 kB
+└ ○ /sitemap.xml                                  300 B         104 kB
++ First Load JS shared by all                    104 kB
+  ├ chunks/2bb37458-4aaf427a7bce6f13.js         54.2 kB
+  ├ chunks/388-4ce8cfe79670235e.js              46.7 kB
+  └ other shared chunks (total)                 2.68 kB
+
+
+ƒ Middleware                                     100 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

@@ -21,7 +21,7 @@ Status of every external source the app uses or plans to use. Nothing is shown t
 | Tanzil Quran Text (Uthmani) | Quran Arabic | Creative Commons Attribution 3.0, verbatim copying only, with attribution and link to tanzil.net | **Not imported yet** | Run `scripts/import-quran.ts --pin` after reading the current terms; then the Arabic appears everywhere it is cited |
 | Quran translations (any) | Translation beside the Arabic | Per edition | **Not cleared** | UI shows "Translation unavailable — licence pending" |
 | Tafsir (any) | Scholarly interpretation | Per work | **Not cleared** | |
-| Hadith collections and translations (seven collections) | Narrations, numbering, translations | Per edition | **Not cleared** | Catalogue names only are in the database |
+| Hadith collections and translations (four collections: Bukhari, Muslim, Tirmidhi, Ibn Majah; see docs/LICENSING.md) | Narrations, numbering, translations | Per edition | **Not cleared** | Catalogue names only are in the database |
 | Hadith gradings | Per-narration grades by named scholars | Per work cited | **Not cleared** | |
 | Map tiles | Atlas base map | Per provider | **Not configured** | Map stays off until a provider and attribution are set |
 | Source Serif 4, IBM Plex Sans, IBM Plex Sans Arabic, IBM Plex Mono, Amiri, Amiri Quran, Noto Naskh Arabic | Typography | SIL Open Font License 1.1 | **Cleared** | Self-hosted by `next/font` at build time |

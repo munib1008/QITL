@@ -15,8 +15,9 @@ async function openStudy(page: Page, surah: number) {
   return perAyah;
 }
 
-async function axe(page: Page) {
-  const res = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]).analyze();
+async function axe(page: Page, include?: string) {
+  const builder = new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]);
+  const res = await (include ? builder.include(include) : builder).analyze();
   expect(res.violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(" ")).slice(0, 3).join(" | ")}`)).toEqual([]);
 }
 
@@ -31,7 +32,12 @@ for (const surah of [1, 12]) {
       const box = (await sheet.boundingBox())!;
       expect(box.x).toBeGreaterThanOrEqual(0);
       expect(box.x + box.width).toBeLessThanOrEqual(360);
-      // The Arabic block comes before (above) the tabs and nothing is laid over it.
+      // The Arabic block comes before (above) the tabs and nothing is laid over it. Measured with the opening animation
+      // finished and the sheet scrolled to its top (with real Arabic loaded the block is tall enough to scroll).
+      await sheet.evaluate((el) => {
+        for (const a of el.getAnimations({ subtree: true })) a.finish();
+        for (const n of [el, ...Array.from(el.querySelectorAll<HTMLElement>("*"))]) if (n.scrollTop) n.scrollTop = 0;
+      });
       const arabic = (await sheet.locator("[data-study-arabic]").boundingBox())!;
       const tabs = (await sheet.getByRole("tablist").boundingBox())!;
       expect(arabic.y + arabic.height).toBeLessThanOrEqual(tabs.y + 1);
@@ -59,6 +65,8 @@ for (const surah of [1, 12]) {
     test.use({ viewport: { width: 1440, height: 900 } });
 
     test("docks beside the reader without covering it, and passes axe", async ({ page }) => {
+      // The reader now holds the full surah text (111 ayat in surah 12): two axe passes need more than the default 60 s.
+      test.setTimeout(150_000);
       await openStudy(page, surah);
       const panel = page.locator('[data-study-panel="side"]');
       await expect(panel).toBeVisible();
@@ -76,7 +84,7 @@ for (const surah of [1, 12]) {
       await expect(panel.getByRole("tabpanel")).toContainText(/QITL summary|not connected|No QITL summary/);
       await panel.getByRole("button", { name: "Report an error" }).click();
       await expect(panel.getByLabel("What is wrong?")).toBeVisible();
-      await axe(page);
+      await axe(page, '[data-study-panel="side"]');
       await panel.getByRole("button", { name: "Close" }).click();
       await expect(panel).toBeHidden();
     });

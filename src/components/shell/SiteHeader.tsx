@@ -6,10 +6,17 @@ import { AccountLink } from "./AccountLink";
 import { LangToggle, ThemeToggle } from "./toggles";
 import { MobileMenu } from "./MobileMenu";
 import { Logo, Mark } from "./Logo";
+import { exploreLinks } from "@/lib/nav";
 
 export interface NavLink {
   href: string;
   label: string;
+}
+
+/** Sections reachable only through the menus (everything in exploreLinks that the section bar does not list). */
+export function moreNav(locale: string, t: ReturnType<typeof getDict>["t"]): NavLink[] {
+  const shown = new Set(mainNav(t).map((n) => n.href));
+  return exploreLinks(locale).filter((l) => !shown.has(l.href) && l.href !== "/search").map(({ href, label }) => ({ href, label }));
 }
 
 export function mainNav(t: ReturnType<typeof getDict>["t"]): NavLink[] {
@@ -45,7 +52,7 @@ export function JourneyHeader({ locale }: { locale: string }) {
         <Link className="zq-btn zq-btn-primary zq-btn-sm zq-btn-link" href="/prophets">
           {t.nav.begin}
         </Link>
-        <MobileMenu links={mainNav(t)} label={t.nav.explore} />
+        <MobileMenu links={[...mainNav(t), ...moreNav(l, t)]} label={t.nav.explore} />
       </div>
     </header>
   );
@@ -68,7 +75,7 @@ export function ReadingHeader({ locale, query }: { locale: string; query?: strin
         <ThemeToggle labels={t.theme} />
         <LangToggle locale={l} labels={t.lang} />
         <AccountLink signInLabel={t.nav.signIn} accountLabel={t.nav.account} />
-        <MobileMenu links={mainNav(t)} label={t.nav.explore} />
+        <MobileMenu links={[...mainNav(t), ...moreNav(l, t)]} label={t.nav.explore} />
       </div>
       <nav className="pp-sections" aria-label="Sections">
         {mainNav(t).map((n) => (
@@ -76,6 +83,7 @@ export function ReadingHeader({ locale, query }: { locale: string; query?: strin
             {n.label}
           </Link>
         ))}
+        <MobileMenu variant="more" links={moreNav(l, t)} label={t.nav.explore} />
       </nav>
     </header>
   );

@@ -1,0 +1,18 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/mmuni/OneDrive/QITL/.wt/security[39m
+
+ [32m✓[39m tests/db/qiraat.test.ts [2m([22m[2m20 tests[22m[2m)[22m[33m 53362[2mms[22m[39m
+ [32m✓[39m tests/db/guidance.test.ts [2m([22m[2m14 tests[22m[2m)[22m[33m 46530[2mms[22m[39m
+ [32m✓[39m tests/db/security.test.ts [2m([22m[2m27 tests[22m[2m)[22m[33m 56936[2mms[22m[39m
+   [33m[2m✓[22m[39m 1. grants: least privilege on every table[2m > [22manon holds no write privilege anywhere, and no API role can TRUNCATE [33m 1345[2mms[22m[39m
+   [33m[2m✓[22m[39m 1. grants: least privilege on every table[2m > [22manon really is refused: insert, update and delete on every table fail with permission denied [33m 3863[2mms[22m[39m
+   [33m[2m✓[22m[39m 1. grants: least privilege on every table[2m > [22mevery write verb granted to authenticated is backed by a policy [33m 2484[2mms[22m[39m
+   [33m[2m✓[22m[39m 2. visibility: drafts and other people's rows stay hidden[2m > [22mevery SELECT policy hides a synthetic draft / someone-else's row from anon and from a non-staff user [33m 2201[2mms[22m[39m
+   [33m[2m✓[22m[39m 3. roles: nobody grants themselves a role[2m > [22ma user with any non-admin role cannot grant a role to themselves or to anyone [33m 787[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[32m61 passed[39m[22m[90m (61)[39m
+[2m   Start at [22m 14:45:02
+[2m   Duration [22m 127.92s[2m (transform 8.46s, setup 71.86s, collect 9.49s, tests 156.83s, environment 4ms, prepare 100.57s)[22m
+
+exit 0

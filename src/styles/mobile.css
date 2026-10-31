@@ -272,3 +272,25 @@ html.zq-noscroll, html.zq-noscroll body { overflow: hidden; }
   .zq-ayah.qr-flash, .zq-ayah.qr-flash .zq-ar-quran { animation: none; }
   .zq-ayah.qr-flash { box-shadow: 0 0 0 2px var(--brass); }
 }
+
+/* ---------- Desktop "Explore" menu at the end of the section bar (the sections that do not fit in it) ---------- */
+.zq-mmenu-more { display: none; }
+@media (min-width: 1024px) {
+  .pp-sections { overflow: visible; align-items: center; }
+  .pp-sections .zq-mmenu-more { display: block; }
+  .zq-mmenu-more > .zq-btn { min-height: 32px; font: 600 13px/18px var(--font-sans); color: var(--ink-muted); }
+  .zq-mmenu-more > .zq-btn span { display: inline !important; }
+  .zq-mmenu-more .zq-mmenu-list { inset-inline-end: auto; inset-inline-start: 0; min-width: 260px; }
+}
+
+/* ---------- Home: every section as a compact card grid ---------- */
+.zq-features-all { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.zq-features-all .zq-feature h3 { margin: 6px 0 4px; }
+.zq-features-all .zq-feature p { margin: 0; font-size: 14px; line-height: 20px; }
+@media (max-width: 600px) {
+  .zq-features-all { grid-template-columns: 1fr 1fr; gap: 10px; padding-inline: var(--gutter); }
+  .zq-features-all .zq-feature { padding: 12px; }
+  .zq-features-all .zq-feature svg { width: 28px; height: 28px; }
+  .zq-features-all .zq-feature h3 { font-size: 15px; line-height: 20px; }
+  .zq-features-all .zq-feature p { font-size: 12.5px; line-height: 17px; }
+}

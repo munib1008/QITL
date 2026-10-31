@@ -1,0 +1,246 @@
+== anon write privileges
+[
+  {
+    table_name: 'content_licence_registry',
+    p: 'UPDATE,INSERT,TRUNCATE,DELETE'
+  },
+  { table_name: 'quiz_questions', p: 'INSERT,UPDATE,TRUNCATE,DELETE' },
+  {
+    table_name: 'quran_word_occurrences',
+    p: 'UPDATE,INSERT,TRUNCATE,DELETE'
+  },
+  { table_name: 'search_index', p: 'INSERT,UPDATE,DELETE,TRUNCATE' },
+  { table_name: 'source_licences', p: 'UPDATE,INSERT,TRUNCATE,DELETE' },
+  { table_name: 'story_media', p: 'INSERT,UPDATE,DELETE,TRUNCATE' },
+  { table_name: 'story_quizzes', p: 'INSERT,TRUNCATE,DELETE,UPDATE' },
+  { table_name: 'story_sections', p: 'UPDATE,TRUNCATE,DELETE,INSERT' }
+]
+== tables without RLS
+[]
+== write policies granting to anon/public roles
+[]
+== select policies qual true on tables with status col
+[
+  {
+    tablename: 'content_permissions',
+    policyname: 'read_all',
+    roles: '{public}',
+    qual: 'true'
+  }
+]
+== views in public
+[
+  {
+    relname: 'hadith_grade_summary',
+    reloptions: '{security_invoker=true}'
+  },
+  { relname: 'comments_public', reloptions: '{security_invoker=true}' },
+  { relname: 'source_licences', reloptions: '{security_invoker=true}' },
+  {
+    relname: 'content_licence_registry',
+    reloptions: '{security_invoker=true}'
+  },
+  {
+    relname: 'quran_word_occurrences',
+    reloptions: '{security_invoker=true}'
+  }
+]
+== security definer functions executable by anon or authenticated
+[
+  {
+    proname: 'can_see_dream_response',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'can_see_question',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'can_sign_check',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'content_permission_allowed',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'creation_profile_public',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'dream_admin_queue',
+    anon: false,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'dream_admin_set_status',
+    anon: false,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'edition_displayable',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'guidance_topic_public',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  { proname: 'has_role', anon: true, auth: true, touches_roles: true },
+  {
+    proname: 'is_dream_assignee',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'is_dream_owner',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'is_dream_scholar',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'is_producer',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  { proname: 'is_staff', anon: true, auth: true, touches_roles: true },
+  {
+    proname: 'is_verified_mufti',
+    anon: true,
+    auth: true,
+    touches_roles: true
+  },
+  {
+    proname: 'lifestyle_food_public',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'lifestyle_hadith_claim_ok',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'lifestyle_profile_public',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'lifestyle_review_ok',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'lifestyle_staff',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'moderate',
+    anon: false,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'qiraat_variant_public',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'quran_edition_allowed',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'quran_edition_ayah',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'scene_public',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'script_public',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'source_publishable',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'subject_published',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  },
+  {
+    proname: 'unsubscribe',
+    anon: true,
+    auth: true,
+    touches_roles: false
+  }
+]
+== write policies on role_assignments
+[
+  {
+    policyname: 'read_own_or_admin',
+    cmd: 'SELECT',
+    roles: '{authenticated}',
+    qual: "((user_id = auth.uid()) OR has_role('admin'::app_role))",
+    with_check: null
+  },
+  {
+    policyname: 'admin_grant',
+    cmd: 'INSERT',
+    roles: '{authenticated}',
+    qual: null,
+    with_check: "(has_role('admin'::app_role) AND (granted_by = auth.uid()))"
+  },
+  {
+    policyname: 'admin_revoke',
+    cmd: 'DELETE',
+    roles: '{authenticated}',
+    qual: "(has_role('admin'::app_role) AND (user_id <> auth.uid()))",
+    with_check: null
+  }
+]
+== all tables
+appeals approximate_polygon_constraints asset_links assets audio_recordings audit_logs bans bookmarks chapter_claims chapters claim_references comment_revisions comments content_dependency_versions content_permissions content_versions correction_requests creation_abilities creation_categories creation_characteristics creation_interactions creation_lessons creation_limitations creation_misconceptions creation_profiles creation_relationships creation_source_references creation_stories creation_visual_assets data_jobs demographic_research discussion_follows discussions dream_content_reviews dream_privacy_preferences dream_reference_links dream_request_assignments dream_request_consents dream_request_status_history dream_requests dream_scholar_responses dream_second_opinions editorial_reviews event_claims event_people event_places event_relationships event_stories evidence_claims feature_flags food_evidence_links glossary_terms guidance_lesson_claims guidance_lessons guidance_links guidance_safety_notes guidance_topics hadith_books hadith_chapters hadith_collections hadith_commentary_links hadith_entries hadith_gradings hadith_number_variants hadith_translations historical_communities historical_daily_activities historical_eras historical_events historical_foods historical_health_conditions historical_housing historical_lifespan_claims historical_occupations historical_reconstructions historical_transport interpretation_differences interpretation_explanations interpretation_reviews legal_acceptances legal_documents lifestyle_infographics lifestyle_record_types lifestyle_reviews lifestyle_source_references locations moderation_actions mufti_answer_citations mufti_answer_reviews mufti_answers mufti_assignments mufti_profiles mufti_question_follows mufti_questions narration_audio narration_jobs narration_voices notification_prefs notifications people person_aliases place_geometries private_notes profiles prophet_lifestyle_fields prophet_lifestyle_profiles qiraat qiraat_misconceptions qiraat_variant_claims qiraat_variant_readings qiraat_variants quiz_questions quran_edition_verses quran_surahs quran_text_editions quran_translations quran_verses quran_word_morphology quran_word_senses rate_limit_events reactions reading_progress reciters relationships reports review_entity_types revision_notes riwayat role_assignments saved_collection_items saved_collections scene_ambient_audio scene_animation_manifest scene_claim_references scene_visual_assets search_index site_settings source_import_jobs source_versions sources stories story_media story_playback_preferences story_playback_progress story_publication_versions story_quizzes story_scenes story_scripts story_sections story_translations tafsir_entries taggings topics translation_comparisons translation_editions translation_glossary translation_jobs translation_reviews translator_profiles transmission_routes user_blocks

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getJourney, journeyStops } from "@/content/journey";
 import { basmala, quranSource } from "@/content/quran";
 import { QuranAttribution } from "@/components/quran/QuranAttribution";
+import { exploreLinks } from "@/lib/nav";
 import { JourneyTimeline } from "@/components/journey/JourneyTimeline";
 import { JourneyHeader } from "@/components/shell/SiteHeader";
 import { DraftBadge } from "@/components/ui/evidence";
@@ -109,16 +110,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <span className="zq-kicker">More ways to understand</span>
             <h2 id="explore-title">Every story, in context.</h2>
           </div>
-          <div className="zq-features">
-            <Feature title="Interactive atlas" points={8} href="/atlas">
-              Documented places, journeys and clearly shaded areas of geographic uncertainty.
-            </Feature>
-            <Feature title="Evidence first" points={10} href="/methodology">
-              Quran passages, hadith references, gradings and reviewer notes behind every stop.
-            </Feature>
-            <Feature title="Connected genealogy" points={12} href="/genealogy">
-              Source-backed family relationships without invented generations.
-            </Feature>
+          <div className="zq-features zq-features-all">
+            {exploreLinks(locale)
+              .filter((l) => l.href !== "/search")
+              .map((l, i) => (
+                <Feature key={l.href} title={l.label} points={([8, 10, 12] as const)[i % 3]!} href={l.href}>
+                  {l.note ?? ""}
+                </Feature>
+              ))}
           </div>
         </section>
       </main>
@@ -140,7 +139,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   );
 }
 
-/** Feature cards stay labelled "Coming soon" until the feature behind them is wired to reviewed data. */
+/** One card per section of QITL (the same list as the Explore menus). Each section states its own data status. */
 function Feature({ title, points, href, children }: { title: string; points: 8 | 10 | 12; href: string; children: React.ReactNode }) {
   return (
     <article className="zq-feature zq-glass">
@@ -150,8 +149,7 @@ function Feature({ title, points, href, children }: { title: string; points: 8 |
           {title}
         </Link>
       </h3>
-      <p>{children}</p>
-      <span className="zq-soon">Coming soon</span>
+      {children ? <p>{children}</p> : null}
     </article>
   );
 }
