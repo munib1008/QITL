@@ -186,10 +186,10 @@ describe("Study panel", () => {
     expect(screen.getByRole("status")).toHaveTextContent("Loading");
   });
 
-  test("actions: Ask a Mufti is visibly not yet available, Save and Report are present; the report form opens", () => {
+  test("actions: Ask a Mufti opens the Q&A form for this verse, Save and Report are present; the report form opens", () => {
     view(data());
     const group = screen.getByRole("group", { name: "Study actions" });
-    expect(within(group).getByText(/Ask a Mufti/)).toHaveAttribute("aria-disabled", "true");
+    expect(within(group).getByRole("link", { name: "Ask a Mufti" }).getAttribute("href")).toMatch(/^\/community\/questions\/ask\?topic=quran_verse&ref=/);
     expect(within(group).getByRole("button", { name: "Save" })).toBeInTheDocument();
     fireEvent.click(within(group).getByRole("button", { name: "Report an error" }));
     expect(screen.getByLabelText("What is wrong?")).toBeInTheDocument();
