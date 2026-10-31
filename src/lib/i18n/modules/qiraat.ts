@@ -1,7 +1,7 @@
 /**
  * Qira'at & Ahruf Learning Centre interface strings (en, ar, ur). Interface text only: no Quran text, no reading, no
  * hadith text and no scholarly ruling is written here. The distinction panel is a neutral draft pending scholarly
- * review and says so. Arabic and Urdu are first drafts awaiting a qualified translator; Urdu falls back to English.
+ * review and says so. Arabic and Urdu are first drafts awaiting a qualified translator.
  */
 import { moduleStrings, type DeepPartial } from "./index";
 
@@ -159,6 +159,7 @@ const ar: DeepPartial<QiraatStrings> = {
       meaning: "المعنى",
     },
     explanation: "الشرح",
+    ref: (s: number, a: number, w: number) => `Q ${s}:${a}، الكلمة ${w}`,
   },
   riwayah: {
     label: "الرواية",
@@ -173,14 +174,84 @@ const ar: DeepPartial<QiraatStrings> = {
   },
 };
 
+/**
+ * Draft Urdu (written by hand from the English): needs review by a qualified translator. The distinction points are
+ * scholarly statements, so they are not translated here: they stay English (rendered lang="en") until the scholarly
+ * reviewers and a qualified translator supply them.
+ */
 const ur: DeepPartial<QiraatStrings> = {
   nav: "قراءات و احرف",
+  navNote: "سات احرف، دس قراءات، اور QITL کیا دکھا سکتا ہے",
   title: "سات احرف اور دس قراءات",
+  lead: "سات احرف کے بارے میں صحیح روایات کیا کہتی ہیں، وہ متواتر قراءات سے کیسے مختلف ہیں، اور QITL آج کون سی قراءات دکھا سکتا ہے۔",
   draft: "مسودہ — علمی جائزے کا منتظر",
+  tabs: { hub: "جائزہ", compare: "قراءات کا موازنہ" },
+  hadith: {
+    title: "صحیح روایات میں سات احرف",
+    lead: "ان روایات کا یہاں حوالہ دیا گیا ہے، اقتباس نہیں۔ ان کا متن اور ترجمہ صرف لائسنس یافتہ ایڈیشن سے، اس کے مطابق نمبر جانچنے کے بعد ظاہر ہوتا ہے۔",
+    licencePending: "متن دستیاب نہیں — لائسنس زیرِ التوا",
+    numbering: "ایڈیشنوں کے درمیان نمبر مختلف ہوتے ہیں؛ کوئی متن دکھانے سے پہلے لائسنس یافتہ ایڈیشن سے جانچے جاتے ہیں۔",
+  },
+  distinction: {
+    title: "احرف اور قراءات ایک چیز نہیں",
+    note: "یہ پینل ایک مختصر غیر جانبدار خلاصہ ہے۔ اس کی جگہ مآخذ کے ساتھ جائزہ شدہ وضاحتیں لیں گی۔",
+  },
+  readers: {
+    title: "دس قراء اور ان کے بیس راوی",
+    lead: "ہر قاری کے بعد اس کے دو راوی آتے ہیں۔ صرف نام؛ تاریخیں اور اسانید جائزے کے بعد صرف مآخذ کے ساتھ شامل کی جاتی ہیں۔",
+    reader: "قاری",
+    transmitters: "راوی",
+    emptyTitle: "قراء کا جدول ابھی شائع نہیں ہوا۔",
+    emptyBody: "دس قراء اور بیس راوی مسودے کے طور پر درج ہیں اور کسی علمی جائزہ کار کی منظوری کے بعد یہاں ظاہر ہوں گے۔",
+    notConfigured: "اس تنصیب پر ڈیٹا بیس منسلک نہیں۔",
+    loadError: "جدول لوڈ نہیں ہو سکا۔ براہِ کرم بعد میں دوبارہ کوشش کریں۔",
+  },
+  available: {
+    title: "ابھی کیا دستیاب ہے",
+    now: "دستیاب",
+    nowItem: "حفص عن عاصم — تنزیل کا عربی متن (عثمانی، ورژن 1.1)، قرآن ریڈر میں اس کے انتساب کے ساتھ دکھایا جاتا ہے۔",
+    notYet: "ابھی لائسنس نہیں",
+    notYetBody: "کسی اور روایت کا متن یا تلاوت ابھی QITL کے لیے لائسنس یافتہ نہیں۔ کچھ بھی دکھانے سے پہلے ہر ایک کو ایک متنی ایڈیشن اور تحریری اجازت یا شائع شدہ لائسنس درکار ہے۔",
+    audio: "ابھی کوئی تلاوت کی آڈیو منظور نہیں ہوئی۔",
+    licences: "ہر ماخذ کا لائسنس کیسا ہے",
+    openReader: "قرآن ریڈر کھولیں",
+  },
+  misconceptions: {
+    title: "عام غلط فہمیاں",
+    lead: "ہر غلط فہمی کا جواب صرف مآخذ کے ساتھ ایک جائزہ شدہ وضاحت سے دیا جاتا ہے۔",
+    empty: "ابھی کوئی جائزہ شدہ وضاحت شائع نہیں ہوئی۔",
+  },
+  compare: {
+    title: "قراءات کا موازنہ",
+    lead: "ایک لفظ کی قراءات ساتھ ساتھ، ہر ایک اپنی روایت کے لائسنس یافتہ متنی ایڈیشن سے نقل کی گئی، جائزہ شدہ وضاحت کے ساتھ۔",
+    emptyTitle: "ابھی کوئی موازنہ نہیں دکھایا جا سکتا۔",
+    emptyBody: [
+      "موازنہ تبھی ظاہر ہوتا ہے جب دونوں قراءات ایسے متنی ایڈیشنوں سے آئیں جن کے لائسنس دکھانے کی اجازت دیتے ہوں، فرق کی وضاحت منظور شدہ دلیل سے ہو، اور کسی علمی جائزہ کار نے اسے منظور کیا ہو۔",
+      "آج QITL کے پاس ایک لائسنس یافتہ متن ہے، تنزیل سے حفص عن عاصم۔ کسی اور روایت کا متن لائسنس یافتہ نہیں، اس لیے موازنے کے لیے کچھ نہیں۔",
+    ],
+    notConfigured: "اس تنصیب پر ڈیٹا بیس منسلک نہیں۔",
+    loadError: "موازنے لوڈ نہیں ہو سکے۔ براہِ کرم بعد میں دوبارہ کوشش کریں۔",
+    word: "لفظ",
+    kind: {
+      pronunciation: "تلفظ",
+      vocalization: "حرکات",
+      morphology: "صرفی ساخت",
+      word_form: "لفظ کی شکل",
+      meaning: "معنی",
+    },
+    explanation: "وضاحت",
+    ref: (s: number, a: number, w: number) => `Q ${s}:${a}، لفظ ${w}`,
+  },
   riwayah: {
     label: "روایت",
     current: "حفص عن عاصم — تنزیل عثمانی 1.1",
+    choose: "دیگر روایات",
     unavailable: "دستیاب نہیں: ایڈیشن اور لائسنس حاصل نہیں",
+    help: "صرف حفص عن عاصم کا متن QITL کے لیے لائسنس یافتہ ہے۔ دیگر روایات تب یہاں ظاہر ہوں گی جب ان کا متنی ایڈیشن اور لائسنس حاصل ہو جائے۔",
+    learn: "قراءات کے بارے میں",
+    audioNone: "اس روایت کی ابھی کوئی منظور شدہ تلاوت نہیں۔",
+    audioTitle: "تلاوت",
+    reciter: "قاری",
   },
 };
 

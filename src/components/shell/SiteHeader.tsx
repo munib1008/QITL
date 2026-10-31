@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { draftNotice, getDict } from "@/lib/i18n";
+import { uiStrings } from "@/lib/i18n/modules/ui";
 import { SearchField } from "@/components/ui/misc";
 import { searchStrings } from "@/lib/i18n/modules/search";
 import { Icon } from "@/components/ui/icons";
@@ -8,7 +9,6 @@ import { LangToggle, ThemeToggle } from "./toggles";
 import { MobileMenu } from "./MobileMenu";
 import { Logo, Mark } from "./Logo";
 import { exploreLinks } from "@/lib/nav";
-import { BRAND_FULL } from "@/lib/brand";
 
 export interface NavLink {
   href: string;
@@ -39,12 +39,13 @@ export function mainNav(t: ReturnType<typeof getDict>["t"]): NavLink[] {
 /** Home (journey theme): glass nav with The Journey / Explore / Methodology. */
 export function JourneyHeader({ locale }: { locale: string }) {
   const { locale: l, t } = getDict(locale);
+  const u = uiStrings(locale).shell;
   return (
     <header className="zq-nav">
-      <Link className="zq-brand" href="/" aria-label={`${BRAND_FULL}, home`}>
+      <Link className="zq-brand" href="/" aria-label={u.brandHome}>
         <Logo height={52} tone="dark" priority tagline={t.brandTagline} />
       </Link>
-      <nav className="zq-links" aria-label="Main">
+      <nav className="zq-links" aria-label={u.mainNav}>
         <a href="#journey">{t.nav.journey}</a>
         <a href="#explore">{t.nav.explore}</a>
         <Link href="/methodology">{t.nav.methodology}</Link>
@@ -63,10 +64,11 @@ export function JourneyHeader({ locale }: { locale: string }) {
 /** Reading pages (solid light/dark): brand, global search, language, theme, account. */
 export function ReadingHeader({ locale, query }: { locale: string; query?: string }) {
   const { locale: l, t } = getDict(locale);
+  const u = uiStrings(locale).shell;
   const st = searchStrings(l);
   return (
     <header className="pp-nav">
-      <Link className="pp-brand" href="/" aria-label={`${BRAND_FULL}, home`}>
+      <Link className="pp-brand" href="/" aria-label={u.brandHome}>
         <Logo height={44} priority tagline={t.brandTagline} />
       </Link>
       <SearchField maxWidth={420} defaultValue={query} id="hdr-q" label={st.fieldLabel} placeholder={st.placeholder} />
@@ -80,7 +82,7 @@ export function ReadingHeader({ locale, query }: { locale: string; query?: strin
         <AccountLink signInLabel={t.nav.signIn} accountLabel={t.nav.account} />
         <MobileMenu links={[...mainNav(t), ...moreNav(l, t)]} label={t.nav.explore} />
       </div>
-      <nav className="pp-sections" aria-label="Sections">
+      <nav className="pp-sections" aria-label={u.sections}>
         {mainNav(t).map((n) => (
           <Link key={n.href} href={n.href}>
             {n.label}
@@ -94,6 +96,8 @@ export function ReadingHeader({ locale, query }: { locale: string; query?: strin
 
 export function SiteFooter({ locale }: { locale: string }) {
   const { t } = getDict(locale);
+  const f = uiStrings(locale).footer;
+  const u = uiStrings(locale).shell;
   return (
     <footer className="pp-foot zq-sitefoot">
       <div className="zq-foot-cols">
@@ -105,17 +109,17 @@ export function SiteFooter({ locale }: { locale: string }) {
           <p className="zq-meta">{t.footer.principles}</p>
           {draftNotice(t) ? <p className="zq-meta">{draftNotice(t)}</p> : null}
         </div>
-        <nav aria-label="About">
-          <Link href="/about">About</Link>
-          <Link href="/methodology">Source methodology</Link>
-          <Link href="/review-board">Scholarly review board</Link>
-          <Link href="/corrections">Corrections</Link>
+        <nav aria-label={u.about}>
+          <Link href="/about">{f.about}</Link>
+          <Link href="/methodology">{f.methodology}</Link>
+          <Link href="/review-board">{f.reviewBoard}</Link>
+          <Link href="/corrections">{f.corrections}</Link>
         </nav>
-        <nav aria-label="Legal">
-          <Link href="/terms">Terms</Link>
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/accessibility">Accessibility</Link>
-          <Link href="/contact">Contact</Link>
+        <nav aria-label={u.legal}>
+          <Link href="/terms">{f.terms}</Link>
+          <Link href="/privacy">{f.privacy}</Link>
+          <Link href="/accessibility">{f.accessibility}</Link>
+          <Link href="/contact">{f.contact}</Link>
         </nav>
       </div>
       <p className="zq-meta">{t.footer.corrections}</p>

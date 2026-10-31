@@ -2,6 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { EmptyState } from "@/components/ui/misc";
+import { atlasStrings } from "@/lib/i18n/modules/atlas";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 interface Props {
   tilesUrl: string;
@@ -14,6 +17,9 @@ interface Props {
  * dotted hypotheses and dashed routes. Unknown places are never drawn (the page lists them instead).
  */
 export function AtlasMap({ tilesUrl, attribution }: Props) {
+  const locale = useLocale();
+  const t = atlasStrings(locale);
+  const legend = uiStrings(locale).legend;
   const el = useRef<HTMLDivElement>(null);
   const [state, setState] = useState<"loading" | "ready" | "no_data" | "error">("loading");
 
@@ -61,7 +67,7 @@ export function AtlasMap({ tilesUrl, attribution }: Props) {
               const h = document.createElement("b");
               h.textContent = p.name;
               const m = document.createElement("p");
-              m.textContent = `${p.precision === "point" ? "Verified point" : p.precision === "region" ? "Approximate region" : p.precision === "hypothesis" ? "Historical hypothesis" : "Approximate route"}${p.source ? ` · Source: ${p.source}` : ""}`;
+              m.textContent = `${p.precision === "point" ? legend.point : p.precision === "region" ? legend.region : p.precision === "hypothesis" ? legend.hypothesis : legend.route}${p.source ? ` · ${t.source}: ${p.source}` : ""}`;
               box.append(h, m);
               new maplibregl.Popup({ closeButton: true }).setLngLat(e.lngLat).setDOMContent(box).addTo(map);
             });
@@ -75,22 +81,23 @@ export function AtlasMap({ tilesUrl, attribution }: Props) {
       cancelled = true;
       map?.remove();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- the popup words follow the page's language, fixed per page
   }, [tilesUrl, attribution]);
 
   return (
     <div className="zq-atlas">
-      <div ref={el} className="zq-atlas-canvas" role="region" aria-label="Atlas map. The list beside the map is the text alternative." />
+      <div ref={el} className="zq-atlas-canvas" role="region" aria-label={t.mapRegion} />
       {state === "no_data" ? (
         <div className="zq-atlas-overlay">
-          <EmptyState title="No reviewed places are published yet.">
-            <p>Places appear on the map once their geometry, source and claim are approved.</p>
+          <EmptyState title={t.noPlaces}>
+            <p>{t.noPlacesBody}</p>
           </EmptyState>
         </div>
       ) : null}
       {state === "error" ? (
         <div className="zq-atlas-overlay">
-          <EmptyState title="The map could not be loaded.">
-            <p>The list of places beside it still works.</p>
+          <EmptyState title={t.mapError}>
+            <p>{t.mapErrorBody}</p>
           </EmptyState>
         </div>
       ) : null}

@@ -6,6 +6,8 @@ import { EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
 import { COLLECTIONS, collectionById } from "@/lib/data/hadith";
 import { getServerSupabase } from "@/lib/supabase/server";
+import { englishContent } from "@/lib/i18n/locales";
+import { hadithStrings } from "@/lib/i18n/modules/hadith";
 
 export async function generateMetadata({ params }: { params: Promise<{ collection: string }> }): Promise<Metadata> {
   const c = collectionById((await params).collection);
@@ -20,6 +22,8 @@ export default async function CollectionPage({ params, searchParams }: { params:
   const { n } = await searchParams;
   const c = collectionById(collection);
   if (!c) notFound();
+  const t = hadithStrings(locale);
+  const en = englishContent(locale);
   const sb = await getServerSupabase();
   const entries = sb
     ? (await sb.from("hadith_entries").select("canonical_number, numbering_system").eq("collection_id", c.id).eq("status", "published").order("canonical_number").limit(200)).data
@@ -28,29 +32,29 @@ export default async function CollectionPage({ params, searchParams }: { params:
   return (
     <ReadingPage
       locale={locale}
-      crumbs={[{ href: "/hadith", label: "Hadith" }, { label: c.name }]}
+      crumbs={[{ href: "/hadith", label: t.title }, { label: c.name }]}
       title={
         <>
-          {c.name}{" "}
+          <span {...en}>{c.name}</span>{" "}
           <small lang="ar" dir="rtl" style={{ font: "400 26px/1 var(--font-naskh)", color: "var(--ink-muted)" }}>
             {c.arabic}
           </small>
         </>
       }
-      lead={c.note}
+      lead={<span {...en}>{c.note}</span>}
     >
       <div className="zq-pagebody">
-        <form action={`/hadith/${c.id}`} method="get" className="zq-form" role="search" aria-label={`Go to a narration in ${c.name}`}>
+        <form action={`/hadith/${c.id}`} method="get" className="zq-form" role="search" aria-label={t.goTo(c.name)}>
           <div className="zq-field">
-            <label htmlFor="hn">Go to a narration by number</label>
+            <label htmlFor="hn">{t.goToLabel}</label>
             <input id="hn" name="n" className="zq-input" inputMode="numeric" pattern="[0-9]+[a-z]?" defaultValue={n} dir="ltr" />
-            <span className="zq-help">Numbers differ between printed editions; each page states its numbering system.</span>
+            <span className="zq-help">{t.goToHelp}</span>
           </div>
         </form>
         {n && /^[0-9]+[a-z]?$/.test(n) ? (
           <p>
             <Link href={`/hadith/${c.id}/${n}`}>
-              Open {c.name} {n} →
+              {t.open(c.name, n)}
             </Link>
           </p>
         ) : null}
@@ -67,8 +71,8 @@ export default async function CollectionPage({ params, searchParams }: { params:
             ))}
           </ul>
         ) : (
-          <EmptyState label={<EvidenceLabel kind="unknown">Not yet published</EvidenceLabel>} title={`No narrations from ${c.name} are published yet.`}>
-            <p>Narrations are added only from a licensed edition, pinned by version, and appear once each grading is recorded with its scholar and source.</p>
+          <EmptyState label={<EvidenceLabel kind="unknown">{t.notYetPublished}</EvidenceLabel>} title={t.noneFrom(c.name)}>
+            <p>{t.noneBody}</p>
           </EmptyState>
         )}
       </div>

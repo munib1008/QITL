@@ -2,8 +2,11 @@
 
 import { useState } from "react";
 import { Icon } from "@/components/ui/icons";
+import { accountStrings } from "@/lib/i18n/modules/account";
+import { useLocale } from "@/lib/i18n/useLocale";
 
-export function CopyCitationButton({ text, label = "Cite this page" }: { text: string; label?: string }) {
+export function CopyCitationButton({ text, label }: { text: string; label?: string }) {
+  const t = accountStrings(useLocale());
   const [state, setState] = useState<"idle" | "done" | "failed">("idle");
   return (
     <button
@@ -21,13 +24,14 @@ export function CopyCitationButton({ text, label = "Cite this page" }: { text: s
       }}
     >
       {state === "done" ? <Icon.check /> : <Icon.copy />}
-      {state === "done" ? "Citation copied" : state === "failed" ? "Copy failed" : label}
+      {state === "done" ? t.citationCopied : state === "failed" ? t.copyFailed : (label ?? t.cite)}
     </button>
   );
 }
 
 /** Native share sheet where available; otherwise copies the link. */
 export function ShareButton({ title, path }: { title: string; path: string }) {
+  const t = accountStrings(useLocale());
   const [copied, setCopied] = useState(false);
   return (
     <button
@@ -54,7 +58,7 @@ export function ShareButton({ title, path }: { title: string; path: string }) {
       }}
     >
       <Icon.share />
-      {copied ? "Link copied" : "Share"}
+      {copied ? t.linkCopied : t.share}
     </button>
   );
 }

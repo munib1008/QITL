@@ -50,7 +50,7 @@ export interface StoryPlayerProps {
  */
 export function StoryPlayer({ bundle, locale, kids: kidsProp = false, preview = false }: StoryPlayerProps) {
   const t = getPlayerStrings(locale).player;
-  const dir = locale === "ar" ? "rtl" : "ltr";
+  const dir = locale === "ar" || locale === "ur" ? "rtl" : "ltr";
   const session = useSession();
   const store: PlaybackStore = session.status === "signed_in" ? accountStore : localStore;
   const reduceMotion = useReducedMotion();

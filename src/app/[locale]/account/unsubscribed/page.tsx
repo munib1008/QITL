@@ -1,15 +1,20 @@
+import type { Metadata } from "next";
 import { ReadingPage } from "@/components/shell/ReadingPage";
+import { accountStrings } from "@/lib/i18n/modules/account";
 
-export const metadata = { title: "Unsubscribed", robots: { index: false } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  return { title: accountStrings((await params).locale).unsubscribed, robots: { index: false } };
+}
 
 export default async function Unsubscribed({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ ok?: string }> }) {
   const { locale } = await params;
   const ok = (await searchParams).ok === "1";
+  const t = accountStrings(locale);
   return (
     <ReadingPage
       locale={locale}
-      title={ok ? "You are unsubscribed" : "That link did not work"}
-      lead={ok ? "You will not receive digest or reply emails. You can turn them back on from My library." : "The unsubscribe link is invalid or has already been used. Sign in and change notifications from My library."}
+      title={ok ? t.unsubscribedTitle : t.badLinkTitle}
+      lead={ok ? t.unsubscribedBody : t.badLinkBody}
     >
       <div className="zq-pagebody" />
     </ReadingPage>

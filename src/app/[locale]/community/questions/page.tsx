@@ -7,10 +7,11 @@ import { Pill } from "@/components/mufti/ui";
 import { getPublicSupabase } from "@/lib/supabase/server";
 import { muftiT } from "@/lib/i18n/modules/mufti";
 
-export const metadata: Metadata = {
-  title: "Questions to muftis",
-  description: "Public questions answered by verified muftis, each answer with its evidence and an independent review.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  const t = muftiT(l).list;
+  return { title: t.title, description: t.lead };
+}
 export const revalidate = 300;
 
 interface Row {

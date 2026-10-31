@@ -5,6 +5,8 @@ import { useState } from "react";
 import { BookmarkButton } from "@/components/account/BookmarkButton";
 import type { BookmarkTarget } from "@/lib/validation";
 import { Icon } from "./icons";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 export interface CardActionsProps {
   reference: string;
@@ -15,6 +17,7 @@ export interface CardActionsProps {
 
 /** Bookmark, copy reference, source and discuss. Actions without a target are left out, never mocked. */
 export function CardActions({ reference, bookmark, sourceHref, discussHref }: CardActionsProps) {
+  const t = uiStrings(useLocale()).actions;
   const [copied, setCopied] = useState<"idle" | "done" | "failed">("idle");
   const copy = async () => {
     try {
@@ -26,22 +29,22 @@ export function CardActions({ reference, bookmark, sourceHref, discussHref }: Ca
     setTimeout(() => setCopied("idle"), 2000);
   };
   return (
-    <div className="zq-actions" role="group" aria-label="Actions">
+    <div className="zq-actions" role="group" aria-label={t.group}>
       {bookmark ? <BookmarkButton target={bookmark} variant="icon" /> : null}
       <button type="button" className="zq-iconbtn" onClick={copy} aria-live="polite">
         {copied === "done" ? <Icon.check /> : <Icon.copy />}
-        {copied === "done" ? "Copied" : copied === "failed" ? "Copy failed" : "Copy reference"}
+        {copied === "done" ? t.copied : copied === "failed" ? t.copyFailed : t.copy}
       </button>
       {sourceHref ? (
         <Link className="zq-iconbtn" href={sourceHref}>
           <Icon.source />
-          Source
+          {t.source}
         </Link>
       ) : null}
       {discussHref ? (
         <Link className="zq-iconbtn" href={discussHref}>
           <Icon.discuss />
-          Discuss
+          {t.discuss}
         </Link>
       ) : null}
     </div>

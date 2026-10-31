@@ -5,43 +5,53 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import type { Role } from "@/lib/admin";
 import { stripLocale } from "@/lib/i18n";
+import { adminStrings } from "@/lib/i18n/modules/admin";
 
-const LINKS: Array<{ href: string; label: string; roles: Role[] }> = [
-  { href: "/admin", label: "Overview", roles: ["editor", "scholarly_reviewer", "moderator", "admin"] },
-  { href: "/admin/review", label: "Review queue", roles: ["editor", "scholarly_reviewer", "admin"] },
-  { href: "/admin/life-through-ages", label: "Life Through the Ages", roles: ["editor", "scholarly_reviewer", "science_reviewer", "admin"] },
-  { href: "/admin/events/new", label: "New event", roles: ["editor", "admin"] },
-  { href: "/admin/profiles", label: "Story editor", roles: ["editor", "admin"] },
-  { href: "/admin/stories", label: "Stories", roles: ["editor", "admin"] },
-  { href: "/admin/guidance", label: "Life Guidance", roles: ["editor", "admin"] },
-  { href: "/admin/studio", label: "Story production", roles: ["editor", "scholarly_reviewer", "translation_reviewer", "audio_producer", "admin"] },
-  { href: "/admin/studio/translations", label: "Translation review", roles: ["translation_reviewer", "scholarly_reviewer", "admin"] },
-  { href: "/admin/studio/audio", label: "Audio QA & ambience", roles: ["audio_producer", "admin"] },
-  { href: "/admin/relationships", label: "Genealogy edges", roles: ["editor", "admin"] },
-  { href: "/admin/media", label: "Media Library", roles: ["editor", "scholarly_reviewer", "admin"] },
-  { href: "/admin/creation", label: "Creation Atlas", roles: ["editor", "scholarly_reviewer", "admin"] },
-  { href: "/admin/moderation", label: "Moderation", roles: ["moderator", "admin"] },
-  { href: "/admin/mufti", label: "Mufti Q&A", roles: ["moderator", "admin"] },
-  { href: "/admin/dreams", label: "Dream requests", roles: ["admin"] },
-  { href: "/admin/corrections", label: "Corrections", roles: ["editor", "admin"] },
-  { href: "/admin/editions", label: "Translation editions", roles: ["editor", "admin"] },
-  { href: "/admin/explanations", label: "Explanations & checks", roles: ["editor", "scholarly_reviewer", "translation_reviewer", "admin"] },
-  { href: "/admin/qiraat", label: "Qira'at", roles: ["editor", "scholarly_reviewer", "admin"] },
-  { href: "/admin/sources", label: "Sources & licences", roles: ["admin"] },
-  { href: "/admin/licences", label: "Content licences", roles: ["editor", "admin"] },
-  { href: "/admin/users", label: "Users & roles", roles: ["admin"] },
-  { href: "/admin/audit", label: "Audit trail", roles: ["admin"] },
+const LINKS: Array<{ href: string; roles: Role[] }> = [
+  { href: "/admin", roles: ["editor", "scholarly_reviewer", "moderator", "admin"] },
+  { href: "/admin/review", roles: ["editor", "scholarly_reviewer", "admin"] },
+  { href: "/admin/life-through-ages", roles: ["editor", "scholarly_reviewer", "science_reviewer", "admin"] },
+  { href: "/admin/events/new", roles: ["editor", "admin"] },
+  { href: "/admin/profiles", roles: ["editor", "admin"] },
+  { href: "/admin/stories", roles: ["editor", "admin"] },
+  { href: "/admin/guidance", roles: ["editor", "admin"] },
+  { href: "/admin/studio", roles: ["editor", "scholarly_reviewer", "translation_reviewer", "audio_producer", "admin"] },
+  { href: "/admin/studio/translations", roles: ["translation_reviewer", "scholarly_reviewer", "admin"] },
+  { href: "/admin/studio/audio", roles: ["audio_producer", "admin"] },
+  { href: "/admin/relationships", roles: ["editor", "admin"] },
+  { href: "/admin/media", roles: ["editor", "scholarly_reviewer", "admin"] },
+  { href: "/admin/creation", roles: ["editor", "scholarly_reviewer", "admin"] },
+  { href: "/admin/moderation", roles: ["moderator", "admin"] },
+  { href: "/admin/mufti", roles: ["moderator", "admin"] },
+  { href: "/admin/dreams", roles: ["admin"] },
+  { href: "/admin/corrections", roles: ["editor", "admin"] },
+  { href: "/admin/editions", roles: ["editor", "admin"] },
+  { href: "/admin/explanations", roles: ["editor", "scholarly_reviewer", "translation_reviewer", "admin"] },
+  { href: "/admin/qiraat", roles: ["editor", "scholarly_reviewer", "admin"] },
+  { href: "/admin/sources", roles: ["admin"] },
+  { href: "/admin/licences", roles: ["editor", "admin"] },
+  { href: "/admin/users", roles: ["admin"] },
+  { href: "/admin/audit", roles: ["admin"] },
 ];
 
 /**
  * Editorial navigation. On phones and tablets it is a collapsible menu (a native disclosure) that closes after a
  * choice; from 1024px it is the open side column.
  */
-export function AdminNav({ roles }: { roles: Role[] }) {
+export interface AdminNavLabels {
+  menu: string;
+  editorial: string;
+  nav: Record<string, string>;
+  roles: Record<string, string>;
+}
+
+const en = adminStrings("en");
+
+export function AdminNav({ roles, labels }: { roles: Role[]; labels?: AdminNavLabels }) {
   const path = stripLocale(usePathname());
   const isAdmin = roles.includes("admin");
   const ref = useRef<HTMLDetailsElement>(null);
-  const links = LINKS.filter((l) => isAdmin || l.roles.some((r) => roles.includes(r)));
+  const links = LINKS.filter((l) => isAdmin || l.roles.some((r) => roles.includes(r))).map((l) => ({ ...l, label: (labels ?? en).nav[l.href] ?? l.href }));
   const current = links.find((l) => l.href === path);
   useEffect(() => {
     const d = ref.current;
@@ -55,14 +65,14 @@ export function AdminNav({ roles }: { roles: Role[] }) {
     return () => mq.removeEventListener("change", sync);
   }, [path]);
   return (
-    <nav aria-label="Editorial" className="zq-admin-nav">
+    <nav aria-label={(labels ?? en).editorial} className="zq-admin-nav">
       <details ref={ref}>
         <summary>
-          <span>Editorial menu</span>
+          <span>{(labels ?? en).menu}</span>
           {current ? <span className="zq-admin-nav-now">{current.label}</span> : null}
         </summary>
         <p className="zq-eyebrow" style={{ padding: "0 12px 8px" }}>
-          {roles.map((r) => r.replace("_", " ")).join(" · ")}
+          {roles.map((r) => labels?.roles[r] ?? r.replace("_", " ")).join(" · ")}
         </p>
         {links.map((l) => (
           <Link key={l.href} href={l.href} aria-current={path === l.href ? "page" : undefined}>

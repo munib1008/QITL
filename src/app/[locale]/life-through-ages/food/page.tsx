@@ -7,7 +7,11 @@ import { lifestyleStrings } from "@/lib/i18n/modules/lifestyle";
 import { getFoods } from "@/lib/lifestyle/data";
 import { splitReconstructions } from "@/lib/lifestyle/model";
 
-export const metadata: Metadata = { title: "Food explorer · Life Through the Ages", alternates: { canonical: `${BASE}/food` } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  const t = lifestyleStrings(l);
+  return { title: `${t.sections.food} · ${t.title}`, alternates: { canonical: `${BASE}/food` } };
+}
 export const revalidate = 300;
 
 /** Foods and where each mention comes from. The caution is fixed and always shown, records or not. */

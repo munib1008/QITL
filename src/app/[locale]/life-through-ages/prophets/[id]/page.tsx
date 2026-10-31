@@ -18,11 +18,11 @@ export const dynamicParams = false;
 /** Published profiles come from the database; refresh every 5 minutes. */
 export const revalidate = 300;
 
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const pos = findStop(id);
   if (!pos) return {};
-  return { title: `${pos.item.name}: Their Life & Times`, alternates: { canonical: `${BASE}/prophets/${id}` } };
+  return { title: `${pos.item.name}: ${lifestyleStrings((await params).locale).prophet.tab}`, alternates: { canonical: `${BASE}/prophets/${id}` } };
 }
 
 export default async function ProphetLifePage({ params }: { params: Promise<{ locale: string; id: string }> }) {

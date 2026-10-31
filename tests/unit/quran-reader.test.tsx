@@ -180,12 +180,14 @@ describe("Dream Understanding links use ayahHash like the rest of the site", () 
 });
 
 describe("reader strings", () => {
-  test("Arabic and Urdu drafts fall back to English for anything missing", () => {
+  test("Arabic and Urdu drafts cover the formatted strings; unknown languages fall back to English", () => {
     for (const l of ["en", "ar", "ur"]) {
       const t = quranReaderStrings(l);
       expect(t.jump.errAyah(7)).toMatch(/7/);
-      expect(t.markers.hizb(3, 2)).toBe("¼ Hizb 3");
+      expect(t.markers.hizb(3, 2)).toMatch(/3/);
     }
+    expect(quranReaderStrings("en").markers.hizb(3, 2)).toBe("¼ Hizb 3");
+    expect(quranReaderStrings("xx").markers.hizb(3, 2)).toBe("¼ Hizb 3");
     expect(quranReaderStrings("ar").progress.continue).toBe("تابع القراءة");
   });
 });

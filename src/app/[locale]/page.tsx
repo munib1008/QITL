@@ -8,12 +8,15 @@ import { JourneyHeader } from "@/components/shell/SiteHeader";
 import { DraftBadge } from "@/components/ui/evidence";
 import { Rosette } from "@/components/ui/icons";
 import { Mark } from "@/components/shell/Logo";
+import { getDict } from "@/lib/i18n";
 import { publicEnv } from "@/lib/env";
+import { homeStrings } from "@/lib/i18n/modules/home";
+import { uiStrings } from "@/lib/i18n/modules/ui";
 import { jsonForScript } from "@/lib/security/html";
-import { BRAND_FULL } from "@/lib/brand";
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  const t = homeStrings(locale);
   const journey = getJourney();
   const stops = journeyStops(journey);
   // A stop can present more than one prophet ("Musa & Harun"), so count names, not cards.
@@ -24,7 +27,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: BRAND_FULL,
+    name: uiStrings(locale).site.title,
     url: publicEnv.siteUrl,
     inLanguage: ["en", "ar", "ur"],
     potentialAction: { "@type": "SearchAction", target: `${publicEnv.siteUrl}/search?q={query}`, "query-input": "required name=query" },
@@ -41,35 +44,35 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               {bsm}
             </p>
           ) : null}
-          <span className="zq-kicker">A journey through sacred history</span>
+          <span className="zq-kicker">{t.kicker}</span>
           <h1 id="hero-title">
-            From the beginning.<span>To the final Messenger.</span>
+            {t.heroTitle}
+            <span>{t.heroTitle2}</span>
           </h1>
           <p className="zq-lead">
-            From Adam <span lang="ar">(عليه السلام)</span> to the passing of the Prophet Muhammad ﷺ — every prophet named in the
-            Quran, the surahs that tell his story, and every date marked with how certain it is.
+            {t.leadBefore} <span lang="ar">(عليه السلام)</span> {t.leadAfter}
           </p>
           <div className="zq-heroact">
             <a className="zq-btn zq-btn-primary zq-btn-link" href="#journey">
-              Begin the journey
+              {t.begin}
             </a>
             <Link className="zq-btn zq-btn-secondary zq-btn-link" href="/methodology">
-              How it works
+              {t.how}
             </Link>
           </div>
           <div className="zq-facts">
             {/* These counts are computed from the journey content, never typed in. */}
             <div>
               <b>{prophets}</b>
-              <span>prophets named in the Quran</span>
+              <span>{t.prophetsNamed}</span>
             </div>
             <div>
               <b>{milestones}</b>
-              <span>milestones of the final Messenger ﷺ</span>
+              <span>{t.milestones}</span>
             </div>
             <div>
-              <b>Every</b>
-              <span>date labelled by certainty</span>
+              <b>{t.every}</b>
+              <span>{t.everyDate}</span>
             </div>
           </div>
         </section>
@@ -81,26 +84,26 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             draft={journey.status !== "published"}
             intro={
               <div className="zq-sechead">
-                <span className="zq-kicker">The living timeline</span>
-                <h2>Follow the thread of revelation.</h2>
-                <p>Dates appear only where history supports them. Undated eras stay undated, and disputed positions say so.</p>
+                <span className="zq-kicker">{t.livingTimeline}</span>
+                <h2>{t.followThread}</h2>
+                <p>{t.datesNote}</p>
                 <div style={{ marginTop: 16 }}>
                   <DraftBadge status={journey.status} />
                 </div>
               </div>
             }
-            endLabel="The journey continues"
-            endNote="The passing of the Prophet ﷺ closes this journey, not the history of Islam."
+            endLabel={t.continues}
+            endNote={t.endNote}
             endActions={
               <div className="zq-row" style={{ justifyContent: "center", padding: 0 }}>
                 <Link className="zq-btn zq-btn-primary zq-btn-sm zq-btn-link" href="/atlas">
-                  Continue to the atlas
+                  {t.toAtlas}
                 </Link>
                 <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" href="/quran">
-                  Explore Quran references
+                  {t.toQuran}
                 </Link>
                 <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" href="/prophets">
-                  View all prophets
+                  {t.allProphets}
                 </Link>
               </div>
             }
@@ -109,8 +112,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
         <section id="explore" style={{ paddingTop: 64 }} aria-labelledby="explore-title">
           <div className="zq-sechead">
-            <span className="zq-kicker">More ways to understand</span>
-            <h2 id="explore-title">Every story, in context.</h2>
+            <span className="zq-kicker">{t.moreWays}</span>
+            <h2 id="explore-title">{t.everyStory}</h2>
           </div>
           <div className="zq-features zq-features-all">
             {exploreLinks(locale)
@@ -126,14 +129,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <footer className="zq-foot" id="method">
         <span className="zq-foot-mark">
           <Mark size={36} tone="dark" />
-          <span>{BRAND_FULL}</span>
+          <span>{uiStrings(locale).site.title}</span>
         </span>
-        <span>Respecting evidence · Preserving uncertainty · Learning together</span>
-        <nav className="zq-foot-links" aria-label="About">
-          <Link href="/about">About</Link>
-          <Link href="/methodology">Methodology</Link>
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/accessibility">Accessibility</Link>
+        <span>{getDict(locale).t.footer.principles}</span>
+        <nav className="zq-foot-links" aria-label={t.about}>
+          <Link href="/about">{t.footerAbout}</Link>
+          <Link href="/methodology">{t.footerMethodology}</Link>
+          <Link href="/privacy">{t.footerPrivacy}</Link>
+          <Link href="/accessibility">{t.footerAccessibility}</Link>
         </nav>
         {bsm ? <QuranAttribution src={quranSource()} /> : null}
       </footer>

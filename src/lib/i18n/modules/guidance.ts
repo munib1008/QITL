@@ -3,6 +3,8 @@
  * by a qualified translator (as for the rest of the Arabic interface). These are interface words only: lesson text,
  * verses and advice come from reviewed database rows, never from this file.
  */
+import type { Locale } from "../dict";
+import { resolveLocale } from "../locales";
 
 const en = {
   nav: "Life Guidance",
@@ -103,8 +105,57 @@ const ar: GuidanceStrings = {
   version: "الإصدار",
 };
 
-export const guidanceStrings: Record<"en" | "ar", GuidanceStrings> = { en, ar }; // Urdu falls back to English until reviewed Urdu strings exist
+/** Draft Urdu (written by hand from the English): needs review by a qualified translator, like the Arabic. */
+const ur: GuidanceStrings = {
+  nav: "زندگی کی رہنمائی",
+  exploreNote: "آج آپ کو کیا درپیش ہے؟",
+  title: "آج آپ کو کیا درپیش ہے؟",
+  kicker: "زندگی کی رہنمائی",
+  lead: "مختصر، جائزہ شدہ اسباق جو کسی صورتِ حال کو اس سے جوڑتے ہیں جو قرآن اور صحیح احادیث کہتی ہیں، مستند علماء اس کی وضاحت کیسے کرتے ہیں، اور QITL کی تجویز کردہ روزمرہ عملی صورت۔",
+  notice: {
+    title: "تعلیمی مواد، ذاتی فتویٰ یا علاج نہیں",
+    body: "یہ صفحات تعلیم دیتے ہیں۔ یہ آپ کی صورتِ حال کے لیے فتویٰ نہیں، اور نہ ہی مشاورت یا طبی نگہداشت ہیں۔ اپنے حالات پر شرعی حکم کے لیے کسی مستند مفتی سے پوچھیں۔",
+    noAi: "ہر سبق مدیران منظور شدہ مآخذ سے لکھتے ہیں اور وہ علمی جائزے کے بعد ہی شائع ہوتا ہے۔ یہاں کوئی مشورہ AI سے تیار نہیں کیا گیا۔",
+  },
+  askMufti: "ذاتی شرعی حکم کے لیے مفتی سے پوچھیں",
+  askMuftiNote: "سوالات کے جواب تصدیق شدہ مفتیان دیتے ہیں، یہ صفحہ نہیں۔",
+  safety: {
+    title: "آپ کی خیریت سب سے پہلے",
+    body: "اگر آپ کو درپیش معاملہ آپ کی صحت، نیند، حفاظت یا برداشت کی صلاحیت کو متاثر کر رہا ہے تو براہِ کرم کسی ڈاکٹر یا ذہنی صحت کے مستند ماہر سے بات کریں۔",
+    crisis: "اگر آپ یا کوئی اور فوری خطرے میں ہے، یا آپ خود کو نقصان پہنچانے کا سوچ رہے ہیں، تو ابھی اپنی مقامی ہنگامی سروس سے رابطہ کریں۔",
+    reviewedNotes: "اس موضوع کے جائزہ شدہ نوٹس",
+  },
+  topicsHeading: "موضوعات",
+  plannedHeading: "زیرِ تیاری موضوعات",
+  plannedNote: "یہ موضوعات منصوبے میں ہیں۔ ہر موضوع اپنے اسباق کے علمی جائزے سے گزرنے کے بعد ہی کھلتا ہے؛ تب تک اس میں کوئی سبق نہیں۔",
+  inPreparation: "زیرِ تیاری",
+  emptyTitle: "ابھی کوئی رہنمائی شائع نہیں ہوئی۔",
+  emptyNotConnected: "زندگی کی رہنمائی ابھی منسلک نہیں ہوئی۔",
+  emptyBody: "ہر سبق منظور شدہ دعووں سے بنتا ہے: آیات یا صحیح احادیث، کسی نامزد عالم کی وضاحت، اور واضح نشان والی روزمرہ تجویز۔ جب تک کوئی علمی جائزہ کار منظوری نہ دے، کچھ ظاہر نہیں ہوتا۔",
+  topicEmptyTitle: "اس موضوع کا ابھی کوئی سبق شائع نہیں ہوا۔",
+  topicEmptyBody: "اس کے اسباق تیار ہو رہے ہیں اور علمی جائزے کے بعد ہی ظاہر ہوں گے۔ اس دوران نیچے دی گئی رہنمائی بدستور لاگو ہے۔",
+  backToTopics: "تمام موضوعات",
+  lessonsHeading: "اسباق",
+  layers: {
+    revelation: "وحی کیا کہتی ہے",
+    revelationNote: "قرآن اور صحیح احادیث، ان کے حوالوں کے ساتھ۔",
+    scholarly: "علماء اس کی وضاحت کیسے کرتے ہیں",
+    scholarlyNote: "نامزد علماء کی وضاحتیں، اس کتاب کے ساتھ جس سے وہ لی گئی ہیں۔",
+    application: "روزمرہ عملی صورت",
+    applicationLabel: "QITL کی تعلیمی تجویز — شرعی حکم نہیں",
+    applicationNote: "غور و فکر کے لیے QITL کے مدیران کی ایک تجویز۔ یہ نہ وحی کا حصہ ہے نہ کسی عالم کا فتویٰ۔",
+  },
+  scholarIn: "در",
+  graded: "درجہ",
+  by: "از",
+  relatedHeading: "متعلقہ انبیاء اور قصے",
+  relatedKinds: { person: "نبی", event: "واقعہ", story: "قصہ", creation: "مخلوق" },
+  reviewed: "جائزہ شدہ",
+  version: "ورژن",
+};
+
+export const guidanceStrings: Record<Locale, GuidanceStrings> = { en, ar, ur };
 
 export function guidanceT(locale: string): GuidanceStrings {
-  return locale === "ar" ? ar : en;
+  return guidanceStrings[resolveLocale(locale)];
 }

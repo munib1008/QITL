@@ -7,7 +7,11 @@ import { lifestyleStrings } from "@/lib/i18n/modules/lifestyle";
 import { getReconstructions } from "@/lib/lifestyle/data";
 import { DAY_PARTS, segmentOk, type DayPart } from "@/lib/lifestyle/model";
 
-export const metadata: Metadata = { title: "A Day in This Era · Life Through the Ages", alternates: { canonical: `${BASE}/day` } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  const t = lifestyleStrings(l);
+  return { title: `${t.sections.day} · ${t.title}`, alternates: { canonical: `${BASE}/day` } };
+}
 export const revalidate = 300;
 
 /** "A Day in This Era": class D reconstructions only, always in the reconstruction container, by part of day (no hours). */

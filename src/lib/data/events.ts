@@ -1,5 +1,6 @@
 import "server-only";
-import { PRECISION_TEXT } from "@/components/ui/cards";
+import { eventStrings } from "@/lib/i18n/modules/events";
+import { uiStrings } from "@/lib/i18n/modules/ui";
 import type { EvidenceKind } from "@/content/labels";
 import type { DatePrecision } from "@/components/ui/cards";
 import type { TimelineEra } from "@/components/ui/VerticalTimeline";
@@ -38,16 +39,16 @@ export async function publishedEvents(): Promise<PublishedEvent[] | null> {
   return (data ?? []) as unknown as PublishedEvent[];
 }
 
-const ERA_TITLE = { sacred_history: "Sacred history", prophetic_life: "The life of the Prophet ﷺ", islamic_history: "Islamic history" } as const;
-
 /** Reviewed events as timeline eras: sacred history in relative order (no years), dated history with CE and AH. */
-export function eventEras(events: PublishedEvent[]): TimelineEra[] {
+export function eventEras(events: PublishedEvent[], locale = "en"): TimelineEra[] {
+  const t = eventStrings(locale);
+  const precision = uiStrings(locale).precision;
   return (["sacred_history", "prophetic_life", "islamic_history"] as const)
     .map((cat) => {
       const items = events.filter((e) => e.category === cat);
       const relative = items.every((e) => e.date_precision === "relative" || e.date_precision === "unknown");
       return {
-        title: ERA_TITLE[cat],
+        title: t.groups[cat],
         kind: relative ? ("relative" as const) : ("dated" as const),
         items: items.map((e) => ({
           id: `event-${e.slug}`,
@@ -58,9 +59,9 @@ export function eventEras(events: PublishedEvent[]): TimelineEra[] {
           href: `/timeline?selected=event-${e.slug}`,
           detail: {
             summary: e.summary ?? undefined,
-            facts: [["Date", PRECISION_TEXT[e.date_precision]] as [string, string]],
+            facts: [[t.date, precision[e.date_precision]] as [string, string]],
             refs: [],
-            links: [{ label: "Read about this event", href: `/events/${e.slug}`, primary: true }],
+            links: [{ label: t.readAbout, href: `/events/${e.slug}`, primary: true }],
           },
         })),
       };

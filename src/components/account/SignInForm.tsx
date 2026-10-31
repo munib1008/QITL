@@ -6,12 +6,15 @@ import { useState } from "react";
 import { getBrowserSupabase } from "@/lib/supabase/browser";
 import { decodeIntent, encodeIntent, safeReturnTo } from "@/lib/validation";
 import { EmptyState, TextField } from "@/components/ui/misc";
+import { accountStrings } from "@/lib/i18n/modules/account";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 /**
  * Passwordless sign-in by email link (and Google when enabled in Supabase). The return path and any pending
  * action travel through the callback, so the reader lands back where they were and confirms the action there.
  */
 export function SignInForm() {
+  const t = accountStrings(useLocale());
   const params = useSearchParams();
   const returnTo = safeReturnTo(params.get("returnTo"));
   const intent = decodeIntent(params.get("intent"));
@@ -23,9 +26,9 @@ export function SignInForm() {
 
   if (!sb)
     return (
-      <EmptyState tone="soon" label={<span className="zq-soon">Coming soon</span>} title="Accounts are not open on this site yet.">
+      <EmptyState tone="soon" label={<span className="zq-soon">{t.soon}</span>} title={t.notOpen}>
         <p>
-          Everything is readable without an account. <Link href={returnTo}>Go back to what you were reading</Link>.
+          {t.readable} <Link href={returnTo}>{t.goBack}</Link>.
         </p>
       </EmptyState>
     );
@@ -41,19 +44,20 @@ export function SignInForm() {
     <div style={{ display: "grid", gap: 24, maxWidth: 480 }}>
       {intent ? (
         <p className="zq-banner" role="status">
-          After you sign in you will return to the page and be asked to confirm saving the bookmark.
+          {t.intent}
         </p>
       ) : null}
       {err ? (
         <p className="zq-error" role="alert">
-          {err === "expired" ? "That sign-in link has expired or was already used. Request a new one." : "Sign-in did not complete. Try again."}
+          {err === "expired" ? t.expired : t.incomplete}
         </p>
       ) : null}
       {state === "sent" ? (
         <div className="pp-card" role="status">
-          <h3>Check your email</h3>
+          <h3>{t.checkEmail}</h3>
           <p style={{ margin: 0 }}>
-            We sent a sign-in link to <b>{email}</b>. It works once and expires soon. You can close this tab.
+            {t.sentTo} <b dir="ltr">{email}</b>
+            {t.sentAfter}
           </p>
         </div>
       ) : (
@@ -66,26 +70,26 @@ export function SignInForm() {
             const { error } = await sb.auth.signInWithOtp({ email, options: { emailRedirectTo: callback(), shouldCreateUser: true } });
             if (error) {
               setState("error");
-              setMessage(error.status === 429 ? "Too many requests. Wait a minute and try again." : "We could not send the link. Check the address and try again.");
+              setMessage(error.status === 429 ? t.tooMany : t.couldNotSend);
             } else setState("sent");
           }}
         >
-          <TextField label="Email" id="email" type="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} help="We email you a one-time sign-in link. No password." error={message ?? undefined} />
+          <TextField label={t.email} id="email" type="email" dir="ltr" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} help={t.emailHelp} error={message ?? undefined} />
           <div>
             <button type="submit" className="zq-btn zq-btn-primary" disabled={state === "sending"} aria-busy={state === "sending" || undefined}>
-              {state === "sending" ? "Sending" : "Email me a sign-in link"}
+              {state === "sending" ? t.sending : t.sendLink}
             </button>
           </div>
         </form>
       )}
       {process.env.NEXT_PUBLIC_AUTH_GOOGLE === "1" ? (
         <button type="button" className="zq-btn zq-btn-secondary" onClick={() => sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: callback() } })}>
-          Continue with Google
+          {t.google}
         </button>
       ) : null}
       <p className="zq-meta">
-        By signing in you agree to the <Link href="/terms">terms</Link> and <Link href="/privacy">privacy notice</Link>. Notes are private by default. You can export or
-        delete your account at any time.
+        {t.agree} <Link href="/terms">{t.terms}</Link> {t.and} <Link href="/privacy">{t.privacy}</Link>
+        {t.agreeAfter}
       </p>
     </div>
   );

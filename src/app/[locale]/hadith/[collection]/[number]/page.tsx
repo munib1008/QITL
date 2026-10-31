@@ -7,6 +7,8 @@ import { EmptyState } from "@/components/ui/misc";
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
 import { AUTHENTIC_GRADES, collectionById, presentedAsSahih } from "@/lib/data/hadith";
 import { getServerSupabase } from "@/lib/supabase/server";
+import { englishContent } from "@/lib/i18n/locales";
+import { hadithStrings } from "@/lib/i18n/modules/hadith";
 
 export async function generateMetadata({ params }: { params: Promise<{ collection: string; number: string }> }): Promise<Metadata> {
   const { collection, number } = await params;
@@ -33,6 +35,8 @@ export default async function HadithPage({ params }: { params: Promise<{ locale:
   const { locale, collection, number } = await params;
   const c = collectionById(collection);
   if (!c || !/^[0-9]+[a-z]?$/.test(number)) notFound();
+  const s = hadithStrings(locale);
+  const en = englishContent(locale);
   const sb = await getServerSupabase();
   const entries: Entry[] | null = sb
     ? ((
@@ -46,7 +50,7 @@ export default async function HadithPage({ params }: { params: Promise<{ locale:
     : null;
 
   return (
-    <ReadingPage locale={locale} crumbs={[{ href: "/hadith", label: "Hadith" }, { href: `/hadith/${c.id}`, label: c.name }, { label: number }]} title={`${c.name} ${number}`}>
+    <ReadingPage locale={locale} crumbs={[{ href: "/hadith", label: s.title }, { href: `/hadith/${c.id}`, label: c.name }, { label: number }]} title={<span {...en}>{`${c.name} ${number}`}</span>}>
       <div className="zq-pagebody">
         {entries?.length ? (
           entries.map((e) => {
@@ -66,16 +70,20 @@ export default async function HadithPage({ params }: { params: Promise<{ locale:
                 />
                 {!c.sahihCollection ? (
                   <p className="zq-meta" data-sahih-presentation={presentedAsSahih(c.id, e.hadith_gradings) ? "sahih" : "not-sahih"}>
-                    {presentedAsSahih(c.id, e.hadith_gradings)
-                      ? "Presented as sahih because a named scholar's recorded grading of this narration says so."
-                      : `Not presented as sahih: no recorded grading of this narration says sahih. Being in ${c.name} is not a grade.`}
+                    {presentedAsSahih(c.id, e.hadith_gradings) ? s.sahih : s.notSahih(c.name)}
                   </p>
                 ) : null}
-                {t ? <p className="zq-licence">Translation: {t.translator}</p> : <p className="zq-licence zq-licence-pending">Translation unavailable — licence pending</p>}
+                {t ? (
+                  <p className="zq-licence">
+                    {s.translation} {t.translator}
+                  </p>
+                ) : (
+                  <p className="zq-licence zq-licence-pending">{s.translationPending}</p>
+                )}
                 {varies ? (
                   <section className="pp-card" aria-labelledby={`dis-${e.id}`}>
-                    <h3 id={`dis-${e.id}`}>Scholars differ on this narration</h3>
-                    <ul className="zq-gradings">
+                    <h3 id={`dis-${e.id}`}>{s.differ}</h3>
+                    <ul className="zq-gradings" {...en}>
                       {e.hadith_gradings.map((g) => (
                         <li key={g.grader}>
                           <b>{g.grader}</b>: {g.grade_label} — <span className="zq-meta">{g.citation}</span>
@@ -88,13 +96,15 @@ export default async function HadithPage({ params }: { params: Promise<{ locale:
             );
           })
         ) : (
-          <EmptyState label={<EvidenceLabel kind="unknown">Not published</EvidenceLabel>} title={`${c.name} ${number} is not published on QITL yet.`}>
-            <p>{sb ? "No reviewed record exists for this number in this collection." : "The hadith database is not connected on this site yet."} No text is shown rather than an unverified one.</p>
+          <EmptyState label={<EvidenceLabel kind="unknown">{s.notPublished}</EvidenceLabel>} title={s.notOnQitl(`${c.name} ${number}`)}>
+            <p>
+              {sb ? s.noRecord : s.notConnected} {s.noText}
+            </p>
           </EmptyState>
         )}
         <section aria-labelledby="disc-h">
           <h2 id="disc-h" className="zq-eyebrow">
-            Discussion
+            {s.discussion}
           </h2>
           <DiscussionPreview contentType="hadith" contentId={`${c.id}:${number}`} />
         </section>

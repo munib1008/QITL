@@ -1,16 +1,16 @@
 import { EditionRegistry } from "@/components/admin/interpretation";
 import { getUser } from "@/lib/supabase/server";
 import { rolesOf } from "@/lib/admin";
+import { adminStrings } from "@/lib/i18n/modules/admin";
 
-export default async function EditionsPage() {
+export default async function EditionsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const a = adminStrings((await params).locale).pages["editions"]!;
   const { sb, user } = await getUser();
   const roles = sb && user ? await rolesOf(sb, user.id) : [];
   return (
     <div style={{ display: "grid", gap: 16 }}>
-      <h1 style={{ font: "500 32px/40px var(--font-display)", margin: 0 }}>Translation editions</h1>
-      <p className="zq-meta">
-        The registry of Quran translations, tafsir, early tafsir and hadith translations. Every edition is registered before anything is imported, and readers see its text only when it is verified and its source licence is cleared. Importers refuse any other edition.
-      </p>
+      <h1 style={{ font: "500 32px/40px var(--font-display)", margin: 0 }}>{a.title}</h1>
+      <p className="zq-meta">{a.lead}</p>
       <EditionRegistry canEdit={roles.includes("editor") || roles.includes("admin")} />
     </div>
   );

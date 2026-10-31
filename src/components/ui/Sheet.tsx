@@ -2,6 +2,8 @@
 
 import { useEffect, useId, useRef, useState, type PointerEvent as RPointerEvent, type ReactNode } from "react";
 import "@/styles/explorers.css";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 /**
  * A modal panel: a draggable, expandable bottom sheet on phones and tablets, a side panel on desktop.
@@ -9,6 +11,7 @@ import "@/styles/explorers.css";
  * Drag the grip up to expand, down to shrink or close; the grip is also a button for keyboard and screen readers.
  */
 export function Sheet({ open, title, onClose, opener, children }: { open: boolean; title: ReactNode; onClose: () => void; opener?: Element | null; children: ReactNode }) {
+  const t = uiStrings(useLocale()).sheet;
   const ref = useRef<HTMLDialogElement>(null);
   const id = useId();
   const [full, setFull] = useState(false);
@@ -86,7 +89,7 @@ export function Sheet({ open, title, onClose, opener, children }: { open: boolea
             type="button"
             className="zx-grip"
             aria-expanded={full}
-            aria-label={full ? "Shrink panel" : "Expand panel"}
+            aria-label={full ? t.shrink : t.expand}
             onPointerDown={down}
             onPointerMove={move}
             onPointerUp={up}
@@ -106,7 +109,7 @@ export function Sheet({ open, title, onClose, opener, children }: { open: boolea
               {title}
             </h2>
             <button type="button" className="zq-btn zq-btn-secondary zx-close" onClick={() => ref.current?.close()}>
-              Close
+              {t.close}
             </button>
           </div>
         </div>

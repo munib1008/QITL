@@ -11,6 +11,8 @@ import { EmptyState } from "@/components/ui/misc";
 import { LanguageNote } from "@/components/i18n/LanguageNote";
 import { parseAyahRange, ayahHash } from "@/lib/refs";
 import { LOCALES } from "@/lib/i18n";
+import { englishContent } from "@/lib/i18n/locales";
+import { quranPageStrings } from "@/lib/i18n/modules/reader";
 import { QuranAttribution } from "@/components/quran/QuranAttribution";
 import { RiwayahIndicator } from "@/components/qiraat/RiwayahIndicator";
 import { JumpToAyah } from "@/components/quran/JumpToAyah";
@@ -22,16 +24,18 @@ export function generateStaticParams() {
 }
 export const dynamicParams = false;
 
-export async function generateMetadata({ params }: { params: Promise<{ surah: string }> }): Promise<Metadata> {
-  const { surah } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; surah: string }> }): Promise<Metadata> {
+  const { locale, surah } = await params;
   const meta = surahList()?.[Number(surah) - 1];
-  return { title: meta ? `Surah ${meta.name}` : `Surah ${surah}` };
+  return { title: quranPageStrings(locale).surah(meta ? meta.name : surah) };
 }
 
 export default async function SurahPage({ params }: { params: Promise<{ locale: string; surah: string }> }) {
   const { locale, surah } = await params;
   const n = Number(surah);
   if (!Number.isInteger(n) || n < 1 || n > 114) notFound();
+  const t = quranPageStrings(locale);
+  const en = englishContent(locale);
   const meta = surahList()?.[n - 1];
   const verses = surahArabic(n);
   const src = quranSource();
@@ -43,7 +47,7 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
   const related = journeyStops()
     .map((s) => ({ s, passages: (s.surahs ?? []).filter((x) => x.number === n).flatMap((x) => x.passages) }))
     .filter((r) => r.passages.length);
-  const name = meta?.name ?? journeyStops().flatMap((s) => s.surahs ?? []).find((x) => x.number === n)?.name ?? `Surah ${n}`;
+  const name = meta?.name ?? journeyStops().flatMap((s) => s.surahs ?? []).find((x) => x.number === n)?.name ?? t.surah(n);
   const ayahLinks: Record<number, Array<{ id: string; name: string }>> = {};
   for (const r of related)
     for (const p of r.passages) {
@@ -55,11 +59,11 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
   return (
     <ReadingPage
       locale={locale}
-      crumbs={[{ href: "/quran", label: "Quran" }, { label: name }]}
-      kicker={<span className="pp-chap">Surah {n}</span>}
+      crumbs={[{ href: "/quran", label: t.title }, { label: name }]}
+      kicker={<span className="pp-chap">{t.surah(n)}</span>}
       title={
         <>
-          {name}{" "}
+          <span {...en}>{name}</span>{" "}
           {meta ? (
             <small lang="ar" dir="rtl" style={{ font: "400 28px/1 var(--font-naskh)", color: "var(--ink-muted)" }}>
               {meta.arabic}
@@ -67,11 +71,11 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
           ) : null}
         </>
       }
-      lead={meta ? `${meta.ayahs} ayat${meta.revelation ? ` · ${meta.revelation}` : ""}` : undefined}
+      lead={meta ? `${t.ayat(meta.ayahs)}${meta.revelation ? ` · ${meta.revelation}` : ""}` : undefined}
       meta={
         <>
           <EvidenceLabel kind="quran" />
-          <span className="zq-licence zq-licence-pending">Translation unavailable — licence pending</span>
+          <span className="zq-licence zq-licence-pending">{t.translationPending}</span>
         </>
       }
     >
@@ -82,8 +86,8 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
         <RiwayahIndicator locale={locale} surah={n} />
         {related.length ? (
           <section aria-labelledby="rel-h" className="pp-card">
-            <h2 id="rel-h">On the journey</h2>
-            <ul className="zq-jc-refs">
+            <h2 id="rel-h">{t.onJourney}</h2>
+            <ul className="zq-jc-refs" {...en}>
               {related.map((r) => (
                 <li key={r.s.id}>
                   <Link href={`/prophets/${r.s.id}`}>{r.s.name}</Link>
@@ -103,28 +107,28 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
           </>
         ) : (
           <>
-            <EmptyState label={<EvidenceLabel kind="unknown">Source not imported</EvidenceLabel>} title="The Arabic of this surah is not loaded yet.">
-              <p>It is shown only from the verified source import, never typed in. Tafsir and translations appear here once licensed and reviewed.</p>
+            <EmptyState label={<EvidenceLabel kind="unknown">{t.sourceNotImported}</EvidenceLabel>} title={t.surahNotLoaded}>
+              <p>{t.surahNotLoadedBody}</p>
             </EmptyState>
             <StudyLauncher surah={n} maxAyah={meta?.ayahs ?? null} related={ayahLinks} locale={locale} />
           </>
         )}
-        <nav className="qr-surahnav" aria-label="Surah navigation">
+        <nav className="qr-surahnav" aria-label={t.surahNav}>
           {n > 1 ? (
             <Link className="zq-btn zq-btn-secondary zq-btn-link" href={`/quran/${n - 1}`} rel="prev">
-              ← Surah {n - 1}
+              {t.prev} {t.surah(n - 1)}
               {surahList()?.[n - 2] ? ` · ${surahList()![n - 2]!.name}` : ""}
             </Link>
           ) : (
             <span />
           )}
           <Link className="zq-btn zq-btn-quiet zq-btn-link" href="/quran">
-            All surahs
+            {t.allSurahs}
           </Link>
           {n < 114 ? (
             <Link className="zq-btn zq-btn-secondary zq-btn-link" href={`/quran/${n + 1}`} rel="next">
-              Surah {n + 1}
-              {surahList()?.[n] ? ` · ${surahList()![n]!.name}` : ""} →
+              {t.surah(n + 1)}
+              {surahList()?.[n] ? ` · ${surahList()![n]!.name}` : ""} {t.next}
             </Link>
           ) : (
             <span />
@@ -132,10 +136,10 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
         </nav>
         <section aria-labelledby="tafsir-h">
           <h2 id="tafsir-h" className="zq-eyebrow">
-            Tafsir
+            {t.tafsir}
           </h2>
-          <EmptyState label={<EvidenceLabel kind="scholar">Not yet attached</EvidenceLabel>} title="No tafsir is attached to this surah yet.">
-            <p>Each tafsir excerpt names its scholar and work, and appears only when its licence is cleared.</p>
+          <EmptyState label={<EvidenceLabel kind="scholar">{t.notAttached}</EvidenceLabel>} title={t.noTafsir}>
+            <p>{t.noTafsirBody}</p>
           </EmptyState>
         </section>
       </div>

@@ -1,6 +1,10 @@
+"use client";
+
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { cx } from "@/lib/cx";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 import type { EvidenceKind } from "@/content/journey";
 import { CitationChip, DemoTag, EditorialStatus, EvidenceLabel, HadithGrade, type HadithGradeProps } from "./evidence";
 import { Icon, Star } from "./icons";
@@ -21,9 +25,10 @@ export interface VerseCardProps {
 
 /** A single ayah: Arabic first, translation second (only when licensed), translator and edition always shown. */
 export function VerseCard({ surahName, reference, arabic, translation, translator, edition, licence, demo, actions }: VerseCardProps) {
+  const t = uiStrings(useLocale()).cards;
   const showTranslation = licence === "cleared" && translation;
   return (
-    <article className="zq-card" aria-label={`Quran ${reference}`}>
+    <article className="zq-card" aria-label={`${t.quran} ${reference}`}>
       <div className="zq-card-head">
         <p className="zq-eyebrow">{surahName}</p>
         <span style={{ display: "flex", gap: 8, alignItems: "center" }}>
@@ -38,16 +43,16 @@ export function VerseCard({ surahName, reference, arabic, translation, translato
         </p>
       ) : (
         <p className="zq-licence zq-licence-pending" data-testid="arabic-pending">
-          Arabic text not loaded — waiting for the verified Quran source to be imported.
+          {t.arabicPending}
         </p>
       )}
       {showTranslation ? <p className="zq-trans">{translation}</p> : null}
       <p className={cx("zq-licence", licence !== "cleared" && "zq-licence-pending")}>
         {licence !== "cleared"
-          ? "Translation unavailable — licence pending"
+          ? t.translationPending
           : translator
-            ? `Translation: ${translator}${edition ? ` · ${edition}` : ""}`
-            : "Arabic only"}
+            ? `${t.translation} ${translator}${edition ? ` · ${edition}` : ""}`
+            : t.arabicOnly}
       </p>
       {actions === false ? null : <CardActions reference={reference} {...(actions ?? {})} />}
     </article>
@@ -67,6 +72,7 @@ export interface HadithCardProps {
 
 /** One narration. Every recorded grading is listed; none recorded is an honest state. */
 export function HadithCard({ collection, number, numbering, arabic, translation, gradings, demo, actions }: HadithCardProps) {
+  const t = uiStrings(useLocale()).cards;
   return (
     <article className="zq-card" aria-label={`${collection} ${number}`}>
       <div className="zq-card-head">
@@ -76,14 +82,14 @@ export function HadithCard({ collection, number, numbering, arabic, translation,
           <CitationChip>{number}</CitationChip>
         </span>
       </div>
-      {numbering ? <p className="zq-meta">Numbering: {numbering}</p> : null}
+      {numbering ? <p className="zq-meta">{t.numbering} {numbering}</p> : null}
       {arabic ? (
         <p className="zq-ar-naskh" lang="ar" dir="rtl">
           {arabic}
         </p>
       ) : null}
       {translation ? <p className="zq-trans">{translation}</p> : null}
-      <ul className="zq-gradings" aria-label="Gradings">
+      <ul className="zq-gradings" aria-label={t.gradings}>
         {(gradings?.length ? gradings : [{}]).map((g, i) => (
           <li key={i}>
             <HadithGrade {...g} />
@@ -96,15 +102,8 @@ export function HadithCard({ collection, number, numbering, arabic, translation,
 }
 
 export type DatePrecision = "exact" | "range" | "estimated" | "relative" | "unknown";
-export const PRECISION_TEXT: Record<DatePrecision, string> = {
-  exact: "Exact date",
-  range: "Date range",
-  estimated: "Estimated",
-  relative: "Relative order only",
-  unknown: "Date unknown",
-};
-
 function DateTrack({ precision, start, end }: { precision: DatePrecision; start?: number; end?: number }) {
+  const label = uiStrings(useLocale()).precision[precision];
   const s = start ?? 30;
   const e = end ?? s + 30;
   const mark =
@@ -120,7 +119,7 @@ function DateTrack({ precision, start, end }: { precision: DatePrecision; start?
       <span className="zq-track-unknown" />
     );
   return (
-    <div className="zq-track" role="img" aria-label={PRECISION_TEXT[precision]}>
+    <div className="zq-track" role="img" aria-label={label}>
       <span className="zq-track-line" />
       {mark}
     </div>
@@ -141,23 +140,25 @@ export interface EventCardProps {
 }
 
 export function EventCard({ title, category, summary, precision, dateLabel, start, end, place, evidence, references }: EventCardProps) {
+  const u = uiStrings(useLocale());
+  const t = u.cards;
   return (
     <article className="zq-card" style={{ maxWidth: 420 }}>
       <div className="zq-card-head">
-        <p className="zq-eyebrow">{category ?? "Event"}</p>
+        <p className="zq-eyebrow">{category ?? t.event}</p>
         {evidence ? <EvidenceLabel kind={evidence} /> : null}
       </div>
       <h3 className="zq-title">{title}</h3>
       {summary ? <p className="zq-meta">{summary}</p> : null}
       <div>
         <span className="zq-datelabel">
-          {PRECISION_TEXT[precision]}
+          {u.precision[precision]}
           {dateLabel ? ` · ${dateLabel}` : ""}
         </span>
         <DateTrack precision={precision} start={start} end={end} />
       </div>
       <p className="zq-meta">
-        Location: <b style={{ color: "var(--ink)" }}>{place ?? "Unknown location"}</b>
+        {t.location} <b style={{ color: "var(--ink)" }}>{place ?? t.unknownLocation}</b>
       </p>
       {references?.length ? (
         <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
@@ -180,6 +181,7 @@ export interface ProphetCardProps {
 }
 
 export function ProphetCard({ name, arabicName, honorific, order, mentions, href }: ProphetCardProps) {
+  const t = uiStrings(useLocale()).cards;
   return (
     <Link className="zq-card zq-prophet zq-focus" href={href} style={{ textDecoration: "none", maxWidth: "none" }}>
       <Star className="zq-prophet-mark" />
@@ -195,7 +197,7 @@ export function ProphetCard({ name, arabicName, honorific, order, mentions, href
             {arabicName}
           </div>
         ) : null}
-        <div className="zq-order">{order ? `Relative order: ${order}` : "Order: unknown"}</div>
+        <div className="zq-order">{order ? `${t.relativeOrder} ${order}` : t.orderUnknown}</div>
       </div>
       {mentions != null ? (
         <p className="zq-meta" style={{ gridColumn: "1 / -1" }}>
@@ -221,6 +223,7 @@ export interface CommentProps {
 
 /** A discussion unit. Hidden or removed comments keep their place with a neutral explanation. */
 export function Comment({ author, role, time, body, citation, edited, status = "visible", demo, actions }: CommentProps) {
+  const t = uiStrings(useLocale()).cards;
   const initials = author
     .split(" ")
     .map((w) => w[0])
@@ -237,20 +240,18 @@ export function Comment({ author, role, time, body, citation, edited, status = "
           {demo ? <DemoTag /> : null}
           {role ? <EditorialStatus status="approved">{role}</EditorialStatus> : null}
           <span className="zq-meta">{time}</span>
-          {edited ? <span className="zq-meta">· edited</span> : null}
+          {edited ? <span className="zq-meta">{t.edited}</span> : null}
         </div>
         {status === "visible" ? (
           <p className="zq-comment-body">{body}</p>
         ) : (
           <p className="zq-comment-removed">
-            {status === "hidden"
-              ? "Hidden while a moderator reviews a report."
-              : "Removed by a moderator for breaking the discussion guidelines."}
+            {status === "hidden" ? t.hidden : t.removed}
           </p>
         )}
         {status === "visible" && citation ? (
           <div style={{ marginBottom: 8 }}>
-            <CitationChip kind="Cites">{citation}</CitationChip>
+            <CitationChip kind={t.cites}>{citation}</CitationChip>
           </div>
         ) : null}
         {status === "visible" && actions ? <div style={{ display: "flex", gap: 4 }}>{actions}</div> : null}

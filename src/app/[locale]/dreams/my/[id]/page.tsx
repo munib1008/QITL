@@ -11,7 +11,10 @@ import { dreamsT } from "@/lib/i18n/modules/dreams";
 import { muftiT } from "@/lib/i18n/modules/mufti";
 import { UUID_RE, type CitationRow } from "@/lib/mufti";
 
-export const metadata: Metadata = { title: "Your dream request", robots: { index: false, follow: false } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  return { title: dreamsT(l).detail.title, robots: { index: false, follow: false } };
+}
 export const dynamic = "force-dynamic";
 
 interface Response {

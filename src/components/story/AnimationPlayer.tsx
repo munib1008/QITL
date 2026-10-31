@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
+import { storyStrings } from "@/lib/i18n/modules/story";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 /**
  * Symbolic, environmental animations: water, light, grain, stone and architecture. Never a person, a prophet, an
@@ -126,6 +128,7 @@ const SCENES: Record<string, { label: string; render: () => ReactNode }> = {
 
 export function AnimationPlayer({ animation, caption, alt, gentle }: { animation: string; caption: string; alt: string; gentle?: boolean }) {
   const scene = SCENES[animation];
+  const t = storyStrings(useLocale());
   const [playing, setPlaying] = useState(false);
   const [run, setRun] = useState(0);
   useEffect(() => {
@@ -143,7 +146,7 @@ export function AnimationPlayer({ animation, caption, alt, gentle }: { animation
         <span>{caption}</span>
         <span className="qa-controls">
           <button type="button" className="zq-btn zq-btn-quiet zq-btn-sm" onClick={() => setPlaying((p) => !p)} aria-pressed={playing}>
-            {playing ? "Pause" : "Play"}
+            {playing ? t.pause : t.play}
           </button>
           <button
             type="button"
@@ -153,10 +156,10 @@ export function AnimationPlayer({ animation, caption, alt, gentle }: { animation
               setPlaying(true);
             }}
           >
-            Replay
+            {t.replay}
           </button>
         </span>
-        <span className="zq-meta qa-note">Symbolic illustration; it does not depict people or show details beyond the sources.</span>
+        <span className="zq-meta qa-note">{t.symbolic}</span>
       </figcaption>
     </figure>
   );

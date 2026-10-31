@@ -5,14 +5,18 @@ import Link from "next/link";
 import { EvidenceLabel } from "@/components/ui/evidence";
 import { usePanZoom, ZoomControls, type Size } from "@/components/ui/panzoom";
 import { childrenOf, layoutGraph, NODE_H, NODE_W } from "./layout";
-import { LINE_TEXT, lineStatus, type GenealogyGraph } from "./types";
+import { lineStatus, type GenealogyGraph } from "./types";
+import { genealogyStrings } from "@/lib/i18n/modules/atlas";
+import { useLocale } from "@/lib/i18n/useLocale";
+
+type G = ReturnType<typeof genealogyStrings>;
 
 /** How an edge reads from the selected person's side. */
-function relationFrom(kind: string, selIsFrom: boolean): string {
-  if (kind === "parent_of") return selIsFrom ? "Parent of" : "Child of";
-  if (kind === "descendant_of") return selIsFrom ? "Descendant of" : "Ancestor of";
-  if (kind === "spouse_of") return "Spouse of";
-  if (kind === "sibling_of") return "Sibling of";
+function relationFrom(kind: string, selIsFrom: boolean, t: G): string {
+  if (kind === "parent_of") return selIsFrom ? t.relFrom.parent_of : t.relFrom.child_of;
+  if (kind === "descendant_of") return selIsFrom ? t.relFrom.descendant_of : t.relFrom.ancestor_of;
+  if (kind === "spouse_of") return t.relFrom.spouse_of;
+  if (kind === "sibling_of") return t.relFrom.sibling_of;
   return kind.replace(/_/g, " ");
 }
 
@@ -22,6 +26,7 @@ function relationFrom(kind: string, selIsFrom: boolean): string {
  * lines keep distinct strokes and words. The relationship list on the page is the text alternative.
  */
 export function GenealogyExplorer({ graph, centerable, rtl = false }: { graph: GenealogyGraph; centerable: string[]; rtl?: boolean }) {
+  const t = genealogyStrings(useLocale());
   const [selected, setSelected] = useState(graph.focus);
   const [only, setOnly] = useState(false);
   const [collapsed, setCollapsed] = useState<ReadonlySet<string>>(new Set());
@@ -78,8 +83,7 @@ export function GenealogyExplorer({ graph, centerable, rtl = false }: { graph: G
   return (
     <div className="zg">
       <p id="zg-help" className="zq-meta zx-note">
-        Parents are drawn above, children below, spouses and siblings beside. Tap a person to focus them. Drag or use the arrow keys to pan; pinch, or the
-        buttons, to zoom.
+        {t.help}
       </p>
       <div className="zx-stage">
         <div
@@ -87,13 +91,13 @@ export function GenealogyExplorer({ graph, centerable, rtl = false }: { graph: G
           className="zx-viewport"
           tabIndex={0}
           role="group"
-          aria-label="Family graph"
+          aria-label={t.graph}
           aria-describedby="zg-help"
           data-scale={pz.view.s.toFixed(3)}
           data-x={pz.view.x.toFixed(1)}
           {...pz.handlers}
         >
-          <svg className="zx-svg" width="100%" height="100%" role="group" aria-label={`Family graph around ${name(graph.focus)}`}>
+          <svg className="zx-svg" width="100%" height="100%" role="group" aria-label={t.graphAround(name(graph.focus))}>
             <g transform={pz.transform}>
               {graph.edges.map((e) => {
                 const a = layout.nodes.get(e.from);
@@ -169,7 +173,7 @@ export function GenealogyExplorer({ graph, centerable, rtl = false }: { graph: G
                     </text>
                     {hiddenBelow ? (
                       <text x={n.x} y={n.y + 16} textAnchor="middle" className="zg-badge">
-                        +{hiddenBelow} hidden below
+                        {t.hiddenBelow(hiddenBelow)}
                       </text>
                     ) : null}
                   </g>
@@ -178,51 +182,51 @@ export function GenealogyExplorer({ graph, centerable, rtl = false }: { graph: G
             </g>
           </svg>
         </div>
-        <ZoomControls label="Graph zoom" view={pz.view} min={pz.min} max={pz.max} onIn={() => pz.zoomBy(1.25)} onOut={() => pz.zoomBy(0.8)} onReset={pz.reset} />
+        <ZoomControls label={t.zoom} view={pz.view} min={pz.min} max={pz.max} onIn={() => pz.zoomBy(1.25)} onOut={() => pz.zoomBy(0.8)} onReset={pz.reset} />
       </div>
 
       <section className="zg-panel" aria-labelledby="zg-sel-h" data-selected={selected}>
-        <p className="zq-eyebrow">Focused person</p>
+        <p className="zq-eyebrow">{t.focused}</p>
         <h3 id="zg-sel-h">{name(selected)}</h3>
         {selEdges.length ? (
-          <ul aria-label={`Direct links of ${name(selected)}`}>
+          <ul aria-label={t.directLinks(name(selected))}>
             {selEdges.map((e) => {
               const st = lineStatus(e.confidence);
               const other = e.from === selected ? e.to : e.from;
               return (
                 <li key={e.id}>
                   <span>
-                    {relationFrom(e.kind, e.from === selected)}{" "}
+                    {relationFrom(e.kind, e.from === selected, t)}{" "}
                     <button type="button" className="zq-btn zq-btn-quiet" onClick={() => select(other)}>
                       {name(other)}
                     </button>
                   </span>
-                  <EvidenceLabel kind={st === "verified" ? "scholar" : st}>{LINE_TEXT[st]}</EvidenceLabel>
-                  {e.competingGroup ? <span className="zq-meta">One of several competing lines; all are shown.</span> : null}
+                  <EvidenceLabel kind={st === "verified" ? "scholar" : st}>{t.lines[st]}</EvidenceLabel>
+                  {e.competingGroup ? <span className="zq-meta">{t.competing}</span> : null}
                 </li>
               );
             })}
           </ul>
         ) : (
-          <p className="zq-meta">No reviewed links for this person are in this graph.</p>
+          <p className="zq-meta">{t.noneHere}</p>
         )}
         <div className="zg-acts">
           <button type="button" className="zq-btn zq-btn-secondary" aria-pressed={only} onClick={() => setOnly((o) => !o)}>
-            {only ? "Show everyone" : `Show only ${name(selected)}’s direct links`}
+            {only ? t.showEveryone : t.showOnly(name(selected))}
           </button>
           {hasBranch || isCollapsed ? (
             <button type="button" className="zq-btn zq-btn-secondary" aria-expanded={!isCollapsed} onClick={toggleBranch}>
-              {isCollapsed ? `Expand the branch below ${name(selected)}` : `Collapse the branch below ${name(selected)}`}
+              {isCollapsed ? t.expandBranch(name(selected)) : t.collapseBranch(name(selected))}
             </button>
           ) : null}
           {collapsed.size > (isCollapsed ? 1 : 0) ? (
             <button type="button" className="zq-btn zq-btn-quiet" onClick={() => setCollapsed(new Set())}>
-              Expand all branches
+              {t.expandAll}
             </button>
           ) : null}
           {selected !== graph.focus && centerable.includes(selected) ? (
             <Link className="zq-btn zq-btn-quiet" href={`/genealogy?focus=${selected}`}>
-              Centre the graph on {name(selected)}
+              {t.centreOn(name(selected))}
             </Link>
           ) : null}
         </div>

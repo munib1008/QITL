@@ -45,6 +45,9 @@ function refLabel(r: Ref): { text: string; href?: string } {
   return { text: `${r.sources?.work ?? r.kind}${r.locator ? `, ${r.locator}` : ""}` };
 }
 
+import { englishContent } from "@/lib/i18n/locales";
+import { storiesStrings } from "@/lib/i18n/modules/prophets";
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   return { title: slug.replace(/-/g, " ") };
@@ -53,6 +56,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function StoryPage({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams: Promise<{ chapter?: string }> }) {
   const { locale, slug } = await params;
   const { chapter } = await searchParams;
+  const t = storiesStrings(locale);
+  const en = englishContent(locale);
   const sb = await getServerSupabase();
   if (!sb) notFound();
   const { data } = await sb
@@ -73,9 +78,9 @@ export default async function StoryPage({ params, searchParams }: { params: Prom
   return (
     <ReadingPage
       locale={locale}
-      crumbs={[{ href: "/stories", label: "Stories" }, { label: story.title }]}
-      title={story.title}
-      lead={story.summary}
+      crumbs={[{ href: "/stories", label: t.title }, { label: story.title }]}
+      title={<span {...en}>{story.title}</span>}
+      lead={<span {...en}>{story.summary}</span>}
       meta={<BookmarkButton target={{ type: "story", id: story.slug }} />}
     >
       <div className="pp-grid">
@@ -83,22 +88,24 @@ export default async function StoryPage({ params, searchParams }: { params: Prom
           {ch ? (
             <>
               <p className="pp-chap">
-                Chapter {pos} of {story.chapters.length}
+                {t.chapterOf(pos, story.chapters.length)}
               </p>
-              <h2 id="ch-h" style={{ font: "600 28px/36px var(--font-display)", margin: "6px 0 16px" }}>
+              <h2 id="ch-h" style={{ font: "600 28px/36px var(--font-display)", margin: "6px 0 16px" }} {...en}>
                 {ch.title}
               </h2>
-              <div className="zq-prose type-reading">
+              <div className="zq-prose type-reading" {...en}>
                 <Markdown source={ch.body_md} />
               </div>
               <section aria-labelledby="claims-h" style={{ marginTop: 32 }}>
                 <h3 id="claims-h" className="zq-eyebrow">
-                  Evidence for this chapter
+                  {t.evidence}
                 </h3>
                 <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: 12 }}>
                   {ch.chapter_claims.map(({ evidence_claims: c }) => (
                     <li key={c.id} className="pp-card">
-                      <p style={{ margin: 0 }}>{c.statement}</p>
+                      <p style={{ margin: 0 }} {...en}>
+                        {c.statement}
+                      </p>
                       <div style={{ display: "flex", flexWrap: "wrap", gap: 6, alignItems: "center" }}>
                         <EvidenceLabel kind={c.evidence} />
                         {c.claim_references.map((r, i) => {
@@ -115,15 +122,22 @@ export default async function StoryPage({ params, searchParams }: { params: Prom
                 </ul>
               </section>
               <ChapterProgress chapterId={ch.id} />
-              <nav className="pp-pos" aria-label="Chapters">
-                {pos > 1 ? <a href={`?chapter=${pos - 1}`}><span>← Previous</span><b>{story.chapters[pos - 2]!.title}</b></a> : <span />}
+              <nav className="pp-pos" aria-label={t.chapters}>
+                {pos > 1 ? (
+                  <a href={`?chapter=${pos - 1}`}>
+                    <span>{t.previous}</span>
+                    <b {...en}>{story.chapters[pos - 2]!.title}</b>
+                  </a>
+                ) : (
+                  <span />
+                )}
                 <div className="pp-era">
                   {pos} / {story.chapters.length}
                 </div>
                 {pos < story.chapters.length ? (
                   <a className="nx" href={`?chapter=${pos + 1}`}>
-                    <span>Next →</span>
-                    <b>{story.chapters[pos]!.title}</b>
+                    <span>{t.next}</span>
+                    <b {...en}>{story.chapters[pos]!.title}</b>
                   </a>
                 ) : (
                   <span />
@@ -131,17 +145,17 @@ export default async function StoryPage({ params, searchParams }: { params: Prom
               </nav>
             </>
           ) : (
-            <p className="zq-meta">This story has no published chapters yet.</p>
+            <p className="zq-meta">{t.noChapters}</p>
           )}
           <section className="pp-sec" id="discuss" aria-labelledby="d-h">
-            <h2 id="d-h">Discussion</h2>
+            <h2 id="d-h">{t.discussion}</h2>
             <DiscussionPreview contentType="story" contentId={story.slug} />
           </section>
         </article>
-        <aside className="pp-side" aria-label="Your notes and chapters">
+        <aside className="pp-side" aria-label={t.notesAndChapters}>
           <div className="pp-card">
-            <h3>Chapters</h3>
-            <ol style={{ margin: 0, paddingInlineStart: 20 }}>
+            <h3>{t.chapters}</h3>
+            <ol style={{ margin: 0, paddingInlineStart: 20 }} {...en}>
               {story.chapters.map((c) => (
                 <li key={c.id}>
                   <a href={`?chapter=${c.position}`} aria-current={c.position === pos ? "page" : undefined}>

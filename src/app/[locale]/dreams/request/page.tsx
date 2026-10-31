@@ -6,7 +6,10 @@ import "@/styles/qa.css";
 import { getUser } from "@/lib/supabase/server";
 import { dreamsT } from "@/lib/i18n/modules/dreams";
 
-export const metadata: Metadata = { title: "Private dream request", robots: { index: false } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  return { title: dreamsT(l).form.title, robots: { index: false } };
+}
 export const dynamic = "force-dynamic";
 
 export default async function DreamRequestPage({ params }: { params: Promise<{ locale: string }> }) {

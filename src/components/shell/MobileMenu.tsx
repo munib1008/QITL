@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
 import type { NavLink } from "./SiteHeader";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 /**
  * A disclosure menu of section links. "mobile" (default) is the header menu below 1024px; "more" sits at the end of the
@@ -14,6 +16,7 @@ export function MobileMenu({ links, label, variant = "mobile" }: { links: NavLin
   const listId = `zq-mmenu-${useId().replace(/:/g, "")}`;
   const btn = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
+  const t = uiStrings(useLocale()).shell;
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
     if (!open) return;
@@ -34,7 +37,7 @@ export function MobileMenu({ links, label, variant = "mobile" }: { links: NavLin
         </svg>
         <span className="zq-hide-sm">{label}</span>
       </button>
-      <nav id={listId} className="zq-mmenu-list" hidden={!open} aria-label="All sections">
+      <nav id={listId} className="zq-mmenu-list" hidden={!open} aria-label={t.allSections}>
         {links.map((l) => (
           <Link key={l.href} href={l.href}>
             {l.label}

@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 /**
  * Progressive layer over the server-rendered timeline list (which stays complete and usable without it):
@@ -9,6 +11,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
  * Reduced motion, Save-Data and low-core devices get no reveal animation.
  */
 export function TimelineEnhancer({ eras, children }: { eras: Array<{ title: string; id: string }>; children: ReactNode }) {
+  const t = uiStrings(useLocale()).timeline;
   const root = useRef<HTMLDivElement>(null);
   const [era, setEra] = useState(eras[0]?.title ?? "");
   const [progress, setProgress] = useState(0);
@@ -85,11 +88,11 @@ export function TimelineEnhancer({ eras, children }: { eras: Array<{ title: stri
     <div ref={root} className="zq-vt-wrap" style={{ ["--vt-progress" as string]: progress }}>
       <div className="zq-vt-bar-sticky">
         <div className="zq-vt-now-reading" aria-live="polite">
-          <span className="zq-eyebrow">Now reading</span>
+          <span className="zq-eyebrow">{t.nowReading}</span>
           <b>{era}</b>
         </div>
         <label className="zq-vt-jump">
-          <span className="sr-only">Jump to era</span>
+          <span className="sr-only">{t.jump}</span>
           <select
             value={eras.find((e) => e.title === era)?.id ?? ""}
             onChange={(e) => {
@@ -107,7 +110,7 @@ export function TimelineEnhancer({ eras, children }: { eras: Array<{ title: stri
             ))}
           </select>
         </label>
-        <div className="zq-vt-progress" role="progressbar" aria-label="Timeline progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress * 100)}>
+        <div className="zq-vt-progress" role="progressbar" aria-label={t.progress} aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress * 100)}>
           <span />
         </div>
       </div>

@@ -3,43 +3,48 @@ import Link from "next/link";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { EvidenceLabel } from "@/components/ui/evidence";
 import { COLLECTIONS } from "@/lib/data/hadith";
+import { englishContent } from "@/lib/i18n/locales";
+import { hadithStrings } from "@/lib/i18n/modules/hadith";
 
-export const metadata: Metadata = { title: "Hadith", description: "Four Sunni collections, catalogued: Sahih al-Bukhari, Sahih Muslim, Jami' at-Tirmidhi and Sunan Ibn Majah. Every narration graded on its own, by a named scholar." };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const t = hadithStrings((await params).locale);
+  return { title: t.title, description: t.metaDescription };
+}
 
 export default async function HadithIndex({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  const t = hadithStrings(locale);
+  const en = englishContent(locale);
   return (
-    <ReadingPage
-      locale={locale}
-      crumbs={[{ label: "Hadith" }]}
-      title="Hadith"
-      lead="Four Sunni collections, as a catalogue: Sahih al-Bukhari, Sahih Muslim, Jami' at-Tirmidhi and Sunan Ibn Majah. A collection is not a grade: every narration shows each recorded grading, by a named scholar, with its source — disagreements included."
-    >
+    <ReadingPage locale={locale} crumbs={[{ label: t.title }]} title={t.title} lead={t.lead}>
       <div className="zq-pagebody">
         <div className="zq-grid">
           {COLLECTIONS.map((c) => (
             <Link key={c.id} href={`/hadith/${c.id}`} className="zq-card" style={{ textDecoration: "none", color: "var(--ink)", maxWidth: "none" }}>
-              <p className="zq-eyebrow">{c.compiler}</p>
-              <h2 className="zq-title" style={{ fontFamily: "var(--font-display)", fontSize: 22 }}>
+              <p className="zq-eyebrow" {...en}>
+                {c.compiler}
+              </p>
+              <h2 className="zq-title" style={{ fontFamily: "var(--font-display)", fontSize: 22 }} {...en}>
                 {c.name}
               </h2>
               <p className="zq-prophet-ar" lang="ar" dir="rtl" style={{ margin: 0 }}>
                 {c.arabic}
               </p>
-              <p className="zq-meta">{c.note}</p>
+              <p className="zq-meta" {...en}>
+                {c.note}
+              </p>
             </Link>
           ))}
         </div>
         <section className="pp-card" aria-labelledby="grading-h">
-          <h3 id="grading-h">How grading is shown</h3>
+          <h3 id="grading-h">{t.gradingHeading}</h3>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <EvidenceLabel kind="hadith">Sahih / Hasan, by a named scholar</EvidenceLabel>
-            <EvidenceLabel kind="scholar">Another grade, by a named scholar</EvidenceLabel>
-            <EvidenceLabel kind="unknown">Grade not recorded</EvidenceLabel>
+            <EvidenceLabel kind="hadith">{t.gradeAuthentic}</EvidenceLabel>
+            <EvidenceLabel kind="scholar">{t.gradeOther}</EvidenceLabel>
+            <EvidenceLabel kind="unknown">{t.gradeNone}</EvidenceLabel>
           </div>
           <p className="zq-meta" style={{ margin: 0 }}>
-            When scholars grade a narration differently, every grading is listed and the page says “Graded differently by other scholars”. See the{" "}
-            <Link href="/methodology#hadith">methodology</Link>.
+            {t.gradingNote} <Link href="/methodology#hadith">{t.methodology}</Link>.
           </p>
         </section>
       </div>

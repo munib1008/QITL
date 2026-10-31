@@ -7,11 +7,12 @@ import { DraftBadge } from "@/components/ui/evidence";
 import { journeyTimeline, todayLabel } from "@/lib/timeline";
 import { eventEras, publishedEvents } from "@/lib/data/events";
 import { TimelineLayers } from "@/components/lifestyle/TimelineLayers";
+import { timelineStrings } from "@/lib/i18n/modules/events";
 
-export const metadata: Metadata = {
-  title: "Timeline",
-  description: "From Adam to today, in order and not to scale. Undated sacred history stays on a relative-order track.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const t = timelineStrings((await params).locale);
+  return { title: t.title, description: t.metaDescription };
+}
 
 /** Reviewed events are read from the database; refresh every 5 minutes. */
 export const revalidate = 300;
@@ -19,6 +20,7 @@ export const revalidate = 300;
 export default async function TimelinePage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ selected?: string; layer?: string }> }) {
   const { locale } = await params;
   const { selected, layer } = await searchParams;
+  const t = timelineStrings(locale);
   const j = getJourney();
   const pos = selected ? findStop(selected) : undefined;
   const s = pos?.item;
@@ -28,33 +30,33 @@ export default async function TimelinePage({ params, searchParams }: { params: P
   return (
     <ReadingPage
       locale={locale}
-      crumbs={[{ label: "Timeline" }]}
+      crumbs={[{ label: t.title }]}
       kicker={<DraftBadge status={j.status} />}
-      title="Timeline"
-      lead="Ordered from Adam to today, not to scale. Sacred history before recorded chronology has no years; dated history shows CE and AH with how certain each date is."
+      title={t.title}
+      lead={t.lead}
     >
       <div className="zq-pagebody">
         <div className="zq-split">
           <TimelineLayers locale={locale} layer={layer}>
           <div>
-            <VerticalTimeline eras={journeyTimeline(j)} selected={s?.id} today={todayLabel()} enhance />
+            <VerticalTimeline eras={journeyTimeline(j, locale)} selected={s?.id} today={todayLabel(new Date(), locale)} enhance locale={locale} />
             {events?.length ? (
               <section aria-labelledby="reviewed-events-h" style={{ marginTop: 24 }}>
                 <h2 id="reviewed-events-h" className="zq-eyebrow" style={{ padding: "0 16px" }}>
-                  Reviewed events
+                  {t.reviewedEvents}
                 </h2>
-                <VerticalTimeline eras={eventEras(events)} selected={ev ? selected : undefined} today={false} label="Reviewed events" />
+                <VerticalTimeline eras={eventEras(events, locale)} selected={ev ? selected : undefined} today={false} label={t.reviewedEvents} locale={locale} />
               </section>
             ) : null}
             <p className="zq-meta" style={{ padding: "0 16px" }}>
-              Signs of the Last Hour are not placed on this timeline: no date is known. See the <Link href="/last-hour">Last Hour explorer</Link>.
+              {t.lastHourNote} <Link href="/last-hour">{t.lastHourLink}</Link>.
             </p>
           </div>
           </TimelineLayers>
           <div className="zq-split-sticky">
-            <p className="zq-meta zq-vt-hint">Tap a stop to open its card: summary, date certainty, place, sources and the full story.</p>
+            <p className="zq-meta zq-vt-hint">{t.hint}</p>
             <div style={{ marginTop: 16 }}>
-              <DateLegend />
+              <DateLegend t={t} />
             </div>
           </div>
         </div>
@@ -64,17 +66,17 @@ export default async function TimelinePage({ params, searchParams }: { params: P
 }
 
 /** What each timeline mark means, drawn with the same marks the timeline uses. */
-function DateLegend() {
+function DateLegend({ t }: { t: ReturnType<typeof timelineStrings> }) {
   const rows: Array<[string, string]> = [
-    ["zq-vt-dia", "Relative order — no date is known"],
-    ["zq-vt-dot", "Established date"],
-    ["zq-vt-bar", "Date range"],
-    ["zq-vt-bar zq-vt-est", "Historians' estimate"],
-    ["zq-vt-unk", "Date unknown"],
+    ["zq-vt-dia", t.legend.relative],
+    ["zq-vt-dot", t.legend.exact],
+    ["zq-vt-bar", t.legend.range],
+    ["zq-vt-bar zq-vt-est", t.legend.estimate],
+    ["zq-vt-unk", t.legend.unknown],
   ];
   return (
-    <section className="zq-legend" aria-label="Timeline legend" style={{ boxShadow: "none" }}>
-      <h2>Date certainty</h2>
+    <section className="zq-legend" aria-label={t.legendLabel} style={{ boxShadow: "none" }}>
+      <h2>{t.legendTitle}</h2>
       <ul>
         {rows.map(([cls, label]) => (
           <li key={label}>

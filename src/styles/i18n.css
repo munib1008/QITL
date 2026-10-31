@@ -32,7 +32,7 @@ html[lang="ur"] body { line-height: 2; }
 html[lang="ur"] :is(
   .zq-btn, .zq-iconbtn, .zq-skip, .zq-eyebrow, .zq-title, .zq-meta, .zq-links a, .pp-sections a, .zq-foot-cols a,
   .qb-item span, .qb-grid b, .qb-grid small, .qb-sheet-head h2, .pp-crumbs, .pp-crumbs a, .zq-soon, .zq-ev, .zq-licence,
-  .zq-lang-opt, label, legend, select, option, .zq-input, .zq-prefs-note, .zq-prefs-saved
+  .zq-lang-opt, label, legend, select, option, .zq-input, .zq-prefs-note, .zq-prefs-saved, summary
 ):not([lang="en"], [lang="ar"]) { line-height: 2; }
 html[lang="ur"] .qb-item span { padding-block: 2px; overflow: visible; }
 html[lang="ur"] .qb-item { overflow: visible; }

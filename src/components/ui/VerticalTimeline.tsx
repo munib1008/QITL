@@ -5,7 +5,9 @@ import { TimelineEnhancer } from "./TimelineEnhancer";
 import { cx } from "@/lib/cx";
 import type { EvidenceKind } from "@/content/journey";
 import { EvidenceLabel } from "./evidence";
-import { PRECISION_TEXT, type DatePrecision } from "./cards";
+import type { DatePrecision } from "./cards";
+import { englishContent } from "@/lib/i18n/locales";
+import { uiStrings } from "@/lib/i18n/modules/ui";
 
 export interface TimelineItem {
   id: string;
@@ -49,9 +51,12 @@ export function VerticalTimeline({
   eras,
   today,
   selected,
-  label = "Timeline from Adam to today",
+  label,
   enhance = false,
+  locale = "en",
 }: {
+  /** Interface language (labels); the stops' titles and summaries are English content and are marked so. */
+  locale?: string;
   eras: TimelineEra[];
   today?: string | false;
   selected?: string;
@@ -59,21 +64,26 @@ export function VerticalTimeline({
   /** Adds the progress bar, current-chapter highlight and jump-to-era menu (client, progressive). */
   enhance?: boolean;
 }) {
+  const u = uiStrings(locale);
+  const t = u.timeline;
+  const en = englishContent(locale);
   const list = (
-    <section className="zq-vt" aria-label={label}>
-      <p className="zq-vt-scale">Ordered from Adam to today · not to scale</p>
+    <section className="zq-vt" aria-label={label ?? t.label}>
+      <p className="zq-vt-scale">{t.scale}</p>
       <ol className="zq-vt-list">
         {eras.map((era) => (
           <li key={era.title} className={cx("zq-vt-era", `zq-vt-era-${era.kind}`)} data-era-kind={era.kind} data-era={era.title} id={`era-${slug(era.title)}`}>
             <div className="zq-vt-erahead">
-              <p className="zq-eyebrow">{era.title}</p>
-              <p className="zq-meta">
-                {era.kind === "relative"
-                  ? (era.note ?? "Relative order only — no dates are known")
-                  : era.kind === "undated-future"
-                    ? (era.note ?? "No date is known. Order follows the texts only.")
-                    : (era.note ?? "")}
+              <p className="zq-eyebrow" {...en}>
+                {era.title}
               </p>
+              {era.note ? (
+                <p className="zq-meta" {...en}>
+                  {era.note}
+                </p>
+              ) : (
+                <p className="zq-meta">{era.kind === "relative" ? t.relativeOnly : era.kind === "undated-future" ? t.noDate : ""}</p>
+              )}
             </div>
             <ol className="zq-vt-items">
               {era.items.map((it) => {
@@ -85,13 +95,17 @@ export function VerticalTimeline({
                     {it.detail ? (
                       <details className="zq-vt-det" open={sel || undefined}>
                         <summary className="zq-vt-btn" aria-current={sel || undefined}>
-                          <span className="zq-vt-when">{it.dateLabel ?? PRECISION_TEXT[pr]}</span>
-                          <span className="zq-vt-title">{it.title}</span>
+                          <span className="zq-vt-when">{it.dateLabel ?? u.precision[pr]}</span>
+                          <span className="zq-vt-title" {...en}>
+                            {it.title}
+                          </span>
                           {it.evidence ? <EvidenceLabel kind={it.evidence} /> : null}
                         </summary>
                         <div className="zq-vt-panel">
-                          <h3 className="zq-vt-ph">{it.title}</h3>
-                          {it.detail.summary ? <p>{it.detail.summary}</p> : null}
+                          <h3 className="zq-vt-ph" {...en}>
+                            {it.title}
+                          </h3>
+                          {it.detail.summary ? <p {...en}>{it.detail.summary}</p> : null}
                           {it.detail.facts.length ? (
                             <dl className="zq-kv">
                               {it.detail.facts.map(([k, v]) => (
@@ -123,8 +137,10 @@ export function VerticalTimeline({
                       </details>
                     ) : (
                       <Link className="zq-vt-btn" href={it.href} aria-current={sel || undefined} scroll={false}>
-                        <span className="zq-vt-when">{it.dateLabel ?? PRECISION_TEXT[pr]}</span>
-                        <span className="zq-vt-title">{it.title}</span>
+                        <span className="zq-vt-when">{it.dateLabel ?? u.precision[pr]}</span>
+                        <span className="zq-vt-title" {...en}>
+                          {it.title}
+                        </span>
                         {it.evidence ? <EvidenceLabel kind={it.evidence} /> : null}
                       </Link>
                     )}
@@ -142,7 +158,7 @@ export function VerticalTimeline({
         {today !== false ? (
           <li className="zq-vt-today">
             <span className="zq-vt-mark zq-vt-now" aria-hidden="true" />
-            <span className="zq-vt-title">Today</span>
+            <span className="zq-vt-title">{t.today}</span>
             <span className="zq-vt-when">{today ?? ""}</span>
           </li>
         ) : null}

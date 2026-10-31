@@ -6,7 +6,10 @@ import { StoryView } from "@/components/story/StoryView";
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
 import { EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
-import { PRECISION_TEXT, type DatePrecision } from "@/components/ui/cards";
+import type { DatePrecision } from "@/components/ui/cards";
+import { englishContent } from "@/lib/i18n/locales";
+import { eventStrings } from "@/lib/i18n/modules/events";
+import { uiStrings } from "@/lib/i18n/modules/ui";
 import { getPublicSupabase } from "@/lib/supabase/server";
 import { getStory } from "@/lib/data/story";
 import { getPlayerBundle } from "@/lib/data/player";
@@ -47,34 +50,38 @@ async function load(slug: string): Promise<EventRow | null | "not_configured"> {
   return (data as unknown as EventRow | null) ?? null;
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const e = await load((await params).slug);
-  return e && e !== "not_configured" ? { title: e.title, description: e.summary ?? undefined } : { title: "Quranic event" };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+  const p = await params;
+  const e = await load(p.slug);
+  return e && e !== "not_configured" ? { title: e.title, description: e.summary ?? undefined } : { title: eventStrings(p.locale).event };
 }
 
 export default async function EventPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   if (!/^[a-z0-9-]{1,80}$/.test(slug)) notFound();
+  const t = eventStrings(locale);
+  const u = uiStrings(locale);
+  const en = englishContent(locale);
   const e = await load(slug);
   if (e === "not_configured")
     return (
-      <ReadingPage locale={locale} crumbs={[{ href: "/events", label: "Quranic events" }, { label: "Event" }]} title="Quranic event">
+      <ReadingPage locale={locale} crumbs={[{ href: "/events", label: t.title }, { label: t.eventCrumb }]} title={t.event}>
         <div className="zq-pagebody">
-          <EmptyState tone="soon" label={<span className="zq-soon">Coming soon</span>} title="The events encyclopedia is not connected yet." />
+          <EmptyState tone="soon" label={<span className="zq-soon">{u.soon}</span>} title={t.notConnected} />
         </div>
       </ReadingPage>
     );
   if (!e) notFound();
   const [story, player] = await Promise.all([getStory({ event: slug }), getPlayerBundle({ event: slug })]);
-  const when = formatRange(e.start_year, e.end_year, e.start_ah, e.end_ah, e.date_precision === "estimated") ?? PRECISION_TEXT[e.date_precision];
+  const when = formatRange(e.start_year, e.end_year, e.start_ah, e.end_ah, e.date_precision === "estimated") ?? u.precision[e.date_precision];
   return (
     <ReadingPage
       locale={locale}
-      crumbs={[{ href: "/events", label: "Quranic events" }, { label: e.title }]}
+      crumbs={[{ href: "/events", label: t.title }, { label: e.title }]}
       kicker={<span className="pp-chap">{when}</span>}
       title={
         <>
-          {e.title}{" "}
+          <span {...en}>{e.title}</span>{" "}
           {e.title_ar ? (
             <small lang="ar" dir="rtl" style={{ font: "400 26px/1 var(--font-naskh)", color: "var(--ink-muted)" }}>
               {e.title_ar}
@@ -82,7 +89,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
           ) : null}
         </>
       }
-      lead={e.summary ?? undefined}
+      lead={e.summary ? <span {...en}>{e.summary}</span> : undefined}
       meta={e.evidence_claims ? <EvidenceLabel kind={e.evidence_claims.evidence} /> : undefined}
     >
       <div className="pp-grid">
@@ -91,27 +98,27 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
           {story.state === "ok" && story.story ? (
             <StoryView story={story.story} name={e.title} chapterKey={`event:${e.slug}`} />
           ) : (
-            <EmptyState label={<EvidenceLabel kind="unknown">Not yet written</EvidenceLabel>} title="The full story of this event is not published yet." />
+            <EmptyState label={<EvidenceLabel kind="unknown">{t.notWritten}</EvidenceLabel>} title={t.storyPending} />
           )}
           <section className="pp-sec" id="discuss" aria-labelledby="d-h">
-            <h2 id="d-h">Discussion</h2>
+            <h2 id="d-h">{t.discussion}</h2>
             <DiscussionPreview contentType="event" contentId={slug} />
           </section>
         </div>
-        <aside className="pp-side" aria-label="Connections">
+        <aside className="pp-side" aria-label={t.connections}>
           <div className="pp-card">
-            <h3>On the timeline</h3>
+            <h3>{t.onTimeline}</h3>
             <p className="zq-meta" style={{ margin: 0 }}>
               {when}
             </p>
             <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" href={`/timeline?selected=event-${slug}`}>
-              See on the timeline
+              {t.seeOnTimeline}
             </Link>
           </div>
           {e.event_people.some((x) => x.people) ? (
             <div className="pp-card">
-              <h3>People</h3>
-              <ul style={{ margin: 0, paddingInlineStart: 18 }}>
+              <h3>{t.people}</h3>
+              <ul style={{ margin: 0, paddingInlineStart: 18 }} {...en}>
                 {e.event_people.map((x) =>
                   x.people ? (
                     <li key={x.people.slug}>
@@ -123,18 +130,18 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
             </div>
           ) : null}
           <div className="pp-card">
-            <h3>Places</h3>
+            <h3>{t.places}</h3>
             {e.event_places.some((x) => x.locations) ? (
-              <ul style={{ margin: 0, paddingInlineStart: 18 }}>
+              <ul style={{ margin: 0, paddingInlineStart: 18 }} {...en}>
                 {e.event_places.map((x) => (x.locations ? <li key={x.locations.slug}>{x.locations.name_en}</li> : null))}
               </ul>
             ) : (
               <p className="zq-meta" style={{ margin: 0 }}>
-                No location is established for this event.
+                {t.noPlace}
               </p>
             )}
             <Link className="zq-btn zq-btn-quiet zq-btn-sm zq-btn-link" href="/atlas">
-              Open the atlas
+              {t.openAtlas}
             </Link>
           </div>
         </aside>

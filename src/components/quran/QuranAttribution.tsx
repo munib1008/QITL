@@ -7,7 +7,8 @@ import type { QuranManifest } from "@/content/quran";
 export function QuranAttribution({ src, className = "zq-meta" }: { src: QuranManifest | null; className?: string }) {
   if (!src) return null;
   return (
-    <p className={className} data-quran-attribution>
+    // The licence attribution stays in English, as published by the source, in every interface language.
+    <p className={className} data-quran-attribution lang="en" dir="ltr">
       Arabic text: {src.source}, version {src.version.replace(/^Uthmani\s*/, "")}, from the{" "}
       <a href="https://tanzil.net/" rel="noopener" target="_blank">
         Tanzil Project

@@ -1,11 +1,13 @@
 /**
  * Interface strings for Life Through the Ages (حياة عبر العصور). English is the reviewed source; the Arabic is a first
- * draft pending a qualified translator (as dict.ts). Urdu slots in as another key with the same shape.
+ * draft pending a qualified translator (as dict.ts). The Urdu is a draft too.
  *
  * These are explanations of the module and its evidence rules only. No research content lives here: the only
  * factual sentence is the fixed Nuh note, worded as the editorial brief requires, with its Quran citation.
  */
 import type { FieldKey, Layer, LifespanKind, LifespanMeasure } from "@/lib/lifestyle/model";
+import type { Locale } from "../dict";
+import { resolveLocale } from "../locales";
 
 const en = {
   title: "Life Through the Ages",
@@ -176,6 +178,18 @@ const en = {
     play: "Play",
     pause: "Pause",
     replay: "Replay",
+    scenes: {
+      fields: "Rows of crops in an irrigated field",
+      palms: "Date palms beside a sandy plain",
+      harvest: "Sheaves of grain stacked at harvest",
+      well: "A stone well with a rope and bucket",
+      pastoral: "Rolling pasture with a stream and low hills",
+      "trade-route": "A dashed route crossing a plain between two walled towns",
+      "mud-brick": "Mud-brick and stone houses with flat roofs",
+      "empty-market": "An empty market street with awnings and stalls",
+      tools: "Simple tools: a hoe, a sickle, a clay jar and a grinding stone",
+      ship: "A wooden sailing boat on calm water",
+    } as Record<string, string>,
   },
 };
 
@@ -326,11 +340,212 @@ const ar: LifestyleStrings = {
     play: "تشغيل",
     pause: "إيقاف",
     replay: "إعادة",
+    scenes: {
+      fields: "صفوف من الزرع في حقل مرويّ",
+      palms: "نخيل بجانب سهل رملي",
+      harvest: "حزم من الحبوب مكدّسة وقت الحصاد",
+      well: "بئر حجرية بحبل ودلو",
+      pastoral: "مرعى متموّج بجدول وتلال منخفضة",
+      "trade-route": "طريق متقطّع يعبر سهلًا بين بلدتين مسوّرتين",
+      "mud-brick": "بيوت من الطين والحجر بأسطح مستوية",
+      "empty-market": "شارع سوق خالٍ بمظلات وأكشاك",
+      tools: "أدوات بسيطة: معول ومنجل وجرة فخار ورحى",
+      ship: "قارب شراعي خشبي على ماء هادئ",
+    },
   },
 };
 
-export const lifestyle: Record<"en" | "ar", LifestyleStrings> = { en, ar };
+/**
+ * Draft Urdu (written by hand from the English): needs review by a qualified translator, like the Arabic. The Nuh note
+ * is a statement about the Quran, so it is not translated here: it stays English (rendered lang="en" dir="ltr") until a
+ * qualified translator and the scholarly reviewers supply the Urdu.
+ */
+const ur: LifestyleStrings = {
+  title: "زمانوں کے ساتھ زندگی",
+  titleAr: "حياة عبر العصور",
+  nav: "زمانوں کے ساتھ زندگی",
+  navNote: "لوگ کیسے رہتے، کھاتے اور عمر گزارتے تھے، دلیل کے ساتھ",
+  lead: "انبیاء کے زمانوں میں لوگ کیسے رہتے، کام کرتے، کھاتے، تعمیر کرتے، سفر کرتے اور بوڑھے ہوتے تھے — ہر بیان پر درج ہے کہ اسے کیا ثابت کرتا ہے، اور تعمیرِ نو کو حقیقت سے الگ رکھا گیا ہے۔",
+  draftNotice: "یہاں ریکارڈ صرف جائزے کے بعد ظاہر ہوتے ہیں۔ ان صفحات پر کچھ بھی سائٹ نے خود نہیں لکھا؛ مدیران تحقیقی ریکارڈ شامل کرتے ہیں اور جائزہ کار انہیں منظور کرتے ہیں۔",
+  notConfigured: "تحقیقی ریکارڈ کے لیے ڈیٹا بیس درکار ہے۔ شائع شدہ ریکارڈ دکھانے کے لیے Supabase منسلک کریں۔",
+  loadError: "ریکارڈ اس وقت لوڈ نہیں ہو سکے۔",
+  sections: {
+    prophets: "ان کی زندگی اور زمانہ",
+    prophetsNote: "ہر نبی کا ۲۰ خانوں والا “وہ کیسے رہتے تھے” پروفائل",
+    food: "غذا کی تلاش",
+    foodNote: "غذائیں، ہر ذکر کہاں سے آیا، اور تحقیق کیا کہتی ہے",
+    day: "اس دور کا ایک دن",
+    dayNote: "وضاحتی تعمیرِ نو، واضح نشان کے ساتھ",
+    compare: "تب اور اب",
+    compareNote: "قدیم ← دستاویزی ← عصرِ حاضر، حدود کے ساتھ",
+    longevity: "انسانی طولِ عمر کا تحقیقی مرکز",
+    longevityNote: "عمر، متوقع عمر اور دلیل کیا کہہ سکتی ہے",
+    lessons: "آج ہم کیا سیکھ سکتے ہیں؟",
+    lessonsNote: "دینی تعلیم کو جدید مشورے سے الگ رکھا گیا ہے",
+  },
+  categoriesTitle: "ہر بیان کی درجہ بندی کیسے ہوتی ہے",
+  categories: {
+    A: "A · قرآن سے ثابت",
+    B: "B · صحیح حدیث",
+    C: "C · تاریخی / سائنسی تحقیق",
+    D: "D · تعمیرِ نو — ثابت نہیں",
+  },
+  categoryHelp: {
+    A: "قرآن میں بیان ہوا، ایک منظور شدہ دلیلی دعوے کے ذریعے۔",
+    B: "صحیح حدیث میں بیان ہوا: بخاری، مسلم، یا ترمذی یا ابن ماجہ کی وہ روایت جسے انفرادی طور پر صحیح قرار دیا گیا ہو۔",
+    C: "تاریخی، آثارِ قدیمہ یا سائنسی تحقیق۔ یہ دینی حقیقت نہیں؛ نئی تحقیق سے بدل سکتی ہے۔",
+    D: "تعمیرِ نو یا مفروضہ۔ کبھی ثابت نہیں، کبھی حقیقت کے طور پر نہیں دکھایا جاتا۔",
+  },
+  confidence: { high: "اعلیٰ اعتماد", moderate: "درمیانہ اعتماد", low: "کم اعتماد", speculative: "قیاسی" },
+  meta: {
+    citation: "حوالہ",
+    publication: "اشاعت / ایڈیشن",
+    dating: "تاریخ کے تعین کا طریقہ",
+    geography: "جغرافیائی مطابقت",
+    language: "زبان",
+    reviewed: "آخری جائزہ",
+    limitations: "حدود",
+  },
+  notEstablished: "ثابت نہیں",
+  notEstablishedHelp: "ابھی کوئی جائزہ شدہ ریکارڈ اسے ثابت نہیں کرتا۔",
+  reconstruction: "تعمیرِ نو — ثابت نہیں",
+  reconstructionHelp: "تحقیق سے ایک وضاحتی تعمیرِ نو، نہ حقیقت نہ دینی بیان۔ یہ غلط ہو سکتی ہے۔",
+  emptyTitle: "ابھی کوئی شائع شدہ ریکارڈ نہیں۔",
+  emptyBody: "ریکارڈ یہاں تب ظاہر ہوتے ہیں جب کوئی مدیر انہیں شامل کرے اور مطلوبہ جائزہ انہیں منظور کرے۔",
+  fields: {
+    period: "دور",
+    region: "علاقہ",
+    community: "برادری",
+    lifespan: "عمر",
+    daily_activities: "روزمرہ سرگرمیاں",
+    occupation: "پیشہ",
+    foods_beverages: "کھانے اور مشروبات",
+    farming_livestock: "کھیتی باڑی اور مویشی",
+    clothing_care: "لباس اور ذاتی نگہداشت",
+    housing: "رہائش",
+    transport: "آمد و رفت",
+    family_community: "خاندان اور برادری",
+    customs_leisure: "رسوم اور فرصت",
+    education: "تعلیم",
+    health_treatment: "صحت اور علاج",
+    climate: "آب و ہوا",
+    worship: "عبادت",
+    challenges: "مشکلات",
+    differences_modern: "جدید زندگی سے فرق",
+    lessons: "اسباق",
+  },
+  prophet: {
+    tab: "ان کی زندگی اور زمانہ",
+    back: "نبی کے صفحے پر واپس",
+    howTheyLived: "وہ کیسے رہتے تھے",
+    profileDraft: "یہ پروفائل ابھی شائع نہیں ہوا۔ جب تک جائزہ شدہ ریکارڈ موجود نہ ہوں، ہر خانہ “ثابت نہیں” دکھاتا ہے۔",
+    noDates: "ابتدائی انبیاء کے لیے کوئی تاریخیں نہیں دی جاتیں۔",
+  },
+  food: {
+    caution:
+      "صحیفے میں مذکور کسی غذا کو یہاں علاج یا طولِ عمر کے ذریعے کے طور پر پیش نہیں کیا جاتا۔ غذائیت سے متعلق نتائج جدید تحقیق سے آتے ہیں اور درجہ C میں ہیں: تاریخی یا سائنسی، دینی حقیقت نہیں۔",
+    groups: "غذائی گروہ",
+    mentions: "ہر ذکر کہاں سے آیا",
+  },
+  day: {
+    label: "وضاحتی تعمیرِ نو",
+    note: "یہ ایک وضاحتی تعمیرِ نو (درجہ D) ہے، ثابت شدہ بیان نہیں۔ یہ صرف دن کے حصوں کو بیان کرتی ہے؛ گھنٹہ وار نظام الاوقات نہیں۔",
+    parts: {
+      before_dawn: "فجر سے پہلے",
+      dawn: "فجر",
+      morning: "صبح",
+      midday: "دوپہر",
+      afternoon: "سہ پہر",
+      sunset: "غروبِ آفتاب",
+      evening: "شام",
+      night: "رات",
+    },
+  },
+  compare: {
+    ancient: "قدیم",
+    documented: "دستاویزی تاریخ",
+    contemporary: "عصرِ حاضر",
+    topic: "موضوع",
+    evidence: "دلیل",
+    limitations: "حدود",
+    intro: "ہر قطار ایک موضوع کا تین کالموں میں موازنہ کرتی ہے۔ ہر خانہ اپنی دلیل کی قسم اور حدود دکھاتا ہے؛ خالی خانے کا مطلب ہے کوئی جائزہ شدہ ریکارڈ نہیں۔",
+  },
+  longevity: {
+    termsTitle: "چار پیمانے جو اکثر آپس میں خلط ہو جاتے ہیں",
+    intro: "چار مختلف پیمانے اکثر آپس میں خلط ہو جاتے ہیں۔ یہ مختلف سوالوں کے جواب دیتے ہیں اور ایک دوسرے کی جگہ نہیں لے سکتے۔",
+    terms: [
+      ["عمر", "کسی ایک خاص شخص کی پیدائش سے وفات تک کی مدت۔"],
+      ["پیدائش کے وقت متوقع عمر", "پوری آبادی کا اوسط، جسے شیر خوارگی اور بچپن کی اموات بہت نیچے کھینچ لیتی ہیں۔ کم عدد کا مطلب یہ نہیں کہ بالغ لوگ عموماً جوانی میں مر جاتے تھے۔"],
+      ["بچپن کے بعد متوقع عمر", "بچپن سے بچ نکلنے والوں کے مزید سالوں کا اوسط۔ یہ عموماً پیدائش کے وقت متوقع عمر سے کہیں زیادہ ہوتی ہے۔"],
+      ["زیادہ سے زیادہ تصدیق شدہ عمر", "جدید تصدیقی معیار کے مطابق دستاویزات سے ثابت سب سے طویل عمر۔ یہ ایک انتہائی مثال ہے، عام عمر نہیں۔"],
+    ] as Array<[string, string]>,
+    chartTitle: "عمر کی دلیل، الگ الگ قطاروں میں",
+    chartNote: "دلیل کی ہر قسم اور ہر پیمانہ اپنی قطار اور اپنے پیمانے پر رہتا ہے۔ قطاروں کو کبھی ایک رجحانی لکیر میں نہیں جوڑا جاتا، کیونکہ وہ مختلف چیزیں ناپتی ہیں۔",
+    laneEmpty: "اس قطار میں کوئی شائع شدہ ریکارڈ نہیں۔",
+    nuhTitle: "نوح (عليه السلام) کے بارے میں ایک نوٹ",
+    nuh: en.longevity.nuh,
+    speculative: "قیاسی نظریات",
+    speculativeNote:
+      "وہ نظریات جو لمبی عمروں کو آکسیجن کی سطح، تابکاری، DNA یا غذا کی پاکیزگی سے سمجھاتے ہیں، قیاسی ہیں۔ ایسا کوئی بھی ریکارڈ صرف درجہ D کے طور پر، تعمیرِ نو کے خانے میں شائع ہوتا ہے، کبھی حقیقت کے طور پر نہیں۔",
+  },
+  lessons: {
+    religious: "دینی تعلیم",
+    religiousNote: "قرآن اور صحیح احادیث سے (درجات A اور B)، ان کے حوالوں کے ساتھ۔",
+    modern: "جدید طبی اور غذائی تحقیق",
+    modernNote: "درجہ C کی تحقیق۔ یہ نہ دینی تعلیم ہے نہ ذاتی طبی مشورہ؛ کسی مستند معالج سے پوچھیں۔",
+  },
+  layers: {
+    label: "ٹائم لائن کی تہہ",
+    prophets: "انبیاء اور واقعات",
+    lifestyle: "طرزِ زندگی",
+    food: "غذا اور زراعت",
+    housing: "رہائش",
+    trade: "تجارت",
+    transport: "ٹیکنالوجی اور آمد و رفت",
+    health: "صحت اور ماحول",
+    lifespan: "عمر کی دلیل",
+    emptyTitle: "اس تہہ پر ابھی کوئی شائع شدہ ریکارڈ نہیں۔",
+    emptyBody: "ریکارڈ دور کے لحاظ سے نسبتی ترتیب میں رکھے جاتے ہیں۔ ابتدائی انبیاء کو کبھی تاریخیں نہیں دی جاتیں۔",
+    eraUnknown: "دور ثابت نہیں",
+  },
+  kinds: {
+    quran_statement: "قرآنی بیان",
+    hadith_statement: "حدیث کا بیان",
+    documented: "دستاویزی ریکارڈ",
+    archaeological_estimate: "آثارِ قدیمہ کا تخمینہ",
+    modern_life_expectancy: "جدید متوقع عمر",
+    modern_verified_max: "جدید تصدیق شدہ زیادہ سے زیادہ",
+    speculative_theory: "قیاسی نظریہ",
+  },
+  measures: {
+    years_among_people: "اپنی قوم میں گزارے گئے سال",
+    total_age: "کل عمر",
+    life_expectancy_at_birth: "پیدائش کے وقت متوقع عمر",
+    after_childhood: "بچپن کے بعد متوقع عمر",
+    maximum: "زیادہ سے زیادہ تصدیق شدہ عمر",
+  },
+  illustration: {
+    note: "غیر تصویری خاکہ: صرف مناظر اور اشیاء۔ اس میں کوئی انسان اور کسی نبی سے متعلق کوئی چیز نہیں دکھائی گئی۔",
+    play: "چلائیں",
+    pause: "روکیں",
+    replay: "دوبارہ چلائیں",
+    scenes: {
+      fields: "سیراب کھیت میں فصلوں کی قطاریں",
+      palms: "ریتیلے میدان کے ساتھ کھجور کے درخت",
+      harvest: "کٹائی کے وقت اناج کے گٹھے",
+      well: "رسی اور ڈول والا پتھر کا کنواں",
+      pastoral: "ندی اور نیچی پہاڑیوں والی لہراتی چراگاہ",
+      "trade-route": "دو فصیل بند بستیوں کے درمیان میدان سے گزرتا نقطہ دار راستہ",
+      "mud-brick": "ہموار چھتوں والے کچی اینٹ اور پتھر کے مکان",
+      "empty-market": "سائبانوں اور ٹھیلوں والی ایک خالی بازار کی گلی",
+      tools: "سادہ اوزار: کدال، درانتی، مٹی کا گھڑا اور چکی",
+      ship: "پُرسکون پانی پر لکڑی کی بادبانی کشتی",
+    },
+  },
+};
+
+export const lifestyle: Record<Locale, LifestyleStrings> = { en, ar, ur };
 
 export function lifestyleStrings(locale: string): LifestyleStrings {
-  return locale === "ar" ? ar : en;
+  return lifestyle[resolveLocale(locale)];
 }

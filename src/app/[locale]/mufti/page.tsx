@@ -11,7 +11,10 @@ import { muftiT } from "@/lib/i18n/modules/mufti";
 import { dreamsT } from "@/lib/i18n/modules/dreams";
 import type { CitationRow } from "@/lib/mufti";
 
-export const metadata: Metadata = { title: "Mufti workspace", robots: { index: false, follow: false } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  return { title: muftiT(l).workspace.title, robots: { index: false, follow: false } };
+}
 export const dynamic = "force-dynamic";
 
 /**

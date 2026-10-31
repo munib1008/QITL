@@ -9,16 +9,19 @@ import { riwayahLabel } from "@/lib/qiraat/model";
 
 export const revalidate = 300;
 
-export const metadata: Metadata = {
-  title: "Compare readings",
-  description: "Side-by-side qira'at readings, shown only from licensed text editions with a reviewed explanation.",
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  const t = qiraatStrings(l).compare;
+  return {
+  title: t.title,
+  description: t.lead,
   alternates: { canonical: `${BASE}/compare` },
 };
+}
 
 export default async function QiraatCompare({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = qiraatStrings(locale);
-  const lang = locale === "ar" ? "ar" : "en";
   const variants = await getApprovedVariants();
   const list = variants.state === "ok" ? variants.data : [];
 
@@ -46,7 +49,7 @@ export default async function QiraatCompare({ params }: { params: Promise<{ loca
               <h3>{t.compare.explanation}</h3>
               {v.claims.map((c) => (
                 <div key={c.id} className="qr-row">
-                  <EvidenceLabel kind={c.evidence as EvidenceKind} lang={lang} />
+                  <EvidenceLabel kind={c.evidence as EvidenceKind} lang={locale} />
                   <p style={{ margin: 0 }}>{c.statement}</p>
                 </div>
               ))}

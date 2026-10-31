@@ -5,22 +5,26 @@ import { LoadState } from "@/components/qiraat/LoadState";
 import { CitationChip, EvidenceLabel } from "@/components/ui/evidence";
 import { EmptyState } from "@/components/ui/misc";
 import type { EvidenceKind } from "@/content/journey";
-import { qiraatStrings } from "@/lib/i18n/modules/qiraat";
+import { qiraat, qiraatStrings } from "@/lib/i18n/modules/qiraat";
+import { englishContent } from "@/lib/i18n/locales";
 import { getMisconceptions, getReaders, refLabel } from "@/lib/qiraat/data";
 import { AHRUF_HADITH_REFS } from "@/lib/qiraat/model";
 
 export const revalidate = 300;
 
-export const metadata: Metadata = {
-  title: "Seven Ahruf and the ten Qira'at",
-  description: "The seven ahruf in the authentic narrations, how they differ from the ten canonical readings, and which readings QITL can show.",
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  const t = qiraatStrings(l);
+  return {
+  title: t.title,
+  description: t.lead,
   alternates: { canonical: BASE },
 };
+}
 
 export default async function QiraatHub({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = qiraatStrings(locale);
-  const lang = locale === "ar" ? "ar" : "en";
   const [readers, misconceptions] = await Promise.all([getReaders(), getMisconceptions()]);
 
   return (
@@ -32,7 +36,7 @@ export default async function QiraatHub({ params }: { params: Promise<{ locale: 
           {AHRUF_HADITH_REFS.map((h) => (
             <li key={h.href} className="qr-card">
               <div className="qr-row">
-                <EvidenceLabel kind="hadith" lang={lang} />
+                <EvidenceLabel kind="hadith" lang={locale} />
                 <CitationChip href={h.href}>{`${h.collectionName} ${h.number}`}</CitationChip>
               </div>
               <p className="zq-licence zq-licence-pending">{t.hadith.licencePending}</p>
@@ -46,11 +50,12 @@ export default async function QiraatHub({ params }: { params: Promise<{ locale: 
         <h2 id="qr-dist-h">{t.distinction.title}</h2>
         <div className="qr-draft" data-testid="distinction-panel">
           <p style={{ margin: 0 }}>
-            <EvidenceLabel kind="disputed" lang={lang}>
+            <EvidenceLabel kind="disputed" lang={locale}>
               {t.draft}
             </EvidenceLabel>
           </p>
-          <ul>
+          {/* Scholarly statements are not translated in every language; untranslated ones stay marked as English. */}
+          <ul {...(locale !== "en" && t.distinction.points === qiraat.en.distinction.points ? englishContent(locale) : {})}>
             {t.distinction.points.map((p) => (
               <li key={p}>{p}</li>
             ))}
@@ -133,7 +138,7 @@ export default async function QiraatHub({ params }: { params: Promise<{ locale: 
                 <h3>{m.question}</h3>
                 <p style={{ margin: 0 }}>{m.claim.statement}</p>
                 <div className="qr-row">
-                  <EvidenceLabel kind={m.claim.evidence as EvidenceKind} lang={lang} />
+                  <EvidenceLabel kind={m.claim.evidence as EvidenceKind} lang={locale} />
                   {m.claim.refs.map((r) => (
                     <CitationChip key={refLabel(r)} href={r.kind === "quran" && r.quran_surah ? `/quran/${r.quran_surah}#ayah-${r.quran_ayah_from ?? 1}` : undefined}>
                       {refLabel(r)}

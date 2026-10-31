@@ -6,21 +6,24 @@ import { getDict, isLocale, LOCALES } from "@/lib/i18n";
 import { publicEnv } from "@/lib/env";
 import { ServiceWorker } from "@/components/shell/ServiceWorker";
 import { BottomNav } from "@/components/shell/BottomNav";
+import { uiStrings } from "@/lib/i18n/modules/ui";
 import { exploreLinks } from "@/lib/nav";
 import { Analytics } from "@/components/shell/Analytics";
 import "../globals.css";
-import { BRAND_FULL } from "@/lib/brand";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(publicEnv.siteUrl),
-  title: { default: BRAND_FULL, template: "%s · QITL" },
-  applicationName: "QITL",
-  description:
-    "Explore the story. Follow the evidence. The Quran, authenticated Hadith, the prophets, chronology and geography — every claim labelled by how certain it is.",
-  openGraph: { type: "website", siteName: BRAND_FULL },
-  twitter: { card: "summary_large_image" },
-  alternates: { languages: { en: "/", ar: "/ar", ur: "/ur" } },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const site = uiStrings(locale).site;
+  return {
+    metadataBase: new URL(publicEnv.siteUrl),
+    title: { default: site.title, template: "%s · QITL" },
+    applicationName: "QITL",
+    description: site.description,
+    openGraph: { type: "website", siteName: site.title },
+    twitter: { card: "summary_large_image" },
+    alternates: { languages: { en: "/", ar: "/ar", ur: "/ur" } },
+  };
+}
 
 export const viewport: Viewport = {
   width: "device-width",

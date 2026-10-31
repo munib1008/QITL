@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useSession } from "./useSession";
+import { accountStrings } from "@/lib/i18n/modules/account";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 /**
  * Records how far a signed-in reader got in a chapter (by scroll position, saved at most every 5 seconds and on
@@ -9,6 +11,7 @@ import { useSession } from "./useSession";
  */
 export function ChapterProgress({ chapterId }: { chapterId: string }) {
   const session = useSession();
+  const t = accountStrings(useLocale());
   const [saved, setSaved] = useState<number | null>(null);
   const best = useRef(0);
   const sent = useRef(0);
@@ -51,7 +54,7 @@ export function ChapterProgress({ chapterId }: { chapterId: string }) {
   if (session.status !== "signed_in") return null;
   return (
     <p className="zq-meta" aria-live="polite" style={{ marginTop: 24 }}>
-      {saved == null ? "Your reading progress is saved to your library as you read." : saved >= 100 ? "Chapter completed. Saved to your library." : `Progress saved: ${saved}%`}
+      {saved == null ? t.progressIdle : saved >= 100 ? t.progressDone : t.progressSaved(saved)}
     </p>
   );
 }

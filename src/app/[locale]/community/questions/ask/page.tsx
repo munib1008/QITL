@@ -5,7 +5,10 @@ import { AskForm } from "@/components/mufti/AskForm";
 import { getUser } from "@/lib/supabase/server";
 import { muftiT } from "@/lib/i18n/modules/mufti";
 
-export const metadata: Metadata = { title: "Ask a question", robots: { index: false } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const l = (await params).locale;
+  return { title: muftiT(l).ask.title, robots: { index: false } };
+}
 export const dynamic = "force-dynamic";
 
 export default async function AskPage({ params }: { params: Promise<{ locale: string }> }) {

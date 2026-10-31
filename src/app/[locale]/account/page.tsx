@@ -8,20 +8,24 @@ import { getUser } from "@/lib/supabase/server";
 import { journeyStops } from "@/content/journey";
 import { MyQuestions } from "@/components/mufti/MyQuestions";
 import { MyDreamRequests } from "@/components/dreams/MyDreamRequests";
+import { accountStrings } from "@/lib/i18n/modules/account";
 import { ContinueReading } from "@/components/quran/ContinueReading";
 import { SavedVerses } from "@/components/quran/SavedVerses";
 import { QuranAttribution } from "@/components/quran/QuranAttribution";
 import { quranSource, surahList } from "@/content/quran";
 
-export const metadata: Metadata = { title: "My library", robots: { index: false } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  return { title: accountStrings((await params).locale).library, robots: { index: false } };
+}
 
 export default async function AccountPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const { sb, user } = await getUser();
   if (sb && !user) redirect("/sign-in?returnTo=/account");
+  const t = accountStrings(locale);
   const surahNames = Object.fromEntries((surahList() ?? []).map((s) => [s.number, s.name]));
   return (
-    <ReadingPage locale={locale} crumbs={[{ label: "My library" }]} title="My library" lead="Your bookmarks, reading progress and private notes, and your account settings. Only you can see this page.">
+    <ReadingPage locale={locale} crumbs={[{ label: t.library }]} title={t.library} lead={t.libraryLead}>
       <div className="zq-pagebody">
         {/* Three independent language choices; without an account they are kept on this device. */}
         <div id="language">
@@ -37,8 +41,8 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
             <MyDreamRequests locale={locale} compact />
           </>
         ) : (
-          <EmptyState tone="soon" label={<span className="zq-soon">Coming soon</span>} title="Accounts are not open on this site yet.">
-            <p>Everything is readable without an account.</p>
+          <EmptyState tone="soon" label={<span className="zq-soon">{t.soon}</span>} title={t.notOpen}>
+            <p>{t.readable}</p>
           </EmptyState>
         )}
       </div>

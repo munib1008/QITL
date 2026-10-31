@@ -2,7 +2,10 @@
 
 import { Fragment, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { cx } from "@/lib/cx";
-import { ERA_TEXT, PLACE_TEXT } from "@/content/labels";
+import { englishContent } from "@/lib/i18n/locales";
+import { journeyStrings } from "@/lib/i18n/modules/home";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { useLocale } from "@/lib/i18n/useLocale";
 import type { JourneyEra, JourneyItem } from "@/content/journey";
 import { CitationChip } from "@/components/ui/evidence";
 import { EvidenceDrawer, type EvidenceTab } from "@/components/ui/EvidenceDrawer";
@@ -41,12 +44,14 @@ export function pickActive(distances: Array<{ id: string; d: number }>, current:
   return current;
 }
 
-function evidenceTabs(it: JourneyItem): EvidenceTab[] {
+type JT = ReturnType<typeof journeyStrings>;
+
+function evidenceTabs(it: JourneyItem, t: JT, u: ReturnType<typeof uiStrings>, en: { lang?: "en"; dir?: "ltr" }): EvidenceTab[] {
   const q: Array<{ ref: string; label: string; href?: string }> = [];
   const hd: typeof q = [];
   const sc: typeof q = [];
   for (const s of it.surahs ?? [])
-    for (const ps of s.passages) q.push({ ref: `Q ${ps}`, label: s.name + (s.named ? " — named after him" : ""), href: quranHref(ps) });
+    for (const ps of s.passages) q.push({ ref: `Q ${ps}`, label: s.name + (s.named ? t.namedAfter : ""), href: quranHref(ps) });
   for (const r of it.refs ?? []) {
     const entry = { ref: r.ref, label: r.label, href: r.kind === "quran" ? quranHref(r.ref.replace(/^Q\s*/, "")) : undefined };
     (r.kind === "quran" ? q : r.kind === "hadith" ? hd : sc).push(entry);
@@ -64,24 +69,32 @@ function evidenceTabs(it: JourneyItem): EvidenceTab[] {
     ) : (
       <p className="zq-meta">{empty}</p>
     );
-  const place = it.place ?? { name: "Unknown", certainty: "unknown" as const };
+  const place = it.place ?? { name: t.unknown, certainty: "unknown" as const };
   return [
-    { label: "Quran", count: q.length, content: list(q, "No Quran passage attached.") },
-    { label: "Hadith", count: hd.length, content: list(hd, "No narration attached to this stop yet.") },
+    { label: t.tabs.quran, count: q.length, content: list(q, t.noQuran) },
+    { label: t.tabs.hadith, count: hd.length, content: list(hd, t.noHadith) },
     {
-      label: "Context",
+      label: t.tabs.context,
       content: (
         <div>
           <p className="zq-meta">
-            <b style={{ color: "var(--ink)" }}>Date: </b>
-            {it.era.label} — {ERA_TEXT[it.era.certainty]}
+            <b style={{ color: "var(--ink)" }}>{t.date} </b>
+            {it.era.label} — {u.era[it.era.certainty]}
           </p>
           <p className="zq-meta">
-            <b style={{ color: "var(--ink)" }}>{PLACE_TEXT[place.certainty]}: </b>
-            {place.name}
+            <b style={{ color: "var(--ink)" }}>{u.place[place.certainty]}: </b>
+            <span {...en}>{place.name}</span>
           </p>
-          {it.order ? <p className="zq-meta">{it.order.label}</p> : null}
-          {it.note ? <p className="zq-meta">{it.note}</p> : null}
+          {it.order ? (
+            <p className="zq-meta" {...en}>
+              {it.order.label}
+            </p>
+          ) : null}
+          {it.note ? (
+            <p className="zq-meta" {...en}>
+              {it.note}
+            </p>
+          ) : null}
           {sc.map((r) => (
             <p key={r.ref} className="zq-meta">
               {r.ref} — {r.label}
@@ -107,7 +120,11 @@ export interface JourneyTimelineProps {
 
 const useIsoLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
 
-export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true, endLabel, endNote, endActions, draft = true, label = "Journey of the prophets" }: JourneyTimelineProps) {
+export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true, endLabel, endNote, endActions, draft = true, label }: JourneyTimelineProps) {
+  const locale = useLocale();
+  const t = journeyStrings(locale);
+  const u = uiStrings(locale);
+  const en = englishContent(locale);
   const all = useMemo(() => eras.flatMap((e) => e.items), [eras]);
   const [filter, setFilter] = useState<JourneyFilter>("all");
   const [active, setActive] = useState<string>(initialActive ?? all[0]?.id ?? "");
@@ -237,24 +254,24 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
 
   let side = 0;
   return (
-    <section className="zq-jt" data-theme="journey" data-motion={paused ? "paused" : undefined} ref={root} aria-label={label}>
+    <section className="zq-jt" data-theme="journey" data-motion={paused ? "paused" : undefined} ref={root} aria-label={label ?? t.label}>
       <div className="zq-jt-bg" ref={bg} aria-hidden="true" />
       {intro ? <div className="zq-jt-intro">{intro}</div> : null}
-      <div className="zq-jt-filters zq-glass" role="group" aria-label="Show">
-        <span className="zq-jt-flabel">Explore by</span>
+      <div className="zq-jt-filters zq-glass" role="group" aria-label={t.show}>
+        <span className="zq-jt-flabel">{t.exploreBy}</span>
         {JOURNEY_FILTERS.map(([f, text]) => (
           <button key={f} type="button" className="zq-jt-filter" aria-pressed={filter === f} onClick={() => changeFilter(f)} data-filter={f}>
-            {text}
+            {t.filters[f] ?? text}
           </button>
         ))}
         <button type="button" className="zq-jt-filter zq-jt-motion" aria-pressed={paused} onClick={() => setPaused((p) => !p)}>
-          {paused ? "Play animation" : "Pause animation"}
+          {paused ? t.play : t.pause}
         </button>
       </div>
       <div
         className="zq-jt-progress"
         role="progressbar"
-        aria-label="Journey progress"
+        aria-label={t.progress}
         aria-valuemin={1}
         aria-valuemax={visible.length}
         aria-valuenow={pos}
@@ -266,16 +283,18 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
         </b>
       </div>
       <div className="zq-jt-body">
-        <nav className="zq-jt-rail zq-glass" aria-label="Jump to a stop">
-          <p className="zq-jt-rail-title">Your journey</p>
+        <nav className="zq-jt-rail zq-glass" aria-label={t.jump}>
+          <p className="zq-jt-rail-title">{t.yours}</p>
           <ol>
             {eras.map((e) => {
               const items = e.items.filter((it) => matchesFilter(it, filter));
               if (!items.length) return null;
               return (
                 <li key={e.title}>
-                  <p className="zq-jt-rail-era">{e.title}</p>
-                  <ol>
+                  <p className="zq-jt-rail-era" {...en}>
+                    {e.title}
+                  </p>
+                  <ol {...en}>
                     {items.map((it) => (
                       <li key={it.id}>
                         <button type="button" className="zq-jt-rail-btn" aria-current={it.id === active || undefined} onClick={() => jump(it.id)}>
@@ -301,9 +320,13 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
                 <li className="zq-jt-era">
                   <div className="zq-jt-era-pill zq-glass">
                     <p className="zq-eyebrow">
-                      {String(ei + 1).padStart(2, "0")} / {e.title}
+                      {String(ei + 1).padStart(2, "0")} / <span {...en}>{e.title}</span>
                     </p>
-                    {e.note ? <p className="zq-jt-era-note">{e.note}</p> : null}
+                    {e.note ? (
+                      <p className="zq-jt-era-note" {...en}>
+                        {e.note}
+                      </p>
+                    ) : null}
                   </div>
                 </li>
                 {items.map((it) => {
@@ -321,7 +344,7 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
                         type="button"
                         className="zq-jt-node"
                         data-node={it.id}
-                        aria-label={`${it.name}${isA ? " — details shown" : " — show details"}`}
+                        aria-label={isA ? t.detailsShown(it.name) : t.showDetails(it.name)}
                         aria-expanded={isA}
                         onClick={() => pick(it.id)}
                       >
@@ -340,7 +363,7 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
                       </div>
                       <div className="zq-jt-when">
                         <strong>{it.era.label}</strong>
-                        <span>{ERA_TEXT[it.era.certainty]}</span>
+                        <span>{u.era[it.era.certainty]}</span>
                       </div>
                     </li>
                   );
@@ -351,7 +374,7 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
           {endLabel !== false ? (
             <li className="zq-jt-end">
               <div className="zq-jt-era-pill zq-glass">
-                <p className="zq-eyebrow">{endLabel ?? "The journey continues"}</p>
+                <p className="zq-eyebrow">{endLabel ?? t.continues}</p>
                 {endNote ? <p className="zq-jt-era-note">{endNote}</p> : null}
                 {endActions}
               </div>
@@ -365,15 +388,13 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
           theme="journey"
           claim={`${evItem.name} — ${evItem.summary}`}
           status={(evItem.evidence ?? ["quran"])[0]}
-          tabs={evidenceTabs(evItem)}
+          tabs={evidenceTabs(evItem, t, u, en)}
           onClose={() => {
             hold.current = Date.now() + HOLD_MS;
             setEvItem(null);
           }}
           footer={
-            draft
-              ? "Draft — references to be verified and approved by the scholarly reviewer before publishing."
-              : "Approved by the scholarly reviewers · see the methodology"
+            draft ? t.draftFooter : t.approvedFooter
           }
         />
       ) : null}

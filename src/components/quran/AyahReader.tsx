@@ -7,6 +7,7 @@ import { BookmarkButton } from "@/components/account/BookmarkButton";
 import { useSession } from "@/components/account/useSession";
 import { Icon } from "@/components/ui/icons";
 import { interpretationT } from "@/lib/i18n/modules/interpretation";
+import { quranPageStrings } from "@/lib/i18n/modules/reader";
 import { quranReaderStrings, type QuranReaderStrings } from "@/lib/i18n/modules/quranReader";
 import { ayahAtLine, ayahShareText, readLocalProgress, saveLocalProgress, type AyahMarker } from "@/lib/quran-reader";
 import { StudyLayout, type StudyTarget } from "./StudyPanel";
@@ -55,6 +56,7 @@ export function AyahReader({ surah, surahName, verses, links, locale = "en", mar
   const [resume, setResume] = useState<number | null>(null);
   const t = interpretationT(locale);
   const r = useMemo(() => quranReaderStrings(locale), [locale]);
+  const q = useMemo(() => quranPageStrings(locale), [locale]);
   const session = useSession();
   const list = useRef<HTMLOListElement>(null);
   const signedIn = useRef(false);
@@ -228,16 +230,16 @@ export function AyahReader({ surah, surahName, verses, links, locale = "en", mar
   const i = SIZES.indexOf(size);
   return (
     <StudyLayout target={study} locale={locale} onClose={() => setStudy(null)}>
-      <section aria-label={`Surah ${surahName}, Arabic text`}>
-        <div className="zq-filters" role="group" aria-label="Arabic text size" style={{ marginBottom: 12 }}>
-          <span className="zq-eyebrow">Text size</span>
-          <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => set(SIZES[Math.max(0, i - 1)]!)} disabled={i <= 0} aria-label="Smaller Arabic text">
+      <section aria-label={q.arabicText(surahName)}>
+        <div className="zq-filters" role="group" aria-label={q.textSizeGroup} style={{ marginBottom: 12 }}>
+          <span className="zq-eyebrow">{q.textSize}</span>
+          <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => set(SIZES[Math.max(0, i - 1)]!)} disabled={i <= 0} aria-label={q.smaller}>
             A−
           </button>
           <output className="zq-order" aria-live="polite">
             {size}px
           </output>
-          <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => set(SIZES[Math.min(SIZES.length - 1, i + 1)]!)} disabled={i >= SIZES.length - 1} aria-label="Larger Arabic text">
+          <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => set(SIZES[Math.min(SIZES.length - 1, i + 1)]!)} disabled={i >= SIZES.length - 1} aria-label={q.larger}>
             A+
           </button>
         </div>
@@ -269,6 +271,7 @@ export function AyahReader({ surah, surahName, verses, links, locale = "en", mar
               studyLabel={t.study}
               studyAria={t.studyAyah(`Q ${surah}:${v.ayah}`)}
               r={r}
+              q={q}
               onStudy={onStudy}
               onCopy={onCopy}
               onShare={onShare}
@@ -304,15 +307,16 @@ interface ItemProps {
   studyLabel: string;
   studyAria: string;
   r: QuranReaderStrings;
+  q: ReturnType<typeof quranPageStrings>;
   onStudy: (ayah: number, text: string) => void;
   onCopy: (ayah: number, text: string) => void;
   onShare: (ayah: number, text: string) => void;
 }
 
-const AyahItem = memo(function AyahItem({ surah, ayah, text, marker, links, live, studied, copied, canShare, studyLabel, studyAria, r, onStudy, onCopy, onShare }: ItemProps) {
+const AyahItem = memo(function AyahItem({ surah, ayah, text, marker, links, live, studied, copied, canShare, studyLabel, studyAria, r, q, onStudy, onCopy, onShare }: ItemProps) {
   const related = (links ?? []).map((l) => (
     <Link key={l.id} className="zq-iconbtn" href={`/prophets/${l.id}`} prefetch={false}>
-      {l.name} →
+      <span lang="en">{l.name}</span> {q.next}
     </Link>
   ));
   // A plain same-page anchor: the highlight hook replays it on click; no router work per ayah.
@@ -328,7 +332,7 @@ const AyahItem = memo(function AyahItem({ surah, ayah, text, marker, links, live
         {text}
       </p>
       {live ? (
-        <div className="zq-actions" role="group" aria-label={`Ayah ${ayah}`}>
+        <div className="zq-actions" role="group" aria-label={q.ayah(ayah)}>
           {cite}
           <button type="button" className="zq-iconbtn qs-study-btn" aria-haspopup="dialog" aria-pressed={studied} aria-label={studyAria} onClick={() => onStudy(ayah, text)}>
             <Icon.source />
@@ -358,7 +362,7 @@ const AyahItem = memo(function AyahItem({ surah, ayah, text, marker, links, live
         </div>
       ) : (
         // Far from the viewport: the citation (focusable, so Tab reaches it and mounts the rest) and related links only.
-        <div className="zq-actions" role="group" aria-label={`Ayah ${ayah}`}>
+        <div className="zq-actions" role="group" aria-label={q.ayah(ayah)}>
           {cite}
           {related}
         </div>

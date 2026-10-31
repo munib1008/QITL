@@ -1,8 +1,10 @@
 /**
  * Interface strings for the Interpretation Explorer (the per-ayah "Study" panel) and its admin tools.
  * English is the reviewed source; the Arabic strings are a first draft pending review by a qualified translator,
- * like the rest of the Arabic interface (src/lib/i18n/dict.ts). Urdu slots in as another key with the same shape.
+ * like the rest of the Arabic interface (src/lib/i18n/dict.ts). The Urdu is a draft too.
  */
+import type { Locale } from "../dict";
+import { resolveLocale } from "../locales";
 
 const en = {
   study: "Study",
@@ -52,6 +54,10 @@ const en = {
   earlySlotLabel: "Commentary, not a translation",
   earlySlotHelp: "The oldest surviving complete commentary is shown separately because it is commentary, not a translation, and its age does not make it the most authentic. It appears with its reliability note and review flags once its edition and rights are confirmed.",
   reliabilityNote: "Reliability note",
+  reviewFlags: "Review flags",
+  notAvailable: "Not available yet",
+  sourceNotImported: "Source not imported",
+  prompt: "prompt",
   flags: {
     weak_narration: "Weak narration",
     israiliyyat: "Isra'iliyyat",
@@ -176,6 +182,10 @@ const ar: InterpretationStrings = {
   earlySlotLabel: "تفسير وليس ترجمة",
   earlySlotHelp: "يُعرض أقدم تفسير كامل باقٍ منفصلًا لأنه تفسير وليس ترجمة، وقِدَمه لا يجعله الأصحّ. يظهر مع ملاحظة الموثوقية وعلامات المراجعة بعد التحقق من طبعته وحقوقه.",
   reliabilityNote: "ملاحظة الموثوقية",
+  reviewFlags: "علامات المراجعة",
+  notAvailable: "غير متاح بعد",
+  sourceNotImported: "المصدر لم يُستورد",
+  prompt: "الموجِّه",
   flags: {
     weak_narration: "رواية ضعيفة",
     israiliyyat: "إسرائيليات",
@@ -250,8 +260,135 @@ const ar: InterpretationStrings = {
   },
 };
 
-export const interpretationStrings: Record<"en" | "ar", InterpretationStrings> = { en, ar }; // Urdu falls back to English until reviewed Urdu strings exist
+/** Draft Urdu (written by hand from the English): needs review by a qualified translator, like the Arabic. */
+const ur: InterpretationStrings = {
+  study: "مطالعہ",
+  studyAyah: (ref) => `${ref} کا مطالعہ`,
+  studyTitle: (ref) => `${ref} کا مطالعہ`,
+  close: "بند کریں",
+  panelLabel: "تفسیری مطالعہ",
+  arabicNotLoaded: "اس آیت کا عربی متن ابھی لوڈ نہیں ہوا۔ یہ صرف تصدیق شدہ ماخذ سے درآمد کر کے دکھایا جاتا ہے، کبھی ہاتھ سے نہیں لکھا جاتا۔",
+  arabicSource: "عربی متن",
+  pickAyah: "آیت نمبر",
+  launcherTitle: "کسی آیت کا مطالعہ کریں",
+  launcherHelp: "اس سائٹ پر عربی متن ابھی درآمد نہیں ہوا۔ آپ پھر بھی مطالعے کا پینل کھول کر دیکھ سکتے ہیں کہ کون سے مآخذ درج ہیں اور کیا زیرِ التوا ہے۔",
+  loading: "مطالعے کا پینل لوڈ ہو رہا ہے…",
+  loadError: "مطالعے کا پینل لوڈ نہیں ہو سکا۔ دوبارہ کوشش کریں۔",
+  notConnected: "تفسیر کا ڈیٹا بیس اس سائٹ پر ابھی منسلک نہیں ہوا۔",
+  tabs: {
+    translations: "تراجم",
+    words: "لفظ بہ لفظ",
+    differences: "اختلافات کی وضاحت",
+    tafsir: "تفاسیر کا موازنہ",
+    hadith: "حدیث",
+    related: "قصے اور ٹائم لائن",
+    summary: "QITL خلاصہ",
+  },
+  states: {
+    shown: "لائسنس یافتہ",
+    licence_pending: "لائسنس زیرِ التوا",
+    not_imported: "درآمد نہیں ہوا",
+    unverified: "ایڈیشن کی تصدیق نہیں ہوئی",
+  },
+  stateHelp: {
+    licence_pending: "یہ ایڈیشن درج ہے، لیکن اس کا لائسنس ابھی صاف نہیں ہوا۔ تب تک کوئی متن نہیں دکھایا جاتا۔",
+    not_imported: "یہ ایڈیشن منظور ہے، لیکن اس آیت کے لیے اس کا متن ابھی درآمد نہیں ہوا۔",
+    unverified: "یہ ایڈیشن ابھی امیدوار ہے: مترجم، ایڈیشن، سال اور اصل کی تصدیق ابھی نہیں ہوئی۔",
+  },
+  translationsIntro: "ہر ترجمہ ساتھ ساتھ، بغیر کسی تبدیلی کے، اپنے مترجم، ایڈیشن، سال اور لائسنس کے ساتھ دکھایا جاتا ہے۔ QITL کبھی تراجم کا اوسط نہیں نکالتا اور نہ کسی ایک کو “سب سے درست” چنتا ہے۔",
+  noEditions: "اس آیت کے لیے ابھی کوئی ترجمہ ایڈیشن درج نہیں۔",
+  translator: "مترجم",
+  scholar: "عالم",
+  edition: "ایڈیشن",
+  year: "سال",
+  licence: "لائسنس",
+  origin: "اصل",
+  unknown: "درج نہیں",
+  earlySlotTitle: "ابتدائی تاریخی تفسیر",
+  earlySlotWork: "تفسیر مقاتل بن سلیمان",
+  earlySlotLabel: "تفسیر، ترجمہ نہیں",
+  earlySlotHelp: "سب سے قدیم محفوظ مکمل تفسیر الگ دکھائی جاتی ہے کیونکہ یہ تفسیر ہے، ترجمہ نہیں، اور اس کا قدیم ہونا اسے سب سے مستند نہیں بناتا۔ اس کا ایڈیشن اور حقوق طے ہونے کے بعد یہ اپنی معتبریت کے نوٹ اور جائزے کے نشانات کے ساتھ ظاہر ہوتی ہے۔",
+  reliabilityNote: "معتبریت کا نوٹ",
+  reviewFlags: "جائزے کے نشانات",
+  notAvailable: "ابھی دستیاب نہیں",
+  sourceNotImported: "ماخذ درآمد نہیں ہوا",
+  prompt: "پرامپٹ",
+  flags: {
+    weak_narration: "ضعیف روایت",
+    israiliyyat: "اسرائیلیات",
+    disputed: "مختلف فیہ",
+    unattributed: "بے سند روایت",
+  },
+  words: {
+    intro: "مادہ، لُغوی اصل، کلمے کی قسم اور صرفی ساخت ایک لائسنس یافتہ ذخیرے سے آتی ہیں۔ لفظی معنی اور سیاقی معنی الگ رکھے جاتے ہیں۔",
+    none: "اس آیت کا لفظ بہ لفظ ڈیٹا ابھی درآمد نہیں ہوا یا اس کا لائسنس نہیں۔",
+    root: "مادہ",
+    lemma: "لُغوی اصل",
+    pos: "کلمے کی قسم",
+    morphology: "صرفی ساخت",
+    literal: "لفظی معنی",
+    contextual: "سیاقی معنی",
+    contextualPending: "ابھی جائزہ نہیں ہوا",
+    occurrences: (n: number) => (n === 1 ? "ایک اور مقام" : `${n} دیگر مقامات`),
+    noOccurrences: "کوئی اور مقام درج نہیں",
+    source: "ذخیرہ",
+  },
+  differences: {
+    intro: "تراجم میں فرق کیوں ہے۔ ہر فرق اپنی قسم برقرار رکھتا ہے: مترجم کا لفظی انتخاب، لسانی نکتہ، نحوی قراءت، یا مفسرین کے درمیان تسلیم شدہ اختلاف۔ انہیں کبھی آپس میں نہیں ملایا جاتا۔",
+    none: "اس آیت کے لیے اختلافات کی ابھی کوئی جائزہ شدہ وضاحت موجود نہیں۔",
+    kinds: {
+      translation_choice: "ترجمے کا انتخاب",
+      linguistic: "لسانی",
+      grammatical: "نحوی",
+      exegetical: "تفسیری اختلاف",
+    },
+    recognised: "تسلیم شدہ علمی اختلاف",
+    editions: "موازنہ کیے گئے ایڈیشن",
+  },
+  tafsir: {
+    intro: "تفسیر کی نامزد کتب سے اقتباسات، ساتھ ساتھ۔ ہر ایک اپنے عالم، ایڈیشن اور لائسنس کا نام دیتا ہے۔",
+    none: "اس آیت کے لیے ابھی کوئی تفسیری ایڈیشن درج نہیں۔",
+  },
+  hadith: {
+    intro: "جائزہ شدہ دعووں کے ذریعے اس آیت سے منسلک روایات، صحیح بخاری، صحیح مسلم، جامع ترمذی اور سنن ابن ماجہ سے۔ ہر ایک کسی نامزد عالم کا ہر درج شدہ حکم دکھاتی ہے۔",
+    none: "اس آیت سے ابھی کوئی جائزہ شدہ روایت منسلک نہیں۔",
+    sahih: "صحیح کے طور پر دکھائی گئی: کسی نامزد عالم نے یہی حکم لگایا",
+    notSahih: "صحیح کے طور پر پیش نہیں کی گئی: احکام دیکھیں",
+    open: "روایت کھولیں",
+  },
+  related: {
+    intro: "وہ قصے اور ٹائم لائن کے مقامات جن کے اقتباسات میں یہ آیت شامل ہے۔",
+    none: "QITL پر ابھی کوئی قصہ یا ٹائم لائن مقام اس آیت کا حوالہ نہیں دیتا۔",
+    story: "قصہ پڑھیں",
+    timeline: "ٹائم لائن پر",
+  },
+  summary: {
+    intro: "QITL کا اپنا وضاحتی خلاصہ، جو آٹھوں جانچوں اور علمی منظوری کے بعد ہی دکھایا جاتا ہے۔ یہ وضاحت ہے، کبھی ترجمہ نہیں۔",
+    none: "اس آیت کا ابھی کوئی QITL خلاصہ شائع نہیں ہوا۔",
+    human: "کسی انسان کا لکھا ہوا",
+    ai: (model: string) => `AI کی مدد سے مسودہ (${model})، انسانوں نے جائزہ لے کر منظور کیا`,
+    version: (v: number) => `ورژن ${v}`,
+  },
+  actions: {
+    group: "مطالعے کے اقدامات",
+    askMufti: "مفتی سے پوچھیں",
+    askMuftiSoon: "مفتی سے پوچھیں — جلد آ رہا ہے",
+    save: "محفوظ کریں",
+    report: "غلطی کی اطلاع دیں",
+    reportTitle: "اس آیت کے مطالعے کے پینل میں غلطی کی اطلاع دیں",
+    reportBody: "کیا غلط ہے؟",
+    reportHelp: "چیز کا نام لیں (ترجمہ، لفظ، تفسیر…) اور بتائیں کہ آپ کے خیال میں کیا غلط ہے۔ کم از کم ۱۰ حروف۔",
+    reportEvidence: "آپ کا ماخذ (اختیاری)",
+    reportSend: "اطلاع بھیجیں",
+    reportCancel: "منسوخ کریں",
+    reportSent: "شکریہ۔ ایک مدیر آپ کی اطلاع کا جائزہ لے گا۔",
+    reportSignIn: "غلطی کی اطلاع دینے کے لیے سائن اِن کریں۔",
+    reportFailed: "آپ کی اطلاع بھیجی نہ جا سکی۔",
+  },
+};
+
+export const interpretationStrings: Record<Locale, InterpretationStrings> = { en, ar, ur };
 
 export function interpretationT(locale: string): InterpretationStrings {
-  return locale === "ar" ? ar : en;
+  return interpretationStrings[resolveLocale(locale)];
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { uiStrings } from "@/lib/i18n/modules/ui";
 import { ReadingHeader, SiteFooter } from "./SiteHeader";
 
 export interface Crumb {
@@ -27,14 +28,15 @@ export function ReadingPage({
   query?: string;
   children: ReactNode;
 }) {
+  const u = uiStrings(locale).shell;
   return (
     <div className="pp">
       <ReadingHeader locale={locale} query={query} />
       <main className="pp-wrap" id="main">
         {crumbs?.length ? (
-          <ol className="pp-crumb" aria-label="Breadcrumb">
+          <ol className="pp-crumb" aria-label={u.breadcrumb}>
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/">{u.home}</Link>
             </li>
             {crumbs.map((c, i) => (
               <li key={c.label} aria-current={i === crumbs.length - 1 ? "page" : undefined}>

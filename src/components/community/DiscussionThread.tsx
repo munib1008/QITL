@@ -7,6 +7,9 @@ import { supabaseConfigured } from "@/lib/env";
 import { Comment, IconButton } from "@/components/ui/cards";
 import { CitationChip } from "@/components/ui/evidence";
 import { EmptyState, Skeleton, Toast } from "@/components/ui/misc";
+import { apiErrorText } from "@/lib/i18n/modules/api";
+import { communityStrings } from "@/lib/i18n/modules/community";
+import { useLocale } from "@/lib/i18n/useLocale";
 
 interface CommentRow {
   id: string;
@@ -28,13 +31,7 @@ interface DiscussionRow {
   content_id: string;
 }
 
-const REASONS = [
-  ["misleading", "Misleading about the sources"],
-  ["disrespectful", "Disrespectful"],
-  ["spam", "Spam"],
-  ["personal_information", "Shares personal information"],
-  ["other", "Something else"],
-] as const;
+const REASONS = ["misleading", "disrespectful", "spam", "personal_information", "other"] as const;
 
 function contentHref(type: string, id: string): string | null {
   if (type === "journey_stop") return `/prophets/${id}`;
@@ -49,6 +46,8 @@ function contentHref(type: string, id: string): string | null {
 /** A full thread: threaded comments, cite-a-verse, edit window, delete, report and follow. */
 export function DiscussionThread({ id }: { id: string }) {
   const session = useSession();
+  const locale = useLocale();
+  const t = communityStrings(locale);
   const [data, setData] = useState<{ discussion: DiscussionRow; comments: CommentRow[] } | "loading" | "unavailable" | "missing" | "error">("loading");
   const [toast, setToast] = useState<{ tone: "success" | "error"; text: string } | null>(null);
   const [replyTo, setReplyTo] = useState<string | null>(null);
@@ -75,8 +74,8 @@ export function DiscussionThread({ id }: { id: string }) {
   };
   const call = async (url: string, method: string, body?: unknown) => {
     const r = await fetch(url, { method, headers: { "content-type": "application/json" }, body: body ? JSON.stringify(body) : undefined });
-    const d = (await r.json().catch(() => ({}))) as { error?: string };
-    if (!r.ok) throw new Error(d.error ?? "Something went wrong.");
+    const d = (await r.json().catch(() => ({}))) as { error?: string; code?: string };
+    if (!r.ok) throw new Error(apiErrorText(locale, d, t.error));
     return d;
   };
 
@@ -108,16 +107,16 @@ export function DiscussionThread({ id }: { id: string }) {
     );
   if (data === "unavailable")
     return (
-      <EmptyState tone="soon" label={<span className="zq-soon">Coming soon</span>} title="Discussions are not open yet.">
-        <p>The community database is not connected on this site yet.</p>
+      <EmptyState tone="soon" label={<span className="zq-soon">{t.soon}</span>} title={t.notOpen}>
+        <p>{t.notConnectedShort}</p>
       </EmptyState>
     );
-  if (data === "missing") return <EmptyState title="This discussion does not exist or was removed." />;
+  if (data === "missing") return <EmptyState title={t.missing} />;
   if (data === "error")
     return (
-      <EmptyState title="The discussion could not be loaded.">
+      <EmptyState title={t.threadError}>
         <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => void load()}>
-          Retry
+          {t.retry}
         </button>
       </EmptyState>
     );
@@ -129,8 +128,12 @@ export function DiscussionThread({ id }: { id: string }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center" }}>
-        {href ? <CitationChip kind="About" href={href}>{data.discussion.content_id}</CitationChip> : null}
-        {data.discussion.status === "locked" ? <span className="zq-soon">Locked by a moderator</span> : null}
+        {href ? (
+          <CitationChip kind={t.about} href={href}>
+            {data.discussion.content_id}
+          </CitationChip>
+        ) : null}
+        {data.discussion.status === "locked" ? <span className="zq-soon">{t.lockedBy}</span> : null}
         {signedIn ? (
           <button
             type="button"
@@ -141,38 +144,38 @@ export function DiscussionThread({ id }: { id: string }) {
               try {
                 await call("/api/follows", "POST", { discussionId: id, follow: next });
                 setFollowing(next);
-                say("success", next ? "Following. Activity goes to your notifications and digest." : "Unfollowed.");
+                say("success", next ? t.followed : t.unfollowed);
               } catch (e) {
                 say("error", (e as Error).message);
               }
             }}
           >
-            {following ? "Following" : "Follow thread"}
+            {following ? t.following : t.follow}
           </button>
         ) : null}
       </div>
 
-      {tree.length === 0 ? <p className="zq-meta">No comments yet.</p> : null}
+      {tree.length === 0 ? <p className="zq-meta">{t.noComments}</p> : null}
       <div>
         {tree.map(({ c, depth }) => (
           <div key={c.id} style={{ marginInlineStart: depth * 24 }} id={`c-${c.id}`}>
             {editing === c.id ? (
               <CommentForm
-                label="Edit your comment"
+                label={t.editLabel}
                 initial={c.body ?? ""}
-                submitLabel="Save edit"
+                submitLabel={t.saveEdit}
                 onCancel={() => setEditing(null)}
                 onSubmit={async (body) => {
                   await call(`/api/discussions/${id}/comments/${c.id}`, "PATCH", { body });
                   setEditing(null);
                   await load();
-                  say("success", "Edited.");
+                  say("success", t.edited);
                 }}
               />
             ) : (
               <Comment
-                author={c.author_name ?? "Reader"}
-                time={new Date(c.created_at).toLocaleString()}
+                author={c.author_name ?? t.reader}
+                time={new Date(c.created_at).toLocaleString(locale)}
                 body={c.body ?? undefined}
                 citation={c.citation ?? undefined}
                 edited={Boolean(c.edited_at)}
@@ -182,33 +185,33 @@ export function DiscussionThread({ id }: { id: string }) {
                     <>
                       {open ? (
                         <IconButton icon="discuss" onClick={() => setReplyTo(c.id)}>
-                          Reply
+                          {t.reply}
                         </IconButton>
                       ) : null}
                       {c.can_edit ? (
                         <IconButton icon="source" onClick={() => setEditing(c.id)}>
-                          Edit
+                          {t.edit}
                         </IconButton>
                       ) : null}
                       {c.is_mine ? (
                         <IconButton
                           icon="close"
                           onClick={async () => {
-                            if (!window.confirm("Delete your comment? This cannot be undone.")) return;
+                            if (!window.confirm(t.confirmDelete)) return;
                             try {
                               await call(`/api/discussions/${id}/comments/${c.id}`, "DELETE");
                               await load();
-                              say("success", "Deleted.");
+                              say("success", t.deleted);
                             } catch (e) {
                               say("error", (e as Error).message);
                             }
                           }}
                         >
-                          Delete
+                          {t.delete}
                         </IconButton>
                       ) : (
                         <IconButton icon="flag" onClick={() => setReporting(c.id)} aria-expanded={reporting === c.id}>
-                          Report
+                          {t.report}
                         </IconButton>
                       )}
                     </>
@@ -218,12 +221,13 @@ export function DiscussionThread({ id }: { id: string }) {
             )}
             {reporting === c.id ? (
               <ReportForm
+                t={t}
                 onCancel={() => setReporting(null)}
                 onSubmit={async (reason, details) => {
                   try {
                     await call("/api/reports", "POST", { targetType: "comment", targetId: c.id, reason, details: details || undefined });
                     setReporting(null);
-                    say("success", "Reported. A moderator will review it.");
+                    say("success", t.reported);
                   } catch (e) {
                     say("error", (e as Error).message);
                   }
@@ -232,14 +236,14 @@ export function DiscussionThread({ id }: { id: string }) {
             ) : null}
             {replyTo === c.id ? (
               <CommentForm
-                label={`Reply to ${c.author_name ?? "this comment"}`}
-                submitLabel="Post reply"
+                label={t.replyTo(c.author_name ?? t.thisComment)}
+                submitLabel={t.postReply}
                 onCancel={() => setReplyTo(null)}
                 onSubmit={async (body, citation) => {
                   await call(`/api/discussions/${id}/comments`, "POST", { body, parentId: c.id, citation: citation || undefined });
                   setReplyTo(null);
                   await load();
-                  say("success", "Posted.");
+                  say("success", t.posted);
                 }}
               />
             ) : null}
@@ -249,18 +253,18 @@ export function DiscussionThread({ id }: { id: string }) {
 
       {open && signedIn ? (
         <CommentForm
-          label="Add a comment"
-          submitLabel="Post comment"
+          label={t.addComment}
+          submitLabel={t.postComment}
           onSubmit={async (body, citation) => {
             await call(`/api/discussions/${id}/comments`, "POST", { body, citation: citation || undefined });
             await load();
-            say("success", "Posted.");
+            say("success", t.posted);
           }}
         />
       ) : session.status === "signed_out" ? (
         <div>
           <Link className="zq-btn zq-btn-secondary zq-btn-link" href={`/sign-in?returnTo=${encodeURIComponent(`/community/${id}`)}`}>
-            Sign in to comment
+            {t.signInToComment}
           </Link>
         </div>
       ) : null}
@@ -274,6 +278,7 @@ export function DiscussionThread({ id }: { id: string }) {
 }
 
 function CommentForm({ label, initial = "", submitLabel, onSubmit, onCancel }: { label: string; initial?: string; submitLabel: string; onSubmit: (body: string, citation: string) => Promise<void>; onCancel?: () => void }) {
+  const t = communityStrings(useLocale());
   const [body, setBody] = useState(initial);
   const [citation, setCitation] = useState("");
   const [busy, setBusy] = useState(false);
@@ -304,11 +309,12 @@ function CommentForm({ label, initial = "", submitLabel, onSubmit, onCancel }: {
       </div>
       {!initial ? (
         <div className="zq-field">
-          <label htmlFor={`${fid}-c`}>Cite a verse or narration (optional)</label>
+          <label htmlFor={`${fid}-c`}>{t.cite}</label>
           <input
             id={`${fid}-c`}
             className="zq-input"
             dir="ltr"
+            lang="en"
             value={citation}
             onChange={(e) => setCitation(e.target.value)}
             placeholder="Q 12:3 or Bukhari 1"
@@ -316,7 +322,7 @@ function CommentForm({ label, initial = "", submitLabel, onSubmit, onCancel }: {
             aria-describedby={`${fid}-ch`}
           />
           <span className="zq-help" id={`${fid}-ch`}>
-            Write the reference exactly; it is shown as a citation chip beside your comment.
+            {t.citeHelp}
           </span>
         </div>
       ) : null}
@@ -327,11 +333,11 @@ function CommentForm({ label, initial = "", submitLabel, onSubmit, onCancel }: {
       ) : null}
       <div style={{ display: "flex", gap: 8 }}>
         <button type="submit" className="zq-btn zq-btn-primary" disabled={busy || body.trim().length < 2} aria-busy={busy || undefined}>
-          {busy ? "Posting" : submitLabel}
+          {busy ? t.posting : submitLabel}
         </button>
         {onCancel ? (
           <button type="button" className="zq-btn zq-btn-quiet" onClick={onCancel}>
-            Cancel
+            {t.cancel}
           </button>
         ) : null}
       </div>
@@ -339,7 +345,7 @@ function CommentForm({ label, initial = "", submitLabel, onSubmit, onCancel }: {
   );
 }
 
-function ReportForm({ onSubmit, onCancel }: { onSubmit: (reason: string, details: string) => Promise<void>; onCancel: () => void }) {
+function ReportForm({ t, onSubmit, onCancel }: { t: ReturnType<typeof communityStrings>; onSubmit: (reason: string, details: string) => Promise<void>; onCancel: () => void }) {
   const [reason, setReason] = useState<string>("misleading");
   const [details, setDetails] = useState("");
   return (
@@ -353,24 +359,24 @@ function ReportForm({ onSubmit, onCancel }: { onSubmit: (reason: string, details
     >
       <fieldset style={{ border: 0, padding: 0, margin: 0, display: "grid", gap: 6 }}>
         <legend className="zq-eyebrow" style={{ marginBottom: 6 }}>
-          Why are you reporting this?
+          {t.why}
         </legend>
-        {REASONS.map(([v, t]) => (
+        {REASONS.map((v) => (
           <label key={v} style={{ display: "flex", gap: 8, alignItems: "center" }}>
-            <input type="radio" name="reason" value={v} checked={reason === v} onChange={() => setReason(v)} /> {t}
+            <input type="radio" name="reason" value={v} checked={reason === v} onChange={() => setReason(v)} /> {t.reasons[v]}
           </label>
         ))}
       </fieldset>
       <div className="zq-field">
-        <label htmlFor="report-details">Details for the moderator (optional)</label>
+        <label htmlFor="report-details">{t.details}</label>
         <textarea id="report-details" className="zq-textarea" style={{ minHeight: 72 }} value={details} onChange={(e) => setDetails(e.target.value)} maxLength={1000} />
       </div>
       <div style={{ display: "flex", gap: 8 }}>
         <button type="submit" className="zq-btn zq-btn-danger">
-          Send report
+          {t.sendReport}
         </button>
         <button type="button" className="zq-btn zq-btn-quiet" onClick={onCancel}>
-          Cancel
+          {t.cancel}
         </button>
       </div>
     </form>
