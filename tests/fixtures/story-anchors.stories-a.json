@@ -1,0 +1,83 @@
+{
+ "note": "Names (persons, places, titles) for the drafts of batch stories-a (Adam, Nuh, Yusuf), each with the Arabic anchor that must occur in the ayat a chapter cites.",
+ "names": {
+  "Adam": "ادم",
+  "Iblis": "ابليس",
+  "Satan": "شيطن",
+  "Isa": "عيسي",
+  "Hell": "جهنم",
+  "Fire": "نار",
+  "Nuh": "نوح",
+  "Judi": "جودي",
+  "Wadd": "ودا",
+  "Suwa": "سواعا",
+  "Yaghuth": "يغوث",
+  "Yauq": "يعوق",
+  "Nasr": "نسرا",
+  "Yusuf": "يوسف",
+  "Yaqub": "يعقوب",
+  "Ibrahim": "ابرهيم",
+  "Ishaq": "اسحق",
+  "Egypt": "مصر",
+  "Aziz": "عزيز"
+ },
+ "numbers": {},
+ "guarded": {
+  "eyes": "عيناه"
+ },
+ "common_capitalised": [
+  "Day",
+  "Judgement",
+  "Hereafter"
+ ],
+ "opening_words": [
+  "Be"
+ ],
+ "tradition_names": [
+  "Hawwa",
+  "Eve",
+  "Waghila",
+  "Kanaan",
+  "Ham",
+  "Sam",
+  "Yafith",
+  "Shem",
+  "Japheth",
+  "Ararat",
+  "Lamech",
+  "Methuselah",
+  "Yam",
+  "Pharaoh",
+  "Zulaykha",
+  "Zuleikha",
+  "Potiphar",
+  "Qitfir",
+  "Qatafir",
+  "Rayyan",
+  "Benjamin",
+  "Binyamin",
+  "Reuben",
+  "Judah",
+  "Simeon",
+  "Levi",
+  "Canaan",
+  "Hebron",
+  "Dothan",
+  "Rachel",
+  "Leah",
+  "Raheel",
+  "Bilhah",
+  "Joseph",
+  "Jacob",
+  "Abraham",
+  "Isaac",
+  "Asenath",
+  "Ephraim",
+  "Manasseh"
+ ],
+ "titles_ar": {
+  "adam": "آدم",
+  "nuh": "نوح",
+  "yusuf": "يوسف"
+ }
+}

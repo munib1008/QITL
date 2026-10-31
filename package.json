@@ -13,6 +13,8 @@
     "start": "next start",
     "tokens": "tsx scripts/build-tokens.ts",
     "check:stories": "tsx scripts/check-stories.ts",
+    "check:drafts": "tsx scripts/check-story-drafts.ts",
+    "import:drafts": "tsx scripts/import-story-drafts.ts",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

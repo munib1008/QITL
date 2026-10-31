@@ -1,0 +1,997 @@
+{
+  "slug": "adam",
+  "title_en": "Adam: creation and the garden",
+  "title_ar": "آدم",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "adam"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The chapters are a reading order built from the narrative, not a chronology the Quran claims; verses come from several surahs and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "created-from-clay",
+      "position": 1,
+      "title_en": "Created from clay",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 3,
+          "from": 59,
+          "to": 59
+        },
+        {
+          "surah": 15,
+          "from": 26,
+          "to": 26
+        },
+        {
+          "surah": 15,
+          "from": 28,
+          "to": 29
+        },
+        {
+          "surah": 38,
+          "from": 71,
+          "to": 72
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God created the human being from dry clay, from moulded mud.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God told the angels that He was going to create a human being from clay.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 28,
+              "to": 28
+            },
+            {
+              "surah": 38,
+              "from": 71,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God said that when He had fashioned the human being and breathed into him of His spirit, the angels were to fall down before him in prostration.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 29,
+              "to": 29
+            },
+            {
+              "surah": 38,
+              "from": 72,
+              "to": 72
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The Quran likens the creation of Isa to that of Adam: God created Adam from dust, then said \"Be\", and he was.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 59,
+              "to": 59
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God told the angels that He would create a human being from clay, and that once he was fashioned and God had breathed into him of His spirit, they were to prostrate to him [c2][c3]. The Quran also likens the creation of Adam to that of Isa [c4].",
+      "body_md": "God told the angels that He was going to create a human being from clay [c2]. One passage calls it dry clay, taken from moulded mud [c1]. Once He had fashioned him and breathed into him of His spirit, the angels were to fall down before him in prostration [c3].\n\nThe Quran also speaks of Adam when it compares him with Isa: God created Adam from dust, then said \"Be\", and he was [c4].",
+      "deep_md": "The passages use different words for the substance: dry clay from moulded mud [c1], clay [c2], and dust in the comparison with Isa [c4]. The passages at 15:28-29 and 38:71-72 speak of a human being and do not name Adam [c2][c3].",
+      "kids_md": "God told the angels that He would make a human being from clay [c2]. When God had shaped him and breathed His spirit into him, the angels were told to prostrate to him, which means to bow right down [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that an origin in clay is a reminder of humility [c1]. Another is that the angels were told to honour the human being only by God's command and after God had fashioned him [c3].",
+      "unknowns_md": "- The Quran does not give the time or place of Adam's creation, or Adam's age.\n- The verses do not say how the words for his substance (dust, clay, dry clay, moulded mud) relate to one another.\n- The exact sense of the Arabic phrases rendered 'dry clay' and 'moulded mud' is not given in the verses; this draft keeps the wording general.\n- The passages at 15:28-29 and 38:71-72 do not name the human being. To read them as the same event as the prostration to Adam is an inference from matching wording; the event inventory makes the same link.\n- The verses do not explain what 'His spirit' is or how the breathing happened."
+    },
+    {
+      "anchor": "a-successor-on-the-earth",
+      "position": 2,
+      "title_en": "A successor on the earth",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 2,
+          "from": 30,
+          "to": 33
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God told the angels that He was placing a khalifah (a successor or steward) on the earth.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The angels asked whether He would place there someone who would spread corruption and shed blood, while they glorified Him with praise and declared Him holy.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God replied that He knows what they do not know.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God taught Adam the names, all of them.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God then presented them to the angels and told them to tell Him the names of these, if they were truthful.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The angels declared God glorious and said they had no knowledge except what He had taught them.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 32,
+              "to": 32
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God told Adam to inform them of the names, and when Adam did, God said He had told them that He knows what is unseen in the heavens and the earth, and what they show and what they hide.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 33,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God told the angels about a successor He was placing on the earth, the angels asked a question, and God taught Adam the names [c1][c2][c4]. Adam told the angels the names when God asked him to [c7].",
+      "body_md": "God told the angels that He was placing a successor, or steward (the Arabic word is khalifah), on the earth [c1]. The angels asked whether He would put there someone who would spread corruption and shed blood, while they themselves glorified Him with praise and declared Him holy [c2]. God replied that He knows what they do not know [c3].\n\nThen God taught Adam all the names [c4] and presented them to the angels, telling them to give Him the names of these if they were truthful [c5]. The angels declared Him glorious and said they had no knowledge except what He had taught them [c6]. God told Adam to inform them of the names, and when Adam did so God said He had told them that He knows what is unseen in the heavens and the earth, and what they show and what they hide [c7].",
+      "deep_md": "God's answer to the angels' question is that He knows what they do not know [c3]; the matter of the names follows [c4][c5]. The passage ends with the angels acknowledging that their knowledge is what God taught them [c6], and with God's reminder of His knowledge of the unseen [c7].",
+      "kids_md": "God told the angels about a successor on the earth [c1]. The angels asked a question, and God said He knows what they do not [c2][c3]. God taught Adam the names, and Adam told them to the angels when God asked him to [c4][c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that a question put to God is answered here with the reply that God knows what the asker does not [c2][c3]. Another is that the angels, once shown, acknowledged that what they knew was what God had taught them [c6].",
+      "unknowns_md": "- The Quran does not say what the names were, what they were the names of, or how they were taught.\n- It does not say whose successor the khalifah is, or whether the word means a successor, a steward or a ruler; this draft gives the Arabic word beside more than one rendering and decides nothing.\n- These verses do not say how this scene stands in time to the creation described in other passages. The order of the chapters in this story is a reading order, not a chronology the Quran gives."
+    },
+    {
+      "anchor": "prostration-and-refusal",
+      "position": 3,
+      "title_en": "The prostration and the refusal",
+      "event_slug": "prostration-to-adam-and-iblis",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 7,
+          "from": 11,
+          "to": 13
+        },
+        {
+          "surah": 15,
+          "from": 30,
+          "to": 35
+        },
+        {
+          "surah": 20,
+          "from": 116,
+          "to": 116
+        },
+        {
+          "surah": 38,
+          "from": 73,
+          "to": 78
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God told the angels to prostrate to Adam, and they prostrated.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 34,
+              "to": 34
+            },
+            {
+              "surah": 7,
+              "from": 11,
+              "to": 11
+            },
+            {
+              "surah": 20,
+              "from": 116,
+              "to": 116
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "All the angels prostrated, every one of them together.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 30,
+              "to": 30
+            },
+            {
+              "surah": 38,
+              "from": 73,
+              "to": 73
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Iblis did not prostrate: he refused, and was not among those who prostrated.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 34,
+              "to": 34
+            },
+            {
+              "surah": 7,
+              "from": 11,
+              "to": 11
+            },
+            {
+              "surah": 15,
+              "from": 31,
+              "to": 31
+            },
+            {
+              "surah": 20,
+              "from": 116,
+              "to": 116
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The Quran says that Iblis was arrogant and was among the disbelievers.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 34,
+              "to": 34
+            },
+            {
+              "surah": 38,
+              "from": 74,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God asked Iblis what prevented him from prostrating when He had commanded him, and what was the matter that he was not with those who prostrated.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 12,
+              "to": 12
+            },
+            {
+              "surah": 15,
+              "from": 32,
+              "to": 32
+            },
+            {
+              "surah": 38,
+              "from": 75,
+              "to": 75
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Iblis said that he was better than Adam, because he had been created from fire and Adam from clay; he said he would not prostrate to a human being God had created from dry clay of moulded mud.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 12,
+              "to": 12
+            },
+            {
+              "surah": 15,
+              "from": 33,
+              "to": 33
+            },
+            {
+              "surah": 38,
+              "from": 76,
+              "to": 76
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God told Iblis to go out, saying he had no right to be arrogant there and was among the humiliated, that he was driven away, and that God's curse was on him until the Day of Judgement.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 13,
+              "to": 13
+            },
+            {
+              "surah": 15,
+              "from": 34,
+              "to": 34
+            },
+            {
+              "surah": 15,
+              "from": 35,
+              "to": 35
+            },
+            {
+              "surah": 38,
+              "from": 77,
+              "to": 77
+            },
+            {
+              "surah": 38,
+              "from": 78,
+              "to": 78
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God told the angels to prostrate to Adam, and all of them did, but Iblis refused, saying he was made of fire and Adam of clay [c1][c2][c3][c6]. God then told him to go out and said the curse would be on him until the Day of Judgement [c7].",
+      "body_md": "God commanded the angels to prostrate to Adam, and they did [c1]. The Quran stresses that all of them did so together [c2]. Iblis did not; he refused and was not among those who prostrated [c3], and the Quran says he was arrogant and among the disbelievers [c4].\n\nGod asked Iblis what had prevented him from prostrating when he was commanded [c5]. Iblis replied that he was better than Adam, because he had been created from fire and Adam from clay [c6]. In another passage Iblis says he would not prostrate to a human being whom God had created from dry clay of moulded mud [c6].\n\nGod then told Iblis to go out, saying that he had no right to be arrogant there, that he was among the humiliated and driven away, and that the curse would be on him until the Day of Judgement [c7].",
+      "deep_md": "The command and the prostration are told in more than one passage with different emphasis: the plain act [c1], that all the angels did it together [c2], Iblis's refusal [c3], and his arrogance [c4]. The questions put to Iblis differ in wording between passages: what prevented him from prostrating, or what was the matter that he was not with those who prostrated [c5].",
+      "kids_md": "God told the angels to bow down to Adam, and they all did [c1][c2]. Iblis refused because he said he was better, being made of fire while Adam was made of clay [c3][c6]. God told him to go out [c7].",
+      "lessons_md": "Educational interpretation (not scripture): The passage names pride as the reason given for the refusal: Iblis compares what he was made of with what Adam was made of [c4][c6]. One reading is a caution against judging worth by origin or material [c6].",
+      "unknowns_md": "- The Quran does not say where this scene took place, or what Iblis was told to go out from.\n- It does not describe how the angels prostrated or what kind of prostration it was.\n- These verses name Iblis as the one who refused among those addressed; they do not themselves say whether he was an angel or one of the jinn. A passage outside this draft's range (18:50) speaks to this, and a reviewer should decide whether to add it.\n- It does not say how long the scene lasted or who else witnessed it."
+    },
+    {
+      "anchor": "respite-and-the-vow",
+      "position": 4,
+      "title_en": "The respite and the vow",
+      "event_slug": "prostration-to-adam-and-iblis",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 14,
+          "to": 18
+        },
+        {
+          "surah": 15,
+          "from": 32,
+          "to": 32
+        },
+        {
+          "surah": 15,
+          "from": 36,
+          "to": 40
+        },
+        {
+          "surah": 15,
+          "from": 42,
+          "to": 44
+        },
+        {
+          "surah": 38,
+          "from": 79,
+          "to": 85
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Iblis asked God to give him respite until the day when people are raised, after God had addressed him by name and asked why he was not with those who prostrated.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 14,
+              "to": 14
+            },
+            {
+              "surah": 15,
+              "from": 32,
+              "to": 32
+            },
+            {
+              "surah": 15,
+              "from": 36,
+              "to": 36
+            },
+            {
+              "surah": 38,
+              "from": 79,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God said that Iblis was among those given respite, until the \"day of the known time\".",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 15,
+              "to": 15
+            },
+            {
+              "surah": 15,
+              "from": 37,
+              "to": 37
+            },
+            {
+              "surah": 15,
+              "from": 38,
+              "to": 38
+            },
+            {
+              "surah": 38,
+              "from": 80,
+              "to": 80
+            },
+            {
+              "surah": 38,
+              "from": 81,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Iblis said that, because God had led him astray, he would lie in wait for people on God's straight path, and then approach them from in front, from behind, from their right and from their left; he said most of them would not be thankful.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 16,
+              "to": 16
+            },
+            {
+              "surah": 7,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Iblis vowed to make wrongdoing look fair to people on the earth and to lead them all astray, except God's sincere servants.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 39,
+              "to": 39
+            },
+            {
+              "surah": 15,
+              "from": 40,
+              "to": 40
+            },
+            {
+              "surah": 38,
+              "from": 82,
+              "to": 82
+            },
+            {
+              "surah": 38,
+              "from": 83,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God said that Iblis has no authority over His servants, except over those of the misled who follow him.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Hell is the promised place of all those who follow Iblis; it has seven gates, and each gate has a portion of them assigned to it.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 43,
+              "to": 43
+            },
+            {
+              "surah": 15,
+              "from": 44,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God told Iblis to go out, disgraced and driven away, and said that He would fill Hell with Iblis and with those among people who follow him, all together.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 18,
+              "to": 18
+            },
+            {
+              "surah": 38,
+              "from": 84,
+              "to": 84
+            },
+            {
+              "surah": 38,
+              "from": 85,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Iblis asked for respite until the day people are raised, and God granted it [c1][c2]. Iblis vowed to lead people astray except God's sincere servants, and God said he has no authority over His servants apart from those who follow him [c4][c5].",
+      "body_md": "Iblis asked God to give him respite until the day when people are raised [c1]. God granted it, saying that he was among those given respite until the \"day of the known time\" [c2].\n\nIblis then said that, because God had led him astray, he would lie in wait for people on God's straight path and come at them from in front, from behind, from their right and from their left, and that most of them would not be thankful [c3]. In the parallel passages he vows to make wrongdoing look fair to people on the earth and to lead them all astray, except God's sincere servants [c4].\n\nGod replied that Iblis has no authority over His servants, except over those of the misled who follow him [c5]. He told Iblis to go out, disgraced and driven away, and said that He would fill Hell with Iblis and with those among people who follow him [c7]. Hell is the promised place of all those who follow him; it has seven gates, each with a portion of them assigned to it [c6].",
+      "deep_md": "The request, the grant and the vow appear in more than one passage with small differences [c1][c2][c4]. In one passage Iblis speaks of lying in wait on the straight path [c3]; in the others he speaks of making wrongdoing look fair on the earth [c4]. The time of the respite is given as the \"day of the known time\" [c2].",
+      "kids_md": "Iblis asked God to let him wait until the day people are raised, and God allowed it [c1][c2]. Iblis said he would try to lead people astray [c3][c4]. God said he has no authority over God's servants, except those who follow him [c5].",
+      "lessons_md": "Educational interpretation (not scripture): The passage records Iblis's own announcement that he will try to mislead people [c3][c4], and records a limit on him: no authority over God's servants except those who follow him [c5]. One reading is a reminder to be on guard [c3].",
+      "unknowns_md": "- The Quran does not say when the 'day of the known time' is.\n- It does not describe how Iblis 'lies in wait' or comes from the directions he names; the verses give his words only.\n- What Iblis means by saying that God led him astray is not explained in these verses.\n- Hell is described here only by its seven gates and their portions; the verses give no further description of it."
+    },
+    {
+      "anchor": "the-garden-and-the-one-limit",
+      "position": 5,
+      "title_en": "The garden and the one limit",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 2,
+          "from": 35,
+          "to": 35
+        },
+        {
+          "surah": 7,
+          "from": 19,
+          "to": 19
+        },
+        {
+          "surah": 20,
+          "from": 116,
+          "to": 119
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God told Adam to live in the garden with his wife and to eat from it freely, wherever they wished.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 35,
+              "to": 35
+            },
+            {
+              "surah": 7,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God told them not to approach a certain tree, or they would be among the wrongdoers.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 35,
+              "to": 35
+            },
+            {
+              "surah": 7,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God told Adam that the one who had refused to prostrate was an enemy to him and to his wife, and that he must not let that enemy drive them out of the garden, or Adam would be in hardship.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 116,
+              "to": 116
+            },
+            {
+              "surah": 20,
+              "from": 117,
+              "to": 117
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God said that in the garden Adam would not go hungry or be without clothing, and would not be thirsty or suffer from the sun's heat.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 118,
+              "to": 118
+            },
+            {
+              "surah": 20,
+              "from": 119,
+              "to": 119
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God settled Adam and his wife in the garden, let them eat freely, and set one limit: not to approach a particular tree [c1][c2]. He warned them about the one who had refused to prostrate [c3].",
+      "body_md": "God told Adam to live in the garden with his wife and to eat from it freely, wherever they wished [c1]. There was one limit: they were not to approach a certain tree, or they would be among the wrongdoers [c2].\n\nGod also warned Adam that the one who had refused to prostrate was an enemy to him and to his wife, and that he must not let that enemy drive them out of the garden, or Adam would be in hardship [c3]. In the garden, God said, Adam would not go hungry or be without clothing, and would not be thirsty or suffer from the sun's heat [c4].",
+      "deep_md": "The command at 2:35 and the command at 7:19 are worded almost alike: live in the garden, eat, and do not approach this tree [c1][c2]. The passage at 20:116-119 adds the warning about the enemy and a description of the garden as a place without hunger, thirst, lack of clothing or heat [c3][c4].",
+      "kids_md": "God let Adam and his wife live in the garden and eat from it freely [c1]. God told them not to go near one tree [c2]. God also warned them about the enemy who had refused to bow down [c3].",
+      "lessons_md": "Educational interpretation (not scripture): The account joins wide freedom with one clear limit [c1][c2]. One reading is that the warning came before the mistake, not after it [c3].",
+      "unknowns_md": "- The Quran does not say which tree it was or what kind of plant; it says 'this tree' only. Named in later tradition, not in the Quranic text: some later accounts name a particular fruit or grain for the tree; none is given in these verses.\n- It does not name Adam's wife. Named in later tradition, not in the Quranic text: Hawwa (in English, Eve).\n- It does not say where the garden was, whether it was on the earth or elsewhere, or how long Adam and his wife stayed in it.\n- The warning at 20:117 says 'this' enemy; it is read as the one who refused to prostrate from the verse just before it."
+    },
+    {
+      "anchor": "the-slip",
+      "position": 6,
+      "title_en": "The slip",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 7,
+          "from": 20,
+          "to": 22
+        },
+        {
+          "surah": 20,
+          "from": 115,
+          "to": 115
+        },
+        {
+          "surah": 20,
+          "from": 120,
+          "to": 121
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Satan whispered to them, to make visible to them what had been hidden from them of their nakedness.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Satan told them that their Lord had forbidden them this tree only so that they would not become angels or be among those who live forever.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Satan swore to them that he was a sincere adviser to them.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Satan whispered to Adam, asking whether he should show him the tree of eternity and a kingdom that does not decay.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 120,
+              "to": 120
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They ate from the tree, and their nakedness became visible to them, and they began to cover themselves with leaves of the garden.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 22,
+              "to": 22
+            },
+            {
+              "surah": 20,
+              "from": 121,
+              "to": 121
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God called to them, asking whether He had not forbidden them that tree and told them that Satan was a clear enemy to them.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The Quran says Adam disobeyed his Lord and went astray.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 121,
+              "to": 121
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "The Quran says Satan led them down by deception.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "God had made a covenant with Adam beforehand; Adam forgot, and God found in him no firm resolve.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 115,
+              "to": 115
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Satan whispered to Adam and his wife and led them down by deception; they ate from the tree, saw that they were uncovered, and began to cover themselves with leaves [c1][c5][c8]. God reminded them of His warning [c6].",
+      "body_md": "The Quran says Satan whispered to them [c1]. He told them that their Lord had forbidden them this tree only so that they would not become angels or be among those who live forever [c2], and he swore to them that he was giving them sincere advice [c3]. In the account at 20:120 he asks Adam whether he should show him the tree of eternity and a kingdom that does not decay [c4]. The Quran says Satan led them down by deception [c8].\n\nThey ate from the tree, and what had been hidden of their nakedness became visible to them [c5]. They began to cover themselves with leaves of the garden [c5]. God called to them, asking whether He had not forbidden them that tree and told them that Satan was a clear enemy to them [c6].\n\nThe Quran says Adam disobeyed his Lord and went astray [c7]. It also says that God had made a covenant with Adam beforehand, and that he forgot, and God found in him no firm resolve [c9].",
+      "deep_md": "The accounts at 7:20 and 20:120 give different words to Satan: at 7:20 he speaks of angels and of living forever [c2], at 20:120 of the tree of eternity and a kingdom that does not decay [c4]. The passage at 20:115 sets the event against an earlier covenant and a lapse of memory [c9].",
+      "kids_md": "Satan whispered to Adam and his wife and tricked them [c1][c8]. They ate from the tree God had told them to keep away from [c5]. They saw they were uncovered and began to cover themselves with leaves [c5]. God reminded them that Satan was a clear enemy [c6].",
+      "lessons_md": "Educational interpretation (not scripture): The passage shows temptation arriving as a promise of something good: living forever, or a kingdom that does not decay [c2][c4]. One reading is the value of holding to a clear instruction even when a persuasive voice offers more [c2][c6].",
+      "unknowns_md": "- The Quran does not say which tree it was; it says only 'this tree' and, in Satan's words, 'the tree of eternity'.\n- It does not say how Satan spoke to them, or in what form; the verses record his words only.\n- The Quran uses the words 'disobeyed' and 'went astray' for the act and also says Adam forgot and had no firm resolve. How this is to be understood theologically is not explained in these verses and is left to the scholarly reviewer.\n- It does not say how long the stay in the garden lasted before this happened."
+    },
+    {
+      "anchor": "repentance-and-the-descent",
+      "position": 7,
+      "title_en": "Repentance and the descent",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 2,
+          "from": 36,
+          "to": 39
+        },
+        {
+          "surah": 7,
+          "from": 23,
+          "to": 25
+        },
+        {
+          "surah": 20,
+          "from": 122,
+          "to": 123
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Satan caused them to slip and brought them out of the state they were in.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Adam received words from his Lord, and God accepted his repentance; He is the one who accepts repentance and is merciful.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Adam and his wife said that they had wronged themselves, and that if God did not forgive them and have mercy on them they would be among the losers.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God chose Adam, accepted his repentance and guided him.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 122,
+              "to": 122
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God told them to go down, some of them enemies of others, and said that on the earth they would have a place to live and provision for a time.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 36,
+              "to": 36
+            },
+            {
+              "surah": 7,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God said that on the earth they would live, on it they would die, and from it they would be brought out.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God said that guidance would come to them from Him, and that whoever follows it will have no fear and will not grieve, and will not go astray or be wretched.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 38,
+              "to": 38
+            },
+            {
+              "surah": 20,
+              "from": 123,
+              "to": 123
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Those who disbelieve and deny God's signs are the companions of the Fire, there to remain.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Adam and his wife asked God to forgive them, and God accepted Adam's repentance, chose him and guided him [c2][c3][c4]. They were told to go down to the earth, where they would live for a time, and God said guidance would come to them [c5][c7].",
+      "body_md": "Satan caused them to slip and brought them out of the state they had been in [c1]. Adam and his wife said that they had wronged themselves, and that unless God forgave them and had mercy on them they would be among the losers [c3]. Adam received words from his Lord, and God accepted his repentance [c2]; the Quran also says that God chose him, accepted his repentance and guided him [c4].\n\nGod told them to go down, some of them enemies of others, and said that on the earth they would have a place to live and provision for a time [c5]. On it they would live, on it they would die, and from it they would be brought out [c6].\n\nGod said that guidance would come to them from Him [c7]. Whoever follows that guidance will have no fear and will not grieve, and will not go astray or be wretched [c7]. Those who disbelieve and deny God's signs are the companions of the Fire, there to remain [c8].",
+      "deep_md": "The repentance appears in the plain statement that God accepted it [c2], in the words of the pair themselves [c3], and in the report that God chose Adam and guided him [c4]. The command to go down is joined to the promise of guidance, worded slightly differently at 2:38 and 20:123 [c7].",
+      "kids_md": "Adam and his wife said they had wronged themselves and asked God to forgive them and have mercy on them [c3]. God accepted Adam's repentance [c2]. God told them to go down to the earth and live there for a time, and said guidance would come to them [c5][c7].",
+      "lessons_md": "Educational interpretation (not scripture): In the text the account of the slip is followed by repentance, acceptance and guidance [c2][c4]. One reading is that returning to God is presented as open after a mistake [c2][c3].",
+      "unknowns_md": "- The Quran does not say what the 'words' Adam received were.\n- It does not say where on the earth they came down, how they came down, or how they were separated or brought together afterwards.\n- These verses attribute the plea for forgiveness to both Adam and his wife (7:23), and the acceptance of repentance to Adam (2:37, 20:122); they do not say more about her part.\n- They do not give any date or duration for the descent.\n- The Arabic pronoun in 2:36 ('from it') can refer to the tree or to the garden; this draft does not decide."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the creation of Adam, the prostration and the garden. None is used in this draft.",
+    "Adam's status as a prophet comes from later tradition; the cited verses speak of God choosing and guiding him but do not use the word prophet of him. A scholar should decide how to word it.",
+    "The passages at 15:28-29 and 38:71-72 speak of a human being without the name; they are read here as the same event as the prostration to Adam (an inference, as in the event inventory).",
+    "The word khalifah (2:30) is left with more than one rendering; its sense is for the reviewer.",
+    "Whether Iblis was an angel or one of the jinn is addressed by 18:50, outside the range of this draft. The inventory range also includes 15:27 (the creation of the jinn) and 15:41 (a statement by God about a straight path); neither is used in the story texts, which describe neither angels nor jinn and avoid a disputed sentence, and a reviewer should decide whether they belong.",
+    "The chapters follow a reading order (creation, the question of the angels, the prostration, the respite, the garden, the slip, repentance and descent). The Quran does not give a chronology across these surahs.",
+    "Named in later tradition, not in the Quranic text: the name of Adam's wife and the kind of the tree. Neither is used in the story texts.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}
