@@ -26,12 +26,19 @@ coverage dashboard. Rule from the brief and from QITL: complete coverage means e
    or community, no "identity not established / traditional identification" presentation, no list by kind.
 3. **Story chapters with their own references and depth modes**: story_sections carry steps; there is no chapter object with its own
    verse references, no One-Minute / Complete / Deep Study / Kids / Life Lessons switch, no chapter deep links.
+   **DONE on `mod/story-chapters` (2026-11-01)**: `chapters` extended (anchor, event link, five mode texts, unknowns, version, author),
+   reader with `?mode=`, chapter list and sheet, admin chapter manager. See `docs/STORY_COVERAGE.md` section 1.
 4. **Story coverage dashboard**: verified from records (never checkboxes): Quran passages indexed, hadith verified, drafted, scholar approved,
    EN/AR/UR reviewed, media approved, published; per prophet, person, community, event.
+   **DONE (2026-11-01)**: `/admin/stories/coverage`, staff-only derived functions, `docs/STORY_COVERAGE.md` section 3.
 5. **Source-change invalidation**: a change to a claim, reference, grading or tafsir link must mark dependent summaries, translations and
    audio as needing review.
+   **DONE (2026-11-01)**: triggers on `content_dependency_versions`, the Needs re-review queue, `docs/STORY_COVERAGE.md` section 2.
 6. **Unified story search** with facets (prophet, person, community, event, hadith story, parable, surah/verse, theme, life challenge).
 7. **Automated story checks** (missing refs, duplicate stories, unsupported names, hadith grading gaps, broken links) in CI and admin.
+   **DONE (2026-11-01)**: `src/lib/stories/checks.ts`, `pnpm check:stories`, shown on the coverage page, `docs/STORY_COVERAGE.md` section 4.
+
+Gaps 1, 2 and 6 belong to `mod/hadith-people`.
 
 ## Phases
 

@@ -51,7 +51,7 @@ describe("StoryView", () => {
   test("reading levels: kids shows the adaptation where one exists and says so where it falls back", () => {
     render(<StoryView story={story} name="Fixture" />);
     expect(screen.getByText("Full summary text.")).toBeInTheDocument();
-    fireEvent.click(screen.getByRole("radio", { name: "Kids" }));
+    fireEvent.click(screen.getByRole("radio", { name: "Kids mode" }));
     expect(screen.getByText("Kids summary text.")).toBeInTheDocument();
     expect(screen.queryByText("Full summary text.")).toBeNull();
     const calling = screen.getByRole("heading", { name: /The calling/ }).closest("section")!;

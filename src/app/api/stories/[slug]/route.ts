@@ -12,7 +12,7 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ slu
   const { data, error } = await sb
     .from("stories")
     .select(
-      "id, slug, title, title_ar, summary, published_at, chapters(id, position, title, body_md, status, chapter_claims(anchor, evidence_claims(id, statement, evidence, claim_references(kind, quran_surah, quran_ayah_from, quran_ayah_to, hadith_id, locator, sources(work, edition)))))",
+      "id, slug, title, title_ar, summary, published_at, chapters(id, position, anchor, title, body_md, summary_md, deep_md, kids_md, lessons_md, unknowns_md, status, chapter_claims(anchor, evidence_claims(id, statement, evidence, claim_references(kind, quran_surah, quran_ayah_from, quran_ayah_to, hadith_id, locator, sources(work, edition)))))",
     )
     .eq("slug", slug)
     .eq("status", "published")

@@ -19,6 +19,7 @@ import { accountStrings } from "./modules/account";
 import { apiStrings } from "./modules/api";
 import { communityStrings } from "./modules/community";
 import { storyStrings } from "./modules/story";
+import { storyChaptersStrings } from "./modules/storyChapters";
 import { uiStrings } from "./modules/ui";
 import { adminStrings } from "./modules/admin";
 
@@ -33,6 +34,7 @@ export const STRING_FILES: Array<{ module: string; file: string; get: (locale: s
   { module: "home", file: "modules/home.ts", get: (l) => ({ home: homeStrings(l), journey: journeyStrings(l) }) },
   { module: "stories", file: "modules/prophets.ts", get: (l) => ({ prophets: prophetStrings(l), stories: storiesStrings(l) }) },
   { module: "stories", file: "modules/story.ts", get: storyStrings },
+  { module: "stories", file: "modules/storyChapters.ts", get: storyChaptersStrings },
   { module: "events", file: "modules/events.ts (events)", get: eventStrings },
   { module: "timeline", file: "modules/events.ts (timeline)", get: timelineStrings },
   { module: "last-hour", file: "modules/events.ts (last hour)", get: lastHourStrings },

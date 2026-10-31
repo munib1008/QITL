@@ -12,6 +12,7 @@
     "build": "pnpm tokens && next build",
     "start": "next start",
     "tokens": "tsx scripts/build-tokens.ts",
+    "check:stories": "tsx scripts/check-stories.ts",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
