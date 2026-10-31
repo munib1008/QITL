@@ -1,12 +1,14 @@
 import { FullScreenEditor } from "@/components/admin/FullScreenEditor";
 import { NewEventForm } from "@/components/admin/tools";
+import { adminStrings } from "@/lib/i18n/modules/admin";
 
-export default function NewEventPage() {
+export default async function NewEventPage({ params }: { params: Promise<{ locale: string }> }) {
+  const a = adminStrings((await params).locale).pages["events/new"]!;
   return (
     <div style={{ display: "grid", gap: 16 }}>
-      <h1 style={{ font: "500 32px/40px var(--font-display)", margin: 0 }}>New event</h1>
-      <p className="zq-meta">Create the event, its claim and citations, and an approximate place. Everything is saved as a draft; a scholarly reviewer approves it before it can be published to the timeline, atlas, stories and graph.</p>
-      <FullScreenEditor title="New event">
+      <h1 style={{ font: "500 32px/40px var(--font-display)", margin: 0 }}>{a.title}</h1>
+      <p className="zq-meta">{a.lead}</p>
+      <FullScreenEditor title={a.title}>
         <NewEventForm />
       </FullScreenEditor>
     </div>

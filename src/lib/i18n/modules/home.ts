@@ -142,6 +142,10 @@ export const journeyStrings = (locale: string) =>
       note: "Note",
       exploreStory: "Explore story",
       viewEvidence: "View evidence",
+      collapse: (name: string) => `Collapse ${name}`,
+      expand: (name: string) => `Expand ${name}`,
+      detailsShown: (name: string) => `${name} — details shown`,
+      showDetails: (name: string) => `${name} — show details`,
     },
     ar: {
       label: "رحلة الأنبياء",
@@ -173,6 +177,10 @@ export const journeyStrings = (locale: string) =>
       note: "ملاحظة",
       exploreStory: "استكشف القصة",
       viewEvidence: "اعرض الدليل",
+      collapse: (name: string) => `اطوِ ${name}`,
+      expand: (name: string) => `وسّع ${name}`,
+      detailsShown: (name: string) => `${name} — التفاصيل معروضة`,
+      showDetails: (name: string) => `${name} — اعرض التفاصيل`,
     },
     ur: {
       label: "انبیاء کا سفر",
@@ -204,5 +212,9 @@ export const journeyStrings = (locale: string) =>
       note: "نوٹ",
       exploreStory: "قصہ دیکھیں",
       viewEvidence: "دلیل دیکھیں",
+      collapse: (name: string) => `${name} بند کریں`,
+      expand: (name: string) => `${name} کھولیں`,
+      detailsShown: (name: string) => `${name} — تفصیل دکھائی جا رہی ہے`,
+      showDetails: (name: string) => `${name} — تفصیل دکھائیں`,
     },
   });

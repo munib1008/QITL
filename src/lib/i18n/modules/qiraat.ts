@@ -159,6 +159,7 @@ const ar: DeepPartial<QiraatStrings> = {
       meaning: "المعنى",
     },
     explanation: "الشرح",
+    ref: (s: number, a: number, w: number) => `Q ${s}:${a}، الكلمة ${w}`,
   },
   riwayah: {
     label: "الرواية",

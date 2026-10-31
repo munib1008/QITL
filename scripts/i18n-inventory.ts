@@ -126,9 +126,15 @@ function excludedContext(n: ts.Node): boolean {
     if (ts.isElementAccessExpression(p) || ts.isCaseClause(p)) return true;
     if (ts.isBinaryExpression(p) && [ts.SyntaxKind.EqualsEqualsEqualsToken, ts.SyntaxKind.ExclamationEqualsEqualsToken, ts.SyntaxKind.EqualsEqualsToken, ts.SyntaxKind.ExclamationEqualsToken, ts.SyntaxKind.InKeyword].includes(p.operatorToken.kind)) return true;
     if (ts.isTypeNode(p) || ts.isImportDeclaration(p) || ts.isExportDeclaration(p)) return true;
+    if (ts.isJsxAttributes(p)) {
+      // An attribute on an element marked lang="en" (a fixed English token such as a confirmation phrase).
+      const own = p.properties.find((a) => ts.isJsxAttribute(a) && attrName(a) === "lang");
+      if (own && ts.isJsxAttribute(own) && own.initializer && /"en"/.test(own.initializer.getText())) return true;
+    }
     if (ts.isJsxElement(p)) {
       const lang = p.openingElement.attributes.properties.find((a) => ts.isJsxAttribute(a) && attrName(a) === "lang");
-      if (lang && ts.isJsxAttribute(lang) && lang.initializer && /"(ar|ur)"/.test(lang.initializer.getText())) return true;
+      // Arabic or Urdu text, or English deliberately marked as English content (licence notices, fixed tokens).
+      if (lang && ts.isJsxAttribute(lang) && lang.initializer && /"(ar|ur|en)"/.test(lang.initializer.getText())) return true;
     }
   }
   return false;
@@ -260,59 +266,116 @@ export function stringCoverage(get: (l: string) => unknown) {
   return { en: en.length, ar: count("ar"), ur: count("ur") };
 }
 
-async function main() {
+export interface ModuleRow {
+  strings: number;
+  ar: number;
+  ur: number;
+  hardcoded: number;
+  files: string[];
+}
+
+/** Per-module coverage. API messages are not counted as hard-coded: readers get them by error code (modules/api.ts). */
+export async function inventory() {
   const { findings, content } = scan();
   const { STRING_FILES } = await import("../src/lib/i18n/registry");
-  const modules = new Map<string, { hard: Finding[]; en: number; ar: number; ur: number; files: string[] }>();
-  const mod = (k: string) => modules.get(k) ?? (modules.set(k, { hard: [], en: 0, ar: 0, ur: 0, files: [] }), modules.get(k)!);
-  for (const f of findings) mod(moduleOf(f.file)).hard.push(f);
+  const modules = new Map<string, ModuleRow & { hard: Finding[] }>();
+  const mod = (k: string) => modules.get(k) ?? (modules.set(k, { strings: 0, ar: 0, ur: 0, hardcoded: 0, files: [], hard: [] }), modules.get(k)!);
+  const api = findings.filter((f) => f.kind === "api");
+  for (const f of findings) if (f.kind !== "api") mod(moduleOf(f.file)).hard.push(f);
   for (const s of STRING_FILES) {
     const c = stringCoverage(s.get);
     const m = mod(s.module);
-    m.en += c.en;
+    m.strings += c.en;
     m.ar += c.ar;
     m.ur += c.ur;
     m.files.push(s.file);
   }
+  for (const m of modules.values()) m.hardcoded = m.hard.length;
   const rows = [...modules.entries()].sort(([a], [b]) => a.localeCompare(b));
+  return { rows, api, content };
+}
+
+const pct = (n: number, d: number) => (d ? `${Math.round((100 * n) / d)}%` : "n/a");
+
+function table(rows: Array<[string, ModuleRow]>, withFiles: boolean): string[] {
+  const out: string[] = [];
+  out.push(withFiles ? "| Module | String files | UI strings | EN (externalised) | AR | UR | Hard-coded left |" : "| Module | UI strings | EN (externalised) | AR | UR | Hard-coded |");
+  out.push(withFiles ? "| --- | --- | ---: | ---: | ---: | ---: | ---: |" : "| --- | ---: | ---: | ---: | ---: | ---: |");
+  const tot = { s: 0, ar: 0, ur: 0, h: 0 };
+  for (const [k, v] of rows) {
+    const total = v.strings + v.hardcoded;
+    tot.s += v.strings;
+    tot.ar += v.ar;
+    tot.ur += v.ur;
+    tot.h += v.hardcoded;
+    const cells = [total, pct(v.strings, total), pct(v.ar, total), pct(v.ur, total), v.hardcoded];
+    out.push(withFiles ? `| ${k} | ${v.files.map((f) => `\`${f}\``).join(", ") || "none"} | ${cells.join(" | ")} |` : `| ${k} | ${cells.join(" | ")} |`);
+  }
+  const all = tot.s + tot.h;
+  out.push(withFiles ? `| **all** | | **${all}** | **${pct(tot.s, all)}** | **${pct(tot.ar, all)}** | **${pct(tot.ur, all)}** | **${tot.h}** |` : `| **all** | **${all}** | **${pct(tot.s, all)}** | **${pct(tot.ar, all)}** | **${pct(tot.ur, all)}** | **${tot.h}** |`);
+  return out;
+}
+
+async function main() {
+  const { rows, api, content } = await inventory();
   if (process.argv.includes("--json")) {
-    console.log(JSON.stringify({ modules: Object.fromEntries(rows.map(([k, v]) => [k, { strings: v.en, ar: v.ar, ur: v.ur, hardcoded: v.hard.length }])), findings, content: content.length }, null, 1));
+    console.log(JSON.stringify({ modules: Object.fromEntries(rows.map(([k, v]) => [k, { strings: v.strings, ar: v.ar, ur: v.ur, hardcoded: v.hardcoded }])), findings: rows.flatMap(([, v]) => v.hard), api, content: content.length }, null, 1));
     return;
   }
-  const pct = (n: number, d: number) => (d ? `${Math.round((100 * n) / d)}%` : "n/a");
-  const tot = rows.reduce((a, [, v]) => ({ en: a.en + v.en, ar: a.ar + v.ar, ur: a.ur + v.ur, h: a.h + v.hard.length }), { en: 0, ar: 0, ur: 0, h: 0 });
+  const doc = path.join(ROOT, "docs", "LOCALISATION_STATUS.md");
+  const beforeArg = process.argv.indexOf("--before");
+  let before: string[] = [];
+  if (beforeArg > 0 && process.argv[beforeArg + 1]) {
+    const b = JSON.parse(fs.readFileSync(process.argv[beforeArg + 1]!, "utf8")) as { modules: Record<string, { strings: number; ar: number; ur: number; hardcoded: number }>; findings: Finding[] };
+    // The same rules as now: API messages are listed apart, not counted as hard-coded.
+    const apiBefore = new Map<string, number>();
+    for (const f of b.findings) if (f.kind === "api" || f.file.startsWith("src/app/api/")) apiBefore.set(moduleOf(f.file), (apiBefore.get(moduleOf(f.file)) ?? 0) + 1);
+    const bRows = Object.entries(b.modules)
+      .map(([k, v]) => [k, { ...v, hardcoded: v.hardcoded - (apiBefore.get(k) ?? 0), files: [] }] as [string, ModuleRow])
+      .filter(([, v]) => v.strings + v.hardcoded > 0)
+      .sort(([x], [y]) => x.localeCompare(y));
+    before = ["<!-- before -->", "## Coverage before this pass (2026-10-31, branch point feat/platform-foundation bb01e69)", "", ...table(bRows, false), "<!-- /before -->"];
+  }
+  else {
+    const prev = fs.existsSync(doc) ? fs.readFileSync(doc, "utf8") : "";
+    const keep = /<!-- before -->[\s\S]*<!-- \/before -->/.exec(prev)?.[0];
+    if (keep) before = [keep];
+  }
   const lines: string[] = [];
   lines.push("# Localisation status");
   lines.push("");
-  lines.push("Generated by `pnpm tsx scripts/i18n-inventory.ts --write` (a heuristic scan with the TypeScript parser, see the");
-  lines.push("script's header). Re-run it after adding interface text; `tests/unit/i18n-inventory.test.ts` fails when a module");
-  lines.push("gains hard-coded English beyond its recorded budget.");
+  lines.push("Generated by `pnpm tsx scripts/i18n-inventory.ts --write` (a heuristic scan with the TypeScript parser; see the");
+  lines.push("script's header for what it counts). Re-run it after adding interface text. `tests/unit/i18n-coverage.test.ts`");
+  lines.push("fails when a strings file registered in `src/lib/i18n/registry.ts` lacks an Arabic or Urdu string, and");
+  lines.push("`tests/e2e/i18n.spec.ts` when a route renders English interface words in /ar or /ur outside English-marked content.");
   lines.push("");
-  lines.push("**All Arabic and Urdu interface strings are drafts that need review by a qualified translator** (`draftArabicUi`,");
-  lines.push("`draftUrduUi`). Religious content (Quran, hadith, scholarly text, editorial pages) is not interface text and is not");
-  lines.push("translated here: in the Arabic and Urdu interfaces it is shown as it is and marked `lang=\"en\" dir=\"ltr\"`.");
+  lines.push("**All Arabic and Urdu interface strings are drafts that need review by a qualified translator** (the footer says so:");
+  lines.push("`draftArabicUi`, `draftUrduUi`). Religious content (Quran, hadith, scholarly statements, editorial pages, database");
+  lines.push("rows) is not interface text and is not translated here: in the Arabic and Urdu interfaces it is shown as it is and");
+  lines.push("marked `lang=\"en\" dir=\"ltr\"` (`englishContent()` in `src/lib/i18n/locales.ts`). The few interface sentences that");
+  lines.push("state a religious fact (the Nuh note in Life Through the Ages, the Last Hour lead, the qira'at distinction points) are");
+  lines.push("deliberately left English in Urdu (and where noted in Arabic) for a qualified translator and the scholarly reviewers.");
   lines.push("");
-  lines.push("## Coverage per module");
+  lines.push("UI strings = leaves of the module's strings files + English strings still hard-coded in its files. EN = the share that");
+  lines.push("comes from a strings file (everything renders in English either way); AR and UR = the share that renders in that");
+  lines.push("language (a leaf identical to English with Latin words does not count).");
   lines.push("");
-  lines.push("UI strings = keys in the module's strings files + English strings still hard-coded in its files. EN is the share");
-  lines.push("that comes from a strings file (all of it renders in English); AR and UR are the share that renders in that language.");
+  if (before.length) lines.push(...before, "");
+  lines.push("## Coverage now");
   lines.push("");
-  lines.push("| Module | String files | UI strings | EN (externalised) | AR | UR | Hard-coded left |");
-  lines.push("| --- | --- | ---: | ---: | ---: | ---: | ---: |");
-  for (const [k, v] of rows) {
-    const total = v.en + v.hard.length;
-    lines.push(`| ${k} | ${v.files.map((f) => `\`${f}\``).join(", ") || "none"} | ${total} | ${pct(v.en, total)} | ${pct(v.ar, total)} | ${pct(v.ur, total)} | ${v.hard.length} |`);
-  }
-  const all = tot.en + tot.h;
-  lines.push(`| **all** | | **${all}** | **${pct(tot.en, all)}** | **${pct(tot.ar, all)}** | **${pct(tot.ur, all)}** | **${tot.h}** |`);
+  lines.push(...table(rows, true));
   lines.push("");
-  lines.push(`Content strings in src/content and src/lib/data (editorial, not interface; not counted above): ${content.length}.`);
+  lines.push(`Content strings in src/content and src/lib/data (editorial content, not interface; not counted): ${content.length}.`);
+  lines.push("");
+  lines.push(`API error messages (${api.length}, English source in the route files): readers see the message for the response's`);
+  lines.push("`code` in their interface language (`apiErrorText`, `src/lib/i18n/modules/api.ts`); codes without a translation fall");
+  lines.push("back to a generic localised message in Arabic and Urdu.");
   lines.push("");
   lines.push("## Hard-coded English left, by module");
   lines.push("");
   lines.push("`kind`: jsx-text (text between tags), attr (an interface attribute), expr (a literal rendered from an expression or");
   lines.push("an interface object key), metadata (page title or description), message (a status or error shown to the reader),");
-  lines.push("api (an API error message), validation (a form validation message).");
+  lines.push("validation (a form validation message).");
   for (const [k, v] of rows) {
     if (!v.hard.length) continue;
     lines.push("");
@@ -325,11 +388,8 @@ async function main() {
   lines.push("");
   const text = lines.join("\n");
   if (process.argv.includes("--write")) {
-    const doc = path.join(ROOT, "docs", "LOCALISATION_STATUS.md");
-    const prev = fs.existsSync(doc) ? fs.readFileSync(doc, "utf8") : "";
-    const keep = /<!-- before -->[\s\S]*<!-- \/before -->/.exec(prev)?.[0];
-    fs.writeFileSync(doc, keep ? text.replace("## Coverage per module", `${keep}\n\n## Coverage per module`) : text);
-    console.log(`wrote ${path.relative(ROOT, doc)}: ${tot.h} hard-coded strings`);
+    fs.writeFileSync(doc, text);
+    console.log(`wrote ${path.relative(ROOT, doc)}: ${rows.reduce((n, [, v]) => n + v.hardcoded, 0)} hard-coded strings`);
   }
   else console.log(text);
 }

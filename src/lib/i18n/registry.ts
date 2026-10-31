@@ -19,6 +19,7 @@ import { apiStrings } from "./modules/api";
 import { communityStrings } from "./modules/community";
 import { storyStrings } from "./modules/story";
 import { uiStrings } from "./modules/ui";
+import { adminStrings } from "./modules/admin";
 
 /**
  * Every interface strings file, with the module it serves. Used by the inventory (scripts/i18n-inventory.ts,
@@ -44,6 +45,7 @@ export const STRING_FILES: Array<{ module: string; file: string; get: (locale: s
   { module: "community", file: "modules/community.ts", get: communityStrings },
   { module: "account", file: "modules/account.ts", get: accountStrings },
   { module: "api", file: "modules/api.ts", get: apiStrings },
+  { module: "admin", file: "modules/admin.ts", get: adminStrings },
   { module: "creation", file: "modules/creation.ts", get: creationStrings },
   { module: "dreams", file: "modules/dreams.ts", get: dreamsT },
   { module: "guidance", file: "modules/guidance.ts", get: guidanceT },

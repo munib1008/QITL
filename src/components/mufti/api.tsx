@@ -1,6 +1,10 @@
 import "@/styles/qa.css";
+import { apiErrorText } from "@/lib/i18n/modules/api";
 
-/** Same-origin JSON call used by the Q&A and dream client components. Throws the server's plain error message. */
+/**
+ * Same-origin JSON call used by the Q&A and dream client components. Throws the error for the response's code in the
+ * page's interface language (html lang; the server's English message in English).
+ */
 export async function apiCall<T = Record<string, unknown>>(url: string, method: string, body?: unknown): Promise<T> {
   const r = await fetch(url, {
     method,
@@ -8,8 +12,8 @@ export async function apiCall<T = Record<string, unknown>>(url: string, method: 
     body: body === undefined ? undefined : JSON.stringify(body),
     cache: "no-store",
   });
-  const d = (await r.json().catch(() => ({}))) as T & { error?: string };
-  if (!r.ok) throw new Error(d.error ?? `Request failed (${r.status})`);
+  const d = (await r.json().catch(() => ({}))) as T & { error?: string; code?: string };
+  if (!r.ok) throw new Error(apiErrorText(document.documentElement.lang, d));
   return d;
 }
 

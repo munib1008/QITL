@@ -291,8 +291,10 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
               if (!items.length) return null;
               return (
                 <li key={e.title}>
-                  <p className="zq-jt-rail-era">{e.title}</p>
-                  <ol>
+                  <p className="zq-jt-rail-era" {...en}>
+                    {e.title}
+                  </p>
+                  <ol {...en}>
                     {items.map((it) => (
                       <li key={it.id}>
                         <button type="button" className="zq-jt-rail-btn" aria-current={it.id === active || undefined} onClick={() => jump(it.id)}>
@@ -318,9 +320,13 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
                 <li className="zq-jt-era">
                   <div className="zq-jt-era-pill zq-glass">
                     <p className="zq-eyebrow">
-                      {String(ei + 1).padStart(2, "0")} / {e.title}
+                      {String(ei + 1).padStart(2, "0")} / <span {...en}>{e.title}</span>
                     </p>
-                    {e.note ? <p className="zq-jt-era-note">{e.note}</p> : null}
+                    {e.note ? (
+                      <p className="zq-jt-era-note" {...en}>
+                        {e.note}
+                      </p>
+                    ) : null}
                   </div>
                 </li>
                 {items.map((it) => {
@@ -338,7 +344,7 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
                         type="button"
                         className="zq-jt-node"
                         data-node={it.id}
-                        aria-label={`${it.name}${isA ? " — details shown" : " — show details"}`}
+                        aria-label={isA ? t.detailsShown(it.name) : t.showDetails(it.name)}
                         aria-expanded={isA}
                         onClick={() => pick(it.id)}
                       >

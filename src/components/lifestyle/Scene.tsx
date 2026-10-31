@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
+import { lifestyle } from "@/lib/i18n/modules/lifestyle";
 
 /**
  * Non-figurative illustrations for Life Through the Ages: land, plants, water, buildings, tools and boats.
@@ -8,9 +9,8 @@ import { useEffect, useState, type ReactNode } from "react";
  * possession. They illustrate a kind of setting, not a specific place, time or record. Same contract as
  * components/story/AnimationPlayer: pause and replay, and no autoplay under prefers-reduced-motion.
  */
-const SCENES: Record<string, { label: string; render: () => ReactNode }> = {
+const SCENES: Record<string, { render: () => ReactNode }> = {
   fields: {
-    label: "Rows of crops in an irrigated field",
     render: () => (
       <>
         <rect width="320" height="180" fill="var(--qa-sky)" />
@@ -23,7 +23,6 @@ const SCENES: Record<string, { label: string; render: () => ReactNode }> = {
     ),
   },
   palms: {
-    label: "Date palms beside a sandy plain",
     render: () => (
       <>
         <rect width="320" height="180" fill="var(--qa-sky)" />
@@ -40,7 +39,6 @@ const SCENES: Record<string, { label: string; render: () => ReactNode }> = {
     ),
   },
   harvest: {
-    label: "Sheaves of grain stacked at harvest",
     render: () => (
       <>
         <rect width="320" height="180" fill="var(--qa-sky)" />
@@ -55,7 +53,6 @@ const SCENES: Record<string, { label: string; render: () => ReactNode }> = {
     ),
   },
   well: {
-    label: "A stone well with a rope and bucket",
     render: () => (
       <>
         <rect width="320" height="180" fill="var(--qa-sky)" />
@@ -72,7 +69,6 @@ const SCENES: Record<string, { label: string; render: () => ReactNode }> = {
     ),
   },
   pastoral: {
-    label: "Rolling pasture with a stream and low hills",
     render: () => (
       <>
         <rect width="320" height="180" fill="var(--qa-sky)" />
@@ -82,7 +78,6 @@ const SCENES: Record<string, { label: string; render: () => ReactNode }> = {
     ),
   },
   "trade-route": {
-    label: "A dashed route crossing a plain between two walled towns",
     render: () => (
       <>
         <rect width="320" height="180" fill="var(--qa-sand)" />
@@ -93,7 +88,6 @@ const SCENES: Record<string, { label: string; render: () => ReactNode }> = {
     ),
   },
   "mud-brick": {
-    label: "Mud-brick and stone houses with flat roofs",
     render: () => (
       <>
         <rect width="320" height="180" fill="var(--qa-sky)" />
@@ -109,7 +103,6 @@ const SCENES: Record<string, { label: string; render: () => ReactNode }> = {
     ),
   },
   "empty-market": {
-    label: "An empty market street with awnings and stalls",
     render: () => (
       <>
         <rect width="320" height="180" fill="var(--qa-sky)" />
@@ -124,7 +117,6 @@ const SCENES: Record<string, { label: string; render: () => ReactNode }> = {
     ),
   },
   tools: {
-    label: "Simple tools: a hoe, a sickle, a clay jar and a grinding stone",
     render: () => (
       <>
         <rect width="320" height="180" fill="var(--qa-sand)" />
@@ -139,7 +131,6 @@ const SCENES: Record<string, { label: string; render: () => ReactNode }> = {
     ),
   },
   ship: {
-    label: "A wooden sailing boat on calm water",
     render: () => (
       <>
         <rect width="320" height="180" fill="var(--qa-sky)" />
@@ -158,7 +149,8 @@ export const SCENE_KEYS = Object.keys(SCENES);
 
 export function Scene({ scene, caption, labels }: { scene: string; caption?: string; labels: { note: string; play: string; pause: string; replay: string; scenes?: Record<string, string> } }) {
   const found = SCENES[scene];
-  const s = found ? { ...found, label: labels.scenes?.[scene] ?? found.label } : undefined;
+  // Scene descriptions (alt text and caption) live in the interface strings (modules/lifestyle.ts, illustration.scenes).
+  const s = found ? { ...found, label: labels.scenes?.[scene] ?? lifestyle.en.illustration.scenes[scene] ?? scene } : undefined;
   const [playing, setPlaying] = useState(false);
   const [run, setRun] = useState(0);
   useEffect(() => {

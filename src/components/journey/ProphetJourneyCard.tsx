@@ -37,7 +37,7 @@ export function ProphetJourneyCard({ item: p, expanded = true, onToggle, onEvide
           <EraTag {...p.era} />
         </div>
         <h3 className="zq-jc-name">
-          {p.name}
+          <span {...en}>{p.name}</span>
           {p.honorific ? (
             <span className="zq-jc-hon" lang="ar">
               {" "}
@@ -49,11 +49,16 @@ export function ProphetJourneyCard({ item: p, expanded = true, onToggle, onEvide
           <span className="zq-jc-ar" lang="ar" dir="rtl">
             {p.arabicName}
           </span>
-          {p.subtitle ? ` · ${p.subtitle}` : ""}
+          {p.subtitle ? (
+            <>
+              {" · "}
+              <span {...en}>{p.subtitle}</span>
+            </>
+          ) : null}
         </p>
       </div>
       {onToggle ? (
-        <button type="button" className="zq-jc-toggle" aria-expanded={expanded} aria-label={`${expanded ? "Collapse" : "Expand"} ${p.name}`} onClick={onToggle}>
+        <button type="button" className="zq-jc-toggle" aria-expanded={expanded} aria-label={expanded ? t.collapse(p.name) : t.expand(p.name)} onClick={onToggle}>
           {expanded ? <Icon.chevronUp /> : <Icon.chevronDown />}
         </button>
       ) : null}

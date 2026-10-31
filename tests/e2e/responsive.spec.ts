@@ -8,60 +8,9 @@ import path from "node:path";
  * smaller than 44x44 px. With SHOTS=before|after it also saves full-page screenshots to docs/responsive/<SHOTS>/.
  */
 
-export const ROUTES = [
-  "/",
-  "/timeline",
-  "/prophets",
-  "/prophets/nuh",
-  "/prophets/yusuf",
-  "/events",
-  "/stories",
-  "/creation",
-  "/creation/jinn",
-  "/quran",
-  "/quran/1",
-  "/quran/18",
-  "/hadith",
-  "/hadith/bukhari",
-  "/atlas",
-  "/genealogy",
-  "/last-hour",
-  "/life-through-ages",
-  "/life-through-ages/prophets/nuh",
-  "/life-through-ages/food",
-  "/life-through-ages/day",
-  "/life-through-ages/compare",
-  "/life-through-ages/longevity",
-  "/qiraat",
-  "/qiraat/compare",
-  "/timeline?layer=food",
-  "/search?q=Yusuf",
-  "/learn",
-  "/community",
-  "/community/guidelines",
-  "/guidance",
-  "/guidance/feeling-overwhelmed",
-  "/community/questions",
-  "/community/questions/ask",
-  "/dreams",
-  "/dreams/request",
-  "/dreams/my",
-  "/mufti",
-  "/compare",
-  "/sign-in",
-  "/account",
-  "/admin",
-  "/admin/mufti",
-  "/about",
-  "/methodology",
-  "/review-board",
-  "/corrections",
-  "/terms",
-  "/privacy",
-  "/accessibility",
-  "/contact",
-  "/offline",
-];
+import { ROUTES } from "./routes";
+
+export { ROUTES };
 
 const WIDTHS = [320, 360, 414, 768, 1024, 1440];
 const SHOTS = process.env.SHOTS;

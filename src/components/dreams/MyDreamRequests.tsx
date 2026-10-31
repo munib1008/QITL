@@ -6,6 +6,7 @@ import { dreamsT } from "@/lib/i18n/modules/dreams";
 import { RETENTION_DAYS } from "@/lib/dreams";
 import { Skeleton } from "@/components/ui/misc";
 import { apiCall, Feedback, type Msg } from "@/components/mufti/api";
+import { apiErrorText } from "@/lib/i18n/modules/api";
 import { Pill } from "@/components/mufti/ui";
 
 interface Row {
@@ -20,8 +21,8 @@ interface Row {
 export async function downloadExport(url: string, fallbackName: string) {
   const r = await fetch(url, { method: "POST", headers: { "content-type": "application/json" }, cache: "no-store" });
   if (!r.ok) {
-    const d = (await r.json().catch(() => ({}))) as { error?: string };
-    throw new Error(d.error ?? `Request failed (${r.status})`);
+    const d = (await r.json().catch(() => ({}))) as { error?: string; code?: string };
+    throw new Error(apiErrorText(document.documentElement.lang, d));
   }
   const name = /filename="([^"]+)"/.exec(r.headers.get("content-disposition") ?? "")?.[1] ?? fallbackName;
   const href = URL.createObjectURL(await r.blob());

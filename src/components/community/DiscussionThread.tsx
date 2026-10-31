@@ -314,6 +314,7 @@ function CommentForm({ label, initial = "", submitLabel, onSubmit, onCancel }: {
             id={`${fid}-c`}
             className="zq-input"
             dir="ltr"
+            lang="en"
             value={citation}
             onChange={(e) => setCitation(e.target.value)}
             placeholder="Q 12:3 or Bukhari 1"
