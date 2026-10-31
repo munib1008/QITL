@@ -55,7 +55,7 @@ Read **[MASTER_BUILD_PROMPT.md](./MASTER_BUILD_PROMPT.md)** for the complete pro
 - Optional login for bookmarks, notes, progress and discussions.
 - Every factual religious assertion traceable to primary evidence.
 - Clearly differentiate Qur'an, authenticated Hadith, scholarly explanation, historical approximation, disagreement and the unknown.
-- Seven Sunni Hadith collections as initial catalog: Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasa'i, Ibn Majah and Muwatta Malik. Grade hadith individually.
+- Four Sunni Hadith collections: Sahih al-Bukhari, Sahih Muslim, Jami' at-Tirmidhi and Sunan Ibn Majah. A collection is never a grade: every narration is graded individually, and Tirmidhi and Ibn Majah narrations are used as evidence only with a recorded authentic grading by a named scholar. (The earlier seven-collection catalogue was narrowed on 2026-10-31.)
 - Location uncertainty represented as a zone or explicitly unknown, never a fabricated coordinate.
 - No imagined dates for unknown eras or the Last Hour; no figurative depictions of prophets.
 - Translation and dataset rights must be verified prior to republication.

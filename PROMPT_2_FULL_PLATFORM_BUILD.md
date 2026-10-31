@@ -1,3 +1,5 @@
+> **Historical document.** Written for ZIQ, the project's earlier name; the product is now **QITL — Quran in Timeline**. It is kept unchanged as a record. Where it differs from the current implementation, the current documents win: `docs/IMPLEMENTATION_STATUS.md`, `docs/FEATURE_ACCEPTANCE_MATRIX.md`, `docs/LICENSING.md`. In particular, religious evidence now draws only on the Quran, Sahih al-Bukhari, Sahih Muslim, and narrations of Jami' at-Tirmidhi and Sunan Ibn Majah individually graded authentic (the public hadith catalogue lists these four collections).
+
 # PROMPT 2 — ZIQ END-TO-END FULL STACK PLATFORM BUILD (IMPLEMENT ALL FEATURES)
 Target repository: https://github.com/zivarallc-code/ZIQ
 Role: Act as principal full-stack architect, senior Next.js engineer, Postgres/Supabase architect, search/graph/geospatial engineer, accessibility/security engineer and technical lead.

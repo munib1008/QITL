@@ -514,7 +514,7 @@ Controls: card → `/hadith/[collection]`; methodology link → `/methodology#ha
 
 Analytics: `hadith_collection_opened {collection}`.
 
-Acceptance: seven collections; no collection-level grade badge.
+Acceptance: four collections (Bukhari, Muslim, Tirmidhi, Ibn Majah; narrowed from seven on 2026-10-31); no collection-level grade badge.
 
 ## Hadith collection `/hadith/[collection]?n=<number>`
 

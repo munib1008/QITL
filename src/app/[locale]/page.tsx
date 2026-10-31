@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getJourney, journeyStops } from "@/content/journey";
 import { basmala, quranSource } from "@/content/quran";
 import { QuranAttribution } from "@/components/quran/QuranAttribution";
+import { exploreLinks } from "@/lib/nav";
 import { JourneyTimeline } from "@/components/journey/JourneyTimeline";
 import { JourneyHeader } from "@/components/shell/SiteHeader";
 import { DraftBadge } from "@/components/ui/evidence";
@@ -113,16 +114,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <span className="zq-kicker">{t.moreWays}</span>
             <h2 id="explore-title">{t.everyStory}</h2>
           </div>
-          <div className="zq-features">
-            <Feature title={t.features.atlas[0]} points={8} href="/atlas" soon={t.soon}>
-              {t.features.atlas[1]}
-            </Feature>
-            <Feature title={t.features.evidence[0]} points={10} href="/methodology" soon={t.soon}>
-              {t.features.evidence[1]}
-            </Feature>
-            <Feature title={t.features.genealogy[0]} points={12} href="/genealogy" soon={t.soon}>
-              {t.features.genealogy[1]}
-            </Feature>
+          <div className="zq-features zq-features-all">
+            {exploreLinks(locale)
+              .filter((l) => l.href !== "/search")
+              .map((l, i) => (
+                <Feature key={l.href} title={l.label} points={([8, 10, 12] as const)[i % 3]!} href={l.href}>
+                  {l.note ?? ""}
+                </Feature>
+              ))}
           </div>
         </section>
       </main>
@@ -144,8 +143,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   );
 }
 
-/** Feature cards stay labelled "Coming soon" until the feature behind them is wired to reviewed data. */
-function Feature({ title, points, href, soon, children }: { title: string; points: 8 | 10 | 12; href: string; soon: string; children: React.ReactNode }) {
+/** One card per section of QITL (the same list as the Explore menus). Each section states its own data status. */
+function Feature({ title, points, href, children }: { title: string; points: 8 | 10 | 12; href: string; children: React.ReactNode }) {
   return (
     <article className="zq-feature zq-glass">
       <Rosette points={points} />
@@ -154,8 +153,7 @@ function Feature({ title, points, href, soon, children }: { title: string; point
           {title}
         </Link>
       </h3>
-      <p>{children}</p>
-      <span className="zq-soon">{soon}</span>
+      {children ? <p>{children}</p> : null}
     </article>
   );
 }

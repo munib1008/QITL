@@ -1,3 +1,5 @@
+> **Historical document.** Written for ZIQ, the project's earlier name; the product is now **QITL — Quran in Timeline**. It is kept unchanged as a record. Where it differs from the current implementation, the current documents win: `docs/IMPLEMENTATION_STATUS.md`, `docs/FEATURE_ACCEPTANCE_MATRIX.md`, `docs/LICENSING.md`. In particular, religious evidence now draws only on the Quran, Sahih al-Bukhari, Sahih Muslim, and narrations of Jami' at-Tirmidhi and Sunan Ibn Majah individually graded authentic (the public hadith catalogue lists these four collections).
+
 # ZIQ brand book
 
 ZIQ is a free, public Islamic knowledge atlas: the Quran, authenticated Sunni Hadith, the prophets, genealogy, chronology and geography in one calm, scholarly reading experience. The design system exists to make one thing unmistakable on every screen: **what Allah and His Messenger ﷺ have told us, what scholars interpret, what historians estimate, and what remains unknown.**

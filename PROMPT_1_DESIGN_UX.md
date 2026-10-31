@@ -1,3 +1,5 @@
+> **Historical document.** Written for ZIQ, the project's earlier name; the product is now **QITL — Quran in Timeline**. It is kept unchanged as a record. Where it differs from the current implementation, the current documents win: `docs/IMPLEMENTATION_STATUS.md`, `docs/FEATURE_ACCEPTANCE_MATRIX.md`, `docs/LICENSING.md`. In particular, religious evidence now draws only on the Quran, Sahih al-Bukhari, Sahih Muslim, and narrations of Jami' at-Tirmidhi and Sunan Ibn Majah individually graded authentic (the public hadith catalogue lists these four collections).
+
 # PROMPT 1 — ZIQ COMPLETE PRODUCT DESIGN & UX (DESIGN-ONLY)
 Target repository: https://github.com/zivarallc-code/ZIQ
 Role: Act as a senior product designer, Islamic educational-experience designer, information architect, accessibility specialist and design-systems engineer.

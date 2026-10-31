@@ -2,16 +2,11 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { fontVariables } from "../fonts";
 import { getDict, isLocale, LOCALES } from "@/lib/i18n";
-import { creationStrings } from "@/lib/i18n/modules/creation";
 import { publicEnv } from "@/lib/env";
 import { ServiceWorker } from "@/components/shell/ServiceWorker";
 import { BottomNav } from "@/components/shell/BottomNav";
-import { guidanceT } from "@/lib/i18n/modules/guidance";
-import { qiraatStrings } from "@/lib/i18n/modules/qiraat";
-import { lifestyleStrings } from "@/lib/i18n/modules/lifestyle";
-import { muftiT } from "@/lib/i18n/modules/mufti";
-import { dreamsT } from "@/lib/i18n/modules/dreams";
 import { uiStrings } from "@/lib/i18n/modules/ui";
+import { exploreLinks } from "@/lib/nav";
 import "../globals.css";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -52,9 +47,6 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const { dir, t } = getDict(locale);
-  const creation = creationStrings(locale).nav;
-  const mufti = muftiT(locale).explore;
-  const dreams = dreamsT(locale).explore;
   return (
     <html lang={locale} dir={dir} className={fontVariables} suppressHydrationWarning>
       <head>
@@ -69,24 +61,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           locale={locale}
           langLabels={t.lang}
           labels={t.bottom}
-          explore={[
-            { href: "/prophets", label: t.nav.prophets, note: t.exploreNotes.prophets },
-            { href: "/stories", label: t.nav.stories, note: t.exploreNotes.stories },
-            { href: "/events", label: t.nav.events, note: t.exploreNotes.events },
-            { href: "/creation", label: creation.label, note: creation.note },
-            { href: "/hadith", label: t.nav.hadith, note: t.exploreNotes.hadith },
-            { href: "/atlas", label: t.nav.atlas, note: t.exploreNotes.atlas },
-            { href: "/genealogy", label: t.nav.genealogy, note: t.exploreNotes.genealogy },
-            { href: "/last-hour", label: t.nav.lastHour, note: t.exploreNotes.lastHour },
-            { href: "/life-through-ages", label: lifestyleStrings(locale).nav, note: lifestyleStrings(locale).navNote },
-            { href: "/qiraat", label: qiraatStrings(locale).nav, note: qiraatStrings(locale).navNote },
-            { href: "/community", label: t.nav.community, note: t.exploreNotes.community },
-            { href: "/guidance", label: guidanceT(locale).nav, note: guidanceT(locale).exploreNote },
-            { href: "/community/questions", label: mufti.label, note: mufti.note },
-            { href: "/dreams", label: dreams.label, note: dreams.note },
-            { href: "/learn", label: t.learnArabic, note: t.exploreNotes.learn },
-            { href: "/search", label: t.nav.search, note: t.exploreNotes.search },
-          ]}
+          explore={exploreLinks(locale).filter((l) => l.href !== "/quran")}
         />
         <ServiceWorker />
       </body>

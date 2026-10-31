@@ -53,7 +53,7 @@ language (a leaf identical to English with Latin words does not count).
 | Module | String files | UI strings | EN (externalised) | AR | UR | Hard-coded left |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | account | `modules/account.ts` | 84 | 100% | 100% | 100% | 0 |
-| admin | `modules/admin.ts` | 696 | 11% | 11% | 11% | 619 |
+| admin | `modules/admin.ts` | 759 | 10% | 10% | 10% | 681 |
 | api | `modules/api.ts` | 18 | 100% | 100% | 100% | 0 |
 | atlas | `modules/atlas.ts (atlas)` | 29 | 100% | 100% | 100% | 0 |
 | community | `modules/community.ts` | 65 | 100% | 100% | 100% | 0 |
@@ -73,15 +73,15 @@ language (a leaf identical to English with Latin words does not count).
 | player | `modules/player.ts` | 128 | 100% | 100% | 100% | 0 |
 | qiraat | `modules/qiraat.ts` | 58 | 100% | 100% | 95% | 0 |
 | quran | `modules/reader.ts` | 32 | 100% | 100% | 100% | 0 |
-| search | `modules/search.ts (search)` | 17 | 100% | 100% | 100% | 0 |
+| search | `modules/search.ts (search)` | 60 | 98% | 90% | 90% | 1 |
 | shell | `dict.ts`, `modules/ui.ts` | 200 | 100% | 100% | 100% | 0 |
 | stories | `modules/prophets.ts`, `modules/story.ts` | 169 | 95% | 95% | 95% | 9 |
 | timeline | `modules/events.ts (timeline)` | 22 | 100% | 100% | 100% | 0 |
-| **all** | | **2467** | **74%** | **74%** | **74%** | **633** |
+| **all** | | **2573** | **73%** | **73%** | **73%** | **696** |
 
 Content strings in src/content and src/lib/data (editorial content, not interface; not counted): 93.
 
-API error messages (81, English source in the route files): readers see the message for the response's
+API error messages (97, English source in the route files): readers see the message for the response's
 `code` in their interface language (`apiErrorText`, `src/lib/i18n/modules/api.ts`); codes without a translation fall
 back to a generic localised message in Arabic and Urdu.
 
@@ -91,10 +91,12 @@ back to a generic localised message in Arabic and Urdu.
 an interface object key), metadata (page title or description), message (a status or error shown to the reader),
 validation (a form validation message).
 
-### admin (619)
+### admin (681)
 
 | File:line | Kind | Text |
 | --- | --- | --- |
+| `src/app/[locale]/admin/media/page.tsx:15` | jsx-text | Media Library |
+| `src/app/[locale]/admin/media/page.tsx:17` | jsx-text | Non-figurative images only: no prophet, Companion or member of the Ahl al-Bayt, no ange... |
 | `src/components/admin/CreationEditor.tsx:49` | jsx-text | Send for review |
 | `src/components/admin/CreationEditor.tsx:54` | jsx-text | Publish |
 | `src/components/admin/CreationEditor.tsx:107` | expr | Not configured |
@@ -386,6 +388,66 @@ validation (a form validation message).
 | `src/components/admin/LifestyleAdmin.tsx:397` | jsx-text | Evidence |
 | `src/components/admin/LifestyleAdmin.tsx:408` | jsx-text | Reconstruction (class D only) |
 | `src/components/admin/LifestyleAdmin.tsx:419` | jsx-text | Save draft |
+| `src/components/admin/MediaAdmin.tsx:174` | attr | The Media Library needs the database. |
+| `src/components/admin/MediaAdmin.tsx:184` | jsx-text | No malware scanner is configured (MALWARE_SCAN_URL). Uploads stay in the private pendin... |
+| `src/components/admin/MediaAdmin.tsx:188` | jsx-text | A scanner is configured but SUPABASE_SERVICE_ROLE_KEY is missing, so scan results canno... |
+| `src/components/admin/MediaAdmin.tsx:202` | jsx-text | Library |
+| `src/components/admin/MediaAdmin.tsx:205` | jsx-text | Status |
+| `src/components/admin/MediaAdmin.tsx:216` | attr | No images yet. |
+| `src/components/admin/MediaAdmin.tsx:216` | attr | No |
+| `src/components/admin/MediaAdmin.tsx:235` | expr | no file |
+| `src/components/admin/MediaAdmin.tsx:239` | jsx-text | Credit: |
+| `src/components/admin/MediaAdmin.tsx:239` | jsx-text | · Source: |
+| `src/components/admin/MediaAdmin.tsx:239` | jsx-text | ) · Licence: |
+| `src/components/admin/MediaAdmin.tsx:239` | expr | source cleared |
+| `src/components/admin/MediaAdmin.tsx:239` | expr | none — cannot be approved |
+| `src/components/admin/MediaAdmin.tsx:247` | jsx-text | Replacement version v |
+| `src/components/admin/MediaAdmin.tsx:252` | jsx-text | Make v |
+| `src/components/admin/MediaAdmin.tsx:252` | jsx-text | the current file |
+| `src/components/admin/MediaAdmin.tsx:260` | jsx-text | Used in |
+| `src/components/admin/MediaAdmin.tsx:272` | jsx-text | Not used anywhere yet. |
+| `src/components/admin/MediaAdmin.tsx:277` | jsx-text | KB · |
+| `src/components/admin/MediaAdmin.tsx:277` | jsx-text | WebP renditions |
+| `src/components/admin/MediaAdmin.tsx:277` | expr | · SVG sanitised |
+| `src/components/admin/MediaAdmin.tsx:297` | expr | Non-figurative: confirmed |
+| `src/components/admin/MediaAdmin.tsx:297` | expr | Non-figurative: not confirmed |
+| `src/components/admin/MediaAdmin.tsx:297` | jsx-text | · Religious review: |
+| `src/components/admin/MediaAdmin.tsx:298` | expr | none yet |
+| `src/components/admin/MediaAdmin.tsx:310` | jsx-text | Confirm non-figurative |
+| `src/components/admin/MediaAdmin.tsx:315` | jsx-text | Acknowledge &ldquo;scan skipped&rdquo; |
+| `src/components/admin/MediaAdmin.tsx:320` | jsx-text | Scan again |
+| `src/components/admin/MediaAdmin.tsx:333` | jsx-text | Religious review comment |
+| `src/components/admin/MediaAdmin.tsx:338` | expr | Approve (non-figurative) |
+| `src/components/admin/MediaAdmin.tsx:338` | expr | Request changes |
+| `src/components/admin/MediaAdmin.tsx:338` | expr | Reject |
+| `src/components/admin/MediaAdmin.tsx:373` | expr | Choose the new file. |
+| `src/components/admin/MediaAdmin.tsx:379` | expr | New version v |
+| `src/components/admin/MediaAdmin.tsx:379` | expr | uploaded. It needs its own scan, confirmation and review; the current file stays until ... |
+| `src/components/admin/MediaAdmin.tsx:388` | jsx-text | Replace the file (new version) |
+| `src/components/admin/MediaAdmin.tsx:392` | jsx-text | Upload new version |
+| `src/components/admin/MediaAdmin.tsx:410` | expr | Choose an image to upload. |
+| `src/components/admin/MediaAdmin.tsx:411` | expr | Tick every non-figurative confirmation, or do not upload the image. |
+| `src/components/admin/MediaAdmin.tsx:422` | expr | Uploaded as a draft (scan: |
+| `src/components/admin/MediaAdmin.tsx:443` | jsx-text | Upload an image |
+| `src/components/admin/MediaAdmin.tsx:446` | jsx-text | PNG, JPEG, WebP, GIF or SVG (checked by content, not by name). Rasters up to 10 MB (GIF... |
+| `src/components/admin/MediaAdmin.tsx:449` | jsx-text | Image file |
+| `src/components/admin/MediaAdmin.tsx:460` | jsx-text | Category |
+| `src/components/admin/MediaAdmin.tsx:471` | jsx-text | Source |
+| `src/components/admin/MediaAdmin.tsx:473` | jsx-text | Choose… |
+| `src/components/admin/MediaAdmin.tsx:482` | jsx-text | Licence (image permission) |
+| `src/components/admin/MediaAdmin.tsx:484` | jsx-text | The source's own rights status |
+| `src/components/admin/MediaAdmin.tsx:487` | expr | (not allowed) |
+| `src/components/admin/MediaAdmin.tsx:494` | jsx-text | Non-figurative confirmation (all required) |
+| `src/components/admin/MediaAdmin.tsx:504` | expr | Uploading… |
+| `src/components/admin/MediaAdmin.tsx:504` | expr | Upload as draft |
+| `src/components/admin/MediaAdmin.tsx:528` | expr | Removed |
+| `src/components/admin/MediaAdmin.tsx:528` | expr | ; failed |
+| `src/components/admin/MediaAdmin.tsx:534` | jsx-text | Orphaned files |
+| `src/components/admin/MediaAdmin.tsx:537` | jsx-text | Superseded and rejected versions past the grace period, files of rejected or archived i... |
+| `src/components/admin/MediaAdmin.tsx:541` | jsx-text | Grace period (days) |
+| `src/components/admin/MediaAdmin.tsx:545` | jsx-text | Dry run |
+| `src/components/admin/MediaAdmin.tsx:549` | jsx-text | Remove these |
+| `src/components/admin/MediaAdmin.tsx:564` | jsx-text | Nothing to clean up. |
 | `src/components/admin/QiraatAdmin.tsx:42` | expr | Saved as a draft. |
 | `src/components/admin/QiraatAdmin.tsx:62` | jsx-text | Choose… |
 | `src/components/admin/QiraatAdmin.tsx:93` | jsx-text | Save draft |
@@ -724,6 +786,12 @@ validation (a form validation message).
 | `src/components/creation/CreationVisual.tsx:50` | expr | Gentle waves meeting a shoreline under an open sky |
 | `src/components/creation/CreationVisual.tsx:63` | expr | Light rain falling on soil and green shoots rising |
 | `src/components/creation/CreationVisual.tsx:78` | expr | Flowing abstract pen strokes drawn one after another (no words) |
+
+### search (1)
+
+| File:line | Kind | Text |
+| --- | --- | --- |
+| `src/app/[locale]/search/page.tsx:13` | metadata | Search |
 
 ### stories (9)
 
