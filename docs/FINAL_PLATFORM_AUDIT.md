@@ -44,3 +44,7 @@ and they pass alone.
   Lara and TTS integrations and the malware scanner were exercised only through their not-configured paths and database tests.
 - Responsive and accessibility checks use Playwright emulation and axe, not real devices or a screen reader.
 - Lighthouse numbers are in `docs/RESPONSIVE.md`; they were taken on a shared machine and are indicative only.
+
+## After the final merges (2026-10-31, `5de97ad`)
+
+`tsc` and `eslint` clean; Vitest 728 passed (42 files, run with `--no-file-parallelism`); `next build` compiled. Playwright was run per module branch before merging (Shifa 538 passed, 0 failed; Complete Timeline 510 passed after fixing two Urdu footer overlaps) but not re-run on the combined tree. All migrations through `20261031002500`, `002400/002410` (Shifa) and `002450/002451` (Event Universe) are applied to production. No Shifa or Event Universe content is published.
