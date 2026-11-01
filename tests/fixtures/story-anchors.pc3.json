@@ -1,0 +1,28 @@
+{
+  "note": "Anchors for the drafts of batch prophets-c3 (Dawud, Sulayman, Yunus, Zakariyya, Yahya): names and number words with the Arabic anchor that must occur in the ayat a chapter cites; names from later tradition (allowed only in unknowns / uncertainties under the tradition label); titles.",
+  "names": {
+    "Dawud": "داود",
+    "Sulayman": "سليمن",
+    "Yunus": "يونس",
+    "Zakariyya": "زكريا",
+    "Yahya": "يحيى",
+    "Jalut": "جالوت",
+    "Saba": "سبا",
+    "Maryam": "مريم",
+    "Yaqub": "يعقوب",
+    "Satan": "شيطن",
+    "Book": "كتب"
+  },
+  "numbers": {
+    "nine": "تسع",
+    "ninety": "تسعون",
+    "three": "ثلثة",
+    "hundred": "مائة",
+    "thousand": "الف"
+  },
+  "guarded": {},
+  "common_capitalised": ["Compassionate", "You", "Your", "I", "My", "Me"],
+  "opening_words": ["You", "Your", "My", "Me"],
+  "tradition_names": ["Bilqis", "Balqis", "Asaf", "Asif", "Sakhr", "Uriah", "Bathsheba"],
+  "titles_ar": { "dawud": "داود", "sulayman": "سليمان", "yunus": "يونس", "zakariyya": "زكريا", "yahya": "يحيى" }
+}

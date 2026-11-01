@@ -1,0 +1,456 @@
+{
+  "slug": "dawud",
+  "title_en": "Dawud",
+  "title_ar": "داود",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "dawud"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The chapters are a reading order built from the ayat, not a chronology the Quran claims; surah order is not time order. The account at 21:78-79 is shared with Sulayman and appears in both drafts. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "favour-and-strength",
+      "position": 1,
+      "title_en": "Favour and strength",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 27,
+          "from": 15,
+          "to": 15
+        },
+        {
+          "surah": 38,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 38,
+          "from": 20,
+          "to": 20
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God gave Dawud and Sulayman knowledge, and they said that praise belongs to God, who had favoured them over many of His believing servants.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The one addressed is told to be patient with what they say and to remember God's servant Dawud, who had strength and was one who turned back to God again and again.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God made his kingdom firm and gave him wisdom and decisive speech.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God gave Dawud knowledge, wisdom and a firm kingdom, and called him a servant of strength who turned back to God again and again [c1][c2][c3].",
+      "body_md": "God gave Dawud and Sulayman knowledge, and they said that praise belongs to God, who had favoured them over many of His believing servants [c1]. In another passage the one addressed is told to be patient with what they say and to remember God's servant Dawud, who had strength and was one who turned back to God again and again [c2]. God made his kingdom firm and gave him wisdom and decisive speech [c3].",
+      "deep_md": "In 27:15 the words of thanks are said by Dawud and Sulayman together, and the favour is named as God's favour [c1]. The Arabic word for strength in 38:17 is ayd, and awwab means one who turns back again and again [c2]. The phrase rendered decisive speech is fasl al-khitab, and the ayah does not fix its sense [c3].",
+      "kids_md": "God gave Dawud knowledge and wisdom and made his kingdom strong [c1][c3]. God called him a servant who kept turning back to God [c2].",
+      "lessons_md": "Educational interpretation (not scripture): In 27:15 the answer to the gift of knowledge is thanks to God [c1]. A reader may notice that 38:17 joins strength and turning back to God in one description [c2].",
+      "unknowns_md": "- Not established: what the knowledge given to Dawud and Sulayman consisted of; the ayah says only that it was knowledge.\n- Not established: who the speakers are in 38:17 whose words the one addressed must bear with; the ayah does not name them.\n- Not established: the exact sense of decisive speech (fasl al-khitab) in 38:20; the ayah does not say, and the reviewer decides the wording."
+    },
+    {
+      "anchor": "the-kingdom-and-jalut",
+      "position": 2,
+      "title_en": "The kingdom and Jalut",
+      "event_slug": "talut-and-jalut",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 251,
+          "to": 251
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "By God's permission they routed them, and Dawud killed Jalut.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 251,
+              "to": 251
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God gave him the kingdom and wisdom and taught him of what He willed.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 251,
+              "to": 251
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Were it not for God's driving back of people, some by means of others, the earth would be ruined, but God is full of bounty to all the worlds.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 251,
+              "to": 251
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "By God's permission they routed them and Dawud killed Jalut, and God gave him the kingdom and wisdom [c1][c2].",
+      "body_md": "By God's permission they routed them, and Dawud killed Jalut [c1]. God gave him the kingdom and wisdom and taught him of what He willed [c2]. The verse adds that were it not for God's driving back of people, some by means of others, the earth would be ruined, but God is full of bounty to all the worlds [c3].",
+      "deep_md": "The verse does not name those who routed or those who were routed; its pronouns look back to the verses before it [c1]. It lists the kingdom, wisdom and teaching from what God willed as gifts to Dawud [c2]. The last clause turns from this event to a general statement about God's driving back of people [c3].",
+      "kids_md": "By God's permission Dawud killed Jalut [c1]. God gave Dawud a kingdom and wisdom [c2].",
+      "lessons_md": "Educational interpretation (not scripture): The verse places the victory under God's permission and names the kingdom and wisdom as gifts from God [c1][c2]. It also joins this event to a wider statement that God drives people back by means of one another so that the earth is not ruined [c3].",
+      "unknowns_md": "- Not established: how Jalut was killed, or Dawud's age, rank or place in the host; the verse says only that he killed him.\n- Not established here: who led those who routed Jalut's side; that account lies in the verses before 2:251, outside the range of this draft.\n- Not established: what the things were that God taught him from what He willed."
+    },
+    {
+      "anchor": "mountains-and-birds",
+      "position": 3,
+      "title_en": "The mountains and the birds",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 21,
+          "from": 79,
+          "to": 79
+        },
+        {
+          "surah": 34,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 38,
+          "from": 18,
+          "to": 19
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God made the mountains subject to Dawud, glorifying God with him, and the birds as well.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 79,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God gave Dawud favour from Himself and told the mountains, and the birds, to turn back with him.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God made the mountains subject to him, glorifying God in the evening and at sunrise, and the birds were gathered, each of them one who turned back.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 18,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The mountains and the birds were made subject to Dawud and glorified God with him [c1][c3].",
+      "body_md": "God made the mountains subject to Dawud, glorifying God with him, and the birds as well [c1]. God gave Dawud favour from Himself and told the mountains, and the birds, to turn back with him [c2]. God made the mountains subject to him, glorifying God in the evening and at sunrise, and the birds were gathered, each of them one who turned back [c3].",
+      "deep_md": "The ayat use different verbs: glorify in 21:79 and 38:18, turn back with him in 34:10, and gathered in 38:19 [c1][c2][c3]. The times named in 38:18 are the evening and sunrise [c3].",
+      "kids_md": "The mountains and the birds praised God together with Dawud [c1][c3]. God told them to join him [c2].",
+      "lessons_md": "Educational interpretation (not scripture): In these ayat creation is shown joining in the glorifying of God [c1][c3]. A reader may notice that the birds are described as gathered and each one as turning back [c3].",
+      "unknowns_md": "- Not established: how the mountains and the birds glorified, or what it sounded like; the ayat do not say.\n- Not established: whether the words each of them one who turned back point to Dawud or to God; the Arabic is open and the reviewer decides.\n- Not established: where or how often this happened, beyond the evening and sunrise named in 38:18."
+    },
+    {
+      "anchor": "iron-and-protection",
+      "position": 4,
+      "title_en": "Iron and protection",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 34,
+          "from": 10,
+          "to": 11
+        },
+        {
+          "surah": 21,
+          "from": 80,
+          "to": 80
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God softened iron for Dawud.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He was told to make sabighat, a word for things made full and ample, and to measure well the links, and those addressed were told to do righteous deeds, because God sees what they do.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God taught him the craft of making labus, a covering, to protect people in their fighting, and asked whether they would then be thankful.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 80,
+              "to": 80
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God softened iron for Dawud and taught him a craft of making protection, and asked whether people would be thankful [c1][c3].",
+      "body_md": "God softened iron for Dawud [c1]. He was told to make sabighat, a word for things made full and ample, and to measure well the links, and those addressed were told to do righteous deeds, because God sees what they do [c2]. God taught him the craft of making labus, a covering, to protect people in their fighting, and asked whether they would then be thankful [c3].",
+      "deep_md": "The ayat use different words for what was made: sabighat and the links (sard) in 34:11, and labus in 21:80 [c2][c3]. Neither ayah uses the word armour [c2][c3]. The ayat end with a call to righteous deeds in 34:11 and with a question about thanks in 21:80 [c2][c3].",
+      "kids_md": "God made iron soft for Dawud [c1]. God taught him to make something that protects people, and asked if they would be thankful [c3].",
+      "lessons_md": "Educational interpretation (not scripture): In 21:80 a skill is given as a benefit for others, and it is followed by a question about thanks [c3]. In 34:11 the instruction to work with care is joined to an instruction to do righteous deeds [c2].",
+      "unknowns_md": "- Not established: how the iron was softened, or how the craft was carried out.\n- Not established: what exactly sabighat and labus were; later commentators commonly read them as protective gear for battle, but the ayat do not use that word.\n- Not established: who is meant by the people to be protected and the people asked about thanks in 21:80."
+    },
+    {
+      "anchor": "the-field-judgment",
+      "position": 5,
+      "title_en": "The judgment about the field",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 21,
+          "from": 78,
+          "to": 79
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Dawud and Sulayman were judging about the field, when the sheep of some people had pastured in it by night, and God was a witness to their judgment.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 78,
+              "to": 78
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God made Sulayman understand it, and to each of them God gave judgment and knowledge.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 79,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Dawud and Sulayman judged about a field in which some people's sheep had pastured by night, and God made Sulayman understand it [c1][c2].",
+      "body_md": "Dawud and Sulayman were judging about the field, when the sheep of some people had pastured in it by night, and God was a witness to their judgment [c1]. God made Sulayman understand it, and to each of them God gave judgment and knowledge [c2].",
+      "deep_md": "The verse says that God made Sulayman understand it, and does not say what Dawud had judged or what Sulayman judged [c2]. The same verse says that to each God gave judgment and knowledge [c2].",
+      "kids_md": "Dawud and Sulayman judged a matter about a field and some sheep [c1]. God helped Sulayman understand it, and gave judgment and knowledge to both [c2].",
+      "lessons_md": "Educational interpretation (not scripture): Sulayman's understanding is described as something God gave, and the same verse says that to each God gave judgment and knowledge [c2]. A reader may notice that the verse does not set one of them against the other [c2].",
+      "unknowns_md": "- Not established: what each of them judged, or which judgment is meant by it in 21:79.\n- Not established: whose field or whose sheep, what damage was done, or whether the matter was brought to both of them together.\n- Not established: Sulayman's age at the time; the Quran does not give it."
+    },
+    {
+      "anchor": "the-two-disputants",
+      "position": 6,
+      "title_en": "The disputants who came to Dawud",
+      "event_slug": "the-two-disputants",
+      "verses": [
+        {
+          "surah": 38,
+          "from": 21,
+          "to": 25
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah asks whether the news of the disputants had reached the one addressed, when they climbed into the mihrab.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They went in to Dawud and he was alarmed at them; they said not to fear, that they were disputants who had transgressed against one another, and asked him to judge between them with the truth, not to be unjust, and to guide them to the middle of the path.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "One of them said that this was his brother, that the brother had ninety-nine ewes and he himself had one ewe, and that the brother had said to entrust her to him and had overcome him in speech.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Dawud said that he had wronged him by asking for his ewe in addition to his own ewes, and that many partners transgress against one another, except those who believe and do righteous deeds, and few are they.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The ayah says that Dawud thought that God had only tested him, so he asked his Lord for forgiveness, fell down bowing and turned back.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God forgave him that, and said that he has nearness with Him and a good place of return.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Some disputants came into Dawud's mihrab, and one told of a brother with ninety-nine ewes while he had one [c2][c3]. Dawud thought that God had tested him, asked forgiveness, fell down bowing and turned back, and God forgave him that and spoke of his nearness and good return [c5][c6].",
+      "body_md": "The ayah asks whether the news of the disputants had reached the one addressed, when they climbed into the mihrab [c1]. They went in to Dawud and he was alarmed at them [c2]. They said not to fear, that they were disputants who had transgressed against one another, and asked him to judge between them with the truth, not to be unjust, and to guide them to the middle of the path [c2]. One of them said that this was his brother, that the brother had ninety-nine ewes and he himself had one ewe, and that the brother had said to entrust her to him and had overcome him in speech [c3]. Dawud said that he had wronged him by asking for his ewe in addition to his own ewes, and that many partners transgress against one another, except those who believe and do righteous deeds, and few are they [c4]. The ayah says that Dawud thought that God had only tested him, so he asked his Lord for forgiveness, fell down bowing and turned back [c5]. God forgave him that, and said that he has nearness with Him and a good place of return [c6].",
+      "deep_md": "The news is introduced as a question to the one addressed (38:21) [c1]. The disputants' words set one with many ewes against one with a single ewe [c3]. Dawud's reply adds a general remark about partners [c4]. The ayah calls what happened a test, using the verb fatana, and does not say what the test was or draw a conclusion from it [c5]. It then says that God forgave him that and that he has nearness and a good place of return [c6].",
+      "kids_md": "Some people came to Dawud with an argument [c2]. One of them said that his brother had ninety-nine ewes and he had one [c3]. Dawud asked God to forgive him, and God forgave him [c5][c6].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat show the one who judges turning back to God and asking forgiveness [c5]. They also show God answering with forgiveness and with words of nearness [c6]. A reader may take from Dawud's remark that those who join together can transgress against one another, except those who believe and do righteous deeds [c4].",
+      "unknowns_md": "- Not established: who the disputants were, how they came in, or where the mihrab was; the ayat give no names or places.\n- Not established: what the test was, what that refers to in the forgiveness of 38:25, or whether any wrong was done; the ayat give no verdict and this draft gives none.\n- Not established: whether brother in 38:23 means kinship or companionship, or whether the ewes stand for something else.\n- Not established: who is the speaker in 38:24, since the verb has no named subject; this draft reads it as Dawud, and the reviewer decides.\n- Not established: whether fell down bowing means a bow or a prostration (the Arabic is kharra raki'an).\n- Named in later tradition, not in the Quranic text: accounts that explain the test, including identities for the disputants and their dispute; none is used here and none is vouched for."
+    },
+    {
+      "anchor": "a-trust-on-the-earth",
+      "position": 7,
+      "title_en": "A trust on the earth",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 38,
+          "from": 26,
+          "to": 26
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God told Dawud that He had made him a khalifah on the earth, a word whose sense is left open, so he should judge between people with the truth.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He was told not to follow desire, which would lead him astray from God's way; those who go astray from God's way have a severe punishment because they forgot the day of reckoning.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God told Dawud that He had made him a khalifah on the earth, to judge between people with the truth and not to follow desire [c1][c2].",
+      "body_md": "God told Dawud that He had made him a khalifah on the earth, a word whose sense is left open, so he should judge between people with the truth [c1]. He was told not to follow desire, which would lead him astray from God's way [c2]. Those who go astray from God's way have a severe punishment because they forgot the day of reckoning [c2].",
+      "deep_md": "The ayah is a direct address to Dawud by name [c1]. It joins an appointment, a command to judge with the truth, and a warning in a single verse [c1][c2].",
+      "kids_md": "God told Dawud to judge between people with the truth [c1]. He was told not to follow his own wishes, which could lead him away from God's way [c2].",
+      "lessons_md": "Educational interpretation (not scripture): The ayah ties a position on the earth to the duty of judging with the truth [c1]. It names following desire as a way that leads away from God's way [c2].",
+      "unknowns_md": "- Not established: what khalifah means here, whether successor, steward or something else; the same word is used of humankind in 2:30 and the reviewer decides the wording.\n- Not established: whom Dawud succeeded, if the word means successor, or over whom he judged."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on Dawud's worship and on what was given to him. None is used in this draft.",
+    "The disputants' ayat (38:21-25) are stated as the ayat have them. The identity of the speaker in 38:24, the sense of the test and of that in 38:25, and the sense of khalifah in 38:26 are for a scholar to word; this draft gives no verdict.",
+    "Named in later tradition, not in the Quranic text: explanations of the test in 38:24 and names for the disputants. None is used and no verdict is implied.",
+    "The chapters follow a reading order (gifts, the victory, the mountains and birds, the iron, the judgment about the field, the disputants, the trust on the earth). The Quran does not give a chronology across these surahs.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

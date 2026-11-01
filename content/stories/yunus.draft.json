@@ -1,0 +1,323 @@
+{
+  "slug": "yunus",
+  "title_en": "Yunus",
+  "title_ar": "يونس",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "yunus"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The chapters are a reading order built from the ayat, not a chronology the Quran claims; surah order is not time order. 21:87 and 68:48 name the one of the fish by a title; they are read as Yunus because 37:139-142 tells of the fish and names him. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-messenger-and-the-ship",
+      "position": 1,
+      "title_en": "The messenger and the loaded ship",
+      "event_slug": "yunus-and-the-fish",
+      "verses": [
+        {
+          "surah": 37,
+          "from": 139,
+          "to": 141
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God says that Yunus was among the messengers.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 139,
+              "to": 139
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He fled to the laden ship.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 140,
+              "to": 140
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "There was a casting of lots, using a verb with no named subject, and he was among the losers.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 141,
+              "to": 141
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Yunus was among the messengers; he fled to the laden ship, and in the casting of lots he was among the losers [c1][c2][c3].",
+      "body_md": "God says that Yunus was among the messengers [c1]. He fled to the laden ship [c2]. There was a casting of lots, using a verb with no named subject, and he was among the losers [c3].",
+      "deep_md": "The Arabic verb for fled, abaqa, is the verb used for one who runs away; the ayah does not say from what [c2]. The verb for the lots, sahama, has no named subject, and the word for the losers, mudhadin, means those who were overcome [c3].",
+      "kids_md": "Yunus was one of God's messengers [c1]. He went away on a ship that was full [c2]. There was a casting of lots, and he was one of those who lost [c3].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat state that Yunus was among the messengers and state in the next words that he fled [c1][c2]. A reader may notice that both are said plainly, side by side [c1][c2].",
+      "unknowns_md": "- Not established: what he fled from, where the ship was going, or who else was aboard; the ayat say only that it was laden.\n- Not established: who cast the lots, how, or why; the verb has no named subject.\n- Not established: whether this came before or after the sending to his people in 37:147; the order of the ayat is not an order of time.\n- Named in later tradition, not in the Quranic text: names for the city of his people and for the sea; none is used here."
+    },
+    {
+      "anchor": "anger-and-the-darkness",
+      "position": 2,
+      "title_en": "Anger and the darkness",
+      "event_slug": "yunus-and-the-fish",
+      "verses": [
+        {
+          "surah": 21,
+          "from": 87,
+          "to": 88
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The one called dhu al-nun, the one of the fish, whom this draft reads as Yunus, went off angry and thought that God would not have power over him; the Arabic verb can also be read as that God would not restrict him.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 87,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He called out in the darknesses, \"There is no god but You, glory be to You, I was among the wrongdoers\".",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 87,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God answered him and saved him from the distress, and said that in this way He saves the believers.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 88,
+              "to": 88
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The one of the fish went off angry, called out in the darknesses, and God answered him and saved him from the distress [c1][c2][c3].",
+      "body_md": "The one called dhu al-nun, the one of the fish, whom this draft reads as Yunus, went off angry and thought that God would not have power over him; the Arabic verb can also be read as that God would not restrict him [c1]. He called out in the darknesses, \"There is no god but You, glory be to You, I was among the wrongdoers\" [c2]. God answered him and saved him from the distress, and said that in this way He saves the believers [c3].",
+      "deep_md": "The ayah gives the title dhu al-nun and does not use the name Yunus; reading it as Yunus is an inference from the accounts of the fish elsewhere [c1]. The word for the darknesses is plural, and the ayah does not say what they were or where [c2]. His call has parts: that there is no god but God, that God is glorified, and that he had been among the wrongdoers [c2]. The ayah ends by speaking of the believers in general [c3].",
+      "kids_md": "The one of the fish went away angry [c1]. He called out to God in the darknesses, and God answered him and saved him [c2][c3].",
+      "lessons_md": "Educational interpretation (not scripture): The call in the darknesses begins with the oneness of God and glorifying Him before it says anything about himself [c2]. The ayah then links God's saving of him to God's saving of the believers [c3].",
+      "unknowns_md": "- Not established: what the darknesses were, or where; the ayah does not say that they were in the belly of the fish, and this draft does not say so either.\n- Not established: what he was angry about, or with whom.\n- Not established: the sense of the Arabic verb for power, whether to have power over him or to restrict him; the reviewer decides the wording.\n- Not established: what the distress was, beyond that God saved him from it."
+    },
+    {
+      "anchor": "the-fish-and-the-bare-land",
+      "position": 3,
+      "title_en": "The fish and the bare land",
+      "event_slug": "yunus-and-the-fish",
+      "verses": [
+        {
+          "surah": 37,
+          "from": 142,
+          "to": 146
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The fish swallowed him while he was blameworthy.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 142,
+              "to": 142
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Had he not been one of those who glorify God, he would have stayed in its belly until the day they are raised.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 143,
+              "to": 144
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God cast him on the bare land while he was sick.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 145,
+              "to": 145
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God caused a plant of the kind called yaqtin to grow over him.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 146,
+              "to": 146
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The fish swallowed him, God cast him on the bare land, and caused a plant to grow over him [c1][c3][c4].",
+      "body_md": "The fish swallowed him while he was blameworthy [c1]. Had he not been one of those who glorify God, he would have stayed in its belly until the day they are raised [c2]. God cast him on the bare land while he was sick [c3]. God caused a plant of the kind called yaqtin to grow over him [c4].",
+      "deep_md": "The ayat join his being swallowed with his being blameworthy, and then name glorifying as what changed the outcome [c1][c2]. The bare land is named as the place where God cast him [c3]. The plant is given by the name of its kind, yaqtin, and nothing more is said of it [c4].",
+      "kids_md": "A fish swallowed him [c1]. He glorified God, and God cast him on the bare land [c2][c3]. God made a plant grow over him [c4].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat say that glorifying God made the difference to how he fared in the belly of the fish [c2]. A reader may notice that after the rescue he is described as sick and is given a plant over him [c3][c4].",
+      "unknowns_md": "- Not established: how long he was in the belly, or how he was cast out; the ayat give no duration and no further account.\n- Not established: where the bare land was, or what kind of land it was beyond the word for bare.\n- Not established: what a plant of the yaqtin kind is exactly; later readers have taken it as a gourd, but the ayah says only the name of the kind.\n- Not established: what blameworthy points to, or how he was sick; the ayat do not say.\n- Not established: how this chapter relates in time to the darknesses of the chapter on his call; the ayat do not say."
+    },
+    {
+      "anchor": "chosen-and-made-righteous",
+      "position": 4,
+      "title_en": "Chosen and made righteous",
+      "event_slug": "yunus-and-the-fish",
+      "verses": [
+        {
+          "surah": 68,
+          "from": 48,
+          "to": 50
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The one addressed is told to be patient for the decision of his Lord and not to be like the companion of the fish, when he called out while he was choked with grief.",
+          "verses": [
+            {
+              "surah": 68,
+              "from": 48,
+              "to": 48
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Had a favour from his Lord not reached him, he would have been thrown on the bare land while he was blamed.",
+          "verses": [
+            {
+              "surah": 68,
+              "from": 49,
+              "to": 49
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "His Lord chose him and made him one of the righteous.",
+          "verses": [
+            {
+              "surah": 68,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The companion of the fish called out choked with grief; a favour from his Lord reached him, and his Lord chose him and made him one of the righteous [c1][c2][c3].",
+      "body_md": "The one addressed is told to be patient for the decision of his Lord and not to be like the companion of the fish, when he called out while he was choked with grief [c1]. Had a favour from his Lord not reached him, he would have been thrown on the bare land while he was blamed [c2]. His Lord chose him and made him one of the righteous [c3].",
+      "deep_md": "The ayat use the title companion of the fish, and reading it as Yunus is an inference from the account of the fish elsewhere [c1]. The ayat name a favour from his Lord as what changed his outcome [c2]. They end by saying that his Lord chose him and made him one of the righteous [c3].",
+      "kids_md": "God tells the one addressed to be patient and not to be like the companion of the fish [c1]. A favour from his Lord reached him, and his Lord chose him and made him one of the righteous [c2][c3].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat give the story of the companion of the fish as a lesson in patience for the one addressed [c1]. They name his Lord's favour and his Lord's choosing as what stands at the end of it [c2][c3].",
+      "unknowns_md": "- Not established: who the one addressed is; the ayat do not name him.\n- Not established: what he called out, or when; the ayat say only that he called out while choked with grief.\n- Not established: what the favour from his Lord was, or how it reached him; the ayat do not say.\n- Not established: how these ayat relate in time to 21:87-88 and 37:139-148; they are read together here only because they speak of the same companion of the fish."
+    },
+    {
+      "anchor": "the-people-who-believed",
+      "position": 5,
+      "title_en": "The people who believed",
+      "event_slug": "people-of-yunus",
+      "verses": [
+        {
+          "surah": 37,
+          "from": 147,
+          "to": 148
+        },
+        {
+          "surah": 10,
+          "from": 98,
+          "to": 98
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God sent him to a hundred thousand or more.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 147,
+              "to": 147
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They believed, and God let them enjoy life for a while.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 148,
+              "to": 148
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The ayah asks why no town believed so that its belief benefited it, except the people of Yunus; when they believed, God removed from them the punishment of disgrace in the life of this world, and let them enjoy life for a while.",
+          "verses": [
+            {
+              "surah": 10,
+              "from": 98,
+              "to": 98
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God sent Yunus to a hundred thousand or more, and they believed; God removed the punishment of disgrace from them and let them enjoy life for a while [c1][c2][c3].",
+      "body_md": "God sent him to a hundred thousand or more [c1]. They believed, and God let them enjoy life for a while [c2]. The ayah asks why no town believed so that its belief benefited it, except the people of Yunus; when they believed, God removed from them the punishment of disgrace in the life of this world, and let them enjoy life for a while [c3].",
+      "deep_md": "The number in 37:147 is a hundred thousand with the words or more, and the ayah says no more of how many [c1]. Both ayat use the same expression for the while for which they were allowed to enjoy life [c2][c3]. The ayah at 10:98 sets the people of Yunus apart from the towns whose belief came too late to benefit them [c3].",
+      "kids_md": "God sent Yunus to a great many people, a hundred thousand or more [c1]. They believed, and God let them enjoy life for a while [c2].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat present the belief of the people of Yunus as unlike the belief of other towns, since it benefited them [c3]. A reader may notice that their belief is followed by the removal of a punishment and by a time of enjoying life [c2][c3].",
+      "unknowns_md": "- Not established: whether the sending in 37:147 was before or after the fish; the verse carries no word of time, and the order of the ayat is not an order of time.\n- Not established: the name or place of the town, what the punishment of disgrace was, or how it was removed.\n- Not established: how long the while was, or what became of them after it.\n- Not established: whether the hundred thousand or more are all of his people, or how they were counted."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on Yunus, the fish and the supplication of 21:87. None is used in this draft.",
+    "The titles dhu al-nun (21:87) and companion of the fish (68:48) are read as Yunus by an inference from 37:139-142; a scholar should confirm that wording.",
+    "The ayat do not say what the darknesses of 21:87 were or where; this draft does not join them to the belly of the fish.",
+    "The order of the chapters is a reading order; the sending to his people (37:147-148, 10:98) is not placed before or after the fish.",
+    "Named in later tradition, not in the Quranic text: names for the city, the sea and the length of his time away. None is used.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

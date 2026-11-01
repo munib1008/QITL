@@ -1,0 +1,373 @@
+{
+  "slug": "zakariyya",
+  "title_en": "Zakariyya",
+  "title_ar": "زكريا",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "zakariyya"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The chapters are a reading order built from the ayat, not a chronology the Quran claims; surah order is not time order. The accounts overlap with Maryam's and with Yahya's; this draft states only what concerns Zakariyya. The same moment may be told in 3:38-41 and 19:2-11; the ayat do not say, and the chapters keep both. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "guardian-of-maryam",
+      "position": 1,
+      "title_en": "The guardian of Maryam",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 3,
+          "from": 37,
+          "to": 37
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Zakariyya was made guardian of Maryam, whom her Lord had accepted with a good acceptance and caused to grow well.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Whenever Zakariyya went in to her in the mihrab, he found provision with her, and he asked her where she had this from.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "She said that it is from God, and that God gives provision to whom He wills without reckoning.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Zakariyya was made guardian of Maryam, and whenever he went in to her in the mihrab he found provision with her, which she said was from God [c1][c2][c3].",
+      "body_md": "Zakariyya was made guardian of Maryam, whom her Lord had accepted with a good acceptance and caused to grow well [c1]. Whenever Zakariyya went in to her in the mihrab, he found provision with her, and he asked her where she had this from [c2]. She said that it is from God, and that God gives provision to whom He wills without reckoning [c3].",
+      "deep_md": "The ayah names Zakariyya as her guardian and as the one who went in to her [c1][c2]. The question about the provision is his, and the answer is hers [c2][c3]. This draft states only what concerns Zakariyya here; the rest of Maryam's account is in her own entry [c1].",
+      "kids_md": "Zakariyya looked after Maryam [c1]. When he went in to her, he found food and drink with her, and she told him it was from God [c2][c3].",
+      "lessons_md": "Educational interpretation (not scripture): Maryam's answer places her provision with God, who gives to whom He wills [c3]. A reader may notice that Zakariyya asks about what he finds and receives an answer that points to God [c2][c3].",
+      "unknowns_md": "- Not established: what the provision was, or how it came; the ayah says only provision.\n- Not established: how Zakariyya was related to Maryam, or how long he was her guardian; the ayah does not say.\n- Not established: whether the Arabic wording makes God or Zakariyya the one acting in kaffalaha; this draft says that Zakariyya was made her guardian, and the reviewer checks the recitation.\n- Not established: where the mihrab was or what it was."
+    },
+    {
+      "anchor": "the-secret-prayer",
+      "position": 2,
+      "title_en": "The secret prayer",
+      "event_slug": "glad-tidings-of-yahya",
+      "verses": [
+        {
+          "surah": 3,
+          "from": 38,
+          "to": 38
+        },
+        {
+          "surah": 19,
+          "from": 2,
+          "to": 6
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "There Zakariyya called on his Lord, asking for good offspring from Him, and said that God hears supplication.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The ayah is a mention of the mercy of your Lord to His servant Zakariyya, when he called on his Lord with a hidden call.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 2,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He said that his bone had grown weak and his head had flared with white, and that he had never been unfortunate in calling on his Lord.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He said that he feared the kinsfolk who would come after him, and that his wife was barren, and asked God for an heir from Himself who would inherit from him and from the family of Yaqub, and to make him pleasing.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 5,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Zakariyya called on his Lord in a hidden call for good offspring, speaking of his weakness, his fear for what would come after him, and his wife's barrenness [c1][c2][c3][c4].",
+      "body_md": "There Zakariyya called on his Lord, asking for good offspring from Him, and said that God hears supplication [c1]. The ayah is a mention of the mercy of your Lord to His servant Zakariyya, when he called on his Lord with a hidden call [c2]. He said that his bone had grown weak and his head had flared with white, and that he had never been unfortunate in calling on his Lord [c3]. He said that he feared the kinsfolk who would come after him, and that his wife was barren, and asked God for an heir from Himself who would inherit from him and from the family of Yaqub, and to make him pleasing [c4].",
+      "deep_md": "The ayat give the prayer in different forms: a short request for good offspring (3:38) and a longer one that speaks of his weakness, his fear and his wife (19:4-6) [c1][c3][c4]. The longer form is introduced as a mention of the mercy of his Lord to His servant [c2]. The word for his hidden call means a call made quietly [c2].",
+      "kids_md": "Zakariyya called quietly to his Lord and asked for a child to come after him [c1][c2][c4]. He said that he had never been unhappy when he called on his Lord [c3].",
+      "lessons_md": "Educational interpretation (not scripture): The prayer begins with the speaker's weakness and his history of calling on God, before he asks for anything [c3]. A reader may notice that the prayer is described as a hidden call and as a mercy [c2].",
+      "unknowns_md": "- Not established: Zakariyya's age, or the age or name of his wife, or how long she had been barren; the ayat give none of these.\n- Not established: who the kinsfolk are or what he feared from them.\n- Not established: what the heir was to inherit, whether property, prophethood or knowledge; the ayah says only from him and from the family of Yaqub.\n- Not established: where or when he prayed beyond the setting of the preceding verse; the ayat give no further detail."
+    },
+    {
+      "anchor": "the-glad-tidings",
+      "position": 3,
+      "title_en": "The good news",
+      "event_slug": "glad-tidings-of-yahya",
+      "verses": [
+        {
+          "surah": 3,
+          "from": 39,
+          "to": 40
+        },
+        {
+          "surah": 19,
+          "from": 7,
+          "to": 9
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The angels called to him while he stood praying in the mihrab that God gives him good news of Yahya, confirming a word from God, a leader, one who holds back, and a prophet from among the righteous.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He said, my Lord, how will I have a boy when old age has reached me and my wife is barren; the answer was that in this way God does what He wills.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He was addressed by name as Zakariyya and told that God gives him good news of a boy whose name is Yahya, for whom God had not made a namesake before.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He said, my Lord, how will I have a boy when my wife is barren and I have reached the extreme of old age.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 8,
+              "to": 8
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The answer was that it is so, that his Lord says it is easy for Him, and that He had created him before when he was nothing.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 9,
+              "to": 9
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Zakariyya was given good news of a boy named Yahya, and asked how this could be when old age had reached him and his wife was barren; the answer was that God does what He wills [c2][c3][c4][c5].",
+      "body_md": "The angels called to him while he stood praying in the mihrab that God gives him good news of Yahya, confirming a word from God, a leader, one who holds back, and a prophet from among the righteous [c1]. He said, my Lord, how will I have a boy when old age has reached me and my wife is barren; the answer was that in this way God does what He wills [c2]. He was addressed by name as Zakariyya and told that God gives him good news of a boy whose name is Yahya, for whom God had not made a namesake before [c3]. He said, my Lord, how will I have a boy when my wife is barren and I have reached the extreme of old age [c4]. The answer was that it is so, that his Lord says it is easy for Him, and that He had created him before when he was nothing [c5].",
+      "deep_md": "Both passages give good news, a question from Zakariyya, and an answer from God [c1][c2][c3][c4][c5]. In 3:39 the good news comes from the angels, in 19:7 it is given in the voice of God; the ayat do not say whether this is the same moment [c1][c3]. The question is the same in each place and refers to old age and to his wife being barren [c2][c4]. The answers are that God does what He wills, and that creating him from nothing was easy for God [c2][c5].",
+      "kids_md": "Zakariyya was told that he would have a boy named Yahya [c1][c3]. He asked how this could be, since he was old and his wife could not have a child [c2][c4]. He was told that God does what He wills and that it is easy for Him [c2][c5].",
+      "lessons_md": "Educational interpretation (not scripture): The question about how it can be is answered by pointing to God's will and to God's earlier creation of the questioner [c2][c5]. A reader may notice that the question is asked plainly and that the answer is also given plainly [c2][c4][c5].",
+      "unknowns_md": "- Not established: who speaks the answers in 3:40 and 19:9; the verb is he said with no named speaker.\n- Not established: whether 3:39 and 19:7 describe the same moment, or whether the angels of 3:39 are the voice of 19:7.\n- Not established: Zakariyya's age, or how old his wife was; the ayat say old age and barren, nothing more.\n- Not established: the sense of the word for one who holds back, or of the word for namesake, which can also read as equal; the reviewer decides the wording.\n- Named in later tradition, not in the Quranic text: an identification of the word from God in 3:39 with a person; it is not used in the story texts."
+    },
+    {
+      "anchor": "the-sign-of-silence",
+      "position": 4,
+      "title_en": "The sign",
+      "event_slug": "glad-tidings-of-yahya",
+      "verses": [
+        {
+          "surah": 3,
+          "from": 41,
+          "to": 41
+        },
+        {
+          "surah": 19,
+          "from": 10,
+          "to": 11
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Zakariyya said, my Lord, make a sign for me; the answer was that his sign would be that he would not speak to people for three days except by gesture, and that he should remember his Lord much and glorify Him in the evening and the early morning.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 41,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He said, my Lord, make a sign for me; the answer was that his sign would be that he would not speak to people for three nights, sawiyyan, a word whose sense is left open here.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He went out to his people from the mihrab and signalled to them to glorify God in the morning and the evening.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Zakariyya asked for a sign and was told that for three days he would not speak to people except by gesture; he went out from the mihrab and signalled to his people to glorify God morning and evening [c1][c3].",
+      "body_md": "Zakariyya said, my Lord, make a sign for me; the answer was that his sign would be that he would not speak to people for three days except by gesture, and that he should remember his Lord much and glorify Him in the evening and the early morning [c1]. In the other passage the answer was that his sign would be that he would not speak to people for three nights, sawiyyan, a word whose sense is left open here [c2]. He went out to his people from the mihrab and signalled to them to glorify God in the morning and the evening [c3].",
+      "deep_md": "One passage names days and the other names nights, and the ayat do not say how they relate [c1][c2]. In the first passage the sign comes with an instruction to remember God much and to glorify Him [c1]. The signal to his people in the last ayah is a call to glorify God [c3].",
+      "kids_md": "Zakariyya asked God for a sign [c1]. For three days he would not speak to people, except by gesture [c1]. He went out and signalled to his people to glorify God morning and evening [c3].",
+      "lessons_md": "Educational interpretation (not scripture): The sign of silence is joined to a command to remember and glorify God much [c1]. A reader may notice that when he comes out to his people, his gesture calls them to glorify God as well [c3].",
+      "unknowns_md": "- Not established: why the sign took this form, or whether it was a limit on his speech or an inability; the ayat do not say.\n- Not established: whether the three days of 3:41 and the three nights of 19:10 are the same period; the ayat do not join them.\n- Not established: how he signalled, or whether he could still speak to God or glorify; the ayat do not say.\n- Not established: the sense of sawiyyan; it is read as sound, whole or unbroken, and the reviewer decides the wording."
+    },
+    {
+      "anchor": "answered-and-named",
+      "position": 5,
+      "title_en": "Answered, and named among the righteous",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 21,
+          "from": 89,
+          "to": 90
+        },
+        {
+          "surah": 6,
+          "from": 85,
+          "to": 85
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Zakariyya called on his Lord, asking not to be left alone, and said that God is the best of inheritors.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 89,
+              "to": 89
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God answered him, gave him Yahya, and put his wife right for him.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 90,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The ayah says of them that they used to hasten to good deeds, call on God in hope and in fear, and were humble before Him.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 90,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Zakariyya and Yahya are named, with others, each described as being among the righteous.",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 85,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Zakariyya called on his Lord not to leave him alone, and God answered him, gave him Yahya and put his wife right for him [c1][c2].",
+      "body_md": "Zakariyya called on his Lord, asking not to be left alone, and said that God is the best of inheritors [c1]. God answered him, gave him Yahya, and put his wife right for him [c2]. The ayah says of them that they used to hasten to good deeds, call on God in hope and in fear, and were humble before Him [c3]. Zakariyya and Yahya are named, with others, each described as being among the righteous [c4].",
+      "deep_md": "The call in 21:89 is brief and ends by naming God as the best of inheritors [c1]. The answer has parts: the gift of Yahya and the putting right of his wife [c2]. The description in the plural that follows does not say who is included [c3]. In 6:85 Zakariyya and Yahya are named among those each described as righteous [c4].",
+      "kids_md": "Zakariyya asked God not to leave him alone [c1]. God answered him and gave him Yahya [c2]. Zakariyya and Yahya are named among the righteous [c4].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat show a prayer made in need and an answer that gives what was asked [c1][c2]. They also describe those spoken of as hastening to good, calling on God in hope and fear, and humble before Him [c3].",
+      "unknowns_md": "- Not established: what put his wife right means, or whether it refers to her barrenness; the ayah does not say how.\n- Not established: who they are in 21:90, whether Zakariyya, his wife and Yahya or others; the plural is not explained.\n- Not established: the time between his call and the answer, or how long the answer took.\n- Not established: why the others named in 6:85 are grouped with them; this draft states only the part that concerns Zakariyya and Yahya."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on Zakariyya, his trade and his death. None is used in this draft.",
+    "The age and barrenness details (3:40, 19:4-5, 19:8) are given only as the ayat say them: old age has reached him, his bone has grown weak and his head has flared with white, his wife is barren. A scholar should decide whether the self-description in 19:4 is worded with enough care.",
+    "The passages with the glad tidings and the sign (3:39-41 and 19:7-11) are not joined into one scene; the ayat speak of three days in one place and three nights in the other.",
+    "Named in later tradition, not in the Quranic text: Zakariyya's wife, his kinship to Maryam, the trade attributed to him and his death. None is used.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

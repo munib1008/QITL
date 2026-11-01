@@ -1,0 +1,826 @@
+{
+  "slug": "sulayman",
+  "title_en": "Sulayman",
+  "title_ar": "سليمان",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "sulayman"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The chapters are a reading order built from the ayat, not a chronology the Quran claims; surah order is not time order. Sulayman's account is stated with restraint: only what the ayat state about the wind, the jinn and the shayatin, the birds, the woman who ruled and the staff; no description of any being. The woman is not named because the cited ayat do not name her; she has her own entry elsewhere in the inventory. The account at 21:78-79 is shared with Dawud and appears in both drafts. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "knowledge-and-thanks",
+      "position": 1,
+      "title_en": "Knowledge and thanks",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 27,
+          "from": 15,
+          "to": 16
+        },
+        {
+          "surah": 38,
+          "from": 30,
+          "to": 30
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God gave Dawud and Sulayman knowledge, and they said that praise belongs to God, who had favoured them over many of His believing servants.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Sulayman inherited from Dawud, and said to the people that they had been taught the speech of the birds and given of everything, and that this was the clear bounty.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 16,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God says that He gave Sulayman to Dawud, that he was an excellent servant, and that he was one who turned back to God again and again.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God gave Sulayman knowledge, and he spoke of being taught the speech of the birds and given of everything as a clear bounty [c1][c2].",
+      "body_md": "God gave Dawud and Sulayman knowledge, and they said that praise belongs to God, who had favoured them over many of His believing servants [c1]. Sulayman inherited from Dawud, and said to the people that they had been taught the speech of the birds and given of everything, and that this was the clear bounty [c2]. God says that He gave Sulayman to Dawud, that he was an excellent servant, and that he was one who turned back to God again and again [c3].",
+      "deep_md": "The word for inherited in 27:16 is given without saying what was inherited [c2]. The word we in his speech is left without saying who is included beyond himself [c2]. The description of Sulayman as one who turned back, awwab, is the same word used of Dawud in another passage [c3].",
+      "kids_md": "God gave Sulayman knowledge [c1]. Sulayman said that he had been taught the speech of the birds, and that this was a clear gift from God [c2]. God called him an excellent servant [c3].",
+      "lessons_md": "Educational interpretation (not scripture): The gift of knowledge is followed by thanks to God in the same verse [c1]. A reader may notice that Sulayman calls what he was given a bounty, not an achievement [c2].",
+      "unknowns_md": "- Not established: what Sulayman inherited from Dawud; the ayah does not say, and later readers have differed on whether it is knowledge, prophethood or the kingdom.\n- Not established: what the speech of the birds was or how it was taught; the ayah says only that they were taught it.\n- Not established: who is included in the we of 27:16 beyond Sulayman himself."
+    },
+    {
+      "anchor": "the-field-judgment",
+      "position": 2,
+      "title_en": "The judgment about the field",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 21,
+          "from": 78,
+          "to": 79
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Dawud and Sulayman were judging about the field, when the sheep of some people had pastured in it by night, and God was a witness to their judgment.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 78,
+              "to": 78
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God made Sulayman understand it, and to each of them God gave judgment and knowledge.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 79,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Dawud and Sulayman judged about a field in which some people's sheep had pastured by night, and God made Sulayman understand it [c1][c2].",
+      "body_md": "Dawud and Sulayman were judging about the field, when the sheep of some people had pastured in it by night, and God was a witness to their judgment [c1]. God made Sulayman understand it, and to each of them God gave judgment and knowledge [c2].",
+      "deep_md": "The verse says that God made Sulayman understand it, and does not say what Dawud had judged or what Sulayman judged [c2]. The same verse says that to each God gave judgment and knowledge [c2].",
+      "kids_md": "Dawud and Sulayman judged a matter about a field and some sheep [c1]. God helped Sulayman understand it, and gave judgment and knowledge to both [c2].",
+      "lessons_md": "Educational interpretation (not scripture): Sulayman's understanding is described as something God gave, and the same verse says that to each God gave judgment and knowledge [c2]. A reader may notice that the verse does not set one of them against the other [c2].",
+      "unknowns_md": "- Not established: what each of them judged, or which judgment is meant by it in 21:79.\n- Not established: whose field or whose sheep, what damage was done, or whether the matter was brought to both of them together.\n- Not established: Sulayman's age at the time; the Quran does not give it."
+    },
+    {
+      "anchor": "the-wind-and-his-servants",
+      "position": 3,
+      "title_en": "The wind and those who served him",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 21,
+          "from": 81,
+          "to": 82
+        },
+        {
+          "surah": 34,
+          "from": 12,
+          "to": 13
+        },
+        {
+          "surah": 38,
+          "from": 36,
+          "to": 40
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "For Sulayman God made the wind strong, running by his command to the land that God had blessed.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 81,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God says that He subjected the wind to him, running by his command softly to where he directed.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The ayah says that its morning was a month and its evening a month.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God made the spring of qitr flow for him, and some of the jinn worked before him by the permission of his Lord; whoever of them turned from God's command, God would make him taste the punishment of the blaze.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Some of the shayatin, the Arabic plural of shaytan, dived for him and did other work besides, and God was guarding them; the shayatin are also described as every builder and diver, and others bound together in chains.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 82,
+              "to": 82
+            },
+            {
+              "surah": 38,
+              "from": 37,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They made for him whatever he wished of mihrabs, likenesses, basins like great water-troughs, and fixed cooking-pots.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The family of Dawud are told to work in thanks, and God says that few of His servants are thankful.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "God told Sulayman that this was His gift, so he could give or withhold without reckoning, and that he has nearness with God and a good place of return.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 39,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God made the wind run by Sulayman's command, and some of the jinn and the shayatin worked for him, by God's permission and under God's guarding [c1][c2][c4][c5].",
+      "body_md": "For Sulayman God made the wind strong, running by his command to the land that God had blessed [c1]. God says that He subjected the wind to him, running by his command softly to where he directed [c2]. The ayah says that its morning was a month and its evening a month [c3]. God made the spring of qitr flow for him, and some of the jinn worked before him by the permission of his Lord; whoever of them turned from God's command, God would make him taste the punishment of the blaze [c4]. Some of the shayatin, the Arabic plural of shaytan, dived for him and did other work besides, and God was guarding them; the shayatin are also described as every builder and diver, and others bound together in chains [c5]. They made for him whatever he wished of mihrabs, likenesses, basins like great water-troughs, and fixed cooking-pots [c6]. The family of Dawud are told to work in thanks, and God says that few of His servants are thankful [c7]. God told Sulayman that this was His gift, so he could give or withhold without reckoning, and that he has nearness with God and a good place of return [c8].",
+      "deep_md": "The wind is called strong in 21:81 and soft in 38:36; the ayat give both words and do not join them [c1][c2]. The ayah on the month does not say what was measured in a month, a journey or a time [c3]. Every service in these ayat is placed under God: by God's permission, with God guarding, and as God's gift [c4][c5][c8]. The words for the things made, mihrabs and likenesses, are left without further description [c6].",
+      "kids_md": "God made the wind obey Sulayman, going where he directed [c1][c2]. Some of the jinn and others worked for him, by God's permission [c4][c5]. God told the family of Dawud to give thanks [c7].",
+      "lessons_md": "Educational interpretation (not scripture): Every power described in these ayat is placed under God: the wind runs by his command, the jinn work by God's permission, and the shayatin are guarded by God [c1][c4][c5]. The ayat close this passage with a call to thanks and the remark that few are thankful [c7]. The gift is spoken of as a gift to give or withhold, with a promise of nearness stated for Sulayman [c8].",
+      "unknowns_md": "- Not established: how the wind carried him or what it carried, where the land that God blessed was, or whether it is the same land in each place.\n- Not established: what the month refers to; the Arabic gives only its morning a month and its evening a month.\n- Not established: what qitr is; the word is often read as molten copper or metal, but the ayah does not say so.\n- Not established: how the jinn and the shayatin looked or how they worked; this draft describes neither and says only what the ayat say.\n- Not established: who the others bound in chains were, or what the chains were; the ayah does not say.\n- Not established: what the likenesses were, or whether the same people who made the mihrabs made them."
+    },
+    {
+      "anchor": "the-valley-of-the-ants",
+      "position": 4,
+      "title_en": "The valley of the ants",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 27,
+          "from": 17,
+          "to": 19
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "His forces of the jinn, of humankind and of the birds were gathered for Sulayman, and were held in ranks.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When they came to the valley of the ants, an ant said to the ants to enter their dwellings, so that Sulayman and his forces would not crush them while they did not perceive.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He smiled, laughing at her words, and asked his Lord to inspire him to be thankful for the favour on him and on his parents and to do righteous work that pleases God, and to admit him by God's mercy among His righteous servants.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Sulayman's forces were gathered, an ant warned the ants in a valley, and Sulayman smiled and asked God to help him be thankful [c1][c2][c3].",
+      "body_md": "His forces of the jinn, of humankind and of the birds were gathered for Sulayman, and were held in ranks [c1]. When they came to the valley of the ants, an ant said to the ants to enter their dwellings, so that Sulayman and his forces would not crush them while they did not perceive [c2]. He smiled, laughing at her words, and asked his Lord to inspire him to be thankful for the favour on him and on his parents and to do righteous work that pleases God, and to admit him by God's mercy among His righteous servants [c3].",
+      "deep_md": "The ant speaks as one of the ants and says they do not perceive; the ayah gives her words and nothing else about her [c2]. Sulayman's response is a smile and a prayer, not a command [c3]. The prayer names thanks, righteous work and admission among the righteous [c3].",
+      "kids_md": "Sulayman's forces were gathered, and they came to a valley of ants [c1][c2]. An ant told the other ants to go into their homes [c2]. Sulayman smiled and asked God to help him be thankful [c3].",
+      "lessons_md": "Educational interpretation (not scripture): Sulayman answers what he hears with a smile and a prayer for thankfulness [c3]. A reader may notice that his prayer includes his parents among those who received favour [c3].",
+      "unknowns_md": "- Not established: where the valley of the ants was, or how Sulayman understood the ant; the ayah says that he laughed at her words.\n- Not established: the size or make-up of the forces beyond the groups named, or what ranks means in practice.\n- Not established: who his parents were beyond what other ayat say; this ayah gives no names."
+    },
+    {
+      "anchor": "the-hoopoe",
+      "position": 5,
+      "title_en": "The hoopoe",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 27,
+          "from": 20,
+          "to": 28
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Sulayman looked for the birds and asked why he did not see the hoopoe, or whether it was among the absent.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He said that he would punish it severely or slaughter it, unless it brought him clear authority.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "It did not stay away long, and said that it had learned what he had not, and had come to him from Saba with sure news.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "It said that it had found a woman who ruled them, who had been given of everything and had a great throne.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "It said that it had found her and her people prostrating to the sun instead of God, that Satan had made their deeds seem fair to them and turned them from the way, so that they were not guided and did not prostrate to God, who brings out what is hidden in the heavens and the earth and knows what they conceal and what they declare; the Arabic wording can also be read as a call to prostrate to God.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 24,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The ayah says that God, there is no god but He, is the Lord of the great throne.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Sulayman said that they would see whether it had spoken the truth or was among the liars, and told it to go with his letter, cast it to them, then turn away from them and see what they returned.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 27,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Sulayman missed the hoopoe, which returned with news from Saba, and he sent it with a letter to see what they would answer [c1][c3][c7].",
+      "body_md": "Sulayman looked for the birds and asked why he did not see the hoopoe, or whether it was among the absent [c1]. He said that he would punish it severely or slaughter it, unless it brought him clear authority [c2]. It did not stay away long, and said that it had learned what he had not, and had come to him from Saba with sure news [c3]. It said that it had found a woman who ruled them, who had been given of everything and had a great throne [c4]. It said that it had found her and her people prostrating to the sun instead of God, that Satan had made their deeds seem fair to them and turned them from the way, so that they were not guided and did not prostrate to God, who brings out what is hidden in the heavens and the earth and knows what they conceal and what they declare; the Arabic wording can also be read as a call to prostrate to God [c5]. The ayah says that God, there is no god but He, is the Lord of the great throne [c6]. Sulayman said that they would see whether it had spoken the truth or was among the liars, and told it to go with his letter, cast it to them, then turn away from them and see what they returned [c7].",
+      "deep_md": "Sulayman asks about the hoopoe and states a threat that depends on clear authority [c1][c2]. The hoopoe answers with a claim of knowledge and a report [c3][c4][c5]. The ayat do not mark where the hoopoe's words end, and the Arabic of 27:25 can be read as a report or as a call; 27:25-26 can be read as its words or as a comment [c5][c6]. Sulayman's reply is to test the report and to send a letter [c7].",
+      "kids_md": "Sulayman could not see the hoopoe, and asked where it was [c1]. The hoopoe came back with news from Saba [c3]. Sulayman said that he would see if it was telling the truth, and sent it with a letter [c7].",
+      "lessons_md": "Educational interpretation (not scripture): Sulayman asks for clear authority and then checks the report before acting [c2][c7]. The report names prostration to God, who knows what is hidden and what is declared, as what they were turned away from [c5].",
+      "unknowns_md": "- Not established: where Saba was beyond its name; the ayah gives the name only.\n- Not established: where the hoopoe's own words end, whether at 27:25 or 27:26; the Arabic does not mark it.\n- Not established: how the hoopoe spoke or how Sulayman understood it; the ayat give its words and say nothing about the manner.\n- Not established: whether Sulayman carried out the threat of 27:21; the ayat go on without saying.\n- Not established: the name of the woman who ruled, which the ayat do not give; she has her own entry elsewhere in the inventory."
+    },
+    {
+      "anchor": "the-letter-and-the-gift",
+      "position": 6,
+      "title_en": "The letter and the gift",
+      "event_slug": "ruler-of-saba",
+      "verses": [
+        {
+          "surah": 27,
+          "from": 29,
+          "to": 37
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The woman told her chiefs that a noble letter had been cast to her, that it was from Sulayman, and that it began with the name of God, the Merciful, the Compassionate.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 29,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The letter told them not to exalt themselves against him and to come to him submitting.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "She asked her chiefs to advise her in her matter, saying she never decided a matter until they were present.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 32,
+              "to": 32
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They said that they had strength and fierce might, and that the matter was hers, so she should see what to command.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 33,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "She said that kings, when they enter a town, ruin it and make its mighty ones humble, and that this is what they do.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 34,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "She said that she would send them a gift and wait to see with what the messengers returned.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "When the messenger came to Sulayman, he asked whether they would help him with wealth, said that what God had given him was better than what He had given them, and said that they rejoiced in their gift.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "He told the messenger to return to them, and said that he would come to them with forces they could not face, and would drive them out from there humbled and small.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "A letter from Sulayman reached a woman who ruled; she took counsel, sent a gift, and Sulayman answered that what God had given him was better [c1][c3][c6][c7].",
+      "body_md": "The woman told her chiefs that a noble letter had been cast to her, that it was from Sulayman, and that it began with the name of God, the Merciful, the Compassionate [c1]. The letter told them not to exalt themselves against him and to come to him submitting [c2]. She asked her chiefs to advise her in her matter, saying she never decided a matter until they were present [c3]. They said that they had strength and fierce might, and that the matter was hers, so she should see what to command [c4]. She said that kings, when they enter a town, ruin it and make its mighty ones humble, and that this is what they do [c5]. She said that she would send them a gift and wait to see with what the messengers returned [c6]. When the messenger came to Sulayman, he asked whether they would help him with wealth, said that what God had given him was better than what He had given them, and said that they rejoiced in their gift [c7]. He told the messenger to return to them, and said that he would come to them with forces they could not face, and would drive them out from there humbled and small [c8].",
+      "deep_md": "The letter is described in the ayat only by its opening and its request [c1][c2]. The woman consults her chiefs and sets out her own view before sending a gift [c3][c4][c5][c6]. Sulayman's reply is about what God has given, and the ayat do not say what the gift was [c7]. The word rendered submitting in 27:31 is muslimin, and its sense here is for the reviewer [c2].",
+      "kids_md": "A letter from Sulayman came to the woman who ruled [c1]. She asked her chiefs for advice and sent a gift [c3][c6]. Sulayman said that what God had given him was better than their gift [c7].",
+      "lessons_md": "Educational interpretation (not scripture): The woman is shown taking counsel before she acts [c3][c5]. Sulayman answers a gift by pointing to what God had given him [c7].",
+      "unknowns_md": "- Not established: the woman's name, her people's number, or the place of her rule beyond the name in 27:22; the ayat do not give them.\n- Not established: what the gift was, who carried it, or how many messengers there were; 27:35 has the plural and 27:36 the singular.\n- Not established: how the letter was cast to her or how she knew it was from Sulayman.\n- Not established: whether the forces threatened in 27:37 were ever sent; the ayat go on to another matter.\n- Named in later tradition, not in the Quranic text: a personal name for this woman is given in later works; it is not used here, and her own entry is elsewhere in the inventory."
+    },
+    {
+      "anchor": "the-throne-and-the-sarh",
+      "position": 7,
+      "title_en": "The throne and the sarh",
+      "event_slug": "ruler-of-saba",
+      "verses": [
+        {
+          "surah": 27,
+          "from": 38,
+          "to": 44
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Sulayman asked his chiefs which of them would bring him her throne before they came to him submitting.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "An ifrit of the jinn said that he would bring it before Sulayman rose from his place, and that he was strong and trustworthy for it.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "One who had knowledge from the Book said that he would bring it before Sulayman's glance returned to him; when Sulayman saw it settled by him, he said that this was from the bounty of his Lord, to test whether he would give thanks or be ungrateful, and that whoever gives thanks does so for himself, and whoever is ungrateful, his Lord is self-sufficient and generous.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He said to disguise her throne for her, to see whether she was guided or among those not guided.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 41,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "When she came, she was asked whether her throne was like this, and she said that it seemed to be it, and that they had been given knowledge before her and had been submitting.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "What she used to worship other than God had kept her back, for she was of a people who disbelieved.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 43,
+              "to": 43
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "She was told to enter the sarh, and when she saw it she took it for a pool of water; he said that it was a sarh made smooth, of glass.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 44,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "She said, my Lord, I have wronged myself, and I submit with Sulayman to God, Lord of the worlds.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 44,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Sulayman asked who would bring her throne; it was brought, he gave thanks to his Lord, and when she came she said that she submitted with Sulayman to God, Lord of the worlds [c1][c3][c8].",
+      "body_md": "Sulayman asked his chiefs which of them would bring him her throne before they came to him submitting [c1]. An ifrit of the jinn said that he would bring it before Sulayman rose from his place, and that he was strong and trustworthy for it [c2]. One who had knowledge from the Book said that he would bring it before Sulayman's glance returned to him; when Sulayman saw it settled by him, he said that this was from the bounty of his Lord, to test whether he would give thanks or be ungrateful, and that whoever gives thanks does so for himself, and whoever is ungrateful, his Lord is self-sufficient and generous [c3]. He said to disguise her throne for her, to see whether she was guided or among those not guided [c4]. When she came, she was asked whether her throne was like this, and she said that it seemed to be it, and that they had been given knowledge before her and had been submitting [c5]. What she used to worship other than God had kept her back, for she was of a people who disbelieved [c6]. She was told to enter the sarh, and when she saw it she took it for a pool of water; he said that it was a sarh made smooth, of glass [c7]. She said, my Lord, I have wronged myself, and I submit with Sulayman to God, Lord of the worlds [c8].",
+      "deep_md": "In the ayat an ifrit of the jinn makes one offer and a person with knowledge from the Book makes another; the ayat describe neither [c2][c3]. Sulayman's words on seeing the throne are about thanks and about test [c3]. The ayat leave the speaker of the sentence that she was kept back in 27:43 as the narration [c6]. The final words are hers and are a prayer and a statement of submission [c8].",
+      "kids_md": "Sulayman asked who could bring her throne [c1]. It was brought, and Sulayman said that it was a gift from his Lord, to see if he would give thanks [c3]. Then she said that she submitted to God, Lord of the worlds [c8].",
+      "lessons_md": "Educational interpretation (not scripture): Sulayman receives what is brought to him as a test of thanks and not as pride [c3]. The woman ends with an admission that she had wronged herself and a statement of submission to God [c8].",
+      "unknowns_md": "- Not established: where the throne was brought from, how it was brought, or what it was made of; the ayat give no description of it.\n- Not established: who the one with knowledge from the Book was; the ayah does not name him or say what the knowledge was.\n- Not established: what the sarh was, where it was, or its size; the ayah says only that it was made smooth, of glass.\n- Not established: who said it was a sarh made smooth, of glass; the verb is he said, and this draft reads it as Sulayman.\n- Not established: whom the pronoun in given knowledge before her points to, and whose knowledge it is; the Arabic is open, and 27:43 can be read in more than one way.\n- Not established: how the disguising of the throne was done, or what she knew; the ayat give only her answer.\n- Not established: the order of these events in relation to the others in this story; the draft follows the order of the ayat for reading only.\n- Named in later tradition, not in the Quranic text: a name is given in later works to the one with knowledge from the Book, and the woman has a personal name there; neither is used here."
+    },
+    {
+      "anchor": "a-test-and-a-prayer",
+      "position": 8,
+      "title_en": "A test and a prayer",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 38,
+          "from": 31,
+          "to": 35
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "In the evening there were presented to him the standing and swift ones, a phrase in which the Arabic does not name the animal.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He said that he had loved the love of good things in place of the remembrance of his Lord, until it was hidden behind the veil.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 32,
+              "to": 32
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He said to bring them back to him, and he began to pass over the legs and the necks, a verb that the Arabic readers take in more than one way.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 33,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God says that He tested Sulayman and cast a body upon his throne, and that he then turned back.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 34,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He said, my Lord, forgive me and grant me a kingdom that is not fitting for anyone after me; you are the giver.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Sulayman spoke of his love of good things in place of remembering his Lord, God tested him, and he turned back and asked forgiveness and a kingdom for no one after him [c2][c4][c5].",
+      "body_md": "In the evening there were presented to him the standing and swift ones, a phrase in which the Arabic does not name the animal [c1]. He said that he had loved the love of good things in place of the remembrance of his Lord, until it was hidden behind the veil [c2]. He said to bring them back to him, and he began to pass over the legs and the necks, a verb that the Arabic readers take in more than one way [c3]. God says that He tested Sulayman and cast a body upon his throne, and that he then turned back [c4]. He said, my Lord, forgive me and grant me a kingdom that is not fitting for anyone after me; you are the giver [c5].",
+      "deep_md": "The ayat do not say what it refers to in until it was hidden behind the veil [c2]. The test is stated in the words of God, and the ayah says no more than that a body was cast upon his throne [c4]. The Arabic word for his throne here is kursi, a different word from the arsh used of the great throne in the account of the woman who ruled [c4]. His prayer asks for forgiveness and for a kingdom of a particular kind [c5].",
+      "kids_md": "Sulayman said that he had loved good things so much that he forgot to remember his Lord [c2]. Then God tested him, and he turned back and asked God to forgive him [c4][c5].",
+      "lessons_md": "Educational interpretation (not scripture): Sulayman's turning back is joined to a prayer for forgiveness [c4][c5]. A reader may notice that he names his own loving of good things as something that took him from remembering God [c2].",
+      "unknowns_md": "- Not established: what the standing and swift ones were; the Arabic does not name them, though they are commonly read as horses.\n- Not established: what it refers to in the veil clause, whether the sun or the animals; the Arabic does not say.\n- Not established: what Sulayman did to the legs and necks, which reading of the verb is meant, or why he did it.\n- Not established: what the body upon his throne was, or how the test happened; the ayah gives no more, and this draft adds no account.\n- Not established: how long the test lasted or what his love of good things had caused him to miss.\n- Named in later tradition, not in the Quranic text: accounts that identify the body or give details of the test; none is used here and none is vouched for."
+    },
+    {
+      "anchor": "his-death-and-the-staff",
+      "position": 9,
+      "title_en": "His death and the staff",
+      "event_slug": "death-of-sulayman",
+      "verses": [
+        {
+          "surah": 34,
+          "from": 14,
+          "to": 14
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "When God decreed death upon Sulayman, nothing showed them his death except a creature of the earth eating his staff.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When he fell, it became clear to the jinn that if they had known the unseen, they would not have remained in the humiliating punishment.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "When God decreed death upon Sulayman, a creature of the earth eating his staff was what showed his death, and when he fell the jinn saw that they did not know the unseen [c1][c2].",
+      "body_md": "When God decreed death upon Sulayman, nothing showed them his death except a creature of the earth eating his staff [c1]. When he fell, it became clear to the jinn that if they had known the unseen, they would not have remained in the humiliating punishment [c2].",
+      "deep_md": "The ayah does not name Sulayman in its own words; the pronoun looks back to the verses before it [c1]. It does not say how he was placed when he died, only that he fell [c1][c2]. The point made about the jinn is about knowledge of the unseen [c2].",
+      "kids_md": "When Sulayman died, a creature of the earth eating his staff was what showed it [c1]. Then the jinn saw that they did not know the unseen [c2].",
+      "lessons_md": "Educational interpretation (not scripture): The ayah ends with a statement about the jinn and the unseen: that if they had known it, they would not have remained in the humiliating punishment [c2]. A reader may take from this that knowledge of the unseen is not possessed by the jinn [c2].",
+      "unknowns_md": "- Not established: how long Sulayman was dead before he fell, how he was placed, or what he was doing; the ayah says none of this.\n- Not established: what the staff was like, or what the creature of the earth was; the Arabic names it only as a creature of the earth.\n- Not established: what work or punishment the jinn were in; the ayah says only the humiliating punishment.\n- Not established: how the jinn learned of his death, beyond that it became clear to them when he fell."
+    },
+    {
+      "anchor": "the-claim-about-his-kingdom",
+      "position": 10,
+      "title_en": "What was followed about his kingdom",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah says that they followed what the shayatin recited concerning the kingdom of Sulayman; the Arabic word for concerning can also mean over or in the time of.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 102,
+              "to": 102
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "It says that Sulayman did not disbelieve, but the shayatin disbelieved, teaching people magic.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 102,
+              "to": 102
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayah says that Sulayman did not disbelieve, but the shayatin disbelieved, teaching people magic, and that they followed what the shayatin recited concerning his kingdom [c1][c2].",
+      "body_md": "The ayah says that they followed what the shayatin recited concerning the kingdom of Sulayman; the Arabic word for concerning can also mean over or in the time of [c1]. It says that Sulayman did not disbelieve, but the shayatin disbelieved, teaching people magic [c2].",
+      "deep_md": "The passage separates Sulayman from the teaching of the shayatin by saying plainly that he did not disbelieve [c2]. The people who followed are not named, only referred to by they [c1].",
+      "kids_md": "Some people followed what the shayatin said about Sulayman's kingdom [c1]. The ayah says that Sulayman did not disbelieve [c2].",
+      "lessons_md": "Educational interpretation (not scripture): The ayah clears Sulayman of disbelief in plain words [c2]. A reader may notice that it places the teaching of magic with the shayatin [c2].",
+      "unknowns_md": "- Not established: who they are in this ayah, what exactly the shayatin recited, or how it concerned his kingdom.\n- Not established: what the magic was or how it was taught; this draft says nothing about it beyond the words of the ayah.\n- Not established here: the rest of 2:102, which speaks of a revelation to angels in a place named there; it has its own entry and is not used in this draft."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on Sulayman, the jinn and the birds. None is used in this draft.",
+    "Named in later tradition, not in the Quranic text: a personal name for the woman who ruled Saba, a name for the one with knowledge from the Book, and details of the test of the body and of the death. None is used in the story texts.",
+    "A scholar should check these wordings first: the month of 34:12, qitr, the standing and swift ones and the verb for the legs and the necks in 38:31-33, the reading of the veil clause, the body upon the throne in 38:34, the sarh and the glass in 27:44, who speaks the last clause of 27:44 before her own words, and the sense of concerning in 2:102.",
+    "The chapters follow a reading order (knowledge and thanks, the field, the wind and those who served him, the ants, the hoopoe, the letter, the throne, the test, the death, the claim about his kingdom). The Quran does not give a chronology across these surahs.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}
