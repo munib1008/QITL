@@ -41,3 +41,14 @@ Unapplied (in repo/branches): none known after the last merge. People-admin adde
 3. Arabic/Urdu story text via the Story Studio translation job (Lara keys) and translator review; hadith entries after permissions; then remaining prophets, people, communities, hadith stories.
 4. Quiet-machine full test run recorded in `PRODUCTION_READINESS.md`; counsel review of legal pages; backup/restore rehearsal.
 5. Small follow-ups: Muhammad/Isa/Musa drafts need scholar attribution check; `person_aliases` audit trigger migration; admin editor forms still English-only.
+
+## Completion indicators (kept separate on purpose)
+"Verified completion" means every agreed requirement passes its acceptance criteria. A working platform is not a finished one while content, approval and licences are missing, so
+the indicators are NOT merged into one percentage. Derive them from records, not from this file:
+| Indicator | Where it is measured | Now |
+|---|---|---|
+| Engineering | `tsc`, eslint, vitest, build, Playwright (last full run 792 passed), `docs/FEATURE_ACCEPTANCE_MATRIX.md` statuses | Built and verified in tests; live-Supabase and real-device checks outstanding |
+| Content | `/admin/stories/coverage`, `/admin/events/coverage`, `docs/STORY_COVERAGE.md` (discovered / researched / reviewed / published kept apart) | Published: 0. Drafts: 7 stories, 159 event shells, 14 Shifa topics (titles only) |
+| Scholarly approval | `editorial_reviews`, module review tables | 0 approvals; no reviewer appointed |
+| Licensing | `/admin/licences`, `docs/LICENSING.md` | Tanzil Arabic cleared (conditional); every other text/audio source blocked or pending |
+| Production readiness | `docs/PRODUCTION_READINESS.md` | Deployed; owner actions (Auth, admin, reviewers, legal review, backup rehearsal) pending |
