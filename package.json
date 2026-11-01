@@ -16,6 +16,7 @@
     "check:drafts": "tsx scripts/check-story-drafts.ts",
     "drafts:index": "tsx scripts/build-draft-index.ts",
     "review:packs": "tsx scripts/build-review-packs.ts",
+    "i18n:export": "tsx scripts/export-translations.ts",
     "import:drafts": "tsx scripts/import-story-drafts.ts",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "tsc --noEmit",
