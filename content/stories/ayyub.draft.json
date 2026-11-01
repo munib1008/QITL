@@ -1,0 +1,169 @@
+{
+  "slug": "ayyub",
+  "title_en": "Ayyub",
+  "title_ar": "أيوب",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "ayyub"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The chapters are a reading order built from the narrative, not a chronology the Quran claims; verses come from several surahs and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-call-in-hardship",
+      "position": 1,
+      "title_en": "Ayyub calls to his Lord",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 21,
+          "from": 83,
+          "to": 83
+        },
+        {
+          "surah": 38,
+          "from": 41,
+          "to": 41
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ayyub called to his Lord that harm had touched him, and that He is the most merciful of those who show mercy.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 83,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The Quran tells its hearer to mention Ayyub, whom God calls His servant, when he called to his Lord that Satan had touched him with hardship and suffering.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 41,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Ayyub called to his Lord that harm had touched him [c1]. He said that Satan had touched him with hardship and suffering [c2].",
+      "body_md": "Ayyub called to his Lord that harm had touched him, and that He is the most merciful of those who show mercy [c1].\n\nIn another passage the Quran tells its hearer to mention Ayyub, whom God calls His servant, when he called to his Lord that Satan had touched him with hardship and suffering [c2].",
+      "deep_md": "The calls are told in different words and are placed together here by theme [c1][c2]. The first names the harm and then the mercy of God [c1]. The later one speaks of Satan touching him with hardship and suffering [c2]. The Quran does not say what the harm was [c1][c2].",
+      "kids_md": "Ayyub called to his Lord that harm had touched him [c1]. He said that his Lord is the most merciful of those who show mercy [c1].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Ayyub calls on his Lord by naming his harm and then naming God's mercy [c1]. Another is that the Quran has God call him His servant at the moment it tells of his call [c2].",
+      "unknowns_md": "- Not established: what the harm, the hardship and the suffering were, how long they lasted, or when and where Ayyub lived.\n- Not established: how Satan touched him with hardship and suffering (38:41); the verse gives his words and nothing more.\n- Not established: whether the calls were made at the same time."
+    },
+    {
+      "anchor": "the-answer-and-the-restoration",
+      "position": 2,
+      "title_en": "The answer to Ayyub",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 21,
+          "from": 84,
+          "to": 84
+        },
+        {
+          "surah": 38,
+          "from": 42,
+          "to": 44
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God responded to Ayyub and removed the harm that was on him.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 84,
+              "to": 84
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God gave Ayyub his family and the like of them with them, as a mercy from Him and a reminder for those who worship.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 84,
+              "to": 84
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God told Ayyub to strike with his foot, and said that this was a cool place of washing and a drink.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God granted Ayyub his family and the like of them with them, as a mercy from Him and a reminder for those with understanding.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 43,
+              "to": 43
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God told Ayyub to take a bundle in his hand and strike with it, and not to fall into tahnath, an Arabic word for failing in something one is bound by.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 44,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God found Ayyub patient, said that he was an excellent servant, and said that he turned back to God often.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 44,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God responded to Ayyub and removed the harm that was on him [c1]. He gave Ayyub his family and the like of them with them [c2][c4]. God found him patient, an excellent servant who turned back to Him often [c6].",
+      "body_md": "God responded to Ayyub and removed the harm that was on him [c1]. God gave Ayyub his family and the like of them with them, as a mercy from Him and a reminder for those who worship [c2].\n\nIn another passage God told Ayyub to strike with his foot, and said that this was a cool place of washing and a drink [c3]. God granted Ayyub his family and the like of them with them, as a mercy from Him and a reminder for those with understanding [c4]. God told Ayyub to take a bundle in his hand and strike with it, and not to fall into tahnath, an Arabic word for failing in something one is bound by [c5]. God found Ayyub patient, said that he was an excellent servant, and said that he turned back to God often [c6].",
+      "deep_md": "The answer is told at 21:84 in parts, the removal of the harm and the gift of the family [c1][c2]. The passage at 38:42-44 adds a command to strike with the foot, with a cool place of washing and a drink [c3]; the gift of the family again [c4]; and a command about a bundle, followed by God's words of praise for Ayyub [c5][c6]. The gifts of the family are told in nearly the same words [c2][c4].",
+      "kids_md": "God responded to Ayyub and removed the harm that was on him [c1]. God gave him his family and the like of them with them [c2][c4]. God found Ayyub patient, an excellent servant [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the Quran presents the gift to Ayyub as a mercy from God and a reminder for those who worship [c2][c4]. Another is that the passage ends with God's praise of Ayyub as patient and as one who turned back to Him often [c6].",
+      "unknowns_md": "- Not established: what Ayyub struck with his foot, or how the cool place of washing and the drink came about; the verse 38:42 does not name an object.\n- Not established: what the family were, whether the same people were returned to him or others were given, or how the like of them is to be counted.\n- Not established: what the bundle was, what it was struck on, or what Ayyub was bound by; the verse says only that he was not to fall into tahnath. A reviewer should look at this wording first.\n- Not established: how long the harm lasted before it was removed, or his age.\n- Named in later tradition, not in the Quranic text: the name of Ayyub's wife and the details of his illness. None is used in the story texts."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Ayyub. None is used in this draft.",
+    "The Quran does not say what the harm of Ayyub was. The draft uses its words, harm, hardship and suffering, and gives no description of an illness or of a loss.",
+    "38:44 (the bundle and the word tahnath) and 38:42 (strike with the foot) are stated in their own words only and a scholar should look at them first.",
+    "The phrase his family and the like of them with them (21:84, 38:43) is left open between the same people returned and others given.",
+    "Named in later tradition, not in the Quranic text: Ayyub's wife and the details of his illness and of his lost goods and children. None is used in the story texts.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

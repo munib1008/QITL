@@ -1,0 +1,27 @@
+{
+ "note": "Anchors for the drafts of prophets batch c1 (Hud, Salih, Lut, Shuayb, Idris, Ayyub): names, places, titles and number words with the Arabic anchor that must occur in the ayat a chapter cites. Names that other fixtures already define (Nuh, Lut, Madyan, Ibrahim, Ismail, Satan, Resurrection) are not repeated here.",
+ "names": {
+  "Hud": "هود",
+  "Ad": "عاد",
+  "Salih": "صلح",
+  "Thamud": "ثمود",
+  "Shuayb": "شعيب",
+  "Aykah": "يكة",
+  "Idris": "ادريس",
+  "Dhul-Kifl": "كفل",
+  "Ayyub": "ايوب"
+ },
+ "numbers": {},
+ "guarded": {},
+ "common_capitalised": ["Strong", "Last", "Loving"],
+ "opening_words": [],
+ "tradition_names": ["Enoch"],
+ "titles_ar": {
+  "hud": "هود",
+  "salih": "صالح",
+  "lut": "لوط",
+  "shuayb": "شعيب",
+  "idris": "إدريس",
+  "ayyub": "أيوب"
+ }
+}

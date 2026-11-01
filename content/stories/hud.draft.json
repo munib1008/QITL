@@ -1,0 +1,604 @@
+{
+  "slug": "hud",
+  "title_en": "Hud and the people of Ad",
+  "title_ar": "هود",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "hud"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The chapters are a reading order built from the narrative, not a chronology the Quran claims; verses come from several surahs and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "sent-to-ad",
+      "position": 1,
+      "title_en": "Hud is sent to Ad",
+      "event_slug": "ad",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 65,
+          "to": 65
+        },
+        {
+          "surah": 11,
+          "from": 50,
+          "to": 51
+        },
+        {
+          "surah": 26,
+          "from": 123,
+          "to": 127
+        },
+        {
+          "surah": 46,
+          "from": 21,
+          "to": 21
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran says that God sent to Ad their brother Hud, and that Hud told them to worship God and said they had no god other than Him.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 65,
+              "to": 65
+            },
+            {
+              "surah": 11,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "In one telling Hud added that they were only fabricating.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Ad denied the messengers, and Hud asked them whether they would not be mindful of God.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 123,
+              "to": 124
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Hud said he was a trustworthy messenger to them, and told them to be mindful of God and to obey him.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 125,
+              "to": 126
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Hud said he asked them for no payment for this, and that his reward lay only with his Lord, the Lord of the worlds.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 51,
+              "to": 51
+            },
+            {
+              "surah": 26,
+              "from": 127,
+              "to": 127
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Another passage tells its hearer to remember the brother of Ad, who warned his people at al-Ahqaf, when warners had passed before him and after him; he told them to worship none but God and said he feared for them the punishment of a great day.",
+          "verses": [
+            {
+              "surah": 46,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God sent Hud to his people, Ad, who denied the messengers [c3]. Hud told them to worship God and said they had no god other than Him [c1], that he was a trustworthy messenger [c4], and that he asked them for no payment [c5].",
+      "body_md": "The Quran says that God sent to Ad their brother Hud [c1]. Hud told them to worship God and said they had no god other than Him [c1]. In one telling he added that they were only fabricating [c2].\n\nAd denied the messengers [c3]. Hud asked them whether they would not be mindful of God [c3]. He said he was a trustworthy messenger to them, and told them to be mindful of God and to obey him [c4]. He said he asked them for no payment for this, and that his reward lay only with his Lord, the Lord of the worlds [c5].\n\nAnother passage tells its hearer to remember the brother of Ad, who warned his people at al-Ahqaf [c6]. It says that warners had passed before him and after him, that he told them to worship none but God, and that he feared for them the punishment of a great day [c6].",
+      "deep_md": "The opening words of the call are the same at 7:65 and 11:50 [c1], and 11:50 adds the charge that they were only fabricating [c2]. The plural messengers at 26:123 [c3] stands beside one named man, Hud [c4]. The passage at 46:21 describes his warning as one among warnings that came before and after him [c6].",
+      "kids_md": "God sent Hud to his people, the people of Ad [c1]. Hud told them to worship God and said they had no god other than Him [c1]. He said he was a trustworthy messenger [c4]. He did not ask them for any payment [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that a messenger who asks for no payment shows that his message does not depend on any gain for himself [c5]. Another is that the passage presents warning as something that came to peoples again and again, since warners had passed before and after Hud [c6].",
+      "unknowns_md": "- Not established: when Hud lived, how old he was, who his family was, or how long he called his people.\n- Not established: why Ad are called his brothers (a shared descent or a shared community); the Arabic wording says only their brother.\n- Not established: how many messengers were sent to Ad. The Quran uses the plural at 26:123, and speaks of warners before and after him at 46:21, and names only Hud.\n- Not established: what al-Ahqaf was or where it lay; the Arabic word is generally rendered as sandy tracts, a sense for the reviewer, and the verses do not say it was the whole land of Ad.\n- Named in later tradition, not in the Quranic text: Hud's lineage, the region of Ad's land and where Hud is buried. None is used in the story texts."
+    },
+    {
+      "anchor": "reminders-and-appeals",
+      "position": 2,
+      "title_en": "Reminders and appeals",
+      "event_slug": "ad",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 69,
+          "to": 69
+        },
+        {
+          "surah": 11,
+          "from": 52,
+          "to": 52
+        },
+        {
+          "surah": 26,
+          "from": 128,
+          "to": 135
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Hud asked his people whether they wondered that a reminder from their Lord had come upon a man from among them to warn them.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 69,
+              "to": 69
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Hud told them to remember that God had made them successors after the people of Nuh and had added to them greatly in creation, and to remember God's favours so that they might prosper.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 69,
+              "to": 69
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Hud told them to ask their Lord for forgiveness and to turn back to Him, and said that He would send the sky upon them in abundant rain and add strength to their strength; he told them not to turn away as guilty people.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 52,
+              "to": 52
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Hud asked whether they built a landmark on every high place for amusement, and took strongholds in the hope of living forever.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 128,
+              "to": 129
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Hud said that when they seized, they seized as tyrants.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 130,
+              "to": 130
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Hud told them to be mindful of God and obey him, and to be mindful of the One who had supplied them with what they knew: livestock, children, gardens and springs.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 131,
+              "to": 134
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Hud said he feared for them the punishment of a great day.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 135,
+              "to": 135
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Hud reminded his people that God had made them successors after the people of Nuh [c2], told them to ask forgiveness and turn back to God [c3], and told them to be mindful of the One who had supplied them with livestock, children, gardens and springs [c6].",
+      "body_md": "Hud asked his people whether they wondered that a reminder from their Lord had come upon a man from among them to warn them [c1]. He told them to remember that God had made them successors after the people of Nuh and had added to them greatly in creation, and to remember God's favours so that they might prosper [c2].\n\nHe told them to ask their Lord for forgiveness and to turn back to Him [c3]. He said that God would send the sky upon them in abundant rain and add strength to their strength, and he told them not to turn away as guilty people [c3].\n\nIn another passage Hud asked whether they built a landmark on every high place for amusement, and took strongholds in the hope of living forever [c4]. He said that when they seized, they seized as tyrants [c5]. He told them to be mindful of God and obey him, and to be mindful of the One who had supplied them with what they knew: livestock, children, gardens and springs [c6]. He said he feared for them the punishment of a great day [c7].",
+      "deep_md": "The passages address the same people in different ways [c1][c4]. At 7:69 the appeal is to remember favours and a succession after the people of Nuh [c2]. At 26:128-134 the appeal is a set of questions about what they built and how they used force, followed by a list of what God had supplied [c4][c5][c6]. At 11:52 the appeal is to ask forgiveness and turn back [c3]. One of them ends in a warning [c7].",
+      "kids_md": "Hud told his people to remember that God had made them successors after the people of Nuh [c2]. He told them to ask God for forgiveness and to turn back to Him [c3]. He told them to be mindful of God, who had given them livestock, children, gardens and springs [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage links remembering what God has given with turning back to Him [c3][c6]. Another is that Hud's questions about building for amusement are an invitation to look at how a people use what they have [c4].",
+      "unknowns_md": "- Not established: what the landmarks and strongholds of 26:128-129 were, or where they stood; the Arabic words have more than one rendering and this draft keeps the wording general.\n- Not established: the sense of the Arabic word rendered added greatly in creation (7:69); it may refer to build, strength, numbers or standing.\n- Not established: whether the rain and strength promised at 11:52 are stated for any people other than the ones Hud addressed; the verse gives them as his words to his own people.\n- Not established: whether the word rendered children at 26:133 means sons or children in general."
+    },
+    {
+      "anchor": "the-leaders-answer",
+      "position": 3,
+      "title_en": "The leaders answer",
+      "event_slug": "ad",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 66,
+          "to": 68
+        },
+        {
+          "surah": 7,
+          "from": 70,
+          "to": 70
+        },
+        {
+          "surah": 11,
+          "from": 53,
+          "to": 57
+        },
+        {
+          "surah": 26,
+          "from": 136,
+          "to": 138
+        },
+        {
+          "surah": 46,
+          "from": 22,
+          "to": 23
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The leading group of those among his people who disbelieved said they saw him in foolishness and thought him among the liars.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 66,
+              "to": 66
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Hud said there was no foolishness in him, that he was a messenger from the Lord of the worlds, that he delivered the messages of his Lord, and that he was a trustworthy adviser to them.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 67,
+              "to": 68
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They asked whether he had come so that they would worship God alone and leave what their fathers worshipped, or to turn them away from their gods, and told him to bring them what he promised if he was truthful.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 70,
+              "to": 70
+            },
+            {
+              "surah": 46,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They said he had brought no clear proof, that they would not leave their gods on his word, and that they did not believe in him.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 53,
+              "to": 53
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They said only that some of their gods had struck him with evil; Hud said he called God to witness, and told them to be witnesses, that he was free of what they set up beside God.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 54,
+              "to": 54
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Hud told them to plot against him, all of them, and give him no respite; he said he relied on God, his Lord and theirs, that there is no creature that God does not hold by its forelock, and that his Lord is on a straight path.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 55,
+              "to": 56
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Hud said that if they turned away, he had still conveyed what he was sent with, that his Lord would make another people successors in their place, that they could not harm Him at all, and that his Lord is guardian over all things.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 57,
+              "to": 57
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "They said it was all the same to them whether he admonished them or not, that this was only the way of the earlier people, and that they would not be punished.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 136,
+              "to": 138
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "Hud said that the knowledge was only with God, that he conveyed what he was sent with, but that he saw them as a people who were ignorant.",
+          "verses": [
+            {
+              "surah": 46,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The leading group among his people said they saw foolishness in Hud [c1] and that they would not leave their gods on his word [c4]. Hud said he was a messenger from the Lord of the worlds [c2], that he relied on God [c6], and that he had conveyed what he was sent with [c7].",
+      "body_md": "The leading group of those among his people who disbelieved said they saw him in foolishness and thought him among the liars [c1]. Hud said there was no foolishness in him, that he was a messenger from the Lord of the worlds, that he delivered the messages of his Lord, and that he was a trustworthy adviser to them [c2].\n\nThey asked whether he had come so that they would worship God alone and leave what their fathers worshipped, or to turn them away from their gods, and told him to bring them what he promised if he was truthful [c3]. They said he had brought no clear proof, that they would not leave their gods on his word, and that they did not believe in him [c4]. They said only that some of their gods had struck him with evil [c5]. Hud said he called God to witness, and told them to be witnesses, that he was free of what they set up beside God [c5].\n\nHe told them to plot against him, all of them, and give him no respite [c6]. He said he relied on God, his Lord and theirs, that there is no creature that God does not hold by its forelock, and that his Lord is on a straight path [c6]. He said that if they turned away, he had still conveyed what he was sent with, that his Lord would make another people successors in their place, that they could not harm Him at all, and that his Lord is guardian over all things [c7].\n\nThey said it was all the same to them whether he admonished them or not, that this was only the way of the earlier people, and that they would not be punished [c8]. In another passage Hud said that the knowledge was only with God, that he conveyed what he was sent with, but that he saw them as a people who were ignorant [c9].",
+      "deep_md": "The replies of the people are told in more than one place and are not identical [c3][c4][c8]. At 7:70 the objection is to leaving what their fathers worshipped [c3], at 11:53 it is the lack of a clear proof [c4], and at 26:137 it is that the warning is only the way of the earlier people [c8]. The draft does not say that these are one exchange [c3][c4][c8]. Hud's replies stress that he is a messenger [c2], that he relies on God [c6], and that he has conveyed his message [c7][c9].",
+      "kids_md": "Some leaders of his people said Hud was foolish [c1]. They said they would not leave their gods [c4]. Hud said he was a messenger from the Lord of the worlds [c2]. He said he relied on God [c6]. The people asked him to bring what he had promised [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Hud answers the charge of foolishness by saying what he is and what he has done, and by relying on God [c2][c6]. Another is that the people's replies rest on what their fathers worshipped and on the way of the earlier people [c3][c8].",
+      "unknowns_md": "- Not established: who the leading group were, how many they were, or which gods the people worshipped; the verses say only our gods.\n- Not established: what evil the people meant at 11:54.\n- Not established: whether the replies at 7:70, 11:53, 26:136-138 and 46:22 are one exchange or more.\n- Not established: the sense of the figure about holding a creature by its forelock (11:56); the Arabic is nasiya and the draft keeps the wording of the verse.\n- Not established: how long Hud called them, or how many believed with him."
+    },
+    {
+      "anchor": "the-cloud-and-the-wind",
+      "position": 4,
+      "title_en": "The cloud and the wind",
+      "event_slug": "ad",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 71,
+          "to": 71
+        },
+        {
+          "surah": 46,
+          "from": 24,
+          "to": 25
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Hud said that rijs and anger from their Lord had fallen on them; rijs is an Arabic word for something foul or a punishment.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 71,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Hud asked whether they disputed with him about names that they and their fathers had given, for which God had sent down no authority, and told them to wait, saying he was with them among those who wait.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 71,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When they saw it as a cloud coming toward their valleys, they said it was a cloud that would bring them rain; the reply, whose speaker the verse does not name, said that it was what they had been hastening, a wind carrying a painful punishment.",
+          "verses": [
+            {
+              "surah": 46,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The wind destroyed everything by the command of its Lord, and they became such that nothing could be seen except their dwellings; God says that this is how He repays the guilty people.",
+          "verses": [
+            {
+              "surah": 46,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Hud told his people to wait [c2]. They saw a cloud coming toward their valleys and said it would bring them rain [c3]. It was a wind that destroyed everything by the command of its Lord [c4].",
+      "body_md": "Hud said that rijs and anger from their Lord had fallen on them [c1]. He asked whether they disputed with him about names that they and their fathers had given, for which God had sent down no authority, and told them to wait, saying he was with them among those who wait [c2].\n\nWhen they saw it as a cloud coming toward their valleys, they said it was a cloud that would bring them rain [c3]. The reply, whose speaker the verse does not name, said that it was what they had been hastening, a wind carrying a painful punishment [c3]. The wind destroyed everything by the command of its Lord [c4]. They became such that nothing could be seen except their dwellings [c4]. God says that this is how He repays the guilty people [c4].",
+      "deep_md": "Passages from different places are set side by side here by theme: Hud's statement and his word to wait at 7:71 [c1][c2], and the sight of the cloud at 46:24-25 [c3][c4]. The Quran does not link them in time [c1][c3]. The people's words about the cloud are given, and the reply is given without a named speaker [c3].",
+      "kids_md": "Hud told his people to wait [c2]. They saw a cloud coming toward their valleys and said it would bring them rain [c3]. It was a wind with a painful punishment in it, and it destroyed everything by the command of its Lord [c3][c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the people took the sign for something they wanted, while the reply said it was what they had been hastening [c3]. Another is that the passage ends by saying that this is how God repays the guilty people [c4].",
+      "unknowns_md": "- Not established: how long the wind lasted, how far it reached, or how many people were in the land. This draft does not use other verses that speak of the wind.\n- Not established: who gave the reply at 46:24; the verse does not name the speaker.\n- Not established: which names are meant at 7:71, or exactly what the Arabic word rijs refers to.\n- Not established: where the valleys of 46:24 were."
+    },
+    {
+      "anchor": "those-who-were-saved",
+      "position": 5,
+      "title_en": "Those who were saved",
+      "event_slug": "ad",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 72,
+          "to": 72
+        },
+        {
+          "surah": 11,
+          "from": 58,
+          "to": 60
+        },
+        {
+          "surah": 26,
+          "from": 139,
+          "to": 140
+        },
+        {
+          "surah": 46,
+          "from": 26,
+          "to": 26
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "When God's command came, He saved Hud and those who believed with him, by a mercy from Him, and saved them from a harsh punishment.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 58,
+              "to": 58
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God saved Hud and those with him by a mercy from Him, and cut off the root of those who denied His signs; they were not believers.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 72,
+              "to": 72
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They denied Hud and God destroyed them; the Quran says there is a sign in that, and that most of them were not believers.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 139,
+              "to": 139
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The Quran says that Hud's Lord is the Mighty, the Merciful.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 140,
+              "to": 140
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The Quran says that these were Ad: they rejected the signs of their Lord, disobeyed His messengers, and followed the command of every obstinate tyrant.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 59,
+              "to": 59
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "A curse followed them in this world and on the Day of Resurrection; Ad disbelieved in their Lord, and the Quran says away with Ad, the people of Hud.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 60,
+              "to": 60
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God had established them in what He had not established the later hearers in, and had given them hearing, sight and hearts; but their hearing, sight and hearts availed them nothing, because they rejected the signs of God, and what they had mocked at surrounded them.",
+          "verses": [
+            {
+              "surah": 46,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "When God's command came, He saved Hud and those who believed with him [c1]. Ad denied Hud and God destroyed them [c3]. The Quran says that Ad rejected the signs of their Lord and disobeyed His messengers [c5].",
+      "body_md": "When God's command came, He saved Hud and those who believed with him, by a mercy from Him, and saved them from a harsh punishment [c1]. Another passage says that God saved him and those with him by a mercy from Him, and cut off the root of those who denied His signs, and that they were not believers [c2].\n\nThey denied Hud and God destroyed them [c3]. The Quran says there is a sign in that, and that most of them were not believers [c3]. It says that Hud's Lord is the Mighty, the Merciful [c4].\n\nThe Quran says that these were Ad: they rejected the signs of their Lord, disobeyed His messengers, and followed the command of every obstinate tyrant [c5]. A curse followed them in this world and on the Day of Resurrection, and the Quran says away with Ad, the people of Hud [c6].\n\nGod had established them in what He had not established the later hearers in, and had given them hearing, sight and hearts [c7]. But their hearing, sight and hearts availed them nothing, because they rejected the signs of God, and what they had mocked at surrounded them [c7].",
+      "deep_md": "The rescue is told in more than one passage, at 11:58 and at 7:72 [c1][c2]. Only the latter says that the root of those who denied was cut off [c2]. The passage at 46:26 gives the reason that their faculties did not help them: they rejected God's signs [c7]. The Quran calls Ad's disobedience a rejection of messengers in the plural at 11:59 [c5].",
+      "kids_md": "When God's command came, He saved Hud and those who believed with him [c1]. The people of Ad had denied Hud, and God destroyed them [c3]. The Quran says they rejected the signs of their Lord [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage separates Hud and those who believed with him from those who denied, and speaks of a mercy for the first group [c1][c2]. Another is that having hearing, sight and hearts did not help the people of Ad when they rejected God's signs [c7].",
+      "unknowns_md": "- Not established: how many believed with Hud, where they went, or what became of them afterwards.\n- Not established: what the curse of 11:60 consisted of.\n- Not established: who the obstinate tyrant of 11:59 was, or whether it means one person or many.\n- Not established: which period the later hearers of 46:26 belong to; the verse addresses the hearer of the Quran."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Hud. None is used in this draft.",
+    "The Ad event in the inventory also lists 41:13-16, 51:41-42, 53:50, 54:18-22, 69:4-8 and 89:6-8. They are outside the inventory range of Hud and are not used; a reviewer should decide whether to extend the range. In particular the duration of the wind is stated in an ayah that is not used here.",
+    "The speaker of the reply at 46:24 is not named in the verse; the draft says so and does not decide between Hud and the narration.",
+    "Some Arabic terms are open in sense and the draft keeps them general: rijs (7:71), basta in added greatly in creation (7:69), the landmark and strongholds of 26:128-129, the forelock wording of 11:56, and al-Ahqaf (46:21).",
+    "The Quran calls Hud their brother (akhahum) without saying whether this means kinship or shared community; the draft keeps the Arabic wording.",
+    "Named in later tradition, not in the Quranic text: Hud's lineage, the place of Ad's land and of Hud's grave, and details of the cloud and the wind. None is used in the story texts.",
+    "The chapters follow a reading order (call, appeal, reply, the wind, rescue). The Quran does not give a chronology across these surahs, and the draft does not claim that the replies at 7:70, 11:53, 26:136-138 and 46:22 are one conversation.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

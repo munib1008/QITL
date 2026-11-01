@@ -1,0 +1,526 @@
+{
+  "slug": "shuayb",
+  "title_en": "Shuayb and Madyan",
+  "title_ar": "شعيب",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "shuayb"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The chapters are a reading order built from the narrative, not a chronology the Quran claims; verses come from several surahs and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "sent-to-madyan",
+      "position": 1,
+      "title_en": "Shuayb is sent to Madyan",
+      "event_slug": "madyan",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 85,
+          "to": 87
+        },
+        {
+          "surah": 11,
+          "from": 84,
+          "to": 86
+        },
+        {
+          "surah": 29,
+          "from": 36,
+          "to": 36
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God sent to Madyan their brother Shuayb, and Shuayb told them to worship God and said they had no god other than Him.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 85,
+              "to": 85
+            },
+            {
+              "surah": 11,
+              "from": 84,
+              "to": 84
+            },
+            {
+              "surah": 29,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Shuayb said that a clear proof had come to them from their Lord, and told them to give full measure and weight, not to defraud people of their things, and not to spread corruption in the land after it had been set right; he said that this was better for them if they were believers.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 85,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Shuayb told them not to reduce the measure and the weight, said that he saw them in good, and said that he feared for them the punishment of an encompassing day.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 84,
+              "to": 84
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Shuayb told them to give full measure and weight with fairness, not to defraud people of their things, and not to act wickedly in the land by spreading corruption.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 85,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Shuayb said that what God leaves is better for them if they were believers, and that he was not a guardian over them.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 86,
+              "to": 86
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Shuayb told them not to sit on every path making threats and turning away from the way of God those who believed in Him, seeking to make it crooked; he told them to remember when they were few and God made them many, and to look at the end of those who spread corruption.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 86,
+              "to": 86
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Shuayb said that if a group of them believed in what he was sent with and a group did not, they should be patient until God judges between them, and that He is the best of judges.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 87,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Shuayb told them to worship God, to hope for the last day, and not to spread corruption in the land.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God sent Shuayb to Madyan [c1]. He told them to worship God [c1], to give full measure and weight and not to defraud people [c2][c4], and not to spread corruption [c8].",
+      "body_md": "God sent to Madyan their brother Shuayb [c1]. Shuayb told them to worship God and said they had no god other than Him [c1]. He said that a clear proof had come to them from their Lord [c2].\n\nHe told them to give full measure and weight, not to defraud people of their things, and not to spread corruption in the land after it had been set right [c2]. He said that this was better for them if they were believers [c2]. In another passage he told them not to reduce the measure and the weight, said that he saw them in good, and said that he feared for them the punishment of an encompassing day [c3]. He told them to give full measure and weight with fairness, not to defraud people of their things, and not to act wickedly in the land by spreading corruption [c4]. He said that what God leaves is better for them if they were believers, and that he was not a guardian over them [c5].\n\nHe told them not to sit on every path making threats and turning away from the way of God those who believed in Him, seeking to make it crooked [c6]. He told them to remember when they were few and God made them many, and to look at the end of those who spread corruption [c6]. He said that if a group of them believed in what he was sent with and a group did not, they should be patient until God judges between them, and that He is the best of judges [c7]. In a further passage he told them to worship God, to hope for the last day, and not to spread corruption in the land [c8].",
+      "deep_md": "Passages from different surahs give the call of Shuayb, with the same opening [c1]. The concern for measure and weight is stated at 7:85, 11:84-85 [c2][c3][c4], and the concern for corruption in the land at 7:85, 11:85 and 29:36 [c2][c4][c8]. The passage at 7:86 adds a warning against sitting on every path and turning believers away from the way of God [c6]. The passage at 7:87 speaks of a division between those who believed and those who did not [c7].",
+      "kids_md": "God sent Shuayb to Madyan [c1]. Shuayb told them to worship God [c1]. He told them to give full measure and weight, and not to cheat people of their things [c2][c4]. He told them not to spread corruption in the land [c8].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Shuayb joins worship of God with fairness in measure and weight [c1][c4]. Another is that he points to the division between those who believed and those who did not, and asks for patience until God judges [c7].",
+      "unknowns_md": "- Not established: when Shuayb lived, how old he was, who his family was, or how long he called Madyan.\n- Not established: where Madyan lay or how large it was; the verses use only the name.\n- Not established: what the clear proof of 7:85 was.\n- Not established: the sense of what God leaves (11:86, the Arabic word baqiyyah); the draft keeps the wording of the verse.\n- Not established: who sat on the paths (7:86), or how the threats were made.\n- Named in later tradition, not in the Quranic text: Shuayb's lineage, the place of Madyan and where Shuayb is buried. None is used in the story texts."
+    },
+    {
+      "anchor": "the-leaders-and-the-reply",
+      "position": 2,
+      "title_en": "The leaders and the reply",
+      "event_slug": "madyan",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 88,
+          "to": 90
+        },
+        {
+          "surah": 11,
+          "from": 87,
+          "to": 93
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The leading group who were arrogant among his people said that they would drive Shuayb and those who believed with him out of their town unless they returned to their way; Shuayb asked whether they would do so even if he and his people disliked it.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 88,
+              "to": 88
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Shuayb said that they would be inventing a lie against God if they returned to the way of the leaders after God had saved them from it, that it was not for them to return to it unless God their Lord willed, that their Lord encompasses all things in knowledge, and that they relied on God; he prayed to his Lord to decide between them and their people with truth, saying that He is the best of those who decide.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 89,
+              "to": 89
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The leading group who disbelieved said to their people that if they followed Shuayb, they would be losers.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 90,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They asked Shuayb whether his prayer commanded him that they should leave what their fathers worshipped, or do what they wished with their wealth, and said that he was the forbearing, the right-minded.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 87,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Shuayb asked them what they thought if he was on a clear proof from his Lord and had been given a good provision from Him; he said that he did not want to go against them and do himself what he forbade them, that he wanted only reform as far as he could, that his success was only through God, that he relied on Him and turned to Him.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 88,
+              "to": 88
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Shuayb told them not to let their opposition to him bring on them what struck the people of Nuh, or the people of Hud, or the people of Salih, and said that the people of Lut were not far from them.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 89,
+              "to": 89
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Shuayb told them to ask their Lord for forgiveness and turn back to Him, and said that his Lord is Merciful and Loving.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 90,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "They said that they did not understand much of what he said, that they saw him as weak among them, and that, were it not for his kinsfolk, they would have stoned him, and that he was not mighty against them.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 91,
+              "to": 91
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "Shuayb asked them whether his kinsfolk were mightier to them than God, and whether they had put Him behind their backs, and said that his Lord encompasses what they do.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 92,
+              "to": 92
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "Shuayb told them to act in their place, said that he was acting, that they would know who would receive a punishment that disgraced him and who was a liar, and told them to watch, since he was watching with them.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 93,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The leading group of his people said they would drive Shuayb and those who believed with him out of their town unless they returned to their way [c1]. Shuayb said that they relied on God [c2], and told them to ask their Lord for forgiveness [c7]. The people said they would have stoned him were it not for his kinsfolk [c8].",
+      "body_md": "The leading group who were arrogant among his people said that they would drive Shuayb and those who believed with him out of their town unless they returned to their way [c1]. Shuayb asked whether they would do so even if he and his people disliked it [c1]. He said that they would be inventing a lie against God if they returned to the way of the leaders after God had saved them from it, that it was not for them to return to it unless God their Lord willed, that their Lord encompasses all things in knowledge, and that they relied on God [c2]. He prayed to his Lord to decide between them and their people with truth, saying that He is the best of those who decide [c2]. The leading group who disbelieved said to their people that if they followed Shuayb, they would be losers [c3].\n\nIn another passage they asked Shuayb whether his prayer commanded him that they should leave what their fathers worshipped, or do what they wished with their wealth, and said that he was the forbearing, the right-minded [c4]. Shuayb asked them what they thought if he was on a clear proof from his Lord and had been given a good provision from Him [c5]. He said that he did not want to go against them and do himself what he forbade them, that he wanted only reform as far as he could, that his success was only through God, that he relied on Him and turned to Him [c5].\n\nHe told them not to let their opposition to him bring on them what struck the people of Nuh, or the people of Hud, or the people of Salih, and said that the people of Lut were not far from them [c6]. He told them to ask their Lord for forgiveness and turn back to Him, and said that his Lord is Merciful and Loving [c7]. They said that they did not understand much of what he said, that they saw him as weak among them, and that, were it not for his kinsfolk, they would have stoned him, and that he was not mighty against them [c8].\n\nShuayb asked them whether his kinsfolk were mightier to them than God, and whether they had put Him behind their backs, and said that his Lord encompasses what they do [c9]. He told them to act in their place, said that he was acting, that they would know who would receive a punishment that disgraced him and who was a liar, and told them to watch, since he was watching with them [c10].",
+      "deep_md": "The passages give the people's replies in different forms [c1][c3][c4][c8]. At 7:88 and 7:90 the leaders threaten to drive out Shuayb and his followers and tell their people they would lose by following him [c1][c3]. At 11:87 they ask about his prayer and their fathers and their wealth [c4], and at 11:91 they say they do not understand much of what he says and speak of his kinsfolk [c8]. His answers rely on God [c2][c5], remind them of the earlier peoples [c6], and end with the words to watch [c10]. The tone of the words forbearing and right-minded at 11:87 is not stated in the verse [c4].",
+      "kids_md": "The leaders of his people said that they would drive Shuayb and those who believed with him out of their town [c1]. Shuayb said that they relied on God [c2]. He told them to ask their Lord for forgiveness and turn back to Him [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Shuayb answers the threat of expulsion by saying that they rely on God and by asking God to decide with truth [c1][c2]. Another is that he reminds his people of earlier peoples and calls them to ask forgiveness [c6][c7].",
+      "unknowns_md": "- Not established: who the leading group were, how many believed with Shuayb, or what the way of the leaders consisted of beyond what their fathers worshipped and what they did with their wealth.\n- Not established: whether the words forbearing and right-minded (11:87) were meant in earnest or in mockery; the verse does not say.\n- Not established: what weak means at 11:91 (weak in strength, in standing or otherwise); the draft keeps the word of the verse.\n- Not established: who the kinsfolk of 11:91 were, or how many.\n- Not established: whether the replies at 7:88-90 and 11:87-93 belong to one exchange."
+    },
+    {
+      "anchor": "madyan-is-seized",
+      "position": 3,
+      "title_en": "Madyan is seized",
+      "event_slug": "madyan",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 91,
+          "to": 93
+        },
+        {
+          "surah": 11,
+          "from": 94,
+          "to": 95
+        },
+        {
+          "surah": 29,
+          "from": 37,
+          "to": 37
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The quake seized them, and morning found them fallen in their home.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 91,
+              "to": 91
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Those who denied Shuayb became as if they had never lived there, and the Quran says that those who denied him were the losers.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 92,
+              "to": 92
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Shuayb turned away from them and said that he had conveyed the messages of his Lord and advised them, and asked how he could grieve for a people who disbelieved.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 93,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "When God's command came, He saved Shuayb and those who believed with him, by a mercy from Him; the cry seized those who did wrong, and morning found them fallen in their homes.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 94,
+              "to": 94
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They became as if they had never lived there, and the Quran says away with Madyan, as Thamud were removed.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 95,
+              "to": 95
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They denied him, so the quake seized them, and morning found them fallen in their home.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "A quake and a cry seized Madyan, and morning found them fallen in their homes [c1][c4]. God saved Shuayb and those who believed with him [c4]. Shuayb turned away and said that he had conveyed the messages of his Lord [c3].",
+      "body_md": "The quake seized them, and morning found them fallen in their home [c1]. Those who denied Shuayb became as if they had never lived there, and the Quran says that those who denied him were the losers [c2]. Shuayb turned away from them and said that he had conveyed the messages of his Lord and advised them, and asked how he could grieve for a people who disbelieved [c3].\n\nIn another passage, when God's command came, He saved Shuayb and those who believed with him, by a mercy from Him [c4]. The cry seized those who did wrong, and morning found them fallen in their homes [c4]. They became as if they had never lived there, and the Quran says away with Madyan, as Thamud were removed [c5]. A further passage says that they denied him, so the quake seized them, and morning found them fallen in their home [c6].",
+      "deep_md": "The end of Madyan is told with the quake at 7:91 and 29:37 [c1][c6], and with the cry at 11:94 [c4]. The Quran does not say whether these are one event or more than one [c1][c4][c6]. Only 11:94 speaks of the rescue of Shuayb and those who believed with him [c4]. The words of Shuayb at 7:93 are addressed to the people after they have been seized [c3]; the verses do not give the order between the turning away and the seizing.",
+      "kids_md": "A quake and a cry seized Madyan, and in the morning they were fallen in their homes [c1][c4]. God saved Shuayb and those who believed with him [c4]. Shuayb said that he had conveyed the messages of his Lord [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Shuayb's last words say that he conveyed and advised, and then ask how he could grieve for a people who disbelieved [c3]. Another is that the passages separate Shuayb and those who believed with him from those who were seized [c4].",
+      "unknowns_md": "- Not established: whether the quake and the cry were one event or more, or how long they lasted.\n- Not established: whether Shuayb spoke to them before or after they were seized; the verses do not give the order.\n- Not established: how many believed with Shuayb, where they went, or what became of them."
+    },
+    {
+      "anchor": "the-people-of-the-aykah",
+      "position": 4,
+      "title_en": "The people of the Aykah",
+      "event_slug": "aykah",
+      "verses": [
+        {
+          "surah": 26,
+          "from": 176,
+          "to": 191
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The people of the Aykah denied the messengers, and Shuayb said to them, asking whether they would not be mindful of God.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 176,
+              "to": 177
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Shuayb said that he was a trustworthy messenger to them, told them to be mindful of God and to obey him, and said he asked them for no payment, since his reward lay only with the Lord of the worlds.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 178,
+              "to": 180
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Shuayb told them to give full measure and not to be among those who cause loss, to weigh with a straight balance, not to defraud people of their things, and not to spread corruption in the land.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 181,
+              "to": 183
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Shuayb told them to be mindful of the One who created them and the earlier generations.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 184,
+              "to": 184
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They said that he was only one of the bewitched and only a human being like themselves, that they thought he was a liar, and told him to make pieces of the sky fall on them if he was truthful.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 185,
+              "to": 187
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Shuayb said that his Lord knew best what they did.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 188,
+              "to": 188
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "They denied him, so the punishment of the day of the shadow seized them, and the Quran says that it was the punishment of a great day.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 189,
+              "to": 189
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "The Quran says there is a sign in that, that most of them were not believers, and that Shuayb's Lord is the Mighty, the Merciful.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 190,
+              "to": 191
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The people of the Aykah denied the messengers [c1]. Shuayb told them to be mindful of God, to give full measure, and not to spread corruption [c2][c3]. They denied him, and the punishment of the day of the shadow seized them [c7].",
+      "body_md": "The people of the Aykah denied the messengers, and Shuayb said to them, asking whether they would not be mindful of God [c1]. He said that he was a trustworthy messenger to them, told them to be mindful of God and to obey him, and said he asked them for no payment, since his reward lay only with the Lord of the worlds [c2]. He told them to give full measure and not to be among those who cause loss, to weigh with a straight balance, not to defraud people of their things, and not to spread corruption in the land [c3]. He told them to be mindful of the One who created them and the earlier generations [c4].\n\nThey said that he was only one of the bewitched and only a human being like themselves, that they thought he was a liar, and told him to make pieces of the sky fall on them if he was truthful [c5]. Shuayb said that his Lord knew best what they did [c6]. They denied him, so the punishment of the day of the shadow seized them, and the Quran says that it was the punishment of a great day [c7]. The Quran says there is a sign in that, that most of them were not believers, and that Shuayb's Lord is the Mighty, the Merciful [c8].",
+      "deep_md": "This chapter has the same pattern as the other tellings of Shuayb's call: the opening question, the claim of trustworthiness and no payment, the call to fairness in measure and weight, and the reply of the people [c1][c2][c3][c5]. The verse 26:177 does not call Shuayb their brother, as the earlier passages in this story do [c1]. The punishment is called the punishment of the day of the shadow [c7].",
+      "kids_md": "The people of the Aykah denied the messengers [c1]. Shuayb told them to be mindful of God and to give full measure [c2][c3]. They denied him, and the punishment of the day of the shadow seized them [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Shuayb's answer to the demand that pieces of the sky fall on them is that his Lord knows best what they do [c5][c6]. Another is that the chapter again joins fairness in weighing with being mindful of God [c3].",
+      "unknowns_md": "- Not established: whether the people of the Aykah are the same people as those of the earlier chapters. The Quran uses different names and does not say whether they are one people, neighbours or related.\n- Not established: what the Aykah was; the Arabic word is often rendered thicket or wood, a sense for the reviewer, and the draft keeps the Arabic name.\n- Not established: what the day of the shadow was; the verse gives only the name and that it was a punishment of a great day.\n- Not established: whether Shuayb was one of them; 26:177 does not call him their brother."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Shuayb. None is used in this draft.",
+    "The Aykah event in the inventory also lists 15:78-79, 38:13 and 50:14, which are outside the inventory range of Shuayb and are not used; a reviewer should decide whether to extend the range.",
+    "Whether the people of the Aykah and the people of Madyan are one people is not stated in the Quran; the draft gives them separate chapters and events and does not decide.",
+    "Some Arabic terms are open in sense and the draft keeps them general: baqiyyah (11:86), the word rendered weak (11:91), the day of the shadow (26:189), and the Aykah (26:176).",
+    "The quake (7:91, 29:37) and the cry (11:94) are read without deciding whether they name one event or more than one.",
+    "Named in later tradition, not in the Quranic text: Shuayb's lineage, the place of Madyan and of Shuayb's grave, and the identification of the Aykah with a place. None is used in the story texts.",
+    "The chapters follow a reading order (the call, the reply, the end of Madyan, the people of the Aykah). The Quran does not give a chronology across these surahs.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}
