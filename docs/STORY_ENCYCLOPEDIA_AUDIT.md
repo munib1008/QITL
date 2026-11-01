@@ -22,7 +22,7 @@ coverage dashboard. Rule from the brief and from QITL: complete coverage means e
 
 1. **Hadith Stories library** (DONE on `mod/hadith-people`, 2026-11-01: `/hadith-stories`, `/admin/hadith-stories`, migration `20261031002520`; no story is published, nothing is seeded): no table or page for authenticated hadith narratives as stories (title, narrator, collection reference, grading
    scholar, summary, Quran connections, lessons, link to person/community/event). Only grade-gated entries.
-2. **People and Communities encyclopedia pages** (DONE on `mod/hadith-people`, 2026-11-01: `/people`, `/communities`, migration `20261031002521`; no record is published, nothing is seeded; the editors' screen for `encyclopedia_kind`, the Event Universe item and `person_claims` is still to build): `people` and `historical_communities` rows exist but there is no public page per person
+2. **People and Communities encyclopedia pages** (DONE on `mod/hadith-people`, 2026-11-01: `/people`, `/communities`, migration `20261031002521`; no record is published, nothing is seeded; the editors' screen for `encyclopedia_kind`, the Event Universe item, aliases and `person_claims` is built on `mod/people-admin`, 2026-11-01: `/admin/people`, `/admin/communities`): `people` and `historical_communities` rows exist but there is no public page per person
    or community, no "identity not established / traditional identification" presentation, no list by kind.
 3. **Story chapters with their own references and depth modes**: story_sections carry steps; there is no chapter object with its own
    verse references, no One-Minute / Complete / Deep Study / Kids / Life Lessons switch, no chapter deep links.
@@ -47,3 +47,22 @@ Gaps 1, 2 and 6 belong to `mod/hadith-people`.
   remaining prophets, people, communities, hadith stories. Content is entered through the admin studios and published only after the
   scholarly, language and media reviews. Nothing is seeded as published.
 - Sources: Quran Foundation, QuranEnc, Quranic Arabic Corpus, sunnah.com remain gated by `docs/LICENSING.md` and `docs/PERMISSION_REQUESTS.md`.
+
+## People and Communities admin (`mod/people-admin`, 2026-11-01)
+
+`/admin/people` and `/admin/communities` (editor, scholarly reviewer, admin; editors write). No migration: the screen uses the tables, RLS,
+guards and audit triggers of `20261031002521` and the existing review flow.
+
+- Reads: `GET /api/admin/people?view=list|detail|events|claims` under the caller's own session (RLS decides what is visible).
+  Event Universe items are listed per track (prophets for a prophet, people for anyone else, communities for a community).
+- Writes (editors, same-origin, per-user rate limit, zod): `POST /api/admin/people` (group, subject item), `/aliases`, `/claims`
+  (attach an existing claim by id, never a verse), `/status` (send for review, publish, correction with a public note).
+  Scholarly approval of a person uses the existing `/api/admin/review`.
+- Refusals are returned in the database's words (`no evidence, no publish: ...`, `no review, no publish: ...`, the prophet-label and
+  track rules). The shared `dbError` strips the part of a guard message before the first colon, so the new `status` route returns the
+  full message instead of changing the shared helper.
+- Findings (not fixed here, no migration): `person_aliases` has no audit trigger and no published-record freeze, so alias edits are not
+  in the audit trail and the database alone would accept an alias change on a published person (the route refuses it). A follow-up
+  migration should add `audit()` and a freeze trigger like `guard_person_claims`.
+- Not built: creating a person or community (no seed data by instruction); editing a community's name, era or evidence claim (Life
+  Through the Ages owns that).
