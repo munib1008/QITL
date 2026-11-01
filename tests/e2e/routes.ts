@@ -23,6 +23,8 @@ export const ROUTES = [
   "/communities",
   "/communities/fixture-community-a",
   "/admin/hadith-stories",
+  "/admin/people",
+  "/admin/communities",
   "/search?q=Yusuf&type=prophet&surah=12",
   "/creation",
   "/creation/jinn",
