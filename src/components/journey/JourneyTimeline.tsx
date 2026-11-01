@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { Fragment, memo, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { cx } from "@/lib/cx";
 import { englishContent } from "@/lib/i18n/locales";
 import { journeyStrings } from "@/lib/i18n/modules/home";
@@ -118,7 +118,54 @@ export interface JourneyTimelineProps {
   label?: string;
 }
 
-const useIsoLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
+/**
+ * One stop. Memoised: a scroll that reveals a few stops or moves the active one re-renders those stops, not all 29
+ * (each re-render of the whole list cost tens of milliseconds of main-thread time on a phone).
+ */
+const StopItem = memo(function StopItem({
+  it,
+  side,
+  isActive,
+  rv,
+  onPick,
+  onEvidence,
+}: {
+  it: JourneyItem;
+  side: "l" | "r";
+  isActive: boolean;
+  rv: "rv" | "in" | undefined;
+  onPick: (id: string) => void;
+  onEvidence: (it: JourneyItem) => void;
+}) {
+  const locale = useLocale();
+  const t = journeyStrings(locale);
+  const u = uiStrings(locale);
+  return (
+    <li
+      data-id={it.id}
+      data-stop={it.id}
+      className={cx("zq-jt-item", `zq-jt-${side}`, isActive && "zq-jt-active", it.type === "milestone" && "zq-jt-ms", rv && "zq-rv", rv === "in" && "zq-in")}
+    >
+      <button
+        type="button"
+        className="zq-jt-node"
+        data-node={it.id}
+        aria-label={isActive ? t.detailsShown(it.name) : t.showDetails(it.name)}
+        aria-expanded={isActive}
+        onClick={() => onPick(it.id)}
+      >
+        <Rosette points={it.points} />
+      </button>
+      <div className="zq-jt-card">
+        <ProphetJourneyCard item={it} expanded={isActive} onToggle={() => onPick(it.id)} onEvidence={() => onEvidence(it)} />
+      </div>
+      <div className="zq-jt-when">
+        <strong>{it.era.label}</strong>
+        <span>{u.era[it.era.certainty]}</span>
+      </div>
+    </li>
+  );
+});
 
 export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true, endLabel, endNote, endActions, draft = true, label }: JourneyTimelineProps) {
   const locale = useLocale();
@@ -147,19 +194,29 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
     setActive(id);
   }, []);
 
+  const openEvidence = useCallback((it: JourneyItem) => {
+    hold.current = Date.now() + HOLD_MS;
+    setEvItem(it);
+  }, []);
+
   const visible = all.filter((it) => matchesFilter(it, filter));
   const idx = visible.findIndex((it) => it.id === active);
   const pos = Math.max(1, idx + 1);
 
-  // The progress line fills to the active node.
-  useIsoLayoutEffect(() => {
+  // The progress line fills to the active node. Measured in an animation frame, after the browser has laid the page
+  // out, so the read does not force a synchronous layout inside the hydration commit (it was the page's largest
+  // forced reflow). The fill animates from 0 anyway.
+  useEffect(() => {
     const el = root.current;
     if (!el || !fill.current) return;
-    const node = el.querySelector<HTMLElement>(`[data-node="${active}"]`);
-    const line = el.querySelector<HTMLElement>(".zq-jt-line");
-    if (!node || !line) return;
-    const h = Math.max(0, node.getBoundingClientRect().top - line.getBoundingClientRect().top + 20);
-    fill.current.style.height = `${h}px`;
+    const raf = requestAnimationFrame(() => {
+      const node = el.querySelector<HTMLElement>(`[data-node="${active}"]`);
+      const line = el.querySelector<HTMLElement>(".zq-jt-line");
+      if (!node || !line || !fill.current) return;
+      const h = Math.max(0, node.getBoundingClientRect().top - line.getBoundingClientRect().top + 20);
+      fill.current.style.height = `${h}px`;
+    });
+    return () => cancelAnimationFrame(raf);
   }, [active, filter]);
 
   // Reveal only stops below the fold at load, so nothing stays hidden if IntersectionObserver never fires.
@@ -217,15 +274,20 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
         last = window.scrollY;
         const mid = window.innerHeight * FOCUS_LINE;
         const ds: Array<{ id: string; d: number }> = [];
-        el.querySelectorAll<HTMLElement>("[data-node]").forEach((n) => {
-          const id = n.dataset.node!;
-          let d = Math.abs(n.getBoundingClientRect().top - mid);
+        // Stops are measured by their <li> box, not by the node button inside it: off-screen stops are skipped by the
+        // renderer (content-visibility), and asking for the rect of something inside a skipped stop would force it to
+        // be laid out again on every scroll frame. The node sits at a fixed offset in its stop; read it from the
+        // active stop, which is never skipped.
+        const activeLi = el.querySelector<HTMLElement>(".zq-jt-item.zq-jt-active");
+        const activeNode = activeLi?.querySelector<HTMLElement>("[data-node]");
+        const nodeOffset = activeLi && activeNode ? activeNode.getBoundingClientRect().top - activeLi.getBoundingClientRect().top : 0;
+        el.querySelectorAll<HTMLElement>(".zq-jt-item").forEach((li) => {
+          const id = li.dataset.id!;
+          const r = li.getBoundingClientRect();
+          let d = Math.abs(r.top + nodeOffset - mid);
           // While the focus line is still inside the active stop's (expanded, possibly taller-than-screen) card,
           // it keeps the focus, so a reader can scroll down to its buttons without it collapsing.
-          if (id === cur.current) {
-            const r = n.closest(".zq-jt-item")?.getBoundingClientRect();
-            if (r && r.top <= mid && r.bottom >= mid) d = 0;
-          }
+          if (id === cur.current && r.top <= mid && r.bottom >= mid) d = 0;
           ds.push({ id, d });
         });
         const next = pickActive(ds, cur.current);
@@ -233,6 +295,12 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
       });
     };
     window.addEventListener("scroll", onScroll, { passive: true });
+    // Hydration can happen after the page has already been scrolled (it waits until the journey is near, HydrateOnVisible,
+    // and a reload restores the scroll position): sync once so the open stop matches where the reader is.
+    if (window.scrollY > 0) {
+      last = -Infinity;
+      onScroll();
+    }
     return () => {
       window.removeEventListener("scroll", onScroll);
       if (raf) cancelAnimationFrame(raf);
@@ -329,45 +397,9 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
                     ) : null}
                   </div>
                 </li>
-                {items.map((it) => {
-                  const isA = it.id === active;
-                  const s = side++ % 2 ? "r" : "l";
-                  const rv = reveal[it.id];
-                  return (
-                    <li
-                      key={it.id}
-                      data-id={it.id}
-                      data-stop={it.id}
-                      className={cx("zq-jt-item", `zq-jt-${s}`, isA && "zq-jt-active", it.type === "milestone" && "zq-jt-ms", rv && "zq-rv", rv === "in" && "zq-in")}
-                    >
-                      <button
-                        type="button"
-                        className="zq-jt-node"
-                        data-node={it.id}
-                        aria-label={isA ? t.detailsShown(it.name) : t.showDetails(it.name)}
-                        aria-expanded={isA}
-                        onClick={() => pick(it.id)}
-                      >
-                        <Rosette points={it.points} />
-                      </button>
-                      <div className="zq-jt-card">
-                        <ProphetJourneyCard
-                          item={it}
-                          expanded={isA}
-                          onToggle={() => pick(it.id)}
-                          onEvidence={() => {
-                            hold.current = Date.now() + HOLD_MS;
-                            setEvItem(it);
-                          }}
-                        />
-                      </div>
-                      <div className="zq-jt-when">
-                        <strong>{it.era.label}</strong>
-                        <span>{u.era[it.era.certainty]}</span>
-                      </div>
-                    </li>
-                  );
-                })}
+                {items.map((it) => (
+                  <StopItem key={it.id} it={it} side={side++ % 2 ? "r" : "l"} isActive={it.id === active} rv={reveal[it.id]} onPick={pick} onEvidence={openEvidence} />
+                ))}
               </Fragment>
             );
           })}

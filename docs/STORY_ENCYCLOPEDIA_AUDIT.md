@@ -61,7 +61,7 @@ guards and audit triggers of `20261031002521` and the existing review flow.
 - Refusals are returned in the database's words (`no evidence, no publish: ...`, `no review, no publish: ...`, the prophet-label and
   track rules). The shared `dbError` strips the part of a guard message before the first colon, so the new `status` route returns the
   full message instead of changing the shared helper.
-- Findings (not fixed here, no migration): `person_aliases` has no audit trigger and no published-record freeze, so alias edits are not
+- Findings (fixed later by migration 20261031002630, branch `mod/perf-visual`; at the time of this audit not fixed, no migration): `person_aliases` has no audit trigger and no published-record freeze, so alias edits are not
   in the audit trail and the database alone would accept an alias change on a published person (the route refuses it). A follow-up
   migration should add `audit()` and a freeze trigger like `guard_person_claims`.
 - Not built: creating a person or community (no seed data by instruction); editing a community's name, era or evidence claim (Life

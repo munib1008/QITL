@@ -51,6 +51,6 @@ credential or licence, or human review. Status per feature: `docs/FEATURE_ACCEPT
 | 27 | Mufti Q&A notifications and scholar application form; verified muftis | Code; owner verifies muftis |
 | 28 | Admin-editable landing content, navigation and feature flags | Code |
 | 29 | Email digest sender | Email provider |
-| 30 | Visual regression baselines; real-device testing | Code; devices |
-| 31 | Home page performance (TBT) | Code |
+| 30 | Visual regression baselines (done on `mod/perf-visual`: `pnpm test:visual`, Windows baselines, `docs/RESPONSIVE.md`); real-device testing (open) | Devices |
+| 31 | Home page performance (TBT): measured and partly worked on (`mod/perf-visual`): layout work about 20% lower, LCP about 0.2 s better, TBT not materially better; the first document layout (cold fonts) remains, `docs/RESPONSIVE.md` | Code |
 | 32 | Learn Quranic Arabic lessons | Word-by-word data + reviewers |
