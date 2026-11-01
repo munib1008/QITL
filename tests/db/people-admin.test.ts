@@ -145,8 +145,16 @@ describe("aliases", () => {
     await db.as(editor, "delete from public.person_aliases where person_id = $1 and alias = 'Fixture alias'", [p]);
     expect(await db.as(editor, "select alias, language from public.person_aliases where person_id = $1", [p])).toEqual([{ alias: "اسم", language: "ar" }]);
   });
-  test("finding: the database does not freeze the aliases of a published person, so the route refuses it", async () => {
+  test("the database freezes the aliases of a published person (migration 20261031002630)", async () => {
     const [pub] = await raw("insert into public.people (slug, name_en, name_ar, kind, status) values ('fixture-pa-published', 'Fixture published', 'x', 'other', 'published') returning id");
+    await raw("insert into public.person_aliases (person_id, alias, language) values ($1, 'seeded alias', 'en')", [pub!.id]);
+    const frozen = /aliases of a published person cannot change/;
+    await rejects(db.as(editor, "insert into public.person_aliases (person_id, alias, language) values ($1, 'late alias', 'en')", [pub!.id]), frozen);
+    await rejects(db.as(editor, "update public.person_aliases set language = 'ur' where person_id = $1", [pub!.id]), frozen);
+    await rejects(db.as(editor, "delete from public.person_aliases where person_id = $1", [pub!.id]), frozen);
+    expect(await db.as(editor, "select alias from public.person_aliases where person_id = $1", [pub!.id])).toEqual([{ alias: "seeded alias" }]);
+    // After the person is moved to correction the aliases can change again.
+    await raw("update public.people set status = 'correction' where id = $1", [pub!.id]);
     await db.as(editor, "insert into public.person_aliases (person_id, alias, language) values ($1, 'late alias', 'en')", [pub!.id]);
     await db.as(editor, "delete from public.person_aliases where person_id = $1", [pub!.id]);
   });
@@ -196,5 +204,36 @@ describe("a published community", () => {
     const comm = await event("fixture-pa-item-comm-2", "communities");
     const [c] = await raw("insert into public.historical_communities (slug, name_en, evidence_category, status) values ('fixture-pa-community-pub', 'Fixture published community', 'A', 'published') returning id");
     expect((await refused(db.as(editor, "update public.historical_communities set subject_event_id = $2 where id = $1", [c!.id, comm]))).plain?.message).toMatch(/cannot be edited in place; move it to correction first/);
+  });
+});
+
+describe("person_aliases: audit trail and freeze (migration 20261031002630)", () => {
+  test("every alias insert, update and delete is audited", async () => {
+    const p = await person("other");
+    const before = (await db.admin<{ n: number }>("select count(*)::int n from public.audit_logs where entity_type = 'person_aliases'"))[0]!.n;
+    await db.as(editor, "insert into public.person_aliases (person_id, alias, language) values ($1, 'Fixture audited alias', 'en')", [p]);
+    await db.as(editor, "update public.person_aliases set alias = 'Fixture renamed alias' where person_id = $1", [p]);
+    await db.as(editor, "delete from public.person_aliases where person_id = $1", [p]);
+    const rows = await db.admin<{ action: string; changes: string }>("select action, changes::text from public.audit_logs where entity_type = 'person_aliases' order by id");
+    expect(rows.length - before).toBe(3);
+    expect(rows.slice(before).map((r) => r.action)).toEqual(["insert", "update", "delete"]);
+    expect(rows[before]!.changes).toContain("Fixture audited alias");
+    expect(rows[before + 1]!.changes).toContain("Fixture renamed alias");
+  });
+  test("an alias cannot be moved to or from a published person", async () => {
+    const draft = await person("other");
+    const [pub] = await raw("insert into public.people (slug, name_en, name_ar, kind, status) values ('fixture-pa-published-2', 'Fixture published two', 'x', 'other', 'published') returning id");
+    await db.as(editor, "insert into public.person_aliases (person_id, alias, language) values ($1, 'Fixture mover', 'en')", [draft]);
+    await rejects(db.as(editor, "update public.person_aliases set person_id = $2 where person_id = $1", [draft, pub!.id]), /aliases of a published person cannot change/);
+    expect((await refused(db.as(editor, "insert into public.person_aliases (person_id, alias, language) values ($1, 'x2', 'en')", [pub!.id]))).plain?.message).toMatch(/move the person to correction first/);
+  });
+  test("the search index still carries the aliases of a person when it is published", async () => {
+    const p = await person("other");
+    await db.as(editor, "insert into public.person_aliases (person_id, alias, language) values ($1, 'Fixturealiasneedle', 'en')", [p]);
+    expect(await db.admin("select 1 from public.search_index where entity_type = 'person' and entity_id = $1", [p])).toHaveLength(0);
+    await db.as(scholar, "insert into public.editorial_reviews (entity_type, entity_id, reviewer_id, decision) values ('person', $1, $2, 'approved')", [p, scholar]);
+    await db.as(editor, "update public.people set status = 'published' where id = $1", [p]);
+    const idx = await db.admin<{ body: string }>("select body from public.search_index where entity_type = 'person' and entity_id = $1", [p]);
+    expect(idx[0]?.body ?? "").toContain("Fixturealiasneedle");
   });
 });

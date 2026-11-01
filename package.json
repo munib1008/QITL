@@ -21,6 +21,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
+    "test:visual": "node scripts/test-visual.mjs",
     "format": "prettier --write ."
   },
   "dependencies": {
