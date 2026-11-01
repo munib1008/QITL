@@ -1,0 +1,270 @@
+{
+  "slug": "dhul-qarnayn",
+  "title_en": "Dhul-Qarnayn",
+  "title_ar": "ذو القرنين",
+  "subject": {
+    "type": "person",
+    "event_slug": "dhul-qarnayn"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "given-a-means",
+      "position": 1,
+      "title_en": "Given a means",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 18,
+          "from": 83,
+          "to": 85
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran says that people ask about Dhul-Qarnayn, and tells the listener to say that he will recite to them a mention of him.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 83,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God established him in the land and gave him a means to everything, and he followed a means.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 84,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "People asked about Dhul-Qarnayn [c1]. God established him in the land and gave him a means to everything, and he followed a means [c2].",
+      "body_md": "The Quran says that people ask about Dhul-Qarnayn, and tells the listener to say that he will recite to them a mention of him [c1]. God established him in the land and gave him a means to everything, and he followed a means [c2].",
+      "deep_md": "The ayah gives his name as the Arabic title Dhul-Qarnayn, and the ayat do not explain it [c1]. The word rendered means is not explained in these ayat [c2].",
+      "kids_md": "People asked about Dhul-Qarnayn [c1]. God established him in the land and gave him a means to everything [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage opens by saying that his place in the land was established by God [c2].",
+      "unknowns_md": "- Not established: who he was, when he lived or where; the ayat give only the title.\n- Not established: whether he was a prophet, a king or both; the ayat say only that God established him in the land.\n- Not established: what the title means; the Arabic is a dual form whose sense the ayat do not give."
+    },
+    {
+      "anchor": "where-the-sun-sets",
+      "position": 2,
+      "title_en": "Where the sun sets",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 18,
+          "from": 86,
+          "to": 88
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "When he reached the place where the sun sets, he found it setting in a spring of murky water and found a people near it.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 86,
+              "to": 86
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God said to him, Dhul-Qarnayn, either punish them or treat them with kindness.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 86,
+              "to": 86
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He said that whoever did wrong would be punished by them and then returned to his Lord, who would punish him with a terrible punishment.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 87,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He said that whoever believed and did good would have the best reward, and that they would speak to him of ease from their command.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 88,
+              "to": 88
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Dhul-Qarnayn reached the place where the sun sets and found a people near it [c1]. God told him to punish them or treat them with kindness [c2]. He answered that whoever did wrong would be punished, and whoever believed and did good would have the best reward [c3][c4].",
+      "body_md": "When he reached the place where the sun sets, he found it setting in a spring of murky water and found a people near it [c1]. God said to him, Dhul-Qarnayn, either punish them or treat them with kindness [c2]. He said that whoever did wrong would be punished by them and then returned to his Lord, who would punish him with a terrible punishment [c3]. He said that whoever believed and did good would have the best reward, and that they would speak to him of ease from their command [c4].",
+      "deep_md": "The ayah says that he found the sun setting in a spring, and the Arabic word for the spring's water is read as murky or as hot [c1]. The ayah says that God spoke to him and does not say how [c2].",
+      "kids_md": "He reached the place where the sun sets and found a people there [c1]. God told him to punish them or treat them with kindness [c2]. He said that whoever believed and did good would have the best reward [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that his answer separates the one who did wrong from the one who believed and did good [c3][c4].",
+      "unknowns_md": "- Not established: where the place was, or who the people were.\n- Not established: how God spoke to him; the ayah uses the plural we.\n- Not established: whether he punished or treated anyone with kindness in the end; the ayah records his words."
+    },
+    {
+      "anchor": "where-the-sun-rises",
+      "position": 3,
+      "title_en": "Where the sun rises",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 18,
+          "from": 89,
+          "to": 91
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Dhul-Qarnayn followed a means until he reached the place where the sun rises and found it rising on a people to whom God had given no shelter from it.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 89,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The ayah adds that it was so, and that God had full knowledge of what he had.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 91,
+              "to": 91
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Dhul-Qarnayn followed a means until he reached the place where the sun rises [c1]. He found it rising on a people to whom God had given no shelter from it [c1].",
+      "body_md": "Dhul-Qarnayn followed a means until he reached the place where the sun rises and found it rising on a people to whom God had given no shelter from it [c1]. The ayah adds that it was so, and that God had full knowledge of what he had [c2].",
+      "deep_md": "The ayah does not say what the shelter was that the people lacked [c1]. It adds that God had full knowledge of what he had [c2].",
+      "kids_md": "Dhul-Qarnayn followed a means until he reached the place where the sun rises [c1]. God had full knowledge of what he had [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage closes the journey with the statement that God had full knowledge of what he had [c2].",
+      "unknowns_md": "- Not established: where the place was, or who the people were.\n- Not established: what kind of shelter is meant, or why they lacked it."
+    },
+    {
+      "anchor": "between-the-barriers",
+      "position": 4,
+      "title_en": "Between the barriers",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 18,
+          "from": 92,
+          "to": 98
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "He followed a means until he reached a place between the barriers and found beside them a people who could hardly understand speech.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 92,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They said, Dhul-Qarnayn, Yajuj and Majuj are corrupters in the land, and asked whether they might pay him a tribute so that he would set up a barrier between them and Yajuj and Majuj.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 94,
+              "to": 94
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He said that what his Lord had established him in was better, and told them to help him with strength so that he would make a rampart between them and Yajuj and Majuj.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 95,
+              "to": 95
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He told them to bring him blocks of iron, and when he had made level the space between the steep sides, he told them to blow, and when he had made it fire, he told them to bring him molten metal to pour over it.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 96,
+              "to": 96
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They were not able to climb over it, nor were they able to make a breach in it.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 97,
+              "to": 97
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "He said that this was a mercy from his Lord, and that when the promise of his Lord comes, He will make it crumble to dust, and that the promise of his Lord is true.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 98,
+              "to": 98
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Dhul-Qarnayn reached a place between the barriers and found a people who asked him for a barrier against Yajuj and Majuj [c1][c2]. He asked them to help him with strength, and had iron brought [c3][c4]. Yajuj and Majuj could not climb over it, and he called it a mercy from his Lord [c5][c6].",
+      "body_md": "He followed a means until he reached a place between the barriers and found beside them a people who could hardly understand speech [c1]. They said, Dhul-Qarnayn, Yajuj and Majuj are corrupters in the land, and asked whether they might pay him a tribute so that he would set up a barrier between them and Yajuj and Majuj [c2]. He said that what his Lord had established him in was better, and told them to help him with strength so that he would make a rampart between them and Yajuj and Majuj [c3]. He told them to bring him blocks of iron, and when he had made level the space between the steep sides, he told them to blow, and when he had made it fire, he told them to bring him molten metal to pour over it [c4]. They were not able to climb over it, nor were they able to make a breach in it [c5]. He said that this was a mercy from his Lord, and that when the promise of his Lord comes, He will make it crumble to dust, and that the promise of his Lord is true [c6].",
+      "deep_md": "The ayat do not say where the barriers are, or who Yajuj and Majuj are beyond calling them corrupters in the land [c2]. The molten metal is given in Arabic as qitr, and the ayat do not say which metal it is [c4].",
+      "kids_md": "He reached a place between the barriers and found a people who could hardly understand speech [c1]. They asked him for a barrier against Yajuj and Majuj [c2]. He told them to help him with strength, and he said that he would make a rampart [c3]. He said that it was a mercy from his Lord [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that he answers the offer of tribute by saying that what his Lord had established him in was better [c3]. Another is that he calls the barrier a mercy from his Lord and puts the promise of his Lord above it [c6].",
+      "unknowns_md": "- Not established: where the barriers were, who the people were, or how many helped him.\n- Not established: who Yajuj and Majuj are, how many they are, or when the promise of his Lord comes.\n- Not established: which metal the molten metal was, or how long the rampart was built."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: Dhul-Qarnayn has been identified with various historical rulers, among them Alexander and Cyrus, and later works describe his journeys and the barrier at length.",
+    "Whether he was a prophet is not stated by the Quran and is discussed in later works.",
+    "Hadith to add later: reports about Dhul-Qarnayn and about Yajuj and Majuj, with a named grader for each; none is used here."
+  ]
+}

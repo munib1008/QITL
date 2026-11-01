@@ -1,0 +1,62 @@
+{
+  "slug": "man-who-warned-musa",
+  "title_en": "The man who came running to warn Musa",
+  "title_ar": null,
+  "subject": {
+    "type": "person",
+    "event_slug": "man-who-warned-musa"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-man-who-came-running",
+      "position": 1,
+      "title_en": "The man who came running",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 28,
+          "from": 20,
+          "to": 21
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "A man came running from the farthest part of the city and said to Musa that the chiefs were plotting against him to kill him, so he should leave, since he was one of those who advised him well.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Musa left the city fearful and watchful, and said, my Lord, save me from the wrongdoing people.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "A man came running from the farthest part of the city and warned Musa that the chiefs were plotting to kill him [c1]. Musa left the city fearful and asked his Lord to save him from the wrongdoing people [c2].",
+      "body_md": "A man came running from the farthest part of the city and said to Musa that the chiefs were plotting against him to kill him, so he should leave, since he was one of those who advised him well [c1]. Musa left the city fearful and watchful, and said, my Lord, save me from the wrongdoing people [c2].",
+      "deep_md": "The ayah gives the man's words as advice from one who wishes him well [c1]. It does not say how he knew of the plot [c1].",
+      "kids_md": "A man ran from the far side of the city to warn Musa [c1]. Musa left the city and asked his Lord to save him [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that a warning was given and heeded [c1][c2]. Another is that Musa, after leaving, turned to his Lord [c2].",
+      "unknowns_md": "- Not established: the man's name, his faith or his relation to Musa.\n- Not established: the name of the city, or who the chiefs were.\n- Not established: how the man knew of the plot, or what became of him."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: later works give the man a name and say who he was; the text itself only calls him a man from the farthest part of the city.",
+    "Hadith to add later: reports about the man who warned Musa, with a named grader for each; none is used here."
+  ]
+}

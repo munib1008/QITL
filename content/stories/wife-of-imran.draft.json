@@ -1,0 +1,86 @@
+{
+  "slug": "wife-of-imran",
+  "title_en": "The wife of Imran and the dedication of her child",
+  "title_ar": null,
+  "subject": {
+    "type": "person",
+    "event_slug": "wife-of-imran"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-vow",
+      "position": 1,
+      "title_en": "The vow",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 3,
+          "from": 35,
+          "to": 36
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The wife of Imran said to her Lord that she had vowed to Him what was in her womb, as one dedicated to Him, and asked Him to accept it from her, for He is the Hearing, the Knowing.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When she gave birth, she said to her Lord that she had given birth to a female.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The ayah says that God knew best what she had given birth to, and that the male is not like the female.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "She said that she had named her Maryam and placed her and her offspring in God's protection from Satan, the accursed.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The wife of Imran told her Lord that she had vowed to Him what was in her womb [c1]. When she gave birth to a female, she named her Maryam and placed her and her offspring in God's protection from Satan [c2][c4].",
+      "body_md": "The wife of Imran said to her Lord that she had vowed to Him what was in her womb, as one dedicated to Him, and asked Him to accept it from her, for He is the Hearing, the Knowing [c1]. When she gave birth, she said to her Lord that she had given birth to a female [c2]. The ayah says that God knew best what she had given birth to, and that the male is not like the female [c3]. She said that she had named her Maryam and placed her and her offspring in God's protection from Satan, the accursed [c4].",
+      "deep_md": "The ayah records the words of the vow and of the naming [c1][c4]. The text does not mark whether the sentences that God knew best what she had given birth to, and that the male is not like the female, are her words or a remark added in the ayah, and readers have taken it both ways [c3].",
+      "kids_md": "The wife of Imran asked God to accept what she had vowed to Him [c1]. She gave birth to a baby girl and named her Maryam [c2][c4]. She asked God to protect her and her children from Satan [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that she brought her vow and her newborn to God in prayer and placed her under His protection [c1][c4].",
+      "unknowns_md": "- Not established: her name, her age or where she lived; the ayah calls her the wife of Imran.\n- Not established: what the vow of dedication involved, beyond the word the ayah uses for dedicated.\n- Not established: whether the words that God knew best, and that the male is not like the female, are hers or an added remark.\n- Not established: how the Imran of this ayah is related to other people of that name, or when he lived."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: her name is given as Hannah, and later works describe the lineage and the age of Imran's family at length.",
+    "Hadith to add later: reports about Maryam's birth and her mother's prayer, with a named grader for each; none is used here."
+  ]
+}

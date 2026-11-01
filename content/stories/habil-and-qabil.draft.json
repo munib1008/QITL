@@ -1,0 +1,156 @@
+{
+  "slug": "habil-and-qabil",
+  "title_en": "The sons of Adam and the offering",
+  "title_ar": null,
+  "subject": {
+    "type": "person",
+    "event_slug": "habil-and-qabil"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-offering",
+      "position": 1,
+      "title_en": "The offering",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 5,
+          "from": 27,
+          "to": 29
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran tells, as a true account, of the sons of Adam, and says that each of them presented an offering.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The offering was accepted from one of them and not accepted from the other.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "One of them said that he would kill the other, and the other answered that God accepts only from those who are mindful of Him.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The one who answered said that if the other stretched out a hand to kill him, he would not stretch out his hand to kill him, because he feared God, Lord of the worlds.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 28,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He said that he wished the other to bear the burden of his sin and of the other's own sin, and so be among the companions of the Fire, which he called the reward of the wrongdoers.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Both sons of Adam presented an offering, and it was accepted from only one of them [c1][c2]. One of them said he would kill the other, who answered that he feared God and would not stretch out a hand to kill him [c3][c4].",
+      "body_md": "The Quran tells, as a true account, of the sons of Adam, and says that each of them presented an offering [c1]. The offering was accepted from one of them and not accepted from the other [c2]. One of them said that he would kill the other, and the other answered that God accepts only from those who are mindful of Him [c3]. The one who answered said that if the other stretched out a hand to kill him, he would not stretch out his hand to kill him, because he feared God, Lord of the worlds [c4]. He said that he wished the other to bear the burden of his sin and of the other's own sin, and so be among the companions of the Fire, which he called the reward of the wrongdoers [c5].",
+      "deep_md": "The ayat do not say which of the sons spoke first, or why the offering was accepted from one and not from the other [c2][c3]. The words about bearing his sin and the other's own sin can be understood in more than one way, and the ayah leaves them without comment [c5].",
+      "kids_md": "Each of the sons of Adam brought an offering to God [c1]. God accepted it from one of them and not from the other [c2]. One of them said he would kill the other, but the other answered that he was afraid of God and would not stretch out his hand to kill him [c3][c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the answer given to a threat was fear of God and a refusal to answer violence with violence [c4]. Another is that the ayah ties acceptance to being mindful of God [c3].",
+      "unknowns_md": "- Not established: the names of the sons, their ages, or where this took place.\n- Not established: what each of them offered, how the offering was accepted, or why it was accepted from one and not from the other.\n- Not established: which of them spoke first; the ayah says only one of them and the other.\n- Not established: how the words about bearing his sin and the other's own sin are to be understood.\n- Not established: whether the phrase the sons of Adam means the sons of the first man or the children of Adam in a wider sense; readers have differed."
+    },
+    {
+      "anchor": "the-killing-and-the-raven",
+      "position": 2,
+      "title_en": "The killing and the raven",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 5,
+          "from": 30,
+          "to": 31
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "His own soul made it easy for him to kill his brother, and he killed him and became one of the losers.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God sent a raven, scratching in the earth, to show him how to cover the body of his brother.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He exclaimed in dismay and asked whether he was unable to be like this raven and cover his brother's body, and he became one of the regretful.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "His soul made killing his brother seem easy, and he killed him and became one of the losers [c1]. God sent a raven to show him how to cover his brother's body, and he became one of the regretful [c2][c3].",
+      "body_md": "His own soul made it easy for him to kill his brother, and he killed him and became one of the losers [c1]. God sent a raven, scratching in the earth, to show him how to cover the body of his brother [c2]. He exclaimed in dismay and asked whether he was unable to be like this raven and cover his brother's body, and he became one of the regretful [c3].",
+      "deep_md": "The ayah says that the soul made it easy for him, and it does not describe how the killing was done [c1]. The Arabic word for the brother's body can also mean what is shameful or hidden, and readers differ on the exact sense [c2].",
+      "kids_md": "He killed his brother and became one of the losers [c1]. God sent a raven that scratched the ground to show him how to cover his brother's body [c2]. He was sorry [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage links following the urging of the soul to loss and ends in regret [c1][c3]. Another is that the raven is presented as a teacher sent by God [c2].",
+      "unknowns_md": "- Not established: the place, the time, the method or the ages involved.\n- Not established: how long the body lay, or what kind of burial the raven showed.\n- Not established: whether the ayah means the corpse or something that should be covered; readers differ on the Arabic word."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: the sons are called Habil and Qabil, and later works add details of their offerings, occupations and the place.",
+    "Whether the sons of Adam in the ayah are the sons of the first man or the children of Adam in a wider sense is a question the text itself does not settle.",
+    "Hadith to add later: reports on the first killing, the offerings and the burial, each with a named grader; none is used here."
+  ]
+}

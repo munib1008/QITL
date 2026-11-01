@@ -1,0 +1,201 @@
+{
+  "slug": "believer-of-pharaohs-family",
+  "title_en": "The believer from Fir'awn's household",
+  "title_ar": null,
+  "subject": {
+    "type": "person",
+    "event_slug": "believer-of-pharaohs-family"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "a-believer-speaks",
+      "position": 1,
+      "title_en": "A believer speaks",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 40,
+          "from": 28,
+          "to": 29
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "A believing man from the family of Fir'awn, who concealed his belief, asked whether they would kill a man for saying that his Lord is God, when he had come to them with clear proofs from their Lord, adding that if he was lying his lie would be on him, and if he was truthful, some of what he promised would befall them, and that God does not guide one who is a transgressor and a liar.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 28,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He said that the kingdom was theirs that day, prevailing in the land, and asked who would help them against the might of God if it came to them, and Fir'awn said that he showed them only what he saw and guided them only to the way of right conduct.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "A believing man from the family of Fir'awn, who concealed his belief, asked whether they would kill a man for saying that his Lord is God [c1]. He asked who would help them against God's might if it came [c2]. Fir'awn answered that he showed them only what he saw [c2].",
+      "body_md": "A believing man from the family of Fir'awn, who concealed his belief, asked whether they would kill a man for saying that his Lord is God, when he had come to them with clear proofs from their Lord, adding that if he was lying his lie would be on him, and if he was truthful, some of what he promised would befall them, and that God does not guide one who is a transgressor and a liar [c1]. He said that the kingdom was theirs that day, prevailing in the land, and asked who would help them against the might of God if it came to them, and Fir'awn said that he showed them only what he saw and guided them only to the way of right conduct [c2].",
+      "deep_md": "The ayah says that he concealed his belief, and it does not say why he now spoke [c1]. Neither the believer nor the man he speaks of is named in this ayah [c1].",
+      "kids_md": "A believing man in the family of Fir'awn spoke up [c1]. He asked whether they would kill a man for saying that his Lord is God [c1]. Fir'awn said that he showed them only what he saw [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the believer argues that a lie would fall on the liar and a truth would bring some of what is promised [c1].",
+      "unknowns_md": "- Not established: the believer's name, his rank or his kinship to Fir'awn.\n- Not established: how long he had concealed his belief, or how it came to be known.\n- Not established in this ayah: who the man is whom the believer defends."
+    },
+    {
+      "anchor": "warnings-from-the-past",
+      "position": 2,
+      "title_en": "Warnings from the past",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 40,
+          "from": 30,
+          "to": 35
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The believer said that he feared for them a day like the day of the factions, like the fate of the people of Nuh, Ad and Thamud and those after them, and that God does not wish injustice for His servants.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 30,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He said that he feared for them the day of mutual calling, the day when they would turn back, with no protector for them from God, and that whoever God lets go astray has no guide.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 32,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He said that Yusuf had come to them before with clear proofs, yet they remained in doubt about what he brought, and when he died they said that God would never send a messenger after him, and that thus God lets go astray the transgressor, the doubter.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 34,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He said of those who dispute God's signs without any authority that this is greatly hateful to God and to those who believe, and that thus God seals every arrogant, tyrannical heart.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The believer warned them of a day like the day of the factions, like the fate of the people of Nuh, Ad and Thamud [c1]. He spoke of the day when they would turn back with no protector from God [c2]. He said that Yusuf had come to them before with clear proofs, yet they remained in doubt [c3].",
+      "body_md": "The believer said that he feared for them a day like the day of the factions, like the fate of the people of Nuh, Ad and Thamud and those after them, and that God does not wish injustice for His servants [c1]. He said that he feared for them the day of mutual calling, the day when they would turn back, with no protector for them from God, and that whoever God lets go astray has no guide [c2]. He said that Yusuf had come to them before with clear proofs, yet they remained in doubt about what he brought, and when he died they said that God would never send a messenger after him, and that thus God lets go astray the transgressor, the doubter [c3]. He said of those who dispute God's signs without any authority that this is greatly hateful to God and to those who believe, and that thus God seals every arrogant, tyrannical heart [c4].",
+      "deep_md": "The believer names earlier peoples as warnings [c1] and then speaks of Yusuf [c3]. The ayah does not say which Yusuf is meant beyond the name, nor when he came to them [c3].",
+      "kids_md": "The believer reminded them of the people of Nuh, Ad and Thamud [c1]. He said that Yusuf had come to them with clear proofs, yet they stayed in doubt [c3]. He said that God does not wish injustice for His servants [c1].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the believer's warnings begin with earlier peoples and end with a messenger whose proofs they doubted [c1][c3]. Another is that he describes those who dispute God's signs without authority as greatly hated by God and by the believers [c4].",
+      "unknowns_md": "- Not established: which Yusuf is meant; the ayah gives only the name and says that he came with clear proofs.\n- Not established: when Yusuf came to them, or how long he was among them.\n- Not established: what the day of the factions or the day of mutual calling mean beyond the words of the ayat."
+    },
+    {
+      "anchor": "follow-me",
+      "position": 3,
+      "title_en": "Follow me",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 40,
+          "from": 38,
+          "to": 45
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "He said, my people, follow me, I will guide you to the way of right conduct, this life is only enjoyment and the Hereafter is the home of settlement, whoever does an evil deed is repaid only the like of it, while whoever does righteous work, male or female, and is a believer, those enter the Garden, provided for without reckoning.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 38,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He asked why he called them to salvation while they called him to the Fire, said that they called him to disbelieve in God and to associate with Him what he had no knowledge of, while he called them to the Almighty, the Forgiving, and said that what they called him to has no claim in this world or the Hereafter, that their return is to God, and that the transgressors are the companions of the Fire.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 41,
+              "to": 43
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He said that they would remember what he told them, and that he committed his affair to God, who sees His servants.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 44,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God protected him from the evil of what they plotted, and the worst punishment enveloped the family of Fir'awn.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 45,
+              "to": 45
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The believer asked them to follow him, and said that he would guide them to the way of right conduct [c1]. He said that he called them to the Almighty, the Forgiving, while they called him to the Fire [c2]. He committed his affair to God, who protected him from the evil of what they plotted [c3][c4].",
+      "body_md": "He said, my people, follow me, I will guide you to the way of right conduct, this life is only enjoyment and the Hereafter is the home of settlement, whoever does an evil deed is repaid only the like of it, while whoever does righteous work, male or female, and is a believer, those enter the Garden, provided for without reckoning [c1]. He asked why he called them to salvation while they called him to the Fire, said that they called him to disbelieve in God and to associate with Him what he had no knowledge of, while he called them to the Almighty, the Forgiving, and said that what they called him to has no claim in this world or the Hereafter, that their return is to God, and that the transgressors are the companions of the Fire [c2]. He said that they would remember what he told them, and that he committed his affair to God, who sees His servants [c3]. God protected him from the evil of what they plotted, and the worst punishment enveloped the family of Fir'awn [c4].",
+      "deep_md": "The believer speaks of this life as enjoyment and of the Hereafter as the home of settlement [c1]. The pronoun in the words God protected him is not spelled out, and the ayah does not say whom it refers to beyond the speaker [c4].",
+      "kids_md": "The believer asked his people to follow him [c1]. He said that he called them to the Almighty, the Forgiving [c2]. He committed his affair to God, who sees His servants [c3]. God protected him from the evil of what they plotted [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the believer ends by committing his affair to God and that the ayah then says God protected him [c3][c4]. Another is that he contrasts calling to the Garden and calling to the Fire [c1][c2].",
+      "unknowns_md": "- Not established: what became of the believer after these words, beyond the statement that God protected him from the evil of what they plotted.\n- Not established: who is meant by him in the words God protected him; the ayah leaves it open.\n- Not established: whether the people answered him, or how."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: later works give the believer a name, and the works disagree on it.",
+    "Which Yusuf is meant in the believer's words is not stated by the Quran beyond the name.",
+    "Hadith to add later: reports about the believer from the family of Fir'awn, with a named grader for each; none is used here."
+  ]
+}

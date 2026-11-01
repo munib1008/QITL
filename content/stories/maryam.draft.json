@@ -1,0 +1,517 @@
+{
+  "slug": "maryam",
+  "title_en": "Maryam",
+  "title_ar": "مريم",
+  "subject": {
+    "type": "person",
+    "event_slug": "maryam"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "cared-for-in-the-sanctuary",
+      "position": 1,
+      "title_en": "Cared for in the sanctuary",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 3,
+          "from": 36,
+          "to": 37
+        },
+        {
+          "surah": 3,
+          "from": 44,
+          "to": 44
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Her mother named her Maryam and placed her and her offspring in God's protection from Satan.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Her Lord accepted her with a good acceptance and made her grow with a good growth.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Zakariyya became her guardian.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Whenever Zakariyya came in to her in the mihrab he found provision with her, and when he asked how she came by it, she said it was from God, who gives provision to whom He wills without reckoning.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God told the listener that the account of the casting of their pens over which of them would take Maryam in his care is part of the news of the unseen that He reveals, and that the listener was not with them when they cast their pens or when they disputed.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 44,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Her mother named her Maryam and placed her in God's protection from Satan [c1]. Her Lord accepted her with a good acceptance, and Zakariyya became her guardian [c2][c3]. When he found provision with her and asked about it, she said it was from God [c4].",
+      "body_md": "Her mother named her Maryam and placed her and her offspring in God's protection from Satan [c1]. Her Lord accepted her with a good acceptance and made her grow with a good growth [c2]. Zakariyya became her guardian [c3]. Whenever Zakariyya came in to her in the mihrab he found provision with her, and when he asked how she came by it, she said it was from God, who gives provision to whom He wills without reckoning [c4]. God told the listener that the account of the casting of their pens over which of them would take Maryam in his care is part of the news of the unseen that He reveals, and that the listener was not with them when they cast their pens or when they disputed [c5].",
+      "deep_md": "The ayat tell of her guardian but not of her age or her home [c3]. The verb for making Zakariyya her guardian is read in more than one way in the recitations, and the draft says only that he became her guardian [c3]. The account of the casting of pens is given as news of the unseen [c5].",
+      "kids_md": "Her mother named her Maryam and asked God to protect her [c1]. Her Lord accepted her well, and Zakariyya took care of her [c2][c3]. When he found provision with her and asked where it came from, she said it was from God [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that her answer to Zakariyya looks to God as the one who gives provision without reckoning [c4]. Another is that the passage presents her upbringing as God's acceptance and growth [c2].",
+      "unknowns_md": "- Not established: Maryam's age when she was cared for, or where she lived.\n- Not established: what the mihrab was, or what the provision was; the ayah says only that Zakariyya found provision with her.\n- Not established: how the casting of pens decided the matter, or who took part in it.\n- Not established: whether the Lord or Zakariyya is the subject of the verb for making him her guardian; the recitations differ."
+    },
+    {
+      "anchor": "the-angels-speak-to-her",
+      "position": 2,
+      "title_en": "The angels speak to her",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 3,
+          "from": 42,
+          "to": 43
+        },
+        {
+          "surah": 3,
+          "from": 45,
+          "to": 47
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The angels said that God had chosen her and purified her and chosen her above the women of the worlds.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They told her to be devoutly obedient to her Lord, to prostrate and to bow with those who bow.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 43,
+              "to": 43
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The angels said that God gave her good news of a word from Him, whose name is the Messiah, Isa, son of Maryam, honoured in this world and in the Hereafter and among those brought near.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 45,
+              "to": 45
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The angels said that he would speak to people in the cradle and in maturity, and be among the righteous.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 46,
+              "to": 46
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "She asked how she could have a child when no human being had touched her, and the answer was that God creates what He wills, and when He decides a matter He says to it only that it should be, and it is.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 47,
+              "to": 47
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The angels told Maryam that God had chosen and purified her [c1]. They gave her good news of a word from God whose name is the Messiah, Isa, son of Maryam [c3]. She asked how she could have a child when no human being had touched her, and was told that God creates what He wills [c5].",
+      "body_md": "The angels said that God had chosen her and purified her and chosen her above the women of the worlds [c1]. They told her to be devoutly obedient to her Lord, to prostrate and to bow with those who bow [c2]. The angels said that God gave her good news of a word from Him, whose name is the Messiah, Isa, son of Maryam, honoured in this world and in the Hereafter and among those brought near [c3]. The angels said that he would speak to people in the cradle and in maturity, and be among the righteous [c4]. She asked how she could have a child when no human being had touched her, and the answer was that God creates what He wills, and when He decides a matter He says to it only that it should be, and it is [c5].",
+      "deep_md": "The angels' words are given in parts: a choosing and a command to worship [c1][c2], and the news of the child [c3][c4]. The ayat call the child a word from God and give his name and title [c3].",
+      "kids_md": "The angels told Maryam that God had chosen her [c1]. They gave her good news of a child, Isa, son of Maryam [c3]. She asked how she could have a child, and was told that God creates what He wills [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage joins the choosing of Maryam to a call to worship [c1][c2]. Another is that her question is answered by pointing to what God wills [c5].",
+      "unknowns_md": "- Not established: how the angels spoke to her, or how many came.\n- Not established: the sense in which she was chosen above the women of the worlds; the ayah says only that God chose her.\n- Not established: how old the child would be at maturity; the ayah uses a word for the age of full maturity and gives no number.\n- Not established: how the answer to her question was given, or when."
+    },
+    {
+      "anchor": "the-spirit-comes-to-her",
+      "position": 3,
+      "title_en": "The spirit comes to her",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 19,
+          "from": 16,
+          "to": 21
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran tells the listener to mention Maryam in the Book, when she withdrew from her family to an eastern place.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 16,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "She placed a screen between herself and them, and God sent His spirit to her, which appeared to her as a human being.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "She said that she sought refuge from him with the Merciful, if he was mindful of God.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He said that he was only a messenger of her Lord, sent to give her a pure boy.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "She asked how she could have a boy when no human being had touched her and she had not been unchaste.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "He said that it would be so, that her Lord had said it was easy for Him, that He would make the boy a sign for the people and a mercy from Him, and that it was a matter decreed.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Maryam withdrew from her family to an eastern place and placed a screen between herself and them [c1][c2]. God sent His spirit to her, and she sought refuge with the Merciful [c2][c3]. He said that he was a messenger of her Lord, sent to give her a pure boy, and that it was easy for God [c4][c6].",
+      "body_md": "The Quran tells the listener to mention Maryam in the Book, when she withdrew from her family to an eastern place [c1]. She placed a screen between herself and them, and God sent His spirit to her, which appeared to her as a human being [c2]. She said that she sought refuge from him with the Merciful, if he was mindful of God [c3]. He said that he was only a messenger of her Lord, sent to give her a pure boy [c4]. She asked how she could have a boy when no human being had touched her and she had not been unchaste [c5]. He said that it would be so, that her Lord had said it was easy for Him, that He would make the boy a sign for the people and a mercy from Him, and that it was a matter decreed [c6].",
+      "deep_md": "The ayat say that God sent His spirit and that it appeared to her as a human being, and they add no description beyond that [c2]. The speaker is called a messenger of her Lord and is not named in these ayat [c4].",
+      "kids_md": "Maryam went away from her family to an eastern place [c1]. God sent His spirit to her [c2]. He told her that he was a messenger of her Lord, sent to give her a pure boy [c4]. He said that this was easy for God [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Maryam first sought refuge with the Merciful, then asked how it could be [c3][c5]. Another is that the answer given to her is that the matter is easy for God [c6].",
+      "unknowns_md": "- Not established: where the eastern place was, or why she withdrew.\n- Not established: what the spirit that was sent is. Named in later tradition, not in the Quranic text: the spirit is identified as Jibril.\n- Not established: anything about the way the spirit appeared beyond the words of the ayah.\n- Not established: Maryam's age at this time."
+    },
+    {
+      "anchor": "the-birth",
+      "position": 4,
+      "title_en": "The birth",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 19,
+          "from": 22,
+          "to": 26
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Maryam conceived him and withdrew with him to a far place.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The pains of childbirth brought her to the trunk of the palm tree, and she said that she wished she had died before this and had become something forgotten and out of mind.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "A voice called to her from below her, telling her not to grieve, for her Lord had placed beneath her a sariyy, a word commonly read as a stream.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "It told her to shake the trunk of the palm toward her so that fresh ripe dates would fall on her, and to eat, to drink and to be content.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 25,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "It told her that if she saw any human being she should say that she had vowed a fast to the Merciful and would not speak that day to any person.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Maryam conceived and withdrew to a far place [c1]. The pains of childbirth brought her to the trunk of a palm tree, and she wished she had died before this [c2]. A voice told her not to grieve and told her to shake the palm so that dates would fall, and to eat and drink [c3][c4].",
+      "body_md": "Maryam conceived him and withdrew with him to a far place [c1]. The pains of childbirth brought her to the trunk of the palm tree, and she said that she wished she had died before this and had become something forgotten and out of mind [c2]. A voice called to her from below her, telling her not to grieve, for her Lord had placed beneath her a sariyy, a word commonly read as a stream [c3]. It told her to shake the trunk of the palm toward her so that fresh ripe dates would fall on her, and to eat, to drink and to be content [c4]. It told her that if she saw any human being she should say that she had vowed a fast to the Merciful and would not speak that day to any person [c5].",
+      "deep_md": "The ayah does not say who called to her from below, and the word sariyy is read as a stream or as a noble person [c3]. The instruction about the fast says that she would not speak that day to any person [c5].",
+      "kids_md": "Maryam went to a far place [c1]. She came to the trunk of a palm tree [c2]. A voice told her not to be sad, and told her to shake the palm so that fresh dates would fall on her, and to eat and drink [c3][c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage places her wish to have died beside a voice that tells her not to grieve and gives her food and drink [c2][c3][c4]. Another is that the instruction to say she had vowed a fast to the Merciful gives her words for anyone she meets [c5].",
+      "unknowns_md": "- Not established: where the far place was, how far it was, or how long the labour lasted.\n- Not established: who called to her from below; the ayah does not name the caller, and the recitations read the words in more than one way.\n- Not established: whether sariyy means a stream or a noble person; the word can bear either sense.\n- Not established: the kind of fast, or how long she kept it; the ayah says only that she would not speak to any person that day."
+    },
+    {
+      "anchor": "before-her-people",
+      "position": 5,
+      "title_en": "Before her people",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 19,
+          "from": 27,
+          "to": 34
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "She came to her people carrying him, and they said that she had done something grave, and called her sister of Harun, and said that her father was not a man of evil and her mother was not unchaste.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 27,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "She pointed to him, and they asked how they could speak to one who was a child in the cradle.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He said that he was a servant of God, that God had given him the Book and made him a prophet, had made him blessed wherever he might be, had enjoined on him prayer and almsgiving as long as he lived, had made him dutiful to his mother, and had not made him a wretched tyrant, and that peace was upon him the day he was born, the day he dies and the day he is raised alive.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 30,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The Quran says that this is Isa, son of Maryam, a statement of the truth about which they are in doubt.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 34,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Maryam came to her people carrying the child, and they said that she had done something grave [c1]. She pointed to him, and they asked how they could speak to a child in the cradle [c2]. He said that he was a servant of God, who had given him the Book and made him a prophet [c3]. The Quran says that this is Isa, son of Maryam [c4].",
+      "body_md": "She came to her people carrying him, and they said that she had done something grave, and called her sister of Harun, and said that her father was not a man of evil and her mother was not unchaste [c1]. She pointed to him, and they asked how they could speak to one who was a child in the cradle [c2]. He said that he was a servant of God, that God had given him the Book and made him a prophet, had made him blessed wherever he might be, had enjoined on him prayer and almsgiving as long as he lived, had made him dutiful to his mother, and had not made him a wretched tyrant, and that peace was upon him the day he was born, the day he dies and the day he is raised alive [c3]. The Quran says that this is Isa, son of Maryam, a statement of the truth about which they are in doubt [c4].",
+      "deep_md": "The people call her sister of Harun, and the ayat do not say which Harun is meant [c1]. The words from the cradle are the child's own, recorded in the first person, and the ayah names him afterwards [c3][c4].",
+      "kids_md": "Maryam came to her people carrying the child, and they were upset with her [c1]. She pointed to him [c2]. He said that he was a servant of God, who had given him the Book and made him a prophet [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Maryam answers her people by pointing to the child and that the child speaks of himself as a servant of God [c2][c3]. Another is that the passage closes by calling the account a statement of the truth about which they are in doubt [c4].",
+      "unknowns_md": "- Not established: which Harun the people meant by calling her sister of Harun; the ayah does not say whether this is the Harun named elsewhere or another.\n- Not established: the age of the child when he spoke, beyond the words in the cradle.\n- Not established: who else was present, or what the people did next.\n- Not established: how the people knew her father and mother."
+    },
+    {
+      "anchor": "a-sign-for-the-worlds",
+      "position": 6,
+      "title_en": "A sign for the worlds",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 4,
+          "from": 156,
+          "to": 156
+        },
+        {
+          "surah": 21,
+          "from": 91,
+          "to": 91
+        },
+        {
+          "surah": 23,
+          "from": 50,
+          "to": 50
+        },
+        {
+          "surah": 66,
+          "from": 12,
+          "to": 12
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God says of the woman who guarded her chastity that He breathed into her of His spirit and made her and her son a sign for the worlds.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 91,
+              "to": 91
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God made the son of Maryam and his mother a sign, and gave them refuge on high ground with a place of rest and flowing water.",
+          "verses": [
+            {
+              "surah": 23,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The ayah mentions Maryam, daughter of Imran, who guarded her chastity, and says that God breathed into it of His spirit and that she confirmed the words of her Lord and His books and was among the devout.",
+          "verses": [
+            {
+              "surah": 66,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The Quran charges some people with disbelief and with speaking a great slander against Maryam.",
+          "verses": [
+            {
+              "surah": 4,
+              "from": 156,
+              "to": 156
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God says that He made the woman who guarded her chastity and her son a sign for the worlds [c1]. He gave the son of Maryam and his mother refuge on high ground [c2]. Maryam, daughter of Imran, confirmed the words of her Lord and His books and was among the devout [c3].",
+      "body_md": "God says of the woman who guarded her chastity that He breathed into her of His spirit and made her and her son a sign for the worlds [c1]. God made the son of Maryam and his mother a sign, and gave them refuge on high ground with a place of rest and flowing water [c2]. The ayah mentions Maryam, daughter of Imran, who guarded her chastity, and says that God breathed into it of His spirit and that she confirmed the words of her Lord and His books and was among the devout [c3]. The Quran charges some people with disbelief and with speaking a great slander against Maryam [c4].",
+      "deep_md": "The ayat that name Maryam elsewhere call her and her son a sign [c1][c2]. In the ayah about Maryam, daughter of Imran, the pronoun in the words God breathed into it is not spelled out, and the ayah leaves it without comment [c3]. A separate ayah charges some people with a great slander against her [c4].",
+      "kids_md": "God made Maryam and her son a sign for the worlds [c1]. He gave them refuge on high ground with flowing water [c2]. Maryam, daughter of Imran, confirmed the words of her Lord and was among the devout [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passages present Maryam as faithful and devout [c3]. Another is that they place the slander spoken against her beside God's words about her [c3][c4].",
+      "unknowns_md": "- Not established: where the high ground was; the ayah gives no name.\n- Not established: what the pronoun in the words God breathed into it refers to; the ayah leaves it open.\n- Not established: who the people were who spoke the slander, or what they said.\n- Not established: which books are meant by her Lord's books."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: the spirit that was sent to her is identified as Jibril, and later works give details of her age, her place and the birth.",
+    "The Quran uses the words sister of Harun for her; which Harun is meant is not settled by the text.",
+    "Hadith to add later: reports about Maryam and her place among women, with a named grader for each; none is used here."
+  ]
+}

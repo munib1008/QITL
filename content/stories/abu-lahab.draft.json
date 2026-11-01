@@ -1,0 +1,98 @@
+{
+  "slug": "abu-lahab",
+  "title_en": "Abu Lahab",
+  "title_ar": "أبو لهب",
+  "subject": {
+    "type": "person",
+    "event_slug": "abu-lahab"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "abu-lahab-and-his-wife",
+      "position": 1,
+      "title_en": "Abu Lahab and his wife",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 111,
+          "from": 1,
+          "to": 5
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran says that the hands of Abu Lahab have perished, and that he has perished.",
+          "verses": [
+            {
+              "surah": 111,
+              "from": 1,
+              "to": 1
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "His wealth and what he earned did not avail him.",
+          "verses": [
+            {
+              "surah": 111,
+              "from": 2,
+              "to": 2
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He will burn in a fire of flame.",
+          "verses": [
+            {
+              "surah": 111,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "His wife is mentioned as the carrier of firewood.",
+          "verses": [
+            {
+              "surah": 111,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Her neck has a rope of palm fibre around it.",
+          "verses": [
+            {
+              "surah": 111,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran says that the hands of Abu Lahab have perished, and that he has perished [c1]. His wealth and what he earned did not avail him [c2]. It says that he will burn in a fire of flame, and it mentions his wife as the carrier of firewood [c3][c4].",
+      "body_md": "The Quran says that the hands of Abu Lahab have perished, and that he has perished [c1]. His wealth and what he earned did not avail him [c2]. He will burn in a fire of flame [c3]. His wife is mentioned as the carrier of firewood [c4]. Her neck has a rope of palm fibre around it [c5].",
+      "deep_md": "The passage names him as Abu Lahab and gives no other name [c1]. It speaks of his wife in the last ayat, and the ayat do not say what the carrier of firewood refers to [c4][c5].",
+      "kids_md": "The Quran says that Abu Lahab's wealth and what he earned did not help him [c2]. His wife is called the carrier of firewood [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage says wealth and earnings did not avail him [c2]. Another is that the passage speaks of his wife as well as of him [c4].",
+      "unknowns_md": "- Not established in these ayat: who Abu Lahab was, what his own name was, or why he is named in this way. Named in later tradition, not in the Quranic text: he is identified as an uncle of Muhammad, and his own name is given as Abd al-Uzza.\n- Not established: the wife's name, or what the carrier of firewood means; the phrase can be read literally or figuratively.\n- Not established: the occasion on which the passage was revealed; it names no event.\n- Not established: what the rope of palm fibre signifies."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: the man is identified with an uncle of Muhammad, his wife is given a name, and the occasion of the passage is told in later works.",
+    "Hadith to add later: reports about the occasion of the passage, with a named grader for each; none is used here."
+  ]
+}

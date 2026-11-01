@@ -1,0 +1,312 @@
+{
+  "slug": "musa-and-the-servant",
+  "title_en": "Musa and the servant of God",
+  "title_ar": null,
+  "subject": {
+    "type": "person",
+    "event_slug": "musa-and-the-servant"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-meeting-place-of-the-seas",
+      "position": 1,
+      "title_en": "The meeting place of the seas",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 18,
+          "from": 60,
+          "to": 64
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Musa told his young companion that he would not stop until he reached the meeting place of the seas, or went on for a long time.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 60,
+              "to": 60
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When they reached the place where the seas met, they forgot their fish, and it made its way into the sea like a tunnel.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 61,
+              "to": 61
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When they had passed on, Musa told his companion to bring their meal, saying that they had met weariness on this journey.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 62,
+              "to": 62
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The companion said that when they had taken shelter at the rock, he had forgotten the fish, that only Satan had made him forget to mention it, and that the fish had taken its way into the sea in a strange way.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 63,
+              "to": 63
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Musa said that this was what they had been seeking, and they went back, following their own tracks.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 64,
+              "to": 64
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Musa told his young companion that he would not stop until he reached the meeting place of the seas [c1]. They forgot their fish there, and it made its way into the sea [c2]. When Musa asked for their meal, the companion said that only Satan had made him forget to mention the fish [c3][c4]. Musa said that this was what they had been seeking, and they went back [c5].",
+      "body_md": "Musa told his young companion that he would not stop until he reached the meeting place of the seas, or went on for a long time [c1]. When they reached the place where the seas met, they forgot their fish, and it made its way into the sea like a tunnel [c2]. When they had passed on, Musa told his companion to bring their meal, saying that they had met weariness on this journey [c3]. The companion said that when they had taken shelter at the rock, he had forgotten the fish, that only Satan had made him forget to mention it, and that the fish had taken its way into the sea in a strange way [c4]. Musa said that this was what they had been seeking, and they went back, following their own tracks [c5].",
+      "deep_md": "The Arabic form for the seas in the meeting place is a dual form, and the ayat do not say which seas are meant or where [c1]. The ayah gives the fish's way as like a tunnel and leaves the manner open [c2].",
+      "kids_md": "Musa told his young companion that he would not stop until he reached the meeting place of the seas [c1]. They forgot their fish, and it made its way into the sea [c2]. They went back, following their own tracks [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage links the forgetting to Satan's doing, in the companion's words [c4]. Another is that Musa takes what happened to the fish to be what they had been seeking [c5].",
+      "unknowns_md": "- Not established: the place of the meeting of the seas, or which seas are meant.\n- Not established: the kind of fish, or why they carried it; the ayah calls it their fish.\n- Not established: the name of the young companion, or his relation to Musa. Named in later tradition, not in the Quranic text: he is called Yusha.\n- Not established: how long Musa meant by going on for a long time; the Arabic word is huqub, and the ayah gives no length."
+    },
+    {
+      "anchor": "the-servant-and-what-he-did",
+      "position": 2,
+      "title_en": "The servant and what he did",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 18,
+          "from": 65,
+          "to": 82
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "They found a servant from among God's servants, to whom God had given mercy from Himself and whom He had taught knowledge from Himself.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 65,
+              "to": 65
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Musa asked him whether he might follow him, so that he would teach him some of what he had been taught of right guidance.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 66,
+              "to": 66
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The servant said that Musa would not be able to bear with him patiently, and asked how he could be patient about what he had no full knowledge of.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 67,
+              "to": 68
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Musa said that he would find him patient, if God willed, and would not disobey him in any matter.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 69,
+              "to": 69
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The servant said that if he followed him he should not ask him about anything until he himself spoke to him of it.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They set out, and when they boarded the ship, he made a hole in it, and Musa asked whether he had done it to drown its people and said that he had done a grave thing.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 71,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The servant asked whether he had not said that Musa could not bear with him patiently, and Musa asked him not to hold him to account for what he had forgotten and not to burden him with hardship in his affair.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 72,
+              "to": 73
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "They went on until they met a boy, and the servant killed him, and Musa asked whether he had killed an innocent soul who had killed no one and said that he had done a terrible thing.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 74,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "The servant repeated his earlier words, and Musa said that if he asked him about anything after this the servant need not keep him as a companion, since he had reached an excuse from him.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 75,
+              "to": 76
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "They went on until they came to the people of a town and asked them for food, but they refused to host them, and there they found a wall about to fall, and the servant set it upright, and Musa said that if he had wished he could have taken payment for it.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 77,
+              "to": 77
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "The servant said that this was the parting between them, and that he would inform Musa of the meaning of what he had been unable to bear patiently.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 78,
+              "to": 78
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "He said that the ship belonged to poor people who worked at sea, that he wished to damage it, since behind them was a king who seized every ship by force.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 79,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "He said that the boy's parents were believers and that, speaking in the plural, he feared the boy would burden them with transgression and disbelief.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 80,
+              "to": 80
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "Again in the plural, he said that they wished that the parents' Lord would give them in exchange one better than the boy in purity and nearer in mercy.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 81,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c15",
+          "statement_en": "He said that the wall belonged to orphan boys in the city, that beneath it was a treasure belonging to them, and that their father had been righteous, so your Lord wished them to reach their maturity and bring out their treasure, as a mercy from your Lord.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 82,
+              "to": 82
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c16",
+          "statement_en": "He said that he had not done it of his own command, and that this was the meaning of what Musa had been unable to bear patiently.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 82,
+              "to": 82
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Musa found a servant of God to whom God had given mercy and knowledge, and asked to follow him [c1][c2]. The servant said that Musa would not be able to be patient, and told him not to ask about anything until he himself spoke of it [c3][c5]. On the way the servant made a hole in a ship, killed a boy and set upright a wall [c6][c8][c10]. At the parting he explained each of them [c11][c12][c13][c15].",
+      "body_md": "They found a servant from among God's servants, to whom God had given mercy from Himself and whom He had taught knowledge from Himself [c1]. Musa asked him whether he might follow him, so that he would teach him some of what he had been taught of right guidance [c2]. The servant said that Musa would not be able to bear with him patiently, and asked how he could be patient about what he had no full knowledge of [c3]. Musa said that he would find him patient, if God willed, and would not disobey him in any matter [c4]. The servant said that if he followed him he should not ask him about anything until he himself spoke to him of it [c5]. They set out, and when they boarded the ship, he made a hole in it, and Musa asked whether he had done it to drown its people and said that he had done a grave thing [c6]. The servant asked whether he had not said that Musa could not bear with him patiently, and Musa asked him not to hold him to account for what he had forgotten and not to burden him with hardship in his affair [c7]. They went on until they met a boy, and the servant killed him, and Musa asked whether he had killed an innocent soul who had killed no one and said that he had done a terrible thing [c8]. The servant repeated his earlier words, and Musa said that if he asked him about anything after this the servant need not keep him as a companion, since he had reached an excuse from him [c9]. They went on until they came to the people of a town and asked them for food, but they refused to host them, and there they found a wall about to fall, and the servant set it upright, and Musa said that if he had wished he could have taken payment for it [c10]. The servant said that this was the parting between them, and that he would inform Musa of the meaning of what he had been unable to bear patiently [c11]. He said that the ship belonged to poor people who worked at sea, that he wished to damage it, since behind them was a king who seized every ship by force [c12]. He said that the boy's parents were believers and that, speaking in the plural, he feared the boy would burden them with transgression and disbelief [c13]. Again in the plural, he said that they wished that the parents' Lord would give them in exchange one better than the boy in purity and nearer in mercy [c14]. He said that the wall belonged to orphan boys in the city, that beneath it was a treasure belonging to them, and that their father had been righteous, so your Lord wished them to reach their maturity and bring out their treasure, as a mercy from your Lord [c15]. He said that he had not done it of his own command, and that this was the meaning of what Musa had been unable to bear patiently [c16].",
+      "deep_md": "The ayah calls him only a servant from among God's servants, and does not call him a prophet or a messenger [c1]. The knowledge he was taught is called knowledge from God's own presence, in the Arabic min ladunna [c1]. Each act is explained only afterwards, and the servant says that he did not do it of his own command [c16]. The servant speaks in the plural in the words we feared and we wished, and the ayat do not say who is meant [c13][c14]. The Arabic for behind them can mean ahead of them or behind them, and the ayah does not say which [c12].",
+      "kids_md": "Musa found a servant of God who had been taught knowledge by God [c1]. Musa asked to follow him [c2]. The servant told him not to ask about anything until he spoke of it himself [c5]. Later the servant explained that the ship belonged to poor people who worked at sea [c12]. He explained that the wall belonged to orphan boys and that a treasure lay beneath it [c15].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage joins a request to learn with a promise of patience, made with the words if God willed [c2][c4]. Another is that each act is explained only afterwards, and that the servant says he did not act of his own command [c12][c16].",
+      "unknowns_md": "- Not established: the servant's name, where he was found, or how Musa knew to seek him.\n- Named in later tradition, not in the Quranic text: the servant is called al-Khidr.\n- Not established: whether he was a prophet; the ayah says only that God gave him mercy and taught him knowledge.\n- Not established: what the knowledge was, beyond the actions that follow.\n- Not established: the kind of ship, where it sailed, how many were aboard, or the king's name or land.\n- Not established: whether the hole sank the ship or only damaged it; the servant says only that he wished to damage it.\n- Not established: the boy's name or age, how the servant killed him, how he knew what he says he feared, who is meant by the plural we, or what became of the parents.\n- Not established: the name of the town or its people, what the treasure was, or how the servant knew what lay beneath the wall.\n- Not established: what happened between Musa and the servant after the parting."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: the servant is called al-Khidr and the young companion Yusha, and later works name the boy, the king and the town.",
+    "Whether the servant was a prophet is not stated; the Quran calls him only a servant from among God's servants.",
+    "Hadith to add later: reports about Musa and the servant, including accounts of the meeting place, with a named grader for each; none is used here."
+  ]
+}

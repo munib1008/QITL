@@ -1,0 +1,118 @@
+{
+  "slug": "haman",
+  "title_en": "Haman",
+  "title_ar": "هامان",
+  "subject": {
+    "type": "person",
+    "event_slug": "haman"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "named-with-firawn",
+      "position": 1,
+      "title_en": "Named with Fir'awn",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 28,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 28,
+          "from": 8,
+          "to": 8
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God wished to show Fir'awn, Haman and their forces, through those who were weakened, what they feared.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 6,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The family of Fir'awn picked up the child, so that he would become an enemy and a source of grief to them, and Fir'awn, Haman and their forces were in error.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 8,
+              "to": 8
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God wished to show Fir'awn, Haman and their forces what they feared [c1]. The ayah names Haman among those who were in error when the family of Fir'awn picked up the child [c2].",
+      "body_md": "God wished to show Fir'awn, Haman and their forces, through those who were weakened, what they feared [c1]. The family of Fir'awn picked up the child, so that he would become an enemy and a source of grief to them, and Fir'awn, Haman and their forces were in error [c2].",
+      "deep_md": "In both ayat Haman is named after Fir'awn and before the forces [c1][c2]. The ayat do not give his office, and they do not say what he did [c1].",
+      "kids_md": "The Quran names Haman beside Fir'awn and their forces [c1][c2]. God wished to show them what they feared [c1].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the Quran names Haman among those who were in error [c2].",
+      "unknowns_md": "- Not established: Haman's office, his origin or his time.\n- Not established: what Haman did in these events.\n- Not established: what they feared, beyond the words of the ayah."
+    },
+    {
+      "anchor": "told-to-build",
+      "position": 2,
+      "title_en": "Told to build",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 28,
+          "from": 38,
+          "to": 38
+        },
+        {
+          "surah": 40,
+          "from": 36,
+          "to": 37
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Fir'awn told Haman to light a fire on clay and make him a lofty tower, so that he might climb up to the god of Musa, and said that he thought Musa a liar.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Fir'awn told Haman to build him a tower so that he might reach the ways, the ways of the heavens, and look at the god of Musa, and said that he thought Musa a liar.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 36,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Fir'awn told Haman to build him a lofty tower so that he might climb up to the god of Musa [c1][c2]. He said that he thought Musa a liar [c1].",
+      "body_md": "Fir'awn told Haman to light a fire on clay and make him a lofty tower, so that he might climb up to the god of Musa, and said that he thought Musa a liar [c1]. Fir'awn told Haman to build him a tower so that he might reach the ways, the ways of the heavens, and look at the god of Musa, and said that he thought Musa a liar [c2].",
+      "deep_md": "One passage tells Haman to light a fire on clay and the other to build [c1][c2]. Neither says whether Haman did it or whether the tower was finished [c2].",
+      "kids_md": "Fir'awn told Haman to build him a lofty tower [c1]. He wanted to climb up to the god of Musa [c1].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passages record an order given to Haman and not his answer [c1][c2].",
+      "unknowns_md": "- Not established: whether Haman built the tower, or how he answered.\n- Not established: what became of Haman."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: Haman is described as Fir'awn's minister or vizier, and later works discuss his origin and his end.",
+    "Whether Haman is a personal name or a title is not settled by the text.",
+    "Hadith to add later: reports about Haman, with a named grader for each; none is used here."
+  ]
+}
