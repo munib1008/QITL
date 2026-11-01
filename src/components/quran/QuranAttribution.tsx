@@ -4,7 +4,7 @@ import type { QuranManifest } from "@/content/quran";
  * Required wherever the imported Arabic appears: the source is named, its licence stated and tanzil.net linked so
  * readers can track changes (Tanzil text licence, CC BY 3.0, verbatim use only).
  */
-export function QuranAttribution({ src, className = "zq-meta" }: { src: QuranManifest | null; className?: string }) {
+export function QuranAttribution({ src, className = "zq-meta" }: { src: Pick<QuranManifest, "source" | "version"> | null; className?: string }) {
   if (!src) return null;
   return (
     // The licence attribution stays in English, as published by the source, in every interface language.

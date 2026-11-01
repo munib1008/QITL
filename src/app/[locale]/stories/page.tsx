@@ -7,6 +7,7 @@ import { Rosette } from "@/components/ui/icons";
 import { EmptyState } from "@/components/ui/misc";
 import { getServerSupabase } from "@/lib/supabase/server";
 import { englishContent } from "@/lib/i18n/locales";
+import { draftPreviewStrings } from "@/lib/i18n/modules/draftPreview";
 import { storiesStrings } from "@/lib/i18n/modules/prophets";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -49,6 +50,9 @@ export default async function StoriesIndex({ params }: { params: Promise<{ local
         ) : (
           <EmptyState label={<EvidenceLabel kind="unknown">{t.nonePublished}</EvidenceLabel>} title={t.emptyTitle}>
             <p>{t.emptyBody}</p>
+            <p>
+              <Link href="/drafts">{draftPreviewStrings(locale).storiesLink}</Link>
+            </p>
           </EmptyState>
         )}
         {outlines.length ? (

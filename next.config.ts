@@ -29,6 +29,8 @@ const config: NextConfig = {
   async headers() {
     return [
       { source: "/:path*", headers: securityHeaders },
+      // Draft preview: unreviewed AI-written drafts are never indexed (the pages also carry a robots meta tag).
+      ...["/drafts/:path*", "/ar/drafts/:path*", "/ur/drafts/:path*"].map((source) => ({ source, headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] })),
       { source: "/api/:path*", headers: [{ key: "Content-Security-Policy", value: API_CSP }] },
       { source: "/auth/:path*", headers: [{ key: "Content-Security-Policy", value: API_CSP }] },
       // The service worker script: its own policy governs the worker; it only fetches same-origin pages.
