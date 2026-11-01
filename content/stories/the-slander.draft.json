@@ -1,0 +1,206 @@
+{
+  "slug": "the-slander",
+  "title_en": "The slander and its refutation",
+  "title_ar": null,
+  "subject": {
+    "type": "seerah",
+    "event_slug": "the-slander"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The occasions of revelation (who the persons were, what happened) are not in the verses; they appear only under unknowns and uncertainties, as later tradition, with the hadith to add later. Pronouns the Arabic leaves open are left open. Chapters are a reading order, not a chronology. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "those-who-brought-the-lie",
+      "position": 1,
+      "title_en": "Those who brought the lie",
+      "event_slug": "the-slander",
+      "verses": [
+        {
+          "surah": 24,
+          "from": 11,
+          "to": 15
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Those who brought the ifk, a grave falsehood, were a group among those addressed.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They are told not to think it bad for them; rather it is good for them.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Each of them will have what he earned of sin, and the one who took the greater part of it upon himself has a great punishment.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The verse asks why, when they heard it, the believing men and women did not think well of themselves and say that this is a clear lie.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The verse asks why they did not bring four witnesses for it; since they did not bring the witnesses, those, in God's sight, are the liars.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Were it not for the favour of God upon them and His mercy, in this world and the hereafter, a great punishment would have touched them for what they plunged into.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "They received it with their tongues and said with their mouths what they had no knowledge of, and counted it light, while with God it is grave.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The verses say that a group among those addressed brought a grave falsehood, the ifk [c1]. They say that the believing men and women should have thought well and said that it is a clear lie [c4], and that, since the witnesses were not brought, those are the liars in God's sight [c5]. They say that without God's favour and mercy a great punishment would have touched them [c6].",
+      "body_md": "Those who brought the ifk, a grave falsehood, were a group among those addressed [c1]. They are told not to think it bad for them; rather it is good for them [c2]. Each of them will have what he earned of sin, and the one who took the greater part of it upon himself has a great punishment [c3].\n\nThe verse asks why, when they heard it, the believing men and women did not think well of themselves and say that this is a clear lie [c4]. It asks why they did not bring four witnesses for it; since they did not bring the witnesses, those, in God's sight, are the liars [c5].\n\nWere it not for the favour of God upon them and His mercy, in this world and the hereafter, a great punishment would have touched them for what they plunged into [c6]. They received it with their tongues and said with their mouths what they had no knowledge of, and counted it light, while with God it is grave [c7].",
+      "deep_md": "The verses name no person and give no content of the falsehood; they speak of a group, of each one's share, and of the one who took the greater part [c1][c3]. The passage turns from those who brought it to those who heard it, and asks what the hearers should have done [c4][c5]. It states in its own words that those who did not bring the witnesses are the liars in God's sight [c5]. It also speaks of passing on, with the tongue and the mouth, what one has no knowledge of, and of counting light what is grave with God [c7].",
+      "kids_md": "The verses say that a group brought a grave falsehood [c1]. They say that when the believers heard it they should have thought well and said that it is a clear lie [c4]. They say that what one has no knowledge of is grave with God, even if people count it light [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage turns attention from those who spread a falsehood to what those who hear it should do [c4]. Another is that it names saying what one has no knowledge of as grave with God [c7].",
+      "unknowns_md": "- Not established: what the falsehood said, whom it concerned, who the group was, who took the greater part of it, or when and where it happened. The verses name no one, and this draft names no one.\n- Not established: what 'think well of themselves' covers; the Arabic says 'of their own selves', and the verse does not say more.\n- The verse about the witnesses (24:13) is stated here as it is written, and the draft draws no further conclusion from it.\n- Named in later tradition, not in the Quranic text: an occasion for these verses, the person the falsehood concerned and the persons given as having spread it. None is used, and this draft names no one."
+    },
+    {
+      "anchor": "what-should-have-been-said",
+      "position": 2,
+      "title_en": "What should have been said",
+      "event_slug": "the-slander",
+      "verses": [
+        {
+          "surah": 24,
+          "from": 16,
+          "to": 20
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The verse asks why, when they heard it, they did not say that it is not for them to speak of this, glory be to God, this is a great slander.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 16,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God admonishes them never to return to the like of it, if they are believers.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God makes the signs clear to them, and God is knowing and wise.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Those who love that indecency should spread among those who believe have a painful punishment in this world and the hereafter; God knows and they do not know.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The verse repeats 'were it not for the favour of God upon you and His mercy', and says that God is kind and merciful.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The verses ask why the hearers did not say that it is not for them to speak of this, and that it is a great slander [c1]. God admonishes them never to return to the like of it, if they are believers [c2]. They end with God's favour and mercy [c5].",
+      "body_md": "The verse asks why, when they heard it, they did not say that it is not for them to speak of this, glory be to God, this is a great slander [c1].\n\nGod admonishes them never to return to the like of it, if they are believers [c2]. God makes the signs clear to them, and God is knowing and wise [c3].\n\nThose who love that indecency should spread among those who believe have a painful punishment in this world and the hereafter; God knows and they do not know [c4]. The passage ends by repeating that it is by the favour of God upon them and His mercy, and that God is kind and merciful [c5].",
+      "deep_md": "The passage gives words that the hearers might have said, and calls the falsehood a great slander [c1]. It then admonishes and turns to a wider warning about those who love that indecency should spread [c2][c4]. The verse about those who love that it spread speaks of them and not of those who brought the falsehood [c4]. The passage closes with favour and mercy, as it did in the earlier verses [c5].",
+      "kids_md": "The verses ask why the hearers did not say that it is not for them to speak of this [c1]. God admonishes them never to return to the like of it, if they are believers [c2]. God makes the signs clear, and God is knowing and wise [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage gives the hearers words to say as well as a warning [c1][c2]. Another is that it ends, as it began, by pointing to God's favour and mercy [c5].",
+      "unknowns_md": "- Not established: what 'indecency' refers to here, or how it relates to the falsehood of the previous chapter; the verse speaks of those who love that it spread.\n- Not established: who 'they' are who are admonished, beyond those addressed in the passage.\n- Not established: which 'signs' God makes clear.\n- Not established: how the punishment in this world and the hereafter is carried out; the verse says only that it is painful.\n- Named in later tradition, not in the Quranic text: the occasion and the persons concerned. None is used, and this draft names no one."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated reports on the occasion of these ayat, each with a named grader, to be added by an editor after review. None is used in this draft, and no name is given in it.",
+    "This story is drafted with the greatest restraint. It states what the verses say and the Quran's declaration in its own words (24:13), names no one, gives no content to the falsehood and draws no conclusion from the verses.",
+    "Named in later tradition, not in the Quranic text: the occasion of the passage, the person the falsehood concerned and the persons given as having spread it.",
+    "The sense of the Arabic ifk (a grave falsehood), of 'think well of themselves' (24:12) and of the word rendered 'indecency' (24:19) is for the reviewer.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

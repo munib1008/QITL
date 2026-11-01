@@ -1,0 +1,112 @@
+{
+  "slug": "blind-man-and-the-prophet",
+  "title_en": "The blind man who came",
+  "title_ar": null,
+  "subject": {
+    "type": "seerah",
+    "event_slug": "blind-man-and-the-prophet"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The occasions of revelation (who the persons were, what happened) are not in the verses; they appear only under unknowns and uncertainties, as later tradition, with the hadith to add later. Pronouns the Arabic leaves open are left open. Chapters are a reading order, not a chronology. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "he-frowned-and-turned-away",
+      "position": 1,
+      "title_en": "He frowned and turned away",
+      "event_slug": "blind-man-and-the-prophet",
+      "verses": [
+        {
+          "surah": 80,
+          "from": 1,
+          "to": 10
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The passage tells that someone frowned and turned away because the blind man came to him.",
+          "verses": [
+            {
+              "surah": 80,
+              "from": 1,
+              "to": 2
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The verse asks the one addressed what would let him know: perhaps the blind man might purify himself.",
+          "verses": [
+            {
+              "surah": 80,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He might also be reminded, and the reminder would benefit him.",
+          "verses": [
+            {
+              "surah": 80,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "As for the one who considers himself in no need, the one addressed attends to him.",
+          "verses": [
+            {
+              "surah": 80,
+              "from": 5,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "It is not upon the one addressed if that one does not purify himself.",
+          "verses": [
+            {
+              "surah": 80,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "As for the one who came to the one addressed striving, and he fears, the one addressed is distracted from him.",
+          "verses": [
+            {
+              "surah": 80,
+              "from": 8,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The passage tells that someone frowned and turned away because the blind man came to him [c1]. It says that the blind man might purify himself or be reminded, and the reminder would benefit him [c2][c3]. It speaks of the one who came striving, and fears, and from whom attention was turned [c6].",
+      "body_md": "The passage tells that someone frowned and turned away because the blind man came to him [c1].\n\nThe verse then asks the one addressed what would let him know: perhaps the blind man might purify himself [c2], or he might be reminded, and the reminder would benefit him [c3].\n\nAs for the one who considers himself in no need, the one addressed attends to him [c4]. It is not upon the one addressed if that one does not purify himself [c5]. And as for the one who came to the one addressed striving, and he fears, the one addressed is distracted from him [c6].",
+      "deep_md": "The passage begins by speaking of someone who frowned and turned away, and goes on to speak directly to the one addressed [c1][c2]. It sets one person beside another: one who considers himself in no need and is attended to, and one who came striving and fearing and is not [c4][c6]. It names the possible benefit to the blind man as purifying himself and being reminded [c2][c3], and says what is not upon the one addressed [c5].",
+      "kids_md": "The passage tells of a blind man who came, and of someone who frowned and turned away [c1]. It says that the blind man might have been reminded, and that the reminder would have helped him [c3]. It speaks of the one who came striving and fearing [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage turns attention toward the one who comes striving and fearing [c6]. Another is that it sets the one who considers himself in need of nothing beside the one who comes seeking [c4][c6].",
+      "unknowns_md": "- Not established: who the blind man is. The verses say only 'the blind man' and give no name.\n- Not established: who frowned and turned away. The first verses use a verb with 'he', and the verses that follow speak to 'you'; that they are the same person is an inference from the change of address, and the draft does not state it.\n- Not established: who the one is who considers himself in no need, where this took place, or when.\n- Named in later tradition, not in the Quranic text: the name of the blind man, the identity of the one who frowned and the occasion. None is used in the story texts, and this draft names no one."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated reports on the occasion of these ayat, on the identity of the blind man and on who is addressed, each with a named grader. None is used in this draft.",
+    "The verses do not say that the one who frowned and the one addressed are the same; the inventory title reads them so. A scholar should decide how the page words this, and whether it should name anyone.",
+    "The Arabic verb rendered 'purify himself' and the verb rendered 'be reminded' are kept close to the Arabic; their fuller sense is for the reviewer.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+ "note": "Anchors for the seerah drafts (branch mod/drafts-seerah): names and titles with the Arabic anchor that must occur in the ayat a chapter cites (typed as the Uthmani text spells the word, matched on the light normal form of src/lib/events/verify.ts). Names already defined by another batch with the same anchor (Spirit, Holy, Book, Musa, Isa, Adam, Hell) are not repeated here.",
+ "names": {
+  "Ramadan": "رمضان",
+  "Night": "ليلة",
+  "Power": "قدر",
+  "Throne": "عرش",
+  "Islam": "اسلم",
+  "Zayd": "زيد"
+ },
+ "numbers": {},
+ "guarded": {},
+ "titles_ar": {},
+ "common_capitalised": [],
+ "opening_words": [],
+ "tradition_names": []
+}

@@ -1,0 +1,80 @@
+{
+  "slug": "gradual-revelation",
+  "title_en": "The Quran sent down in parts",
+  "title_ar": null,
+  "subject": {
+    "type": "seerah",
+    "event_slug": "gradual-revelation"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The occasions of revelation (who the persons were, what happened) are not in the verses; they appear only under unknowns and uncertainties, as later tradition, with the hadith to add later. Pronouns the Arabic leaves open are left open. Chapters are a reading order, not a chronology. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "sent-down-in-stages",
+      "position": 1,
+      "title_en": "Sent down in stages",
+      "event_slug": "gradual-revelation",
+      "verses": [
+        {
+          "surah": 17,
+          "from": 106,
+          "to": 106
+        },
+        {
+          "surah": 25,
+          "from": 32,
+          "to": 32
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God says that He separated the Quran into parts so that the one addressed might recite it to the people over a period, and that He sent it down in stages.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 106,
+              "to": 106
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Those who disbelieved asked why the Quran was not sent down upon him all at once.",
+          "verses": [
+            {
+              "surah": 25,
+              "from": 32,
+              "to": 32
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The verse answers that it is so in order that God may make firm the heart of the one addressed with it, and says that God set it out in measured sequence.",
+          "verses": [
+            {
+              "surah": 25,
+              "from": 32,
+              "to": 32
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God says that He separated the Quran into parts, so that it might be recited to the people over a period [c1]. Those who disbelieved asked why it was not sent down all at once [c2], and the answer given is that God makes firm the heart of the one addressed with it [c3].",
+      "body_md": "God says that He separated the Quran into parts so that the one addressed might recite it to the people over a period, and that He sent it down in stages [c1].\n\nThose who disbelieved asked why the Quran was not sent down upon him all at once [c2]. The verse answers that it is so in order that God may make firm the heart of the one addressed with it, and says that God set it out in measured sequence [c3].",
+      "deep_md": "The verses at 17:106 and 25:32 speak of the same manner of sending down [c1][c3]. The verse at 17:106 gives a purpose of the parts: recitation to the people over a period [c1]. The verse at 25:32 records an objection and gives a purpose of its own: making firm the heart [c2][c3]. The words for separating, for a period and for measured sequence are read in more than one way [c1][c3].",
+      "kids_md": "God sent the Quran down in parts, not all at once [c1]. Some people who did not believe asked why it was not sent down all at once [c2]. The answer is that God makes the heart of the one who receives it firm with it [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage presents the staged sending down as a kindness to the heart of the one who received it [c3]. Another is that it presents it as a help for reciting to the people over a period [c1].",
+      "unknowns_md": "- Not established: how many parts there were, how long the sending down lasted, or the intervals between the parts. The verses say only 'over a period' and 'in stages'.\n- Not established: who the people were who asked why it was not sent down all at once, or when they asked.\n- The Arabic verb in 17:106 can be read as 'separated' or as 'made distinct'; the draft keeps 'separated' and a scholar should decide.\n- The Arabic word rendered 'set out in measured sequence' can also mean 'recited slowly'; this draft keeps the wider rendering.\n- Not established: how this relates to the verses that speak of the Quran being sent down in a night or a month. The verses here do not mention a night.\n- Named in later tradition, not in the Quranic text: the manner and order in which the parts came. None is used in the story texts."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated reports on the staged sending down of the Quran and on the occasions of particular parts, each with a named grader. None is used in this draft.",
+    "How the staged sending down fits with the sending down in a night or a month is a question of interpretation; the verses do not answer it. A scholar should decide whether the page says anything about it.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

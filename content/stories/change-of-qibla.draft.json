@@ -1,0 +1,286 @@
+{
+  "slug": "change-of-qibla",
+  "title_en": "The change of the direction of prayer",
+  "title_ar": null,
+  "subject": {
+    "type": "seerah",
+    "event_slug": "change-of-qibla"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The occasions of revelation (who the persons were, what happened) are not in the verses; they appear only under unknowns and uncertainties, as later tradition, with the hadith to add later. Pronouns the Arabic leaves open are left open. Chapters are a reading order, not a chronology. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-question-and-the-answer",
+      "position": 1,
+      "title_en": "The question and the answer",
+      "event_slug": "change-of-qibla",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 142,
+          "to": 143
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God says that the foolish among the people will say: what has turned them from the qibla they were facing?",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 142,
+              "to": 142
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The answer given is that the east and the west belong to God, and that He guides whom He wills to a straight path.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 142,
+              "to": 142
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God made them a community in the middle, so that they might be witnesses over the people and the messenger a witness over them.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 143,
+              "to": 143
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God made the qibla they were on only in order to know who follows the messenger from who turns back on his heels.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 143,
+              "to": 143
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "It was hard except for those whom God guided; God would not let their faith be lost, and He is kind and merciful to the people.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 143,
+              "to": 143
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God says that the foolish among the people will ask what has turned them from the qibla they were facing [c1]. The answer is that the east and the west belong to God and that He guides whom He wills to a straight path [c2]. God made them a community in the middle, so that they might be witnesses over the people [c3].",
+      "body_md": "God says that the foolish among the people will say: what has turned them from the qibla they were facing? [c1] The answer given is that the east and the west belong to God, and that He guides whom He wills to a straight path [c2].\n\nGod made them a community in the middle, so that they might be witnesses over the people and the messenger a witness over them [c3]. God made the qibla they were on only in order to know who follows the messenger from who turns back on his heels [c4]. It was hard except for those whom God guided; God would not let their faith be lost, and He is kind and merciful to the people [c5].",
+      "deep_md": "The question is put as something the foolish will say, and the answer is given first as a statement about the east and the west [c1][c2]. The verse at 2:143 gives a reason for the earlier qibla: it was a means of knowing who follows the messenger [c4]. It adds that the change was hard except for those whom God guided, and that God would not let their faith be lost [c5]. The verses do not name the earlier qibla or the new one in these verses [c1][c4].",
+      "kids_md": "God says that some people will ask why the believers turned from the direction they were facing [c1]. The answer is that the east and the west belong to God [c2]. God says that He would not let their faith be lost, and that He is kind and merciful to the people [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the answer places every direction with God before it speaks of any change [c2]. Another is that the passage connects the earlier direction with a test of who follows the messenger [c4].",
+      "unknowns_md": "- Not established: which qibla the believers had been facing, when and where the change was made, or how it was carried out. The verses say 'the qibla they were on' and name neither.\n- Not established: who the foolish are. The verse says 'the foolish among the people'.\n- The word qibla means the direction faced; these verses do not use the word prayer. How it relates to prayer is for the reviewer.\n- Not established: what the community 'in the middle' implies beyond the purpose the verse gives.\n- Named in later tradition, not in the Quranic text: the earlier direction, the occasion of the change and the people who objected. None is used in the story texts."
+    },
+    {
+      "anchor": "turn-your-face",
+      "position": 2,
+      "title_en": "Turn your face",
+      "event_slug": "change-of-qibla",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 144,
+          "to": 147
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God says that He sees the turning of the face of the one addressed toward the sky, and that He will turn him to a qibla that pleases him.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 144,
+              "to": 144
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The one addressed is told to turn his face in the direction of the sacred mosque, and the believers are told to turn their faces in its direction wherever they are.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 144,
+              "to": 144
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Those who were given the book know that it is the truth from their Lord, and God is not unaware of what they do.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 144,
+              "to": 144
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Even if the one addressed brought to those who were given the book every sign, they would not follow his qibla; nor would he follow theirs; nor do they follow one another's.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 145,
+              "to": 145
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "If he followed their desires after the knowledge that came to him, he would then be among the wrongdoers.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 145,
+              "to": 145
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Those to whom God gave the book recognise it as they recognise their sons, yet a party of them conceal the truth while they know.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 146,
+              "to": 146
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The truth is from the Lord of the one addressed, so he is not to be among the doubters.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 147,
+              "to": 147
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God says that He sees the one addressed turning his face toward the sky, and that He will turn him to a qibla that pleases him [c1]. The one addressed is told to turn his face in the direction of the sacred mosque [c2], and the verses say that those who were given the book know that it is the truth from their Lord [c3]. They also say that a party of them conceal the truth while they know [c6].",
+      "body_md": "God says that He sees the turning of the face of the one addressed toward the sky, and that He will turn him to a qibla that pleases him [c1]. The one addressed is told to turn his face in the direction of the sacred mosque, and the believers are told to turn their faces in its direction wherever they are [c2].\n\nThose who were given the book know that it is the truth from their Lord, and God is not unaware of what they do [c3]. Even if the one addressed brought to them every sign, they would not follow his qibla; nor would he follow theirs; nor do they follow one another's [c4]. If he followed their desires after the knowledge that came to him, he would then be among the wrongdoers [c5].\n\nThose to whom God gave the book recognise it as they recognise their sons, yet a party of them conceal the truth while they know [c6]. The truth is from the Lord of the one addressed, so he is not to be among the doubters [c7].",
+      "deep_md": "The verse at 2:144 joins a statement about what God sees to an address to the one addressed and then to the believers [c1][c2]. The pronoun in 'recognise it' in 2:146 is not resolved in the verse [c6]. The verses speak of disagreement about the qibla among those who were given the book, and say that the one addressed is not to follow their desires [c4][c5]. They end with the truth being from the Lord [c7].",
+      "kids_md": "God says that He sees the one addressed turning his face toward the sky, and that He will turn him to a direction that pleases him [c1]. He is told to turn his face in the direction of the sacred mosque [c2]. God says that the truth is from his Lord [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage presents the direction as the truth from the Lord and warns against following the desires of others after knowledge has come [c5][c7]. Another is that it tells of God seeing the turning of the face of the one addressed and answering it [c1].",
+      "unknowns_md": "- Not established: which qibla 'a qibla that pleases him' is, where the sacred mosque is, or whether the face was turned in prayer. The word prayer is not in these verses.\n- Not established: who 'those who were given the book' are. The verses do not name them.\n- Not established: what 'it' is that they recognise (2:146): the Arabic pronoun can be read as the truth, the qibla or a person, and the draft does not decide.\n- The Arabic word shatr, rendered 'in the direction of', is read in more than one way.\n- Named in later tradition, not in the Quranic text: the identity of the people given the book, the place of the sacred mosque, and the occasion. None is used in the story texts."
+    },
+    {
+      "anchor": "for-each-a-direction",
+      "position": 3,
+      "title_en": "For each a direction",
+      "event_slug": "change-of-qibla",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 148,
+          "to": 150
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "For each there is a direction that he turns toward; so they are to race one another to good things.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 148,
+              "to": 148
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God will bring them all together wherever they are; God has power over everything.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 148,
+              "to": 148
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "From wherever the one addressed goes out he is to turn his face in the direction of the sacred mosque; it is the truth from his Lord, and God is not unaware of what they do.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 149,
+              "to": 149
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The same instruction is given again, with the reason that the people may have no argument against them, except those of them who did wrong; they are not to fear them but to fear God.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 150,
+              "to": 150
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "A further aim is stated: that God may complete His favour upon them and that they may be guided.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 150,
+              "to": 150
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The verses say that for each there is a direction he turns toward, and that they are to race one another to good things [c1]. They repeat that the one addressed is to turn his face in the direction of the sacred mosque from wherever he goes out [c3][c4]. They give as aims that the people have no argument against them and that God completes His favour upon them [c4][c5].",
+      "body_md": "For each there is a direction that he turns toward; so they are to race one another to good things [c1]. God will bring them all together wherever they are; God has power over everything [c2].\n\nFrom wherever the one addressed goes out he is to turn his face in the direction of the sacred mosque; it is the truth from his Lord, and God is not unaware of what they do [c3]. The same instruction is given again, with the reason that the people may have no argument against them, except those of them who did wrong; they are not to fear them but to fear God [c4]. A further aim is stated: that God may complete His favour upon them and that they may be guided [c5].",
+      "deep_md": "The passage first says that every one has a direction, then turns that into a call to race to good things [c1]. It says that God will bring them all together wherever they are [c2]. It restates the instruction about the sacred mosque and gives its reasons: truth from the Lord [c3], no argument for the people against them [c4], and the completion of favour and guidance [c5].",
+      "kids_md": "God says that for each there is a direction he turns toward, so they are to race to good things [c1]. God says that wherever they are, He will bring them all together [c2]. He says that He will complete His favour upon them [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage answers differences of direction with a call to race to good things [c1]. Another is that it ends by naming the completion of favour and guidance as the aim [c5].",
+      "unknowns_md": "- Not established: what 'each' (2:148) refers to, or whether 'a direction' there means a qibla or something wider; the Arabic word can be read both ways.\n- Not established: who 'those of them who did wrong' are, or what argument they might make.\n- Not established: how the repeated instruction in 2:149 and 2:150 relates to the first (2:144); the draft states each as the verse says it.\n- The word prayer is not in these verses, and the draft does not add it.\n- Named in later tradition, not in the Quranic text: the occasion, the people who argued and the place. None is used in the story texts."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated reports on the occasion of the change, on the earlier and the later direction and on the people who objected, each with a named grader. None is used in this draft.",
+    "The word prayer is not in 2:142-150; the draft says qibla (the direction faced). How the page links the passage to prayer is for the reviewer.",
+    "The Arabic shatr and the pronoun in 2:146 are left open; see the unknowns of the chapters.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

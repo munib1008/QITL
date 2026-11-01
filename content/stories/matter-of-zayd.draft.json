@@ -1,0 +1,182 @@
+{
+  "slug": "matter-of-zayd",
+  "title_en": "The matter of Zayd and adoptive sonship",
+  "title_ar": null,
+  "subject": {
+    "type": "seerah",
+    "event_slug": "matter-of-zayd"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The occasions of revelation (who the persons were, what happened) are not in the verses; they appear only under unknowns and uncertainties, as later tradition, with the hadith to add later. Pronouns the Arabic leaves open are left open. Chapters are a reading order, not a chronology. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "when-god-and-his-messenger-decide",
+      "position": 1,
+      "title_en": "When God and His messenger decide",
+      "event_slug": "matter-of-zayd",
+      "verses": [
+        {
+          "surah": 33,
+          "from": 36,
+          "to": 37
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "It is not for a believing man or a believing woman, when God and His messenger have decided a matter, to have the choice in their affair.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Whoever disobeys God and His messenger has clearly gone astray.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The verse recalls what the one addressed said to the man on whom God had bestowed favour and on whom the one addressed had bestowed favour: keep your wife for yourself, and fear God.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The one addressed was concealing within himself what God was going to bring to light, and was fearing the people, though God has more right to be feared.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "When Zayd had accomplished a need from her, God gave her to the one addressed in marriage.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The reason given is that there should be no blame on the believers regarding the wives of those they have adopted as sons, when these have accomplished a need from them.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The command of God is carried out.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The verses say that when God and His messenger have decided a matter, a believing man or woman has no choice in their affair [c1]. They recall what the one addressed said to a man who had been favoured, and say that when Zayd had accomplished a need from her, God gave her to the one addressed in marriage [c3][c5]. They give as the reason that there should be no blame on the believers regarding the wives of those they have adopted as sons [c6].",
+      "body_md": "It is not for a believing man or a believing woman, when God and His messenger have decided a matter, to have the choice in their affair [c1]. Whoever disobeys God and His messenger has clearly gone astray [c2].\n\nThe next verse recalls what the one addressed said to the man on whom God had bestowed favour and on whom the one addressed had bestowed favour: keep your wife for yourself, and fear God [c3]. The one addressed was concealing within himself what God was going to bring to light, and was fearing the people, though God has more right to be feared [c4].\n\nWhen Zayd had accomplished a need from her, God gave her to the one addressed in marriage [c5]. The reason given is that there should be no blame on the believers regarding the wives of those they have adopted as sons, when these have accomplished a need from them [c6]. The command of God is carried out [c7].",
+      "deep_md": "The passage opens with a statement about God's decision and the choice of believers, and moves to a particular matter without saying that they are connected [c1][c3]. The verse names Zayd only in its later sentence; the man to whom the words were said is first described by the favours he received [c3][c5]. The woman is not named [c3][c5]. The verse does not say what the one addressed was concealing, and does not spell out what the 'need' (watar) was [c4][c5]. The reason it gives concerns the believers and the wives of those they have adopted as sons [c6].",
+      "kids_md": "The verses say that when God and His messenger have decided a matter, believers have no choice in it [c1]. They say that God has more right to be feared than the people [c4]. They say that the command of God is carried out [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage sets the fear of God above the fear of the people [c4]. Another is that it begins from the decision of God and His messenger and ends with the command of God being carried out [c1][c7].",
+      "unknowns_md": "- Not established: who the one addressed is; the verse says 'you' and does not name him.\n- Not established: who the man is on whom God and the one addressed had bestowed favour. The verse names Zayd only in its later sentence; that he is the same man is the natural reading, but the Arabic leaves it to the context.\n- Not established: whose wife is meant by 'your wife' and 'her'. The verses name no woman.\n- Not established: what the one addressed was concealing; the verse says 'what God was going to bring to light' and does not say what it was.\n- Not established: what 'accomplished a need' covers. The verse does not say in words what took place between Zayd and his wife, and the draft keeps the verse's wording.\n- Not established: when or where this took place, or whether the decision in 33:36 is about the same matter as 33:37.\n- Named in later tradition, not in the Quranic text: the names and circumstances of the persons in 33:36-37 and the occasion of the passage. This draft names no one beyond the name the verse itself gives, and states no conclusion about adoption beyond the words of 33:37."
+    },
+    {
+      "anchor": "no-blame-and-the-seal",
+      "position": 2,
+      "title_en": "No blame, and the seal of the prophets",
+      "event_slug": "matter-of-zayd",
+      "verses": [
+        {
+          "surah": 33,
+          "from": 38,
+          "to": 40
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "There is no blame on the prophet in what God has ordained for him; this is the way of God among those who passed before, and the command of God is a decree decreed.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Those who convey the messages of God, fear Him and fear no one but God are described; God suffices as one who takes account.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Muhammad was not the father of any of the men among those addressed, but the messenger of God and the seal of the prophets; God has knowledge of all things.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The verses say that there is no blame on the prophet in what God has ordained for him, and that this is the way of God among those who passed before [c1]. They describe those who convey the messages of God and fear none but Him [c2]. They say that Muhammad was not the father of any of the men among those addressed, but the messenger of God and the seal of the prophets [c3].",
+      "body_md": "There is no blame on the prophet in what God has ordained for him; this is the way of God among those who passed before, and the command of God is a decree decreed [c1].\n\nThe next verse describes those who convey the messages of God, fear Him and fear no one but God; God suffices as one who takes account [c2].\n\nThe passage ends by saying that Muhammad was not the father of any of the men among those addressed, but the messenger of God and the seal of the prophets, and that God has knowledge of all things [c3].",
+      "deep_md": "The verse at 33:38 speaks of what God has ordained for the prophet and ties it to the way of God among those who passed before [c1]. The verse at 33:39 describes a kind of person by what they convey and whom they fear [c2]. The last states what Muhammad was not and what he was, in the words of the verse [c3]. The word rendered 'seal' is read in more than one way in the recitations, and the draft keeps the rendering of the verse [c3].",
+      "kids_md": "The verses say that there is no blame on the prophet in what God has ordained for him [c1]. They say that those who convey the messages of God fear Him and fear no one but God [c2]. They say that God has knowledge of all things [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage joins conveying the messages of God with fearing none but Him [c2]. Another is that it ends by naming the messenger of God and the seal of the prophets and by placing all knowledge with God [c3].",
+      "unknowns_md": "- Not established: what 'what God has ordained for him' (33:38) refers to; the verse does not say.\n- Not established: how 33:38-40 relate to the matter of 33:36-37 beyond standing in the same passage. The draft places them together because they are in one passage and does not say that one explains the other.\n- Not established: who the prophet of 33:38 is, beyond the name given in 33:40; the verses use the title and the name in different places.\n- The Arabic word rendered 'seal' is read in more than one way; a scholar should decide how the page words it.\n- Named in later tradition, not in the Quranic text: the occasion of these verses. It is not used in the story texts."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated reports on the occasion of 33:36-37, on the persons concerned and on how the passage was understood, each with a named grader. None is used in this draft.",
+    "This story is drafted with the greatest restraint. It states only what the verses say, names no one except Zayd and Muhammad, whom the verses name, and states no legal conclusion about adoption or marriage; the verses are given in their own words and the page should not add to them without review.",
+    "The Arabic word watar ('need', 33:37) is kept general. The verse does not say in so many words what took place, and the draft says nothing that the verse does not.",
+    "Named in later tradition, not in the Quranic text: the identity of the woman and of the one addressed, and the circumstances of the passage.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}
