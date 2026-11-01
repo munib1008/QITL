@@ -1,0 +1,25 @@
+{
+ "note": "Anchors for the drafts of batch prophets-c2 (Ismail, Ishaq, Yaqub, Harun, Dhul-Kifl, Ilyas, Alyasa): names and titles with the Arabic anchor that must occur in the ayat a chapter cites. Names already listed in other batches (Ibrahim, Ishaq, Yaqub, Ismail, Musa, Harun, Lut, Israel, Children) are not repeated.",
+ "names": {
+  "Idris": "ادريس",
+  "Dhul-Kifl": "كفل",
+  "Alyasa": "اليسع",
+  "Ilyas": "الياس",
+  "Ilyasin": "ياسين",
+  "Baal": "بعل"
+ },
+ "numbers": {},
+ "guarded": {},
+ "titles_ar": {
+  "ismail": "إسماعيل",
+  "ishaq": "إسحاق",
+  "yaqub": "يعقوب",
+  "harun": "هارون",
+  "dhul-kifl": "ذو الكفل",
+  "ilyas": "إلياس",
+  "alyasa": "اليسع"
+ },
+ "common_capitalised": [],
+ "opening_words": [],
+ "tradition_names": ["Ezekiel", "Elijah", "Elisha"]
+}

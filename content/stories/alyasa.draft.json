@@ -1,0 +1,70 @@
+{
+  "slug": "alyasa",
+  "title_en": "Alyasa",
+  "title_ar": "اليسع",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "alyasa"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This subject is mentioned briefly or beside others, so the draft is short and states only what the cited ayat state. The chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "named-among-the-favoured-and-the-best",
+      "position": 1,
+      "title_en": "Named among the favoured and the best",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 6,
+          "from": 86,
+          "to": 86
+        },
+        {
+          "surah": 38,
+          "from": 48,
+          "to": 48
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Alyasa is named in a list with Ismail and others, and God says that He favoured each of those named over the worlds.",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 86,
+              "to": 86
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Alyasa is named again, with Ismail and Dhul-Kifl, and each of them is described as one of the best.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 48,
+              "to": 48
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Alyasa is named in a list with Ismail and others, each of whom God favoured over the worlds [c1]. He is named again with Ismail and Dhul-Kifl as one of the best [c2].",
+      "body_md": "Alyasa is named in a list with Ismail and others, and God says that He favoured each of those named over the worlds [c1].\n\nAlyasa is named again, with Ismail and Dhul-Kifl, and each of them is described as one of the best [c2].",
+      "deep_md": "The Quran names Alyasa in lists [c1][c2]. One list gives a statement of favour over the worlds [c1]. The other gives a short description, among the best [c2].",
+      "kids_md": "God named Alyasa with Ismail and others and said He favoured each of them [c1]. In another place God named Alyasa with Ismail and Dhul-Kifl and said each was among the best [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the Quran can honour a person with a brief mention and no story, and that the honour is stated by God [c1][c2].",
+      "unknowns_md": "- Not established: anything Alyasa did or said, where or when he lived, or to whom he was sent.\n- Not established: whether the Quran calls him a prophet or a messenger in these verses; the lists describe him as favoured and among the best.\n- Not established: what 'favoured over the worlds' covers.\n- Named in later tradition, not in the Quranic text: later writers identify Alyasa with a figure known from earlier scriptures as Elisha and as the successor of Ilyas; none of that is used here."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about this prophet. None is used in this draft.",
+    "6:86: 'favoured over the worlds' is a statement about each of those named; a scholar should check whether the draft's wording is strong enough, too strong, or fits the word 'worlds'.",
+    "6:87 follows the list and describes those chosen and guided, but it is outside Alyasa's inventory range and is not used.",
+    "Named in later tradition, not in the Quranic text: Alyasa is identified by later writers with Elisha, the successor of Ilyas; none of that is used.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "slug": "harun",
+  "title_en": "Harun",
+  "title_ar": "هارون",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "harun"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This subject is mentioned briefly or beside others, so the draft is short and states only what the cited ayat state. The chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "a-helper-from-his-family",
+      "position": 1,
+      "title_en": "A helper from his family",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 20,
+          "from": 29,
+          "to": 36
+        },
+        {
+          "surah": 26,
+          "from": 12,
+          "to": 13
+        },
+        {
+          "surah": 28,
+          "from": 34,
+          "to": 35
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "A request is made to God for a helper from the speaker's own family, and the one named is Harun, his brother.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 29,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The request goes on: that the speaker's strength be made firm through him, that he share in the speaker's task, so that they may glorify God much and remember Him much.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 31,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The speaker adds that God has always been seeing them, and God answers that what he asked is granted, addressing him as Musa.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 35,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "In another passage a speaker tells his Lord that he fears he will be called a liar, that his chest tightens and his tongue does not move freely, and asks that Harun be sent for.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 12,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "In another passage the speaker says that his brother Harun is more fluent than he in speech, and asks that Harun be sent with him as a support who will confirm him, since he fears he will be called a liar.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 34,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God says that He will strengthen him through his brother and give both of them authority so that the people will not reach them; with God's signs, they and those who follow them will prevail.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Musa asked God for a helper from his family, his brother Harun [c1][c3]. God answered that the request was granted [c3]. God said He would strengthen Musa through his brother [c6].",
+      "body_md": "A request is made to God for a helper from the speaker's own family, and the one named is Harun, his brother [c1]. The request goes on: that the speaker's strength be made firm through him, that he share in the speaker's task, so that they may glorify God much and remember Him much [c2]. The speaker adds that God has always been seeing them, and God answers that what he asked is granted, addressing him as Musa [c3].\n\nIn another passage a speaker tells his Lord that he fears he will be called a liar, that his chest tightens and his tongue does not move freely, and asks that Harun be sent for [c4]. In another passage the speaker says that his brother Harun is more fluent than he in speech, and asks that Harun be sent with him as a support who will confirm him, since he fears he will be called a liar [c5]. God says that He will strengthen him through his brother and give both of them authority so that the people will not reach them; with God's signs, they and those who follow them will prevail [c6].",
+      "deep_md": "The passages speak of the same request and give it in different words [c1][c4][c5]. One names the helper and gives the reason of shared worship [c1][c2]. Another gives the speaker's fear and asks that Harun be sent for [c4]. A further one adds that Harun is the more fluent in speech and that he is asked for as a support who will confirm [c5]. God's answer, in the first and last passages, is that the request is granted and that he will be strengthened through his brother [c3][c6].",
+      "kids_md": "A man asked God for a helper from his family and named his brother Harun [c1]. God said the request was granted [c3]. God said He would make him strong through his brother [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the verses show a person naming his own limits and asking for a helper, rather than going without one [c4][c5]. Another is that the request names a shared purpose, to glorify God much and remember Him much [c2].",
+      "unknowns_md": "- Not established: the speaker is named only by the address 'Musa' in the last verse of the first passage; this draft reads all the passages as Musa's request, and the others do not name the speaker.\n- Not established: when the request was made in relation to other events.\n- Not established: what the 'tongue not moving freely' means, or how long it lasted.\n- Not established: what the 'authority' is that God says He will give."
+    },
+    {
+      "anchor": "given-as-a-prophet-and-a-helper",
+      "position": 2,
+      "title_en": "Given as a prophet and a helper",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 19,
+          "from": 53,
+          "to": 53
+        },
+        {
+          "surah": 25,
+          "from": 35,
+          "to": 35
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God, out of His mercy, gave Musa his brother Harun as a prophet.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 53,
+              "to": 53
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God gave Musa the scripture and made his brother Harun a helper with him.",
+          "verses": [
+            {
+              "surah": 25,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God, out of His mercy, gave Musa his brother Harun as a prophet [c1]. God made Harun a helper with Musa [c2].",
+      "body_md": "God, out of His mercy, gave Musa his brother Harun as a prophet [c1]. God gave Musa the scripture and made his brother Harun a helper with him [c2].",
+      "deep_md": "Harun is given a title in each verse: a prophet [c1] and a helper [c2]. The first presents him as a gift of God's mercy [c1].",
+      "kids_md": "God gave Musa his brother Harun as a helper and made Harun a prophet [c1][c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the verse on prophethood calls a brother's help a mercy [c1]. Another is that the verse on the scripture joins a book given to one with a helper given beside him [c2].",
+      "unknowns_md": "- Not established: Harun's age compared with Musa's.\n- Not established: whether Harun was given a scripture himself; these verses do not say so.\n- Not established: how the helper's task was divided between the brothers."
+    },
+    {
+      "anchor": "left-in-charge",
+      "position": 3,
+      "title_en": "Left in charge",
+      "event_slug": "musa-appointed-time",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 142,
+          "to": 142
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Musa told his brother Harun to take his place among his people, to set things right, and not to follow the way of those who spread corruption.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 142,
+              "to": 142
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Musa told his brother Harun to take his place among his people and set things right [c1].",
+      "body_md": "Musa told his brother Harun to take his place among his people, to set things right, and not to follow the way of those who spread corruption [c1].",
+      "deep_md": "The verse gives Harun these instructions: to take Musa's place, to set things right, and not to follow the way of those who spread corruption [c1].",
+      "kids_md": "Musa asked his brother Harun to look after his people and to set things right [c1].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the verse links being left in charge with a duty to set things right [c1].",
+      "unknowns_md": "- Not established: how long Musa was away, or where he went; the first part of the same verse speaks of an appointed time of nights, and this draft does not retell it.\n- Not established: what Harun did to carry out the instruction in this verse.\n- Not established: the identity of those who spread corruption."
+    },
+    {
+      "anchor": "harun-and-the-people",
+      "position": 4,
+      "title_en": "Harun and the people",
+      "event_slug": "the-golden-calf",
+      "verses": [
+        {
+          "surah": 20,
+          "from": 90,
+          "to": 94
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Harun had already told the people earlier that they were being put to trial by this, that their Lord is the Merciful, and that they should follow him and obey his command.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 90,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They answered that they would not cease to stay devoted to it until Musa came back to them.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 91,
+              "to": 91
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Musa asked Harun what had stopped him, when he saw them go astray, from following him, and asked whether he had disobeyed his command.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 92,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Harun answered, addressing him as the son of his mother, and asked not to be seized; he said that he had feared Musa would say that he had caused division among the Children of Israel and had not waited for his word.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 94,
+              "to": 94
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Harun had told the people they were being tried and to follow him, but they refused to leave what they were devoted to until Musa returned [c1][c2]. Musa asked Harun what had stopped him, and Harun answered that he feared causing division [c3][c4].",
+      "body_md": "Harun had already told the people earlier that they were being put to trial by this, that their Lord is the Merciful, and that they should follow him and obey his command [c1]. They answered that they would not cease to stay devoted to it until Musa came back to them [c2].\n\nMusa asked Harun what had stopped him, when he saw them go astray, from following him, and asked whether he had disobeyed his command [c3]. Harun answered, addressing him as the son of his mother, and asked not to be seized; he said that he had feared Musa would say that he had caused division among the Children of Israel and had not waited for his word [c4].",
+      "deep_md": "The passage gives these voices: Harun's earlier warning [c1], the people's reply [c2], and the exchange between the brothers [c3][c4]. Harun's reason is a fear of division among the Children of Israel and of Musa's saying that he had not waited for his word [c4]. The verses state his reason and give no verdict [c4].",
+      "kids_md": "Harun told the people to follow him and to obey [c1]. The people said they would stay as they were until Musa came back [c2]. Musa asked Harun why he had not followed him, and Harun explained that he was afraid of causing division [c3][c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage shows one brother questioning the other and the other answering [c3][c4]. Another is that Harun's reason is a worry about unity among the people [c4].",
+      "unknowns_md": "- Not established in the cited verses: what 'this' and 'it' are that the people were put to trial by and stayed devoted to. The story of that event is told in the account of Musa and is not retold here.\n- Not established: how long Musa was away, or where Harun stood.\n- The verses do not say how Musa judged Harun's answer.\n- A phrase in the last verse names how Musa seized Harun; this draft keeps it general ('seized') and does not repeat the physical detail."
+    },
+    {
+      "anchor": "favoured-with-musa",
+      "position": 5,
+      "title_en": "Favoured with Musa",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 37,
+          "from": 114,
+          "to": 122
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God says that He favoured Musa and Harun.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 114,
+              "to": 114
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He saved both of them and their people from the great distress, and helped them so that they were the victors.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 115,
+              "to": 116
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He gave both of them the clear scripture and guided both of them on the straight path.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 117,
+              "to": 118
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God left something upon both of them among those who came later; the Arabic does not state what.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 119,
+              "to": 119
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Peace is pronounced upon Musa and Harun, and God says that thus He rewards those who do good.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 120,
+              "to": 121
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Both of them were among His believing servants.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 122,
+              "to": 122
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God says He favoured Musa and Harun, saved them and their people, and guided both on the straight path [c1][c2][c3]. Peace is pronounced upon both, and both were among His believing servants [c5][c6].",
+      "body_md": "God says that He favoured Musa and Harun [c1]. He saved both of them and their people from the great distress, and helped them so that they were the victors [c2]. He gave both of them the clear scripture and guided both of them on the straight path [c3].\n\nGod left something upon both of them among those who came later [c4]. Peace is pronounced upon Musa and Harun, and God says that thus He rewards those who do good [c5]. Both of them were among His believing servants [c6].",
+      "deep_md": "Harun is named with Musa in every verse of this passage, and every statement applies to both of them [c1][c2][c3][c5][c6]. The passage lists favour, rescue, victory, the scripture, guidance, something left among later generations, peace, and a place among the believing servants [c1][c2][c3][c4][c5][c6]. The verse about what was left does not name the thing [c4].",
+      "kids_md": "God favoured Musa and Harun [c1]. God saved them and their people and guided them on the straight path [c2][c3]. They were among God's believing servants [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that this passage speaks of Musa and Harun as sharing every gift it lists [c1][c3]. Another is that it ends by naming them servants who believed [c6].",
+      "unknowns_md": "- Not established: what the 'great distress' was in these verses, or when it ended.\n- Not established: which scripture is meant by 'the clear scripture', or whether both brothers received it in the same way.\n- Not established: what God left upon them among those who came later; the Arabic omits the object. It is often read as a good mention, and this draft does not decide.\n- Not established: how the victory came."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about this prophet. None is used in this draft.",
+    "20:36 addresses Musa and the draft reads the speaker of 20:29-35 as Musa; in 26:12-13 and 28:34 the speaker is not named in the cited verses and the draft reads him as Musa from the same request, not from the verses themselves. A scholar should check the wording.",
+    "19:53: 'him' is read as Musa from the neighbouring verses, which are not in Harun's inventory range.",
+    "20:94 contains physical details of how Harun was seized; the draft leaves them out on purpose (the validator refuses depiction words) and states only 'seized'. A scholar should decide whether the page should carry the detail.",
+    "37:119: the object of the verb is omitted in the Arabic and the draft leaves it so.",
+    "The first half of 7:142 (an appointed time of nights for Musa) is not retold here. The golden-calf event itself is not retold either; this draft states only what 20:90-94 say of Harun.",
+    "Named in later tradition, not in the Quranic text: Harun's age, his role as high priest, and the length of his life; none of this is used.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}
