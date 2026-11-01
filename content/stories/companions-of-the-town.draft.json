@@ -1,0 +1,146 @@
+{
+  "slug": "companions-of-the-town",
+  "title_en": "The people of the town and the messengers",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "companions-of-the-town"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-town-and-the-messengers",
+      "position": 1,
+      "title_en": "The town and the messengers",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 36,
+          "from": 13,
+          "to": 29
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah commands that a similitude be struck for them: the companions of the town, when the messengers came to it.",
+          "verses": [
+            {
+              "surah": 36,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God sent to them two messengers, and they called them liars, so He strengthened them with a third, and they said that they were sent to them.",
+          "verses": [
+            {
+              "surah": 36,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The people replied that the messengers were only humans like themselves and that the Merciful had sent nothing down, and that the messengers were only lying; the messengers said that their Lord knows that they were sent, and that their duty was only the clear delivery of the message.",
+          "verses": [
+            {
+              "surah": 36,
+              "from": 15,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The people said that they took the messengers as an evil omen and that they would stone them and a painful punishment would touch them from them; the messengers said that their omen was with them, asking whether it was because they were reminded, and said that rather they were a people who transgress.",
+          "verses": [
+            {
+              "surah": 36,
+              "from": 18,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "A man came running from the farthest part of the city and told his people to follow the messengers, who ask no wage and are guided.",
+          "verses": [
+            {
+              "surah": 36,
+              "from": 20,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "He said that he had no reason not to worship the one who created him and to whom they will be returned, and asked whether he should take gods besides Him whose intercession would not help him if the Merciful willed harm for him, for then he would be clearly in error.",
+          "verses": [
+            {
+              "surah": 36,
+              "from": 22,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "He declared that he believed in their Lord and told them to hear him.",
+          "verses": [
+            {
+              "surah": 36,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "He was told to enter the garden, and he said that he wished his people knew how his Lord had forgiven him and made him one of the honoured.",
+          "verses": [
+            {
+              "surah": 36,
+              "from": 26,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "God sent down no host from the sky upon his people after him and was not one to send one down; it was only one cry, and at once they were extinguished.",
+          "verses": [
+            {
+              "surah": 36,
+              "from": 28,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat tell that a similitude is struck of the companions of the town, to whom messengers came and were called liars [c1][c2]. A man came running from the farthest part of the city and told his people to follow the messengers, and afterwards one cry left his people extinguished [c5][c9].",
+      "body_md": "The ayah commands that a similitude be struck for them: the companions of the town, when the messengers came to it [c1]. God sent to them two messengers, and they called them liars, so He strengthened them with a third [c2]. They said that they were sent to them [c2].\n\nThe people replied that the messengers were only humans like themselves, that the Merciful had sent nothing down, and that the messengers were only lying [c3]. The messengers said that their Lord knows that they were sent, and that their duty was only the clear delivery of the message [c3]. The people said that they took them as an evil omen and that they would stone them [c4]. The messengers said that their omen was with them, and that rather they were a people who transgress [c4].\n\nA man came running from the farthest part of the city and told his people to follow the messengers, who ask no wage and are guided [c5]. He said that he had no reason not to worship the one who created him and to whom they will be returned [c6]. He asked whether he should take gods besides Him, whose intercession would not help him, and said that he would then be clearly in error [c6]. He declared that he believed in their Lord and told them to hear him [c7].\n\nHe was told to enter the garden, and he said that he wished his people knew how his Lord had forgiven him and made him one of the honoured [c8]. God sent down no host from the sky upon his people after him [c9]. It was only one cry, and at once they were extinguished [c9].",
+      "deep_md": "The ayat use the word town for where the messengers came (36:13) and the word city for where the man came from (36:20) [c1][c5]. The messengers are first given as a pair, and then the ayah adds that God strengthened them with a third, without saying who the third was [c2]. The man's speech runs from his call to follow the messengers to his declaration of belief, and the ayat then report what he was told and what he said [c5][c6][c7][c8].",
+      "kids_md": "Messengers came to a town, and the people said that they were only humans like themselves [c1][c3]. A man ran from the farthest part of the city and told his people to follow the messengers [c5]. He said that he believed in their Lord [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat stress that the messengers' duty was only the clear delivery of the message [c3]. Another reading is that the man's words link following the messengers with their asking no wage and being guided [c5].",
+      "unknowns_md": "- Not established: the name of the town, of the messengers, of the man or of his people, or when and where this happened; none is given.\n- Not established: who the third messenger was, or what it means that the pair were strengthened.\n- Named in later tradition, not in the Quranic text: the town, the messengers and the man are given names in later sources; this draft does not repeat or vouch for them.\n- Not established: whom the man addressed with the words 'so hear me' (36:25), or who told him to enter the garden (36:26); the ayat do not say.\n- The ayah itself says that a similitude is to be struck (36:13). That this item is grouped with the parables is the platform's classification, and the ayat do not say whether the account describes a particular past event."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to this passage.",
+    "The wordings to check first: the passive 'he was told' in 36:26 and the addressee of 36:25."
+  ]
+}

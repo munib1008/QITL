@@ -1,0 +1,86 @@
+{
+  "slug": "slave-and-free-man",
+  "title_en": "The owned slave and the one given provision",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "slave-and-free-man"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-slave-and-the-one-given-provision",
+      "position": 1,
+      "title_en": "The owned slave and the one given provision",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 16,
+          "from": 75,
+          "to": 76
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God struck a similitude: a slave who is owned and has power over nothing, and one to whom God gave good provision from Himself, so that he spends from it in secret and openly; the ayah asks whether they are equal.",
+          "verses": [
+            {
+              "surah": 16,
+              "from": 75,
+              "to": 75
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The ayah says that all praise is for God, but that most of them do not know.",
+          "verses": [
+            {
+              "surah": 16,
+              "from": 75,
+              "to": 75
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God also struck a similitude of a pair of men, one of whom is dumb, has power over nothing and is a burden on his master, and brings no good wherever he sends him.",
+          "verses": [
+            {
+              "surah": 16,
+              "from": 76,
+              "to": 76
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The ayah asks whether he is equal to one who commands justice and is on a straight path.",
+          "verses": [
+            {
+              "surah": 16,
+              "from": 76,
+              "to": 76
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God struck a similitude of a slave who is owned and has power over nothing, and of one given good provision who spends from it in secret and openly, and asks whether they are equal [c1]. He also struck a similitude of a man who is dumb and a burden on his master, and asks whether he is equal to one who commands justice [c3][c4].",
+      "body_md": "God struck a similitude: a slave who is owned and has power over nothing, and one to whom God gave good provision from Himself, so that he spends from it in secret and openly [c1]. The ayah asks whether they are equal [c1]. It says that all praise is for God, but that most of them do not know [c2].\n\nGod also struck a similitude of a pair of men [c3]. One of them is dumb, has power over nothing and is a burden on his master, and brings no good wherever he sends him [c3]. The ayah asks whether he is equal to one who commands justice and is on a straight path [c4].",
+      "deep_md": "Each similitude is built as a contrast followed by a question: are they equal [c1][c4]. The first contrast is between having power over nothing and spending from good provision given by God [c1]. The next is between one who brings no good and one who commands justice and is on a straight path [c3][c4].",
+      "kids_md": "God struck a similitude of a slave who is owned and has power over nothing, and of one given good provision who spends from it in secret and openly [c1]. The ayah asks whether they are equal [c1]. It says that all praise is for God [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the first similitude sets having power over nothing beside spending from provision that God gave [c1]. Another reading is that the later similitude sets one who brings no good beside one who commands justice and is on a straight path [c3][c4].",
+      "unknowns_md": "- Not established: who the men in these similitudes are; the ayat name no one and do not say whether the pictures are about particular persons.\n- Not established: what the similitudes are about in the passage around them; the question are they equal is all the ayat state.\n- Named in later tradition, not in the Quranic text: later sources link the pair of men to particular people; this draft does not repeat or vouch for them.\n- The ayat themselves use the word for a similitude (mathal) in both places."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to these ayat.",
+    "The wording of abkam (dumb), kall (a burden) and of the straight path in 16:76 is for a scholar to confirm."
+  ]
+}

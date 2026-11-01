@@ -1,0 +1,23 @@
+{
+ "note": "Anchors for the parables drafts (branch mod/drafts-parables). Each name, number word or guarded word may appear in a chapter's text only when its Arabic anchor occurs in the ayat that chapter cites.",
+ "names": {
+  "Torah": "تورىة",
+  "Injil": "انجيل",
+  "Muhammad": "محمد",
+  "Nuh": "نوح",
+  "Lut": "لوط",
+  "Maryam": "مريم",
+  "Fir'awn": "فرعون",
+  "Imran": "عمرن",
+  "Satan": "شيطن"
+ },
+ "numbers": {
+  "hundred": "مائة",
+  "third": "ثالث"
+ },
+ "guarded": {},
+ "common_capitalised": [],
+ "opening_words": [],
+ "tradition_names": [],
+ "titles_ar": {}
+}

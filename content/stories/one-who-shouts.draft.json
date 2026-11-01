@@ -1,0 +1,62 @@
+{
+  "slug": "one-who-shouts",
+  "title_en": "The one who shouts to what hears only a call",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "one-who-shouts"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-one-who-shouts",
+      "position": 1,
+      "title_en": "The one who shouts",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 2,
+          "from": 171,
+          "to": 171
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah says that the similitude of those who disbelieve is like that of one who shouts at what hears nothing but a call and a cry.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 171,
+              "to": 171
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They are deaf, dumb and blind, so they do not use reason.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 171,
+              "to": 171
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayah gives the similitude of those who disbelieve as one who shouts at what hears nothing but a call and a cry [c1]. It adds that they are deaf, dumb and blind, so they do not use reason [c2].",
+      "body_md": "The ayah says that the similitude of those who disbelieve is like that of one who shouts at what hears nothing but a call and a cry [c1]. They are deaf, dumb and blind, so they do not use reason [c2].",
+      "deep_md": "The ayah gives the similitude in one sentence and then states how those who disbelieve are described [c1][c2]. What hears is described only by what it hears, a call and a cry, and the ayah does not name it [c1].",
+      "kids_md": "The ayah gives a picture of one who shouts at something that hears only a call and a cry [c1]. It says that those who disbelieve are deaf, dumb and blind, so they do not use reason [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the picture is about hearing a sound without understanding its meaning [c1]. Another reading is that the ayah links not using reason with being deaf, dumb and blind [c2].",
+      "unknowns_md": "- Not established: what is shouted at, since the ayah names it only as what hears nothing but a call and a cry.\n- Not established: whether those who disbelieve are likened to the one who shouts or to what is shouted at; the comparison is read in both ways, and this draft keeps the ayah's own wording.\n- The ayah itself uses the word for a similitude (mathal).\n- The Arabic word for reason (yaqilun) is rendered 'use reason'; a scholar may prefer another wording."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to this ayah.",
+    "Who is likened to whom in 2:171 is a point of reading that a scholar should settle for the page."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "wind-with-frost",
+  "title_en": "The wind with a biting frost",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "wind-with-frost"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-wind-and-the-tilth",
+      "position": 1,
+      "title_en": "The wind with frost in it",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 3,
+          "from": 117,
+          "to": 117
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah says that the similitude of what they spend in the life of this world is like a wind with sirr in it that struck the tilth of a people who wronged themselves and destroyed it.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 117,
+              "to": 117
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God did not wrong them, but they wrong themselves.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 117,
+              "to": 117
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayah likens what they spend in the life of this world to a wind with sirr in it that destroyed the tilth of a people who wronged themselves [c1]. It adds that God did not wrong them, but they wrong themselves [c2].",
+      "body_md": "The ayah says that the similitude of what they spend in the life of this world is like a wind with sirr in it [c1]. The wind struck the tilth of a people who wronged themselves and destroyed it [c1]. God did not wrong them, but they wrong themselves [c2].",
+      "deep_md": "The ayah gives the similitude and then states who did the wrong: God did not wrong them, and they wrong themselves [c1][c2]. The Arabic word sirr is read as a biting frost or as a loud sound, and this draft leaves it open [c1].",
+      "kids_md": "The ayah likens what they spend in the life of this world to a wind that destroyed the tilth of a people who wronged themselves [c1]. God did not wrong them [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayah shows spending that does not last, like tilth that the wind destroys [c1]. Another reading is that the ayah places the wrong with the people themselves, not with God [c2].",
+      "unknowns_md": "- Not established: who they are in this ayah; the pronoun points to people described in ayat before 3:117, which are outside the ayat cited for this item.\n- Not established: where or when the tilth was struck, or whose it was; the people are not named.\n- The word sirr is read as a biting frost or a loud sound; this draft leaves it open.\n- The ayah itself uses the word for a similitude (mathal)."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to this ayah.",
+    "The sense of sirr, and who the pronoun they covers in 3:117, are for a scholar to decide."
+  ]
+}

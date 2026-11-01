@@ -1,0 +1,86 @@
+{
+  "slug": "garden-on-a-height",
+  "title_en": "The garden on raised ground and the garden burned",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "garden-on-a-height"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-garden-on-raised-ground",
+      "position": 1,
+      "title_en": "The garden on raised ground",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 2,
+          "from": 265,
+          "to": 266
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah gives a similitude of those who spend their wealth seeking God's approval and out of firmness within themselves: it is like a garden on raised ground (rabwa) that a heavy rain strikes, so that it gave its produce doubled, and if no heavy rain strikes it, then a light dew.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 265,
+              "to": 265
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The ayah ends by saying that God sees what they do.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 265,
+              "to": 265
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The next ayah asks whether any of those addressed would like to have a garden of date palms and vines, with rivers flowing beneath it and every kind of fruit in it, and then old age strikes him while his offspring are weak, and a whirlwind with fire in it strikes the garden and it burns.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 266,
+              "to": 266
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The ayah ends by saying that thus God makes the signs clear to them, that they may reflect.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 266,
+              "to": 266
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayah likens those who spend their wealth seeking God's approval to a garden on raised ground that gave its produce doubled after a heavy rain [c1]. The next ayah asks whether anyone would like a garden that a whirlwind with fire in it burns, when old age has struck him and his offspring are weak [c3].",
+      "body_md": "The ayah gives a similitude of those who spend their wealth seeking God's approval and out of firmness within themselves [c1]. They are like a garden on raised ground that a heavy rain strikes, so that it gave its produce doubled [c1]. If no heavy rain strikes it, then a light dew falls [c1]. The ayah ends by saying that God sees what they do [c2].\n\nThe next ayah asks whether any of those addressed would like to have a garden of date palms and vines, with rivers flowing beneath it and every kind of fruit in it [c3]. It goes on that old age strikes him while his offspring are weak, and a whirlwind with fire in it strikes the garden and it burns [c3]. The ayah ends by saying that thus God makes the signs clear to them, that they may reflect [c4].",
+      "deep_md": "The first ayah names what is likened (spending seeking God's approval and out of firmness within themselves) and what it is likened to (a garden on raised ground) [c1]. The next ayah is put as a question and does not itself say what the garden and the whirlwind stand for [c3]. The ayat close by saying that God sees what they do and that He makes the signs clear [c2][c4].",
+      "kids_md": "Those who spend to seek God's approval are likened to a garden on raised ground [c1]. A heavy rain makes it give doubled produce, and if no heavy rain strikes it, a light dew falls [c1]. God sees what people do [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the picture of the garden on raised ground shows a garden that gives something either way, whether a heavy rain or a light dew falls on it [c1]. Another reading is that the picture of the burned garden is a question the listener is asked to consider, and that the ayat end by saying God makes the signs clear so that they may reflect [c3][c4].",
+      "unknowns_md": "- Not established: who is meant by those who spend beyond the description in the ayah; no person is named.\n- Not established: who the man with the burned garden is, or what the fire and the whirlwind stand for; the ayah poses a question and gives no key.\n- The first ayah itself uses the word for a similitude (mathal). The next ayah does not use it: that it is grouped with the first as a parable is the platform's classification, not the text's.\n- The words rabwa (raised ground) and tathbit min anfusihim (firmness within themselves, or confirming their own souls) are read in more than one way; this draft keeps the wording general."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to these ayat.",
+    "The sense of tathbit min anfusihim and of rabwa, and whether 2:266 is part of the same similitude, are for a scholar to decide."
+  ]
+}

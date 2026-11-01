@@ -1,0 +1,74 @@
+{
+  "slug": "smooth-rock",
+  "title_en": "The smooth rock with soil on it",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "smooth-rock"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-rock-with-soil",
+      "position": 1,
+      "title_en": "The smooth rock with soil on it",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 2,
+          "from": 264,
+          "to": 264
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah tells those who believe not to cancel their charity with reminders of favours and with hurt, like one who spends his wealth to be seen by people and does not believe in God and the last day.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 264,
+              "to": 264
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "His similitude is that of a smooth rock with soil on it; a heavy rain hits it and leaves it bare, and they have no power over anything they have earned.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 264,
+              "to": 264
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The ayah ends by saying that God does not guide the disbelieving people.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 264,
+              "to": 264
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayah tells those who believe not to cancel their charity with reminders of favours and with hurt [c1]. It likens the one who spends to be seen by people to a smooth rock with soil on it that a heavy rain leaves bare [c1][c2].",
+      "body_md": "The ayah tells those who believe not to cancel their charity with reminders of favours and with hurt [c1]. This is like one who spends his wealth to be seen by people and does not believe in God and the last day [c1].\n\nHis similitude is that of a smooth rock with soil on it [c2]. A heavy rain hits it and leaves it bare, and they have no power over anything they have earned [c2]. The ayah ends by saying that God does not guide the disbelieving people [c3].",
+      "deep_md": "The ayah gives the comparison in steps: the believers are told what not to do, the one who spends to be seen is described, and then his similitude is given [c1][c2]. The rock and the soil are the picture, and the heavy rain is what leaves the rock bare [c2].",
+      "kids_md": "God tells those who believe not to spoil their charity by reminding people of favours or by hurting them [c1]. A smooth rock with soil on it is left bare by a heavy rain [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayah links the cancelling of charity with reminders of favours, with hurt and with spending to be seen by people [c1]. Another reading is that the picture shows what seems to be there, the soil, being washed from bare rock [c2].",
+      "unknowns_md": "- Not established: who is meant by the one who spends to be seen by people beyond the description in the ayah; no person is named.\n- Not established: what the soil stands for beyond the picture the ayah gives.\n- The ayah itself uses the word for a similitude (mathal) of this person.\n- The Arabic words al-mann and al-adha are rendered 'reminders of favours' and 'hurt'; a scholar should check this wording."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to this ayah.",
+    "The wording of al-mann and al-adha, and of safwan as a smooth rock, is for a scholar to confirm."
+  ]
+}

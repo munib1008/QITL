@@ -1,0 +1,74 @@
+{
+  "slug": "examples-of-the-wives",
+  "title_en": "The examples given: the wives of Nuh and Lut, the wife of Fir'awn and Maryam",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "examples-of-the-wives"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-examples-of-the-wives",
+      "position": 1,
+      "title_en": "The examples for those who disbelieved and those who believed",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 66,
+          "from": 10,
+          "to": 12
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God struck as a similitude for those who disbelieved the wife of Nuh and the wife of Lut; both were under righteous servants of God's servants and betrayed them, so they availed them nothing against God, and they were told to enter the fire with those who enter.",
+          "verses": [
+            {
+              "surah": 66,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God struck as a similitude for those who believed the wife of Fir'awn, when she asked her Lord to build for her a house with Him in the garden, and to save her from Fir'awn and his deeds, and to save her from the wrongdoing people.",
+          "verses": [
+            {
+              "surah": 66,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God also gave Maryam, daughter of Imran, who guarded her chastity, so that God breathed into it of His spirit, and she believed in the words of her Lord and His books, and was of the devout.",
+          "verses": [
+            {
+              "surah": 66,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God struck as a similitude for those who disbelieved the wife of Nuh and the wife of Lut [c1]. He struck as a similitude for those who believed the wife of Fir'awn, and also gave Maryam, daughter of Imran [c2][c3].",
+      "body_md": "God struck as a similitude for those who disbelieved the wife of Nuh and the wife of Lut [c1]. Both were under righteous servants of God's servants and betrayed them, so they availed them nothing against God, and they were told to enter the fire with those who enter [c1].\n\nGod struck as a similitude for those who believed the wife of Fir'awn [c2]. She asked her Lord to build for her a house with Him in the garden, and to save her from Fir'awn and his deeds, and to save her from the wrongdoing people [c2].\n\nGod also gave Maryam, daughter of Imran, who guarded her chastity, so that God breathed into it of His spirit [c3]. She believed in the words of her Lord and His books, and was of the devout [c3].",
+      "deep_md": "The ayat give examples in groups: for those who disbelieved, the wife of Nuh and the wife of Lut, and for those who believed, the wife of Fir'awn and Maryam [c1][c2][c3]. The first group are described as under righteous servants and as betraying them, and the ayah does not say how they betrayed them [c1]. The wife of Fir'awn is given in her own request to her Lord, and Maryam is given in what she guarded and what she believed [c2][c3].",
+      "kids_md": "God gave examples for those who believed [c2]. One is the wife of Fir'awn, who asked her Lord to build for her a house with Him in the garden [c2]. Another is Maryam, daughter of Imran, who believed in the words of her Lord and His books [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat give examples of both kinds: wives under righteous servants who betrayed them, and a wife and a woman who asked, guarded and believed [c1][c2][c3]. Another reading is that the ayah says the wives who betrayed availed them nothing against God, even though both were under righteous servants [c1].",
+      "unknowns_md": "- Not established: how the wives of Nuh and Lut betrayed their husbands; the ayah says only that they betrayed them.\n- Named in later tradition, not in the Quranic text: later sources give personal names to the wives of Nuh and Lut and to the wife of Fir'awn and tell accounts about them; this draft does not repeat or vouch for them.\n- Not established: where or when the wife of Fir'awn made her request, or what became of her; the ayah gives only her request.\n- The ayah ends the example of Maryam with 'breathed into it'; the pronoun is read in more than one way, and this draft keeps the ayah's wording.\n- The ayat themselves use the word for a similitude (mathal) of the wives; 66:12 continues the list with and Maryam."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: the reports that later commentary links to 66:10-12, to be found, graded by a named grader and linked by a scholar.",
+    "The wordings to check first: fa-khanatahuma (betrayed them) in 66:10, and the pronoun in fihi (into it) in 66:12."
+  ]
+}
