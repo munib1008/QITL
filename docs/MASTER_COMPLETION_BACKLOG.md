@@ -7,10 +7,10 @@ credential or licence, or human review. Status per feature: `docs/FEATURE_ACCEPT
 
 | # | Item | Unblocked by | State |
 |---|---|---|---|
-| 1 | Quran reader completion: jump-to-ayah, copy/share with Tanzil attribution, reading progress, saved verses, long-surah performance | Code | In progress (`fin/reader`) |
-| 2 | Unified search incl. Quran Arabic text and every module, EN/AR/UR, typo/transliteration tolerant, never private/unpublished | Code | In progress (`fin/search`) |
-| 3 | Urdu interface strings in every module; mark English islands `lang="en"`; language switch keeps the page | Code; then a qualified translator reviews AR/UR | In progress (`fin/i18n`) |
-| 4 | Security: nonce CSP, API rate limiting, role-escalation/RLS sweep, sanitisation tests, monitoring adapter, dream retention schedule | Code | In progress (`fin/security`) |
+| 1 | Quran reader completion: jump-to-ayah, copy/share with Tanzil attribution, reading progress, saved verses, long-surah performance | Code | Done 2026-10-31 (browser-tested; real-device check open) |
+| 2 | Unified search incl. Quran Arabic text and every module, EN/AR/UR, typo/transliteration tolerant, never private/unpublished | Code | Done 2026-11-01 (typed results and facets, EN/AR/UR; content empty) |
+| 3 | Urdu interface strings in every module; mark English islands `lang="en"`; language switch keeps the page | Code; then a qualified translator reviews AR/UR | Code done (draft strings); translator review waiting. Admin forms: in progress (`mod/admin-l10n`) |
+| 4 | Security: nonce CSP, API rate limiting, role-escalation/RLS sweep, sanitisation tests, monitoring adapter, dream retention schedule | Code | Done (nonce CSP, rate limits, RLS sweep, retention job live); monitoring needs `SENTRY_DSN` from the owner |
 | 5 | Desktop navigation to every module; accurate home section grid | Code | Done 2026-10-31 (`src/lib/nav.ts`) |
 | 6 | Sign off the licence registry (Tanzil first) | Owner, at `/admin/licences` | Waiting |
 | 7 | Supabase Auth URL settings (Site URL `https://qitl.vercel.app`, redirect `/auth/callback`) and the first admin grant | Owner, Supabase dashboard | Waiting |
@@ -40,7 +40,7 @@ credential or licence, or human review. Status per feature: `docs/FEATURE_ACCEPT
 | 21 | Other riwayat texts (Warsh, Qalun, Shu'bah, …) | King Fahd Complex written permission |
 | 22 | Word-by-word / morphology | Decide on Quranic Arabic Corpus (GPL) vs Quran Foundation word data |
 | 23 | Tafsir (incl. Tafsir Muqatil ibn Sulayman as the 11th historical reference) | Per-edition licences; Muqatil edition and rights unknown |
-| 24 | Media library: upload, validation, variants, approval | Code (in progress `fin/media`); optional `MALWARE_SCAN_URL` |
+| 24 | Media library: upload, validation, variants, approval | Code done (images + WebM/MP4 clips); optional `MALWARE_SCAN_URL` from the owner |
 | 25 | Narration | A TTS provider with a commercial-use agreement; `LARA_ACCESS_KEY_ID/SECRET` for translation; `ANTHROPIC_API_KEY` for drafting |
 | 26 | Real map tiles | `NEXT_PUBLIC_MAP_TILES_URL`, `NEXT_PUBLIC_MAP_ATTRIBUTION` |
 
@@ -49,7 +49,7 @@ credential or licence, or human review. Status per feature: `docs/FEATURE_ACCEPT
 | # | Item | Unblocked by |
 |---|---|---|
 | 27 | Mufti Q&A notifications and scholar application form; verified muftis | Code (done on `mod/mufti-flags`: in-app notifications, bell + panel, `/mufti/apply`, admin review list); owner verifies muftis; email delivery waits for item 29 |
-| 28 | Admin-editable landing content, navigation and feature flags | Code (done on `mod/mufti-flags`: `/admin/site`, versioned and audited; menus wired; the home page must read the text blocks with `homeText()` once `mod/perf-visual` is merged) |
+| 28 | Admin-editable landing content, navigation and feature flags | Code (done on `mod/mufti-flags`: `/admin/site`, versioned and audited; menus wired; the home page now reads the text blocks and hidden sections (2026-11-01); the old note follows: with `homeText()` once `mod/perf-visual` is merged) |
 | 29 | Email digest sender | Email provider |
 | 30 | Visual regression baselines (done on `mod/perf-visual`: `pnpm test:visual`, Windows baselines, `docs/RESPONSIVE.md`); real-device testing (open) | Devices |
 | 31 | Home page performance (TBT): measured and partly worked on (`mod/perf-visual`): layout work about 20% lower, LCP about 0.2 s better, TBT not materially better; the first document layout (cold fonts) remains, `docs/RESPONSIVE.md` | Code |

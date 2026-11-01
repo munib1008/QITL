@@ -130,12 +130,17 @@ test("switching the interface language keeps the page, the query and the #hash",
   await expect(page).toHaveURL(/\/ur\/prophets\/yusuf#places$/);
   await expect(page.locator("html")).toHaveAttribute("lang", "ur");
   // Another fragment, opened the way a link would (the page's own scripts may rewrite a hash set afterwards).
+  // The page's scroll-spy may move the fragment to the section in view while it loads, so the test keeps whatever fragment
+  // is current at the moment of the click and checks that the language link carries exactly that one.
   await page.goto("/ur/prophets/yusuf#discuss");
+  await expect(page.locator("html")).toHaveAttribute("lang", "ur");
+  const hash1 = await page.evaluate(() => location.hash);
   await page.locator("header").getByRole("group", { name: "زبان" }).getByRole("link", { name: "العربية" }).click();
-  await expect(page).toHaveURL(/\/ar\/prophets\/yusuf#discuss$/);
+  await expect(page).toHaveURL(new RegExp(`/ar/prophets/yusuf${hash1}$`));
+  const hash2 = await page.evaluate(() => location.hash);
   await page.locator("header").getByRole("group", { name: "اللغة" }).getByRole("link", { name: "English" }).click();
   // /en/... sets the cookie and redirects to the unprefixed URL; the browser keeps the fragment across the redirect.
-  await expect(page).toHaveURL(/\/prophets\/yusuf#discuss$/);
+  await expect(page).toHaveURL(new RegExp(`/prophets/yusuf${hash2}$`));
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
   await page.goto("/search?q=Yusuf");
   await page.locator("header").getByRole("group", { name: "Language" }).getByRole("link", { name: "العربية" }).click();
