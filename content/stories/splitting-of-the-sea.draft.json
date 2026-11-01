@@ -1,0 +1,298 @@
+{
+  "slug": "splitting-of-the-sea",
+  "title_en": "The exodus and the splitting of the sea",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "splitting-of-the-sea"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-night-journey-and-the-sea",
+      "position": 1,
+      "title_en": "The night journey and the sea",
+      "event_slug": "splitting-of-the-sea",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 50,
+          "to": 50
+        },
+        {
+          "surah": 20,
+          "from": 77,
+          "to": 79
+        },
+        {
+          "surah": 26,
+          "from": 52,
+          "to": 56
+        },
+        {
+          "surah": 26,
+          "from": 60,
+          "to": 68
+        },
+        {
+          "surah": 44,
+          "from": 23,
+          "to": 24
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God inspired Musa to travel by night with His servants, for they would be pursued.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 52,
+              "to": 52
+            },
+            {
+              "surah": 44,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Fir'awn sent gatherers into the cities, saying that these were a small band who enraged them, and that they were all on guard.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 53,
+              "to": 56
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They pursued them at sunrise; when the hosts saw each other, the companions of Musa said that they were about to be overtaken, and he said never, for his Lord was with him and would guide him.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 60,
+              "to": 62
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God inspired him to strike the sea with his staff, and it split, each part being like a great mountain; in another passage he was told to strike for them a dry path in the sea, fearing neither being overtaken nor any other danger.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 63,
+              "to": 63
+            },
+            {
+              "surah": 20,
+              "from": 77,
+              "to": 77
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God brought the others near, saved Musa and all who were with him, and then drowned the others; God also says that He parted the sea for them, saved them, and drowned the family of Fir'awn while they were watching.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 64,
+              "to": 66
+            },
+            {
+              "surah": 2,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Fir'awn followed them with his soldiers and the sea covered them with what covered them; Fir'awn led his people astray and did not guide them.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 78,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Musa was told to leave the sea calm, a word understood in more than one way, for they were a host to be drowned.",
+          "verses": [
+            {
+              "surah": 44,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "God says that in that is a sign, though most of them were not believers, and that his Lord is the Almighty, the Merciful.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 67,
+              "to": 68
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God inspired Musa to travel by night with His servants, and Fir'awn sent gatherers into the cities and pursued them [c1][c2][c3]. Musa struck the sea with his staff, it split, and God saved Musa and those with him and drowned the others [c4][c5].",
+      "body_md": "God inspired Musa to travel by night with His servants, for they would be pursued [c1]. Fir'awn sent gatherers into the cities, saying that these were a small band who enraged them [c2]. They pursued them at sunrise; when the hosts saw each other, the companions of Musa said that they were about to be overtaken, and he said never, for his Lord was with him and would guide him [c3].\n\nGod inspired him to strike the sea with his staff, and it split, each part being like a great mountain; in another passage he was told to strike for them a dry path in the sea [c4]. God brought the others near, saved Musa and all who were with him, and then drowned the others [c5]. Fir'awn followed them with his soldiers and the sea covered them with what covered them [c6]. Musa was told to leave the sea calm, for they were a host to be drowned [c7].\n\nGod says that in that is a sign, though most of them were not believers [c8].",
+      "deep_md": "The crossing is told in more than one passage, each adding a detail: the command to travel by night [c1], the pursuit [c2][c3], the blow on the sea [c4], the rescue and the drowning [c5][c6]. The Arabic of 44:24 (leave the sea calm) is understood in more than one way, as calm, open or parted [c7]. One passage closes with the remark that this is a sign [c8].",
+      "kids_md": "God told Musa to leave at night with His servants [c1]. Fir'awn followed them, and Musa struck the sea with his staff [c3][c4]. The sea split, and God saved Musa and those with him [c4][c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the companions of Musa say they are about to be overtaken and he answers that his Lord is with him [c3]. Another is that the passage ends by calling the event a sign [c8].",
+      "unknowns_md": "- Not established: the name or place of the sea (the Arabic says bahr and yamm), the date, or the number of people who crossed.\n- Not established: how the sea divided beyond that each part was like a great mountain, or how long the way stayed open.\n- The word rendered calm in 44:24 is read in more than one way (calm, open or parted); the draft leaves it open.\n- Not established: the place on the far shore.\n- The passages 2:50, 20:77-79, 26:52-68 and 44:23-24 are read as one event on matching wording (an inference)."
+    },
+    {
+      "anchor": "the-end-of-firawn-and-what-was-left",
+      "position": 2,
+      "title_en": "The end of Fir'awn and what was left",
+      "event_slug": "splitting-of-the-sea",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 136,
+          "to": 137
+        },
+        {
+          "surah": 10,
+          "from": 90,
+          "to": 92
+        },
+        {
+          "surah": 26,
+          "from": 57,
+          "to": 59
+        },
+        {
+          "surah": 44,
+          "from": 25,
+          "to": 31
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God took the Children of Israel across the sea, and Fir'awn and his soldiers followed in transgression and enmity; when drowning overtook him he said that he believed that there is no god except the One in whom the Children of Israel believed, and that he was of those who submit.",
+          "verses": [
+            {
+              "surah": 10,
+              "from": 90,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He was told: now, when you disobeyed before and were among the corrupters? Today God would save him in his body, so that he would be a sign for those after him; many people are heedless of God's signs.",
+          "verses": [
+            {
+              "surah": 10,
+              "from": 91,
+              "to": 92
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God took vengeance on them and drowned them in the sea because they denied His signs and were heedless of them.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 136,
+              "to": 136
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God brought them out of gardens, springs, treasures and a noble station, and gave it as an inheritance to the Children of Israel; another passage says how many gardens and springs, crops, a noble station and comfort they left, and that God gave it to another people.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 57,
+              "to": 59
+            },
+            {
+              "surah": 44,
+              "from": 25,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Neither the sky nor the earth wept over them, and they were not given respite.",
+          "verses": [
+            {
+              "surah": 44,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God saved the Children of Israel from the humiliating punishment, from Fir'awn, who was high and among the transgressors.",
+          "verses": [
+            {
+              "surah": 44,
+              "from": 30,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God gave as an inheritance to the people who had been oppressed the eastern and western parts of the land which He had blessed; the fair word of his Lord was fulfilled for the Children of Israel because they were patient, and God destroyed what Fir'awn and his people had made and what they had built.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 137,
+              "to": 137
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "When drowning overtook Fir'awn he said that he believed in the One in whom the Children of Israel believed, and he was told that God would save him in his body as a sign [c1][c2]. God drowned them for denying His signs, and gave what they left to others [c3][c4].",
+      "body_md": "God took the Children of Israel across the sea, and Fir'awn and his soldiers followed in transgression and enmity [c1]. When drowning overtook him he said that he believed that there is no god except the One in whom the Children of Israel believed, and that he was of those who submit [c1]. He was told that he had disobeyed before and had been among the corrupters [c2]. That day God would save him in his body, so that he would be a sign for those after him [c2].\n\nGod took vengeance on them and drowned them in the sea because they denied His signs and were heedless of them [c3]. He brought them out of gardens, springs, treasures and a noble station, and gave it as an inheritance to the Children of Israel [c4]. Neither the sky nor the earth wept over them, and they were not given respite [c5].\n\nGod saved the Children of Israel from the humiliating punishment, from Fir'awn, who was high and among the transgressors [c6]. The fair word of his Lord was fulfilled for the Children of Israel because they were patient [c7].",
+      "deep_md": "The chapter has the last words of Fir'awn and the answer to them [c1][c2], the reason given for the drowning [c3], and what they left behind [c4][c5]. It ends with the rescue of the Children of Israel and the fulfilment of the fair word [c6][c7]. The Quran says that God would save Fir'awn in his body as a sign [c2]; it does not say more about the body.",
+      "kids_md": "Fir'awn followed the Children of Israel into the sea [c1]. God drowned him and his soldiers because they had denied His signs [c3]. God saved the Children of Israel from the humiliating punishment [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that a confession made when drowning overtakes is met with the question of why it came only then [c1][c2]. Another is that the passage says the Children of Israel were given the fair word because they were patient [c7].",
+      "unknowns_md": "- Not established: what God did with the body of Fir'awn beyond saving it as a sign. Named in later tradition, not in the Quranic text: any identification of a body with a named king.\n- Not established: the land inherited in 26:59, 44:28 and 7:137; the verses do not name it, and the passages differ on who inherited it (the Children of Israel, another people).\n- Not established: who speaks to Fir'awn in 10:91-92; the verse gives no speaker.\n- Not established: whether the nations or the rescue refer to the same moment as the crossing described in the previous chapter."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the crossing and the end of Fir'awn. None is used in this draft.",
+    "The event is also told inside the longer story of Musa (content/stories/musa.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "Named in later tradition, not in the Quranic text: the name or place of the sea, the number of those who crossed, and the personal names of the Samiri's origin or of anyone not named in the verses. None is used in the story texts.",
+    "The inheritance of 26:59 (the Children of Israel) and of 44:28 (another people) is told in different words; the draft keeps both and does not reconcile them.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

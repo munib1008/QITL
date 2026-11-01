@@ -1,0 +1,444 @@
+{
+  "slug": "prostration-to-adam-and-iblis",
+  "title_en": "The prostration to Adam and Iblis's refusal",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "prostration-to-adam-and-iblis"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-command-and-the-refusal",
+      "position": 1,
+      "title_en": "The command and the refusal",
+      "event_slug": "prostration-to-adam-and-iblis",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 7,
+          "from": 11,
+          "to": 12
+        },
+        {
+          "surah": 15,
+          "from": 28,
+          "to": 33
+        },
+        {
+          "surah": 18,
+          "from": 50,
+          "to": 50
+        },
+        {
+          "surah": 38,
+          "from": 71,
+          "to": 76
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God told the angels that He was going to create a human being from clay.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 28,
+              "to": 28
+            },
+            {
+              "surah": 38,
+              "from": 71,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God said that when He had fashioned the human being and breathed into him of His spirit, the angels were to fall down before him in prostration.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 29,
+              "to": 29
+            },
+            {
+              "surah": 38,
+              "from": 72,
+              "to": 72
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God told the angels to prostrate to Adam, and they prostrated, every one of them together.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 34,
+              "to": 34
+            },
+            {
+              "surah": 7,
+              "from": 11,
+              "to": 11
+            },
+            {
+              "surah": 15,
+              "from": 30,
+              "to": 30
+            },
+            {
+              "surah": 38,
+              "from": 73,
+              "to": 73
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Iblis did not prostrate: he refused, and was not among those who prostrated.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 34,
+              "to": 34
+            },
+            {
+              "surah": 7,
+              "from": 11,
+              "to": 11
+            },
+            {
+              "surah": 15,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The Quran says that Iblis was arrogant and was among the disbelievers.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 34,
+              "to": 34
+            },
+            {
+              "surah": 38,
+              "from": 74,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Another passage says that Iblis was one of the jinn and that he departed from his Lord's command.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God asked Iblis what prevented him from prostrating when He commanded him, or what was the matter that he was not with those who prostrated.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 12,
+              "to": 12
+            },
+            {
+              "surah": 15,
+              "from": 32,
+              "to": 32
+            },
+            {
+              "surah": 38,
+              "from": 75,
+              "to": 75
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Iblis answered that he was better than the one he was told to prostrate to, because God had created him from fire and that one from clay.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 12,
+              "to": 12
+            },
+            {
+              "surah": 38,
+              "from": 76,
+              "to": 76
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "In another passage Iblis said that he would not prostrate to a human being whom God had created from dry clay, from moulded mud.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 33,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God told the angels to prostrate to Adam once He had fashioned a human being from clay and breathed into him of His spirit, and every one of them did [c1][c2][c3]. Iblis refused, saying that he was better because he was made of fire and the other of clay [c4][c8].",
+      "body_md": "God told the angels that He was going to create a human being from clay [c1]. When He had fashioned him and breathed into him of His spirit, they were to fall down before him in prostration [c2]. The angels prostrated to Adam, every one of them together [c3].\n\nIblis did not prostrate; he refused and was not among those who prostrated [c4]. The Quran says he was arrogant and among the disbelievers [c5], and another passage says he was one of the jinn and departed from his Lord's command [c6].\n\nGod asked him what prevented him from prostrating when he was commanded [c7]. Iblis answered that he was better, since God had created him from fire and the other from clay [c8]. In another passage he says he would not prostrate to a human being whom God had created from dry clay, from moulded mud [c9].",
+      "deep_md": "The scene is told in more than one passage with different emphasis [c3]. One gives the creation and the breathing of the spirit [c1][c2], some give the prostration of all the angels together [c3], and each gives the refusal [c4]. The question put to Iblis is worded differently from passage to passage [c7]. His answer rests on a comparison of what he and the other were made of [c8][c9].",
+      "kids_md": "God told the angels that He would make a human being from clay [c1]. They were to bow down to him, and they all did [c3]. Iblis refused, because he said he was better, made of fire while the other was made of clay [c4][c8].",
+      "lessons_md": "Educational interpretation (not scripture): The refusal rests on a comparison of what he and the other were made of [c8]. One reading is a caution against judging worth by origin or material [c8]. Another is that the angels acted on the command as it was given [c3].",
+      "unknowns_md": "- The Quran does not say where or when this scene took place, or what Iblis was told to go out from.\n- It does not describe how the angels prostrated or what kind of prostration it was.\n- How the statement that Iblis was one of the jinn (18:50) sits with the fact that he was among those addressed with the angels is not explained in these verses; a scholar should decide how the page words it.\n- The passages at 15:28-33 and 38:71-76 speak of a human being and do not name Adam; to read them as the same scene as the prostration to Adam is an inference from matching wording.\n- The verses do not explain what 'His spirit' is or how the breathing happened."
+    },
+    {
+      "anchor": "the-sentence-the-respite-and-the-vow",
+      "position": 2,
+      "title_en": "The sentence, the respite and the vow",
+      "event_slug": "prostration-to-adam-and-iblis",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 13,
+          "to": 18
+        },
+        {
+          "surah": 15,
+          "from": 34,
+          "to": 40
+        },
+        {
+          "surah": 15,
+          "from": 42,
+          "to": 44
+        },
+        {
+          "surah": 17,
+          "from": 61,
+          "to": 63
+        },
+        {
+          "surah": 17,
+          "from": 65,
+          "to": 65
+        },
+        {
+          "surah": 38,
+          "from": 77,
+          "to": 85
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God told Iblis to go down from it and to go out, saying that he had no right to be arrogant there and that he was among the humiliated.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God said that Iblis was driven away and that His curse would be on him until the Day of Judgement.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 34,
+              "to": 35
+            },
+            {
+              "surah": 38,
+              "from": 77,
+              "to": 78
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Iblis asked God to give him respite until the day when people are raised.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 14,
+              "to": 14
+            },
+            {
+              "surah": 15,
+              "from": 36,
+              "to": 36
+            },
+            {
+              "surah": 38,
+              "from": 79,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God said that Iblis was among those given respite, until the day of the known time.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 15,
+              "to": 15
+            },
+            {
+              "surah": 15,
+              "from": 37,
+              "to": 38
+            },
+            {
+              "surah": 38,
+              "from": 80,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Iblis said that, because God had led him astray, he would lie in wait for people on God's straight path and then come at them from in front, from behind, from their right and from their left, and that God would not find most of them thankful.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 16,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "In parallel passages Iblis vowed to make wrongdoing look fair to people on the earth and to lead them all astray, except God's sincere servants.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 39,
+              "to": 40
+            },
+            {
+              "surah": 38,
+              "from": 82,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "In another passage Iblis asked whether he should prostrate to one whom God had created from clay, and said that if God let him wait until the Day of Resurrection he would take hold of that one's descendants, except a few.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 61,
+              "to": 62
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "God told Iblis to go, and said that Hell would be the recompense, in full, of him and of those among people who follow him.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 63,
+              "to": 63
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "God said that Iblis has no authority over His servants, except over those of the misled who follow him.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 42,
+              "to": 42
+            },
+            {
+              "surah": 17,
+              "from": 65,
+              "to": 65
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "God said that Hell is the promised place of all of them, and has seven gates, each with a portion of them assigned to it.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 43,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "God said that He would fill Hell with Iblis and with those among people who follow him, all together, and that He says only the truth.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 18,
+              "to": 18
+            },
+            {
+              "surah": 38,
+              "from": 84,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God told Iblis to go out and said the curse would be on him until the Day of Judgement [c1][c2]. Iblis asked for respite until the day people are raised and God granted it, and Iblis vowed to lead people astray except God's sincere servants [c3][c4][c6].",
+      "body_md": "God told Iblis to go down from it and to go out, saying that he had no right to be arrogant there and that he was among the humiliated [c1]. God said he was driven away and that His curse would be on him until the Day of Judgement [c2].\n\nIblis asked God to give him respite until the day when people are raised [c3], and God said he was among those given respite, until the day of the known time [c4]. Iblis then said that, because God had led him astray, he would lie in wait for people on God's straight path and come at them from in front, from behind, from their right and from their left [c5]. In the parallel passages he vows to make wrongdoing look fair on the earth and to lead them all astray, except God's sincere servants [c6]. In another passage he says that if God lets him wait until the Day of Resurrection he will take hold of the descendants of the one he refused to prostrate to, except a few [c7].\n\nGod answered that Iblis has no authority over His servants, except over the misled who follow him [c9]. Hell, which has seven gates, is the promised place of all of them [c10], and God said He would fill it with Iblis and with those who follow him, all together [c8][c11].",
+      "deep_md": "The request for respite, its grant and the vow are told in more than one passage with small differences [c3][c4][c6]. In one he speaks of lying in wait on the straight path [c5]; in others of making wrongdoing look fair on the earth [c6] and of taking hold of descendants [c7]. The limit placed on him is the same wherever it is stated: no authority over God's servants, except over those of the misled who follow him [c9].",
+      "kids_md": "God told Iblis to go [c1]. Iblis asked God to let him wait until the day people are raised, and God allowed it [c3][c4]. Iblis said he would try to lead people astray [c6]. God said he has no power over God's servants, except those who follow him [c9].",
+      "lessons_md": "Educational interpretation (not scripture): The passage records Iblis's own announcement that he will try to mislead people [c5][c6], and records a limit on him [c9]. One reading is a reminder to be on guard [c5].",
+      "unknowns_md": "- The Quran does not say when the day of the known time is.\n- It does not describe how Iblis lies in wait or comes from the directions he names; the verses give his words only.\n- What Iblis means by saying that God led him astray is not explained in these verses.\n- Hell is described here only by its seven gates and their portions; the verses give no further description of it.\n- The verse 15:41 (a statement by God about a straight path) and 17:64 (what Iblis is told he may do) lie inside the inventory range but are not used; their wording is disputed or needs more space, and a reviewer should decide whether to add them."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the creation of Adam, the prostration and the respite given to Iblis. None is used in this draft.",
+    "The same scene is also told inside the longer story of Adam (content/stories/adam.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "Whether Iblis was an angel or one of the jinn is not settled in the verses beyond 18:50, which calls him one of the jinn; how this is worded is for a scholar.",
+    "The passages at 15:28-33 and 38:71-76 speak of a human being without the name; they are read here as the same scene as the prostration to Adam (an inference, as in the event inventory).",
+    "The inventory also lists 20:116, which repeats the command and the refusal; it is not cited separately because 2:34 and 7:11 say the same.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

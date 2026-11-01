@@ -1,0 +1,309 @@
+{
+  "slug": "the-golden-calf",
+  "title_en": "The calf and the return of Musa",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "the-golden-calf"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-calf-is-made",
+      "position": 1,
+      "title_en": "The calf is made",
+      "event_slug": "the-golden-calf",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 51,
+          "to": 52
+        },
+        {
+          "surah": 7,
+          "from": 148,
+          "to": 149
+        },
+        {
+          "surah": 20,
+          "from": 83,
+          "to": 84
+        },
+        {
+          "surah": 20,
+          "from": 87,
+          "to": 91
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God says that He appointed nights for Musa, and that they took the calf after he left, being wrongdoers.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 51,
+              "to": 51
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God asked Musa what made him hasten from his people; he said that they were on his track and that he hastened to his Lord so that He would be pleased.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 83,
+              "to": 84
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The people of Musa took, after he left, a calf from their ornaments, a body having a lowing; it neither spoke to them nor guided them to a way.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 148,
+              "to": 148
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "In another passage they said that they had not broken their promise of their own will, but were made to carry loads of the ornaments of the people, so they threw them, and the Samiri threw likewise; he brought out for them a calf, a body having a lowing, and they said that this was their god and the god of Musa.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 87,
+              "to": 88
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God asks whether they did not see that it returned no word to them and had no power to harm or benefit them.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 89,
+              "to": 89
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Harun had said to them before that they were only being tried with it, that their Lord is the Merciful, and that they should follow him and obey his order; they said that they would not cease to be devoted to it until Musa returned.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 90,
+              "to": 91
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "When they regretted and saw that they had gone astray, they said that unless their Lord had mercy on them and forgave them they would be among the losers.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 149,
+              "to": 149
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "God says that He pardoned them after that so that they might be thankful.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 52,
+              "to": 52
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "While Musa was away, his people took a calf from their ornaments, a body with a lowing, and the Samiri threw likewise and brought it out [c3][c4]. Harun had told them they were being tried, but they said they would stay devoted to it until Musa returned [c6].",
+      "body_md": "God says that He appointed nights for Musa, and that they took the calf after he left, being wrongdoers [c1]. God asked Musa what made him hasten from his people, and he said that they were on his track [c2].\n\nThe people of Musa took, after he left, a calf from their ornaments, a body having a lowing; it neither spoke to them nor guided them to a way [c3]. In another passage they said that they were made to carry loads of the ornaments of the people, and threw them, and the Samiri threw likewise; he brought out for them a calf, and they said that this was their god and the god of Musa [c4]. God asks whether they did not see that it returned no word to them and had no power to harm or benefit [c5].\n\nHarun had said to them before that they were only being tried with it and that they should follow him and obey his order; they said that they would not cease to be devoted to it until Musa returned [c6]. When they regretted and saw that they had gone astray, they said that unless their Lord had mercy on them and forgave them they would be among the losers [c7]. God says that He pardoned them after that [c8].",
+      "deep_md": "The chapter tells the event from different sides: the appointment and the taking of the calf [c1], Musa's hurry to his Lord [c2], the people's own account [c4], and the verdict that the calf had no word and no power [c3][c5]. Harun's warning is told once [c6], and their regret and the pardon at the end [c7][c8]. The word that follows this is your god and the god of Musa in 20:88 has its subject read in more than one way and is not used here [c4].",
+      "kids_md": "While Musa was away, his people made a calf from their ornaments [c3]. Harun told them it was only a test, but they would not stop [c6]. Later they felt sorry, and God pardoned them [c7][c8].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the calf is shown to have no word and no power to harm or benefit, in the Quran's own question [c5]. Another is that regret and a request for mercy are followed by a pardon [c7][c8].",
+      "unknowns_md": "- Not established: what the calf was made of beyond a body having a lowing, whether the lowing was real, or the origin of the Samiri.\n- Not established: how long Musa was away in terms of days; the verses say nights were appointed without giving a number in this chapter.\n- Not established: how many of the people took part, or who exactly spoke in 20:87-88 as we.\n- The verses 2:51-52, 7:148-149 and 20:83-91 are read as one event on matching wording (an inference)."
+    },
+    {
+      "anchor": "musas-return-and-the-repentance",
+      "position": 2,
+      "title_en": "Musa's return and the repentance",
+      "event_slug": "the-golden-calf",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 53,
+          "to": 54
+        },
+        {
+          "surah": 7,
+          "from": 150,
+          "to": 153
+        },
+        {
+          "surah": 20,
+          "from": 85,
+          "to": 86
+        },
+        {
+          "surah": 20,
+          "from": 92,
+          "to": 98
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God said to Musa that He had tried his people after him and that the Samiri had led them astray.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 85,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Musa returned to his people angry and grieved and asked whether their Lord had not promised them a good promise, whether the covenant had seemed long to them, or whether they had wished anger from their Lord to descend on them, so that they broke their appointment with him.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 86,
+              "to": 86
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He asked Harun what prevented him, when he saw them go astray, from following him, and whether he had disobeyed his order.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 92,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "In another passage Musa returned angry and grieved and said what an evil thing they had done in his place after him, asking whether they had hastened the command of their Lord; he threw down the tablets and seized his brother's head, pulling him toward him; Harun said that the people had thought him weak and nearly killed him, and asked that the enemies not rejoice at him and that he not be put with the wrongdoing people.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 150,
+              "to": 150
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Harun also said that Musa should not seize him, that he had feared Musa would say he had caused division among the Children of Israel and had not observed his word.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 94,
+              "to": 94
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Musa asked his Lord to forgive him and his brother and to admit them into His mercy.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 151,
+              "to": 151
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Musa asked the Samiri what his case was; he said that he had seen what they had not seen, so he took a handful from the track of the messenger and threw it, and so his soul suggested to him; Musa told him to go, said that in this life he would say do not touch, and that he had an appointment he would not miss, and that the god to which he had been devoted would be burned and scattered in the sea.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 95,
+              "to": 97
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Musa told them that their God is God alone, other than whom there is no god, and that He has encompassed all things in knowledge.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 98,
+              "to": 98
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "God says that those who took the calf will be struck by anger from their Lord and humiliation in the life of this world; and that, for those who did evil, then repented after it and believed, their Lord is forgiving and merciful.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 152,
+              "to": 153
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "God says that He gave Musa the Book and the Criterion so that they might be guided; Musa told his people that they had wronged themselves by taking the calf, so they should repent to their maker and kill themselves, which was better for them with their maker, and He accepted their repentance.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 53,
+              "to": 54
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God told Musa that the Samiri had led his people astray, and Musa returned angry and grieved, questioned his people and Harun, and asked his Lord to forgive him and his brother [c1][c2][c3][c4][c6]. He questioned the Samiri, and told the people that their God is God alone [c7][c8].",
+      "body_md": "God said to Musa that the Samiri had led his people astray [c1]. Musa returned to his people angry and grieved and asked whether their Lord had not promised them a good promise [c2]. He asked Harun what prevented him, when he saw them go astray, from following him [c3]. In another passage Musa said what an evil thing they had done in his place, threw down the tablets and seized his brother's head; Harun said that the people had thought him weak and nearly killed him [c4]. Harun said he had feared Musa would say he had caused division among the Children of Israel [c5]. Musa asked his Lord to forgive him and his brother and to admit them into His mercy [c6].\n\nMusa asked the Samiri what his case was, and the Samiri said that he had taken a handful from the track of the messenger and threw it [c7]. Musa told the people that their God is God alone, other than whom there is no god [c8].\n\nGod says that those who took the calf will be struck by anger from their Lord and humiliation in the life of this world, and that for those who repented and believed their Lord is forgiving and merciful [c9]. He says that He gave Musa the Book and the Criterion, and that Musa told his people to repent to their maker, and He accepted their repentance [c10].",
+      "deep_md": "The return is told in different passages with different details: the questions to the people and to Harun [c2][c3], and the throwing down of the tablets and the seizing of Harun [c4]. Harun's reply is told in different forms [c4][c5], and Musa's prayer follows [c6]. The questioning of the Samiri [c7] and the statement about God [c8] are followed by the verdict on those who took the calf [c9] and the call to repent [c10]. How the repentance of 2:54 was carried out is not stated in the verse [c10].",
+      "kids_md": "Musa came back and was angry and sad [c2]. He asked Harun why he had not stopped them, and Harun answered [c3][c5]. Musa asked his Lord to forgive him and his brother [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Musa turns to ask forgiveness for himself and his brother after his anger [c4][c6]. Another is that the passage ends with repentance and its acceptance [c10].",
+      "unknowns_md": "- Not established: what the handful from the track of the messenger refers to; interpreters differ. Named in later tradition, not in the Quranic text: any identification of the messenger and the track.\n- Not established: how the repentance of 2:54 was carried out; the verse says kill yourselves without further explanation, and a scholar should decide how to word it.\n- Not established: what the tablets were made of or what was written on them in this passage.\n- The relation between the accounts of Harun's reply (7:150 and 20:94) is not stated.\n- Whether the Samiri is among those who repented is not stated."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the calf and the return of Musa. None is used in this draft.",
+    "The event is also told inside the longer story of Musa (content/stories/musa.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "Named in later tradition, not in the Quranic text: the name or place of the sea, the number of those who crossed, and the personal names of the Samiri's origin or of anyone not named in the verses. None is used in the story texts.",
+    "The wording of 2:54 (kill yourselves) is for a scholar; the draft keeps the verse's words and gives no explanation of how it was carried out.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

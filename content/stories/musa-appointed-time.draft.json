@@ -1,0 +1,126 @@
+{
+  "slug": "musa-appointed-time",
+  "title_en": "Musa's appointed time with his Lord and the tablets",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "musa-appointed-time"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-appointed-time-and-the-tablets",
+      "position": 1,
+      "title_en": "The appointed time and the tablets",
+      "event_slug": "musa-appointed-time",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 142,
+          "to": 147
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God appointed thirty nights for Musa and completed them with ten, so that the appointed time of his Lord was completed; Musa told his brother Harun to take his place among his people, to set things right and not to follow the way of the corrupters.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 142,
+              "to": 142
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When Musa came at the appointed time and his Lord spoke to him, he asked his Lord to show Himself so that he might look at Him; God said that he would not see Him, but should look at the mountain, and if it stayed in its place then he would see Him.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 143,
+              "to": 143
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When his Lord manifested Himself to the mountain, He made it crumble, and Musa fell down unconscious; when he recovered he said glory be to God, that he turned to Him in repentance, and that he was the first of the believers.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 143,
+              "to": 143
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God told Musa that He had chosen him over the people with His messages and His speech, and that he should take what He had given him and be among the grateful.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 144,
+              "to": 144
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God wrote for him in the tablets something of everything, an admonition and a detailing of everything; he was to take them with strength and tell his people to take the best of them, and God would show them the home of the defiantly disobedient.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 145,
+              "to": 145
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God said that He would turn away from His signs those who are arrogant in the land without right, so that even if they see every sign they do not believe in it, and if they see the path of right guidance they do not take it as a path, but if they see the path of error they take it; this is because they denied His signs and were heedless of them.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 146,
+              "to": 146
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Those who denied His signs and the meeting of the Hereafter, their deeds are worthless; they are repaid only for what they did.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 147,
+              "to": 147
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God appointed thirty nights for Musa and completed them with ten, and Musa told his brother Harun to take his place [c1]. His Lord spoke to him, and God told him that He had chosen him and wrote for him in the tablets [c2][c4][c5].",
+      "body_md": "God appointed thirty nights for Musa and completed them with ten, so that the appointed time of his Lord was completed; Musa told his brother Harun to take his place among his people, to set things right and not to follow the way of the corrupters [c1].\n\nWhen Musa came at the appointed time and his Lord spoke to him, he asked his Lord to show Himself so that he might look at Him; God said that he would not see Him, but should look at the mountain, and if it stayed in its place then he would see Him [c2]. When his Lord manifested Himself to the mountain, He made it crumble, and Musa fell down unconscious; when he recovered he said glory be to God, that he turned to Him in repentance, and that he was the first of the believers [c3].\n\nGod told Musa that He had chosen him over the people with His messages and His speech [c4]. He wrote for him in the tablets something of everything, an admonition and a detailing, and told him to take them with strength [c5]. God said that He would turn away from His signs those who are arrogant in the land without right [c6], and that the deeds of those who denied His signs and the meeting of the Hereafter are worthless [c7].",
+      "deep_md": "The passage has the appointment and Harun's charge [c1], the meeting and the request [c2][c3], the choosing of Musa and the tablets [c4][c5], and statements about those who deny the signs [c6][c7]. The Arabic for the Lord's manifesting Himself to the mountain is rendered here without further description, and interpreters read it in more than one way [c3]. The verses say nothing about what the tablets were made of [c5].",
+      "kids_md": "God spoke to Musa at the time He had appointed [c2]. God told him that He had chosen him, and wrote for him in the tablets [c4][c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Musa answers what he sees by turning to God in repentance and calling himself the first of the believers [c3]. Another is that the tablets are described as an admonition and a detailing of everything [c5].",
+      "unknowns_md": "- Not established: where the appointment took place, what the tablets were made of, or what was written in them beyond the general description.\n- Not established: whether the thirty nights and ten nights were separate stages.\n- The Arabic of the manifesting to the mountain is read in more than one way; this draft gives no description.\n- Not established: what the home of the defiantly disobedient is.\n- The verse 7:143 is the only verse in this record that speaks of seeing God; this draft states its words and gives no explanation, and a scholar should decide how the page treats it."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the appointed time and the tablets. None is used in this draft.",
+    "The event is also told inside the longer story of Musa (content/stories/musa.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "7:143: the wording about seeing God and about the manifesting to the mountain is for a scholar; the draft states the verse's words only.",
+    "Named in later tradition, not in the Quranic text: the name or place of the sea, the number of those who crossed, and the personal names of the Samiri's origin or of anyone not named in the verses. None is used in the story texts.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

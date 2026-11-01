@@ -1,0 +1,139 @@
+{
+  "slug": "reunion-of-yaqub-and-yusuf",
+  "title_en": "The reunion of Yaqub and Yusuf",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "reunion-of-yaqub-and-yusuf"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-scent-the-shirt-and-the-reunion",
+      "position": 1,
+      "title_en": "The scent, the shirt and the reunion",
+      "event_slug": "reunion-of-yaqub-and-yusuf",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 94,
+          "to": 101
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "When the caravan set out, their father said that he found the scent of Yusuf, unless they thought him weak-minded.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 94,
+              "to": 94
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Others said that, by God, he was in his old error.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 95,
+              "to": 95
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When the bearer of good news came, he cast the shirt on the father's face, and the father returned seeing; he said, did he not tell them that he knew from God what they did not know.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 96,
+              "to": 96
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "His sons asked their father to ask forgiveness for their sins, since they had been sinners, and he said he would ask forgiveness for them from his Lord, who is forgiving and merciful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 97,
+              "to": 98
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "When they entered on Yusuf, he took his parents to himself and told them to enter Egypt, if God willed, in safety.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 99,
+              "to": 99
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Yusuf raised his parents upon the throne, and they fell down before him in prostration; he said that this was the interpretation of his dream of before, which his Lord had made true.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 100,
+              "to": 100
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Yusuf said that his Lord had been good to him in bringing him out of the prison and in bringing them from the desert, after Satan had stirred up enmity between him and his brothers; his Lord is subtle in what He wills, the knowing, the wise.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 100,
+              "to": 100
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Yusuf prayed that God, who had given him of the kingdom and taught him the interpretation of events, and who is the creator of the heavens and the earth, would take him as one who submits and join him with the righteous.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 101,
+              "to": 101
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Their father said he found the scent of Yusuf, and when the shirt was cast on his face he returned seeing [c1][c3]. Yusuf took his parents to himself, and they fell down before him in prostration, and he said this was the interpretation of his dream of before [c5][c6].",
+      "body_md": "When the caravan set out, their father said that he found the scent of Yusuf, unless they thought him weak-minded [c1]. Others said that, by God, he was in his old error [c2]. When the bearer of good news came, he cast the shirt on the father's face, and the father returned seeing [c3]. His sons asked him to ask forgiveness for their sins, and he said he would ask forgiveness for them from his Lord [c4].\n\nWhen they entered on Yusuf, he took his parents to himself and told them to enter Egypt, if God willed, in safety [c5]. He raised his parents upon the throne, and they fell down before him in prostration; he said that this was the interpretation of his dream of before, which his Lord had made true [c6]. He said that his Lord had been good to him in bringing him out of the prison and bringing them from the desert, after Satan had stirred up enmity between him and his brothers [c7].\n\nYusuf prayed that God would take him as one who submits and join him with the righteous [c8].",
+      "deep_md": "The chapter joins movements: the scent and the shirt [c1][c2][c3], the forgiveness asked from the father [c4] and the meeting with its prostration, with Yusuf's words about the dream [c5][c6][c7]. It ends with his prayer [c8]. The verses do not say who the parents are, and the sense of the Arabic verb in the prayer, the one used for taking a soul, is read in more than one way [c8].",
+      "kids_md": "Their father said he could smell Yusuf [c1]. When the shirt was put on his face, he could see again [c3]. Yusuf's parents bowed before him, and he said this was the meaning of his old dream [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Yusuf names the fulfilled dream as his Lord's doing and speaks of Satan's part in the enmity [c6][c7]. Another is that the chapter ends with a prayer to be taken as one who submits [c8].",
+      "unknowns_md": "- Not established: how much time passed between the first dream and the reunion; Yusuf calls the dream one of before.\n- The verses do not say who the others are in 12:95.\n- The verses do not say who the parents of 12:99-100 are; later accounts differ and none is used here.\n- The father is not named in these verses.\n- The Quran does not say what the prostration was, whether greeting, honour or something else.\n- The Arabic verb in Yusuf's prayer (12:101) is the one used for taking a soul; how to render it is left to the reviewer.\n- Not established: what became of the brothers, or Yusuf's death."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the reunion of Yusuf and his family. None is used in this draft.",
+    "The event is also told inside the longer story of Yusuf (content/stories/yusuf.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "The dream of Yusuf is told in 12:4-6 (see the event record on his dream); the draft does not equate the prostration of 12:100 with the dream beyond Yusuf's own words in 12:100.",
+    "Who the parents of 12:99-100 are is not stated; the draft does not decide.",
+    "Named in later tradition, not in the Quranic text: personal names for Yusuf's brothers, mother, the Aziz, his wife and the king, and the name and story of the wolf. None is used in the story texts.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

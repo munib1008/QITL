@@ -1,0 +1,127 @@
+{
+  "slug": "yusuf-in-prison",
+  "title_en": "Yusuf in prison",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "yusuf-in-prison"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-two-companions-and-the-forgotten-request",
+      "position": 1,
+      "title_en": "The two companions and the forgotten request",
+      "event_slug": "yusuf-in-prison",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 35,
+          "to": 42
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "After they had seen the signs, it occurred to them to imprison the young man of the story for a time.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Two young men entered the prison with him; one said he saw himself pressing wine, and the other that he saw himself carrying bread on his head, from which birds were eating; they asked him to tell them the interpretation, for they saw him as one of those who do good.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He said that no food provided for them would come before he had informed them of its interpretation; this, he said, was from what his Lord had taught him; and he had left the way of a people who do not believe in God and who deny the Hereafter.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He said that he followed the way of his forefathers Ibrahim, Ishaq and Yaqub, that it was not for them to associate anything with God, and that this was from God's favour on them and on people, though most people are not thankful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Speaking to his companions in prison, he asked whether scattered lords were better, or God, the One who prevails; he said that what they worshipped besides Him were only names that they and their fathers had given, for which God had sent down no authority, and that judgement belongs to God alone.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 39,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "He gave the interpretation: one of them would serve wine to his lord, and the other would be crucified and the birds would eat from his head; the matter about which they asked was decided.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 41,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "He said to the one he thought would be saved that he should mention him to his lord; Satan caused a forgetting of the mention of his lord, and he remained in prison for several years.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The young man of the story was imprisoned for a time, and two young men entered the prison with him and told him their dreams [c1][c2]. He gave them the interpretation, and asked the one he thought would be saved to mention him, but Satan caused a forgetting, and he stayed in prison for several years [c6][c7].",
+      "body_md": "After they had seen the signs, it occurred to them to imprison the young man of the story for a time [c1]. Two young men entered the prison with him; one said he saw himself pressing wine, and the other that he saw himself carrying bread on his head, from which birds were eating, and they asked him to tell them the interpretation [c2].\n\nHe said that no food provided for them would come before he had informed them of its interpretation, and that this was from what his Lord had taught him [c3]. He said he followed the way of his forefathers Ibrahim, Ishaq and Yaqub, and that it was not for them to associate anything with God [c4]. He asked his companions whether scattered lords were better, or God, the One who prevails, and said that judgement belongs to God alone [c5].\n\nHe gave the interpretation: one of them would serve wine to his lord, and the other would be crucified and the birds would eat from his head [c6]. He said to the one he thought would be saved that he should mention him to his lord; Satan caused a forgetting of the mention of his lord, and he remained in prison for several years [c7].",
+      "deep_md": "The prison scene has several movements: the dreams of the companions [c2], his speech about what his Lord taught him and about God alone [c3][c4][c5], and the interpretation with its sequel [c6][c7]. The reference of 'his lord' in 12:42 can be read in two ways, as the freed man's master or as the speaker's own Lord, and the draft keeps both [c7]. The length of the stay is given only as several years [c7].",
+      "kids_md": "Two young men came into the prison with him and told him their dreams [c2]. He told them what the dreams meant [c6]. He asked the one who would be saved to mention him, but that man forgot, and he stayed in prison for several years [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that he speaks to his companions of God alone before he gives the interpretation [c3][c5]. Another is that the request to be mentioned is followed by a long wait [c7].",
+      "unknowns_md": "- The verses in this event do not name the young man; the story that surrounds them does, and this record does not name him because these verses do not.\n- The Quran does not name the two young men or say what they had done; it does not say who his lord is in 12:41.\n- Not established: how long a time (12:35) was, how old he was when he was imprisoned, what the signs were that they had seen, or who they are who decided on the prison.\n- The Arabic for several years does not give an exact number of years.\n- The reference of his lord in 12:42 can be read in two ways, as noted in the text; the verse does not settle it."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the prison scenes. None is used in this draft.",
+    "The event is also told inside the longer prophet story (content/stories/yusuf.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "The name of the prisoner is not in 12:35-42 (the validator tests names against the cited ayat), so the texts say the young man of the story; the surrounding verses name him.",
+    "The reference of 'his lord' in 12:42 is open (the released man's master or the prisoner's own Lord); the draft keeps both readings.",
+    "Named in later tradition, not in the Quranic text: personal names for Yusuf's brothers, mother, the Aziz, his wife and the king, and the name and story of the wolf. None is used in the story texts.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

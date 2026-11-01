@@ -1,0 +1,174 @@
+{
+  "slug": "vision-of-the-sacrifice",
+  "title_en": "Ibrahim's vision of sacrificing his son",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "vision-of-the-sacrifice"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-vision-and-the-answer",
+      "position": 1,
+      "title_en": "The vision and the answer",
+      "event_slug": "vision-of-the-sacrifice",
+      "verses": [
+        {
+          "surah": 37,
+          "from": 99,
+          "to": 111
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ibrahim said that he was going to his Lord, who would guide him.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 99,
+              "to": 99
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He asked his Lord to grant him one of the righteous.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 100,
+              "to": 100
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God gave him glad tidings of a forbearing boy.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 101,
+              "to": 101
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "When the boy reached the stage of striving along with him, Ibrahim told him that he saw in sleep that he was slaughtering him, and asked him to consider what he thought.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 102,
+              "to": 102
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The son answered that his father should do what he was commanded, and that, if God willed, he would find him among the patient.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 102,
+              "to": 102
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "When both of them had submitted, and he had laid him down, God called to him.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 103,
+              "to": 104
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God said that Ibrahim had fulfilled the vision, and that in this way He rewards the doers of good.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 105,
+              "to": 105
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "God says that this was the clear trial.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 106,
+              "to": 106
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "God ransomed him with a great sacrifice.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 107,
+              "to": 107
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "God left on him a mention among later generations: peace be upon Ibrahim.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 108,
+              "to": 109
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "In this way God rewards the doers of good; Ibrahim was one of His believing servants.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 110,
+              "to": 111
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Ibrahim saw in sleep that he was slaughtering his son, and told him so [c4]. The son told him to do as he was commanded, and God called to Ibrahim that he had fulfilled the vision and ransomed his son with a great sacrifice [c5][c7][c9].",
+      "body_md": "Ibrahim said that he was going to his Lord, who would guide him, and he asked his Lord to grant him one of the righteous [c1][c2]. God gave him glad tidings of a forbearing boy [c3].\n\nWhen the boy reached the stage of striving along with him, Ibrahim told him that he saw in sleep that he was slaughtering him, and asked what he thought [c4]. The son answered that his father should do what he was commanded, and that, if God willed, he would find him among the patient [c5].\n\nWhen both of them had submitted, and he had laid him down, God called to him [c6]. God said that Ibrahim had fulfilled the vision, and that in this way He rewards the doers of good [c7]. God says that this was the clear trial [c8], and He ransomed him with a great sacrifice [c9]. God left on him a mention among later generations: peace be upon Ibrahim [c10]. He was one of God's believing servants [c11].",
+      "deep_md": "The passage runs from Ibrahim's prayer for a righteous child [c1][c2] and the glad tidings [c3] to the vision [c4], the answer [c5], the call [c6][c7] and the ransom [c9]. God names the event a clear trial [c8], and the passage closes with a mention left among later generations and a statement of reward [c10][c11]. The text speaks of the son and the vision throughout and does not give the son's name [c4][c5].",
+      "kids_md": "Ibrahim saw in a dream that he was to sacrifice his son, and he told him [c4]. His son said to do what he was told, and that he would be patient [c5]. God called out to Ibrahim and ransomed his son [c7][c9].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage stresses submission on both sides: Ibrahim consults his son and the son answers with patience [c4][c5]. Another is that God names the event a trial and a reward for the doers of good [c7][c8].",
+      "unknowns_md": "- The verses do not name the son. Interpreters have identified him in different ways, and a scholar must decide how the page treats the question; this draft does not name him.\n- Not established: the place, the time or the age of the son; the Arabic says only that he reached the stage of striving along with his father.\n- The pronoun in 'ransomed him' (37:107) is not marked in the Arabic; it is generally read as the son, and a scholar should confirm the wording.\n- The verse does not say how the great sacrifice was provided or what it was.\n- Not established: whether the vision was repeated; the verse says only that Ibrahim saw it in sleep.\n- The passage continues in 37:112-113 with a further glad tidings; those verses are outside this chapter and a scholar should decide whether to add them and how to word their relation to the boy of 37:101."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the vision of Ibrahim. None is used in this draft.",
+    "The event is also told inside the longer story of Ibrahim (content/stories/ibrahim.draft.json); this record is a shorter account that refers to it only in general words.",
+    "The identity of the son is not stated in the verses and is not named here. The question belongs to the scholars; the draft takes no position.",
+    "The verses 37:112-113, which give further glad tidings after the passage on the vision, are in the inventory range but not used; their bearing on the question of the son's identity needs a scholar's wording.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

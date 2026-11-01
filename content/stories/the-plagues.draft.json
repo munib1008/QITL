@@ -1,0 +1,148 @@
+{
+  "slug": "the-plagues",
+  "title_en": "The signs sent upon the people of Fir'awn",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "the-plagues"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-signs-sent-upon-the-people-of-firawn",
+      "position": 1,
+      "title_en": "The signs sent upon the people of Fir'awn",
+      "event_slug": "the-plagues",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 130,
+          "to": 135
+        },
+        {
+          "surah": 17,
+          "from": 101,
+          "to": 101
+        },
+        {
+          "surah": 27,
+          "from": 12,
+          "to": 12
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God seized the people of Fir'awn with years of drought and a shortage of fruits, so that they might remember.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 130,
+              "to": 130
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When good came to them they said it was theirs, and if evil struck them they took Musa and those with him as an omen; God says that their omen is with Him, but most of them do not know.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 131,
+              "to": 131
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They said that whatever sign he brought to bewitch them, they would not believe him.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 132,
+              "to": 132
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God sent upon them the flood, the locusts, the lice, the frogs and the blood as signs in detail; they were arrogant and a criminal people.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 133,
+              "to": 133
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "When the plague fell upon them they said to Musa that he should call upon his Lord by the covenant He had made with him; if he removed the plague they would believe him and send the Children of Israel with him.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 134,
+              "to": 134
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "When God removed the plague from them for a term which they were to reach, they broke their word.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 135,
+              "to": 135
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God says that He gave Musa nine clear signs, and that Fir'awn said to him that he thought him bewitched.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 101,
+              "to": 101
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Musa was told to put his hand into his bosom and it would come out white without harm, among nine signs to Fir'awn and his people, who were a defiantly disobedient people.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God seized the people of Fir'awn with years of drought and a shortage of fruits, and then sent the flood, the locusts, the lice, the frogs and the blood as signs [c1][c4]. When the plague fell on them they asked Musa to call upon his Lord, but broke their word once it was removed [c5][c6].",
+      "body_md": "God seized the people of Fir'awn with years of drought and a shortage of fruits, so that they might remember [c1]. When good came to them they said it was theirs, and if evil struck them they took Musa and those with him as an omen; God says their omen is with Him [c2]. They said that whatever sign he brought, they would not believe him [c3].\n\nGod sent upon them the flood, the locusts, the lice, the frogs and the blood as signs in detail; they were arrogant and a criminal people [c4]. When the plague fell upon them they said to Musa that he should call upon his Lord, and that if he removed it they would believe and send the Children of Israel with him [c5]. When God removed it for a term which they were to reach, they broke their word [c6].\n\nGod says that He gave Musa nine clear signs [c7], and that among nine signs Musa was told to put his hand into his bosom and it would come out white without harm [c8].",
+      "deep_md": "The chapter has the first seizing [c1][c2][c3], the signs in detail [c4], the people's promise and the breaking of it [c5][c6], and verses that name nine signs [c7][c8]. The Quran lists signs by name here [c4] and speaks of nine elsewhere [c7][c8]; it does not say that the listed signs are among the nine or that they are the nine. The omen is placed with God and not with Musa [c2].",
+      "kids_md": "God sent hard times and signs on the people of Fir'awn so that they might remember [c1][c4]. They asked Musa to pray to his Lord, but when the trouble went away they broke their word [c5][c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the people credited good to themselves and blamed Musa for harm [c2]. Another is that a promise made in trouble was broken when the trouble was lifted [c5][c6].",
+      "unknowns_md": "- Not established: the order, length and number of the plagues beyond those named in 7:133, or how many years of drought are meant.\n- The Arabic words for the flood (tufan) and the lice (qummal) are understood in more than one way; a scholar should decide the renderings.\n- Not established: what the nine signs are; the signs named here are not assumed to be among them.\n- Not established: how long the term was after which the people broke their word.\n- The verses do not say how Musa's prayer was made or in what words."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the plagues. None is used in this draft.",
+    "The event is also told inside the longer story of Musa (content/stories/musa.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "Named in later tradition, not in the Quranic text: personal names for Musa's mother, sister and wife, for the believing man and for this Fir'awn, and dates and places. None is used in the story texts.",
+    "Whether the signs listed in 7:133 are among the nine signs of 17:101 and 27:12 is not stated in the verses; the draft does not decide.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

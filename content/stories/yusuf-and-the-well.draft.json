@@ -1,0 +1,207 @@
+{
+  "slug": "yusuf-and-the-well",
+  "title_en": "Yusuf and the well",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "yusuf-and-the-well"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-brothers-plan",
+      "position": 1,
+      "title_en": "The brothers' plan",
+      "event_slug": "yusuf-and-the-well",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 7,
+          "to": 15
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran says that in Yusuf and his brothers there are signs for those who ask.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "His brothers said that Yusuf and his brother were dearer to their father than they were, though they were a strong group, and that their father was in clear error.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 8,
+              "to": 8
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They proposed to kill Yusuf or to cast him out on some land, so that their father's attention would turn to them alone, and that afterwards they could be a righteous people.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 9,
+              "to": 9
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "One of them said not to kill Yusuf but to throw him into the bottom of the well, where some travellers might pick him up, if they were going to act.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They asked their father why he did not trust them with Yusuf, said that they wished him well, and asked him to send Yusuf with them the next day to enjoy himself and play, promising to guard him.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 11,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Their father said that it would grieve him for them to take Yusuf away, and that he feared a wolf would eat him while they were heedless of him; they said that if a wolf ate him while they were a strong group, they would be losers.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 13,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "When they had gone away with Yusuf and agreed to put him in the bottom of the well, God inspired Yusuf that he would one day tell them of this deed of theirs while they did not realise.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Yusuf's brothers said that Yusuf and his brother were dearer to their father, and proposed to kill him or cast him out [c2][c3]. One of them said to throw him into the well instead, and they took Yusuf away from their father [c4][c5].",
+      "body_md": "The Quran says that in Yusuf and his brothers there are signs for those who ask [c1]. His brothers said that Yusuf and his brother were dearer to their father than they were, though they were a strong group, and that their father was in clear error [c2]. They proposed to kill Yusuf or to cast him out on some land, so that their father's attention would turn to them alone [c3]. One of them said not to kill Yusuf but to throw him into the bottom of the well, where some travellers might pick him up [c4].\n\nThey asked their father to send Yusuf with them the next day to enjoy himself and play, promising to guard him [c5]. Their father said it would grieve him and that he feared a wolf would eat him while they were heedless [c6].\n\nWhen they had gone away with Yusuf and agreed to put him in the bottom of the well, God inspired Yusuf that he would one day tell them of this deed of theirs while they did not realise [c7].",
+      "deep_md": "The passage is built around the plan [c3][c4], the request to the father [c5][c6] and the carrying out [c7]. The grievance the brothers state is that Yusuf and his brother were dearer to their father [c2]. The speaker of the milder proposal is one of them, not named in the verse [c4]. God's inspiration to Yusuf is given at the moment of the deed [c7].",
+      "kids_md": "Yusuf's brothers were upset because they thought their father loved Yusuf and his brother more [c2]. They took Yusuf away and put him in a well [c4][c7]. God told Yusuf that he would one day tell them about it [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage shows how a grievance can lead people to plan harm to one of their own [c2][c3]. Another is that God speaks to Yusuf at the moment of his need [c7].",
+      "unknowns_md": "- Not established: the names or the number of the brothers beyond that they were a strong group; the speaker of 12:10 is one of them.\n- Not established: where the well was, how deep it was, or how far from home.\n- The verses name no emotion for the brothers; to call their grievance jealousy is an inference.\n- The wolf appears only in the father's fear and in the brothers' reply; later tradition adds to this and none of it is used here.\n- The meaning of the inspiration to Yusuf in 12:15 is not explained beyond what the verse says."
+    },
+    {
+      "anchor": "the-shirt-and-the-caravan",
+      "position": 2,
+      "title_en": "The shirt and the caravan",
+      "event_slug": "yusuf-and-the-well",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 16,
+          "to": 20
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The brothers came to their father at nightfall, weeping.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 16,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They said that they had gone off racing and left Yusuf with their belongings and a wolf had eaten him, and that he would not believe them even if they were truthful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They brought Yusuf's shirt with false blood on it; their father said that rather their souls had made something appear fair to them, that his course was graceful patience, and that God is the one whose help is sought against what they described.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "A caravan came and its people sent one to draw water; he let down his bucket and called out glad tidings that here was a boy, and they hid him away as merchandise; God knows what they do.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He was sold for a low price, a few dirhams counted out, and they thought little of him.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The brothers came to their father at nightfall, weeping, and said a wolf had eaten Yusuf, bringing his shirt with false blood on it [c1][c2][c3]. A caravan came, and one who drew water found a boy; he was sold for a low price [c4][c5].",
+      "body_md": "The brothers came to their father at nightfall, weeping [c1]. They said that they had gone off racing and left Yusuf with their belongings and a wolf had eaten him, and that he would not believe them even if they were truthful [c2]. They brought Yusuf's shirt with false blood on it [c3]. Their father said that rather their souls had made something appear fair to them, that his course was graceful patience, and that God is the one whose help is sought against what they described [c3].\n\nA caravan came and its people sent one to draw water; he let down his bucket and called out glad tidings that here was a boy, and they hid him away as merchandise [c4]. He was sold for a low price, a few dirhams counted out, and they thought little of him [c5].",
+      "deep_md": "The scenes set the brothers' story against the father's answer [c2][c3] and then turn to the caravan [c4][c5]. The Quran says the blood on the shirt was false [c3]. The Arabic does not make clear who hid the boy as merchandise and who sold him, and the draft keeps the verbs without naming the actors [c4][c5].",
+      "kids_md": "The brothers told their father a wolf had eaten Yusuf and showed him his shirt with false blood on it [c2][c3]. Their father said he would be patient and ask God for help [c3]. A caravan came, and they found a boy in the well [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the father answers a story he does not believe with patience and appeal to God's help [c3]. Another is that the passage notes that God knows what is done to the boy [c4].",
+      "unknowns_md": "- Not established: how long Yusuf was in the well, where the caravan came from or was going, or who the water-drawer was.\n- The verses do not say who hid the boy as merchandise or who sold him (the travellers, the brothers or others); this draft does not decide.\n- The price is given as a few dirhams counted out; the verse gives no number.\n- The boy is not named in 12:19; the narrative before it makes him Yusuf.\n- Not established: what the false blood was or how the brothers got it, or what the father did that night."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Yusuf and the well. None is used in this draft.",
+    "The event is also told inside the longer story of Yusuf (content/stories/yusuf.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "Named in later tradition, not in the Quranic text: personal names for Yusuf's brothers, mother, the Aziz, his wife and the king, and the name and story of the wolf. None is used in the story texts.",
+    "The reference of the verbs 'hid him' and 'sold him' (12:19-20) is open; the draft keeps them without naming who acted.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}
