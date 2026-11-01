@@ -34,6 +34,9 @@ export const INFO_PAGES: Record<string, InfoPage> = {
         <p>
           <Link href="/methodology">Read the source methodology</Link> · <Link href="/review-board">Scholarly review board</Link> · <Link href="/corrections">Corrections</Link>
         </p>
+        <p className="zq-meta">
+          <Link href="/drafts">Draft preview of stories under review</Link>
+        </p>
       </>
     ),
   },

@@ -12,7 +12,9 @@ The drafter's reading of the Arabic is a reading; verifying it is the reviewers'
 
 ## The workflow
 
-1. **Draft** (`content/stories/<slug>.draft.json`, by a drafter or an assistant). `pnpm check:drafts` must be clean.
+1. **Draft** (`content/stories/<slug>.draft.json`, by a drafter or an assistant). `pnpm check:drafts` must be clean. Then `pnpm drafts:index`
+   and commit `src/generated/story-drafts.json`: the draft appears in the public, noindexed **Draft preview** (`/drafts`, `docs/DRAFT_PREVIEW.md`),
+   clearly marked as unreviewed. The preview is not publication and not review; steps 2 to 6 are unchanged.
 2. **Scholarly review of the file** (before import): a scholar reads each chapter against the cited ayat, using the checklist below, and
    records findings as comments in the pull request or as edits to the draft. The drafter fixes and re-runs the check.
 3. **Import as draft** (`pnpm import:drafts` is a dry run; `--db` writes draft rows; the service-role key comes from the environment of

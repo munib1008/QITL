@@ -43,3 +43,4 @@ for (const r of report) {
 }
 if (!json && files.length) console.log(bad ? `\n${bad} draft(s) need attention.` : `\n${files.length} draft(s) clean.`);
 if (bad) process.exitCode = 1;
+if (!json && files.length) console.log("\nTo show drafts in the public Draft preview (/drafts), regenerate the index and commit it: pnpm drafts:index");

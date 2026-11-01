@@ -45,6 +45,7 @@ import { adminShifaStrings } from "./modules/adminShifa";
 import { adminStoryStrings } from "./modules/adminStory";
 import { adminToolsStrings } from "./modules/adminTools";
 import { adminUniverseStrings } from "./modules/adminUniverse";
+import { draftPreviewStrings } from "./modules/draftPreview";
 
 /**
  * Every interface strings file, with the module it serves. Used by the inventory (scripts/i18n-inventory.ts,
@@ -58,6 +59,7 @@ export const STRING_FILES: Array<{ module: string; file: string; get: (locale: s
   { module: "stories", file: "modules/prophets.ts", get: (l) => ({ prophets: prophetStrings(l), stories: storiesStrings(l) }) },
   { module: "stories", file: "modules/story.ts", get: storyStrings },
   { module: "stories", file: "modules/storyChapters.ts", get: storyChaptersStrings },
+  { module: "stories", file: "modules/draftPreview.ts", get: draftPreviewStrings },
   { module: "events", file: "modules/events.ts (events)", get: eventStrings },
   { module: "timeline", file: "modules/events.ts (timeline)", get: timelineStrings },
   { module: "last-hour", file: "modules/events.ts (last hour)", get: lastHourStrings },

@@ -40,7 +40,8 @@ Unapplied (in repo/branches): none known after the last merge. People-admin adde
 2. After 1: import the seven drafts as drafts (`pnpm import:drafts --db`), scholars review in `/admin/stories` using `docs/review-packs`.
 3. Arabic/Urdu story text via the Story Studio translation job (Lara keys) and translator review; hadith entries after permissions; then remaining prophets, people, communities, hadith stories.
 4. Quiet-machine full test run recorded in `PRODUCTION_READINESS.md`; counsel review of legal pages; backup/restore rehearsal.
-5. Small follow-ups: Muhammad/Isa/Musa drafts need scholar attribution check; translators review the Arabic and Urdu drafts, including the admin editors (localised in draft on `mod/admin-l10n`, 2026-11-01).
+5. Draft preview (`/drafts`, branch `mod/draft-preview`, 2026-11-02): unreviewed drafts are shown publicly only as a separate, noindexed "Draft preview" (owner decision 2026-11-01). After merging any draft branch run `pnpm drafts:index` and commit `src/generated/story-drafts.json` (a unit test fails while it is stale). It is not publication: import, review and publish are unchanged (`docs/DRAFT_PREVIEW.md`).
+6. Small follow-ups: Muhammad/Isa/Musa drafts need scholar attribution check; translators review the Arabic and Urdu drafts, including the admin editors (localised in draft on `mod/admin-l10n`, 2026-11-01).
 
 ## Completion indicators (kept separate on purpose)
 "Verified completion" means every agreed requirement passes its acceptance criteria. A working platform is not a finished one while content, approval and licences are missing, so
