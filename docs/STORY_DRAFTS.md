@@ -74,3 +74,23 @@ each file's `uncertainties_en`. In short: 12:24, 12:52-53, 12:42, 12:23, 12:70-7
 - Importing links the story to its inventory event when the event row exists; nothing else is derived.
 - The importer has been tested against PGlite with the real migrations (`tests/db/story-drafts.test.ts`); it has **not** been run
   against any Supabase project.
+
+## Restored chapters and the widened inventory refs (branch `mod/restore-chapters`)
+
+The validator requires every chapter's verses to lie inside the inventory refs of the story's subject (and of the chapter's
+`event_slug`). Chapters of Muhammad (nine), Isa (three, and the end of the cradle chapter), Musa (parts of eight chapters, and the
+chapter on the covenant and the mountain) and one ayah of Ibrahim had been cut for that reason. They were restored **without
+changing the validator**, by adding to the subject's refs only the ayat those chapters cite (`content/events/inventory-additions.json`
+lists every addition; each has an Arabic anchor word in `tests/fixtures/event-anchors.json`):
+
+- `muhammad`: 96:1-5, 97:1-5, 44:1-6, 2:185, 17:106, 25:32, 17:1, 8:30, 9:40, 3:13, 3:123-127, 8:5-12, 8:17, 8:41-48, 3:121-122, 3:139-146, 3:152-155, 9:25-27, 9:38-42, 9:117-118
+- `isa`: 3:35-37, 3:42-44, 19:16-26, 21:91, 23:50, 66:12
+- `musa`: 2:63, 2:93, 4:154, 7:171, 19:51-53, 44:23-31
+- event `musa-before-pharaoh-and-the-magicians`: 79:17-19
+
+The base migration `20261031002451` is already applied and is **frozen**; the additions are inserted by
+`20261031002580_event_universe_inventory_additions.sql` (only `event_verse_refs` rows, joined by slug, `on conflict do nothing`).
+`pnpm tsx scripts/gen-event-inventory.ts` regenerates both files, and `tests/unit/events.test.ts` checks that the base file equals the
+inventory minus the additions and that base plus additive equal the whole inventory. A scholar should confirm that each added range
+belongs under its subject: most of the Muhammad ayat do not name him, and the passage on the mountain (2:63 and the others) does not
+name Musa; the links come from the inventory and later tradition (see each chapter's unknowns).

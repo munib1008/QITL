@@ -5,7 +5,7 @@ import { beforeAll, describe, expect, test } from "vitest";
 import { createDb, rejects, type Db } from "./harness";
 
 /**
- * The Event Universe (migrations 20261031002450 and 20261031002451): the inventory seed, chronology constraints
+ * The Event Universe (migrations 20261031002450, 20261031002451 and the additive 20261031002580): the inventory seed, chronology constraints
  * (no invented dates), publish guards, draft invisibility, name and identification claims, and merge with redirects.
  * Fixture text is a labelled placeholder, never religious text.
  */
@@ -114,6 +114,21 @@ describe("the inventory seed", () => {
     expect(bare[0]!.n).toBe(0);
     const claimed = await db.admin<{ n: number }>("select count(*)::int n from public.event_verse_refs where claim_id is not null");
     expect(claimed[0]!.n).toBe(0);
+  });
+
+  test("every item holds exactly the references of the inventory file, in order, and the additive migration can be run again without effect", async () => {
+    const rows = await db.admin<{ slug: string; surah: number; ayah_from: number; ayah_to: number; position: number }>(
+      "select e.slug, r.surah, r.ayah_from, r.ayah_to, r.position from public.event_verse_refs r join public.historical_events e on e.id = r.event_id where e.track is not null order by e.slug, r.position",
+    );
+    const got = new Map<string, string[]>();
+    for (const r of rows) got.set(r.slug, [...(got.get(r.slug) ?? []), r.ayah_from === r.ayah_to ? `${r.surah}:${r.ayah_from}` : `${r.surah}:${r.ayah_from}-${r.ayah_to}`]);
+    for (const i of inventory.items) expect(got.get(i.slug), i.slug).toEqual(i.refs);
+    // Idempotent: the additive migration (event_verse_refs rows only, on conflict do nothing) changes nothing the second time.
+    const sql = readFileSync(join(__dirname, "..", "..", "supabase", "migrations", "20261031002580_event_universe_inventory_additions.sql"), "utf8");
+    await db.admin("select 1");
+    await db.pg.exec(sql);
+    const after = await db.admin<{ n: number }>("select count(*)::int n from public.event_verse_refs");
+    expect(after[0]!.n).toBe(inventory.items.reduce((s, i) => s + i.refs.length, 0));
   });
 
   test("the public sees none of it: not the events, not the verse references; only counts", async () => {

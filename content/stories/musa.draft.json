@@ -520,6 +520,16 @@
           "surah": 27,
           "from": 7,
           "to": 9
+        },
+        {
+          "surah": 79,
+          "from": 15,
+          "to": 16
+        },
+        {
+          "surah": 19,
+          "from": 51,
+          "to": 52
         }
       ],
       "claims": [
@@ -604,14 +614,38 @@
             }
           ],
           "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Another passage asks whether the account of Musa has reached the listener, when his Lord called him in the sacred valley of Tuwa.",
+          "verses": [
+            {
+              "surah": 79,
+              "from": 15,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "A further passage says of Musa that he was chosen (mukhlas), a messenger and a prophet; that God called him from the right side of the mountain (at-Tur) and brought him near in private converse.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 51,
+              "to": 52
+            }
+          ],
+          "evidence": "quran"
         }
       ],
-      "summary_md": "On the way with his family Musa saw a fire and went to bring news or a brand from it [c1]. He was called from the valley, “I am God, the Lord of the worlds” [c2], told to take off his sandals [c3], told that he was chosen, to worship God and establish prayer [c4], and told of the coming Hour [c5].",
-      "body_md": "Musa, having completed the term and set out with his family, perceived a fire on the side of the mountain and told his family to stay while he went to bring news from it or a burning brand [c1]. As he came to it, he was called from the right side of the valley, in the blessed spot, from the tree: “Musa, I am God, the Lord of the worlds” [c2]. The call also says “I am your Lord, so take off your sandals; you are in the sacred valley of Tuwa” [c3]. He was told that he was chosen and should listen to what is revealed, that God is God, there is no god but Him, and to worship Him and establish prayer for His remembrance [c4], and that the Hour is coming [c5]. Another passage adds the call “Blessed is whoever is in the fire and whoever is around it” and “Musa, it is I, God, the Almighty, the Wise” [c6].",
-      "deep_md": "The passages agree on the fire [c1], the valley [c3] and the call by name [c2][c3][c6]. The call is described as coming from the tree [c2], and the ayat say no more about the tree. Some of what Musa was told is given in separate passages: the identity of the caller [c2][c6], the command to take off his sandals [c3], the central message of worship and prayer [c4], and the coming Hour [c5].",
-      "kids_md": "Musa saw a fire and went toward it to bring his family some news or a piece of it to warm them [c1]. A voice called out: “Musa, I am God, the Lord of the worlds” [c2]. God told him to take off his sandals because he was in a holy valley [c3]. God told him to worship Him and to pray [c4].",
+      "summary_md": "On the way with his family Musa saw a fire and went to bring news or a brand from it [c1]. He was called from the valley, “I am God, the Lord of the worlds” [c2], told to take off his sandals [c3], told that he was chosen, to worship God and establish prayer [c4], and told of the coming Hour [c5]. Other passages say that his Lord called him in the sacred valley of Tuwa [c7], and that he was chosen, a messenger and a prophet, brought near in private converse [c8].",
+      "body_md": "Musa, having completed the term and set out with his family, perceived a fire on the side of the mountain and told his family to stay while he went to bring news from it or a burning brand [c1]. As he came to it, he was called from the right side of the valley, in the blessed spot, from the tree: “Musa, I am God, the Lord of the worlds” [c2]. The call also says “I am your Lord, so take off your sandals; you are in the sacred valley of Tuwa” [c3]. He was told that he was chosen and should listen to what is revealed, that God is God, there is no god but Him, and to worship Him and establish prayer for His remembrance [c4], and that the Hour is coming [c5]. Another passage adds the call “Blessed is whoever is in the fire and whoever is around it” and “Musa, it is I, God, the Almighty, the Wise” [c6].\n\nAnother passage asks whether the account of Musa has reached the listener, when his Lord called him in the sacred valley of Tuwa [c7]. A further passage says he was chosen, a messenger and a prophet, that God called him from the right side of the mountain and brought him near in private converse [c8].",
+      "deep_md": "The passages agree on the fire [c1], the valley [c3] and the call by name [c2][c3][c6]. The call is described as coming from the tree [c2], and the ayat say no more about the tree. Some of what Musa was told is given in separate passages: the identity of the caller [c2][c6], the command to take off his sandals [c3], the central message of worship and prayer [c4], and the coming Hour [c5]. Other passages add to this: one opens with a question to the listener [c7], and one describes Musa as chosen, a messenger and a prophet who was brought near in private converse [c8].",
+      "kids_md": "Musa saw a fire and went toward it to bring his family some news or a piece of it to warm them [c1]. A voice called out: “Musa, I am God, the Lord of the worlds” [c2]. God told him to take off his sandals because he was in a holy valley [c3]. God told him to worship Him and to pray [c4]. Musa was a messenger and a prophet whom God called and brought near [c8].",
       "lessons_md": "Educational interpretation (not scripture): the message Musa received first is about worship and prayer [c4], with a reminder of the coming Hour [c5].",
-      "unknowns_md": "Not established in the ayat: the exact place or the date, what the fire was, what the tree was, which night, and the names of those with him. The ayat say his family and do not list them. The caller's voice is described only as a call. Whether whoever is in the fire names a specific being is read differently by interpreters; this draft makes no claim."
+      "unknowns_md": "Not established in the ayat: the exact place or the date, what the fire was, what the tree was, which night, and the names of those with him. The ayat say his family and do not list them. The caller's voice is described only as a call. Whether whoever is in the fire names a specific being is read differently by interpreters; this draft makes no claim. The word rendered chosen in 19:51 (mukhlas) is read as mukhlis, one who is sincere, in a variant reading; the page should state which reading it follows."
     },
     {
       "anchor": "the-staff-the-hand-and-harun",
@@ -632,12 +666,12 @@
         {
           "surah": 27,
           "from": 10,
-          "to": 10
+          "to": 12
         },
         {
-          "surah": 27,
-          "from": 12,
-          "to": 12
+          "surah": 19,
+          "from": 53,
+          "to": 53
         }
       ],
       "claims": [
@@ -751,14 +785,38 @@
             }
           ],
           "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "A further passage says that out of His mercy God gave Musa his brother Harun as a prophet.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 53,
+              "to": 53
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "The ayah after the reassurance in 27:10 makes an exception: except for one who did wrong and then replaced it, after evil, with good; for such, God says, He is Forgiving, Merciful.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
         }
       ],
-      "summary_md": "Musa was asked about what was in his hand and answered it was his staff [c1]. It became a moving snake and then was returned to its first state [c2]; he was told not to fear [c3]. His hand came out white as another sign [c4]. He was sent to Fir'awn [c5] and prayed for ease, and for Harun to be with him [c6][c7]. God said He would strengthen his arm with his brother [c8].",
-      "body_md": "God asked Musa what was in his right hand, and he said it was his staff, on which he leaned and with which he beat down leaves for his sheep, with other uses besides [c1]. He was told to throw it, and it became a moving snake; he was told to take it without fear, for it would return to its first state [c2]. In other passages he turned in flight and was told to come forward, that he was secure, and that messengers do not fear in God's presence [c3]. He was told to put his hand into his bosom, and it would come out white without harm, as another sign, among nine signs to Fir'awn and his people, who were defiantly disobedient [c4]. He was told to go to Fir'awn, who had transgressed [c5].\n\nMusa then prayed for his chest to be expanded, his task eased, the knot loosened from his tongue so that they would understand his speech, and for Harun his brother as a minister to strengthen his back and share in his task; God answered that his request was granted [c6]. Another passage gives the reason: he had killed a person among them and feared being killed, and Harun was more fluent in speech [c7]. God said He would strengthen his arm with his brother and give both authority, so that they could not be reached, and they and their followers would be the victors [c8].",
-      "deep_md": "The staff and the hand are told in separate passages with different emphasis [c1][c3][c4]. One has the question about the staff and the gentle command to take the snake [c1][c2]; others have Musa's flight and the reassurance [c3]. The request for Harun is given as a prayer for ease and a helper [c6] and as a reason of the killing and fluency [c7], and God's answer speaks of authority and victory [c8]. The signs are called nine signs and proofs [c4]; the ayat in this draft do not list the nine.",
-      "kids_md": "God asked Musa what he held, and he said it was his staff [c1]. God told him to throw it, and it became a moving snake [c2]. Then God told him not to be afraid [c3]. God gave him another sign with his hand [c4]. Musa asked God to make his task easy and to send his brother Harun to help him, and God granted his request [c6][c8].",
+      "summary_md": "Musa was asked about what was in his hand and answered it was his staff [c1]. It became a moving snake and then was returned to its first state [c2]; he was told not to fear [c3]. His hand came out white as another sign [c4]. He was sent to Fir'awn [c5] and prayed for ease, and for Harun to be with him [c6][c7]. God said He would strengthen his arm with his brother [c8]. Another passage says that out of His mercy God gave Musa his brother Harun as a prophet [c9].",
+      "body_md": "God asked Musa what was in his right hand, and he said it was his staff, on which he leaned and with which he beat down leaves for his sheep, with other uses besides [c1]. He was told to throw it, and it became a moving snake; he was told to take it without fear, for it would return to its first state [c2]. In other passages he turned in flight and was told to come forward, that he was secure, and that messengers do not fear in God's presence [c3]. He was told to put his hand into his bosom, and it would come out white without harm, as another sign, among nine signs to Fir'awn and his people, who were defiantly disobedient [c4]. He was told to go to Fir'awn, who had transgressed [c5].\n\nMusa then prayed for his chest to be expanded, his task eased, the knot loosened from his tongue so that they would understand his speech, and for Harun his brother as a minister to strengthen his back and share in his task; God answered that his request was granted [c6]. Another passage gives the reason: he had killed a person among them and feared being killed, and Harun was more fluent in speech [c7]. God said He would strengthen his arm with his brother and give both authority, so that they could not be reached, and they and their followers would be the victors [c8].\n\nAnother passage adds that out of His mercy God gave Musa his brother Harun as a prophet [c9]. The ayah after the reassurance to the messengers makes an exception, for one who did wrong and then replaced it with good after evil, and says that God is Forgiving, Merciful [c10].",
+      "deep_md": "The staff and the hand are told in separate passages with different emphasis [c1][c3][c4]. One has the question about the staff and the gentle command to take the snake [c1][c2]; others have Musa's flight and the reassurance [c3]. The request for Harun is given as a prayer for ease and a helper [c6] and as a reason of the killing and fluency [c7], and God's answer speaks of authority and victory [c8]. The signs are called nine signs and proofs [c4]; the ayat in this draft do not list the nine. The ayah that follows the reassurance in 27:10 begins with an exception, and how the exception relates to what comes before it is read in more than one way [c10].",
+      "kids_md": "God asked Musa what he held, and he said it was his staff [c1]. God told him to throw it, and it became a moving snake [c2]. Then God told him not to be afraid [c3]. God gave him another sign with his hand [c4]. Musa asked God to make his task easy and to send his brother Harun to help him, and God granted his request [c6][c8]. God also gave Musa his brother Harun as a prophet [c9].",
       "lessons_md": "Educational interpretation (not scripture): Musa does not simply accept the task; he asks for ease, for clearer speech, and for his brother's help [c6].",
-      "unknowns_md": "Not established in these ayat: what the nine signs are, since the plagues are listed elsewhere and are not assumed to be the nine; what the knot in Musa's tongue was, since the ayat state only the request; the age of Harun relative to Musa; and where Harun was when he was sent for."
+      "unknowns_md": "Not established in these ayat: what the nine signs are, since the plagues are listed elsewhere and are not assumed to be the nine; what the knot in Musa's tongue was, since the ayat state only the request; the age of Harun relative to Musa; and where Harun was when he was sent for. The grammar of the exception in 27:11, and whom it refers to, is discussed by interpreters; this draft states the words and draws no conclusion about Musa or anyone else."
     },
     {
       "anchor": "sent-to-firawn",
@@ -775,6 +833,11 @@
           "surah": 26,
           "from": 10,
           "to": 31
+        },
+        {
+          "surah": 79,
+          "from": 17,
+          "to": 19
         }
       ],
       "claims": [
@@ -902,14 +965,26 @@
             }
           ],
           "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "Another passage says Musa was told to go to Fir'awn, who had transgressed, and to say “Would you be purified, and shall I guide you to your Lord so that you fear?”",
+          "verses": [
+            {
+              "surah": 79,
+              "from": 17,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
         }
       ],
-      "summary_md": "Musa and Harun were sent to Fir'awn with a gentle word [c1], having voiced their fear and been told God was with them [c2][c3]. Their message was to send the Children of Israel with them [c4]. Fir'awn reminded Musa of the years in his household [c5], asked who the Lord is [c7][c8], called Musa mad [c9] and threatened prison [c10].",
-      "body_md": "God told Musa and his brother to go to Fir'awn with His signs, not to slacken in remembering Him, and to speak a gentle word so that perhaps Fir'awn would remember or fear [c1]. They said they feared he would hasten against them or transgress, and God said He was with them, hearing and seeing [c2]. In another passage Musa voiced fear of being denied, his tongue not being fluent, and a charge against him, and asked that Harun be sent for; God said to go with His signs and that He was listening [c3].\n\nThe message was that they were messengers and that Fir'awn should send the Children of Israel with them and not torment them, with peace on the one who follows the guidance [c4]. Fir'awn answered by recalling the years Musa stayed with them and his deed, and Musa replied that he had done it while he erred, fled from fear, and was given judgement and made a messenger [c5]. Musa said the favour Fir'awn held over him was that he had enslaved the Children of Israel [c6].\n\nFir'awn asked who the Lord is; in another passage Musa answered that He gave everything its form and then guided, and that the knowledge of earlier generations is with his Lord in a record [c7]. In another passage he answered with the Lord of the heavens and the earth, of the forefathers, and of the east and the west [c8]. Fir'awn asked those around if they heard and called Musa mad [c9], then threatened to imprison him if he took a god other than Fir'awn; Musa asked if he would do so even if he brought something clear [c10].",
-      "deep_md": "The meeting is told in more than one passage, each keeping a part of the exchange [c1][c3][c8]. One has the instruction to speak gently and God's assurance [c1][c2]. Another has Musa's fears [c3], Fir'awn's reminder of his upbringing and deed [c5][c6], and the series of questions [c8]. Fir'awn's statements about Musa, that he is mad [c9] and that he would imprison him [c10], are in one passage only.",
-      "kids_md": "God told Musa and Harun to speak to Fir'awn kindly [c1]. They were a little afraid, and God told them He was with them, hearing and seeing [c1][c2]. They asked Fir'awn to let the Children of Israel go with them [c4]. Fir'awn asked who their Lord was, and Musa said He is the one who gave everything its shape and then guided it [c7].",
+      "summary_md": "Musa and Harun were sent to Fir'awn with a gentle word [c1], having voiced their fear and been told God was with them [c2][c3]. Their message was to send the Children of Israel with them [c4]. Fir'awn reminded Musa of the years in his household [c5], asked who the Lord is [c7][c8], called Musa mad [c9] and threatened prison [c10]. Another passage adds the question whether Fir'awn would be purified [c11].",
+      "body_md": "God told Musa and his brother to go to Fir'awn with His signs, not to slacken in remembering Him, and to speak a gentle word so that perhaps Fir'awn would remember or fear [c1]. They said they feared he would hasten against them or transgress, and God said He was with them, hearing and seeing [c2]. In another passage Musa voiced fear of being denied, his tongue not being fluent, and a charge against him, and asked that Harun be sent for; God said to go with His signs and that He was listening [c3].\n\nThe message was that they were messengers and that Fir'awn should send the Children of Israel with them and not torment them, with peace on the one who follows the guidance [c4]. Fir'awn answered by recalling the years Musa stayed with them and his deed, and Musa replied that he had done it while he erred, fled from fear, and was given judgement and made a messenger [c5]. Musa said the favour Fir'awn held over him was that he had enslaved the Children of Israel [c6].\n\nFir'awn asked who the Lord is; in another passage Musa answered that He gave everything its form and then guided, and that the knowledge of earlier generations is with his Lord in a record [c7]. In another passage he answered with the Lord of the heavens and the earth, of the forefathers, and of the east and the west [c8]. Fir'awn asked those around if they heard and called Musa mad [c9], then threatened to imprison him if he took a god other than Fir'awn; Musa asked if he would do so even if he brought something clear [c10]. Another passage records the instruction to go to Fir'awn, who had transgressed, and to ask whether he would be purified and offer to guide him to his Lord so that he would fear [c11].",
+      "deep_md": "The meeting is told in more than one passage, each keeping a part of the exchange [c1][c3][c8]. One has the instruction to speak gently and God's assurance [c1][c2]. Another has Musa's fears [c3], Fir'awn's reminder of his upbringing and deed [c5][c6], and the series of questions [c8]. Fir'awn's statements about Musa, that he is mad [c9] and that he would imprison him [c10], are in one passage only. The question whether Fir'awn would be purified, with the offer of guidance, is in one passage only [c11].",
+      "kids_md": "God told Musa and Harun to speak to Fir'awn kindly [c1]. They were a little afraid, and God told them He was with them, hearing and seeing [c1][c2]. They asked Fir'awn to let the Children of Israel go with them [c4]. Fir'awn asked who their Lord was, and Musa said He is the one who gave everything its shape and then guided it [c7]. God also told Musa to ask Fir'awn whether he would be purified, and to offer to guide him to his Lord [c11].",
       "lessons_md": "Educational interpretation (not scripture): the instruction to a messenger facing a tyrant is to speak a gentle word first [c1], and the assurance given to the frightened is that God is hearing and seeing [c2].",
-      "unknowns_md": "Not established in the ayat: where the meeting took place, how many times it happened, which passage describes the first meeting, and the personal name or period of this Fir'awn. Named in later tradition, not in the Quranic text: any identification with a named ruler of Egypt. The Arabic wording of 20:50, rendered here gave everything its form, has more than one possible rendering for scholarly review."
+      "unknowns_md": "Not established in the ayat: where the meeting took place, how many times it happened, which passage describes the first meeting, and the personal name or period of this Fir'awn. Named in later tradition, not in the Quranic text: any identification with a named ruler of Egypt. The Arabic wording of 20:50, rendered here gave everything its form, has more than one possible rendering for scholarly review. How the instruction in 79:17-19 relates to the other passages of this chapter is not stated."
     },
     {
       "anchor": "the-signs-and-the-court",
@@ -946,6 +1021,11 @@
           "surah": 40,
           "from": 23,
           "to": 28
+        },
+        {
+          "surah": 79,
+          "from": 20,
+          "to": 26
         }
       ],
       "claims": [
@@ -1090,14 +1170,26 @@
             }
           ],
           "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Another passage says that Musa showed him the greatest sign, and he denied and disobeyed, then turned away striving, gathered and called out, and said “I am your lord, the most high”; God seized him with the punishment (nakal) of the last and the first; in that is a lesson for whoever fears.",
+          "verses": [
+            {
+              "surah": 79,
+              "from": 20,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
         }
       ],
-      "summary_md": "Musa brought clear proof and asked Fir'awn to send the Children of Israel with him [c1]. He showed the staff and the hand [c2]. The chiefs called it magic and proposed gathering magicians [c3][c4]. Fir'awn claimed a position no other god was known to the chiefs [c8] and spoke of killing Musa [c10]; a believer from his family spoke against it [c11].",
-      "body_md": "Musa told Fir'awn that he was a messenger from the Lord of the worlds, bound to say only the truth, with clear proof, and asked him to send the Children of Israel with him [c1]. Fir'awn said to bring a sign if he was truthful; Musa threw his staff and it was a clear serpent, and his hand came out white to the onlookers [c2]. The chiefs said he was a learned magician who wanted to drive them out of the land, and advised gathering every learned magician [c3].\n\nAnother passage says that when the truth came they called it clear magic, and Musa asked how they could call it magic when magicians do not succeed [c4]; they replied that he came to turn them from their fathers' way and to gain greatness in the land [c5]. Another passage records them saying they would not believe a pair of humans like themselves whose people served them [c6]. Another passage records the answer ‘forged magic’ and Musa's reply that his Lord knows best who brings guidance [c7], and Fir'awn's saying that he knew no god for the chiefs but himself and his order to Haman to build a tower [c8]. Another passage names Fir'awn, Haman and Qarun, who said ‘a magician, a liar’, and ordered the killing of the sons of the believers [c9]. Fir'awn said he wished to kill Musa, fearing for their religion; Musa sought refuge in his Lord from every arrogant one who does not believe in the Day of Account [c10]. A believing man from Fir'awn's family concealing his faith asked whether they would kill a man for saying ‘My Lord is God’ [c11].",
-      "deep_md": "The passages share one pattern: a sign is shown and called magic [c2][c4][c7][c9], those in authority respond with fear of loss of land and ancestral ways [c3][c5][c10], and Fir'awn makes a claim for himself [c8]. One passage adds a figure not seen elsewhere in this draft, a believing man in Fir'awn's own family [c11].",
-      "kids_md": "Musa showed Fir'awn the signs God gave him [c2]. Fir'awn and his chiefs said it was magic [c4][c7]. Fir'awn said he knew of no god for them but himself [c8]. One man in Fir'awn's family secretly believed, and he asked whether they would kill a man for saying that his Lord is God [c11].",
+      "summary_md": "Musa brought clear proof and asked Fir'awn to send the Children of Israel with him [c1]. He showed the staff and the hand [c2]. The chiefs called it magic and proposed gathering magicians [c3][c4]. Fir'awn claimed a position no other god was known to the chiefs [c8] and spoke of killing Musa [c10]; a believer from his family spoke against it [c11]. Another passage says that he denied the greatest sign, claimed to be the most high lord, and was seized by God [c12].",
+      "body_md": "Musa told Fir'awn that he was a messenger from the Lord of the worlds, bound to say only the truth, with clear proof, and asked him to send the Children of Israel with him [c1]. Fir'awn said to bring a sign if he was truthful; Musa threw his staff and it was a clear serpent, and his hand came out white to the onlookers [c2]. The chiefs said he was a learned magician who wanted to drive them out of the land, and advised gathering every learned magician [c3].\n\nAnother passage says that when the truth came they called it clear magic, and Musa asked how they could call it magic when magicians do not succeed [c4]; they replied that he came to turn them from their fathers' way and to gain greatness in the land [c5]. Another passage records them saying they would not believe a pair of humans like themselves whose people served them [c6]. Another passage records the answer ‘forged magic’ and Musa's reply that his Lord knows best who brings guidance [c7], and Fir'awn's saying that he knew no god for the chiefs but himself and his order to Haman to build a tower [c8]. Another passage names Fir'awn, Haman and Qarun, who said ‘a magician, a liar’, and ordered the killing of the sons of the believers [c9]. Fir'awn said he wished to kill Musa, fearing for their religion; Musa sought refuge in his Lord from every arrogant one who does not believe in the Day of Account [c10]. A believing man from Fir'awn's family concealing his faith asked whether they would kill a man for saying ‘My Lord is God’ [c11].\n\nAnother passage says Musa showed him the greatest sign, and he denied and disobeyed, turned away striving, gathered and called out that he was their lord, the most high; God seized him with the punishment of the last and the first, and in that is a lesson for whoever fears [c12].",
+      "deep_md": "The passages share one pattern: a sign is shown and called magic [c2][c4][c7][c9], those in authority respond with fear of loss of land and ancestral ways [c3][c5][c10], and Fir'awn makes a claim for himself [c8]. One passage adds a figure not seen elsewhere in this draft, a believing man in Fir'awn's own family [c11]. The passage that ends with a lesson for whoever fears [c12] is the only one in this chapter that tells how Fir'awn was seized.",
+      "kids_md": "Musa showed Fir'awn the signs God gave him [c2]. Fir'awn and his chiefs said it was magic [c4][c7]. Fir'awn said he knew of no god for them but himself [c8]. One man in Fir'awn's family secretly believed, and he asked whether they would kill a man for saying that his Lord is God [c11]. Fir'awn denied the greatest sign and God seized him, and there is a lesson in that for whoever fears [c12].",
       "lessons_md": "Educational interpretation (not scripture): the account notes that clear signs can be explained away by those who fear to lose position [c3][c5], and that a single voice from inside such a court spoke in defence of what was right [c11].",
-      "unknowns_md": "Not established in the ayat: the time and place of each meeting with the court, how many conversations there were, the identity and name of the believing man (Named in later tradition, not in the Quranic text), and who Qarun and Haman were beyond what is said in the ayat."
+      "unknowns_md": "Not established in the ayat: the time and place of each meeting with the court, how many conversations there were, the identity and name of the believing man (Named in later tradition, not in the Quranic text), and who Qarun and Haman were beyond what is said in the ayat. The phrase the punishment of the last and the first in 79:25 is read in more than one way by interpreters (for example the Hereafter and this world, or his last and his first saying); this draft states the words and does not choose."
     },
     {
       "anchor": "the-magicians",
@@ -1108,11 +1200,6 @@
         {
           "surah": 26,
           "from": 38,
-          "to": 42
-        },
-        {
-          "surah": 26,
-          "from": 45,
           "to": 51
         },
         {
@@ -1123,11 +1210,6 @@
         {
           "surah": 20,
           "from": 57,
-          "to": 61
-        },
-        {
-          "surah": 20,
-          "from": 65,
           "to": 73
         },
         {
@@ -1320,14 +1402,38 @@
             }
           ],
           "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "In another passage, they disputed their affair among themselves and kept their private talk secret; they said “These are a pair of magicians who want to drive you out of your land by their magic and do away with your best way. So gather your plan, then come in a line; whoever has the upper hand today has succeeded.”",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 62,
+              "to": 64
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "In another passage, Musa said to them “Throw what you are going to throw”; they threw their ropes and staffs and said “By the might of Fir'awn, we are the victors.”",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 43,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
         }
       ],
-      "summary_md": "A day was set for Musa and the magicians [c1][c3]. The magicians threw first [c5] and it seemed to Musa that their ropes moved [c6]. His staff swallowed what they had made [c7]. The magicians fell down in prostration and said they believed in the Lord of the worlds, the Lord of Musa and Harun [c9]. Fir'awn threatened them [c10], and they answered with patience and hope for forgiveness [c11][c12].",
-      "body_md": "Fir'awn proposed an appointment between his magicians and Musa, and Musa set the day of the festival, with the people gathered at forenoon [c1]. Fir'awn gathered his plan and came; Musa warned them not to invent a lie against God [c2]. The people were asked to gather in case the magicians won [c3], and the magicians asked for a reward, which Fir'awn promised, with nearness to him [c4]. They asked whether Musa would throw first; he told them to throw, and they bewitched the people and brought great magic [c5]. Their ropes and staffs seemed to move and Musa felt fear within himself; God told him not to fear, that he was uppermost, and to throw what was in his right hand [c6]. His staff swallowed what they had fabricated, the truth was established and they were defeated [c7]. Another passage gives Musa's words after they threw: that God will make it vain and establishes the truth by His words [c8].\n\nThe magicians were cast down in prostration, saying “We believe in the Lord of the worlds, the Lord of Musa and Harun” [c9]. Fir'awn said they had believed before his permission, that Musa was their chief who taught them magic, and that he would cut off their hands and feet on opposite sides and crucify them [c10]. They answered that there was no harm, that they would return to their Lord and hoped for forgiveness [c11], and in another passage that they would not prefer him over the clear proofs and over Him who created them [c12].",
-      "deep_md": "The day of the magicians is told in more than one passage, with a parallel structure [c1][c5][c9]. One has the scene-setting by Fir'awn and Musa [c1][c2] and Musa's fear [c6]. Others have the reward and the dialogue of the magicians [c4][c5] and the swallowing [c7]. The words of the magicians after their prostration are given in forms that agree on the Lord of the worlds [c9], with fuller responses in some [c11] and the declaration against the threat in another [c12].",
-      "kids_md": "Fir'awn set a day to meet Musa with his magicians [c1]. They threw their ropes and sticks, and it seemed to Musa that they were moving [c6]. God told him not to fear and to throw his staff [c6]. His staff swallowed what the magicians had made, and the magicians fell down and said they believed in the Lord of the worlds, the Lord of Musa and Harun [c7][c9].",
+      "summary_md": "A day was set for Musa and the magicians [c1][c3]. They disputed among themselves and spoke of a pair of magicians who wanted to drive them out [c13]. The magicians threw first [c5], after Musa told them to throw what they were going to throw, and they spoke of the might of Fir'awn [c14] and it seemed to Musa that their ropes moved [c6]. His staff swallowed what they had made [c7]. The magicians fell down in prostration and said they believed in the Lord of the worlds, the Lord of Musa and Harun [c9]. Fir'awn threatened them [c10], and they answered with patience and hope for forgiveness [c11][c12].",
+      "body_md": "Fir'awn proposed an appointment between his magicians and Musa, and Musa set the day of the festival, with the people gathered at forenoon [c1]. Fir'awn gathered his plan and came; Musa warned them not to invent a lie against God [c2]. They disputed among themselves, kept their talk secret, and said that this was a pair of magicians who wanted to drive them out of their land and do away with their best way, and told one another to gather their plan and come in a line, for whoever had the upper hand that day had succeeded [c13]. The people were asked to gather in case the magicians won [c3], and the magicians asked for a reward, which Fir'awn promised, with nearness to him [c4]. They asked whether Musa would throw first; he told them to throw, and they bewitched the people and brought great magic [c5]. In another passage Musa told them to throw what they were going to throw; they threw their ropes and staffs and said that by the might of Fir'awn they were the victors [c14]. Their ropes and staffs seemed to move and Musa felt fear within himself; God told him not to fear, that he was uppermost, and to throw what was in his right hand [c6]. His staff swallowed what they had fabricated, the truth was established and they were defeated [c7]. Another passage gives Musa's words after they threw: that God will make it vain and establishes the truth by His words [c8].\n\nThe magicians were cast down in prostration, saying “We believe in the Lord of the worlds, the Lord of Musa and Harun” [c9]. Fir'awn said they had believed before his permission, that Musa was their chief who taught them magic, and that he would cut off their hands and feet on opposite sides and crucify them [c10]. They answered that there was no harm, that they would return to their Lord and hoped for forgiveness [c11], and in another passage that they would not prefer him over the clear proofs and over Him who created them [c12].",
+      "deep_md": "The day of the magicians is told in more than one passage, with a parallel structure [c1][c5][c9]. One has the scene-setting by Fir'awn and Musa [c1][c2] and Musa's fear [c6]. Others have the reward and the dialogue of the magicians [c4][c5] and the swallowing [c7]. The words of the magicians after their prostration are given in forms that agree on the Lord of the worlds [c9], with fuller responses in some [c11] and the declaration against the threat in another [c12]. The gathering of the plan in 20:64 [c13] and the cry by the might of Fir'awn in 26:44 [c14] are each in one passage only.",
+      "kids_md": "Fir'awn set a day to meet Musa with his magicians [c1]. They threw their ropes and sticks, and it seemed to Musa that they were moving [c6]. God told him not to fear and to throw his staff [c6]. His staff swallowed what the magicians had made, and the magicians fell down and said they believed in the Lord of the worlds, the Lord of Musa and Harun [c7][c9]. The magicians threw their ropes and sticks and called on the might of Fir'awn [c14].",
       "lessons_md": "Educational interpretation (not scripture): the magicians were the experts of their craft, and they recognised what they saw as different from their own work [c7][c9]. They then held to their belief when threatened [c11][c12].",
-      "unknowns_md": "Not established in the ayat: how many magicians there were, the place and date of the festival, the nature of their ropes and staffs beyond that they seemed to move, and whether the descriptions of the throwing describe separate moments. The fate of the magicians after the threat is not narrated."
+      "unknowns_md": "Not established in the ayat: how many magicians there were, the place and date of the festival, the nature of their ropes and staffs beyond that they seemed to move, and whether the descriptions of the throwing describe separate moments. The fate of the magicians after the threat is not narrated. Who is meant by they in 20:62-64 is not marked in the ayat; the reading and grammar of 20:63 (a pair of magicians) are discussed by scholars."
     },
     {
       "anchor": "the-years-of-pressure",
@@ -1496,12 +1602,12 @@
         {
           "surah": 26,
           "from": 52,
-          "to": 67
+          "to": 68
         },
         {
           "surah": 20,
           "from": 77,
-          "to": 78
+          "to": 79
         },
         {
           "surah": 10,
@@ -1522,6 +1628,11 @@
           "surah": 17,
           "from": 103,
           "to": 103
+        },
+        {
+          "surah": 44,
+          "from": 23,
+          "to": 31
         }
       ],
       "claims": [
@@ -1533,6 +1644,11 @@
               "surah": 26,
               "from": 52,
               "to": 52
+            },
+            {
+              "surah": 44,
+              "from": 23,
+              "to": 23
             }
           ],
           "evidence": "quran"
@@ -1668,14 +1784,67 @@
             }
           ],
           "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "Another passage says that Musa was told to leave the sea calm (the word rendered calm, rahwan, is read in more than one way), for they were a host to be drowned; and that God saved the Children of Israel from the humiliating punishment, from Fir'awn, who was high and among the transgressors.",
+          "verses": [
+            {
+              "surah": 44,
+              "from": 24,
+              "to": 24
+            },
+            {
+              "surah": 44,
+              "from": 30,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "Fir'awn led his people astray and did not guide them.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 79,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c15",
+          "statement_en": "The ayah after the sign says: indeed your Lord is the Mighty, the Merciful.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 68,
+              "to": 68
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c16",
+          "statement_en": "That passage also says how many gardens and springs, crops and a noble station they left, and the comfort in which they took pleasure; that God gave it as an inheritance to another people; and that neither the sky nor the earth wept over them, and they were not given respite.",
+          "verses": [
+            {
+              "surah": 44,
+              "from": 25,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
         }
       ],
-      "summary_md": "Musa was told to travel by night with God's servants and that they would be pursued [c1]. Fir'awn sent gatherers [c2]. At the sea, Musa said his Lord was with him [c4] and was told to strike it; it split [c5][c6]. Musa and those with him were saved and Fir'awn's host was drowned [c7][c8][c9].",
-      "body_md": "God inspired Musa to travel by night with His servants and told him they would be pursued [c1]. Fir'awn sent gatherers into the cities, calling Musa's people a small band who enraged him [c2]. God says He took the people of Fir'awn out of gardens, springs, treasures and a noble station and gave it as an inheritance to the Children of Israel [c3].\n\nThey pursued at sunrise; when the pair of hosts saw each other, Musa's companions said they were about to be overtaken, and Musa said his Lord was with him and would guide him [c4]. God told him to strike the sea with his staff, and it split, each part like a great mountain [c5]. Another passage says to strike a dry path in the sea, with no fear of being overtaken, and that the sea covered Fir'awn and his soldiers [c6]. God brought the others near, saved Musa and all with him, and drowned the others [c7]. Another passage says God parted the sea and drowned the family of Fir'awn while the Children of Israel were watching [c8].\n\nWhen drowning overtook Fir'awn, he said he believed that there is no god but the One in whom the Children of Israel believe; he was answered with “Now”? and told he would be saved in his body as a sign for those after him [c9][c10]. Another passage says God cast Fir'awn and his soldiers into the sea [c12]. Another passage says Fir'awn wished to drive them from the land and God drowned him and those with him together [c13].",
-      "deep_md": "One passage gives the fullest sequence: the command, the pursuit, the fear, the sea, the rescue and the drowning [c1][c4][c5][c7]. Another says a dry path [c6]. The words saved in your body in 10:92 are stated in the text without explanation [c10]. The exchange with the drowning Fir'awn is in one passage only [c9][c10]. The ayat that name the inheritance of gardens and springs do not say it was the land spoken of in other chapters [c3].",
-      "kids_md": "God told Musa to leave at night with his people [c1]. When Musa's people saw the army and the sea, they were afraid, but Musa said his Lord was with him [c4]. God told Musa to strike the sea with his staff, and it split [c5]. Musa and his people were saved [c7].",
+      "summary_md": "Musa was told to travel by night with God's servants and that they would be pursued [c1]. Fir'awn sent gatherers [c2]. At the sea, Musa said his Lord was with him [c4] and was told to strike it; it split [c5][c6]. Musa and those with him were saved and Fir'awn's host was drowned [c7][c8][c9]. Another passage says that God saved the Children of Israel from the humiliating punishment [c11], and that those drowned left gardens and springs behind [c16].",
+      "body_md": "God inspired Musa to travel by night with His servants and told him they would be pursued [c1]. Fir'awn sent gatherers into the cities, calling Musa's people a small band who enraged him [c2]. God says He took the people of Fir'awn out of gardens, springs, treasures and a noble station and gave it as an inheritance to the Children of Israel [c3].\n\nThey pursued at sunrise; when the pair of hosts saw each other, Musa's companions said they were about to be overtaken, and Musa said his Lord was with him and would guide him [c4]. God told him to strike the sea with his staff, and it split, each part like a great mountain [c5]. Another passage says to strike a dry path in the sea, with no fear of being overtaken, and that the sea covered Fir'awn and his soldiers [c6]. It also says that Fir'awn led his people astray and did not guide them [c14]. God brought the others near, saved Musa and all with him, and drowned the others [c7]. The ayah after the sign says that your Lord is the Mighty, the Merciful [c15]. Another passage says God parted the sea and drowned the family of Fir'awn while the Children of Israel were watching [c8].\n\nWhen drowning overtook Fir'awn, he said he believed that there is no god but the One in whom the Children of Israel believe; he was answered with “Now”? and told he would be saved in his body as a sign for those after him [c9][c10]. Another passage says God cast Fir'awn and his soldiers into the sea [c12]. Another passage says Fir'awn wished to drive them from the land and God drowned him and those with him together [c13].\n\nAnother passage says that Musa was told to leave the sea calm, for they were a host to be drowned, and that God saved the Children of Israel from the humiliating punishment, from Fir'awn, who was high and among the transgressors [c11]. It says how many gardens, springs, crops and a noble station they left, and the comfort in which they took pleasure, that God gave it as an inheritance to another people, and that neither the sky nor the earth wept over them and they were not given respite [c16].",
+      "deep_md": "One passage gives the fullest sequence: the command, the pursuit, the fear, the sea, the rescue and the drowning [c1][c4][c5][c7]. Another says a dry path [c6]. The words saved in your body in 10:92 are stated in the text without explanation [c10]. The exchange with the drowning Fir'awn is in one passage only [c9][c10]. The ayat that name the inheritance of gardens and springs do not say it was the land spoken of in other chapters [c3]. The call to leave the sea calm [c11] and the list of what the drowned left behind [c16] are in the passage on the humiliating punishment only. The ayah that says another people inherited it [c16] does not name them, while the earlier passage names the Children of Israel as the heirs [c3].",
+      "kids_md": "God told Musa to leave at night with his people [c1]. When Musa's people saw the army and the sea, they were afraid, but Musa said his Lord was with him [c4]. God told Musa to strike the sea with his staff, and it split [c5]. Musa and his people were saved [c7]. God saved the Children of Israel from Fir'awn [c11].",
       "lessons_md": "Educational interpretation (not scripture): the group's fear at the sea is answered by one sentence, “my Lord is with me; He will guide me” [c4].",
-      "unknowns_md": "Not established in the ayat: the name or the place of the sea, which the ayat call bahr and yamm; the date; the number of people who crossed; the place on the far shore; and what God did with the body of Fir'awn beyond saving it as a sign. Named in later tradition, not in the Quranic text: any identification of a body with a named king. The land inherited in 26:59 is not named."
+      "unknowns_md": "Not established in the ayat: the name or the place of the sea, which the ayat call bahr and yamm; the date; the number of people who crossed; the place on the far shore; and what God did with the body of Fir'awn beyond saving it as a sign. Named in later tradition, not in the Quranic text: any identification of a body with a named king. The land inherited in 26:59 is not named. The word rahwan in 44:24 is read in more than one way (calm, open or parted); the draft leaves it open."
     },
     {
       "anchor": "provision-and-the-wilderness",
@@ -2030,7 +2199,7 @@
         {
           "surah": 7,
           "from": 138,
-          "to": 140
+          "to": 141
         },
         {
           "surah": 20,
@@ -2238,18 +2407,114 @@
             }
           ],
           "evidence": "quran"
+        },
+        {
+          "id": "c16",
+          "statement_en": "The passage goes on: and when We saved you from the people of Fir'awn, who afflicted you with the worst torment, killing your sons and keeping your women alive; in that was a great trial from your Lord. (The ayah does not mark who speaks.)",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 141,
+              "to": 141
+            }
+          ],
+          "evidence": "quran"
         }
       ],
-      "summary_md": "After the crossing the Children of Israel asked Musa for a god like those of a people devoted to idols [c1]. While Musa was away, the Samiri brought out a calf, and they took it [c2][c4][c5]. Musa returned angry [c3][c8], questioned Harun [c7][c8], and the Samiri [c10]. The people repented [c12]; God says He pardoned them [c14].",
-      "body_md": "After the crossing the people came upon others devoted to idols and asked Musa to make them a god; he said they were ignorant and asked whether he should seek a god other than God [c1]. While Musa was away, God told him that his people had been tried and that the Samiri had led them astray [c2]. Musa returned angry and grieved and asked whether the covenant had seemed long to them [c3]. They said they were made to carry loads of the people's ornaments, threw them, and that the Samiri cast too; he brought out a calf, a body with a lowing, and they said “This is your god and the god of Musa” [c4]. God says it returned no word and had no power to harm or benefit [c5]. Harun had said they were being tried by it and to follow him; they said they would keep to it until Musa returned [c6].\n\nMusa asked Harun what had prevented him, and Harun asked not to be seized and spoke of his fear of causing division [c7]. Another passage records Musa throwing down the tablets and seizing his brother's head, and Harun's answer that the people deemed him weak and nearly killed him [c8]. Musa prayed for forgiveness for himself and his brother [c9]. He asked the Samiri what his case was; the Samiri said he took a handful from the track of the messenger and threw it, as his soul suggested [c10]. Musa told him that his god would be burned and scattered in the sea [c10], and said that their God is only God [c11].\n\nThe people, when they regretted, asked for mercy and forgiveness [c12]. God says those who took the calf would be struck by anger and humiliation, and that He is Forgiving to those who repent [c13]. Another passage says God pardoned them after the appointed nights [c14], and records Musa telling them to repent to their Maker and kill themselves, and that He accepted their repentance [c15].",
-      "deep_md": "The calf is told in more than one passage [c4][c5][c8]. The longest sequence has God's information to Musa [c2], the people's explanation [c4], Harun's earlier warning [c6], and Musa's exchanges with Harun [c7] and the Samiri [c10]. A shorter account has Musa's reaction in physical terms and Harun's answer in different words, that the people deemed him weak [c8]. Both answers of Harun are stated in the text and are not set against one another in this draft [c7][c8]. Another places the calf after the appointed nights and records the instruction to kill yourselves [c14][c15].",
+      "summary_md": "After the crossing the Children of Israel asked Musa for a god like those of a people devoted to idols [c1]. The passage goes on to recall their rescue from the people of Fir'awn [c16]. While Musa was away, the Samiri brought out a calf, and they took it [c2][c4][c5]. Musa returned angry [c3][c8], questioned Harun [c7][c8], and the Samiri [c10]. The people repented [c12]; God says He pardoned them [c14].",
+      "body_md": "After the crossing the people came upon others devoted to idols and asked Musa to make them a god; he said they were ignorant and asked whether he should seek a god other than God [c1]. The passage goes on to recall the rescue from the people of Fir'awn, who afflicted them with the worst torment, killing their sons and keeping their women alive, and calls this a great trial from their Lord [c16]. While Musa was away, God told him that his people had been tried and that the Samiri had led them astray [c2]. Musa returned angry and grieved and asked whether the covenant had seemed long to them [c3]. They said they were made to carry loads of the people's ornaments, threw them, and that the Samiri cast too; he brought out a calf, a body with a lowing, and they said “This is your god and the god of Musa” [c4]. God says it returned no word and had no power to harm or benefit [c5]. Harun had said they were being tried by it and to follow him; they said they would keep to it until Musa returned [c6].\n\nMusa asked Harun what had prevented him, and Harun asked not to be seized and spoke of his fear of causing division [c7]. Another passage records Musa throwing down the tablets and seizing his brother's head, and Harun's answer that the people deemed him weak and nearly killed him [c8]. Musa prayed for forgiveness for himself and his brother [c9]. He asked the Samiri what his case was; the Samiri said he took a handful from the track of the messenger and threw it, as his soul suggested [c10]. Musa told him that his god would be burned and scattered in the sea [c10], and said that their God is only God [c11].\n\nThe people, when they regretted, asked for mercy and forgiveness [c12]. God says those who took the calf would be struck by anger and humiliation, and that He is Forgiving to those who repent [c13]. Another passage says God pardoned them after the appointed nights [c14], and records Musa telling them to repent to their Maker and kill themselves, and that He accepted their repentance [c15].",
+      "deep_md": "The calf is told in more than one passage [c4][c5][c8]. The longest sequence has God's information to Musa [c2], the people's explanation [c4], Harun's earlier warning [c6], and Musa's exchanges with Harun [c7] and the Samiri [c10]. A shorter account has Musa's reaction in physical terms and Harun's answer in different words, that the people deemed him weak [c8]. Both answers of Harun are stated in the text and are not set against one another in this draft [c7][c8]. Another places the calf after the appointed nights and records the instruction to kill yourselves [c14][c15]. The ayah that follows Musa's words recalls the rescue from Fir'awn's people and calls it a great trial [c16]; it does not say who speaks.",
       "kids_md": "The Samiri made a calf, and the people took it [c4][c5]. Harun told them it was a test and that their Lord is the Most Merciful [c6]. Musa said that their God is only God [c11]. The people were sorry and asked God for mercy [c12].",
       "lessons_md": "Educational interpretation (not scripture): the account shows a community being led away in a leader's absence [c4], a brother who warned them [c6], and the opening of repentance afterwards [c12][c14].",
-      "unknowns_md": "Not established in the ayat: what the calf was made of beyond ‘a body having a lowing’ (the ayat say it was made of the people's ornaments), the Samiri's origin, what ‘a handful from the track of the messenger’ refers to (interpreters differ; Named in later tradition, not in the Quranic text: any identification of the ‘messenger’ and the ‘track’), how the repentance of 2:54 was carried out, and the number of those who took the calf."
+      "unknowns_md": "Not established in the ayat: what the calf was made of beyond ‘a body having a lowing’ (the ayat say it was made of the people's ornaments), the Samiri's origin, what ‘a handful from the track of the messenger’ refers to (interpreters differ; Named in later tradition, not in the Quranic text: any identification of the ‘messenger’ and the ‘track’), how the repentance of 2:54 was carried out, and the number of those who took the calf. The speaker of 7:141 is not marked: it may continue Musa's words or be spoken by God, and the draft does not choose."
+    },
+    {
+      "anchor": "the-covenant-and-the-mountain",
+      "position": 15,
+      "title_en": "The covenant and the mountain",
+      "event_slug": "mountain-raised-over-banu-israil",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 63,
+          "to": 63
+        },
+        {
+          "surah": 2,
+          "from": 93,
+          "to": 93
+        },
+        {
+          "surah": 4,
+          "from": 154,
+          "to": 154
+        },
+        {
+          "surah": 7,
+          "from": 171,
+          "to": 171
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God says He took their covenant and raised the mountain (at-Tur) above them, and said “Take what We have given you with strength and remember what is in it, so that you may be mindful.”",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 63,
+              "to": 63
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Another passage says He lifted the mountain above them as if it were a canopy and they thought it was going to fall on them, and told them to take what He gave them with strength and remember what is in it.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 171,
+              "to": 171
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "A later ayah repeats the reminder of the covenant and the mountain, and says they said “We hear and we disobey”; and that the calf was made to sink into their hearts because of their disbelief.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 93,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "A further passage says God raised the mountain above them with their covenant, and told them to enter the gate prostrating and not to transgress on the Sabbath, and took from them a solemn covenant.",
+          "verses": [
+            {
+              "surah": 4,
+              "from": 154,
+              "to": 154
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "These ayat recall a covenant taken from a people with the mountain raised above them [c1][c2][c4]. They were told to take what they had been given with strength and to remember what is in it [c1][c2]. One recalls that they said “We hear and we disobey” [c3].",
+      "body_md": "God says He took their covenant and raised the mountain above them, telling them to take what He had given them with strength and to remember what is in it [c1]. Another passage describes the mountain lifted above them as if it were a canopy, so that they thought it would fall on them [c2]. A later ayah repeats the reminder, adds that they said “We hear and we disobey”, and that the calf was made to sink into their hearts because of disbelief [c3]. A further passage mentions the raising of the mountain with their covenant, the command to enter the gate prostrating and not to transgress on the Sabbath, and a solemn covenant [c4].",
+      "deep_md": "The ayat do not say where the covenant fits in the order of the other events in this account [c1][c2][c3][c4]. The phrase take what We have given you with strength is in more than one ayah [c1][c2]. The ayah that repeats the reminder ties the covenant to their reply and to the calf [c3]. The last passage lists the content of the covenant as the gate, prostration and the Sabbath [c4]; the ayat do not say that this gate is the gate spoken of in the chapter on provision and the wilderness [c4].",
+      "kids_md": "God took a promise from the people and told them to hold on to what He gave them with strength and remember what is in it [c1][c2]. They said “We hear and we disobey” [c3].",
+      "lessons_md": "Educational interpretation (not scripture): hearing a command is different from obeying it, and the ayah sets hearing and disobeying side by side in the people's own words [c3].",
+      "unknowns_md": "- Not established in the ayat: when this took place in relation to the tablets or the calf, the nature of the raising of the mountain (interpreters differ on whether it is literal), and what the gate and the Sabbath refer to in 4:154.\n- Who is addressed is read from the surrounding passages; these ayat say you and them and do not name the people.\n- The relation between 2:63 and 2:93, a repeated reminder in the same surah, is a matter for scholars."
     },
     {
       "anchor": "the-journey-with-the-servant",
-      "position": 15,
+      "position": 16,
       "title_en": "The journey with the servant",
       "event_slug": "musa-and-the-servant",
       "verses": [
@@ -2414,7 +2679,7 @@
     },
     {
       "anchor": "the-messenger-remembered",
-      "position": 16,
+      "position": 17,
       "title_en": "The messenger remembered",
       "event_slug": null,
       "verses": [
@@ -2540,7 +2805,7 @@
     "The speaker of 28:19 is not marked in the text; interpreters differ.",
     "The meanings of the phrase kill yourselves in 2:54, qiblah in 10:87, misran in 2:61, the greatest sign, the quake in 7:155 and the thunderbolt in 2:55 are read in more than one way; the draft renderings are for review.",
     "The Musa of 18:60-82 is read as the Musa of the other ayat by common reading, but this is not stated in the ayat.",
-    "Passages tied to Musa by the inventory but outside the subject refs, such as 79:15-26, 44:23-31, 19:51-53, 2:63 and 7:171, are not used in these chapters; the chapter on the covenant and the mountain was held back for that reason.",
+    "The inventory refs of this subject were widened to include 2:63, 2:93, 4:154, 7:171, 19:51-53 and 44:23-31 (an additive inventory migration; see the story drafts workflow document). The passage on the mountain raised over a people (2:63, 2:93, 4:154, 7:171) does not name Musa in its ayat; a scholar should confirm that it belongs under this subject.",
     "Hadith to add later: reports on the staff, the Samiri, the plagues, the servant, the death of Musa and the meetings of prophets, each with its grading."
   ]
 }

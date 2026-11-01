@@ -1,0 +1,19 @@
+{
+ "note": "Anchors added when the chapters cut for the validator were restored (Muhammad, Isa, Musa). A name or number word may appear in a chapter's text only when its Arabic anchor occurs in the ayat that chapter cites. Each anchor is a word that occurs in the Quran text; tests/unit/story-drafts.test.ts checks that.",
+ "names": {
+  "Night": "ليلة",
+  "Qadr": "قدر",
+  "Ramadan": "رمضان",
+  "Badr": "بدر",
+  "Hunayn": "حنين",
+  "Zakariyya": "زكريا"
+ },
+ "numbers": {
+  "second": "ثاني"
+ },
+ "guarded": {},
+ "titles_ar": {},
+ "common_capitalised": [],
+ "opening_words": [],
+ "tradition_names": []
+}
