@@ -66,3 +66,10 @@ guards and audit triggers of `20261031002521` and the existing review flow.
   migration should add `audit()` and a freeze trigger like `guard_person_claims`.
 - Not built: creating a person or community (no seed data by instruction); editing a community's name, era or evidence claim (Life
   Through the Ages owns that).
+
+## Lineage and earlier scriptures (added with `mod/lineage`)
+
+The Adam-to-Muhammad lineage is a structure with no content: evidence classes are derived, gaps and competing accounts are
+stored and cited, a chain mixing incompatible traditions is refused, and nothing is published until reviewed. The scripture
+witness registry is comparative research with a mandatory limitation per entry and no scripture text. Full model, rules and
+open items: `docs/LINEAGE.md`.

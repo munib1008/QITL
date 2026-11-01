@@ -11,16 +11,21 @@ import { englishContent } from "@/lib/i18n/locales";
 import { genealogyStrings } from "@/lib/i18n/modules/atlas";
 import { e2eFixturesEnabled, fixtureGraph } from "@/lib/e2e-fixtures";
 import { ayahHash } from "@/lib/refs";
+import { LineagePage, lineageMetadata, ViewSwitch } from "@/components/lineage/LineagePage";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const t = genealogyStrings((await params).locale);
+export async function generateMetadata({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ view?: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  if ((await searchParams).view === "lineage") return lineageMetadata(locale);
+  const t = genealogyStrings(locale);
   return { title: t.title, description: t.metaDescription };
 }
 
 
-export default async function GenealogyPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ focus?: string }> }) {
+export default async function GenealogyPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ focus?: string; view?: string; classes?: string; empty?: string }> }) {
   const { locale } = await params;
-  const { focus = "ibrahim" } = await searchParams;
+  const { focus = "ibrahim", view, classes, empty } = await searchParams;
+  // "Lineage: Adam to Muhammad" is a second view of the same section, chosen by the URL (?view=lineage).
+  if (view === "lineage") return <LineagePage locale={locale} params={{ classes, empty }} />;
   const t = genealogyStrings(locale);
   const en = englishContent(locale);
   const sb = await getServerSupabase();
@@ -38,6 +43,7 @@ export default async function GenealogyPage({ params, searchParams }: { params: 
       lead={t.lead}
     >
       <div className="zq-pagebody">
+        <ViewSwitch locale={locale} active="graph" />
         <form method="get" className="zq-form" aria-label={t.choose}>
           <div className="zq-field">
             <label htmlFor="focus">{t.centre}</label>

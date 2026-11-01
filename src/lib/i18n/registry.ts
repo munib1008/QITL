@@ -24,6 +24,7 @@ import { storyStrings } from "./modules/story";
 import { storyChaptersStrings } from "./modules/storyChapters";
 import { uiStrings } from "./modules/ui";
 import { adminStrings } from "./modules/admin";
+import { lineageStrings, scriptureStrings } from "./modules/lineage";
 
 /**
  * Every interface strings file, with the module it serves. Used by the inventory (scripts/i18n-inventory.ts,
@@ -61,4 +62,5 @@ export const STRING_FILES: Array<{ module: string; file: string; get: (locale: s
   { module: "mufti", file: "modules/mufti.ts", get: muftiT },
   { module: "player", file: "modules/player.ts", get: getPlayerStrings },
   { module: "qiraat", file: "modules/qiraat.ts", get: qiraatStrings },
+  { module: "lineage", file: "modules/lineage.ts", get: (l) => ({ lineage: lineageStrings(l), scriptures: scriptureStrings(l) }) },
 ];

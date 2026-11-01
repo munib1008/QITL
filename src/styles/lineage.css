@@ -1,0 +1,137 @@
+/*
+ * Lineage of Humanity and the scripture register. Evidence-class colours are tokens: --ln-<class> fills a chip and
+ * strokes a line, --ln-<class>-fg is the text on that fill (>= 4.5:1; tests/unit/lineage.test.ts checks every pair and
+ * that these values equal CLASS_TOKENS in src/lib/lineage/classes.ts). Colour is never the only signal: each class also
+ * has a line pattern (data-pattern) and a text label. Colour shows the SOURCE of a link, never a person's worth.
+ */
+:root, [data-theme="light"] {
+  --ln-quran: #17613F; --ln-quran-fg: #FFFFFF;
+  --ln-hadith: #337B58; --ln-hadith-fg: #FFFFFF;
+  --ln-scholar: #916F3F; --ln-scholar-fg: #FFFFFF;
+  --ln-scripture: #3D729D; --ln-scripture-fg: #FFFFFF;
+  --ln-history: #7463A5; --ln-history-fg: #FFFFFF;
+  --ln-unknown: #666C75; --ln-unknown-fg: #FFFFFF;
+}
+[data-theme="dark"], [data-theme="journey"] {
+  --ln-quran: #6CCB9A; --ln-quran-fg: #07120E;
+  --ln-hadith: #7FD1A8; --ln-hadith-fg: #07120E;
+  --ln-scholar: #D9B56F; --ln-scholar-fg: #07120E;
+  --ln-scripture: #8DBBE4; --ln-scripture-fg: #07120E;
+  --ln-history: #B3A6E3; --ln-history-fg: #07120E;
+  --ln-unknown: #AEB4BD; --ln-unknown-fg: #07120E;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --ln-quran: #6CCB9A; --ln-quran-fg: #07120E;
+    --ln-hadith: #7FD1A8; --ln-hadith-fg: #07120E;
+    --ln-scholar: #D9B56F; --ln-scholar-fg: #07120E;
+    --ln-scripture: #8DBBE4; --ln-scripture-fg: #07120E;
+    --ln-history: #B3A6E3; --ln-history-fg: #07120E;
+    --ln-unknown: #AEB4BD; --ln-unknown-fg: #07120E;
+  }
+}
+
+.ln { display: grid; gap: 24px; }
+.ln-switch { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
+.ln-switch a { display: inline-flex; align-items: center; min-height: var(--tap, 44px); padding: 0 16px; border: 1px solid var(--border); border-radius: 999px; color: var(--ink); font: 600 14px/20px var(--font-sans); text-decoration: none; }
+.ln-switch a[aria-current="page"] { background: var(--brand); color: var(--on-brand); border-color: var(--brand); }
+.ln-switch a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+.ln-fixture { margin: 0; padding: 8px 12px; border: 1px dashed var(--border); border-radius: 8px; font: 600 13px/20px var(--font-sans); }
+
+/* Chips: colour + word + line sample. */
+.ln-chip { display: inline-flex; align-items: center; gap: 8px; min-height: 28px; padding: 2px 10px; border-radius: 999px; font: 600 13px/20px var(--font-sans); }
+.ln-chip svg { width: 28px; height: 8px; flex: none; overflow: visible; }
+.ln-chip line { stroke: currentColor; stroke-width: 3; }
+.ln-chip[data-class="quran"] { background: var(--ln-quran); color: var(--ln-quran-fg); }
+.ln-chip[data-class="hadith"] { background: var(--ln-hadith); color: var(--ln-hadith-fg); }
+.ln-chip[data-class="scholar"] { background: var(--ln-scholar); color: var(--ln-scholar-fg); }
+.ln-chip[data-class="scripture"] { background: var(--ln-scripture); color: var(--ln-scripture-fg); }
+.ln-chip[data-class="history"] { background: var(--ln-history); color: var(--ln-history-fg); }
+.ln-chip[data-class="unknown"] { background: var(--ln-unknown); color: var(--ln-unknown-fg); }
+
+/* Legend */
+.ln-legend ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.ln-legend li { display: grid; gap: 6px; padding: 12px; border: 1px solid var(--hairline); border-radius: 12px; background: var(--surface-raised); }
+.ln-legend p { margin: 0; }
+
+/* Filter */
+.ln-filter { border: 1px solid var(--hairline); border-radius: 12px; padding: 12px 16px; margin: 0; }
+.ln-filter legend { padding: 0 6px; font: 600 14px/20px var(--font-sans); }
+.ln-filter-list { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.ln-filter label { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap, 44px); cursor: pointer; }
+.ln-filter input { width: 24px; height: 24px; margin: 0; accent-color: var(--brand); }
+
+/* Counts, empty states */
+.ln-counts { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.ln-counts li { padding: 12px; border: 1px solid var(--hairline); border-radius: 12px; background: var(--surface-raised); display: grid; gap: 2px; }
+.ln-counts strong { font: 600 14px/20px var(--font-sans); }
+
+/* Route graph */
+.ln-route { display: grid; gap: 12px; }
+.ln-route h3 { margin: 0; }
+.ln-graph .zx-viewport { min-height: 420px; height: min(70vh, 640px); border: 1px solid var(--hairline); border-radius: 12px; background: var(--surface-sunken); }
+.ln-box { fill: var(--surface-raised); stroke: var(--border); stroke-width: 1.5; }
+.ln-name { font: 600 14px/1 var(--font-sans); fill: var(--ink); text-anchor: middle; }
+.ln-node { cursor: pointer; outline: none; }
+.ln-node:focus-visible .ln-box, .ln-node:focus-visible .ln-hit { stroke: var(--focus); stroke-width: 3; }
+.ln-node[aria-pressed="true"] .ln-box { stroke: var(--brand); stroke-width: 3; }
+.ln-hit { fill: transparent; stroke: transparent; stroke-width: 0; pointer-events: all; }
+.ln-line { fill: none; stroke-width: 3.5; stroke-linecap: butt; }
+.ln-line[data-class="quran"] { stroke: var(--ln-quran); }
+.ln-line[data-class="hadith"] { stroke: var(--ln-hadith); }
+.ln-line[data-class="scholar"] { stroke: var(--ln-scholar); }
+.ln-line[data-class="scripture"] { stroke: var(--ln-scripture); }
+.ln-line[data-class="history"] { stroke: var(--ln-history); }
+.ln-line[data-class="unknown"] { stroke: var(--ln-unknown); }
+.ln-tag { stroke: none; }
+.ln-tag[data-class="quran"] { fill: var(--ln-quran); }
+.ln-tag[data-class="hadith"] { fill: var(--ln-hadith); }
+.ln-tag[data-class="scholar"] { fill: var(--ln-scholar); }
+.ln-tag[data-class="scripture"] { fill: var(--ln-scripture); }
+.ln-tag[data-class="history"] { fill: var(--ln-history); }
+.ln-tag[data-class="unknown"] { fill: var(--ln-unknown); }
+.ln-tag-text { font: 700 12px/1 var(--font-sans); text-anchor: middle; }
+.ln-tag-text[data-class="quran"] { fill: var(--ln-quran-fg); }
+.ln-tag-text[data-class="hadith"] { fill: var(--ln-hadith-fg); }
+.ln-tag-text[data-class="scholar"] { fill: var(--ln-scholar-fg); }
+.ln-tag-text[data-class="scripture"] { fill: var(--ln-scripture-fg); }
+.ln-tag-text[data-class="history"] { fill: var(--ln-history-fg); }
+.ln-tag-text[data-class="unknown"] { fill: var(--ln-unknown-fg); }
+.ln-opt[aria-pressed="true"] .ln-tag { stroke: var(--ink); stroke-width: 3; }
+.ln-gapbox { fill: var(--surface); stroke: var(--ink-muted); stroke-width: 2; stroke-dasharray: 6 4; }
+.ln-gaptext { font: 600 11px/1 var(--font-sans); fill: var(--ink); text-anchor: middle; }
+.ln-opt { cursor: pointer; outline: none; }
+.ln-opt:focus-visible .ln-hit { stroke: var(--focus); stroke-width: 3; }
+
+/* Text outline */
+.ln-outline { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.ln-outline > li { display: grid; gap: 6px; padding: 12px; border: 1px solid var(--hairline); border-radius: 12px; background: var(--surface-raised); }
+.ln-outline .ln-step { margin-inline-start: 12px; display: grid; gap: 8px; }
+.ln-outline .ln-opt-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.ln-gaptag { display: inline-flex; align-items: center; min-height: 28px; padding: 2px 10px; border: 2px dashed var(--ink-muted); border-radius: 8px; font: 600 13px/20px var(--font-sans); }
+
+/* Assessment panel */
+.ln-panel { padding: 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface-raised); display: grid; gap: 12px; scroll-margin-top: 80px; }
+.ln-panel h3, .ln-panel h4 { margin: 0; }
+.ln-panel dl { margin: 0; display: grid; gap: 4px; }
+.ln-panel dt { font: 600 12px/16px var(--font-sans); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); }
+.ln-panel dd { margin: 0; }
+.ln-refs { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.ln-caution { margin: 0; padding: 8px 12px; border-inline-start: 4px solid var(--ln-scripture); background: var(--surface-sunken); font: 500 14px/22px var(--font-sans); }
+.ln-btn { min-height: var(--tap, 44px); }
+
+/* Scripture register */
+.sc-layer { display: grid; gap: 12px; }
+.sc-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.sc-card { display: grid; gap: 8px; padding: 16px; border: 1px solid var(--hairline); border-radius: 12px; background: var(--surface-raised); scroll-margin-top: 80px; }
+.sc-card h3 { margin: 0; }
+.sc-card dl { margin: 0; display: grid; gap: 4px; }
+.sc-card dt { font: 600 12px/16px var(--font-sans); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); }
+.sc-card dd { margin: 0; }
+.sc-limit { padding: 8px 12px; border-inline-start: 4px solid var(--ln-scripture); background: var(--surface-sunken); }
+.sc-note { margin: 0; padding: 12px 16px; border: 1px solid var(--hairline); border-radius: 12px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ln *, .sc-card { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}

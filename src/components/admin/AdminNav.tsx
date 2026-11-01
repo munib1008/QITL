@@ -26,6 +26,7 @@ const LINKS: Array<{ href: string; roles: Role[] }> = [
   { href: "/admin/studio/translations", roles: ["translation_reviewer", "scholarly_reviewer", "admin"] },
   { href: "/admin/studio/audio", roles: ["audio_producer", "admin"] },
   { href: "/admin/relationships", roles: ["editor", "admin"] },
+  { href: "/admin/scriptures", roles: ["editor", "scholarly_reviewer", "science_reviewer", "admin"] },
   { href: "/admin/media", roles: ["editor", "scholarly_reviewer", "admin"] },
   { href: "/admin/creation", roles: ["editor", "scholarly_reviewer", "admin"] },
   { href: "/admin/moderation", roles: ["moderator", "admin"] },
