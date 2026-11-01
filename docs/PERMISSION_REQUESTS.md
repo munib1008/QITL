@@ -1,6 +1,6 @@
 # Permission requests (drafts for the owner to send)
 
-Nothing here has been sent. Fill the bracketed parts, send from the owner's own address, and record each reply in `/admin/licences`
+Nothing here has been sent. Reply-to address for both requests (set 2026-11-02 by the owner): Altaf.afridi@gmail.com. Fill the bracketed parts, send from the owner's own address, and record each reply in `/admin/licences`
 (status, wording of the credit, date, who agreed). Until a written reply exists the source stays PERMISSION_REQUIRED and the site shows none of its text or audio.
 
 ## 1. King Fahd Complex for the Printing of the Holy Quran (other riwayat texts, audio hosting)
@@ -23,7 +23,8 @@ Please tell us: (a) whether permission is granted and for which riwayat or recor
 link to yours, (d) any conditions or a download source you prefer.
 
 Jazakum Allahu khayran,
-[Name], [role], [email]
+[Name], [role]
+Reply to: Altaf.afridi@gmail.com
 
 ## 2. sunnah.com (hadith text and API)
 
@@ -41,7 +42,8 @@ Please tell us: (a) whether this use is permitted, (b) how to obtain an API key 
 (d) the translators' licence terms for the English text, (e) whether we may cache responses and for how long.
 
 Jazakum Allahu khayran,
-[Name], [role], [email]
+[Name], [role]
+Reply to: Altaf.afridi@gmail.com
 
 ## 3. Questions to settle before signing either off
 - Does the permission cover derivative displays (side-by-side comparison, search snippets, audio synced to text)?
