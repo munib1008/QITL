@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { uiStrings } from "@/lib/i18n/modules/ui";
 import { ReadingHeader, SiteFooter } from "./SiteHeader";
+import { getSiteConfig } from "@/lib/site-config/server";
 
 export interface Crumb {
   href?: string;
@@ -9,7 +10,7 @@ export interface Crumb {
 }
 
 /** Solid light/dark reading shell: header, breadcrumb, optional page head, main, footer. */
-export function ReadingPage({
+export async function ReadingPage({
   locale,
   crumbs,
   title,
@@ -29,9 +30,10 @@ export function ReadingPage({
   children: ReactNode;
 }) {
   const u = uiStrings(locale).shell;
+  const config = await getSiteConfig(); // hidden sections and the Explore order from /admin/site
   return (
     <div className="pp">
-      <ReadingHeader locale={locale} query={query} />
+      <ReadingHeader locale={locale} query={query} config={config} />
       <main className="pp-wrap" id="main">
         {crumbs?.length ? (
           <ol className="pp-crumb" aria-label={u.breadcrumb}>

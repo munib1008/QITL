@@ -20,6 +20,7 @@ export const adminStrings = (locale: string) =>
       noRoleBody: "Roles are granted by an administrator after verifying identity and, for scholarly reviewers, credentials.",
       menu: "Editorial menu",
       nav: {
+        "/admin/site": "Site content and menus",
         "/admin": "Overview",
         "/admin/review": "Review queue",
         "/admin/life-through-ages": "Life Through the Ages",
@@ -103,6 +104,7 @@ export const adminStrings = (locale: string) =>
       noRoleBody: "يمنح المدير الأدوار بعد التحقق من الهوية، ومن المؤهلات للمراجعين العلميين.",
       menu: "قائمة التحرير",
       nav: {
+        "/admin/site": "محتوى الموقع والقوائم",
         "/admin": "نظرة عامة",
         "/admin/review": "قائمة المراجعة",
         "/admin/life-through-ages": "حياة عبر العصور",
@@ -186,6 +188,7 @@ export const adminStrings = (locale: string) =>
       noRoleBody: "کردار ایک منتظم شناخت کی تصدیق کے بعد دیتا ہے، اور علمی جائزہ کاروں کے لیے اسناد کی بھی۔",
       menu: "ادارتی مینو",
       nav: {
+        "/admin/site": "سائٹ کا مواد اور مینو",
         "/admin": "جائزہ",
         "/admin/review": "جائزے کی قطار",
         "/admin/life-through-ages": "زمانوں کے ساتھ زندگی",

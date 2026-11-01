@@ -9,6 +9,7 @@ import { getUser } from "@/lib/supabase/server";
 import { rolesOf } from "@/lib/admin";
 import { muftiT } from "@/lib/i18n/modules/mufti";
 import { dreamsT } from "@/lib/i18n/modules/dreams";
+import { muftiApplyT } from "@/lib/i18n/modules/muftiApply";
 import type { CitationRow } from "@/lib/mufti";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -68,6 +69,13 @@ export default async function MuftiWorkspace({ params }: { params: Promise<{ loc
   return page(
     <>
       {!isMufti && !profile ? <p className="qa-notice">{t.workspace.notMuftiBody}</p> : null}
+      {!isMufti ? (
+        <p>
+          <Link className="zq-btn zq-btn-secondary" href="/mufti/apply">
+            {muftiApplyT(locale).crumb}
+          </Link>
+        </p>
+      ) : null}
       {profile?.verified_at ? (
         <div className="qa-actions">
           <VerifiedBadge>{t.question.verified}</VerifiedBadge>

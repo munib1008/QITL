@@ -108,6 +108,25 @@ Every place editor or user text reaches the page:
 
 There is no `dangerouslySetInnerHTML` with user or editor content (only the constant theme script and JSON-LD).
 
+## Site content, module flags, scholar applications and notifications (`mod/mufti-flags`)
+
+- **Site content and flags** (`site_settings`, `feature_flags`, migration `20261031002620`): the database admits only the whitelisted keys (six home
+  text blocks, `nav.explore.order`, and `module.<section>` flags); text is plain, per language, length-limited, with no HTML, control characters or
+  script links (`validate_site_setting`, repeated in `src/lib/site-config/config.ts`). No API role can write the tables directly (INSERT/UPDATE/DELETE
+  revoked, DELETE also refused by a trigger); administrators write through `save_site_setting`, `save_feature_flag` and `revert_site_config`, which
+  check the role, require a revision note, bump a version, copy the value to `site_config_revisions` (append-only, admin-readable) and write
+  `audit_logs`. A revert is a new version. Visitors read only `home.*` and `nav.*` settings and the flags.
+- **A flag can only hide.** No policy, view or function outside these tables mentions them (test scans `pg_policies`, `pg_proc`, `pg_views`); flags are read
+  only by the menu code (`applyNav`). Hiding a section removes it from the menus; its pages, and what they may show, still follow RLS and the review
+  guards. The Quran, search and the timeline cannot be hidden.
+- **Scholar applications** (`mufti_applications`, `20261031002610`): applicant and staff read; only an administrator moves the status along
+  submitted, under review, verified or declined (trigger, not just RLS); the submission is immutable; consent version stored; one open application per
+  person; database throttle (2 a minute, 3 an hour). Nothing here writes `role_assignments` or `mufti_profiles`: verification stays the separate
+  administrator action. Audit rows hold ids and statuses, never the applicant text.
+- **Notifications** (`20261031002600`): own rows only; the only writable column is `read_at`; rows are written by triggers and carry a kind, an optional
+  title (the question title the recipient may already see) and a same-site path (check constraint). No answer text, note or name. `channel` is `in_app`
+  today so an email sender can be added later.
+
 ## Monitoring, logging and analytics
 
 - `src/lib/observability/errors.ts`: `logEvent/logWarn/logError` write one JSON line with allow-listed keys only;

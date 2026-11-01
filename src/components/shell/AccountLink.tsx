@@ -6,6 +6,7 @@ import { useSession } from "@/components/account/useSession";
 import { stripLocale } from "@/lib/i18n";
 import { uiStrings } from "@/lib/i18n/modules/ui";
 import { useLocale } from "@/lib/i18n/useLocale";
+import { NotificationBell } from "@/components/notifications/NotificationBell";
 
 /** Optional account entry. Reading never needs it; when accounts are not configured it is not shown as working. */
 export function AccountLink({ signInLabel, accountLabel }: { signInLabel: string; accountLabel: string }) {
@@ -14,9 +15,12 @@ export function AccountLink({ signInLabel, accountLabel }: { signInLabel: string
   const t = uiStrings(useLocale()).shell;
   if (s.status === "signed_in")
     return (
-      <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" href="/account" prefetch={false}>
-        {accountLabel}
-      </Link>
+      <>
+        <NotificationBell />
+        <Link className="zq-btn zq-btn-secondary zq-btn-sm zq-btn-link" href="/account" prefetch={false}>
+          {accountLabel}
+        </Link>
+      </>
     );
   if (s.status === "unavailable")
     return (

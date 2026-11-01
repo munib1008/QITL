@@ -7,6 +7,7 @@ import { LanguagePrefsPanel } from "@/components/account/LanguagePrefsPanel";
 import { getUser } from "@/lib/supabase/server";
 import { journeyStops } from "@/content/journey";
 import { MyQuestions } from "@/components/mufti/MyQuestions";
+import { NotificationsPanel } from "@/components/notifications/NotificationsPanel";
 import { MyDreamRequests } from "@/components/dreams/MyDreamRequests";
 import { accountStrings } from "@/lib/i18n/modules/account";
 import { ContinueReading } from "@/components/quran/ContinueReading";
@@ -37,6 +38,7 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
           <>
             <SavedVerses names={surahNames} locale={locale} attribution={<QuranAttribution src={quranSource()} />} />
             <AccountDashboard email={user.email ?? ""} names={Object.fromEntries(journeyStops().map((s) => [s.id, s.name]))} />
+            <NotificationsPanel locale={locale} />
             <MyQuestions locale={locale} />
             <MyDreamRequests locale={locale} compact />
           </>

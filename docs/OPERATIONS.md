@@ -75,6 +75,16 @@ No transcoding happens anywhere: a clip is stored as uploaded, so ask editors to
 is never autoplayed and is not seeded; the licence for a clip is recorded as an `image`-type content permission
 (the registry has no separate video type).
 
+## Site content, menus and scholar applications
+
+- **Migrations** `20261031002600` (notifications), `002610` (scholar applications), `002620` (site configuration) are applied in order with `apply_migration`; none needs a secret or an extension.
+- **Editing the site** (`/admin/site`, administrators): home wording per language, the Explore order, and hiding a section from the menus. A save revalidates the
+  `site-config` cache tag; other server instances pick it up within 30 seconds. If the database is unreachable the menus and text fall back to the built-in ones.
+- **Undo**: open Recent changes on the same screen and revert; a revert is saved as a new version. The audit trail is `/admin/audit` (`site_settings`, `feature_flags`, `mufti_applications`).
+- **Hidden is not unpublished.** To take content down use the review screens; a hidden section is only missing from the menus.
+- **Scholar applications** (`/admin/mufti`): moderators read, administrators move an application. Granting the mufti role and verifying the profile are separate steps further down the same page.
+- **Notifications**: in-app only. Rows are kept until the account is deleted; an email sender (backlog 29) can read rows with `channel = 'in_app'` and `emailed_at is null`.
+
 ## Backups and restore
 
 - **Point-in-time recovery** (Supabase Pro) is the primary backup. Otherwise schedule a daily logical dump off the

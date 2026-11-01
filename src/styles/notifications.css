@@ -1,0 +1,15 @@
+/* Notification bell (header) and the notifications panel (My library). Tokens only; 44px targets. */
+.zq-bell { position: relative; min-width: var(--tap, 44px); min-height: var(--tap, 44px); display: inline-flex; align-items: center; justify-content: center; padding: 0 8px; }
+.zq-bell svg { width: 20px; height: 20px; }
+.zq-bell-count {
+  position: absolute; top: 2px; inset-inline-end: 0; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px;
+  background: var(--status-danger); color: #fff; font: 700 12px/20px var(--font-sans); text-align: center;
+}
+.nt-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.nt-item { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border: 1px solid var(--hairline); border-radius: var(--radius-md); background: var(--surface-raised); min-width: 0; overflow-wrap: anywhere; }
+.nt-item[data-unread="true"] { border-inline-start: 4px solid var(--brass); }
+.nt-head { font: 600 16px/22px var(--font-sans); }
+.nt-title { font: 400 15px/22px var(--font-sans); color: var(--ink); }
+.nt-meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font: 400 13px/18px var(--font-sans); color: var(--ink-muted); }
+.nt-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.nt-actions .zq-btn { min-height: var(--tap, 44px); }
