@@ -1,0 +1,1294 @@
+{
+  "slug": "banu-israil",
+  "title_en": "Banu Isra'il (the Children of Isra'il)",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "banu-israil"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. The Quran addresses Banu Isra'il in many passages. This file groups them by theme (favours, covenant, the calf and the demand to see God, requests and refusals, the cow, the earnest reminders) and stays inside the inventory ayat; it does not retell the story of Musa beyond the cited ayat, and the Sabbath-breakers have their own draft.",
+  "chapters": [
+    {
+      "anchor": "the-favours-of-god",
+      "position": 1,
+      "title_en": "The favours of God to the Children of Isra'il",
+      "event_slug": "banu-israil",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 47,
+          "to": 47
+        },
+        {
+          "surah": 2,
+          "from": 49,
+          "to": 50
+        },
+        {
+          "surah": 2,
+          "from": 57,
+          "to": 57
+        },
+        {
+          "surah": 2,
+          "from": 60,
+          "to": 60
+        },
+        {
+          "surah": 5,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 7,
+          "from": 137,
+          "to": 137
+        },
+        {
+          "surah": 7,
+          "from": 141,
+          "to": 141
+        },
+        {
+          "surah": 7,
+          "from": 160,
+          "to": 160
+        },
+        {
+          "surah": 10,
+          "from": 90,
+          "to": 90
+        },
+        {
+          "surah": 10,
+          "from": 93,
+          "to": 93
+        },
+        {
+          "surah": 20,
+          "from": 80,
+          "to": 82
+        },
+        {
+          "surah": 44,
+          "from": 30,
+          "to": 33
+        },
+        {
+          "surah": 45,
+          "from": 16,
+          "to": 17
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God told the Children of Isra'il to remember His favour with which He had favoured them, and that He had preferred them over the worlds.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 47,
+              "to": 47
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God reminded them that He saved them from the people of Fir'awn, who afflicted them with the worst punishment, killing their sons and sparing their women, and that in this was a great trial from their Lord.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 49,
+              "to": 49
+            },
+            {
+              "surah": 7,
+              "from": 141,
+              "to": 141
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God parted the sea for them, saved them, and drowned the people of Fir'awn while they looked on.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Another passage says that God took the Children of Isra'il across the sea, and that Fir'awn and his troops followed them.",
+          "verses": [
+            {
+              "surah": 10,
+              "from": 90,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God made the people who had been considered weak inherit the eastern and western parts of the land that He had blessed, and the fair word of the Lord was fulfilled for the Children of Isra'il because they were patient.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 137,
+              "to": 137
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The same ayah says that God destroyed what Fir'awn and his people had made and what they had built.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 137,
+              "to": 137
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The Quran says that God saved the Children of Isra'il from the humiliating punishment inflicted by Fir'awn, who was high among the transgressors.",
+          "verses": [
+            {
+              "surah": 44,
+              "from": 30,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "It says that God chose them knowingly over the worlds and gave them signs in which there was a clear test.",
+          "verses": [
+            {
+              "surah": 44,
+              "from": 32,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "God gave the Children of Isra'il the Book, judgement and prophethood, provided them with good things, and preferred them over the worlds.",
+          "verses": [
+            {
+              "surah": 45,
+              "from": 16,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "God gave them clear proofs of the matter, and they differed only after knowledge had come to them, out of rivalry among themselves.",
+          "verses": [
+            {
+              "surah": 45,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "The Quran says that your Lord will judge between them on the Day of Resurrection about what they used to differ in.",
+          "verses": [
+            {
+              "surah": 45,
+              "from": 17,
+              "to": 17
+            },
+            {
+              "surah": 10,
+              "from": 93,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "God settled the Children of Isra'il in a place of honour and provided them with good things, and they did not differ until knowledge came to them.",
+          "verses": [
+            {
+              "surah": 10,
+              "from": 93,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "God told the Children of Isra'il that He had saved them from their enemy, had promised them the right side of the Tur, and had sent down manna and quail on them.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 80,
+              "to": 80
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "God told them to eat of the good things He had provided and not to transgress in it, or His anger would descend on them, and whoever His anger descends on has fallen.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 81,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c15",
+          "statement_en": "God said that He is forgiving to whoever repents, believes, does what is right and then is guided.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 82,
+              "to": 82
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c16",
+          "statement_en": "God shaded them with clouds and sent down manna and quail on them, and the ayah says that they did not wrong Him but wronged themselves.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 57,
+              "to": 57
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c17",
+          "statement_en": "When Musa asked for water for his people, God told him to strike the rock with his staff, and springs burst from it; each group knew its drinking place.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 60,
+              "to": 60
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c18",
+          "statement_en": "Another passage says that God divided them into tribes as communities.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 160,
+              "to": 160
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c19",
+          "statement_en": "Musa told his people to remember the favour of God, since He had placed prophets among them, made them kings, and given them what He had given no one else in the worlds.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran tells the Children of Isra'il to remember God's favour and says that He preferred them over the worlds [c1][c9]. It lists the favours: rescue from the people of Fir'awn, the parting of the sea, the Book, good things, and water and food in the wilderness [c2][c3][c9][c13][c17].",
+      "body_md": "God told the Children of Isra'il to remember His favour with which He had favoured them, and that He had preferred them over the worlds [c1]. God reminded them that He saved them from the people of Fir'awn, who afflicted them with the worst punishment, killing their sons and sparing their women, and that in this was a great trial from their Lord [c2]. God parted the sea for them, saved them, and drowned the people of Fir'awn while they looked on [c3]. Another passage says that God took the Children of Isra'il across the sea, and that Fir'awn and his troops followed them [c4]. God made the people who had been considered weak inherit the eastern and western parts of the land that He had blessed, and the fair word of the Lord was fulfilled for the Children of Isra'il because they were patient [c5]. The same ayah says that God destroyed what Fir'awn and his people had made and what they had built [c6]. The Quran says that God saved the Children of Isra'il from the humiliating punishment inflicted by Fir'awn, who was high among the transgressors [c7]. It says that God chose them knowingly over the worlds and gave them signs in which there was a clear test [c8]. God gave the Children of Isra'il the Book, judgement and prophethood, provided them with good things, and preferred them over the worlds [c9]. God gave them clear proofs of the matter, and they differed only after knowledge had come to them, out of rivalry among themselves [c10]. The Quran says that your Lord will judge between them on the Day of Resurrection about what they used to differ in [c11]. God settled the Children of Isra'il in a place of honour and provided them with good things, and they did not differ until knowledge came to them [c12]. God told the Children of Isra'il that He had saved them from their enemy, had promised them the right side of the Tur, and had sent down manna and quail on them [c13]. God told them to eat of the good things He had provided and not to transgress in it, or His anger would descend on them, and whoever His anger descends on has fallen [c14]. God said that He is forgiving to whoever repents, believes, does what is right and then is guided [c15]. God shaded them with clouds and sent down manna and quail on them, and the ayah says that they did not wrong Him but wronged themselves [c16]. When Musa asked for water for his people, God told him to strike the rock with his staff, and springs burst from it; each group knew its drinking place [c17]. Another passage says that God divided them into tribes as communities [c18]. Musa told his people to remember the favour of God, since He had placed prophets among them, made them kings, and given them what He had given no one else in the worlds [c19].",
+      "deep_md": "- God told the Children of Isra'il to remember His favour with which He had favoured them, and that He had preferred them over the worlds (2:47) [c1].\n- God reminded them that He saved them from the people of Fir'awn, who afflicted them with the worst punishment, killing their sons and sparing their women, and that in this was a great trial from their Lord (2:49, 7:141) [c2].\n- God parted the sea for them, saved them, and drowned the people of Fir'awn while they looked on (2:50) [c3].\n- Another passage says that God took the Children of Isra'il across the sea, and that Fir'awn and his troops followed them (10:90) [c4].\n- God made the people who had been considered weak inherit the eastern and western parts of the land that He had blessed, and the fair word of the Lord was fulfilled for the Children of Isra'il because they were patient (7:137) [c5].\n- The same ayah says that God destroyed what Fir'awn and his people had made and what they had built (7:137) [c6].\n- The Quran says that God saved the Children of Isra'il from the humiliating punishment inflicted by Fir'awn, who was high among the transgressors (44:30-31) [c7].\n- It says that God chose them knowingly over the worlds and gave them signs in which there was a clear test (44:32-33) [c8].\n- God gave the Children of Isra'il the Book, judgement and prophethood, provided them with good things, and preferred them over the worlds (45:16) [c9].\n- God gave them clear proofs of the matter, and they differed only after knowledge had come to them, out of rivalry among themselves (45:17) [c10].\n- The Quran says that your Lord will judge between them on the Day of Resurrection about what they used to differ in (45:17, 10:93) [c11].\n- God settled the Children of Isra'il in a place of honour and provided them with good things, and they did not differ until knowledge came to them (10:93) [c12].\n- God told the Children of Isra'il that He had saved them from their enemy, had promised them the right side of the Tur, and had sent down manna and quail on them (20:80) [c13].\n- God told them to eat of the good things He had provided and not to transgress in it, or His anger would descend on them, and whoever His anger descends on has fallen (20:81) [c14].\n- God said that He is forgiving to whoever repents, believes, does what is right and then is guided (20:82) [c15].\n- God shaded them with clouds and sent down manna and quail on them, and the ayah says that they did not wrong Him but wronged themselves (2:57) [c16].\n- When Musa asked for water for his people, God told him to strike the rock with his staff, and springs burst from it; each group knew its drinking place (2:60) [c17].\n- Another passage says that God divided them into tribes as communities (7:160) [c18].\n- Musa told his people to remember the favour of God, since He had placed prophets among them, made them kings, and given them what He had given no one else in the worlds (5:20) [c19].",
+      "kids_md": "God reminded the Children of Isra'il of the good things He had done for them [c1]. He saved them from the people of Fir'awn and parted the sea for them [c2][c3]. He sent them manna and quail to eat [c13]. He gave them water from a rock [c17].",
+      "lessons_md": "Educational interpretation (not scripture): The passages set favour beside responsibility, for the same ayat that list what was given also warn against transgressing in it [c13][c14]. One reading is that the repeated reminder to remember is meant to turn gifts into gratitude [c1][c16].",
+      "unknowns_md": "- Not established: where the Children of Isra'il were when each favour came, how many they were, or how much time passed; the draft names no place beyond the ayat.\n- Not established: what the land of 7:137 and the place of honour of 10:93 were; the ayat do not name them.\n- Not established: the exact sense of the phrase translated preferred over the worlds is read in more than one way (over the people of their time, or in some respect); the draft keeps the ayah's wording.\n- Not established: 2:62 (a verse on the believers and on other communities and their reward) is inside the inventory range but is not drafted; it needs a scholar's wording.\n- Named in later tradition, not in the Quranic text: dates and places for the rescue and the crossing; none is used here."
+    },
+    {
+      "anchor": "the-covenant",
+      "position": 2,
+      "title_en": "The covenant",
+      "event_slug": "banu-israil",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 63,
+          "to": 64
+        },
+        {
+          "surah": 2,
+          "from": 83,
+          "to": 84
+        },
+        {
+          "surah": 2,
+          "from": 93,
+          "to": 93
+        },
+        {
+          "surah": 5,
+          "from": 12,
+          "to": 13
+        },
+        {
+          "surah": 7,
+          "from": 171,
+          "to": 171
+        },
+        {
+          "surah": 17,
+          "from": 2,
+          "to": 3
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God took the covenant of the Children of Isra'il and raised leaders among them.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God told them that He was with them if they established prayer, gave zakat, believed in His messengers, supported them and lent God a good loan.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God said that He would then remove their evil deeds and admit them to gardens beneath which rivers flow, and that whoever disbelieved after that had strayed from the right way.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God took their covenant not to worship any but Him, to do good to parents, relatives, orphans and the needy, to speak kindly to people, to establish prayer and to give zakat.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 83,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The ayah says that they then turned away, except a few of them.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 83,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God took their covenant that they would not shed their own blood or drive themselves out of their homes, and they affirmed it while they bore witness.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 84,
+              "to": 84
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God took their covenant and raised the Tur above them, saying to take what He had given them with strength and to remember what was in it, so that they might fear God.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 63,
+              "to": 63
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Another ayah says that they said they heard and disobeyed, and that the calf was made to sink into their hearts because of their disbelief.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 93,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "The Quran says that after that they turned away, and that but for the favour of God and His mercy they would have been among the losers.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 64,
+              "to": 64
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "Because they broke their covenant, God cursed them and made their hearts hard.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "The ayah says that they distort words from their places and forgot a part of what they were reminded of.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "The ayah tells the one addressed that treachery will keep appearing from them except a few, and to pardon them and overlook, for God loves those who do good.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "God gave Musa the Book and made it guidance for the Children of Isra'il, telling them not to take any guardian besides Him.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 2,
+              "to": 2
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "The ayah calls them the offspring of those whom God carried with Nuh, and says that Nuh was a grateful servant.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c15",
+          "statement_en": "Another ayah says that God raised the mountain above them as if it were a canopy, and they thought that it was going to fall on them, and that God told them to take what He had given them with strength and to remember what was in it, so that they might fear God.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 171,
+              "to": 171
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God took the covenant of the Children of Isra'il to worship none but Him and to do good to others [c4][c6]. The Quran says that they turned away and broke it, and that God made their hearts hard [c5][c10].",
+      "body_md": "God took the covenant of the Children of Isra'il and raised leaders among them [c1]. God told them that He was with them if they established prayer, gave zakat, believed in His messengers, supported them and lent God a good loan [c2]. God said that He would then remove their evil deeds and admit them to gardens beneath which rivers flow, and that whoever disbelieved after that had strayed from the right way [c3]. God took their covenant not to worship any but Him, to do good to parents, relatives, orphans and the needy, to speak kindly to people, to establish prayer and to give zakat [c4]. The ayah says that they then turned away, except a few of them [c5]. God took their covenant that they would not shed their own blood or drive themselves out of their homes, and they affirmed it while they bore witness [c6]. God took their covenant and raised the Tur above them, saying to take what He had given them with strength and to remember what was in it, so that they might fear God [c7]. Another ayah says that they said they heard and disobeyed, and that the calf was made to sink into their hearts because of their disbelief [c8]. The Quran says that after that they turned away, and that but for the favour of God and His mercy they would have been among the losers [c9]. Because they broke their covenant, God cursed them and made their hearts hard [c10]. The ayah says that they distort words from their places and forgot a part of what they were reminded of [c11]. The ayah tells the one addressed that treachery will keep appearing from them except a few, and to pardon them and overlook, for God loves those who do good [c12]. God gave Musa the Book and made it guidance for the Children of Isra'il, telling them not to take any guardian besides Him [c13]. The ayah calls them the offspring of those whom God carried with Nuh, and says that Nuh was a grateful servant [c14]. Another ayah says that God raised the mountain above them as if it were a canopy, and they thought that it was going to fall on them, and that God told them to take what He had given them with strength and to remember what was in it, so that they might fear God [c15].",
+      "deep_md": "- God took the covenant of the Children of Isra'il and raised leaders among them (5:12) [c1].\n- God told them that He was with them if they established prayer, gave zakat, believed in His messengers, supported them and lent God a good loan (5:12) [c2].\n- God said that He would then remove their evil deeds and admit them to gardens beneath which rivers flow, and that whoever disbelieved after that had strayed from the right way (5:12) [c3].\n- God took their covenant not to worship any but Him, to do good to parents, relatives, orphans and the needy, to speak kindly to people, to establish prayer and to give zakat (2:83) [c4].\n- The ayah says that they then turned away, except a few of them (2:83) [c5].\n- God took their covenant that they would not shed their own blood or drive themselves out of their homes, and they affirmed it while they bore witness (2:84) [c6].\n- God took their covenant and raised the Tur above them, saying to take what He had given them with strength and to remember what was in it, so that they might fear God (2:63) [c7].\n- Another ayah says that they said they heard and disobeyed, and that the calf was made to sink into their hearts because of their disbelief (2:93) [c8].\n- The Quran says that after that they turned away, and that but for the favour of God and His mercy they would have been among the losers (2:64) [c9].\n- Because they broke their covenant, God cursed them and made their hearts hard (5:13) [c10].\n- The ayah says that they distort words from their places and forgot a part of what they were reminded of (5:13) [c11].\n- The ayah tells the one addressed that treachery will keep appearing from them except a few, and to pardon them and overlook, for God loves those who do good (5:13) [c12].\n- God gave Musa the Book and made it guidance for the Children of Isra'il, telling them not to take any guardian besides Him (17:2) [c13].\n- The ayah calls them the offspring of those whom God carried with Nuh, and says that Nuh was a grateful servant (17:3) [c14].\n- Another ayah says that God raised the mountain above them as if it were a canopy, and they thought that it was going to fall on them, and that God told them to take what He had given them with strength and to remember what was in it, so that they might fear God (7:171) [c15].",
+      "kids_md": "God made a promise with the Children of Isra'il, and they promised to worship none but Him [c4]. God told them to do good to their parents and to be kind to people [c4]. The Quran says that they turned away from it [c5].",
+      "lessons_md": "Educational interpretation (not scripture): The covenant joins worship of God alone with kindness to parents, relatives, orphans and the needy [c4]. One reading is that the ayat show a promise made and affirmed, and then the loss that follows when it is broken [c6][c10].",
+      "unknowns_md": "- Not established: when the covenant was taken, where the Tur stood when it was raised, or how the raising happened; the ayat give only the words.\n- Not established: the leaders of 5:12 are not named, and the ayat do not say who they were.\n- Not established: what exactly is meant by distorting words from their places in 5:13 is read in more than one way.\n- Not established: the one addressed in 5:13 is not named in the ayah.\n- Not established: 2:85-91 (accusations against those addressed and the mention of earlier messengers) is not drafted; a scholar should decide how to word it."
+    },
+    {
+      "anchor": "the-calf-and-the-demand-to-see-god",
+      "position": 3,
+      "title_en": "The calf and the demand to see God",
+      "event_slug": "banu-israil",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 51,
+          "to": 52
+        },
+        {
+          "surah": 2,
+          "from": 55,
+          "to": 56
+        },
+        {
+          "surah": 2,
+          "from": 92,
+          "to": 92
+        },
+        {
+          "surah": 7,
+          "from": 148,
+          "to": 149
+        },
+        {
+          "surah": 7,
+          "from": 152,
+          "to": 153
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God made an appointment of nights with Musa, and after he left they took the calf while they were wrongdoing.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 51,
+              "to": 51
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God pardoned them after that, so that they might give thanks.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 52,
+              "to": 52
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Musa's people took, after him, a calf made from their ornaments, a body that lowed.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 148,
+              "to": 148
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The ayah asks whether they did not see that it could not speak to them or guide them to any way.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 148,
+              "to": 148
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "When they regretted it and saw that they had gone astray, they said that if their Lord did not have mercy on them and forgive them they would be among the losers.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 149,
+              "to": 149
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The Quran says that those who took the calf will be reached by anger from their Lord and humiliation in the life of this world.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 152,
+              "to": 152
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Those who did evil deeds, then repented and believed, find that their Lord is forgiving and merciful after that.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 153,
+              "to": 153
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Another ayah says that Musa came to them with clear proofs and they then took the calf after him while they were wrongdoing.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 92,
+              "to": 92
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "They said to Musa that they would never believe him until they saw God openly, and the thunderbolt seized them while they looked on.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 55,
+              "to": 55
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "God raised them after their death, so that they might give thanks.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 56,
+              "to": 56
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran says that Musa's people took a calf after he left, and that it could not speak to them or guide them [c1][c3][c4]. When they regretted it they asked for mercy, and the Quran says that God is forgiving to those who repent and believe [c5][c7].",
+      "body_md": "God made an appointment of nights with Musa, and after he left they took the calf while they were wrongdoing [c1]. God pardoned them after that, so that they might give thanks [c2]. Musa's people took, after him, a calf made from their ornaments, a body that lowed [c3]. The ayah asks whether they did not see that it could not speak to them or guide them to any way [c4]. When they regretted it and saw that they had gone astray, they said that if their Lord did not have mercy on them and forgive them they would be among the losers [c5]. The Quran says that those who took the calf will be reached by anger from their Lord and humiliation in the life of this world [c6]. Those who did evil deeds, then repented and believed, find that their Lord is forgiving and merciful after that [c7]. Another ayah says that Musa came to them with clear proofs and they then took the calf after him while they were wrongdoing [c8]. They said to Musa that they would never believe him until they saw God openly, and the thunderbolt seized them while they looked on [c9]. God raised them after their death, so that they might give thanks [c10].",
+      "deep_md": "- God made an appointment of nights with Musa, and after he left they took the calf while they were wrongdoing (2:51) [c1].\n- God pardoned them after that, so that they might give thanks (2:52) [c2].\n- Musa's people took, after him, a calf made from their ornaments, a body that lowed (7:148) [c3].\n- The ayah asks whether they did not see that it could not speak to them or guide them to any way (7:148) [c4].\n- When they regretted it and saw that they had gone astray, they said that if their Lord did not have mercy on them and forgive them they would be among the losers (7:149) [c5].\n- The Quran says that those who took the calf will be reached by anger from their Lord and humiliation in the life of this world (7:152) [c6].\n- Those who did evil deeds, then repented and believed, find that their Lord is forgiving and merciful after that (7:153) [c7].\n- Another ayah says that Musa came to them with clear proofs and they then took the calf after him while they were wrongdoing (2:92) [c8].\n- They said to Musa that they would never believe him until they saw God openly, and the thunderbolt seized them while they looked on (2:55) [c9].\n- God raised them after their death, so that they might give thanks (2:56) [c10].",
+      "kids_md": "Musa's people made a calf and worshipped it, though it could not speak or guide [c3][c4]. Later they were sorry and asked their Lord to forgive them [c5]. The Quran says that God is forgiving and merciful to those who are sorry and believe [c7].",
+      "lessons_md": "Educational interpretation (not scripture): The passages set the making of an idol beside the possibility of repentance and forgiveness [c1][c5][c7]. One reading is that the ayat ask what an idol can do and answer that it cannot speak or guide [c4].",
+      "unknowns_md": "- Not established: what the calf was made of beyond the ornaments the ayah names, how long it was worshipped, or who made it; the draft names no maker.\n- Not established: how the thunderbolt of 2:55 related to the raising of 2:56, or who was seized; the ayat do not say.\n- Not established: 7:150-151 (Musa and his brother) and 2:54 (the instruction to repent) are not drafted here; they belong to the story of Musa and need a scholar's wording.\n- Named in later tradition, not in the Quranic text: the name of the one who made the calf; the Quran does not name the maker in these ayat."
+    },
+    {
+      "anchor": "requests-and-refusals",
+      "position": 4,
+      "title_en": "Requests and refusals",
+      "event_slug": "banu-israil",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 58,
+          "to": 59
+        },
+        {
+          "surah": 5,
+          "from": 21,
+          "to": 26
+        },
+        {
+          "surah": 7,
+          "from": 138,
+          "to": 140
+        },
+        {
+          "surah": 7,
+          "from": 161,
+          "to": 162
+        },
+        {
+          "surah": 61,
+          "from": 5,
+          "to": 5
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God took the Children of Isra'il across the sea, and they came upon a people devoted to idols of theirs.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 138,
+              "to": 138
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They told Musa to make for them a god as those people had gods, and he told them that they were a people who acted in ignorance.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 138,
+              "to": 138
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Musa told them that what those people were in would be destroyed and what they did was void, and asked whether he should seek for them a god other than God, who had preferred them over the worlds.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 139,
+              "to": 140
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Musa told his people to enter the holy land that God had written for them and not to turn back, or they would be losers.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They told Musa that there was a people of tyrants in it, and that they would not enter until those left.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Some men among those who feared, on whom God had bestowed favour, told them to enter upon them by the gate and to put their trust in God if they were believers.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "They told Musa that they would never enter as long as those were in it, and told him to go with his Lord and fight while they sat there.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Musa said that he controlled only himself and his brother, and asked God to separate them from the disobedient people.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "God said that it was forbidden to them for years, during which they would wander in the earth, and told Musa not to grieve over the disobedient people.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "God told them to enter the town, eat from it where they wished, enter the gate prostrating and say Hittah, so that He would forgive their sins.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 58,
+              "to": 58
+            },
+            {
+              "surah": 7,
+              "from": 161,
+              "to": 161
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "Those who did wrong changed the word to another than what had been said to them, and God sent on them a scourge from the sky because of their disobedience.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 59,
+              "to": 59
+            },
+            {
+              "surah": 7,
+              "from": 162,
+              "to": 162
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Musa asked his people why they harmed him when they knew that he was the messenger of God to them.",
+          "verses": [
+            {
+              "surah": 61,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "When they deviated, God deviated their hearts, and God does not guide the disobedient people.",
+          "verses": [
+            {
+              "surah": 61,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran records requests to Musa: for a god like the idols of another people, and a refusal to enter the land while its people were in it [c2][c4][c7]. God told Musa that the land was forbidden to them for years [c9].",
+      "body_md": "God took the Children of Isra'il across the sea, and they came upon a people devoted to idols of theirs [c1]. They told Musa to make for them a god as those people had gods, and he told them that they were a people who acted in ignorance [c2]. Musa told them that what those people were in would be destroyed and what they did was void, and asked whether he should seek for them a god other than God, who had preferred them over the worlds [c3]. Musa told his people to enter the holy land that God had written for them and not to turn back, or they would be losers [c4]. They told Musa that there was a people of tyrants in it, and that they would not enter until those left [c5]. Some men among those who feared, on whom God had bestowed favour, told them to enter upon them by the gate and to put their trust in God if they were believers [c6]. They told Musa that they would never enter as long as those were in it, and told him to go with his Lord and fight while they sat there [c7]. Musa said that he controlled only himself and his brother, and asked God to separate them from the disobedient people [c8]. God said that it was forbidden to them for years, during which they would wander in the earth, and told Musa not to grieve over the disobedient people [c9]. God told them to enter the town, eat from it where they wished, enter the gate prostrating and say Hittah, so that He would forgive their sins [c10]. Those who did wrong changed the word to another than what had been said to them, and God sent on them a scourge from the sky because of their disobedience [c11]. Musa asked his people why they harmed him when they knew that he was the messenger of God to them [c12]. When they deviated, God deviated their hearts, and God does not guide the disobedient people [c13].",
+      "deep_md": "- God took the Children of Isra'il across the sea, and they came upon a people devoted to idols of theirs (7:138) [c1].\n- They told Musa to make for them a god as those people had gods, and he told them that they were a people who acted in ignorance (7:138) [c2].\n- Musa told them that what those people were in would be destroyed and what they did was void, and asked whether he should seek for them a god other than God, who had preferred them over the worlds (7:139-140) [c3].\n- Musa told his people to enter the holy land that God had written for them and not to turn back, or they would be losers (5:21) [c4].\n- They told Musa that there was a people of tyrants in it, and that they would not enter until those left (5:22) [c5].\n- Some men among those who feared, on whom God had bestowed favour, told them to enter upon them by the gate and to put their trust in God if they were believers (5:23) [c6].\n- They told Musa that they would never enter as long as those were in it, and told him to go with his Lord and fight while they sat there (5:24) [c7].\n- Musa said that he controlled only himself and his brother, and asked God to separate them from the disobedient people (5:25) [c8].\n- God said that it was forbidden to them for years, during which they would wander in the earth, and told Musa not to grieve over the disobedient people (5:26) [c9].\n- God told them to enter the town, eat from it where they wished, enter the gate prostrating and say Hittah, so that He would forgive their sins (2:58, 7:161) [c10].\n- Those who did wrong changed the word to another than what had been said to them, and God sent on them a scourge from the sky because of their disobedience (2:59, 7:162) [c11].\n- Musa asked his people why they harmed him when they knew that he was the messenger of God to them (61:5) [c12].\n- When they deviated, God deviated their hearts, and God does not guide the disobedient people (61:5) [c13].",
+      "kids_md": "Musa's people asked him to make them a god like the idols of another people [c2]. Musa told them that God had preferred them over the worlds [c3]. Later they said they would not enter the land God had written for them [c5][c7].",
+      "lessons_md": "Educational interpretation (not scripture): The passages show a request for an idol and a refusal of a command answered by reminders of what God had given and by a call to trust in God [c3][c6]. One reading is that the men who urged entering the land are given as an example of trust [c6].",
+      "unknowns_md": "- Not established: the holy land of 5:21 and the town of 2:58 are not named in the ayat; the draft names no place.\n- Not established: the men of 5:23 are not named, and the Arabic form is dual; the draft says some men because it avoids a number the draft cannot anchor.\n- Not established: whether the years of 5:26 apply to the whole people or to a part, or how the time was spent. The ayah states the number of years; the draft does not write it out, because the shared number list of the validator does not include it.\n- Not established: the meaning of the word Hittah is read in more than one way; the draft leaves it as the ayah gives it.\n- Named in later tradition, not in the Quranic text: the names of the men of 5:23, the name of the town of 2:58, and the places of the wandering; none is used here."
+    },
+    {
+      "anchor": "the-cow",
+      "position": 5,
+      "title_en": "The cow",
+      "event_slug": "banu-israil",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 67,
+          "to": 74
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Musa told his people that God commanded them to slaughter a cow, and they asked whether he took them in mockery; Musa said that he sought refuge in God from being among the ignorant.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 67,
+              "to": 67
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They asked him to ask his Lord to make clear what it was, and the answer was that it was a cow neither old nor young but in between, and that they should do as they were told.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 68,
+              "to": 68
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They asked what its colour was, and the answer was that it was a yellow cow, bright in colour, pleasing to those who look.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 69,
+              "to": 69
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They asked again, saying that cows looked alike to them, and that if God willed they would be guided.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The answer was that it was a cow not trained to plough the earth or water the field, sound, with no mark on it.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 71,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They said that now he had come with the truth, and they slaughtered it, though they nearly did not.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 71,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God told them that they had killed a person and disputed about it, and that God would bring out what they were hiding.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 72,
+              "to": 72
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "God said to strike the dead person with part of it, and that in this way God gives life to the dead and shows His signs so that they might understand.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 73,
+              "to": 73
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "After that their hearts became hard like stones or harder, since some stones have rivers burst from them, some split and water comes out, and some fall down for fear of God.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 74,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "The ayah says that God is not unaware of what they do.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 74,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Musa told his people that God commanded them to slaughter a cow [c1]. They asked what it was and what colour it was, and in the end they slaughtered it [c2][c3][c6]. The Quran then says that their hearts became hard [c9].",
+      "body_md": "Musa told his people that God commanded them to slaughter a cow, and they asked whether he took them in mockery; Musa said that he sought refuge in God from being among the ignorant [c1]. They asked him to ask his Lord to make clear what it was, and the answer was that it was a cow neither old nor young but in between, and that they should do as they were told [c2]. They asked what its colour was, and the answer was that it was a yellow cow, bright in colour, pleasing to those who look [c3]. They asked again, saying that cows looked alike to them, and that if God willed they would be guided [c4]. The answer was that it was a cow not trained to plough the earth or water the field, sound, with no mark on it [c5]. They said that now he had come with the truth, and they slaughtered it, though they nearly did not [c6]. God told them that they had killed a person and disputed about it, and that God would bring out what they were hiding [c7]. God said to strike the dead person with part of it, and that in this way God gives life to the dead and shows His signs so that they might understand [c8]. After that their hearts became hard like stones or harder, since some stones have rivers burst from them, some split and water comes out, and some fall down for fear of God [c9]. The ayah says that God is not unaware of what they do [c10].",
+      "deep_md": "- Musa told his people that God commanded them to slaughter a cow, and they asked whether he took them in mockery; Musa said that he sought refuge in God from being among the ignorant (2:67) [c1].\n- They asked him to ask his Lord to make clear what it was, and the answer was that it was a cow neither old nor young but in between, and that they should do as they were told (2:68) [c2].\n- They asked what its colour was, and the answer was that it was a yellow cow, bright in colour, pleasing to those who look (2:69) [c3].\n- They asked again, saying that cows looked alike to them, and that if God willed they would be guided (2:70) [c4].\n- The answer was that it was a cow not trained to plough the earth or water the field, sound, with no mark on it (2:71) [c5].\n- They said that now he had come with the truth, and they slaughtered it, though they nearly did not (2:71) [c6].\n- God told them that they had killed a person and disputed about it, and that God would bring out what they were hiding (2:72) [c7].\n- God said to strike the dead person with part of it, and that in this way God gives life to the dead and shows His signs so that they might understand (2:73) [c8].\n- After that their hearts became hard like stones or harder, since some stones have rivers burst from them, some split and water comes out, and some fall down for fear of God (2:74) [c9].\n- The ayah says that God is not unaware of what they do (2:74) [c10].",
+      "kids_md": "Musa told his people that God wanted them to slaughter a cow [c1]. They asked many questions about it [c2][c3][c4]. In the end they did it, though they nearly did not [c6].",
+      "lessons_md": "Educational interpretation (not scripture): The passage shows a plain command followed by question after question before it was obeyed [c1][c2][c4][c6]. One reading is that the ayat set hard hearts beside stones that still give water or fall in fear of God [c9].",
+      "unknowns_md": "- Not established: who the dead person was, who killed him, or what part of the cow was used; the ayat say only a part.\n- Not established: the ayat of the command and of the killing are joined here only in the order of the Quran; they do not say how they are linked in time.\n- Not established: why the dispute arose or how many were involved; the draft names no one."
+    },
+    {
+      "anchor": "warnings-and-reminders",
+      "position": 6,
+      "title_en": "Warnings and earnest reminders",
+      "event_slug": "banu-israil",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 159,
+          "to": 159
+        },
+        {
+          "surah": 7,
+          "from": 167,
+          "to": 170
+        },
+        {
+          "surah": 17,
+          "from": 4,
+          "to": 8
+        },
+        {
+          "surah": 17,
+          "from": 101,
+          "to": 101
+        },
+        {
+          "surah": 17,
+          "from": 103,
+          "to": 104
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God decreed for the Children of Isra'il in the Book that they would cause corruption in the land twice and rise to great arrogance.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When the first promise came, God sent servants of His of great might against them, who searched through the dwellings, and it was a promise fulfilled.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God then gave them back the turn over those servants, aided them with wealth and sons and made them more numerous.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 6,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God told them that if they did good they did good for themselves and if they did evil it was for themselves.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "When the promise of the last came, it would be so that their faces would be distressed and that they would enter the mosque as they entered it the first time and destroy what they had conquered with total destruction.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God said that perhaps their Lord would have mercy on them, and that if they returned, He would return, and that He had made Hell a prison for the disbelievers.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 8,
+              "to": 8
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The Quran says that your Lord announced that He would send against them, until the Day of Resurrection, those who would inflict on them the worst punishment.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 167,
+              "to": 167
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "The ayah says that your Lord is swift in punishment, and that He is forgiving and merciful.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 167,
+              "to": 167
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "God divided them on the earth into communities, some of them righteous and others less so, and tested them with good things and with bad, so that they might return.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 168,
+              "to": 168
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "Another community among the people of Musa guides by the truth and does justice by it.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 159,
+              "to": 159
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "A generation that followed them inherited the Book, took the goods of this lower life and said that they would be forgiven.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 169,
+              "to": 169
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "The ayah asks whether the covenant of the Book had not been taken from them, not to say about God anything but the truth, and says that the home of the Hereafter is better for those who fear God.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 169,
+              "to": 169
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "Those who hold fast to the Book and establish prayer will not lose their reward, since God does not waste the reward of those who reform.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 170,
+              "to": 170
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "God gave Musa nine clear signs, and the one addressed is told to ask the Children of Isra'il about when he came to them.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 101,
+              "to": 101
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c15",
+          "statement_en": "After the drowning of Fir'awn and those with him, God told the Children of Isra'il to dwell in the land, and when the promise of the Hereafter comes, God will bring them all together.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 103,
+              "to": 104
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran decrees that the Children of Isra'il would cause corruption twice and rise to great arrogance [c1]. It also records that some were righteous, some were not, and that God does not waste the reward of those who reform [c9][c10][c13].",
+      "body_md": "God decreed for the Children of Isra'il in the Book that they would cause corruption in the land twice and rise to great arrogance [c1]. When the first promise came, God sent servants of His of great might against them, who searched through the dwellings, and it was a promise fulfilled [c2]. God then gave them back the turn over those servants, aided them with wealth and sons and made them more numerous [c3]. God told them that if they did good they did good for themselves and if they did evil it was for themselves [c4]. When the promise of the last came, it would be so that their faces would be distressed and that they would enter the mosque as they entered it the first time and destroy what they had conquered with total destruction [c5]. God said that perhaps their Lord would have mercy on them, and that if they returned, He would return, and that He had made Hell a prison for the disbelievers [c6]. The Quran says that your Lord announced that He would send against them, until the Day of Resurrection, those who would inflict on them the worst punishment [c7]. The ayah says that your Lord is swift in punishment, and that He is forgiving and merciful [c8]. God divided them on the earth into communities, some of them righteous and others less so, and tested them with good things and with bad, so that they might return [c9]. Another community among the people of Musa guides by the truth and does justice by it [c10]. A generation that followed them inherited the Book, took the goods of this lower life and said that they would be forgiven [c11]. The ayah asks whether the covenant of the Book had not been taken from them, not to say about God anything but the truth, and says that the home of the Hereafter is better for those who fear God [c12]. Those who hold fast to the Book and establish prayer will not lose their reward, since God does not waste the reward of those who reform [c13]. God gave Musa nine clear signs, and the one addressed is told to ask the Children of Isra'il about when he came to them [c14]. After the drowning of Fir'awn and those with him, God told the Children of Isra'il to dwell in the land, and when the promise of the Hereafter comes, God will bring them all together [c15].",
+      "deep_md": "- God decreed for the Children of Isra'il in the Book that they would cause corruption in the land twice and rise to great arrogance (17:4) [c1].\n- When the first promise came, God sent servants of His of great might against them, who searched through the dwellings, and it was a promise fulfilled (17:5) [c2].\n- God then gave them back the turn over those servants, aided them with wealth and sons and made them more numerous (17:6) [c3].\n- God told them that if they did good they did good for themselves and if they did evil it was for themselves (17:7) [c4].\n- When the promise of the last came, it would be so that their faces would be distressed and that they would enter the mosque as they entered it the first time and destroy what they had conquered with total destruction (17:7) [c5].\n- God said that perhaps their Lord would have mercy on them, and that if they returned, He would return, and that He had made Hell a prison for the disbelievers (17:8) [c6].\n- The Quran says that your Lord announced that He would send against them, until the Day of Resurrection, those who would inflict on them the worst punishment (7:167) [c7].\n- The ayah says that your Lord is swift in punishment, and that He is forgiving and merciful (7:167) [c8].\n- God divided them on the earth into communities, some of them righteous and others less so, and tested them with good things and with bad, so that they might return (7:168) [c9].\n- Another community among the people of Musa guides by the truth and does justice by it (7:159) [c10].\n- A generation that followed them inherited the Book, took the goods of this lower life and said that they would be forgiven (7:169) [c11].\n- The ayah asks whether the covenant of the Book had not been taken from them, not to say about God anything but the truth, and says that the home of the Hereafter is better for those who fear God (7:169) [c12].\n- Those who hold fast to the Book and establish prayer will not lose their reward, since God does not waste the reward of those who reform (7:170) [c13].\n- God gave Musa nine clear signs, and the one addressed is told to ask the Children of Isra'il about when he came to them (17:101) [c14].\n- After the drowning of Fir'awn and those with him, God told the Children of Isra'il to dwell in the land, and when the promise of the Hereafter comes, God will bring them all together (17:103-104) [c15].",
+      "kids_md": "The Quran says that the Children of Isra'il were tested with good things and with bad, so that they might return [c9]. Some among them were righteous [c10]. God does not waste the reward of those who do good [c13].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat set a warning of corruption and its consequence beside the continuing call to return and to reform [c1][c3][c6][c13]. One reading is that the reminders speak to every generation, since the Quran describes both a righteous community and a generation that took the goods of this life [c9][c10][c11].",
+      "unknowns_md": "- Not established: the ayat of 17:4-8 do not name the corruptions, the servants of great might, the mosque or the conquered places; the draft states the ayat and identifies none of them.\n- Not established: the ayat do not say when the first or the last promise came or comes, or whether the last promise is of this life or of the Hereafter beyond what 17:104 says.\n- Not established: the sense of the home of the Hereafter and the covenant of the Book in 7:169 is the ayah's wording; no particular generation is named.\n- Named in later tradition, not in the Quranic text: the identification of the corruptions, the servants and the mosque with particular events, kings or places; none is used here."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the Children of Isra'il and the passages of this draft (for example on 17:4-8). None is used in this draft.",
+    "Inventory refs not drafted: 2:62, 2:85-91, 2:54, 7:142-147, 7:150-151, 7:154-158 (including the ayat that address the unlettered messenger), 7:160 partly, 17:102, 61:5 partly. Most of these belong to the story of Musa or need wording that a scholar should choose; 7:163-166 and 2:65-66 are in the draft on those who broke the Sabbath.",
+    "Wording a scholar should check first: 2:47 and 44:32 (preferred over the worlds), 5:12 and 7:160 (the leaders and the tribes, whose number the ayat state but the draft does not write out), 2:51, 2:60 and 5:26 (numbers stated in the ayat and not written out here), 5:13 (distortion of words), 5:23 (a dual form), 5:26 (forbidden for years), 17:4-8 (the corruptions, the servants, the mosque), 7:137 (the land), 2:74 (stones).",
+    "Named in later tradition, not in the Quranic text: Sinai, Jerusalem, the Temple, Babylon, the Romans and the other names later accounts give to the places and rulers in 17:4-8 and 5:21; none is used."
+  ]
+}

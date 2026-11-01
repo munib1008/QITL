@@ -1,0 +1,92 @@
+{
+  "slug": "people-of-tubba",
+  "title_en": "The people of Tubba'",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "people-of-tubba"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. The people of Tubba' are mentioned in two ayat only; the draft states them and nothing more.",
+  "chapters": [
+    {
+      "anchor": "the-people-of-tubba",
+      "position": 1,
+      "title_en": "The people of Tubba'",
+      "event_slug": "people-of-tubba",
+      "verses": [
+        {
+          "surah": 44,
+          "from": 37,
+          "to": 37
+        },
+        {
+          "surah": 50,
+          "from": 14,
+          "to": 14
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran asks whether those addressed are better than the people of Tubba' and those before them.",
+          "verses": [
+            {
+              "surah": 44,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The ayah says that God destroyed them, because they were criminals.",
+          "verses": [
+            {
+              "surah": 44,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Another passage names the people of Tubba' in a list of peoples who denied the messengers.",
+          "verses": [
+            {
+              "surah": 50,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The passage says that each of them denied the messengers, so that God's threat came due.",
+          "verses": [
+            {
+              "surah": 50,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran asks whether those addressed are better than the people of Tubba' and says that God destroyed them because they were criminals [c1][c2]. It also names them among peoples who denied the messengers [c3][c4].",
+      "body_md": "The Quran asks whether those addressed are better than the people of Tubba' and those before them [c1]. The ayah says that God destroyed them, because they were criminals [c2]. Another passage names the people of Tubba' in a list of peoples who denied the messengers [c3]. The passage says that each of them denied the messengers, so that God's threat came due [c4].",
+      "deep_md": "- The Quran asks whether those addressed are better than the people of Tubba' and those before them (44:37) [c1].\n- The ayah says that God destroyed them, because they were criminals (44:37) [c2].\n- Another passage names the people of Tubba' in a list of peoples who denied the messengers (50:14) [c3].\n- The passage says that each of them denied the messengers, so that God's threat came due (50:14) [c4].",
+      "kids_md": "The Quran mentions the people of Tubba' and says that God destroyed them, because they were criminals [c1][c2]. It also names them with other peoples who did not believe the messengers [c3].",
+      "lessons_md": "Educational interpretation (not scripture): The first ayah addresses its hearers with a comparison and a reminder of an earlier people [c1][c2]. One reading is that the ayat use the people of Tubba' as one example among others of the end of those who deny [c3][c4].",
+      "unknowns_md": "- Not established: who Tubba' was, whether the word is a name or a title, whether it names a king, where or when the people lived, or what they did; the ayat do not say.\n- Not established: the draft does not say who is addressed in 44:37 beyond the ayah's own words.\n- Named in later tradition, not in the Quranic text: any identification of Tubba' with a king or dynasty, a country or a date; none is used here."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the people of Tubba'. None is used in this draft.",
+    "Wording a scholar should check first: 44:37 (those before them, and the addressees), 50:14 (the list).",
+    "Named in later tradition, not in the Quranic text: the identification of Tubba' with a particular king or dynasty of the south of Arabia; none is used."
+  ]
+}

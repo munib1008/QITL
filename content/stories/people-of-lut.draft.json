@@ -1,0 +1,714 @@
+{
+  "slug": "people-of-lut",
+  "title_en": "The people of Lut",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "people-of-lut"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. The ayat on this people are stated as worded; the draft adds no description of the acts beyond what the ayat say, and gives no ruling.",
+  "chapters": [
+    {
+      "anchor": "lut-warns-his-people",
+      "position": 1,
+      "title_en": "Lut warns his people",
+      "event_slug": "people-of-lut",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 80,
+          "to": 81
+        },
+        {
+          "surah": 26,
+          "from": 160,
+          "to": 166
+        },
+        {
+          "surah": 27,
+          "from": 54,
+          "to": 55
+        },
+        {
+          "surah": 29,
+          "from": 28,
+          "to": 29
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God sent Lut to his people, and the ayat call Lut their brother; the Quran says they denied the messengers.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 160,
+              "to": 161
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Lut told them that he was a trustworthy messenger to them, and told them to fear God and to obey him.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 162,
+              "to": 163
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Lut told them that he asked them for no wage, because his wage was only with the Lord of the worlds.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 164,
+              "to": 164
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Lut asked them whether they committed the lewd act that no one in the worlds had done before them.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 80,
+              "to": 80
+            },
+            {
+              "surah": 29,
+              "from": 28,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Lut said that they approached men with desire instead of women, and that they were a people who went beyond bounds.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 81,
+              "to": 81
+            },
+            {
+              "surah": 26,
+              "from": 165,
+              "to": 166
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Another passage has Lut ask whether they committed the lewd act while they saw, and say that they were a people who acted in ignorance.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 54,
+              "to": 55
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Lut asked them whether they approached men, cut the road and committed the wrong in their gathering place.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God sent Lut to his people, who called them to fear God and obey him [c1][c2]. Lut warned them about a deed that, he said, no one in the worlds had done before them [c4][c5].",
+      "body_md": "God sent Lut to his people, and the ayat call Lut their brother; the Quran says they denied the messengers [c1]. Lut told them that he was a trustworthy messenger to them, and told them to fear God and to obey him [c2]. Lut told them that he asked them for no wage, because his wage was only with the Lord of the worlds [c3]. Lut asked them whether they committed the lewd act that no one in the worlds had done before them [c4]. Lut said that they approached men with desire instead of women, and that they were a people who went beyond bounds [c5]. Another passage has Lut ask whether they committed the lewd act while they saw, and say that they were a people who acted in ignorance [c6]. Lut asked them whether they approached men, cut the road and committed the wrong in their gathering place [c7].",
+      "deep_md": "- God sent Lut to his people, and the ayat call Lut their brother; the Quran says they denied the messengers (26:160-161) [c1].\n- Lut told them that he was a trustworthy messenger to them, and told them to fear God and to obey him (26:162-163) [c2].\n- Lut told them that he asked them for no wage, because his wage was only with the Lord of the worlds (26:164) [c3].\n- Lut asked them whether they committed the lewd act that no one in the worlds had done before them (7:80, 29:28) [c4].\n- Lut said that they approached men with desire instead of women, and that they were a people who went beyond bounds (7:81, 26:165-166) [c5].\n- Another passage has Lut ask whether they committed the lewd act while they saw, and say that they were a people who acted in ignorance (27:54-55) [c6].\n- Lut asked them whether they approached men, cut the road and committed the wrong in their gathering place (29:29) [c7].",
+      "kids_md": "God sent Lut to his people [c1]. Lut told them to fear God [c2]. He told them that he asked no wage for it [c3].",
+      "lessons_md": "Educational interpretation (not scripture): Lut's message begins with a call to fear God and a refusal of any wage before it names what he objects to [c2][c3][c4]. One reading is that the message is given as a messenger's duty and not as a personal gain [c3].",
+      "unknowns_md": "- Not established: where Lut's people lived, how many they were, or how long Lut spoke to them; the draft names no place.\n- Not established: the draft says no more about the acts than the ayat say; it does not extend them.\n- Not established: whether cutting the road in 29:29 describes a separate act, and what the gathering place was.\n- Named in later tradition, not in the Quranic text: the names of the towns of Lut's people and their location; none is used here."
+    },
+    {
+      "anchor": "the-answer-and-the-guests",
+      "position": 2,
+      "title_en": "The answer and the guests",
+      "event_slug": "people-of-lut",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 82,
+          "to": 82
+        },
+        {
+          "surah": 11,
+          "from": 77,
+          "to": 80
+        },
+        {
+          "surah": 15,
+          "from": 62,
+          "to": 64
+        },
+        {
+          "surah": 15,
+          "from": 67,
+          "to": 68
+        },
+        {
+          "surah": 15,
+          "from": 70,
+          "to": 70
+        },
+        {
+          "surah": 15,
+          "from": 72,
+          "to": 72
+        },
+        {
+          "surah": 26,
+          "from": 167,
+          "to": 169
+        },
+        {
+          "surah": 27,
+          "from": 56,
+          "to": 56
+        },
+        {
+          "surah": 29,
+          "from": 29,
+          "to": 30
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Their only answer was to say: drive Lut's household out of your town, for they are people who keep themselves pure.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 82,
+              "to": 82
+            },
+            {
+              "surah": 27,
+              "from": 56,
+              "to": 56
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They told Lut that if he did not stop he would be among those driven out.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 167,
+              "to": 167
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Lut said that he was one who hated what they did.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 168,
+              "to": 168
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Lut asked his Lord to save him and his family from what they did.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 169,
+              "to": 169
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Their answer was also to tell Lut to bring them the punishment of God if he was truthful, and Lut asked his Lord to help him against the people who spread corruption.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 29,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "When Our messengers came to Lut, he was troubled for them, felt constrained and said that this was a hard day.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 77,
+              "to": 77
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "His people came rushing to him, and before that they had been doing evil deeds.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 78,
+              "to": 78
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Lut told them to fear God and not to disgrace him in front of his guests, and asked whether there was no right-minded man among them.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 78,
+              "to": 78
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "In that passage Lut told them that his daughters were purer for them.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 78,
+              "to": 78
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "They told Lut that he knew they had no claim on his daughters and that he knew what they wanted.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 79,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "Lut said that he wished he had strength against them or could take refuge in a strong support.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 80,
+              "to": 80
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "In another passage Lut told the messengers that they were a people he did not know, and the messengers said that they had come with what the people doubted and with the truth.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 62,
+              "to": 64
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "The people of the city came rejoicing, and Lut told them that these were his guests and that they should not shame him.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 67,
+              "to": 68
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "They answered by asking whether they had not forbidden him from receiving people of the worlds.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c15",
+          "statement_en": "The ayah says that they were wandering blindly in their intoxication.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 72,
+              "to": 72
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Lut's people answered that Lut's household should be driven out [c1][c2]. Lut hated what they did and asked his Lord to save him and his family [c3][c4]. When the messengers came to him he was troubled, and he told his people to fear God and not to disgrace him in front of his guests [c6][c8].",
+      "body_md": "Their only answer was to say: drive Lut's household out of your town, for they are people who keep themselves pure [c1]. They told Lut that if he did not stop he would be among those driven out [c2]. Lut said that he was one who hated what they did [c3]. Lut asked his Lord to save him and his family from what they did [c4]. Their answer was also to tell Lut to bring them the punishment of God if he was truthful, and Lut asked his Lord to help him against the people who spread corruption [c5]. When Our messengers came to Lut, he was troubled for them, felt constrained and said that this was a hard day [c6]. His people came rushing to him, and before that they had been doing evil deeds [c7]. Lut told them to fear God and not to disgrace him in front of his guests, and asked whether there was no right-minded man among them [c8]. In that passage Lut told them that his daughters were purer for them [c9]. They told Lut that he knew they had no claim on his daughters and that he knew what they wanted [c10]. Lut said that he wished he had strength against them or could take refuge in a strong support [c11]. In another passage Lut told the messengers that they were a people he did not know, and the messengers said that they had come with what the people doubted and with the truth [c12]. The people of the city came rejoicing, and Lut told them that these were his guests and that they should not shame him [c13]. They answered by asking whether they had not forbidden him from receiving people of the worlds [c14]. The ayah says that they were wandering blindly in their intoxication [c15].",
+      "deep_md": "- Their only answer was to say: drive Lut's household out of your town, for they are people who keep themselves pure (7:82, 27:56) [c1].\n- They told Lut that if he did not stop he would be among those driven out (26:167) [c2].\n- Lut said that he was one who hated what they did (26:168) [c3].\n- Lut asked his Lord to save him and his family from what they did (26:169) [c4].\n- Their answer was also to tell Lut to bring them the punishment of God if he was truthful, and Lut asked his Lord to help him against the people who spread corruption (29:29-30) [c5].\n- When Our messengers came to Lut, he was troubled for them, felt constrained and said that this was a hard day (11:77) [c6].\n- His people came rushing to him, and before that they had been doing evil deeds (11:78) [c7].\n- Lut told them to fear God and not to disgrace him in front of his guests, and asked whether there was no right-minded man among them (11:78) [c8].\n- In that passage Lut told them that his daughters were purer for them (11:78) [c9].\n- They told Lut that he knew they had no claim on his daughters and that he knew what they wanted (11:79) [c10].\n- Lut said that he wished he had strength against them or could take refuge in a strong support (11:80) [c11].\n- In another passage Lut told the messengers that they were a people he did not know, and the messengers said that they had come with what the people doubted and with the truth (15:62-64) [c12].\n- The people of the city came rejoicing, and Lut told them that these were his guests and that they should not shame him (15:67-68) [c13].\n- They answered by asking whether they had not forbidden him from receiving people of the worlds (15:70) [c14].\n- The ayah says that they were wandering blindly in their intoxication (15:72) [c15].",
+      "kids_md": "Lut's people told him to stop, or he would be sent away [c2]. Lut asked his Lord to save him and his family [c4]. When God's messengers came to him, Lut was troubled and told his people to fear God [c6][c8].",
+      "lessons_md": "Educational interpretation (not scripture): The passages show Lut turning to his Lord in prayer when he was threatened with exile [c2][c4]. One reading is that his distress for his guests is recorded without softening [c6][c11].",
+      "unknowns_md": "- Not established: the ayat do not describe the guests; the draft says only that they were messengers, as 11:77 and 15:61 word it, and describes nothing further.\n- Not established: what Lut meant by the daughters in 11:78 is read in more than one way (and 15:71 repeats the phrase with a condition); the draft states only that he said it and does not choose a reading.\n- Not established: who is meant by the right-minded man, or how many came rushing; the ayat do not say.\n- Not established: in 15:70 the exact sense of the words about the worlds is read in more than one way; the draft keeps the ayah's wording."
+    },
+    {
+      "anchor": "rescue-and-overthrow",
+      "position": 3,
+      "title_en": "The rescue and the overthrow",
+      "event_slug": "people-of-lut",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 83,
+          "to": 84
+        },
+        {
+          "surah": 11,
+          "from": 81,
+          "to": 83
+        },
+        {
+          "surah": 15,
+          "from": 73,
+          "to": 74
+        },
+        {
+          "surah": 26,
+          "from": 170,
+          "to": 174
+        },
+        {
+          "surah": 27,
+          "from": 58,
+          "to": 58
+        },
+        {
+          "surah": 29,
+          "from": 31,
+          "to": 35
+        },
+        {
+          "surah": 37,
+          "from": 133,
+          "to": 133
+        },
+        {
+          "surah": 37,
+          "from": 137,
+          "to": 138
+        },
+        {
+          "surah": 51,
+          "from": 32,
+          "to": 37
+        },
+        {
+          "surah": 54,
+          "from": 34,
+          "to": 36
+        },
+        {
+          "surah": 54,
+          "from": 38,
+          "to": 38
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The messengers told Lut that they were messengers of his Lord, who would never reach him, and told him to travel with his family in a part of the night.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 81,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They told him that none of them should look back except his wife, who would be struck by what struck the others, and that the appointed time was the morning.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 81,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God saved Lut and his family, except his wife, who was among those who stayed behind.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 83,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Another passage says that God saved him and his family all together, except an old woman among those who stayed behind.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 170,
+              "to": 171
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "When the command of God came, God made the town's upper part its lowest and rained on it stones of baked clay, layered one on another, marked with your Lord.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 82,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Another passage says that the cry seized them at sunrise, and that God made it upside down and rained on them stones of baked clay.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 73,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The Quran says that God rained a rain on them, and asks the hearer to see how the end of the criminals was.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 84,
+              "to": 84
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "The ayat say that God destroyed the others and rained a rain on them, and that the rain of those who were warned was evil.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 172,
+              "to": 173
+            },
+            {
+              "surah": 27,
+              "from": 58,
+              "to": 58
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "Another passage says that God sent a stone-bearing wind against them, except the household of Lut whom He saved at dawn as a favour from Him.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 34,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "That passage says that Lut had warned them of God's seizure, but they disputed the warnings, and that a lasting punishment came upon them early in the morning.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 36,
+              "to": 36
+            },
+            {
+              "surah": 54,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "The messengers came to Ibrahim with good news and said that they were to destroy the people of that town because its people were wrongdoers.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Ibrahim said that Lut was in it, and they said that they knew best who was in it and would save him and his family, except his wife, who was among those who stayed behind.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 32,
+              "to": 32
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "When the messengers came to Lut, he was troubled for them, and they told him not to fear or grieve, as they would save him and his family except his wife.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 33,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "They told Lut that they were to bring down on the people of that town a scourge from the sky because they had been disobedient.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 34,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c15",
+          "statement_en": "The messengers said that they were sent to a criminal people to send down stones of clay marked with their Lord for the transgressors.",
+          "verses": [
+            {
+              "surah": 51,
+              "from": 32,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c16",
+          "statement_en": "God brought out the believers who were there, and found there only a house of those who submitted.",
+          "verses": [
+            {
+              "surah": 51,
+              "from": 35,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c17",
+          "statement_en": "The Quran says that God left a sign for those who fear the painful punishment, and a clear sign for people who use reason.",
+          "verses": [
+            {
+              "surah": 51,
+              "from": 37,
+              "to": 37
+            },
+            {
+              "surah": 29,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c18",
+          "statement_en": "The Quran says that Lut was among the messengers, and that the hearers pass by them in the morning and at night, and asks whether they do not understand.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 133,
+              "to": 133
+            },
+            {
+              "surah": 37,
+              "from": 137,
+              "to": 138
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c19",
+          "statement_en": "The Quran says that in this there is a sign, and that most of them were not believers.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 174,
+              "to": 174
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The messengers told Lut to travel with his family in a part of the night, and God saved him and his family except his wife [c1][c3]. God rained stones of baked clay on the town, and the Quran calls this a sign [c5][c19].",
+      "body_md": "The messengers told Lut that they were messengers of his Lord, who would never reach him, and told him to travel with his family in a part of the night [c1]. They told him that none of them should look back except his wife, who would be struck by what struck the others, and that the appointed time was the morning [c2]. God saved Lut and his family, except his wife, who was among those who stayed behind [c3]. Another passage says that God saved him and his family all together, except an old woman among those who stayed behind [c4]. When the command of God came, God made the town's upper part its lowest and rained on it stones of baked clay, layered one on another, marked with your Lord [c5]. Another passage says that the cry seized them at sunrise, and that God made it upside down and rained on them stones of baked clay [c6]. The Quran says that God rained a rain on them, and asks the hearer to see how the end of the criminals was [c7]. The ayat say that God destroyed the others and rained a rain on them, and that the rain of those who were warned was evil [c8]. Another passage says that God sent a stone-bearing wind against them, except the household of Lut whom He saved at dawn as a favour from Him [c9]. That passage says that Lut had warned them of God's seizure, but they disputed the warnings, and that a lasting punishment came upon them early in the morning [c10]. The messengers came to Ibrahim with good news and said that they were to destroy the people of that town because its people were wrongdoers [c11]. Ibrahim said that Lut was in it, and they said that they knew best who was in it and would save him and his family, except his wife, who was among those who stayed behind [c12]. When the messengers came to Lut, he was troubled for them, and they told him not to fear or grieve, as they would save him and his family except his wife [c13]. They told Lut that they were to bring down on the people of that town a scourge from the sky because they had been disobedient [c14]. The messengers said that they were sent to a criminal people to send down stones of clay marked with their Lord for the transgressors [c15]. God brought out the believers who were there, and found there only a house of those who submitted [c16]. The Quran says that God left a sign for those who fear the painful punishment, and a clear sign for people who use reason [c17]. The Quran says that Lut was among the messengers, and that the hearers pass by them in the morning and at night, and asks whether they do not understand [c18]. The Quran says that in this there is a sign, and that most of them were not believers [c19].",
+      "deep_md": "- The messengers told Lut that they were messengers of his Lord, who would never reach him, and told him to travel with his family in a part of the night (11:81) [c1].\n- They told him that none of them should look back except his wife, who would be struck by what struck the others, and that the appointed time was the morning (11:81) [c2].\n- God saved Lut and his family, except his wife, who was among those who stayed behind (7:83) [c3].\n- Another passage says that God saved him and his family all together, except an old woman among those who stayed behind (26:170-171) [c4].\n- When the command of God came, God made the town's upper part its lowest and rained on it stones of baked clay, layered one on another, marked with your Lord (11:82-83) [c5].\n- Another passage says that the cry seized them at sunrise, and that God made it upside down and rained on them stones of baked clay (15:73-74) [c6].\n- The Quran says that God rained a rain on them, and asks the hearer to see how the end of the criminals was (7:84) [c7].\n- The ayat say that God destroyed the others and rained a rain on them, and that the rain of those who were warned was evil (26:172-173, 27:58) [c8].\n- Another passage says that God sent a stone-bearing wind against them, except the household of Lut whom He saved at dawn as a favour from Him (54:34-35) [c9].\n- That passage says that Lut had warned them of God's seizure, but they disputed the warnings, and that a lasting punishment came upon them early in the morning (54:36, 54:38) [c10].\n- The messengers came to Ibrahim with good news and said that they were to destroy the people of that town because its people were wrongdoers (29:31) [c11].\n- Ibrahim said that Lut was in it, and they said that they knew best who was in it and would save him and his family, except his wife, who was among those who stayed behind (29:32) [c12].\n- When the messengers came to Lut, he was troubled for them, and they told him not to fear or grieve, as they would save him and his family except his wife (29:33) [c13].\n- They told Lut that they were to bring down on the people of that town a scourge from the sky because they had been disobedient (29:34) [c14].\n- The messengers said that they were sent to a criminal people to send down stones of clay marked with their Lord for the transgressors (51:32-34) [c15].\n- God brought out the believers who were there, and found there only a house of those who submitted (51:35-36) [c16].\n- The Quran says that God left a sign for those who fear the painful punishment, and a clear sign for people who use reason (51:37, 29:35) [c17].\n- The Quran says that Lut was among the messengers, and that the hearers pass by them in the morning and at night, and asks whether they do not understand (37:133, 37:137-138) [c18].\n- The Quran says that in this there is a sign, and that most of them were not believers (26:174) [c19].",
+      "kids_md": "God's messengers told Lut to leave with his family at night [c1]. God saved Lut and his family [c3]. The Quran says that what happened to the town is a sign [c19].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat set the rescue of one household beside the end of a town that denied the warning [c3][c5][c10]. One reading is that the Quran presents the remains as a sign for those who use reason [c17].",
+      "unknowns_md": "- Not established: where the town was, how long ago this was, or the number of those saved; the draft names no place.\n- Not established: whether the old woman of 26:171 is the wife of Lut named in 7:83; the draft states each ayah separately.\n- Not established: the ayat of 15:73-74 and 11:82 word what seized the town in different ways (a cry, an overturning, stones); the draft does not decide whether these are one event.\n- Not established: 54:37 is not drafted (see the story-level notes); the draft does not state what was done to the people who sought Lut's guests.\n- Named in later tradition, not in the Quranic text: the names of the towns of Lut's people (the Quran says the town) and the place of its remains; none is used here."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Lut and his people. None is used in this draft.",
+    "Not drafted as a claim: 54:37 (the effacing of the visitors' sight) because the validator refuses the word for sight in that ayah unless anchored for another story; a reviewer should decide the wording. Also not used: 54:39 and 15:72's opening oath (its addressee is not named).",
+    "Wording a scholar should check first: 11:78 and 15:71 (the daughters), 7:81 and 26:165-166 (the acts), 27:54 (while you see), 26:171 (old woman), 11:82-83 (marked stones), 29:34 (the scourge), 15:70 (the worlds).",
+    "Named in later tradition, not in the Quranic text: Sodom, Gomorrah and the location of Lut's people; the ayat say only the town."
+  ]
+}

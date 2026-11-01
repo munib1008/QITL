@@ -1,0 +1,257 @@
+{
+  "slug": "sabbath-breakers",
+  "title_en": "The Sabbath-breakers",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "sabbath-breakers"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. The Sabbath is mentioned in several passages; the draft states each as worded and does not decide how the transformation of 2:65 and 7:166 is to be understood.",
+  "chapters": [
+    {
+      "anchor": "the-sabbath-and-the-test",
+      "position": 1,
+      "title_en": "The Sabbath and the test",
+      "event_slug": "sabbath-breakers",
+      "verses": [
+        {
+          "surah": 4,
+          "from": 154,
+          "to": 154
+        },
+        {
+          "surah": 7,
+          "from": 163,
+          "to": 163
+        },
+        {
+          "surah": 16,
+          "from": 124,
+          "to": 124
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God raised the Tur above them for their covenant, told them to enter the gate prostrating, told them not to transgress in the Sabbath, and took from them a firm covenant.",
+          "verses": [
+            {
+              "surah": 4,
+              "from": 154,
+              "to": 154
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The one addressed is told to ask them about the town that was by the sea, when they transgressed in the Sabbath.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 163,
+              "to": 163
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "On the day of their Sabbath their fish came to them openly, and on the day when they did not keep the Sabbath the fish did not come.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 163,
+              "to": 163
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The ayah says that in this way God tested them because of their disobedience.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 163,
+              "to": 163
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The Quran says that the Sabbath was imposed only on those who differed about it, and that your Lord will judge between them on the Day of Resurrection about what they differed in.",
+          "verses": [
+            {
+              "surah": 16,
+              "from": 124,
+              "to": 124
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God told them not to transgress in the Sabbath [c1]. The fish came to them openly on the day of their Sabbath and did not come on other days, and the Quran says that God was testing them [c3][c4].",
+      "body_md": "God raised the Tur above them for their covenant, told them to enter the gate prostrating, told them not to transgress in the Sabbath, and took from them a firm covenant [c1]. The one addressed is told to ask them about the town that was by the sea, when they transgressed in the Sabbath [c2]. On the day of their Sabbath their fish came to them openly, and on the day when they did not keep the Sabbath the fish did not come [c3]. The ayah says that in this way God tested them because of their disobedience [c4]. The Quran says that the Sabbath was imposed only on those who differed about it, and that your Lord will judge between them on the Day of Resurrection about what they differed in [c5].",
+      "deep_md": "- God raised the Tur above them for their covenant, told them to enter the gate prostrating, told them not to transgress in the Sabbath, and took from them a firm covenant (4:154) [c1].\n- The one addressed is told to ask them about the town that was by the sea, when they transgressed in the Sabbath (7:163) [c2].\n- On the day of their Sabbath their fish came to them openly, and on the day when they did not keep the Sabbath the fish did not come (7:163) [c3].\n- The ayah says that in this way God tested them because of their disobedience (7:163) [c4].\n- The Quran says that the Sabbath was imposed only on those who differed about it, and that your Lord will judge between them on the Day of Resurrection about what they differed in (16:124) [c5].",
+      "kids_md": "God told them not to break the Sabbath [c1]. The fish came to them only on the day of their Sabbath, as a test [c3][c4].",
+      "lessons_md": "Educational interpretation (not scripture): The passage sets a command beside a test that made keeping it hard [c1][c3][c4]. One reading is that the ayat treat the test as something that shows what people do [c4].",
+      "unknowns_md": "- Not established: where the town by the sea was, when this happened, or how many lived in it; the ayat do not say.\n- Not established: the one addressed in 7:163 is not named in the ayah.\n- Not established: what the differing about the Sabbath in 16:124 refers to is read in more than one way.\n- Named in later tradition, not in the Quranic text: the name of the town and the sea; none is used here."
+    },
+    {
+      "anchor": "a-community-that-warned",
+      "position": 2,
+      "title_en": "A community that warned",
+      "event_slug": "sabbath-breakers",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 164,
+          "to": 165
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "A community among them asked others why they admonished a people whom God was going to destroy or punish severely.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 164,
+              "to": 164
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The others answered that it was an excuse before their Lord, and that perhaps the people would fear God.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 164,
+              "to": 164
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When the people forgot what they had been reminded of, God saved those who forbade evil.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 165,
+              "to": 165
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God seized those who did wrong with a wretched punishment because of their disobedience.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 165,
+              "to": 165
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Within the town, a community asked why others admonished a people God would punish, and the others said that it was an excuse before their Lord [c1][c2]. God saved those who forbade evil and seized those who did wrong [c3][c4].",
+      "body_md": "A community among them asked others why they admonished a people whom God was going to destroy or punish severely [c1]. The others answered that it was an excuse before their Lord, and that perhaps the people would fear God [c2]. When the people forgot what they had been reminded of, God saved those who forbade evil [c3]. God seized those who did wrong with a wretched punishment because of their disobedience [c4].",
+      "deep_md": "- A community among them asked others why they admonished a people whom God was going to destroy or punish severely (7:164) [c1].\n- The others answered that it was an excuse before their Lord, and that perhaps the people would fear God (7:164) [c2].\n- When the people forgot what they had been reminded of, God saved those who forbade evil (7:165) [c3].\n- God seized those who did wrong with a wretched punishment because of their disobedience (7:165) [c4].",
+      "kids_md": "Some people in the town kept warning the others [c1][c2]. When the others forgot the warning, God saved those who had forbidden what was wrong [c3].",
+      "lessons_md": "Educational interpretation (not scripture): The passage records people who kept warning, giving as their reason an excuse before their Lord and the hope that the others might fear God [c2]. One reading is that the ayat place the saving of the warners beside the seizing of those who did wrong [c3][c4].",
+      "unknowns_md": "- Not established: the ayat do not say how many were in each community, who they were, or how the saving happened.\n- Not established: the ayat do not say whether the community that questioned the warners belonged to those who were saved or seized; the draft does not decide.\n- Not established: the sense of the excuse before your Lord is read in more than one way."
+    },
+    {
+      "anchor": "the-outcome",
+      "position": 3,
+      "title_en": "The outcome",
+      "event_slug": "sabbath-breakers",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 65,
+          "to": 66
+        },
+        {
+          "surah": 4,
+          "from": 47,
+          "to": 47
+        },
+        {
+          "surah": 7,
+          "from": 166,
+          "to": 166
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran says that they knew those among them who transgressed in the Sabbath, and that God said to them: be apes, despised.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 65,
+              "to": 65
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Another ayah says that when they exceeded what they had been forbidden, God said to them: be apes, despised.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 166,
+              "to": 166
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God made it a deterrent for those before it and those after it, and an admonition for those who fear Him.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 66,
+              "to": 66
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The Quran mentions that God cursed the Companions of the Sabbath, in a warning to those who were given the Book.",
+          "verses": [
+            {
+              "surah": 4,
+              "from": 47,
+              "to": 47
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran says that God said to those who transgressed in the Sabbath: be apes, despised, and made this a deterrent and an admonition for those who fear Him [c1][c3]. It also mentions that God cursed the Companions of the Sabbath [c4].",
+      "body_md": "The Quran says that they knew those among them who transgressed in the Sabbath, and that God said to them: be apes, despised [c1]. Another ayah says that when they exceeded what they had been forbidden, God said to them: be apes, despised [c2]. God made it a deterrent for those before it and those after it, and an admonition for those who fear Him [c3]. The Quran mentions that God cursed the Companions of the Sabbath, in a warning to those who were given the Book [c4].",
+      "deep_md": "- The Quran says that they knew those among them who transgressed in the Sabbath, and that God said to them: be apes, despised (2:65) [c1].\n- Another ayah says that when they exceeded what they had been forbidden, God said to them: be apes, despised (7:166) [c2].\n- God made it a deterrent for those before it and those after it, and an admonition for those who fear Him (2:66) [c3].\n- The Quran mentions that God cursed the Companions of the Sabbath, in a warning to those who were given the Book (4:47) [c4].",
+      "kids_md": "Those who went beyond what they were told, in the Sabbath, were punished [c1][c2]. God made this a lesson for people who fear Him [c3].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat present the outcome as a deterrent and an admonition for those who fear God [c3]. One reading is that the repeated reference to the Sabbath keeps the focus on exceeding what was forbidden [c1][c2].",
+      "unknowns_md": "- Not established: whether the words be apes, despised describe a change of form or a figure is read in more than one way; the draft states the ayat as worded and does not choose.\n- Not established: the ayat do not say how many were affected, what happened to them afterwards, or whether the Companions of the Sabbath of 4:47 are the same group as those of 2:65 and 7:166; the draft does not say so.\n- Named in later tradition, not in the Quranic text: the name of the town, the number of the transgressors and the length of time they survived; none is used here."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about those who broke the Sabbath. None is used in this draft.",
+    "Wording a scholar should check first: 2:65 and 7:166 (be apes, despised), 4:47 (the curse of the Companions of the Sabbath and its addressees), 16:124, 7:164 (who speaks to whom).",
+    "Named in later tradition, not in the Quranic text: Ayla, Eilat and other names given to the town of 7:163; none is used."
+  ]
+}

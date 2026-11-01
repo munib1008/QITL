@@ -1,0 +1,952 @@
+{
+  "slug": "people-of-nuh",
+  "title_en": "The people of Nuh",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "people-of-nuh"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. This file follows the people of Nuh: their answer and their end. Nuh's own story is told in the draft on the prophet Nuh; the two share ayat and are grouped by theme here, not by time.",
+  "chapters": [
+    {
+      "anchor": "nuh-calls-his-people",
+      "position": 1,
+      "title_en": "Nuh calls his people",
+      "event_slug": "people-of-nuh",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 59,
+          "to": 59
+        },
+        {
+          "surah": 11,
+          "from": 25,
+          "to": 26
+        },
+        {
+          "surah": 23,
+          "from": 23,
+          "to": 23
+        },
+        {
+          "surah": 26,
+          "from": 105,
+          "to": 109
+        },
+        {
+          "surah": 71,
+          "from": 1,
+          "to": 1
+        },
+        {
+          "surah": 71,
+          "from": 3,
+          "to": 4
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God sent Nuh to his people, and the ayat call Nuh their brother; the Quran says the people of Nuh denied the messengers.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 105,
+              "to": 106
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Nuh told them to worship God, for they had no deity other than Him, and asked whether they would not fear Him.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 59,
+              "to": 59
+            },
+            {
+              "surah": 23,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Nuh told them that he was a clear warner, and that he feared for them the punishment of a great day and of a painful day.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 59,
+              "to": 59
+            },
+            {
+              "surah": 11,
+              "from": 25,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Nuh told them that he was a trustworthy messenger to them, that they should fear God and obey him, and that he asked them for no wage.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 107,
+              "to": 109
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God told Nuh to warn his people before a painful punishment came to them.",
+          "verses": [
+            {
+              "surah": 71,
+              "from": 1,
+              "to": 1
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Nuh told them to worship God, to fear Him and to obey him.",
+          "verses": [
+            {
+              "surah": 71,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Nuh told them that He would forgive them some of their sins and give them time until a stated term, and that the term of God, when it comes, is not put back.",
+          "verses": [
+            {
+              "surah": 71,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God sent Nuh to his people, who told them to worship God alone and warned them of a great day of punishment [c1][c2][c3]. He asked no wage and told them to fear God and obey him [c4][c6].",
+      "body_md": "God sent Nuh to his people, and the ayat call Nuh their brother; the Quran says the people of Nuh denied the messengers [c1]. Nuh told them to worship God, for they had no deity other than Him, and asked whether they would not fear Him [c2]. Nuh told them that he was a clear warner, and that he feared for them the punishment of a great day and of a painful day [c3]. Nuh told them that he was a trustworthy messenger to them, that they should fear God and obey him, and that he asked them for no wage [c4]. God told Nuh to warn his people before a painful punishment came to them [c5]. Nuh told them to worship God, to fear Him and to obey him [c6]. Nuh told them that He would forgive them some of their sins and give them time until a stated term, and that the term of God, when it comes, is not put back [c7].",
+      "deep_md": "- God sent Nuh to his people, and the ayat call Nuh their brother; the Quran says the people of Nuh denied the messengers (26:105-106) [c1].\n- Nuh told them to worship God, for they had no deity other than Him, and asked whether they would not fear Him (7:59, 23:23) [c2].\n- Nuh told them that he was a clear warner, and that he feared for them the punishment of a great day and of a painful day (7:59, 11:25-26) [c3].\n- Nuh told them that he was a trustworthy messenger to them, that they should fear God and obey him, and that he asked them for no wage (26:107-109) [c4].\n- God told Nuh to warn his people before a painful punishment came to them (71:1) [c5].\n- Nuh told them to worship God, to fear Him and to obey him (71:3) [c6].\n- Nuh told them that He would forgive them some of their sins and give them time until a stated term, and that the term of God, when it comes, is not put back (71:4) [c7].",
+      "kids_md": "God sent Nuh to his people [c1]. Nuh told them to worship God alone [c2]. He told them that he was a warner [c3]. He asked them for nothing for it [c4].",
+      "lessons_md": "Educational interpretation (not scripture): Nuh's message joins worship of God, a warning and a refusal of any wage [c2][c3][c4]. One reading is that the ayat show the warning given before the punishment, with time allowed until a stated term [c5][c7].",
+      "unknowns_md": "- Not established: where the people of Nuh lived, how many they were, or when; the draft names no place or date.\n- Not established: the draft calls Nuh their brother because 26:106 does; the other ayat say only his people.\n- Not established: how the stated term of 71:4 relates to the length of Nuh's time among them, given in 29:14."
+    },
+    {
+      "anchor": "how-the-people-answered",
+      "position": 2,
+      "title_en": "How the people of Nuh answered",
+      "event_slug": "people-of-nuh",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 60,
+          "to": 62
+        },
+        {
+          "surah": 11,
+          "from": 27,
+          "to": 34
+        },
+        {
+          "surah": 23,
+          "from": 24,
+          "to": 25
+        },
+        {
+          "surah": 26,
+          "from": 111,
+          "to": 116
+        },
+        {
+          "surah": 54,
+          "from": 9,
+          "to": 9
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The chiefs of his people told Nuh that they saw him in clear error, and Nuh answered that there was no error in him but that he was a messenger from the Lord of the worlds.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 60,
+              "to": 61
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Nuh told them that he conveyed the messages of his Lord, advised them, and knew from God what they did not know.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 62,
+              "to": 62
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The chiefs who disbelieved said that they saw in Nuh only a human like them, and that those who followed him were the lowest among them in their first judgement.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They said that they saw no merit in Nuh's followers over themselves, and that they thought them liars.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They said that he was only a human like them who wanted to raise himself above them, and that had God willed, He would have sent down angels.",
+          "verses": [
+            {
+              "surah": 23,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They said that they had not heard of this among their fathers of old.",
+          "verses": [
+            {
+              "surah": 23,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "They said that he was only a man with madness, and told the others to wait on him for a time.",
+          "verses": [
+            {
+              "surah": 23,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "The Quran says that they denied God's servant, said he was mad, and that he was rebuffed.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 9,
+              "to": 9
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "They asked Nuh whether they should believe him when the lowest followed him.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 111,
+              "to": 111
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "Nuh said that he had no knowledge of what they had done, that their reckoning was only with his Lord, and that he would not drive away the believers.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 112,
+              "to": 114
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "Nuh said that he was only a clear warner.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 115,
+              "to": 115
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Nuh asked them to consider that if he was on a clear proof from his Lord, who had given him mercy that was hidden from them, he could not force it on them while they disliked it.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 28,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "Nuh said that he did not ask them for wealth, that his wage was only with God, and that he would not drive away those who believed, who would meet their Lord.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "Nuh asked who would help him against God if he drove them away.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c15",
+          "statement_en": "Nuh said that he did not claim to hold the treasuries of God, did not know the unseen, and did not claim to be an angel.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c16",
+          "statement_en": "They told Nuh that he had disputed with them and had gone on disputing, and told him to bring what he threatened if he was truthful.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 32,
+              "to": 32
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c17",
+          "statement_en": "Nuh answered that only God would bring it if He willed, and that they could not escape.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 33,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c18",
+          "statement_en": "Nuh told them that his advice would not help them if God wished to lead them astray, since He was their Lord and they would return to Him.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 34,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c19",
+          "statement_en": "They told Nuh that if he did not stop he would be among those stoned.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 116,
+              "to": 116
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The chiefs told Nuh that they saw him in clear error and only a human like them [c1][c3]. Nuh answered that he was a messenger and a clear warner, that he would not drive away the believers, and that only God would bring what he warned of [c1][c10][c11][c17].",
+      "body_md": "The chiefs of his people told Nuh that they saw him in clear error, and Nuh answered that there was no error in him but that he was a messenger from the Lord of the worlds [c1]. Nuh told them that he conveyed the messages of his Lord, advised them, and knew from God what they did not know [c2]. The chiefs who disbelieved said that they saw in Nuh only a human like them, and that those who followed him were the lowest among them in their first judgement [c3]. They said that they saw no merit in Nuh's followers over themselves, and that they thought them liars [c4]. They said that he was only a human like them who wanted to raise himself above them, and that had God willed, He would have sent down angels [c5]. They said that they had not heard of this among their fathers of old [c6]. They said that he was only a man with madness, and told the others to wait on him for a time [c7]. The Quran says that they denied God's servant, said he was mad, and that he was rebuffed [c8]. They asked Nuh whether they should believe him when the lowest followed him [c9]. Nuh said that he had no knowledge of what they had done, that their reckoning was only with his Lord, and that he would not drive away the believers [c10]. Nuh said that he was only a clear warner [c11]. Nuh asked them to consider that if he was on a clear proof from his Lord, who had given him mercy that was hidden from them, he could not force it on them while they disliked it [c12]. Nuh said that he did not ask them for wealth, that his wage was only with God, and that he would not drive away those who believed, who would meet their Lord [c13]. Nuh asked who would help him against God if he drove them away [c14]. Nuh said that he did not claim to hold the treasuries of God, did not know the unseen, and did not claim to be an angel [c15]. They told Nuh that he had disputed with them and had gone on disputing, and told him to bring what he threatened if he was truthful [c16]. Nuh answered that only God would bring it if He willed, and that they could not escape [c17]. Nuh told them that his advice would not help them if God wished to lead them astray, since He was their Lord and they would return to Him [c18]. They told Nuh that if he did not stop he would be among those stoned [c19].",
+      "deep_md": "- The chiefs of his people told Nuh that they saw him in clear error, and Nuh answered that there was no error in him but that he was a messenger from the Lord of the worlds (7:60-61) [c1].\n- Nuh told them that he conveyed the messages of his Lord, advised them, and knew from God what they did not know (7:62) [c2].\n- The chiefs who disbelieved said that they saw in Nuh only a human like them, and that those who followed him were the lowest among them in their first judgement (11:27) [c3].\n- They said that they saw no merit in Nuh's followers over themselves, and that they thought them liars (11:27) [c4].\n- They said that he was only a human like them who wanted to raise himself above them, and that had God willed, He would have sent down angels (23:24) [c5].\n- They said that they had not heard of this among their fathers of old (23:24) [c6].\n- They said that he was only a man with madness, and told the others to wait on him for a time (23:25) [c7].\n- The Quran says that they denied God's servant, said he was mad, and that he was rebuffed (54:9) [c8].\n- They asked Nuh whether they should believe him when the lowest followed him (26:111) [c9].\n- Nuh said that he had no knowledge of what they had done, that their reckoning was only with his Lord, and that he would not drive away the believers (26:112-114) [c10].\n- Nuh said that he was only a clear warner (26:115) [c11].\n- Nuh asked them to consider that if he was on a clear proof from his Lord, who had given him mercy that was hidden from them, he could not force it on them while they disliked it (11:28) [c12].\n- Nuh said that he did not ask them for wealth, that his wage was only with God, and that he would not drive away those who believed, who would meet their Lord (11:29) [c13].\n- Nuh asked who would help him against God if he drove them away (11:30) [c14].\n- Nuh said that he did not claim to hold the treasuries of God, did not know the unseen, and did not claim to be an angel (11:31) [c15].\n- They told Nuh that he had disputed with them and had gone on disputing, and told him to bring what he threatened if he was truthful (11:32) [c16].\n- Nuh answered that only God would bring it if He willed, and that they could not escape (11:33) [c17].\n- Nuh told them that his advice would not help them if God wished to lead them astray, since He was their Lord and they would return to Him (11:34) [c18].\n- They told Nuh that if he did not stop he would be among those stoned (26:116) [c19].",
+      "kids_md": "The chiefs of Nuh's people said that Nuh was only a human like them [c3]. Nuh said that he was a messenger from the Lord of the worlds [c1]. He said that he would not send away the believers [c10].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat show leaders judging a message by who followed it, and the messenger refusing to send the followers away [c3][c4][c10]. One reading is that Nuh leaves the reckoning to his Lord [c10][c17].",
+      "unknowns_md": "- Not established: who the chiefs were, how many believed, or what the lowest meant in the chiefs' own terms; the ayat give only their words.\n- Not established: 11:31 also speaks of those whom the chiefs looked down on and of what God will give them; the draft does not use that part.\n- Not established: the sense of the word read here as rebuffed in 54:9 is read in more than one way.\n- Not established: who is meant by the one who invented it in 11:35; that ayah is not used."
+    },
+    {
+      "anchor": "nuhs-prayers",
+      "position": 3,
+      "title_en": "What Nuh said to his Lord about them",
+      "event_slug": "people-of-nuh",
+      "verses": [
+        {
+          "surah": 23,
+          "from": 26,
+          "to": 26
+        },
+        {
+          "surah": 26,
+          "from": 117,
+          "to": 118
+        },
+        {
+          "surah": 54,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 71,
+          "from": 5,
+          "to": 12
+        },
+        {
+          "surah": 71,
+          "from": 21,
+          "to": 28
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Nuh told his Lord that he had called his people night and day, and that his call only increased their flight.",
+          "verses": [
+            {
+              "surah": 71,
+              "from": 5,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Nuh said that whenever he called them for God to forgive them they put their fingers in their ears, covered themselves with their garments, persisted and were very arrogant.",
+          "verses": [
+            {
+              "surah": 71,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Nuh said that he then called them openly, and then spoke to them both publicly and in private.",
+          "verses": [
+            {
+              "surah": 71,
+              "from": 8,
+              "to": 9
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Nuh told them to ask forgiveness of their Lord, who is ever forgiving, and that He would send abundant rain from the sky, supply them with wealth and sons, and give them gardens and rivers.",
+          "verses": [
+            {
+              "surah": 71,
+              "from": 10,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Nuh told his Lord that they had disobeyed him and followed one whose wealth and children only added to his loss, and that they had plotted a great plot.",
+          "verses": [
+            {
+              "surah": 71,
+              "from": 21,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They said not to leave their gods, and not to leave Wadd, Suwa, Yaghuth, Yauq and Nasr.",
+          "verses": [
+            {
+              "surah": 71,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Nuh said that they had led many astray, and asked that the wrongdoers increase only in error.",
+          "verses": [
+            {
+              "surah": 71,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Because of their wrongs they were drowned, then made to enter a fire, and found no helpers besides God.",
+          "verses": [
+            {
+              "surah": 71,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "Nuh asked his Lord not to leave on the earth any dwellers among the disbelievers, saying that if He left them they would lead His servants astray and beget only wicked, ungrateful children.",
+          "verses": [
+            {
+              "surah": 71,
+              "from": 26,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "Nuh asked forgiveness for himself, his parents, whoever entered his house as a believer, and the believing men and women.",
+          "verses": [
+            {
+              "surah": 71,
+              "from": 28,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "Nuh called on his Lord that he was overcome, and asked for help.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Nuh said that his people had denied him, asked God to judge decisively between them and him, and to save him and the believers with him.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 117,
+              "to": 118
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "Nuh asked his Lord to help him because they had denied him.",
+          "verses": [
+            {
+              "surah": 23,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Nuh told his Lord that he had called his people night and day and that his call only increased their flight [c1]. He asked God to judge between them and him and to save him and the believers with him [c12].",
+      "body_md": "Nuh told his Lord that he had called his people night and day, and that his call only increased their flight [c1]. Nuh said that whenever he called them for God to forgive them they put their fingers in their ears, covered themselves with their garments, persisted and were very arrogant [c2]. Nuh said that he then called them openly, and then spoke to them both publicly and in private [c3]. Nuh told them to ask forgiveness of their Lord, who is ever forgiving, and that He would send abundant rain from the sky, supply them with wealth and sons, and give them gardens and rivers [c4]. Nuh told his Lord that they had disobeyed him and followed one whose wealth and children only added to his loss, and that they had plotted a great plot [c5]. They said not to leave their gods, and not to leave Wadd, Suwa, Yaghuth, Yauq and Nasr [c6]. Nuh said that they had led many astray, and asked that the wrongdoers increase only in error [c7]. Because of their wrongs they were drowned, then made to enter a fire, and found no helpers besides God [c8]. Nuh asked his Lord not to leave on the earth any dwellers among the disbelievers, saying that if He left them they would lead His servants astray and beget only wicked, ungrateful children [c9]. Nuh asked forgiveness for himself, his parents, whoever entered his house as a believer, and the believing men and women [c10]. Nuh called on his Lord that he was overcome, and asked for help [c11]. Nuh said that his people had denied him, asked God to judge decisively between them and him, and to save him and the believers with him [c12]. Nuh asked his Lord to help him because they had denied him [c13].",
+      "deep_md": "- Nuh told his Lord that he had called his people night and day, and that his call only increased their flight (71:5-6) [c1].\n- Nuh said that whenever he called them for God to forgive them they put their fingers in their ears, covered themselves with their garments, persisted and were very arrogant (71:7) [c2].\n- Nuh said that he then called them openly, and then spoke to them both publicly and in private (71:8-9) [c3].\n- Nuh told them to ask forgiveness of their Lord, who is ever forgiving, and that He would send abundant rain from the sky, supply them with wealth and sons, and give them gardens and rivers (71:10-12) [c4].\n- Nuh told his Lord that they had disobeyed him and followed one whose wealth and children only added to his loss, and that they had plotted a great plot (71:21-22) [c5].\n- They said not to leave their gods, and not to leave Wadd, Suwa, Yaghuth, Yauq and Nasr (71:23) [c6].\n- Nuh said that they had led many astray, and asked that the wrongdoers increase only in error (71:24) [c7].\n- Because of their wrongs they were drowned, then made to enter a fire, and found no helpers besides God (71:25) [c8].\n- Nuh asked his Lord not to leave on the earth any dwellers among the disbelievers, saying that if He left them they would lead His servants astray and beget only wicked, ungrateful children (71:26-27) [c9].\n- Nuh asked forgiveness for himself, his parents, whoever entered his house as a believer, and the believing men and women (71:28) [c10].\n- Nuh called on his Lord that he was overcome, and asked for help (54:10) [c11].\n- Nuh said that his people had denied him, asked God to judge decisively between them and him, and to save him and the believers with him (26:117-118) [c12].\n- Nuh asked his Lord to help him because they had denied him (23:26) [c13].",
+      "kids_md": "Nuh called his people night and day [c1]. They would not listen [c2]. Nuh asked God to judge between them and him and to save him and the believers [c12].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat record a messenger who called by night and day, openly and in private, and then turned to his Lord in prayer [c1][c3][c12]. One reading is that persistence in calling and prayer for judgement are placed side by side [c3][c12].",
+      "unknowns_md": "- Not established: how long Nuh called them before these prayers, or in what order the prayers were said.\n- Not established: the draft names the names of 71:23 as the ayah gives them; the ayah does not say what they were, and the draft says no more.\n- Not established: the sense of the word fingers in their ears and of covering themselves with garments is the ayah's picture of refusal; the draft states it as worded.\n- Not established: 71:13-20 (a passage about creation) is not used in this chapter."
+    },
+    {
+      "anchor": "the-flood",
+      "position": 4,
+      "title_en": "The flood",
+      "event_slug": "people-of-nuh",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 64,
+          "to": 64
+        },
+        {
+          "surah": 11,
+          "from": 36,
+          "to": 44
+        },
+        {
+          "surah": 23,
+          "from": 28,
+          "to": 30
+        },
+        {
+          "surah": 25,
+          "from": 37,
+          "to": 37
+        },
+        {
+          "surah": 26,
+          "from": 119,
+          "to": 121
+        },
+        {
+          "surah": 29,
+          "from": 14,
+          "to": 15
+        },
+        {
+          "surah": 54,
+          "from": 11,
+          "to": 15
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God told Nuh that none of his people would believe except those who had already believed.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God told Nuh to build the ship by His revelation, and not to address Him about the wrongdoers, since they would be drowned.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Whenever a group of his people passed by him, they mocked him, and he said that if they mocked, he would mock them as they mocked.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Nuh told them that they would know who would receive a punishment that disgraces him and on whom a lasting punishment would fall.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "When the command of God came and the tannur boiled over, God said to carry in it two of every kind, and Nuh's family, except those against whom the word had gone before, and whoever believed.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The ayah says that none believed with him except a few.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Nuh said to ride in it, and that in the name of God was its course and its mooring.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 41,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "It ran with them on waves like mountains, and Nuh called to his son, who was apart, to ride with them and not to be with the disbelievers.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "The son said that he would take refuge on a mountain to protect him from the water, and Nuh answered that there was no protector that day from the command of God except those on whom He had mercy.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 43,
+              "to": 43
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "The wave came between them, and the son was among the drowned.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 43,
+              "to": 43
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "The earth was told to swallow its water and the sky to stop, the water subsided, the matter was decided, the ship settled on al-Judi, and the call went out: away with the wrongdoing people.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 44,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Another passage says that God opened the gates of the sky with pouring water, made springs burst from the earth, and the waters met for a matter already decreed.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 11,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "God carried Nuh on a vessel of planks and dusur, a word read in more than one way, which ran as a recompense for the one who had been rejected.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 13,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "God left it as a sign.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c15",
+          "statement_en": "God told Nuh, when the ship was settled with those with him, to say praise be to God who saved them from the wrongdoing people.",
+          "verses": [
+            {
+              "surah": 23,
+              "from": 28,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c16",
+          "statement_en": "God told Nuh to say, my Lord, let me land at a blessed landing, for You are the best of those who bring to land.",
+          "verses": [
+            {
+              "surah": 23,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c17",
+          "statement_en": "The Quran says that in this there are signs and that God was testing.",
+          "verses": [
+            {
+              "surah": 23,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c18",
+          "statement_en": "God saved Nuh and those with him in the laden ship and afterward drowned the rest.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 119,
+              "to": 120
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c19",
+          "statement_en": "Nuh stayed among his people a thousand years less fifty years, and the flood seized them while they were wrongdoers.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c20",
+          "statement_en": "God saved him and the companions of the ship and made it a sign for the worlds.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c21",
+          "statement_en": "The people of Nuh denied the messengers, and God drowned them and made them a sign for people and prepared a painful punishment for the wrongdoers.",
+          "verses": [
+            {
+              "surah": 25,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c22",
+          "statement_en": "They denied him, and God saved him and those with him in the ship and drowned those who denied His signs, a blind people.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 64,
+              "to": 64
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c23",
+          "statement_en": "The Quran says that in this there is a sign, and that most of them were not believers.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 121,
+              "to": 121
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God told Nuh to build the ship, and the flood came [c2][c5][c12]. God saved Nuh and those with him in the ship and drowned the rest, and the Quran calls it a sign [c18][c21].",
+      "body_md": "God told Nuh that none of his people would believe except those who had already believed [c1]. God told Nuh to build the ship by His revelation, and not to address Him about the wrongdoers, since they would be drowned [c2]. Whenever a group of his people passed by him, they mocked him, and he said that if they mocked, he would mock them as they mocked [c3]. Nuh told them that they would know who would receive a punishment that disgraces him and on whom a lasting punishment would fall [c4]. When the command of God came and the tannur boiled over, God said to carry in it two of every kind, and Nuh's family, except those against whom the word had gone before, and whoever believed [c5]. The ayah says that none believed with him except a few [c6]. Nuh said to ride in it, and that in the name of God was its course and its mooring [c7]. It ran with them on waves like mountains, and Nuh called to his son, who was apart, to ride with them and not to be with the disbelievers [c8]. The son said that he would take refuge on a mountain to protect him from the water, and Nuh answered that there was no protector that day from the command of God except those on whom He had mercy [c9]. The wave came between them, and the son was among the drowned [c10]. The earth was told to swallow its water and the sky to stop, the water subsided, the matter was decided, the ship settled on al-Judi, and the call went out: away with the wrongdoing people [c11]. Another passage says that God opened the gates of the sky with pouring water, made springs burst from the earth, and the waters met for a matter already decreed [c12]. God carried Nuh on a vessel of planks and dusur, a word read in more than one way, which ran as a recompense for the one who had been rejected [c13]. God left it as a sign [c14]. God told Nuh, when the ship was settled with those with him, to say praise be to God who saved them from the wrongdoing people [c15]. God told Nuh to say, my Lord, let me land at a blessed landing, for You are the best of those who bring to land [c16]. The Quran says that in this there are signs and that God was testing [c17]. God saved Nuh and those with him in the laden ship and afterward drowned the rest [c18]. Nuh stayed among his people a thousand years less fifty years, and the flood seized them while they were wrongdoers [c19]. God saved him and the companions of the ship and made it a sign for the worlds [c20]. The people of Nuh denied the messengers, and God drowned them and made them a sign for people and prepared a painful punishment for the wrongdoers [c21]. They denied him, and God saved him and those with him in the ship and drowned those who denied His signs, a blind people [c22]. The Quran says that in this there is a sign, and that most of them were not believers [c23].",
+      "deep_md": "- God told Nuh that none of his people would believe except those who had already believed (11:36) [c1].\n- God told Nuh to build the ship by His revelation, and not to address Him about the wrongdoers, since they would be drowned (11:37) [c2].\n- Whenever a group of his people passed by him, they mocked him, and he said that if they mocked, he would mock them as they mocked (11:38) [c3].\n- Nuh told them that they would know who would receive a punishment that disgraces him and on whom a lasting punishment would fall (11:39) [c4].\n- When the command of God came and the tannur boiled over, God said to carry in it two of every kind, and Nuh's family, except those against whom the word had gone before, and whoever believed (11:40) [c5].\n- The ayah says that none believed with him except a few (11:40) [c6].\n- Nuh said to ride in it, and that in the name of God was its course and its mooring (11:41) [c7].\n- It ran with them on waves like mountains, and Nuh called to his son, who was apart, to ride with them and not to be with the disbelievers (11:42) [c8].\n- The son said that he would take refuge on a mountain to protect him from the water, and Nuh answered that there was no protector that day from the command of God except those on whom He had mercy (11:43) [c9].\n- The wave came between them, and the son was among the drowned (11:43) [c10].\n- The earth was told to swallow its water and the sky to stop, the water subsided, the matter was decided, the ship settled on al-Judi, and the call went out: away with the wrongdoing people (11:44) [c11].\n- Another passage says that God opened the gates of the sky with pouring water, made springs burst from the earth, and the waters met for a matter already decreed (54:11-12) [c12].\n- God carried Nuh on a vessel of planks and dusur, a word read in more than one way, which ran as a recompense for the one who had been rejected (54:13-14) [c13].\n- God left it as a sign (54:15) [c14].\n- God told Nuh, when the ship was settled with those with him, to say praise be to God who saved them from the wrongdoing people (23:28) [c15].\n- God told Nuh to say, my Lord, let me land at a blessed landing, for You are the best of those who bring to land (23:29) [c16].\n- The Quran says that in this there are signs and that God was testing (23:30) [c17].\n- God saved Nuh and those with him in the laden ship and afterward drowned the rest (26:119-120) [c18].\n- Nuh stayed among his people a thousand years less fifty years, and the flood seized them while they were wrongdoers (29:14) [c19].\n- God saved him and the companions of the ship and made it a sign for the worlds (29:15) [c20].\n- The people of Nuh denied the messengers, and God drowned them and made them a sign for people and prepared a painful punishment for the wrongdoers (25:37) [c21].\n- They denied him, and God saved him and those with him in the ship and drowned those who denied His signs, a blind people (7:64) [c22].\n- The Quran says that in this there is a sign, and that most of them were not believers (26:121) [c23].",
+      "kids_md": "God told Nuh to build the ship [c2]. When God's command came, the water came, and Nuh and the believers were carried safely [c5][c12][c18]. The Quran says that this is a sign [c21].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat set the building of the ship in the face of mockery beside the saving of the few who believed [c3][c6][c18]. One reading is that the passage presents the ship as a sign for the worlds [c20].",
+      "unknowns_md": "- Not established: where the flood happened, how large the ship was, how many were saved, or how long the flood lasted; the ayat do not say. The draft states the number given in 29:14 only as that ayah words it.\n- Not established: which animals or what kinds are meant by two of every kind, and whether the flood covered the whole earth; the ayat do not say.\n- Not established: the meaning of the tannur boiling over (11:40) and of dusur (54:13) is read in more than one way.\n- Not established: which mountain al-Judi names beyond the name in 11:44.\n- Named in later tradition, not in the Quranic text: the names of the sons and wife of Nuh, the place where the ship settled and the shape of the ship; none is used here."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Nuh and his people. None is used in this draft.",
+    "Not drafted: 11:45-49 (Nuh's plea about his son and the reply), left to the draft on the prophet Nuh; 11:35; 54:16-17. Left out of claims because of a validator trap: the Arabic word a'yun in 11:37, 23:27, 54:14 and 11:31 (the draft states the revelation without the phrase that some translations render under Our watch, and omits the last part of 11:31), and the ayah wording is a reviewer's choice.",
+    "Wording a scholar should check first: 11:40 and 23:27 (tannur), 54:13 (dusur), 54:9 (rebuffed), 11:27 (the first judgement), 7:62, 71:7 (fingers and garments), 71:23 (the names), 29:14 (the stated number).",
+    "Named in later tradition, not in the Quranic text: Nuh's family names, Ararat and the date of the flood; none is used."
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "slug": "people-of-yunus",
+  "title_en": "The people sent to Yunus",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "people-of-yunus"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. Only three ayat speak of the people to whom Yunus was sent; the story of Yunus himself is not retold here.",
+  "chapters": [
+    {
+      "anchor": "the-people-who-believed",
+      "position": 1,
+      "title_en": "The people who believed",
+      "event_slug": "people-of-yunus",
+      "verses": [
+        {
+          "surah": 10,
+          "from": 98,
+          "to": 98
+        },
+        {
+          "surah": 37,
+          "from": 147,
+          "to": 148
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran asks why there was no town that believed so that its belief benefitted it, except the people of Yunus.",
+          "verses": [
+            {
+              "surah": 10,
+              "from": 98,
+              "to": 98
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When they believed, God removed from them the punishment of disgrace in the life of this world.",
+          "verses": [
+            {
+              "surah": 10,
+              "from": 98,
+              "to": 98
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God gave them enjoyment for a while.",
+          "verses": [
+            {
+              "surah": 10,
+              "from": 98,
+              "to": 98
+            },
+            {
+              "surah": 37,
+              "from": 148,
+              "to": 148
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Another passage says that God sent him to a hundred thousand or more.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 147,
+              "to": 147
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The same passage says that they believed, so God gave them enjoyment for a while.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 148,
+              "to": 148
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran says that, apart from the people of Yunus, no town believed so that its belief benefitted it [c1]. When they believed, God removed the punishment of disgrace from them and gave them enjoyment for a while [c2][c3].",
+      "body_md": "The Quran asks why there was no town that believed so that its belief benefitted it, except the people of Yunus [c1]. When they believed, God removed from them the punishment of disgrace in the life of this world [c2]. God gave them enjoyment for a while [c3]. Another passage says that God sent him to a hundred thousand or more [c4]. The same passage says that they believed, so God gave them enjoyment for a while [c5].",
+      "deep_md": "- The Quran asks why there was no town that believed so that its belief benefitted it, except the people of Yunus (10:98) [c1].\n- When they believed, God removed from them the punishment of disgrace in the life of this world (10:98) [c2].\n- God gave them enjoyment for a while (10:98, 37:148) [c3].\n- Another passage says that God sent him to a hundred thousand or more (37:147) [c4].\n- The same passage says that they believed, so God gave them enjoyment for a while (37:148) [c5].",
+      "kids_md": "The Quran says that the people of Yunus believed [c1][c5]. Because they believed, God took away their punishment and let them enjoy life for a while [c2][c3].",
+      "lessons_md": "Educational interpretation (not scripture): The passage treats belief that came while a warning was still near as something that benefitted the people of Yunus [c1][c2]. One reading is that the ayat hold up their belief as a case that could have been repeated by other towns [c1].",
+      "unknowns_md": "- Not established: where the town was, when this happened, who the people of Yunus were, or how long the enjoyment lasted; the ayat say a while.\n- Not established: the number in 37:147 is stated as a hundred thousand or more by the ayah; the ayah does not say how it was counted, and the draft adds nothing to it.\n- Not established: the ayat do not say what led them to believe or what the punishment would have been; they say that it was removed.\n- Not established: the pronoun of he in 37:147 is not named in that ayah; the draft reads it as Yunus because 10:98 names the people of Yunus."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the people of Yunus. None is used in this draft.",
+    "Wording a scholar should check first: 37:147 (a hundred thousand or more, and the pronoun), 10:98 (the exception).",
+    "Named in later tradition, not in the Quranic text: the name of the city and the region of the people of Yunus; none is used."
+  ]
+}

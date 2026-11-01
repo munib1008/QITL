@@ -1,0 +1,104 @@
+{
+  "slug": "ashab-al-rass",
+  "title_en": "The Companions of al-Rass",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "ashab-al-rass"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. The Companions of al-Rass appear only in two lists of peoples; the draft states the lists and nothing more.",
+  "chapters": [
+    {
+      "anchor": "the-companions-of-al-rass",
+      "position": 1,
+      "title_en": "The Companions of al-Rass",
+      "event_slug": "ashab-al-rass",
+      "verses": [
+        {
+          "surah": 25,
+          "from": 38,
+          "to": 39
+        },
+        {
+          "surah": 50,
+          "from": 12,
+          "to": 14
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran names 'Ad, Thamud and the Companions of al-Rass, and many generations between them.",
+          "verses": [
+            {
+              "surah": 25,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "For each of them God gave examples, and each He destroyed with total destruction.",
+          "verses": [
+            {
+              "surah": 25,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Another passage says that before them the people of Nuh denied the messengers, and so did the Companions of al-Rass and Thamud.",
+          "verses": [
+            {
+              "surah": 50,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The same passage names 'Ad, Fir'awn, the brothers of Lut, the Companions of the Thicket and the people of Tubba'.",
+          "verses": [
+            {
+              "surah": 50,
+              "from": 13,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The passage says that each of them denied the messengers, so that God's threat came due.",
+          "verses": [
+            {
+              "surah": 50,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Companions of al-Rass are named in lists of peoples who denied the messengers [c1][c3]. The Quran says that God gave examples for each of them and that each was destroyed [c2][c5].",
+      "body_md": "The Quran names 'Ad, Thamud and the Companions of al-Rass, and many generations between them [c1]. For each of them God gave examples, and each He destroyed with total destruction [c2]. Another passage says that before them the people of Nuh denied the messengers, and so did the Companions of al-Rass and Thamud [c3]. The same passage names 'Ad, Fir'awn, the brothers of Lut, the Companions of the Thicket and the people of Tubba' [c4]. The passage says that each of them denied the messengers, so that God's threat came due [c5].",
+      "deep_md": "- The Quran names 'Ad, Thamud and the Companions of al-Rass, and many generations between them (25:38) [c1].\n- For each of them God gave examples, and each He destroyed with total destruction (25:39) [c2].\n- Another passage says that before them the people of Nuh denied the messengers, and so did the Companions of al-Rass and Thamud (50:12) [c3].\n- The same passage names 'Ad, Fir'awn, the brothers of Lut, the Companions of the Thicket and the people of Tubba' (50:13-14) [c4].\n- The passage says that each of them denied the messengers, so that God's threat came due (50:14) [c5].",
+      "kids_md": "The Quran names the Companions of al-Rass among peoples who did not believe the messengers [c3]. It says that God gave examples for each of them and that each was destroyed [c2].",
+      "lessons_md": "Educational interpretation (not scripture): The lists place the Companions of al-Rass beside other peoples who denied the messengers [c3][c4][c5]. One reading is that the ayat ask the hearer to learn from the examples God gave for each [c2].",
+      "unknowns_md": "- Not established: who the Companions of al-Rass were, where or when they lived, who their messenger was, or what they did; the Quran says none of this.\n- Not established: what al-Rass means is read in more than one way; the ayat give only the word.\n- Not established: the draft does not say that the Companions of al-Rass and any other people in the lists are the same.\n- Named in later tradition, not in the Quranic text: the identification of al-Rass with a well, a place or a people, and the names of their prophet; none is used here."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the Companions of al-Rass. None is used in this draft.",
+    "Wording a scholar should check first: 25:38 (many generations between them), 50:13 (the brothers of Lut, rendered literally), 50:12-14 (the grammar of the list).",
+    "Named in later tradition, not in the Quranic text: every identification of al-Rass and its people; none is used."
+  ]
+}
