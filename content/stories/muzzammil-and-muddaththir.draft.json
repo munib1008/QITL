@@ -1,0 +1,217 @@
+{
+  "slug": "muzzammil-and-muddaththir",
+  "title_en": "The wrapped one and the cloaked one",
+  "title_ar": null,
+  "subject": {
+    "type": "seerah",
+    "event_slug": "muzzammil-and-muddaththir"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The occasions of revelation (who the persons were, what happened) are not in the verses; they appear only under unknowns and uncertainties, as later tradition, with the hadith to add later. Pronouns the Arabic leaves open are left open. Chapters are a reading order, not a chronology. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-wrapped-one",
+      "position": 1,
+      "title_en": "The wrapped one",
+      "event_slug": "muzzammil-and-muddaththir",
+      "verses": [
+        {
+          "surah": 73,
+          "from": 1,
+          "to": 8
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The passage opens with a call to the one addressed by the word al-muzzammil, often rendered the wrapped one.",
+          "verses": [
+            {
+              "surah": 73,
+              "from": 1,
+              "to": 1
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The one addressed is told to stand through the night except for a little: half of it, or a little less than that, or more than that; and to recite the Quran in measured fashion.",
+          "verses": [
+            {
+              "surah": 73,
+              "from": 2,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God says that He will cast upon the one addressed a weighty word.",
+          "verses": [
+            {
+              "surah": 73,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The rising of the night is firmer in tread and more upright in speech.",
+          "verses": [
+            {
+              "surah": 73,
+              "from": 6,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "By day the one addressed has long occupation.",
+          "verses": [
+            {
+              "surah": 73,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The one addressed is told to remember the name of his Lord and to devote himself to Him with complete devotion.",
+          "verses": [
+            {
+              "surah": 73,
+              "from": 8,
+              "to": 8
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The passage calls on the one addressed as the wrapped one [c1]. He is told to stand through the night except for a little, and to recite the Quran in measured fashion [c2]. God says that He will cast upon him a weighty word [c3], and he is told to remember the name of his Lord and devote himself to Him [c6].",
+      "body_md": "The passage opens with a call to the one addressed by the word al-muzzammil, often rendered the wrapped one [c1].\n\nHe is told to stand through the night except for a little: half of it, or a little less than that, or more than that; and to recite the Quran in measured fashion [c2]. God says that He will cast upon him a weighty word [c3].\n\nThe passage says that the rising of the night is firmer in tread and more upright in speech [c4], and that by day he has long occupation [c5]. He is told to remember the name of his Lord and to devote himself to Him with complete devotion [c6].",
+      "deep_md": "The call and the commands are addressed to one person, whom the verses do not name [c1]. The commands are about the night [c2], and the passage gives reasons from the night and the day [c4][c5]. The weighty word that God will cast upon him is not described [c3]. The passage ends with remembrance and devotion [c6].",
+      "kids_md": "The passage calls to someone who is wrapped up, and tells him to stand through the night except for a little [c1][c2]. He is told to recite the Quran slowly and clearly [c2]. He is told to remember the name of his Lord [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage joins the quiet of the night to speech that is more upright [c4]. Another is that it places remembrance of the Lord's name beside the long occupation of the day [c5][c6].",
+      "unknowns_md": "- Not established: who is addressed. The call is by a title and the verses name no one.\n- Not established: why the one addressed is called the wrapped one, or what he was wrapped in; the verses give no circumstance.\n- Not established: what the weighty word is, or when it was cast.\n- Not established: for whom the standing through the night was meant beyond the one addressed, or for how long. The later verses of the same surah are outside this draft.\n- Named in later tradition, not in the Quranic text: the identity of the one addressed and the occasion of the call. Neither is used in the story texts."
+    },
+    {
+      "anchor": "the-cloaked-one",
+      "position": 2,
+      "title_en": "The cloaked one",
+      "event_slug": "muzzammil-and-muddaththir",
+      "verses": [
+        {
+          "surah": 74,
+          "from": 1,
+          "to": 7
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The passage opens with a call to the one addressed by the word al-muddaththir, often rendered the cloaked one.",
+          "verses": [
+            {
+              "surah": 74,
+              "from": 1,
+              "to": 1
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The one addressed is told to arise and warn.",
+          "verses": [
+            {
+              "surah": 74,
+              "from": 2,
+              "to": 2
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He is told to magnify his Lord.",
+          "verses": [
+            {
+              "surah": 74,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He is told to purify his garments; the Arabic word is read in more than one way.",
+          "verses": [
+            {
+              "surah": 74,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He is told to keep away from ar-rujz, a word whose sense is disputed.",
+          "verses": [
+            {
+              "surah": 74,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "He is told not to give in order to gain more; the phrase is read in more than one way.",
+          "verses": [
+            {
+              "surah": 74,
+              "from": 6,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "He is told to be patient for the sake of his Lord.",
+          "verses": [
+            {
+              "surah": 74,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The passage calls on the one addressed as the cloaked one [c1]. He is told to arise and warn [c2], to magnify his Lord [c3], and to be patient for the sake of his Lord [c7].",
+      "body_md": "The passage opens with a call to the one addressed by the word al-muddaththir, often rendered the cloaked one [c1].\n\nHe is told to arise and warn [c2], and to magnify his Lord [c3]. He is told to purify his garments; the Arabic word is read in more than one way [c4]. He is told to keep away from ar-rujz, a word whose sense is disputed [c5], and not to give in order to gain more, a phrase that is also read in more than one way [c6].\n\nThe passage ends by telling him to be patient for the sake of his Lord [c7].",
+      "deep_md": "A series of short commands follow one another, and the passage gives no reason for any of them [c2][c3][c4][c5][c6][c7]. Some of them are read in more than one way: the word for garments, the word ar-rujz, and the phrase about giving in order to gain more [c4][c5][c6]. The warning has no stated object [c2].",
+      "kids_md": "The passage calls to someone covered up, and tells him to arise and warn [c1][c2]. He is told to magnify his Lord [c3]. He is told to be patient for the sake of his Lord [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage places patience for the sake of the Lord at the end of a series of commands [c7]. Another is that the commands to warn and to magnify the Lord stand side by side [c2][c3].",
+      "unknowns_md": "- Not established: who is addressed, or why he is called the cloaked one. The call is by a title and the verses name no one.\n- Not established: whom or what he was to warn; the verse has no object.\n- Not established: what ar-rujz refers to, whether the garments in 74:4 are clothing or something else, or what the phrase about giving in order to gain more refers to.\n- Not established: whether this passage came before or after the previous chapter's; the chapters follow the inventory order.\n- Named in later tradition, not in the Quranic text: the identity of the one addressed and the occasion of the call. Neither is used in the story texts."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated reports on the occasion of the calls, on who was addressed and on the order of the passages, each with a named grader. None is used in this draft.",
+    "The titles al-muzzammil and al-muddaththir are in the Arabic as calls; their sense (wrapped, cloaked) is a rendering. The verses do not describe the condition of the one addressed.",
+    "Named in later tradition, not in the Quranic text: the identity of the one addressed in both passages. The inventory title gives an identification that the verses themselves do not.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

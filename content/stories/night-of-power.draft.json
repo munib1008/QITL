@@ -1,0 +1,226 @@
+{
+  "slug": "night-of-power",
+  "title_en": "The Night of Power and the sending down of the Quran",
+  "title_ar": null,
+  "subject": {
+    "type": "seerah",
+    "event_slug": "night-of-power"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The occasions of revelation (who the persons were, what happened) are not in the verses; they appear only under unknowns and uncertainties, as later tradition, with the hadith to add later. Pronouns the Arabic leaves open are left open. Chapters are a reading order, not a chronology. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-night-of-power",
+      "position": 1,
+      "title_en": "The Night of Power",
+      "event_slug": "night-of-power",
+      "verses": [
+        {
+          "surah": 97,
+          "from": 1,
+          "to": 5
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God says that He sent it down in the Night of Power; the verse does not name what 'it' is.",
+          "verses": [
+            {
+              "surah": 97,
+              "from": 1,
+              "to": 1
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The verse asks the one addressed what would let him know what the Night of Power is.",
+          "verses": [
+            {
+              "surah": 97,
+              "from": 2,
+              "to": 2
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The Night of Power is better than a thousand months.",
+          "verses": [
+            {
+              "surah": 97,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The angels and the Spirit come down in it, by the permission of their Lord, with every matter.",
+          "verses": [
+            {
+              "surah": 97,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "It is peace until the rising of dawn.",
+          "verses": [
+            {
+              "surah": 97,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God says that He sent it down in the Night of Power [c1]. The Night of Power is better than a thousand months [c3], and the angels and the Spirit come down in it by the permission of their Lord [c4]. It is peace until the rising of dawn [c5].",
+      "body_md": "God says that He sent it down in the Night of Power; the verse does not name what it is [c1]. The verse then asks the one addressed what would let him know what the Night of Power is [c2].\n\nThe Night of Power is better than a thousand months [c3]. The angels and the Spirit come down in it, by the permission of their Lord, with every matter [c4]. It is peace until the rising of dawn [c5].",
+      "deep_md": "The passage answers its own question by saying what the night is better than [c2][c3]. It speaks of a coming down of the angels and the Spirit, and says that it happens by the permission of their Lord [c4]. The last verse describes the night as peace and gives its end as the rising of dawn [c5].",
+      "kids_md": "God says that He sent it down in the Night of Power [c1]. This night is better than a thousand months [c3]. The angels and the Spirit come down in it, by the permission of their Lord [c4]. It is peace until the dawn rises [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage invites attention to a single night by saying what it is better than [c3]. Another is that peace is how the passage describes the night [c5].",
+      "unknowns_md": "- Not established: which night this is, in which month, or how a believer would know it. The verses give none of this.\n- Not established: what the thousand months measures, or how a night can be better than that; the verse says only that it is.\n- Not established: what 'it' refers to in 97:1. Other chapters of this story speak of the Quran being sent down, and the inventory groups them; this verse does not name it.\n- Not established: what 'every matter' includes, or who the Spirit is; the verse names the Spirit beside the angels and says no more here.\n- Named in later tradition, not in the Quranic text: the date of the night and the identification of the Spirit. Neither is used in the story texts."
+    },
+    {
+      "anchor": "the-blessed-night",
+      "position": 2,
+      "title_en": "A blessed night",
+      "event_slug": "night-of-power",
+      "verses": [
+        {
+          "surah": 44,
+          "from": 2,
+          "to": 6
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God swears by the clear Book and says that He sent it down in a blessed night.",
+          "verses": [
+            {
+              "surah": 44,
+              "from": 2,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God says that He has always been one who warns.",
+          "verses": [
+            {
+              "surah": 44,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "In that night every wise matter is made distinct, as a command from God, who says that He has always been one who sends.",
+          "verses": [
+            {
+              "surah": 44,
+              "from": 4,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "It is a mercy from the Lord of the one addressed, who is the one who hears and knows.",
+          "verses": [
+            {
+              "surah": 44,
+              "from": 6,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God swears by the clear Book and says that He sent it down in a blessed night [c1]. In it every wise matter is made distinct, as a command from Him [c3]. It is a mercy from the Lord of the one addressed [c4].",
+      "body_md": "God swears by the clear Book and says that He sent it down in a blessed night [c1]. He says that He has always been one who warns [c2].\n\nIn that night every wise matter is made distinct, as a command from God, who says that He has always been one who sends [c3]. It is a mercy from the Lord of the one addressed, who is the one who hears and knows [c4].",
+      "deep_md": "The night is called blessed [c1], and the passage says that in it every wise matter is made distinct [c3]. The passage ties the sending down to warning [c1][c2] and to a command from God [c3]. It ends by naming the whole as mercy [c4].",
+      "kids_md": "God says that He sent it down in a blessed night [c1]. God says that He has always been one who warns [c2]. It is a mercy from our Lord, who hears and knows [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage presents the sending down of the Book as warning and as mercy together [c2][c4]. Another is that it speaks of a night as blessed without describing what happens to it [c1].",
+      "unknowns_md": "- Not established: that the blessed night here is the night of power of the previous chapter. The verses do not say so; the inventory and later readers group them.\n- Not established: what the letters at the opening of the surah mean, or what 'made distinct' covers.\n- Not established: what 'it' is in 44:3 beyond the clear Book that God swears by; whether it is the whole Quran or a part is not said.\n- Not established: when the blessed night was or in what month.\n- Named in later tradition, not in the Quranic text: the identification of this night with the night of power. It is not used in the story texts."
+    },
+    {
+      "anchor": "the-month",
+      "position": 3,
+      "title_en": "The month of the sending down",
+      "event_slug": "night-of-power",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 185,
+          "to": 185
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The month of Ramadan is the one in which the Quran was sent down, as guidance for the people and as clear proofs of the guidance and the criterion.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 185,
+              "to": 185
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God says that He wants ease for them and does not want hardship for them.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 185,
+              "to": 185
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The verse gives as aims that they complete the period, that they magnify God for having guided them, and that they give thanks.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 185,
+              "to": 185
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran was sent down in the month of Ramadan, as guidance for the people and as clear proofs of the guidance and the criterion [c1]. God says that He wants ease for them and not hardship [c2].",
+      "body_md": "The month of Ramadan is the one in which the Quran was sent down, as guidance for the people and as clear proofs of the guidance and the criterion [c1].\n\nThe verse says that God wants ease for them and does not want hardship for them [c2]. It gives as aims that they complete the period, that they magnify God for having guided them, and that they give thanks [c3].",
+      "deep_md": "This verse names the month in which the sending down took place [c1]. It describes the Quran by the words guidance, clear proofs of the guidance, and the criterion [c1]. It links the month to ease and to gratitude [c2][c3].",
+      "kids_md": "The Quran was sent down in the month of Ramadan [c1]. It is guidance for the people [c1]. God says that He wants ease for us and not hardship [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the verse joins the sending down of the Quran to thanks for having been guided [c1][c3]. Another is that it states ease as God's wish [c2].",
+      "unknowns_md": "- Not established: the night of the month in which the sending down took place, or whether the sending down here is the same event as in the other chapters; the verse says only that the Quran was sent down in the month.\n- Not established: whether 'sent down' here means all at once or in parts. Another story speaks of parts.\n- The verse goes on to speak about fasting in this month and about those who are sick or travelling. Those provisions are not restated here; this draft gives no judgement on them, and a scholar should decide whether and how the page presents them.\n- The Arabic word translated 'the criterion' (furqan) is read in more than one way and is left as a rendering for the reviewer."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated reports on the Night of Power, on the sending down of the Quran in the month, and on the date of the night, each with a named grader. None is used in this draft.",
+    "The chapters rest on separate passages. The verses do not say in so many words that the blessed night, the Night of Power and the month are one event; the inventory groups them, and a scholar should decide how the page states the link.",
+    "Named in later tradition, not in the Quranic text: the date of the Night of Power and the identification of the Spirit named in the passage.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

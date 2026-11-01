@@ -1,0 +1,244 @@
+{
+  "slug": "prophets-vision",
+  "title_en": "The vision described in the surah of the star",
+  "title_ar": null,
+  "subject": {
+    "type": "seerah",
+    "event_slug": "prophets-vision"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The occasions of revelation (who the persons were, what happened) are not in the verses; they appear only under unknowns and uncertainties, as later tradition, with the hadith to add later. Pronouns the Arabic leaves open are left open. Chapters are a reading order, not a chronology. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-companion-has-not-strayed",
+      "position": 1,
+      "title_en": "The companion who has not strayed",
+      "event_slug": "prophets-vision",
+      "verses": [
+        {
+          "surah": 53,
+          "from": 1,
+          "to": 4
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God swears by the star when it falls.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 1,
+              "to": 1
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God says that the companion of those addressed has neither strayed nor erred.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 2,
+              "to": 2
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He does not speak out of desire.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "It is nothing but a revelation that is being revealed.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God swears by the star when it falls [c1]. He says that the companion of those addressed has neither strayed nor erred [c2], and that he does not speak out of desire [c3]. It is nothing but a revelation being revealed [c4].",
+      "body_md": "God swears by the star when it falls [c1].\n\nHe says that the companion of those addressed has neither strayed nor erred [c2]. He does not speak out of desire [c3]. It is nothing but a revelation that is being revealed [c4].",
+      "deep_md": "The passage opens with an oath and then makes a series of statements about the companion [c1][c2][c3]. The last statement says what 'it' is, and does so by the word revelation [c4]. The verse does not say what 'it' refers to [c4].",
+      "kids_md": "God swears by the star when it falls [c1]. God says that the companion has not strayed and has not erred [c2]. He does not speak out of desire [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage separates what is said out of desire from what is revealed [c3][c4]. Another is that it begins by setting the companion's honesty before anything else is said [c2].",
+      "unknowns_md": "- Not established: who the companion is. The verse says 'your companion' and gives no name.\n- Not established: what 'it' refers to in 53:4, or whether 'the star when it falls' is a star, a group of stars, or something else; the Arabic word and its verb are read in more than one way.\n- Not established: when or where the words were first heard.\n- Named in later tradition, not in the Quranic text: the identification of the companion and the occasion. Neither is used in the story texts."
+    },
+    {
+      "anchor": "the-one-who-taught",
+      "position": 2,
+      "title_en": "The one who taught",
+      "event_slug": "prophets-vision",
+      "verses": [
+        {
+          "surah": 53,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 53,
+          "from": 10,
+          "to": 12
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The companion was taught by one who is strong in power.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God revealed to His servant what He revealed.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The heart did not lie about what it saw.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The verse asks the listeners whether they will dispute with him about what he sees.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The passage says that the companion was taught by one who is strong in power [c1]. It says that God revealed to His servant what He revealed [c2], that the heart did not lie about what it saw [c3], and asks whether they will dispute with him about what he sees [c4].",
+      "body_md": "The passage says that the companion was taught by one who is strong in power [c1].\n\nIt says that God revealed to His servant what He revealed [c2]. The heart did not lie about what it saw [c3]. The verse then asks the listeners whether they will dispute with him about what he sees [c4].",
+      "deep_md": "The passage names a teacher only by a quality, strong in power, and does not name him [c1]. It does not say what God revealed, only that He revealed what He revealed [c2]. It speaks of the heart and of what was seen, and of a dispute about what is seen [c3][c4].",
+      "kids_md": "The passage says that the companion was taught by one who is strong in power [c1]. God revealed to His servant what He revealed [c2]. The verses say that his heart did not lie about what it saw [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage treats what was revealed and what was seen as true and asks the listeners not to dispute it [c3][c4]. Another is that it leaves what was revealed unspecified [c2].",
+      "unknowns_md": "- Not established: who the teacher is. The verses give a quality and no name; later readers differ on who is meant, and the draft takes no side.\n- Not established: who 'his servant' is, what was revealed to him, or what the heart saw; the verses say 'what He revealed' and 'what it saw'.\n- This chapter leaves out 53:6-9, which speak of where the teacher stood and how near he came. They are left out on purpose, because they invite a picture; a scholar should decide whether the page should present them and in what words.\n- Named in later tradition, not in the Quranic text: the identification of the teacher and of the one who saw. Neither is used in the story texts."
+    },
+    {
+      "anchor": "the-farthest-lote-tree",
+      "position": 3,
+      "title_en": "At the lote tree of the farthest limit",
+      "event_slug": "prophets-vision",
+      "verses": [
+        {
+          "surah": 53,
+          "from": 13,
+          "to": 18
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The verse says that he saw him on another descent, a word that can also be read as another occasion.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "It was at the lote tree of the farthest limit, near which is the garden of refuge.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 14,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "This was when the lote tree was covered by what covered it.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 16,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The sight did not swerve and did not exceed.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He saw some of the greatest signs of his Lord.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The passage says that he saw him on another descent [c1], at the lote tree of the farthest limit, near which is the garden of refuge [c2]. It says that the sight did not swerve and did not exceed [c4], and that he saw some of the greatest signs of his Lord [c5].",
+      "body_md": "The passage says that he saw him on another descent, a word that can also be read as another occasion [c1].\n\nIt was at the lote tree of the farthest limit, near which is the garden of refuge [c2]. This was when the lote tree was covered by what covered it [c3].\n\nThe sight did not swerve and did not exceed [c4]. He saw some of the greatest signs of his Lord [c5].",
+      "deep_md": "The passage does not say who is seen; the pronoun is not resolved in the verse [c1]. It names a place by its names, the lote tree of the farthest limit and the garden of refuge [c2]. What covered the lote tree is not said [c3]. The passage closes with what the sight did not do and with what was seen, signs of his Lord [c4][c5].",
+      "kids_md": "The passage says that he saw something on another occasion [c1]. It was at the lote tree of the farthest limit, near the garden of refuge [c2]. He saw some of the greatest signs of his Lord [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage describes what was seen as signs of the Lord and not as an end in itself [c5]. Another is that it speaks of a sight that did not swerve and did not exceed [c4].",
+      "unknowns_md": "- Not established: whom he saw, or what he saw. The pronoun in 53:13 is not resolved here, and 'the greatest signs' are not listed.\n- Not established: what covered the lote tree, where the tree is, or what 'the farthest limit' is a limit of.\n- Not established: when this took place or how it relates to any journey; the verses do not say.\n- The Arabic word for 'descent' can be read as a descent or as an occasion; the draft gives both.\n- This chapter does not describe the one seen or the manner of the sight, and no verse here does.\n- Named in later tradition, not in the Quranic text: the identification of the one seen and the occasion. Neither is used in the story texts."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated reports on the vision, on the identity of the one who taught and the one seen, and on the occasion, each with a named grader. None is used in this draft.",
+    "This story is drafted with the greatest restraint. It states only what the verses say, names no angel, describes no one, and leaves out 53:6-9, which speak of position and nearness. A scholar should decide whether and how to include them.",
+    "Whether the one who taught (53:5) and the one seen (53:13) are the same, and who they are, is a question the verses leave to interpretation; the draft does not decide it.",
+    "Named in later tradition, not in the Quranic text: the identity of the companion, of the teacher and of the one seen, and the occasion of the passage.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

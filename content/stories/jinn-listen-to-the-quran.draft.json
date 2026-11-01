@@ -1,0 +1,203 @@
+{
+  "slug": "jinn-listen-to-the-quran",
+  "title_en": "The jinn who listened to the Quran",
+  "title_ar": null,
+  "subject": {
+    "type": "seerah",
+    "event_slug": "jinn-listen-to-the-quran"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The occasions of revelation (who the persons were, what happened) are not in the verses; they appear only under unknowns and uncertainties, as later tradition, with the hadith to add later. Pronouns the Arabic leaves open are left open. Chapters are a reading order, not a chronology. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "a-group-of-the-jinn-listens",
+      "position": 1,
+      "title_en": "A group of the jinn listens",
+      "event_slug": "jinn-listen-to-the-quran",
+      "verses": [
+        {
+          "surah": 46,
+          "from": 29,
+          "to": 32
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God says that He directed to the one addressed a group of the jinn, who were listening to the Quran.",
+          "verses": [
+            {
+              "surah": 46,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When they were present they said to one another to be silent, and when it was finished they turned back to their people as warners.",
+          "verses": [
+            {
+              "surah": 46,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They said to their people that they had heard a book sent down after Musa, confirming what was before it, and guiding to the truth and to a straight path.",
+          "verses": [
+            {
+              "surah": 46,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They called on their people to respond to the caller of God and to believe in him, so that God would forgive them part of their sins and protect them from a painful punishment.",
+          "verses": [
+            {
+              "surah": 46,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Whoever does not respond to the caller of God cannot frustrate God on the earth, has no protectors besides Him, and is in clear error.",
+          "verses": [
+            {
+              "surah": 46,
+              "from": 32,
+              "to": 32
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God says that He directed a group of the jinn to the one addressed, and they listened to the Quran [c1]. They turned back to their people as warners [c2], and said that they had heard a book sent down after Musa, guiding to the truth [c3]. They called on their people to respond to the caller of God and to believe [c4].",
+      "body_md": "God says that He directed to the one addressed a group of the jinn, who were listening to the Quran [c1]. When they were present they said to one another to be silent, and when it was finished they turned back to their people as warners [c2].\n\nThey said to their people that they had heard a book sent down after Musa, confirming what was before it, and guiding to the truth and to a straight path [c3]. They called on their people to respond to the caller of God and to believe in him, so that God would forgive them part of their sins and protect them from a painful punishment [c4].\n\nThey added that whoever does not respond to the caller of God cannot frustrate God on the earth, has no protectors besides Him, and is in clear error [c5].",
+      "deep_md": "The passage reports what the jinn said to one another and to their people, not what they saw [c2][c3]. They describe what they heard as a book sent down after Musa that confirms what came before it [c3]. Their call has a promise and a warning: forgiveness and protection for those who respond, and clear error for those who do not [c4][c5]. They do not name the caller of God [c4].",
+      "kids_md": "God says that a group of the jinn listened to the Quran [c1]. They told one another to be silent while they listened [c2]. Then they went back to their people and told them what they had heard [c2][c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage shows listeners who first listen in silence and then go back to their people to tell them [c2]. Another is that it records the jinn describing the book as guiding to the truth and a straight path [c3].",
+      "unknowns_md": "- Not established: how many were in the group. The verse says 'a group' and gives no number.\n- Not established: where or when this happened, or how the jinn came to be directed to the one addressed.\n- Not established: who 'the caller of God' is, or what 'after Musa' says about the book beyond what the jinn say of it.\n- Not established: that this group is the same as the one in the next chapter. The verses do not say so.\n- This chapter describes no jinn; the verses do not.\n- Named in later tradition, not in the Quranic text: the place and the occasion. Neither is used in the story texts."
+    },
+    {
+      "anchor": "what-the-jinn-said",
+      "position": 2,
+      "title_en": "What the jinn said",
+      "event_slug": "jinn-listen-to-the-quran",
+      "verses": [
+        {
+          "surah": 72,
+          "from": 1,
+          "to": 2
+        },
+        {
+          "surah": 72,
+          "from": 11,
+          "to": 11
+        },
+        {
+          "surah": 72,
+          "from": 13,
+          "to": 15
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The one addressed is told to say that it has been revealed to him that a group of the jinn listened, and said that they had heard a wondrous Quran.",
+          "verses": [
+            {
+              "surah": 72,
+              "from": 1,
+              "to": 1
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "It guides to the right course, so they believed in it, and they would never associate anyone with their Lord.",
+          "verses": [
+            {
+              "surah": 72,
+              "from": 2,
+              "to": 2
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Some of them are righteous and some are otherwise, for they were on divided paths.",
+          "verses": [
+            {
+              "surah": 72,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "When they heard the guidance they believed in it; whoever believes in his Lord need not fear loss or burden.",
+          "verses": [
+            {
+              "surah": 72,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Some of them submit and some deviate; those who submit have sought the right course.",
+          "verses": [
+            {
+              "surah": 72,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "As for those who deviate, they are fuel for Hell.",
+          "verses": [
+            {
+              "surah": 72,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The one addressed is told to say that a group of the jinn listened and said that they had heard a wondrous Quran, which guides to the right course, and that they believed in it [c1][c2]. They said that, when they heard the guidance, they believed [c4], and that some of them submit and some deviate [c5].",
+      "body_md": "The one addressed is told to say that it has been revealed to him that a group of the jinn listened, and said that they had heard a wondrous Quran [c1]. It guides to the right course, so they believed in it, and they would never associate anyone with their Lord [c2].\n\nThey said that some of them are righteous and some are otherwise, for they were on divided paths [c3]. When they heard the guidance they believed in it; whoever believes in his Lord need not fear loss or burden [c4].\n\nThey said that some of them submit and some deviate, and that those who submit have sought the right course [c5]. As for those who deviate, they are fuel for Hell [c6].",
+      "deep_md": "Here the speech of the jinn is given to the one addressed as something revealed to him [c1]. They describe the Quran by its effect: it guides to the right course [c2]. They then describe themselves as divided, and say what follows for those who believe and for those who deviate [c3][c4][c5][c6]. The verses of this surah that are not used here speak of other matters; this chapter keeps only what the jinn say of the Quran and of themselves [c1][c3].",
+      "kids_md": "The one addressed is told to say that a group of the jinn listened and said that they had heard a wondrous Quran [c1]. They said that it guides to the right course, so they believed in it [c2]. They said that, when they heard the guidance, they believed [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage shows a hearing that ends in belief, and a statement that those who believe in their Lord need not fear loss or burden [c2][c4]. Another is that the jinn describe themselves honestly as divided into those who submit and those who deviate [c3][c5].",
+      "unknowns_md": "- Not established: that this group is the same as the group in the previous chapter. The verses do not say so.\n- Not established: how many there were, where or when, or how the one addressed learned of it; the verse says that it was revealed to him.\n- Not established: what 'divided paths' (72:11) looks like among the jinn.\n- This chapter leaves out 72:3-10 and 72:12, which speak of other things, among them the sky and what the jinn say of it; a scholar should decide whether any belongs here.\n- This chapter describes no jinn; the verses do not.\n- Named in later tradition, not in the Quranic text: the occasion and the place. Neither is used in the story texts."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated reports on the jinn who listened, on the place and the occasion, and on whether the passages speak of one group or more, each with a named grader. None is used in this draft.",
+    "The chapters rest on separate passages. The verses do not say that the group of 46:29 and the group of 72:1 are the same; the inventory groups them.",
+    "A point for the reviewer: the statement of 72:15 about those who deviate is the jinn's own speech and is kept in the chapter only as such.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

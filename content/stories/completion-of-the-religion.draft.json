@@ -1,0 +1,76 @@
+{
+  "slug": "completion-of-the-religion",
+  "title_en": "The announcement that the religion is completed",
+  "title_ar": null,
+  "subject": {
+    "type": "seerah",
+    "event_slug": "completion-of-the-religion"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The occasions of revelation (who the persons were, what happened) are not in the verses; they appear only under unknowns and uncertainties, as later tradition, with the hadith to add later. Pronouns the Arabic leaves open are left open. Chapters are a reading order, not a chronology. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "today-the-religion-is-completed",
+      "position": 1,
+      "title_en": "The religion is completed",
+      "event_slug": "completion-of-the-religion",
+      "verses": [
+        {
+          "surah": 5,
+          "from": 3,
+          "to": 3
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The verse says that today those who disbelieved have despaired of the religion of those addressed.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Those addressed are told not to fear them but to fear God.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God says that today He has completed their religion for them, has completed His favour upon them, and has approved Islam as their religion.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The verse says that today those who disbelieved have despaired of the religion of those addressed [c1]. They are told not to fear them but to fear God [c2]. God says that today He has completed their religion, completed His favour upon them, and approved Islam as their religion [c3].",
+      "body_md": "The verse says that today those who disbelieved have despaired of the religion of those addressed [c1]. Those addressed are told not to fear them but to fear God [c2].\n\nGod says that today He has completed their religion for them, has completed His favour upon them, and has approved Islam as their religion [c3].",
+      "deep_md": "The statement has parts: what those who disbelieved have done, what those addressed are told, and what God says He has done [c1][c2][c3]. The verse says 'today' and does not give a date [c1][c3]. It does not say what was completed or in what way, only that the religion and the favour were completed [c3]. The same verse contains other matters, which this draft does not restate [c1].",
+      "kids_md": "God says that today He has completed their religion for them [c3]. God says that today He has completed His favour upon them [c3]. God says that He has approved Islam as their religion, and they are told to fear God [c2][c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the verse sets the fear of God against the fear of those who disbelieved [c2]. Another is that it speaks of completion and favour together and puts both with God [c3].",
+      "unknowns_md": "- Not established: which day 'today' is, or where it was. The verse gives no date or place.\n- Not established: what was completed or how, or what 'despaired of your religion' says about what those who disbelieved had hoped for.\n- The same verse also names things made forbidden and a case of need. They are not restated in this chapter, whose subject is the announcement; a scholar should decide whether the page shows the verse whole.\n- Named in later tradition, not in the Quranic text: the day, the place and the occasion of the announcement. None is used in the story texts."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated reports on the day, the place and the occasion of the announcement, each with a named grader. None is used in this draft.",
+    "This chapter quotes only the announcement within 5:3 and leaves out the rest of the verse (the provisions on what is forbidden and the case of need). A scholar should decide whether partial citation of the verse is acceptable on the page.",
+    "Named in later tradition, not in the Quranic text: the day and place of the announcement.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

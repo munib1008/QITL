@@ -1,0 +1,157 @@
+{
+  "slug": "declaration-of-release",
+  "title_en": "The declaration of release from the treaties",
+  "title_ar": null,
+  "subject": {
+    "type": "seerah",
+    "event_slug": "declaration-of-release"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The occasions of revelation (who the persons were, what happened) are not in the verses; they appear only under unknowns and uncertainties, as later tradition, with the hadith to add later. Pronouns the Arabic leaves open are left open. Chapters are a reading order, not a chronology. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "release-and-the-four-months",
+      "position": 1,
+      "title_en": "Release, and the four months",
+      "event_slug": "declaration-of-release",
+      "verses": [
+        {
+          "surah": 9,
+          "from": 1,
+          "to": 4
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "A release from God and His messenger to those among the ones who associate partners with God with whom treaties were made.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 1,
+              "to": 1
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "A command is given to travel freely in the land for four months, with the words 'know that you cannot frustrate God and that God will disgrace the disbelievers'; the verse does not name who is addressed.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 2,
+              "to": 2
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "A proclamation from God and His messenger to the people on the day of the greater pilgrimage says that God is free of those who associate partners, and so is His messenger.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "If they repent it is better for them, and if they turn away they are to know that they cannot frustrate God; good news of a painful punishment is to be given to those who disbelieved.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The exception is for those among them with whom a treaty was made, who then did not diminish anything toward those addressed and did not support anyone against them: their treaty is to be completed to its term; God loves those who are mindful of Him.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The verses open with a release from God and His messenger to those among the ones who associate partners with whom treaties were made [c1]. They give a command to travel freely in the land for four months [c2], and a proclamation on the day of the greater pilgrimage [c3]. They except those who kept their treaty, and say that it is to be completed to its term [c5].",
+      "body_md": "The passage opens with a release from God and His messenger to those among the ones who associate partners with God with whom treaties were made [c1].\n\nA command is given to travel freely in the land for four months, with the words know that you cannot frustrate God and that God will disgrace the disbelievers; the verse does not name who is addressed [c2]. A proclamation from God and His messenger to the people on the day of the greater pilgrimage says that God is free of those who associate partners, and so is His messenger [c3]. If they repent it is better for them, and if they turn away they are to know that they cannot frustrate God; good news of a painful punishment is to be given to those who disbelieved [c4].\n\nThe exception is for those among them with whom a treaty was made, who then did not diminish anything toward those addressed and did not support anyone against them: their treaty is to be completed to its term; God loves those who are mindful of Him [c5].",
+      "deep_md": "The passage has a release [c1], a period of four months [c2], a proclamation [c3], a call to repent [c4] and an exception [c5]. The verse that gives the four months does not name who is addressed [c2]. The exception is for those who kept their treaty and did not support anyone against those addressed, and for them the treaty is to be completed to its term [c5]. The verse ends with God loving those who are mindful of Him [c5].",
+      "kids_md": "The passage opens with a release from treaties, from God and His messenger [c1]. It gives four months to travel freely in the land [c2]. It says that those who kept their treaty are to have it completed to its term, and that God loves those who are mindful of Him [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage separates those who kept a treaty from those who did not, and gives the first a treaty completed to its term [c5]. Another is that it ends with God's love for those who are mindful of Him [c5].",
+      "unknowns_md": "- Not established: which treaties are meant, with which groups, or when and where the proclamation was made. The verses say 'those among the ones who associate partners with whom treaties were made'.\n- Not established: who is addressed in 9:2 and from when the four months run.\n- Not established: what 'the day of the greater pilgrimage' is; the verse names it and does not date it.\n- Not established: who the people are who did not diminish anything and did not support anyone; the verse says 'those among them'.\n- Named in later tradition, not in the Quranic text: the occasion, the year, the groups and the persons concerned. None is used in the story texts."
+    },
+    {
+      "anchor": "after-the-sacred-months",
+      "position": 2,
+      "title_en": "After the sacred months",
+      "event_slug": "declaration-of-release",
+      "verses": [
+        {
+          "surah": 9,
+          "from": 5,
+          "to": 6
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "When the sacred months have passed, those addressed are told to kill those who associate partners wherever they find them, to seize them, to besiege them and to sit in wait for them at every place of ambush.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "If they repent, establish the prayer and give the zakat, those addressed are to let them go on their way; God is forgiving and merciful.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "If any one of those who associate partners asks the one addressed for protection, he is to give him protection until he hears the word of God, then convey him to his place of safety; that is because they are a people who do not know.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 6,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The verses say what is to be done when the sacred months have passed [c1], and that those who repent, establish the prayer and give the zakat are to be let go on their way [c2]. They also say that if any one of them asks for protection, he is to be given protection until he hears the word of God, and then conveyed to his place of safety [c3].",
+      "body_md": "When the sacred months have passed, those addressed are told to kill those who associate partners wherever they find them, to seize them, to besiege them and to sit in wait for them at every place of ambush [c1]. If they repent, establish the prayer and give the zakat, those addressed are to let them go on their way; God is forgiving and merciful [c2].\n\nIf any one of those who associate partners asks the one addressed for protection, he is to give him protection until he hears the word of God, then convey him to his place of safety; that is because they are a people who do not know [c3].",
+      "deep_md": "The passage gives a time, the passing of the sacred months, and what is to be done after it [c1]. It names what ends the matter for those who repent: they are let go on their way [c2]. The verse that follows at once speaks of a different case, one who asks for protection, and gives the reason in the words that they are a people who do not know [c3].",
+      "kids_md": "The passage says that if one of them asks for protection, he is to be given protection until he hears the word of God [c3]. Then he is to be taken to his place of safety [c3]. The passage ends by saying that God is forgiving and merciful [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage includes, beside its commands, a verse about protection for one who asks for it, until he hears the word of God [c3]. Another is that the passage speaks of repenting and of God as forgiving and merciful [c2].",
+      "unknowns_md": "- Not established: which groups the verses apply to, beyond the phrase 'those who associate partners', or when the sacred months are counted from; the verses do not say.\n- Not established: how the verses are to be applied, by whom or in what circumstances. This draft states what the verses say and no conclusion from them.\n- Not established: what repenting consists of beyond the words of 9:5.\n- 9:5 and 9:6 stand beside 9:4, which excepts those who kept their treaty, and beside 9:1-3; a scholar should decide how the page shows the verses together, and whether the verses after 9:6 should be added.\n- Named in later tradition, not in the Quranic text: the occasion, the year, the groups and the persons concerned. None is used in the story texts."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated reports on the occasion and the year of the declaration, on the groups and the treaties concerned and on the application of the verses, each with a named grader. None is used in this draft.",
+    "This story is drafted with restraint. 9:5 is stated in its own words and is kept beside the verses on either side of it; it must not be shown alone, and a scholar should check first how the page words it and how it is placed.",
+    "Named in later tradition, not in the Quranic text: the groups, the treaties, the date and the persons concerned.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

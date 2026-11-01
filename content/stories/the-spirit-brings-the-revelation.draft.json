@@ -1,0 +1,210 @@
+{
+  "slug": "the-spirit-brings-the-revelation",
+  "title_en": "The Spirit brings down the revelation",
+  "title_ar": null,
+  "subject": {
+    "type": "seerah",
+    "event_slug": "the-spirit-brings-the-revelation"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The occasions of revelation (who the persons were, what happened) are not in the verses; they appear only under unknowns and uncertainties, as later tradition, with the hadith to add later. Pronouns the Arabic leaves open are left open. Chapters are a reading order, not a chronology. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "an-angel-and-the-spirit",
+      "position": 1,
+      "title_en": "A named angel and the Spirit",
+      "event_slug": "the-spirit-brings-the-revelation",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 97,
+          "to": 98
+        },
+        {
+          "surah": 16,
+          "from": 102,
+          "to": 102
+        },
+        {
+          "surah": 26,
+          "from": 192,
+          "to": 195
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The one addressed is told to say: whoever is an enemy to a certain angel whom the verse names, it is he who brought it down upon the heart of the one addressed, by the permission of God, confirming what was before it and as guidance and good news for the believers.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 97,
+              "to": 97
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Whoever is an enemy to God, His angels, His messengers and angels whom the verse names, God is an enemy to the disbelievers.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 98,
+              "to": 98
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The one addressed is told to say that the Holy Spirit brought it down from his Lord with the truth, to make firm those who believe, and as guidance and good news for those who submit.",
+          "verses": [
+            {
+              "surah": 16,
+              "from": 102,
+              "to": 102
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "It is the revelation sent down by the Lord of the worlds, and the trustworthy Spirit came down with it.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 192,
+              "to": 193
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "It came down upon the heart of the one addressed, so that he might be one of the warners, in a clear Arabic tongue.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 194,
+              "to": 195
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The verses speak of who brought the revelation down [c1][c3][c4]. One passage names an angel as the one who brought it down upon the heart of the one addressed, by the permission of God [c1]. Another says that the Holy Spirit brought it down from his Lord with the truth [c3], and another that the trustworthy Spirit came down with it [c4], upon the heart of the one addressed, in a clear Arabic tongue [c5].",
+      "body_md": "The one addressed is told to say: whoever is an enemy to a certain angel whom the verse names, it is he who brought it down upon the heart of the one addressed, by the permission of God, confirming what was before it and as guidance and good news for the believers [c1]. The next verse says that whoever is an enemy to God, His angels, His messengers and angels whom the verse names, God is an enemy to the disbelievers [c2].\n\nThe one addressed is also told to say that the Holy Spirit brought it down from his Lord with the truth, to make firm those who believe, and as guidance and good news for those who submit [c3].\n\nIn other verses the revelation is called the revelation sent down by the Lord of the worlds, and the trustworthy Spirit came down with it [c4]. It came down upon the heart of the one addressed, so that he might be one of the warners, in a clear Arabic tongue [c5].",
+      "deep_md": "The passages use different names or titles for the one who brought it down: an angel whom the verse names [c1], the Holy Spirit [c3] and the trustworthy Spirit [c4]. In each case the verses give the revelation as from God, whether by His permission [c1], from the Lord [c3] or sent down by the Lord of the worlds [c4]. In each case the verses place it upon the heart of the one addressed [c1][c5]. Whether the names speak of one being is not stated in the verses [c1][c3][c4].",
+      "kids_md": "The verses say that an angel brought the revelation down upon the heart of the one addressed, by the permission of God [c1]. They also say that the Holy Spirit brought it down from his Lord with the truth [c3]. It came in a clear Arabic tongue [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passages put the source of the revelation with the Lord and describe the one who brings it as acting by His permission [c1][c4]. Another is that they present the revelation as guidance and good news for those who believe and submit [c1][c3].",
+      "unknowns_md": "- Not established: that the angel of 2:97, the Holy Spirit of 16:102 and the trustworthy Spirit of 26:193 are one being. The verses use these names and titles in separate places and do not say that they name one; the draft states each as the verse says it.\n- The angels named in the Arabic of 2:97-98 are referred to here without their names; see the story-level notes.\n- Not established: how the revelation was brought, what the heart refers to, or how the Arabic tongue relates to the bringing.\n- This chapter describes no angel; the verses do not.\n- Not established: when or in what circumstances these verses were first said. The passage at 2:97-98 speaks of enmity without saying whose.\n- Named in later tradition, not in the Quranic text: the people who were hostile, the occasion of 2:97-98, and the identification of the Holy Spirit and the trustworthy Spirit with the named angel. None is used in the story texts."
+    },
+    {
+      "anchor": "the-honoured-messenger",
+      "position": 2,
+      "title_en": "The honoured messenger",
+      "event_slug": "the-spirit-brings-the-revelation",
+      "verses": [
+        {
+          "surah": 81,
+          "from": 19,
+          "to": 25
+        },
+        {
+          "surah": 53,
+          "from": 5,
+          "to": 5
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran is the word of an honoured messenger, one who has power with the Lord of the Throne, of established standing, obeyed there, and trustworthy.",
+          "verses": [
+            {
+              "surah": 81,
+              "from": 19,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The companion of those addressed is not mad.",
+          "verses": [
+            {
+              "surah": 81,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He saw him on the clear horizon.",
+          "verses": [
+            {
+              "surah": 81,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He does not withhold the unseen; the Arabic word is read as 'withholding' or as 'suspected'.",
+          "verses": [
+            {
+              "surah": 81,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "It is not the word of an accursed devil.",
+          "verses": [
+            {
+              "surah": 81,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The companion was taught by one who is strong in power.",
+          "verses": [
+            {
+              "surah": 53,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The verses say that the Quran is the word of an honoured messenger, one who has power with the Lord of the Throne and is trustworthy [c1]. They say that the companion of those addressed is not mad [c2], and that it is not the word of an accursed devil [c5]. In another verse they say that the companion was taught by one who is strong in power [c6].",
+      "body_md": "The verses say that the Quran is the word of an honoured messenger, one who has power with the Lord of the Throne, of established standing, obeyed there, and trustworthy [c1].\n\nThey say that the companion of those addressed is not mad [c2], and that he saw him on the clear horizon [c3]. They say that he does not withhold the unseen; the Arabic word is read as withholding or as suspected [c4]. They say that it is not the word of an accursed devil [c5].\n\nIn another verse the companion is described as taught by one who is strong in power [c6].",
+      "deep_md": "The honoured messenger is described by his standing and his trust and in no other way: he has power with the Lord of the Throne, he is obeyed there and is trustworthy [c1]. The verses do not name him, nor the one seen on the horizon [c1][c3]. They deny madness of the companion and deny that the revelation is the word of an accursed devil [c2][c5]. The verse at 53:5 gives a teacher a quality in the same way, strong in power, without a name [c6].",
+      "kids_md": "The verses say that the Quran is the word of an honoured messenger, who is trustworthy [c1]. They say that the companion is not mad [c2]. They say that it is not the word of an accursed devil [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage describes the messenger by standing and trust and not by form [c1]. Another is that it answers charges made against the revelation and denies them plainly [c2][c5].",
+      "unknowns_md": "- Not established: who the honoured messenger is, who the one seen on the horizon is, or who the teacher strong in power is. None is named in these verses.\n- Not established: that the honoured messenger of 81:19 is the same as the angel of 2:97, the holy spirit of 16:102 or the teacher of 53:5. The verses do not say so.\n- Not established: what 'the clear horizon' is, when the sighting took place, or what 'the unseen' covers.\n- This chapter describes no one; the verses give a standing and a trust, nothing more.\n- Named in later tradition, not in the Quranic text: the identification of the honoured messenger, of the one seen and of the teacher, and the occasion. None is used in the story texts."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated reports on the identity of the Spirit, of the angel named in 2:97 and of the honoured messenger, each with a named grader. None is used in this draft.",
+    "A note on the validator: the shared anchor fixture lists the Arabic name of the angel of 2:97 under tradition names (written for another story, where the verses do not name him). Here 2:97-98 name him in the Arabic, so the draft could not write his name in the story texts and writes 'a certain angel whom the verse names'. A scholar and an editor should restore the name on the page, where it is anchored in 2:97-98.",
+    "This story is drafted with restraint. It states what each verse says, depicts no angel, and does not say that the names and titles in these verses name one being; the inventory title does. A scholar should decide how the page words the link.",
+    "The word read as 'withholding' or 'suspected' in 81:24 is read in more than one way in the tradition of recitation; the draft keeps both.",
+    "Named in later tradition, not in the Quranic text: the identification of the honoured messenger, of the Holy Spirit and of the trustworthy Spirit with the angel named in 2:97.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}
