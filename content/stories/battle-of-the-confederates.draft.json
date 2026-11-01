@@ -1,0 +1,296 @@
+{
+  "slug": "battle-of-the-confederates",
+  "title_en": "The allied factions",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "battle-of-the-confederates"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT draft: it is shorter than the prophet drafts, stays inside the event's own inventory refs and states only what those ayat state; the prophet stories (content/stories) are not repeated here. Chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "they-came-from-above-and-below",
+      "position": 1,
+      "title_en": "They came from above and below",
+      "event_slug": "battle-of-the-confederates",
+      "verses": [
+        {
+          "surah": 33,
+          "from": 9,
+          "to": 11
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The believers were told to remember God's favour to them when forces came against them, and God sent a wind upon them and forces they did not see; God sees what they do.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 9,
+              "to": 9
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They came upon them from above and from below; the sight swerved, hearts reached the throats, and they thought wrong thoughts about God.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "There the believers were tested and shaken with a severe shaking.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The believers were told to remember God's favour when forces came, and God sent a wind and forces they did not see [c1]. They came from above and from below, and the believers were tested and shaken [c2][c3].",
+      "body_md": "The believers were told to remember God's favour to them when forces came against them, and God sent a wind upon them and forces they did not see; God sees what they do [c1].\n\nThey came upon them from above and from below; the sight swerved, hearts reached the throats, and they thought wrong thoughts about God [c2]. There the believers were tested and shaken with a severe shaking [c3].",
+      "deep_md": "The ayah on the wind speaks of a favour to be remembered, and names what God sent: a wind and forces that were not seen [c1]. The next ayat describe the fear: the sight swerved and hearts reached the throats [c2].",
+      "kids_md": "The forces came against the believers from above and below, and they were afraid and tested [c2][c3]. God sent a wind and forces they could not see [c1].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat ask the believers to remember a favour at the very moment of fear [c1][c2]. Another is that the ayat do not hide the fear or the wrong thoughts about God [c2].",
+      "unknowns_md": "- Not established: who the forces were, how many, where they came from or where they stood; the ayat say from above and from below and nothing more.\n- Not established: what the wind was like, how long it lasted, or what the forces they did not see were.\n- Not established: how long the test lasted or how it ended in detail.\n- Named in later tradition, not in the Quranic text: the name of the event as a siege, the defensive works, the groups and the dates."
+    },
+    {
+      "anchor": "fear-and-flight",
+      "position": 2,
+      "title_en": "Fear and flight",
+      "event_slug": "battle-of-the-confederates",
+      "verses": [
+        {
+          "surah": 33,
+          "from": 12,
+          "to": 20
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The hypocrites and those with disease in their hearts said that God and His Messenger had promised them nothing but delusion.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "A party of them said: people of Yathrib, there is no standing for you, so go back; and a group of them asked leave of the Prophet, saying that their houses were exposed, though they were not exposed; they only wanted to flee.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Had their city been entered from its sides and they been asked for sedition, they would have given it, hesitating little; they had made a covenant with God before not to turn their backs, and the covenant with God will be asked about.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 14,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They are told: flight will not benefit you if you flee from death or killing, and then you will be enjoyed only briefly; who can protect you from God if He intends harm for you or intends mercy for you? They will find no ally or helper besides God.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 16,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God knows those among them who hinder others and say to their brothers: come to us; they join the fighting only a little, grudging toward you; when fear comes, they look at you as one overcome by death, and when fear goes, they scald you with sharp tongues, grudging toward good; God made their deeds fruitless.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 18,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They think the factions have not gone; if the factions came again, they would wish to be among the desert nomads asking for news of you, and if they were among you, they would fight only a little.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat tell of hypocrites who said that God and His Messenger had promised only delusion, and of a party who told the people of Yathrib to go back [c1][c2]. They say that flight will not benefit them, and that God made the deeds of those who hold back fruitless [c4][c5].",
+      "body_md": "The hypocrites and those with disease in their hearts said that God and His Messenger had promised them nothing but delusion [c1]. A party of them said: people of Yathrib, there is no standing for you, so go back [c2]. A group of them asked leave of the Prophet, saying that their houses were exposed, though they were not exposed; they only wanted to flee [c2].\n\nHad their city been entered from its sides and they been asked for sedition, they would have given it, hesitating little [c3]. They had made a covenant with God before not to turn their backs, and the covenant with God will be asked about [c3].\n\nThey are told: flight will not benefit you if you flee from death or killing, and then you will be enjoyed only briefly [c4]. They will find no ally or helper besides God [c4].\n\nGod knows those among them who hinder others and say to their brothers: come to us; they join the fighting only a little, grudging toward you [c5]. When fear comes, they look at you as one overcome by death, and when fear goes, they scald you with sharp tongues, grudging toward good; God made their deeds fruitless [c5]. They think the factions have not gone; if the factions came again, they would wish to be among the desert nomads asking for news of you, and if they were among you, they would fight only a little [c6].",
+      "deep_md": "The ayat set the words of the hypocrites, their excuse of exposed houses and their earlier covenant side by side [c1][c2][c3]. They answer with a reminder that flight cannot protect from death and that no one can shield from God [c4]. The last ayat describe their conduct in fear and after fear, and give the verdict that God made their deeds fruitless [c5][c6].",
+      "kids_md": "Some people who were not sincere said the promise was only a delusion, and tried to leave [c1][c2]. The ayat say that running away cannot save anyone from death, and that no one can shield them from God [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat show how fear brings out words that were not believed in the heart [c1][c2]. Another is that the ayat remind them that flight cannot protect from death [c4].",
+      "unknowns_md": "- Not established: who the hypocrites and the party were by name, or how many; the ayat do not name them.\n- Not established: which houses were exposed, or whether any attempt to leave was made; the ayah says only what they asked.\n- Not established: what covenant they had made before; the ayah says they had pledged not to turn their backs.\n- Not established: how long the fear lasted or when the factions went."
+    },
+    {
+      "anchor": "the-believers-answer",
+      "position": 3,
+      "title_en": "The believers' answer",
+      "event_slug": "battle-of-the-confederates",
+      "verses": [
+        {
+          "surah": 33,
+          "from": 21,
+          "to": 24
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "There is a good example for you in the Messenger of God, for whoever hopes in God and the Last Day and remembers God much.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When the believers saw the factions, they said: this is what God and His Messenger promised us, and God and His Messenger spoke the truth; it only increased them in faith and submission.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "There are men among the believers who were true to what they pledged to God; some have fulfilled their vow and some are still waiting, and they have not changed at all.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "This was so that God may reward the truthful for their truth and punish the hypocrites if He wills or turn to them in mercy; God is Forgiving, Merciful.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat say that there is a good example in the Messenger of God, and that the believers, when they saw the factions, said that this was what God and His Messenger had promised [c1][c2]. They say that it only increased them in faith and submission, and that some were true to what they pledged [c2][c3].",
+      "body_md": "There is a good example for you in the Messenger of God, for whoever hopes in God and the Last Day and remembers God much [c1].\n\nWhen the believers saw the factions, they said: this is what God and His Messenger promised us, and God and His Messenger spoke the truth; it only increased them in faith and submission [c2].\n\nThere are men among the believers who were true to what they pledged to God; some have fulfilled their vow and some are still waiting, and they have not changed at all [c3]. This was so that God may reward the truthful for their truth and punish the hypocrites if He wills or turn to them in mercy [c4].",
+      "deep_md": "The same sight, the factions, is met with fear in one group of ayat and with increased faith in these [c2]. The ayat distinguish between those who have fulfilled their vow and those who still wait [c3]. They end with the purpose: to reward the truthful and to leave the hypocrites to God's will to punish them or turn to them [c4].",
+      "kids_md": "The believers saw the factions and said that this was what God and His Messenger had promised [c2]. It only made them believe more and submit more [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat show one sight meeting different hearts [c2]. Another is that the ayat praise men who were true to their pledge to God [c3].",
+      "unknowns_md": "- Not established: who the men who fulfilled their vow are by name, or what the vow was; the ayah says only that they were true to what they pledged.\n- Not established: what the promise they recalled was; the ayah says only that it was what God and His Messenger promised.\n- Not established: who the ones waiting are, or for what.\n- The ayat do not say how the example of the Messenger applies in detail."
+    },
+    {
+      "anchor": "what-god-did",
+      "position": 4,
+      "title_en": "What God did",
+      "event_slug": "battle-of-the-confederates",
+      "verses": [
+        {
+          "surah": 33,
+          "from": 25,
+          "to": 27
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God turned back those who disbelieved in their rage; they gained no good; and God spared the believers from fighting; God is strong and mighty.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He brought down from their strongholds those of the People of the Book who had backed them, and cast terror into their hearts; some you killed and some you took captive.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He made them inherit their land, homes and wealth, and a land they had not trodden; God has power over all things.",
+          "verses": [
+            {
+              "surah": 33,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God turned back those who disbelieved in their rage, and spared the believers from fighting [c1]. He brought down from their strongholds those of the People of the Book who had backed them, and the ayat say that some were killed and some taken captive [c2].",
+      "body_md": "God turned back those who disbelieved in their rage; they gained no good; and God spared the believers from fighting; God is strong and mighty [c1].\n\nHe brought down from their strongholds those of the People of the Book who had backed them, and cast terror into their hearts; some you killed and some you took captive [c2]. He made them inherit their land, homes and wealth, and a land they had not trodden; God has power over all things [c3].",
+      "deep_md": "The ayat go from the turning back of the forces to the fate of those who had backed them, and end with what was inherited [c1][c2][c3]. The description of the People of the Book is by what they did, backing the forces, and not by name [c2].",
+      "kids_md": "God turned back those who came against the believers, and they gained nothing [c1]. He also dealt with those who had backed them, and made the believers inherit their land [c2][c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat end the account with statements about God's strength and power [c1][c3]. Another is that the ayat describe a group by what it did, backing the forces, and then by what befell it [c2].",
+      "unknowns_md": "- Not established: who the People of the Book who backed the forces were, how many were killed or taken captive, or where the strongholds were.\n- Not established: what land they had not trodden, or what became of it.\n- Not established: the date or the length of the events.\n- Named in later tradition, not in the Quranic text: the name of the group, the place and the details of the events that these ayat are linked with; no names are given in the ayat."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the siege, the defences, the groups involved and what followed. None is used in this draft.",
+    "Named in later tradition, not in the Quranic text: the name Khandaq for the defensive works, the name Qurayza for the group in 33:26, and the dates.",
+    "The ayat give no casualties, no dates and no commanders; none are given in this draft.",
+    "The sentence on sedition in 33:14 and the clause on those of the People of the Book in 33:26 are sensitive; a scholar should confirm that the wording stays within what the ayat say.",
+    "The prophet drafts (content/stories) are separate; this event draft stays inside its own refs."
+  ]
+}

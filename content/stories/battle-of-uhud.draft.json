@@ -1,0 +1,411 @@
+{
+  "slug": "battle-of-uhud",
+  "title_en": "The day of the wounds",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "battle-of-uhud"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT draft: it is shorter than the prophet drafts, stays inside the event's own inventory refs and states only what those ayat state; the prophet stories (content/stories) are not repeated here. Chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "going-out-at-dawn",
+      "position": 1,
+      "title_en": "Going out at dawn",
+      "event_slug": "battle-of-uhud",
+      "verses": [
+        {
+          "surah": 3,
+          "from": 121,
+          "to": 122
+        },
+        {
+          "surah": 3,
+          "from": 128,
+          "to": 129
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah says: when you went out at dawn from your family to settle the believers in positions for battle; God is Hearing, Knowing.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 121,
+              "to": 121
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "A pair of parties among them were about to lose heart, though God was their ally; on God let the believers rely.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 122,
+              "to": 122
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The one addressed was told that none of the matter is his, whether God turns to them in mercy or punishes them, for they are wrongdoers.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 128,
+              "to": 128
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "To God belongs what is in the heavens and the earth; He forgives whom He wills and punishes whom He wills; God is Forgiving, Merciful.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 129,
+              "to": 129
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat speak of a going out at dawn to settle the believers in positions for battle, and of a pair of parties who were about to lose heart [c1][c2]. They also tell the one addressed that none of the matter is his, and that God forgives whom He wills [c3][c4].",
+      "body_md": "The ayah says: when you went out at dawn from your family to settle the believers in positions for battle; God is Hearing, Knowing [c1]. A pair of parties among them were about to lose heart, though God was their ally; on God let the believers rely [c2].\n\nThe one addressed was told that none of the matter is his, whether God turns to them in mercy or punishes them, for they are wrongdoers [c3]. To God belongs what is in the heavens and the earth; He forgives whom He wills and punishes whom He wills [c4].",
+      "deep_md": "The ayat do not name the day or the place; they say only that someone went out at dawn from his family to set the believers in positions [c1]. They add that God was the ally of the pair of parties who were about to lose heart [c2]. The words that none of the matter is his are followed by a statement that all belongs to God [c3][c4].",
+      "kids_md": "The ayat say that someone went out at dawn from his family and set the believers in their places for battle [c1]. God said that He is the ally of the believers, and that all belongs to God [c2][c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the believers are told to rely on God even when a pair of parties among them were about to lose heart [c2]. Another is that the ayat close on God's forgiveness and mercy [c4].",
+      "unknowns_md": "- Not established: the name of the day or the place; the ayat name neither. The detailed accounts rest on biographical and historical sources (sira) and on later reports that the repository does not yet hold.\n- Not established: who the pair of parties were, or what made them about to lose heart.\n- Not established: who they are in 3:128, the ones God may turn to or punish; the ayah says them and does not name them.\n- Named in later tradition, not in the Quranic text: the name Uhud for the day and the place, and the names of the commanders and groups."
+    },
+    {
+      "anchor": "days-that-alternate",
+      "position": 2,
+      "title_en": "Days that alternate",
+      "event_slug": "battle-of-uhud",
+      "verses": [
+        {
+          "surah": 3,
+          "from": 139,
+          "to": 143
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "They were told not to weaken or grieve, for they would be the uppermost if they were believers.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 139,
+              "to": 139
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "If a wound had touched them, a like wound had touched the others; God lets such days alternate among people, so that God knows those who believe and takes witnesses from among them; God does not love wrongdoers.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 140,
+              "to": 140
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "This was so that God might purify the believers and wipe out the disbelievers.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 141,
+              "to": 141
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The ayah asks whether they thought they would enter the Garden before God knew those of them who strove and those who were patient.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 142,
+              "to": 142
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They had wished for death before they met it; now they had seen it, looking on.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 143,
+              "to": 143
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The believers were told not to weaken or grieve, and that if a wound had touched them a like wound had touched the others [c1][c2]. The ayat say that God lets such days alternate among people, so that He knows the believers and purifies them [c2][c3].",
+      "body_md": "They were told not to weaken or grieve, for they would be the uppermost if they were believers [c1]. If a wound had touched them, a like wound had touched the others [c2].\n\nGod lets such days alternate among people, so that God knows those who believe and takes witnesses from among them; God does not love wrongdoers [c2]. This was so that God might purify the believers and wipe out the disbelievers [c3].\n\nThe ayah asks whether they thought they would enter the Garden before God knew those of them who strove and those who were patient [c4]. They had wished for death before they met it; now they had seen it, looking on [c5].",
+      "deep_md": "The ayat answer weakness and grief with a statement about the alternation of days among people and give its purposes [c1][c2][c3]. The question about entering the Garden is put to those who had wished for death before meeting it [c4][c5].",
+      "kids_md": "The believers were told not to lose heart or be sad [c1]. God said that days go from one side to another among people, so that He knows who is patient and who strives [c2][c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat answer a wound with the reminder that a like wound touched the others [c2]. Another is that the ayat set striving and patience before the entering of the Garden [c4].",
+      "unknowns_md": "- Not established: what the wound was, how many were wounded or killed on either side, or when and where this was.\n- Not established: who the witnesses are beyond the ayah's words that God takes witnesses from among the believers.\n- Not established: how long the days alternate or how the alternation is counted.\n- The ayat do not name the people who wished for death."
+    },
+    {
+      "anchor": "muhammad-is-only-a-messenger",
+      "position": 3,
+      "title_en": "Muhammad is only a messenger",
+      "event_slug": "battle-of-uhud",
+      "verses": [
+        {
+          "surah": 3,
+          "from": 144,
+          "to": 148
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Muhammad is only a messenger; messengers have passed before him; the ayah asks whether, if he died or were killed, they would turn back on their heels; whoever turns back on his heels will not harm God at all, and God will reward the grateful.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 144,
+              "to": 144
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "No soul dies except by God's leave, at a written, fixed term; whoever wants the reward of this world, God gives him of it, and whoever wants the reward of the Hereafter, God gives him of it, and God will reward the grateful.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 145,
+              "to": 145
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "How many a prophet fought alongside many devoted followers, who did not lose heart for what befell them in God's way, did not weaken and did not give in; God loves the patient.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 146,
+              "to": 146
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Their only words were to ask their Lord to forgive their sins and their excesses in their affair, to make their feet firm and to help them against the disbelieving people; so God gave them the reward of this world and the best reward of the Hereafter, and God loves the doers of good.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 147,
+              "to": 148
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat say that Muhammad is only a messenger, that messengers have passed before him, and ask whether the believers would turn back if he died or were killed [c1]. They add that no soul dies except by God's leave, and tell of earlier followers of prophets who did not lose heart [c2][c3].",
+      "body_md": "Muhammad is only a messenger; messengers have passed before him [c1]. The ayah asks whether, if he died or were killed, they would turn back on their heels; whoever turns back on his heels will not harm God at all, and God will reward the grateful [c1].\n\nNo soul dies except by God's leave, at a written, fixed term [c2]. Whoever wants the reward of this world, God gives him of it, and whoever wants the reward of the Hereafter, God gives him of it, and God will reward the grateful [c2].\n\nHow many a prophet fought alongside many devoted followers, who did not lose heart for what befell them in God's way, did not weaken and did not give in; God loves the patient [c3]. Their only words were to ask their Lord to forgive their sins and their excesses in their affair, to make their feet firm and to help them against the disbelieving people [c4]. God gave them the reward of this world and the best reward of the Hereafter, and God loves the doers of good [c4].",
+      "deep_md": "The ayah puts the question of turning back in terms of death or being killed, and joins it to the statement that the messengers before him passed away [c1]. The ayat then give the example of earlier prophets and their followers, whose only words are quoted as a prayer for forgiveness, firmness and help [c3][c4].",
+      "kids_md": "The ayat remind the believers that Muhammad is a messenger, as messengers came before him [c1]. They tell of followers of earlier prophets who did not lose heart and asked God to forgive them and help them [c3][c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat separate loyalty to God from the survival of any one person [c1]. Another is that the example of earlier followers is a prayer for forgiveness and firmness [c4].",
+      "unknowns_md": "- Not established: what prompted the question about his dying or being killed; the ayah states it as a question only.\n- Not established: who the earlier prophets or their followers were, or how many.\n- Not established: the date or place of any of these events.\n- The ayat do not say how the believers answered."
+    },
+    {
+      "anchor": "what-went-wrong-and-the-pardon",
+      "position": 4,
+      "title_en": "What went wrong, and the pardon",
+      "event_slug": "battle-of-uhud",
+      "verses": [
+        {
+          "surah": 3,
+          "from": 152,
+          "to": 155
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God had fulfilled His promise to them when they were destroying their opponents by His leave, until they lost heart, disputed about the order and disobeyed after He had shown them what they love; some wanted this world and some the Hereafter; then He turned them away from them to test them, and He pardoned them; God is full of bounty to the believers.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 152,
+              "to": 152
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They were climbing up, turning to no one, while the Messenger was calling them from behind; so He repaid them with distress upon distress, so that they would not grieve over what escaped them or what befell them; God is aware of what they do.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 153,
+              "to": 153
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Then after the distress He sent down security, a drowsiness that covered a party of them, while another party were anxious for themselves and thought untruly of God, the thought of ignorance; they asked whether they had any share in the matter, and they were told that the matter is wholly God's.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 154,
+              "to": 154
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Those of them who turned away on the day the pair of armies met, it was only Satan who made them slip, because of some of what they had earned; God has pardoned them; God is Forgiving, Forbearing.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 155,
+              "to": 155
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat say that God fulfilled His promise until they lost heart, disputed the order and disobeyed, and that He then tested them and pardoned them [c1]. They say that Satan made those who turned away slip because of some of what they had earned, and that God has pardoned them [c4].",
+      "body_md": "God had fulfilled His promise to them when they were destroying their opponents by His leave, until they lost heart, disputed about the order and disobeyed after He had shown them what they love [c1]. Some wanted this world and some the Hereafter; then He turned them away from them to test them, and He pardoned them [c1].\n\nThey were climbing up, turning to no one, while the Messenger was calling them from behind [c2]. So He repaid them with distress upon distress, so that they would not grieve over what escaped them or what befell them [c2].\n\nThen after the distress He sent down security, a drowsiness that covered a party of them, while another party were anxious for themselves and thought untruly of God, the thought of ignorance [c3]. They asked whether they had any share in the matter, and they were told that the matter is wholly God's [c3].\n\nThose of them who turned away on the day the pair of armies met, it was only Satan who made them slip, because of some of what they had earned; God has pardoned them [c4].",
+      "deep_md": "The ayat give the cause as a sequence: losing heart, disputing about the order and disobeying [c1]. In the same passage the ayat say that God tested them, that He pardoned them, and that He sent down security as drowsiness on a party of them [c1][c3]. The ayah on the day the pair of armies met ties the slip to Satan and to some of what they had earned, and then to God's pardon [c4].",
+      "kids_md": "The ayat say that the believers lost heart and disagreed about an order, and that God tested them [c1]. God then pardoned them and sent down calm on a party of them [c1][c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat name the faults plainly and then name the pardon [c1][c4]. Another is that the calm is described as coming after the distress [c3].",
+      "unknowns_md": "- Not established: what the order was, who gave it, who disobeyed it, or how many turned away.\n- Not established: where the climbing up took place or who they were running from.\n- Not established: who the party that was anxious for themselves were by name.\n- The ayat give no casualties, names or commanders."
+    },
+    {
+      "anchor": "mercy-the-living-and-the-call",
+      "position": 5,
+      "title_en": "Mercy, the living, and the call",
+      "event_slug": "battle-of-uhud",
+      "verses": [
+        {
+          "surah": 3,
+          "from": 159,
+          "to": 160
+        },
+        {
+          "surah": 3,
+          "from": 169,
+          "to": 175
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "It was by a mercy from God that he was gentle with them; had he been harsh and hard-hearted they would have dispersed from around him; so pardon them, ask forgiveness for them, consult them in the matter, and when you have decided, rely on God; God loves those who rely on Him.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 159,
+              "to": 159
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "If God helps them none can overcome them, and if He forsakes them, no one can help them after Him; let the believers rely on God.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 160,
+              "to": 160
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Do not think of those killed in God's way as dead; rather they are alive with their Lord, provided for, rejoicing in what God has given them of His bounty, and rejoicing for those who have not yet joined them, that there is no fear on them and they will not grieve.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 169,
+              "to": 171
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Those who answered God and the Messenger after the wound had touched them, those of them who did good and feared God, have a great reward.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 172,
+              "to": 172
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "People said to them that the people had gathered against them, so to fear them; it increased them in faith and they said that God is enough for them and an excellent Disposer of affairs; they returned with favour and bounty from God, no harm touching them, following God's approval.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 173,
+              "to": 174
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "It is only Satan who makes his allies fear; so do not fear them, but fear Me, if you are believers.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 175,
+              "to": 175
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat tell the one addressed to pardon them, ask forgiveness for them, consult them, and rely on God [c1]. They say that those killed in God's way are alive with their Lord, and that those who answered God and the Messenger after the wound have a great reward [c3][c4].",
+      "body_md": "It was by a mercy from God that he was gentle with them; had he been harsh and hard-hearted they would have dispersed from around him [c1]. So pardon them, ask forgiveness for them, consult them in the matter, and when you have decided, rely on God; God loves those who rely on Him [c1]. If God helps them none can overcome them, and if He forsakes them, no one can help them after Him; let the believers rely on God [c2].\n\nDo not think of those killed in God's way as dead; rather they are alive with their Lord, provided for, rejoicing in what God has given them of His bounty [c3]. They rejoice for those who have not yet joined them, that there is no fear on them and they will not grieve [c3].\n\nThose who answered God and the Messenger after the wound had touched them, those of them who did good and feared God, have a great reward [c4]. People said to them that the people had gathered against them, so to fear them; it increased them in faith and they said that God is enough for them and an excellent Disposer of affairs [c5]. They returned with favour and bounty from God, no harm touching them, following God's approval [c5].\n\nIt is only Satan who makes his allies fear; so do not fear them, but fear Me, if you are believers [c6].",
+      "deep_md": "The ayah on gentleness says that it was a mercy from God, and gives a series of instructions: pardon, ask forgiveness, consult and rely [c1]. The ayat on the living are addressed to the hearer in the singular and speak of those killed in God's way as provided for and rejoicing [c3]. The passage ends by naming fear as the work of Satan upon his allies and telling the believers to fear God instead [c6].",
+      "kids_md": "God told the one addressed to pardon them, ask forgiveness for them and rely on God [c1]. The ayat say that those killed in God's way are alive with their Lord [c3]. When people tried to frighten the believers, they said that God is enough for them [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat tie gentleness to God's mercy, and tie fear to Satan [c1][c6]. Another is that the reply of the believers to those who tried to frighten them was to say that God is enough for them [c5].",
+      "unknowns_md": "- Not established: who the people were who said the people had gathered, or where and when this was said.\n- Not established: the manner of the life of those killed in God's way, beyond the ayah's words that they are alive with their Lord and provided for.\n- Not established: who he is in 3:159; the ayah speaks of him as gentle and does not name him.\n- Not established: whether 3:172-174 speak of a later event or of this one; the ayat describe those who answered after the wound had touched them."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the course of the battle, the archers, the wounded and the individuals involved. None is used in this draft.",
+    "Named in later tradition, not in the Quranic text: Uhud, and the names of the commanders, the groups and the place; the ayat name neither the day nor the place.",
+    "The ayat state no casualties, no dates and no commanders; none are given in this draft.",
+    "Not drafted: 3:149-151, 3:156-158 and 3:161-168, which cover warnings to the believers and the hypocrites; they are for a later pass. 3:123-127 are told in the draft for the battle of Badr.",
+    "The identification of this whole passage with a single day is from the event inventory and later tradition; the ayat refer to 'the day the pair of armies met' and do not name it."
+  ]
+}

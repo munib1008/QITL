@@ -1,0 +1,291 @@
+{
+  "slug": "annunciation-and-birth-of-isa",
+  "title_en": "The annunciation to Maryam and the birth of Isa",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "annunciation-and-birth-of-isa"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT draft: it is shorter than the prophet drafts, stays inside the event's own inventory refs and states only what those ayat state; the prophet stories (content/stories) are not repeated here. Chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-glad-tidings-to-maryam",
+      "position": 1,
+      "title_en": "The glad tidings to Maryam",
+      "event_slug": "annunciation-and-birth-of-isa",
+      "verses": [
+        {
+          "surah": 3,
+          "from": 42,
+          "to": 42
+        },
+        {
+          "surah": 3,
+          "from": 45,
+          "to": 47
+        },
+        {
+          "surah": 19,
+          "from": 16,
+          "to": 21
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The angels said: O Maryam, God has chosen you, purified you and chosen you over the women of the worlds.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The angels said that God gives her glad tidings of a word from Him, whose name is the Messiah, Isa son of Maryam, held in honour in this world and the next and among those brought near; he will speak to people in the cradle and in maturity, and will be among the righteous.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 45,
+              "to": 46
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Maryam withdrew from her family to a place in the east and took a screen apart from them.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 16,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God sent Our spirit to her; she said: I seek refuge in the Merciful from you, if you fear God.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 17,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He said: I am only a messenger of your Lord, to give you a pure boy.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "She said: how can I have a boy when no human has touched me and I am not unchaste; he said that this is what her Lord said, that it is easy for Him, that He would make him a sign for people and a mercy from Him, and that it was a matter decreed.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 20,
+              "to": 21
+            },
+            {
+              "surah": 3,
+              "from": 47,
+              "to": 47
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God says that He creates what He wills; when He decrees a matter, He only says to it \"Be\", and it is.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 47,
+              "to": 47
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The angels told Maryam that God had chosen her and gave her glad tidings of a word from Him, the Messiah, Isa son of Maryam [c1][c2]. She asked how she could have a boy when no human had touched her, and the answer was that her Lord said it is easy for Him [c6].",
+      "body_md": "The angels said: O Maryam, God has chosen you, purified you and chosen you over the women of the worlds [c1]. They said that God gives her glad tidings of a word from Him, whose name is the Messiah, Isa son of Maryam, held in honour in this world and the next and among those brought near [c2]. He will speak to people in the cradle and in maturity, and will be among the righteous [c2].\n\nMaryam withdrew from her family to a place in the east and took a screen apart from them [c3]. God sent Our spirit to her; she said: I seek refuge in the Merciful from you, if you fear God [c4]. He said: I am only a messenger of your Lord, to give you a pure boy [c5].\n\nShe said: how can I have a boy when no human has touched me and I am not unchaste [c6]. He said that this is what her Lord said, that it is easy for Him, that He would make him a sign for people and a mercy from Him, and that it was a matter decreed [c6]. God says that He creates what He wills; when He decrees a matter, He only says to it \"Be\", and it is [c7].",
+      "deep_md": "The passages give the same answer in different words: in one it is easy for God, and in the other God creates what He wills [c6][c7]. The ayat name him the Messiah and Isa son of Maryam, and say his place is held in honour in this world and the next [c2]. The form in which the spirit came to her is not described in this draft [c4].",
+      "kids_md": "The angels told Maryam that God had chosen her [c1]. They gave her glad tidings of a son called Isa, who would speak to people even in the cradle [c2]. Maryam asked how it could be, and the answer was that it is easy for God [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat set the question of how beside the statement that God creates what He wills [c6][c7]. Another is that Maryam's first words to the spirit are words of refuge in the Merciful [c4].",
+      "unknowns_md": "- Not established: when or where the glad tidings came, or how old Maryam was; the ayat say only that she withdrew to a place in the east.\n- Not established: the form in which the spirit came to her; the ayah speaks of it and this draft does not describe it.\n- Not established: how the glad tidings of 3:45 and the message of 19:19 relate in order; the passages are read as one event.\n- Not established: how the pregnancy began beyond what the ayat state."
+    },
+    {
+      "anchor": "the-birth-and-the-sign",
+      "position": 2,
+      "title_en": "The birth and the sign",
+      "event_slug": "annunciation-and-birth-of-isa",
+      "verses": [
+        {
+          "surah": 19,
+          "from": 22,
+          "to": 26
+        },
+        {
+          "surah": 19,
+          "from": 29,
+          "to": 30
+        },
+        {
+          "surah": 19,
+          "from": 33,
+          "to": 34
+        },
+        {
+          "surah": 21,
+          "from": 91,
+          "to": 91
+        },
+        {
+          "surah": 23,
+          "from": 50,
+          "to": 50
+        },
+        {
+          "surah": 66,
+          "from": 12,
+          "to": 12
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "She conceived him and withdrew with him to a place far away.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The pains of childbirth drove her to the trunk of the palm tree; she said she wished she had died before this and been forgotten.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "She was called from beneath her: do not grieve, your Lord has placed a stream beneath you; shake the trunk of the palm toward you and fresh ripe dates will fall; eat, drink and be content.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 24,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "She was told that if she saw any human, she should say that she had vowed a fast to the Merciful and would not speak to any person that day.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "She pointed to him; they asked how they could speak to one in the cradle, a child; he said: I am a servant of God, He has given me the Book and made me a prophet.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 29,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "He said that peace was on him the day he was born, the day he dies and the day he is raised alive; this is Isa son of Maryam, a word of truth about which they doubt.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 33,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God made Maryam, who guarded her chastity, and her son a sign for the worlds; He breathed into her of Our spirit and sheltered them on elevated ground with a place for settlement and flowing water.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 91,
+              "to": 91
+            },
+            {
+              "surah": 23,
+              "from": 50,
+              "to": 50
+            },
+            {
+              "surah": 66,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Maryam, daughter of Imran, confirmed the words of her Lord and His books and was among the devout.",
+          "verses": [
+            {
+              "surah": 66,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Maryam conceived and withdrew to a place far away, and the pains of childbirth drove her to the trunk of the palm tree [c1][c2]. The child spoke from the cradle, saying he was a servant of God, and God made Maryam and her son a sign for the worlds [c5][c7].",
+      "body_md": "She conceived him and withdrew with him to a place far away [c1]. The pains of childbirth drove her to the trunk of the palm tree; she said she wished she had died before this and been forgotten [c2].\n\nShe was called from beneath her: do not grieve, your Lord has placed a stream beneath you; shake the trunk of the palm toward you and fresh ripe dates will fall; eat, drink and be content [c3]. She was told that if she saw any human, she should say that she had vowed a fast to the Merciful and would not speak to any person that day [c4].\n\nShe pointed to him; they asked how they could speak to one in the cradle, a child; he said: I am a servant of God, He has given me the Book and made me a prophet [c5]. He said that peace was on him the day he was born, the day he dies and the day he is raised alive; this is Isa son of Maryam, a word of truth about which they doubt [c6].\n\nGod made Maryam, who guarded her chastity, and her son a sign for the worlds; He breathed into her of Our spirit and sheltered them on elevated ground with a place for settlement and flowing water [c7]. Maryam, daughter of Imran, confirmed the words of her Lord and His books and was among the devout [c8].",
+      "deep_md": "The ayat on the cradle speech are partly reported by the child and partly closed by the ayah calling him Isa son of Maryam and a word of truth [c5][c6]. The other passages describe Maryam and her son as a sign and speak of her as one who guarded her chastity, confirmed God's words and was among the devout [c7][c8]. The ayat do not say who called her from beneath her [c3].",
+      "kids_md": "When Isa was born, Maryam was told to eat and drink and not to be sad [c3]. She pointed to the baby, and he spoke from the cradle and said he was a servant of God [c5]. God made Maryam and her son a sign for all the worlds [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the account sets her distress beside the words do not grieve [c2][c3]. Another is that the passages call Maryam devout and her son a sign for the worlds [c7][c8].",
+      "unknowns_md": "- Not established: where the place far away was, how long Maryam stayed there, or who was with her.\n- Not established: who called to her from beneath her; the Arabic can be read as a person or as the one under her.\n- Not established: how the people reacted beyond the words the ayat record, or how long after the birth they came.\n- Not established: the date or the day of the birth."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the birth of Isa and on Maryam. None is used in this draft.",
+    "The event is told at greater length in the draft for Isa (content/stories); this event draft stays inside its own inventory refs and states only what those ayat state.",
+    "The caller in 19:24 (who called from beneath her) is read in more than one way in commentary; a scholar should decide whether the page names a reading. The words to be spoken to the people (19:26) are reported speech and nothing more.",
+    "The chapters omit 3:43-44, 19:27-28 and 19:31-32; 19:27-28 refers by name to another figure, which this draft does not repeat."
+  ]
+}

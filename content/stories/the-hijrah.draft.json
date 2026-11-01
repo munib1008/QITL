@@ -1,0 +1,229 @@
+{
+  "slug": "the-hijrah",
+  "title_en": "The emigration",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "the-hijrah"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT draft: it is shorter than the prophet drafts, stays inside the event's own inventory refs and states only what those ayat state; the prophet stories (content/stories) are not repeated here. Chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-plot-and-the-cave",
+      "position": 1,
+      "title_en": "The plot and the cave",
+      "event_slug": "the-hijrah",
+      "verses": [
+        {
+          "surah": 8,
+          "from": 30,
+          "to": 30
+        },
+        {
+          "surah": 9,
+          "from": 40,
+          "to": 40
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah says: when those who disbelieved plotted against you to confine you, kill you or drive you out; they plot, and God plots, and God is the best of plotters.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "If you do not help him, God has helped him when those who disbelieved drove him out, as second of two, when they were in the cave, when he said to his companion: do not grieve, God is with us.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God sent down His tranquillity on him and supported him with forces you did not see, and made the word of those who disbelieved the lowest and the word of God the highest; God is Mighty, Wise.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat say that those who disbelieved plotted to confine, kill or drive out the one addressed, and that God is the best of plotters [c1]. They say that God helped him when he was in the cave as second of two, and said to his companion: do not grieve, God is with us [c2].",
+      "body_md": "The ayah says: when those who disbelieved plotted against you to confine you, kill you or drive you out; they plot, and God plots, and God is the best of plotters [c1].\n\nIf you do not help him, God has helped him when those who disbelieved drove him out, as second of two, when they were in the cave [c2]. He said to his companion: do not grieve, God is with us [c2].\n\nGod sent down His tranquillity on him and supported him with forces you did not see [c3]. He made the word of those who disbelieved the lowest and the word of God the highest; God is Mighty, Wise [c3].",
+      "deep_md": "The first ayah speaks of a plot with possible ends, to confine, kill or drive out, and puts God's plotting beside theirs [c1]. The second ayah is addressed to those who were told to help him, and reminds them that God helped him already [c2]. The comfort in the cave is spoken to a companion, and the ayah says that the tranquillity was sent down on him [c2][c3].",
+      "kids_md": "Those who did not believe made a plan against him, but God is the best of planners [c1]. When he was in the cave he told his companion not to be sad, because God was with them [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayah sets the plotting of people beside the plotting of God [c1]. Another is that the words to the companion are words of comfort, because God is with them [c2].",
+      "unknowns_md": "- Not established: who the one driven out and his companion are; the ayah names neither of them.\n- Not established: where the cave was, how long they stayed, where they went next or how they travelled.\n- Not established: what the forces you did not see were, or what the plot was beyond the possible ends the ayah lists.\n- Not established: whether the two ayat describe the same night; they are read here together as the inventory has them.\n- Named in later tradition, not in the Quranic text: the names of the places, the companion, the route, the date and the details of the plot and the cave."
+    },
+    {
+      "anchor": "those-who-left-their-homes",
+      "position": 2,
+      "title_en": "Those who left their homes",
+      "event_slug": "the-hijrah",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 218,
+          "to": 218
+        },
+        {
+          "surah": 8,
+          "from": 72,
+          "to": 72
+        },
+        {
+          "surah": 8,
+          "from": 74,
+          "to": 74
+        },
+        {
+          "surah": 16,
+          "from": 41,
+          "to": 41
+        },
+        {
+          "surah": 22,
+          "from": 39,
+          "to": 41
+        },
+        {
+          "surah": 59,
+          "from": 8,
+          "to": 9
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Those who believed, those who emigrated and those who strove in God's way, they hope for God's mercy; God is Forgiving, Merciful.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 218,
+              "to": 218
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Those who believed, emigrated and strove with their wealth and themselves in God's way, and those who gave refuge and helped, are allies of one another; they are the believers in truth, and for them is forgiveness and generous provision.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 72,
+              "to": 72
+            },
+            {
+              "surah": 8,
+              "from": 74,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Those who emigrated for God's sake after they were wronged: God will surely settle them in a good place in this world, and the reward of the Hereafter is greater, if they only knew.",
+          "verses": [
+            {
+              "surah": 16,
+              "from": 41,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "A permission was given to those who are fought, because they have been wronged; God is able to help them; they are those who were driven out of their homes without right, only because they said our Lord is God.",
+          "verses": [
+            {
+              "surah": 22,
+              "from": 39,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Had God not repelled people by means of one another, cloisters, churches, synagogues and mosques in which God's name is often mentioned would have been demolished; God will surely help whoever helps Him; God is strong and mighty.",
+          "verses": [
+            {
+              "surah": 22,
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Those whom God establishes in the land establish prayer, give zakat, enjoin what is right and forbid what is wrong; with God is the outcome of all matters.",
+          "verses": [
+            {
+              "surah": 22,
+              "from": 41,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The poor emigrants were driven out of their homes and their wealth, seeking bounty and approval from God and helping God and His Messenger; they are the truthful.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 8,
+              "to": 8
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Those who had settled in the home and in faith before them love those who emigrated to them and find no need in their hearts for what they were given, and prefer them over themselves even if they are in need; whoever is protected from the greed of his own soul, those are the successful.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 9,
+              "to": 9
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat speak of those who believed, emigrated and strove in God's way, and say that they hope for God's mercy [c1]. They speak of the poor emigrants who were driven out of their homes, and of those who had settled in the home before them and loved them [c7][c8].",
+      "body_md": "Those who believed, those who emigrated and those who strove in God's way, they hope for God's mercy; God is Forgiving, Merciful [c1]. Those who believed, emigrated and strove with their wealth and themselves in God's way, and those who gave refuge and helped, are allies of one another [c2]. They are the believers in truth, and for them is forgiveness and generous provision [c2].\n\nThose who emigrated for God's sake after they were wronged: God will surely settle them in a good place in this world, and the reward of the Hereafter is greater, if they only knew [c3].\n\nA permission was given to those who are fought, because they have been wronged; God is able to help them [c4]. They are those who were driven out of their homes without right, only because they said our Lord is God [c4]. Had God not repelled people by means of one another, cloisters, churches, synagogues and mosques in which God's name is often mentioned would have been demolished; God will surely help whoever helps Him [c5]. Those whom God establishes in the land establish prayer, give zakat, enjoin what is right and forbid what is wrong [c6].\n\nThe poor emigrants were driven out of their homes and their wealth, seeking bounty and approval from God and helping God and His Messenger; they are the truthful [c7]. Those who had settled in the home and in faith before them love those who emigrated to them and find no need in their hearts for what they were given, and prefer them over themselves even if they are in need [c8].",
+      "deep_md": "The passages use the word for emigrating together with believing and striving, and in places pair it with being wronged or driven out [c1][c3][c7]. The ayat on those who gave refuge describe love for the emigrants and preferring them over themselves, even in need [c8]. The ayat on permission to those who are fought give the reason as wrong done to them and add that God repels some people by means of others [c4][c5].",
+      "kids_md": "Some believers had to leave their homes because they were wronged [c3][c7]. Others who lived in the place they came to loved them and shared with them, even when they were in need themselves [c8]. God says that those who emigrated and strove hope for His mercy [c1].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat praise those who gave refuge and shared, even when in need [c8]. Another is that the ayat set leaving home for God's sake beside the hope of God's mercy [c1][c3].",
+      "unknowns_md": "- Not established: where the emigrants left from, where they went, when, or in what order; the ayat name no place.\n- Not established: whether every ayah in this chapter speaks of the same emigration; they are grouped here because the event inventory groups them.\n- Not established: who the people who gave refuge were, beyond the ayah's description that they had settled in the home and in faith before.\n- Not established: what the permission in 22:39 was for in practice, or at what time it was given; the draft reports the ayat without a legal conclusion.\n- Named in later tradition, not in the Quranic text: the names of the places of departure and arrival, the groups and the dates."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the emigration, the cave, the route and the settlement. None is used in this draft.",
+    "Named in later tradition, not in the Quranic text: Medina, and the names of the persons and groups.",
+    "The link of 8:30, 9:40, 16:41, 22:39-41, 59:8-9 and 2:218 to a single emigration comes from the event inventory and later tradition; the ayat do not say it.",
+    "The identity of the companion in 9:40 and of the one who spoke to him is not in the ayah; this draft does not name them.",
+    "The draft for the prophet's own story (content/stories) tells the cave in a chapter of its own; this event draft stays inside its own refs."
+  ]
+}

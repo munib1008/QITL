@@ -1,0 +1,264 @@
+{
+  "slug": "expulsion-of-banu-nadir",
+  "title_en": "The expulsion of a party of the People of the Book",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "expulsion-of-banu-nadir"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT draft: it is shorter than the prophet drafts, stays inside the event's own inventory refs and states only what those ayat state; the prophet stories (content/stories) are not repeated here. Chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "driven-from-their-homes",
+      "position": 1,
+      "title_en": "Driven from their homes",
+      "event_slug": "expulsion-of-banu-nadir",
+      "verses": [
+        {
+          "surah": 59,
+          "from": 2,
+          "to": 5
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God drove out those of the People of the Book who disbelieved from their homes at the first gathering; the believers did not think they would leave, and they thought their fortresses would protect them from God; but God came upon them from where they did not expect and cast terror into their hearts; they destroyed their houses with their own hands and the hands of the believers; take a lesson, you who have sight.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 2,
+              "to": 2
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Had God not decreed exile for them, He would have punished them in this world; and in the Hereafter is the punishment of the Fire.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "That was because they opposed God and His Messenger; whoever opposes God, God is severe in punishment.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Whatever palm trees you cut down or left standing on their roots was by God's leave, and so that He might disgrace the defiantly disobedient.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God drove out those of the People of the Book who disbelieved from their homes, and they destroyed their houses with their own hands and the hands of the believers [c1]. The ayat say that they opposed God and His Messenger, and that God had decreed exile for them [c2][c3].",
+      "body_md": "God drove out those of the People of the Book who disbelieved from their homes at the first gathering [c1]. The believers did not think they would leave, and they thought their fortresses would protect them from God; but God came upon them from where they did not expect and cast terror into their hearts [c1]. They destroyed their houses with their own hands and the hands of the believers; take a lesson, you who have sight [c1].\n\nHad God not decreed exile for them, He would have punished them in this world; and in the Hereafter is the punishment of the Fire [c2]. That was because they opposed God and His Messenger; whoever opposes God, God is severe in punishment [c3].\n\nWhatever palm trees you cut down or left standing on their roots was by God's leave, and so that He might disgrace the defiantly disobedient [c4].",
+      "deep_md": "The ayat give the believers' view and the expelled party's view of the same event: the believers did not expect them to leave, and they thought their fortresses would protect them [c1]. The expulsion is called exile, a thing decreed, and the alternative is stated as punishment in this world [c2]. The ayah on the palm trees says that what was cut or left standing was by God's leave [c4].",
+      "kids_md": "A group of the People of the Book had to leave their homes, though they thought their fortresses would protect them [c1]. God said that He had decreed exile for them [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat say that fortresses did not protect them from God, and ask the hearer to take a lesson [c1]. Another is that the ayat give the reason as opposing God and His Messenger [c3].",
+      "unknowns_md": "- Not established: who the party of the People of the Book was by name, where they lived, when they left, or where they went; the ayat describe them and do not name them.\n- Not established: what the first gathering was, or how it relates to a later gathering.\n- Not established: which palm trees these were, or how many.\n- Named in later tradition, not in the Quranic text: the identification of the party, the place and the date. The detailed accounts rest on biographical and historical sources (sira) and on later reports that the repository does not yet hold."
+    },
+    {
+      "anchor": "what-was-returned-and-the-prayer",
+      "position": 2,
+      "title_en": "What was returned, and the prayer of those who came after",
+      "event_slug": "expulsion-of-banu-nadir",
+      "verses": [
+        {
+          "surah": 59,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 59,
+          "from": 10,
+          "to": 10
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "What God returned to His Messenger from them was not something for which the believers had urged horse or camel, but God gives His messengers power over whom He wills; God has power over all things.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 6,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Those who came after them say: our Lord, forgive us and our brothers who preceded us in faith, and do not place any resentment in our hearts toward those who believe; our Lord, You are kind and merciful.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat say that what God returned to His Messenger from them was not gained by the believers urging horse or camel, but that God gives His messengers power over whom He wills [c1]. They record the prayer of those who came after: to forgive them and their brothers who preceded them in faith and to place no resentment in their hearts [c2].",
+      "body_md": "What God returned to His Messenger from them was not something for which the believers had urged horse or camel, but God gives His messengers power over whom He wills; God has power over all things [c1].\n\nThose who came after them say: our Lord, forgive us and our brothers who preceded us in faith, and do not place any resentment in our hearts toward those who believe; our Lord, You are kind and merciful [c2].",
+      "deep_md": "The first ayah explains how the matter came about by saying that it was not by urging horse or camel [c1]. The next ayah is a prayer spoken by later believers for those who preceded them in faith [c2].",
+      "kids_md": "The ayat say that God gives His messengers power over whom He wills [c1]. Later believers pray for their brothers who came before them and ask for no resentment in their hearts [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the prayer asks for forgiveness for those who came earlier and for freedom from resentment [c2]. Another is that the first ayah ties the matter to God's power over all things [c1].",
+      "unknowns_md": "- Not established: what exactly was returned, how it was used, or who received it; the allocation (59:7) is legal in kind and is not drafted here.\n- Not established: who those who came after are by name, or when they came.\n- Not established: how this prayer relates in time to the expulsion.\n- The ayat do not say how much was returned."
+    },
+    {
+      "anchor": "the-hypocrites-promise",
+      "position": 3,
+      "title_en": "The hypocrites' promise",
+      "event_slug": "expulsion-of-banu-nadir",
+      "verses": [
+        {
+          "surah": 59,
+          "from": 11,
+          "to": 14
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Those who showed hypocrisy said to their brothers among the People of the Book who disbelieved: if you are driven out, we will go out with you, and we will never obey anyone against you; and if you are fought, we will help you; God testifies that they are liars.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "If they were driven out, they would not go out with them; if they were fought, they would not help them; and if they helped them, they would turn their backs and then not be helped.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They have more fear of the believers in their hearts than of God, because they are a people who do not understand.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They will not fight the believers all together except in fortified towns or from behind walls; their violence among themselves is severe; you think them united while their hearts are divided, because they are a people who do not reason.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat say that the hypocrites promised their brothers among the People of the Book to go out with them and to help them, and that God testifies they are liars [c1]. They say that if driven out they would not go out with them, and that if fought they would not help them [c2].",
+      "body_md": "Those who showed hypocrisy said to their brothers among the People of the Book who disbelieved: if you are driven out, we will go out with you, and we will never obey anyone against you; and if you are fought, we will help you; God testifies that they are liars [c1].\n\nIf they were driven out, they would not go out with them; if they were fought, they would not help them; and if they helped them, they would turn their backs and then not be helped [c2]. They have more fear of the believers in their hearts than of God, because they are a people who do not understand [c3].\n\nThey will not fight the believers all together except in fortified towns or from behind walls; their violence among themselves is severe; you think them united while their hearts are divided, because they are a people who do not reason [c4].",
+      "deep_md": "The ayat quote the hypocrites' promise and then answer it with God's testimony that they are liars [c1]. They give the answer in a series of conditions: driven out, fought, and helping [c2]. The last ayat explain the failure by what is in the hearts: fear of the believers more than of God, and divided hearts [c3][c4].",
+      "kids_md": "Some people who were not sincere promised their friends to help them, but God said they were not telling the truth [c1]. The ayat say that their hearts were divided [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat show a promise made without sincerity and what happens to it [c1][c2]. Another is that the ayat find the cause in hearts that are divided and do not understand [c3][c4].",
+      "unknowns_md": "- Not established: who the hypocrites were by name, or when and to whom they spoke; the ayat describe them and do not name them.\n- Not established: whether the promise was ever put to the test, beyond what the ayat say would happen.\n- Not established: where the fortified towns were.\n- The ayat do not say how many they were."
+    },
+    {
+      "anchor": "like-those-before-and-like-satan",
+      "position": 4,
+      "title_en": "Like those before, and like Satan",
+      "event_slug": "expulsion-of-banu-nadir",
+      "verses": [
+        {
+          "surah": 59,
+          "from": 15,
+          "to": 17
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "They are like those shortly before them who tasted the evil result of their conduct; for them is a painful punishment.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They are like Satan when he said to the human being: disbelieve; then when he disbelieved, he said: I am free of you, I fear God, the Lord of the worlds.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 16,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The end of both is that they are in the Fire, abiding in it; that is the recompense of the wrongdoers.",
+          "verses": [
+            {
+              "surah": 59,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat compare them to those shortly before them who tasted the evil result of their conduct, and to Satan, who said to the human being: disbelieve [c1][c2]. The end of both is the Fire, which is the recompense of the wrongdoers [c3].",
+      "body_md": "They are like those shortly before them who tasted the evil result of their conduct; for them is a painful punishment [c1].\n\nThey are like Satan when he said to the human being: disbelieve; then when he disbelieved, he said: I am free of you, I fear God, the Lord of the worlds [c2]. The end of both is that they are in the Fire, abiding in it; that is the recompense of the wrongdoers [c3].",
+      "deep_md": "The ayat give comparisons, one with people shortly before them and one with Satan, and draw one ending for both [c1][c2][c3]. The words of Satan are recorded in stages: his saying disbelieve and then his saying that he is free of the one who disbelieved [c2].",
+      "kids_md": "The ayat say that Satan told a human being to disbelieve, and then said he was free of him [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat show Satan's words changing once the human being obeyed [c2]. Another is that the ayat describe the end of the wrongdoers as the Fire [c3].",
+      "unknowns_md": "- Not established: who those shortly before them were, or what they did; the ayah says they tasted the evil result of their conduct.\n- Not established: which human being is meant in the comparison with Satan; the ayah speaks of the human being in general.\n- Not established: when or where the words of Satan were spoken.\n- The ayat do not say how this comparison is tied to the particular events of the expulsion."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the expulsion, the party involved and the sequence of events. None is used in this draft.",
+    "Named in later tradition, not in the Quranic text: the name of the party, Nadir, and the place and date of the expulsion; the inventory title itself says the identification is from later tradition.",
+    "59:7 (the allocation of what was returned) is not drafted because it is legal in kind.",
+    "The link of the hypocrites' promise (59:11-14) to the same event comes from the event inventory; the ayat do not name the event."
+  ]
+}

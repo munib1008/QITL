@@ -1,0 +1,87 @@
+{
+  "slug": "the-table",
+  "title_en": "The table sent down to the disciples",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "the-table"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT draft: it is shorter than the prophet drafts, stays inside the event's own inventory refs and states only what those ayat state; the prophet stories (content/stories) are not repeated here. Chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-request-for-a-table",
+      "position": 1,
+      "title_en": "The request for a table",
+      "event_slug": "the-table",
+      "verses": [
+        {
+          "surah": 5,
+          "from": 112,
+          "to": 115
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The disciples said: O Isa son of Maryam, can your Lord send down on us a table from the sky? He said: fear God, if you are believers.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 112,
+              "to": 112
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They said they wanted to eat from it, that their hearts might be at rest, that they might know he had told them the truth, and that they might be witnesses to it.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 113,
+              "to": 113
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Isa son of Maryam said: O God, our Lord, send down on us a table from the sky, to be a festival for the first of us and the last of us and a sign from You, and provide for us; You are the best of providers.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 114,
+              "to": 114
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God said: I am sending it down to you; whoever among you disbelieves after that, I will punish with a punishment I have not inflicted on anyone among the worlds.",
+          "verses": [
+            {
+              "surah": 5,
+              "from": 115,
+              "to": 115
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The disciples asked Isa son of Maryam whether his Lord could send down a table from the sky, and Isa asked God to send it down [c1][c3]. God said He was sending it down, and warned of a punishment for whoever disbelieved after that [c4].",
+      "body_md": "The disciples said: O Isa son of Maryam, can your Lord send down on us a table from the sky [c1]. He said: fear God, if you are believers [c1].\n\nThey said they wanted to eat from it, that their hearts might be at rest, that they might know he had told them the truth, and that they might be witnesses to it [c2].\n\nIsa son of Maryam said: O God, our Lord, send down on us a table from the sky, to be a festival for the first of us and the last of us and a sign from You, and provide for us; You are the best of providers [c3]. God said: I am sending it down to you; whoever among you disbelieves after that, I will punish with a punishment I have not inflicted on anyone among the worlds [c4].",
+      "deep_md": "Isa first answers the request with a call to fear God, and then makes the request himself in his own prayer [c1][c3]. The disciples give their reasons: to eat, for their hearts to be at rest, to know the truth of what he told them, and to be witnesses [c2]. The ayah gives God's answer in the form I am sending it down, and joins to it a warning for those who disbelieve afterwards [c4].",
+      "kids_md": "The disciples asked Isa if God could send down a table from the sky [c1]. Isa asked God to send it, as a sign and a festival, and God said He would [c3][c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the disciples' reasons for asking are set out in the ayah, and that Isa turns the request into a prayer [c2][c3]. Another is that the answer comes with a warning for whoever disbelieves afterwards [c4].",
+      "unknowns_md": "- Not established: whether the table was in fact sent down; the ayah records God's saying that He is sending it, and the verses cited do not narrate its coming.\n- Not established: what was on the table, when, where, or who ate from it.\n- Not established: who the disciples were by name or how many; the ayah says only the disciples.\n- Not established: how the warning in the last ayah was or was not carried out."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on what was on the table and what followed. None is used in this draft.",
+    "The ayah (5:112) can be read 'can your Lord' or 'would your Lord', with different readings of the first verb; a scholar should decide the wording.",
+    "The Arabic for sky (samaa) is rendered 'sky'; it is often rendered 'heaven', and a scholar should choose."
+  ]
+}

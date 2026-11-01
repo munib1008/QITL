@@ -1,0 +1,273 @@
+{
+  "slug": "expedition-of-tabuk",
+  "title_en": "The hardship and the call to go out",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "expedition-of-tabuk"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT draft: it is shorter than the prophet drafts, stays inside the event's own inventory refs and states only what those ayat state; the prophet stories (content/stories) are not repeated here. Chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-call-to-go-out",
+      "position": 1,
+      "title_en": "The call to go out",
+      "event_slug": "expedition-of-tabuk",
+      "verses": [
+        {
+          "surah": 9,
+          "from": 38,
+          "to": 39
+        },
+        {
+          "surah": 9,
+          "from": 41,
+          "to": 42
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The believers were asked what was wrong with them that when they were told to go out in God's way they clung heavily to the earth, and whether they were content with the life of this world instead of the Hereafter; the enjoyment of this life in the Hereafter is little.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "If they did not go out, God would punish them with a painful punishment and replace them with another people, and they would not harm Him at all; God has power over all things.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They were told to go out, light and heavy, and to strive with their wealth and themselves in God's way; that is better for them, if they only knew.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 41,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Had it been a near gain and an easy journey, they would have followed you, but the distance seemed far to them; they will swear by God that, had they been able, they would have gone out with you, destroying themselves, and God knows that they are liars.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The believers were asked why they clung heavily to the earth when told to go out in God's way, and warned of a painful punishment and replacement if they did not go [c1][c2]. They were told to go out, light and heavy, and to strive with their wealth and themselves, and the ayat say that some would swear they could not [c3][c4].",
+      "body_md": "The believers were asked what was wrong with them that when they were told to go out in God's way they clung heavily to the earth [c1]. They were asked whether they were content with the life of this world instead of the Hereafter; the enjoyment of this life in the Hereafter is little [c1].\n\nIf they did not go out, God would punish them with a painful punishment and replace them with another people, and they would not harm Him at all; God has power over all things [c2].\n\nThey were told to go out, light and heavy, and to strive with their wealth and themselves in God's way; that is better for them, if they only knew [c3]. Had it been a near gain and an easy journey, they would have followed you, but the distance seemed far to them [c4]. They will swear by God that, had they been able, they would have gone out with you, destroying themselves, and God knows that they are liars [c4].",
+      "deep_md": "The ayat move from a question to a warning and then to a command, and end with a description of those who give excuses [c1][c2][c3][c4]. The phrase light and heavy is read in more than one way and is left as it stands [c3].",
+      "kids_md": "The believers were told to go out in God's way, and some held back [c1]. The ayat say that going out and striving is better for them, if they knew [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat set the enjoyment of this life beside the Hereafter [c1]. Another is that the ayat describe excuses as sworn by those who did not go [c4].",
+      "unknowns_md": "- Not established: where the believers were told to go, against whom, when, or how far the distance was; the ayat name no place or enemy.\n- Not established: who the ones who swore were, or how many.\n- Not established: what the light and heavy refer to; commentators read the phrase in more than one way.\n- Named in later tradition, not in the Quranic text: the name Tabuk, the opponents and the place and the season of the journey. The detailed accounts rest on biographical and historical sources (sira) and on later reports that the repository does not yet hold."
+    },
+    {
+      "anchor": "those-who-stayed-behind",
+      "position": 2,
+      "title_en": "Those who stayed behind, and those excused",
+      "event_slug": "expedition-of-tabuk",
+      "verses": [
+        {
+          "surah": 9,
+          "from": 81,
+          "to": 83
+        },
+        {
+          "surah": 9,
+          "from": 86,
+          "to": 93
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Those who were left behind rejoiced at staying behind the Messenger of God and disliked to strive with their wealth and themselves in God's way; they said: do not go out in the heat; they were told that the Fire of Hell is hotter, if they understood.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 81,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Let them laugh a little and weep much, as recompense for what they used to earn.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 82,
+              "to": 82
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "If God brought the Messenger back to a party of them and they asked leave to go out, he was to say: you will never go out with me and will never fight an enemy with me; you were content to sit the first time, so sit with those who stay behind.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 83,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "When a surah was sent down telling them to believe in God and to strive with His Messenger, those of them with means asked leave and said: leave us to be with those who sit; they were content to be with those who stay behind, and their hearts were sealed, so they do not understand.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 86,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "But the Messenger and those who believed with him strove with their wealth and themselves; for them are the good things, and they are the successful; God has prepared for them gardens with rivers beneath them, abiding there; that is the great triumph.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 88,
+              "to": 89
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The excuse-makers among the desert nomads came to be given leave, and those who lied to God and His Messenger stayed behind; a painful punishment will strike those of them who disbelieve.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 90,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "There is no blame on the weak, the sick, or those who find nothing to spend, if they are sincere to God and His Messenger; there is no way against those who do good; God is Forgiving, Merciful.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 91,
+              "to": 91
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "There is no blame either on those who came to him for mounts, and he said that he found nothing to carry them on; they turned away with tears flowing from sorrow that they could not find anything to spend.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 92,
+              "to": 92
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "The blame is only on those who ask leave while they are rich, content to be with those who stay behind; God has sealed their hearts, so they do not know.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 93,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat say that those who were left behind rejoiced at staying behind the Messenger of God, and that those of them with means asked leave to sit [c1][c4]. They say that there is no blame on the weak, the sick and those who find nothing to spend, and that the Messenger and those with him strove [c5][c7].",
+      "body_md": "Those who were left behind rejoiced at staying behind the Messenger of God and disliked to strive with their wealth and themselves in God's way [c1]. They said: do not go out in the heat; they were told that the Fire of Hell is hotter, if they understood [c1]. Let them laugh a little and weep much, as recompense for what they used to earn [c2].\n\nIf God brought the Messenger back to a party of them and they asked leave to go out, he was to say: you will never go out with me and will never fight an enemy with me; you were content to sit the first time, so sit with those who stay behind [c3]. When a surah was sent down telling them to believe in God and to strive with His Messenger, those of them with means asked leave and said: leave us to be with those who sit; their hearts were sealed, so they do not understand [c4].\n\nBut the Messenger and those who believed with him strove with their wealth and themselves; for them are the good things, and they are the successful; God has prepared for them gardens with rivers beneath them, abiding there; that is the great triumph [c5]. The excuse-makers among the desert nomads came to be given leave, and those who lied to God and His Messenger stayed behind; a painful punishment will strike those of them who disbelieve [c6].\n\nThere is no blame on the weak, the sick, or those who find nothing to spend, if they are sincere to God and His Messenger; there is no way against those who do good; God is Forgiving, Merciful [c7]. There is no blame either on those who came to him for mounts, and he said that he found nothing to carry them on; they turned away with tears flowing from sorrow that they could not find anything to spend [c8]. The blame is only on those who ask leave while they are rich, content to be with those who stay behind; God has sealed their hearts, so they do not know [c9].",
+      "deep_md": "The ayat separate those who stayed behind by reason: some are condemned for choosing to sit, and others are cleared because they could not go [c4][c7][c8][c9]. The ayah on the Fire of Hell answers the excuse about the heat with a comparison [c1]. The ayat that describe the Messenger and those who believed with him say what is prepared for them [c5].",
+      "kids_md": "Some people stayed behind and were glad, saying the heat was too great [c1]. The ayat say that the weak and the sick and those who had nothing to spend are not to blame [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat tell apart those who chose to sit from those who could not go and were sorry about it [c7][c8][c9]. Another is that the ayat set the excuse of the heat beside the Fire of Hell [c1].",
+      "unknowns_md": "- Not established: who stayed behind by name or how many; the ayat describe them and do not name them.\n- Not established: when the surah was sent down that called them to believe and strive, or which surah is meant.\n- Not established: how the Messenger answered those who came for mounts beyond the words the ayah records.\n- Not established: what the day of the return to a party of them was."
+    },
+    {
+      "anchor": "the-three-who-were-left-behind",
+      "position": 3,
+      "title_en": "The three who were left behind",
+      "event_slug": "expedition-of-tabuk",
+      "verses": [
+        {
+          "surah": 9,
+          "from": 117,
+          "to": 118
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God turned in mercy to the Prophet and the emigrants and the helpers who followed him in the hour of hardship, after the hearts of a party of them had almost swerved; then He turned to them; He is compassionate and merciful to them.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 117,
+              "to": 117
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God turned also to the three who were left behind, until the earth, for all its breadth, closed in on them and their own souls closed in on them and they realised that there is no refuge from God except in Him; then He turned to them so that they might turn; God is the Accepting of repentance, the Merciful.",
+          "verses": [
+            {
+              "surah": 9,
+              "from": 118,
+              "to": 118
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat say that God turned in mercy to the Prophet and the emigrants and the helpers who followed him in the hour of hardship [c1]. They say that God turned also to the three who were left behind, until the earth closed in on them, and that He is the Accepting of repentance, the Merciful [c2].",
+      "body_md": "God turned in mercy to the Prophet and the emigrants and the helpers who followed him in the hour of hardship, after the hearts of a party of them had almost swerved [c1]. Then He turned to them; He is compassionate and merciful to them [c1].\n\nGod turned also to the three who were left behind, until the earth, for all its breadth, closed in on them and their own souls closed in on them [c2]. They realised that there is no refuge from God except in Him; then He turned to them so that they might turn; God is the Accepting of repentance, the Merciful [c2].",
+      "deep_md": "The ayat name the hour of hardship and say the hearts of a party almost swerved before God turned to them [c1]. The three who were left behind are given a short account of their distress: the earth closing in, their own souls closing in, and the realisation that refuge is only with God [c2].",
+      "kids_md": "God turned in mercy to the Prophet and the believers in a time of hardship [c1]. He also turned to three who had been left behind, when the earth felt too small for them [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat tie the hour of hardship to God's turning in mercy [c1]. Another is that the three found that there is no refuge from God except in Him, and God turned to them so that they might turn [c2].",
+      "unknowns_md": "- Not established: who the three were by name, why they were left behind, or how long it lasted.\n- Not established: what the hour of hardship was or how long it was; the ayah names it as the hour of hardship.\n- Not established: whose hearts almost swerved, or why.\n- Named in later tradition, not in the Quranic text: the names of the three and the details of their story."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the journey, the preparations, those who stayed behind and the three. None is used in this draft.",
+    "Named in later tradition, not in the Quranic text: Tabuk, the Byzantines, and the date and route of the journey; the inventory title itself says the identification is from later tradition.",
+    "Not drafted: 9:40 (told in the draft for the emigration), 9:43-59 (the leave given, and the hypocrites' excuses, offerings and complaints), 9:84-85 and 9:94-96; these are for a later pass.",
+    "9:43 addresses the Prophet about leave given to those who stayed behind; it needs a scholar's wording before it is drafted and is left out for that reason.",
+    "The ayat give no numbers, no dates and no commanders; none are given in this draft."
+  ]
+}
