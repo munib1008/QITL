@@ -1,0 +1,86 @@
+{
+  "slug": "fire-kindler-and-rain-cloud",
+  "title_en": "The kindler of fire and the rain cloud",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "fire-kindler-and-rain-cloud"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-fire-and-the-cloudburst",
+      "position": 1,
+      "title_en": "The kindled fire and the cloudburst",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 2,
+          "from": 17,
+          "to": 20
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah says that their similitude is that of one who kindled a fire; when it lit up what was around him, God took away their light and left them in darknesses, unable to see.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They are deaf, dumb and blind, so they do not return.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The ayah then gives another picture, introduced by the word or: a cloudburst from the sky with darknesses, thunder and lightning in it, from whose thunderclaps they try to shut themselves away for fear of death, while God encompasses the disbelievers.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The lightning almost snatches away their sight; whenever it lights up for them they walk in it, and when it grows dark on them they stand still, and had God willed He would have taken away their hearing and their sight, for God has power over all things.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat give a picture of one who kindled a fire, whose light God took away and who was left in darknesses, and another of a cloudburst with darknesses, thunder and lightning [c1][c3]. In the picture of the cloudburst they walk when the lightning lights up for them and stand still when it grows dark [c4].",
+      "body_md": "The ayah says that their similitude is that of one who kindled a fire [c1]. When it lit up what was around him, God took away their light and left them in darknesses, unable to see [c1]. They are deaf, dumb and blind, so they do not return [c2].\n\nThe ayah then gives another picture, introduced by the word or [c3]. It is a cloudburst from the sky with darknesses, thunder and lightning in it, and they try to shut themselves away from its thunderclaps for fear of death, while God encompasses the disbelievers [c3]. The lightning almost snatches away their sight [c4]. Whenever it lights up for them they walk in it, and when it grows dark on them they stand still [c4]. Had God willed, He would have taken away their hearing and their sight, for God has power over all things [c4].",
+      "deep_md": "The pictures are joined by the word or, and the ayat do not say whether it presents an alternative or a further description of the same people [c3]. In the picture of the fire the light comes from a kindled fire and is taken away, and in the picture of the cloudburst it comes from the lightning and comes and goes [c1][c4]. The ayat call the people deaf, dumb and blind, and the closing ayah says that God could have taken away their hearing and their sight [c2][c4].",
+      "kids_md": "A person kindled a fire, and it lit up what was around him [c1]. Then God took away their light and left them in darknesses [c1]. The next picture is a cloudburst with darkness, thunder and lightning [c3]. When the lightning lights up, they walk, and when it grows dark, they stand still [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the picture of the fire turns on light being given and then taken away [c1]. Another reading is that the picture of the cloudburst shows the same people walking when it is light and standing still when it is dark [c4].",
+      "unknowns_md": "- Not established: who the pronoun their points to in 2:17; it refers to people described in ayat before 2:17, which are outside the ayat cited for this item.\n- Not established: what the kindled fire and the cloudburst stand for beyond what the ayat themselves say about the people.\n- The ayah itself uses the word for a similitude (mathal) in the picture of the fire.\n- The sense of the word or (aw) in 2:19 is read as an alternative or as an addition; this draft leaves it open.\n- The Arabic of 2:19 also names what they put against the thunderclaps, and it is a part of the body; this draft says only that they shut themselves away."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to these ayat.",
+    "The sense of aw in 2:19, and who the pronoun their covers in 2:17, are for a scholar to decide."
+  ]
+}

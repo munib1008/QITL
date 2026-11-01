@@ -1,0 +1,79 @@
+{
+  "slug": "partners-in-one-slave",
+  "title_en": "The man shared among quarrelling partners",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "partners-in-one-slave"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-shared-man",
+      "position": 1,
+      "title_en": "The partners and the one man",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 30,
+          "from": 28,
+          "to": 28
+        },
+        {
+          "surah": 39,
+          "from": 29,
+          "to": 29
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God struck for them a similitude from themselves: do you have, among those you own, partners in what God provided for you, so that you are equal in it, fearing them as you fear one another? Thus God makes the signs clear for a people who use reason.",
+          "verses": [
+            {
+              "surah": 30,
+              "from": 28,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God struck a similitude: a man in whom are quarrelling partners, and a man wholly for one man; the ayah asks whether they are equal in likeness.",
+          "verses": [
+            {
+              "surah": 39,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The ayah says that all praise is for God, but that most of them do not know.",
+          "verses": [
+            {
+              "surah": 39,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "One ayah gives a similitude from themselves and asks whether they have partners among those they own, equal with them in what God provided [c1]. Another gives a similitude of a man in whom are quarrelling partners and a man wholly for one man [c2].",
+      "body_md": "God struck for them a similitude from themselves [c1]. It asks whether they have, among those they own, partners in what God provided for them, so that they are equal in it, fearing them as they fear one another [c1]. Thus God makes the signs clear for a people who use reason [c1].\n\nIn another ayah, God struck a similitude: a man in whom are quarrelling partners, and a man wholly for one man [c2]. The ayah asks whether they are equal in likeness [c2]. It says that all praise is for God, but that most of them do not know [c3].",
+      "deep_md": "Each similitude is built as a question the listeners can answer from their own life [c1][c2]. The first begins with the words from themselves, and the other contrasts one man belonging to quarrelling partners with one man belonging wholly to a single master [c1][c2]. The ayat are in different surahs, and they do not say whether they are one similitude or separate similitudes [c1][c2].",
+      "kids_md": "God struck a similitude from themselves about partners among those they own [c1]. God also struck a similitude of a man in whom are quarrelling partners and a man wholly for one man [c2]. The ayah asks whether they are equal [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the first similitude asks whether anyone treats those they own as equal partners in what God provided [c1]. Another reading is that the later similitude sets a man pulled by quarrelling partners beside a man wholly for one man [c2].",
+      "unknowns_md": "- Not established: who the people addressed are, or what the partners stand for; the ayat state the pictures as questions and give no key.\n- Not established: whether the ayat are one similitude or separate similitudes.\n- The ayat themselves use the word for a similitude (mathal) in both places.\n- The Arabic of 30:28 speaks of those whom the right hands possess; this draft says 'those you own' and keeps the wording general."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to these ayat.",
+    "The wording of shuraka mutashakisun (quarrelling partners) and salaman (wholly for one) is for a scholar to confirm."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "donkey-carrying-books",
+  "title_en": "The donkey carrying books",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "donkey-carrying-books"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-donkey-and-the-books",
+      "position": 1,
+      "title_en": "Those made to carry the Torah",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 62,
+          "from": 5,
+          "to": 5
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah says that the similitude of those who were made to carry the Torah and then did not carry it is like the donkey carrying books.",
+          "verses": [
+            {
+              "surah": 62,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The ayah says that bad is the similitude of the people who denied the signs of God, and that God does not guide the wrongdoing people.",
+          "verses": [
+            {
+              "surah": 62,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayah likens those who were made to carry the Torah and then did not carry it to the donkey carrying books [c1]. It adds that bad is the similitude of the people who denied the signs of God [c2].",
+      "body_md": "The ayah says that the similitude of those who were made to carry the Torah and then did not carry it is like the donkey carrying books [c1]. It adds that bad is the similitude of the people who denied the signs of God [c2]. It ends by saying that God does not guide the wrongdoing people [c2].",
+      "deep_md": "The ayah separates being made to carry the Torah from carrying it, and the similitude rests on that difference [c1]. The ayah then judges the similitude as bad for the people who denied the signs of God [c2]. The ayah does not name the people [c1][c2].",
+      "kids_md": "The ayah says that some were made to carry the Torah and then did not carry it [c1]. It likens them to the donkey carrying books [c1].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the picture sets carrying books on one's back against carrying their meaning, since the ayah speaks of being made to carry the Torah and then not carrying it [c1]. Another reading is that the ayah closes with the statement that God does not guide the wrongdoing people [c2].",
+      "unknowns_md": "- Not established: who exactly were made to carry the Torah; the ayah names no people.\n- Named in later tradition, not in the Quranic text: later commentary identifies the people with a particular community; this draft does not repeat or vouch for it.\n- Not established: what is meant by carrying the Torah beyond the words of the ayah.\n- The ayah itself uses the word for a similitude (mathal), and the word asfar is rendered 'books'; a scholar may prefer another wording."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to this ayah.",
+    "The wording of humilu (were made to carry) and of asfar is for a scholar to confirm."
+  ]
+}

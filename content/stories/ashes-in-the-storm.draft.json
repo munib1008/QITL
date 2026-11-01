@@ -1,0 +1,74 @@
+{
+  "slug": "ashes-in-the-storm",
+  "title_en": "Deeds like ashes on a stormy day",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "ashes-in-the-storm"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "ashes-on-a-stormy-day",
+      "position": 1,
+      "title_en": "Deeds like ashes on a stormy day",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 14,
+          "from": 18,
+          "to": 18
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah says that the similitude of those who disbelieve in their Lord is that their deeds are like ashes that the wind blows hard on a stormy day.",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They have no power over anything of what they earned.",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "That, the ayah says, is the far error.",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayah likens the deeds of those who disbelieve in their Lord to ashes that the wind blows hard on a stormy day [c1]. They have no power over anything of what they earned [c2].",
+      "body_md": "The ayah says that the similitude of those who disbelieve in their Lord is that their deeds are like ashes [c1]. The wind blows hard on the ashes on a stormy day [c1]. They have no power over anything of what they earned [c2]. That, the ayah says, is the far error [c3].",
+      "deep_md": "The ayah gives the similitude in one sentence and then states what follows about those it describes: they have no power over what they earned, and this is the far error [c1][c2][c3]. The picture is of ashes, which are light, and of a wind that blows hard [c1].",
+      "kids_md": "The ayah says that the deeds of those who disbelieve in their Lord are like ashes [c1]. On a stormy day the wind blows hard on them [c1]. They have no power over anything of what they earned [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the picture shows deeds that cannot be gathered back once the wind has taken them [c1][c2]. Another reading is that the ayah calls this the far error [c3].",
+      "unknowns_md": "- Not established: which deeds are meant, or who in particular is meant by those who disbelieve in their Lord; no person is named.\n- Not established: how the ayah relates to the other ayat on deeds that are lost; this draft cites only 14:18.\n- The ayah itself uses the word for a similitude (mathal).\n- The words ashtaddat bihi al-rih (the wind blew hard on it) and al-dalal al-baid (the far error) are rendered here in plain words; a scholar may prefer other wording."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to this ayah.",
+    "The wording of the far error and of the wind blowing hard is for a scholar to confirm."
+  ]
+}

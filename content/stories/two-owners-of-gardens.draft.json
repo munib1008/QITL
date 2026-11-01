@@ -1,0 +1,134 @@
+{
+  "slug": "two-owners-of-gardens",
+  "title_en": "The owner of a pair of gardens",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "two-owners-of-gardens"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-pair-of-gardens",
+      "position": 1,
+      "title_en": "A man with a pair of gardens",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 18,
+          "from": 32,
+          "to": 44
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah tells that a similitude (mathal) is to be struck for them: a pair of men, one of whom God gave a pair of vine gardens, surrounded with date palms, with crops between them.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 32,
+              "to": 32
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Both gardens gave their produce and held back none of it, and God caused a river to flow through them.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 33,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The owner had fruit, and he told his companion, as he talked with him, that he had more wealth and a stronger following; he entered his garden while wronging himself and said that he did not think it would ever perish, that he did not think the final hour would come, and that if he were sent back to his Lord he would find something better than it.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 34,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "His companion answered, as he talked with him, by asking whether he had disbelieved in the one who created him from dust, then from a drop, then shaped him as a man; he said that for his part God is his Lord and that he associates no one with his Lord.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 37,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The companion added that the owner should have said, on entering his garden, that it is as God wills and that there is no power except with God, though he saw that the companion had less wealth and fewer children.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The companion said that it might be that his Lord would give him something better than the owner's garden and would send something from the sky upon the garden so that it became bare, slippery ground, or that its water would sink into the earth so that the owner could not seek it.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 40,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The owner's fruit was encompassed, and he regretted what he had spent on the garden while it lay fallen on its trellises, and he said that he wished he had associated no one with his Lord.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "The owner had no group to help him besides God and could not help himself; there, authority belongs to God, who is best in reward and best in outcome.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 43,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat give a similitude of a man to whom God gave a pair of gardens [c1][c2]. He spoke to his companion of his wealth and did not think the gardens would perish, and he later regretted what he had spent on them after his fruit was encompassed [c3][c7].",
+      "body_md": "The ayat tell that a similitude is to be struck for them: a pair of men, one of whom God gave a pair of vine gardens with date palms around them and crops between them [c1]. Both gardens gave their produce, and God caused a river to flow through them [c2].\n\nThe owner told his companion, as they talked, that he had more wealth and a stronger following [c3]. He entered his garden while wronging himself and said that he did not think it would ever perish, or that the final hour would come [c3]. He added that if he were sent back to his Lord he would find something better [c3].\n\nThe companion asked the owner whether he had disbelieved in the one who created him from dust, then from a drop, then shaped him as a man [c4]. He said that God is his Lord and that he associates no one with his Lord [c4]. He said the owner should have said, on entering his garden, that it is as God wills and that there is no power except with God [c5]. He said it might be that his Lord would give him something better than that garden, and would send something from the sky upon it, or that its water would sink into the earth [c6].\n\nThe owner's fruit was encompassed, and he regretted what he had spent on the garden while it lay fallen on its trellises, and he said that he wished he had associated no one with his Lord [c7]. He had no group to help him besides God, and he could not help himself [c8]. There, authority belongs to God, who is best in reward and best in outcome [c8].",
+      "deep_md": "The text reports the owner's words and the companion's replies as speech and says nothing further about either man beyond what they say [c3][c4]. The ayah says the owner entered his garden while wronging himself, so his words about the garden are placed in that state [c3]. The thing sent from the sky is called husban in the Arabic, and the ayat do not explain what it would be [c6].",
+      "kids_md": "A man had a pair of gardens with vines and date palms, and a river flowing through them [c1][c2]. His companion told him that he should have said that it is as God wills [c5]. Later his fruit was encompassed, and the garden lay fallen on its trellises [c7]. The man then wished that he had associated no one with his Lord [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the companion's reply links the owner's confidence in his wealth to remembering God, since he said the owner should have spoken of God's will on entering his garden [c5]. Another reading is that the ayat end with the owner wishing he had associated no one with his Lord, and with authority belonging to God [c7][c8].",
+      "unknowns_md": "- Not established: who the pair of men were, where they lived or when; the ayat give no names, places, times or ages.\n- Not established: how the fruit was encompassed, or what was sent from the sky; the word husban in 18:40 is left open here.\n- Not established: whether the ayat describe a particular past event or are only an example. The ayah itself calls the passage a similitude (mathal), and this draft keeps to that.\n- The senses of nafar in 18:34 (followers, kin or a group) and of walaya in 18:44 (authority or protection) are left open in this draft."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified for this similitude; a scholar should say whether any should be linked to it.",
+    "The wording of husban (18:40), nafar (18:34) and walaya (18:44) is left open; a scholar should choose how the page words them."
+  ]
+}

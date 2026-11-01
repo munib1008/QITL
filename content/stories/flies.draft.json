@@ -1,0 +1,74 @@
+{
+  "slug": "flies",
+  "title_en": "Those they invoke cannot create a fly",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "flies"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-fly",
+      "position": 1,
+      "title_en": "The fly",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 22,
+          "from": 73,
+          "to": 74
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah addresses people: a similitude is struck, so listen to it: those you call upon besides God will never create a fly, even if they gathered for it.",
+          "verses": [
+            {
+              "surah": 22,
+              "from": 73,
+              "to": 73
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "If the fly takes something from them, they cannot rescue it from it; weak are the seeker and the sought.",
+          "verses": [
+            {
+              "surah": 22,
+              "from": 73,
+              "to": 73
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They did not appraise God with His true appraisal; God is strong and mighty.",
+          "verses": [
+            {
+              "surah": 22,
+              "from": 74,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayah addresses people with a similitude: those they call upon besides God will never create a fly, even if they gathered for it [c1]. If the fly takes something from them, they cannot rescue it from it [c2].",
+      "body_md": "The ayah addresses people: a similitude is struck, so listen to it [c1]. Those you call upon besides God will never create a fly, even if they gathered for it [c1]. If the fly takes something from them, they cannot rescue it from it [c2]. The ayah says that the seeker and the sought are weak [c2].\n\nThe next ayah says that they did not appraise God with His true appraisal [c3]. It adds that God is strong and mighty [c3].",
+      "deep_md": "The similitude is introduced as something to be listened to, and its content is statements about those who are called upon besides God [c1][c2]. The words weak are the seeker and the sought close the picture, and the next ayah turns to how God was appraised [c2][c3]. The ayah does not say which one is the seeker and which the sought [c2].",
+      "kids_md": "The ayah says that those people call upon besides God will never create a fly, even if they gathered for it [c1]. If the fly takes something from them, they cannot rescue it [c2]. God is strong and mighty [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the picture sets the creation of a fly beside those who are called upon besides God [c1]. Another reading is that the next ayah closes by saying that they did not appraise God with His true appraisal and that God is strong and mighty [c3].",
+      "unknowns_md": "- Not established: who those called upon besides God are; the ayah names none.\n- Not established: what was taken by the fly or who held it; the ayah says something and does not name it.\n- The words the seeker and the sought (al-talib wa-l-matlub) are read in more than one way, since the ayah does not say which is the fly and which the one called upon.\n- The ayah itself says that a similitude is struck (duriba mathal)."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to these ayat.",
+    "Who the seeker and the sought are is for a scholar to decide."
+  ]
+}

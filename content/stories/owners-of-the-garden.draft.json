@@ -1,0 +1,122 @@
+{
+  "slug": "owners-of-the-garden",
+  "title_en": "The owners of the garden",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "owners-of-the-garden"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-garden-picked-at-dawn",
+      "position": 1,
+      "title_en": "The garden and the oath to pick it early",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 68,
+          "from": 17,
+          "to": 33
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God says that He tried them as He tried the owners of the garden, when they swore that they would pick its fruit in the morning and made no exception.",
+          "verses": [
+            {
+              "surah": 68,
+              "from": 17,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "A visitation from their Lord went round the garden while they slept, and by morning it had become like al-sarim.",
+          "verses": [
+            {
+              "surah": 68,
+              "from": 19,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "In the morning they called to one another to go early to their tilth if they meant to pick the fruit; they set off whispering to one another that no poor person should enter it that day; and they went early as people who thought themselves able.",
+          "verses": [
+            {
+              "surah": 68,
+              "from": 21,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "When they saw the garden they said that they must have lost their way, and then said that rather they were deprived.",
+          "verses": [
+            {
+              "surah": 68,
+              "from": 26,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The one among them called awsatuhum said that he had told them, asking why they did not glorify God, and they said glory to their Lord, they had been wrongdoers.",
+          "verses": [
+            {
+              "surah": 68,
+              "from": 28,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They turned to blame one another and said woe to them, they had been transgressors, and that it might be that their Lord would give them something better in exchange, since they turned to their Lord in hope.",
+          "verses": [
+            {
+              "surah": 68,
+              "from": 30,
+              "to": 32
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The ayah states that such is the punishment, and that the punishment of the hereafter is greater, if they knew.",
+          "verses": [
+            {
+              "surah": 68,
+              "from": 33,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat say that God tried them as He tried the owners of a garden, who swore to pick its fruit in the morning and made no exception [c1]. A visitation from their Lord went round the garden while they slept, and afterwards they said they had been wrongdoers [c2][c5].",
+      "body_md": "God says that He tried them as He tried the owners of the garden, when they swore that they would pick its fruit in the morning and made no exception [c1]. A visitation from their Lord went round the garden while they slept, and by morning it had become like al-sarim [c2].\n\nIn the morning they called to one another to go early to their tilth if they meant to pick the fruit [c3]. They set off whispering that no poor person should enter it that day, and they went early as people who thought themselves able [c3]. When they saw the garden they said that they must have lost their way, and then that rather they were deprived [c4].\n\nThe one among them called awsatuhum said that he had told them, and asked why they did not glorify God [c5]. They said glory to their Lord, they had been wrongdoers [c5]. They turned to blame one another and said woe to them, they had been transgressors [c6]. They said it might be that their Lord would give them something better in exchange, since they turned to their Lord in hope [c6].\n\nThe ayah states that such is the punishment, and that the punishment of the hereafter is greater, if they knew [c7].",
+      "deep_md": "The passage gives the owners' oath, their whispered plan and their later speech, and it reports all of this as their own words and actions [c1][c3][c6]. The ayat do not say what the visitation was, only that it came from their Lord and went round the garden while they slept [c2]. The closing ayah states a comparison between the punishment seen here and the punishment of the hereafter [c7].",
+      "kids_md": "Some owners of a garden promised to pick its fruit early in the morning, and they made no exception [c1]. They had quietly agreed that no poor person should come in [c3]. A visitation came from their Lord while they slept, and in the morning the garden was changed [c2]. Then they said they had been wrongdoers, and that they hoped their Lord would give them something better [c5][c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat connect what happened to the garden with the oath made without an exception and with the plan to keep a poor person out [c1][c3]. Another reading is that the owners are shown turning to their Lord in hope after they admitted they had been wrongdoers [c5][c6].",
+      "unknowns_md": "- Not established: who the owners were, where the garden was, what it grew, how many of them there were, or when this happened; the ayat give none of this.\n- Not established: what the visitation was or how it reached the garden.\n- Not established: whether the ayat report a past event or give an example. The ayat do not use the word mathal here: they say that God tried them as He tried the owners of the garden. The classification of this item as a parable is the platform's, not the text's.\n- Not established: who is meant by 'them' at the start of 68:17; the pronoun points to people addressed earlier in the surah, outside the ayat cited here.\n- The words al-sarim (68:20, cut away or dark), awsatuhum (68:28, best or most moderate of them) and hard (68:25, resolve, prevention or anger) are read in more than one way; this draft leaves them open."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to this passage.",
+    "The wording of al-sarim (68:20), awsatuhum (68:28) and hard (68:25) is left open; a scholar should choose how the page words them."
+  ]
+}

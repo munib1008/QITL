@@ -1,0 +1,86 @@
+{
+  "slug": "one-given-the-signs",
+  "title_en": "The one given the signs who cast them off",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "one-given-the-signs"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-one-given-the-signs",
+      "position": 1,
+      "title_en": "The one given the signs",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 7,
+          "from": 175,
+          "to": 176
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah commands that the news (naba) be recited to them of the one to whom God gave His signs and who slipped away from them, so Satan followed him and he was among the astray.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 175,
+              "to": 175
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Had God willed, He would have raised him by the signs, but he clung to the earth and followed his desire.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 176,
+              "to": 176
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "His similitude is like the dog: if you attack it, it pants, or if you leave it, it pants.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 176,
+              "to": 176
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The ayah says that this is the similitude of the people who denied the signs of God, and commands to relate the account so that they may reflect.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 176,
+              "to": 176
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat tell of one to whom God gave His signs, who slipped away from them and was followed by Satan [c1]. His similitude is like the dog, which pants if it is attacked and pants if it is left alone [c3].",
+      "body_md": "The ayah commands that the news be recited to them of the one to whom God gave His signs and who slipped away from them [c1]. Satan followed him, and he was among the astray [c1].\n\nHad God willed, He would have raised him by the signs, but he clung to the earth and followed his desire [c2]. His similitude is like the dog: if you attack it, it pants, or if you leave it, it pants [c3]. The ayah says that this is the similitude of the people who denied the signs of God [c4]. It commands to relate the account so that they may reflect [c4].",
+      "deep_md": "The ayat speak of the same matter in more than one way: as news (naba) to be recited, and as a similitude (mathal) [c1][c3]. The man is described by what he was given, what he did with it and what he followed, and the similitude of the dog is attached to him [c1][c2][c3]. The ayah then widens the similitude to the people who denied the signs [c4].",
+      "kids_md": "God gave His signs to one man, and he slipped away from them [c1]. Satan followed him [c1]. The ayah likens him to the dog, which pants if it is attacked and pants if it is left alone [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat describe one who was given the signs and slipped away from them, and say that God could have raised him by them [c1][c2]. Another reading is that the ayat close by telling that the account is to be related so that they may reflect [c4].",
+      "unknowns_md": "- Not established: who the man is; the ayat give no name, place, time or people.\n- Named in later tradition, not in the Quranic text: later sources give the man a name and tell an account about him; this draft does not repeat or vouch for it.\n- Not established: how the signs were given, or in what way he slipped away from them; the ayah says only that he did.\n- The ayat call the account news (naba) and also use the word for a similitude (mathal) for his state; this draft keeps both words.\n- The sense of the pant of the dog as a likeness to the man is not spelled out by the ayah beyond the comparison."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to these ayat.",
+    "The wording of insalakha (slipped away) and akhlada ila al-ard (clung to the earth) is for a scholar to confirm."
+  ]
+}

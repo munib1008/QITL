@@ -1,0 +1,62 @@
+{
+  "slug": "the-one-who-was-dead",
+  "title_en": "The one who was dead and was given life and light",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "the-one-who-was-dead"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-one-given-life-and-light",
+      "position": 1,
+      "title_en": "The one who was dead and was given life",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 6,
+          "from": 122,
+          "to": 122
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah asks whether one who was dead, and whom God gave life and made for him a light by which he walks among people, is like one whose similitude is in the darknesses, from which he does not come out.",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 122,
+              "to": 122
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The ayah says that thus what they used to do was made to seem fair to the disbelievers.",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 122,
+              "to": 122
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayah asks whether one who was dead and whom God gave life and made a light for, by which he walks among people, is like one whose similitude is in the darknesses [c1]. It adds that what they used to do was made to seem fair to the disbelievers [c2].",
+      "body_md": "The ayah asks a question [c1]. It asks whether one who was dead, and whom God gave life and made for him a light by which he walks among people, is like one whose similitude is in the darknesses, from which he does not come out [c1]. The ayah says that thus what they used to do was made to seem fair to the disbelievers [c2].",
+      "deep_md": "The ayah is a question, and it sets states side by side: given life and light, and darknesses from which there is no coming out [c1]. The first person walks among people by the light, and the ayah uses the word for a similitude (mathal) of the one in the darknesses [c1]. The ayah closes by saying what was made to seem fair to the disbelievers [c2].",
+      "kids_md": "The ayah asks about one who was dead and whom God gave life and a light to walk among people by [c1]. It asks whether he is like one who is in the darknesses and does not come out [c1].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayah sets life and light beside darknesses from which there is no coming out [c1]. Another reading is that the ayah ends by saying that what they used to do was made to seem fair to the disbelievers [c2].",
+      "unknowns_md": "- Not established: who the one who was dead and the one in the darknesses are; the ayah names no one.\n- Named in later tradition, not in the Quranic text: later commentary names the persons it takes them to be; this draft does not repeat or vouch for them.\n- Not established: whether dead is meant of the body or of the state of belief; this draft keeps the ayah's word and leaves the sense open.\n- The ayah uses the word for a similitude (mathal) of the one in the darknesses, and puts the whole as a question."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: none identified; a scholar should say whether any should be linked to this ayah.",
+    "The sense of mayyitan (dead) and the grammar of the question in 6:122 are for a scholar to decide."
+  ]
+}

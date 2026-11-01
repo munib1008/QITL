@@ -1,0 +1,86 @@
+{
+  "slug": "good-word-and-evil-word",
+  "title_en": "The good word and the evil word",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "good-word-and-evil-word"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-two-trees",
+      "position": 1,
+      "title_en": "The good word and the evil word as trees",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 14,
+          "from": 24,
+          "to": 27
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah asks whether one has seen how God struck a similitude: a good word is like a good tree, its root firm and its branch in the sky.",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The tree gives its fruit at every time by the permission of its Lord, and God strikes similitudes for people that they may remember.",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The similitude of an evil word is like an evil tree uprooted from the surface of the earth, with no steadiness.",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God makes firm those who believe with the firm word in the life of this world and in the hereafter, and He leaves the wrongdoers astray, and God does what He wills.",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat give a similitude of a good word as a good tree with a firm root and a branch in the sky, and of an evil word as an evil tree uprooted from the surface of the earth [c1][c3]. They add that God makes firm those who believe with the firm word [c4].",
+      "body_md": "The ayah asks whether one has seen how God struck a similitude: a good word is like a good tree, its root firm and its branch in the sky [c1]. The tree gives its fruit at every time by the permission of its Lord [c2]. God strikes similitudes for people that they may remember [c2].\n\nThe similitude of an evil word is like an evil tree uprooted from the surface of the earth, with no steadiness [c3]. God makes firm those who believe with the firm word in the life of this world and in the hereafter [c4]. He leaves the wrongdoers astray, and God does what He wills [c4].",
+      "deep_md": "The ayat pair a good word and an evil word with a good tree and an evil tree, the one firm and the other uprooted [c1][c3]. The good tree has a firm root and gives fruit at every time by the permission of its Lord [c1][c2]. The closing ayah turns from the trees to people and speaks of the firm word [c4].",
+      "kids_md": "A good word is like a good tree with a firm root and a branch in the sky [c1]. It gives fruit at every time by the permission of its Lord [c2]. An evil word is like an evil tree uprooted from the surface of the earth, with no steadiness [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat set a good word beside an evil word through the picture of a good tree and an evil tree [c1][c3]. Another reading is that the closing ayah speaks of God making firm those who believe with the firm word [c4].",
+      "unknowns_md": "- Not established: which good word or which evil word is meant; the ayat name neither, and they do not name the kind of tree.\n- Not established: what the firm word in 14:27 is; the ayah does not define it.\n- Named in later tradition, not in the Quranic text: later commentary identifies the good word, the evil word and the firm word with particular sayings and with particular moments; this draft does not repeat or vouch for them.\n- The ayah itself says that God struck a similitude (mathal)."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: the reports that later commentary links to 14:24-27, to be found, graded by a named grader and linked by a scholar.",
+    "The wording of the firm word (14:27) and of the branch in the sky (14:24) is for a scholar to confirm."
+  ]
+}

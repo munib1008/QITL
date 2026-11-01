@@ -1,0 +1,110 @@
+{
+  "slug": "light",
+  "title_en": "The parable of light",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "light"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-niche-and-the-lamp",
+      "position": 1,
+      "title_en": "The similitude of His light",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 24,
+          "from": 35,
+          "to": 38
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God is the light of the heavens and the earth.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The similitude of His light is like a niche with a lamp in it, the lamp in a glass, the glass like a bright star, lit from a blessed olive tree that is neither eastern nor western, whose oil would almost give light even if no fire touched it: light upon light.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God guides to His light whom He wills, and God strikes the similitudes for people, and God knows all things.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "In houses that God has permitted to be raised and in which His name is remembered, there is glorifying of Him in the mornings and the evenings.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "There are men whom neither trade nor sale distracts from the remembrance of God, from establishing the prayer and from giving zakat; they fear a day on which hearts and sight are turned about.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The ayah states the purpose: that God may reward them with the best of what they did and increase them from His bounty; and God provides for whom He wills without account.",
+          "verses": [
+            {
+              "surah": 24,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayah says that God is the light of the heavens and the earth, and gives a similitude of His light as a niche with a lamp in a glass [c1][c2]. The next ayat speak of houses in which God is remembered and of men whom neither trade nor sale distracts from remembering Him [c4][c5].",
+      "body_md": "God is the light of the heavens and the earth [c1]. The similitude of His light is like a niche with a lamp in it, the lamp in a glass, the glass like a bright star [c2]. The lamp is lit from a blessed olive tree that is neither eastern nor western, whose oil would almost give light even if no fire touched it: light upon light [c2]. God guides to His light whom He wills, and God strikes the similitudes for people, and God knows all things [c3].\n\nIn houses that God has permitted to be raised and in which His name is remembered, there is glorifying of Him in the mornings and the evenings [c4]. There are men whom neither trade nor sale distracts from the remembrance of God, from establishing the prayer and from giving zakat [c5]. They fear a day on which hearts and sight are turned about [c5]. The ayah states the purpose: that God may reward them with the best of what they did and increase them from His bounty [c6]. God provides for whom He wills without account [c6].",
+      "deep_md": "The similitude is built from named parts: a niche, a lamp, a glass, a star and an olive tree, and it ends with the words light upon light [c2]. The ayah then says that God guides to His light whom He wills [c3]. The ayat that follow speak of houses and of men, and the Arabic opens them with the word in, so that they can be read with the niche or as a new sentence [c4][c5].",
+      "kids_md": "God is the light of the heavens and the earth [c1]. The ayah gives a picture of His light as a niche with a lamp in a glass, and the glass is like a bright star [c2]. God guides to His light whom He wills [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayah speaks of the light of God and then of those who remember Him in houses [c1][c4][c5]. Another reading is that the picture of light upon light is followed by the statement that God guides to His light whom He wills [c2][c3].",
+      "unknowns_md": "- Not established: what the niche, the lamp, the glass and the tree each stand for beyond what the ayah says.\n- Not established: whose light the pronoun in 'His light' (nurihi) is read as; it is read as God's light, and some readings take it as the light of the believer. This draft keeps God's light.\n- The attachment of 24:36 to the picture of the niche is read in more than one way; this draft treats the houses as a separate statement.\n- Named in later tradition, not in the Quranic text: later commentary identifies the houses, the men and the blessed tree with particular buildings, people and trees; this draft does not repeat or vouch for them.\n- The ayah itself says that God strikes the similitudes (24:35).\n- The phrase kawkab durri is rendered 'a bright star'; a scholar may prefer another wording."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: the reports that later commentary links to 24:35-38, to be found, graded by a named grader and linked by a scholar.",
+    "The wordings to check first: the attachment of 24:36, the pronoun in 'His light', and kawkab durri."
+  ]
+}

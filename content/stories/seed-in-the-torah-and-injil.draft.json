@@ -1,0 +1,98 @@
+{
+  "slug": "seed-in-the-torah-and-injil",
+  "title_en": "The sown seed in the Torah and the Injil",
+  "title_ar": null,
+  "subject": {
+    "type": "parable",
+    "event_slug": "seed-in-the-torah-and-injil"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. A parable or similitude is not a dated event and is not placed in any order: the chapter states only what the ayat present as a similitude, what it is likened to, and what the ayat themselves say. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-seed-in-the-torah-and-injil",
+      "position": 1,
+      "title_en": "The similitude in the Torah and in the Injil",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 48,
+          "from": 29,
+          "to": 29
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Muhammad is the messenger of God, and those with him are firm against the disbelievers and merciful among themselves; you see them bowing and prostrating, seeking bounty from God and approval.",
+          "verses": [
+            {
+              "surah": 48,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Their mark is on their faces, from the trace of prostration.",
+          "verses": [
+            {
+              "surah": 48,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The ayah says that this is their similitude in the Torah.",
+          "verses": [
+            {
+              "surah": 48,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Their similitude in the Injil is like a seed that put forth its shoot, then strengthened it, then it grew thick and stood upright on its stalk, pleasing the sowers, so that God may enrage the disbelievers through them.",
+          "verses": [
+            {
+              "surah": 48,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God has promised those among them who believed and did righteous deeds forgiveness and a great reward.",
+          "verses": [
+            {
+              "surah": 48,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayah describes those with Muhammad and says that this is their similitude in the Torah [c1][c3]. Their similitude in the Injil is like a seed that put forth its shoot and grew thick and stood upright on its stalk [c4].",
+      "body_md": "Muhammad is the messenger of God, and those with him are firm against the disbelievers and merciful among themselves [c1]. You see them bowing and prostrating, seeking bounty from God and approval [c1]. Their mark is on their faces, from the trace of prostration [c2]. The ayah says that this is their similitude in the Torah [c3].\n\nTheir similitude in the Injil is like a seed that put forth its shoot, then strengthened it, then it grew thick and stood upright on its stalk, pleasing the sowers, so that God may enrage the disbelievers through them [c4]. God has promised those among them who believed and did righteous deeds forgiveness and a great reward [c5].",
+      "deep_md": "The ayah gives a description of those with Muhammad and then names the Torah and the Injil as the places for their similitude [c1][c3][c4]. The picture in the Injil is of a seed that goes through stages: a shoot, strengthening, thickening and standing upright on its stalk [c4]. The ayah ends with a promise of forgiveness and a great reward to those among them who believed and did righteous deeds [c5].",
+      "kids_md": "The ayah says that Muhammad is the messenger of God, and that those with him are merciful among themselves [c1]. It says that you see them bowing and prostrating [c1]. Their similitude in the Injil is like a seed that put forth its shoot and grew thick and stood upright on its stalk [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the picture of the seed shows growth in stages, from a shoot to standing upright on its stalk [c4]. Another reading is that the ayah joins this picture to a description of those with Muhammad as bowing and prostrating and seeking bounty from God and approval [c1][c4].",
+      "unknowns_md": "- Not established: who those with him are by name; the ayah names no one except the messenger.\n- Named in later tradition, not in the Quranic text: later sources identify those with him with particular people and events; this draft does not repeat or vouch for them.\n- Not established: what the Torah and the Injil say of them; this draft cites the Quran only and does not quote those books.\n- The ayah can be read as that is their similitude in the Torah, and their similitude in the Injil is like a seed, or as one similitude stated for both books; this draft follows the first reading and leaves the other open.\n- The ayah itself uses the word for a similitude (mathal) in both places."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: the reports that later commentary links to 48:29, to be found, graded by a named grader and linked by a scholar.",
+    "The wordings to check first: the division of the clause about the Torah and the Injil, and the word sima (mark) with its place on the faces."
+  ]
+}
