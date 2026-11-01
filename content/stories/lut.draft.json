@@ -1,0 +1,935 @@
+{
+  "slug": "lut",
+  "title_en": "Lut and his people",
+  "title_ar": "لوط",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "lut"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The chapters are a reading order built from the narrative, not a chronology the Quran claims; verses come from several surahs and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "lut-speaks-to-his-people",
+      "position": 1,
+      "title_en": "Lut speaks to his people",
+      "event_slug": "people-of-lut",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 80,
+          "to": 81
+        },
+        {
+          "surah": 26,
+          "from": 160,
+          "to": 166
+        },
+        {
+          "surah": 27,
+          "from": 54,
+          "to": 55
+        },
+        {
+          "surah": 29,
+          "from": 28,
+          "to": 29
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The people of Lut denied the messengers, and Lut, their brother, asked them whether they would not be mindful of God, and said he was a trustworthy messenger to them.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 160,
+              "to": 162
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Lut told them to be mindful of God and to obey him, and said he asked them for no payment, since his reward lay only with the Lord of the worlds.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 163,
+              "to": 164
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Lut asked his people whether they were committing the shameful deed, which the Arabic calls fahisha, that none in the worlds had done before them, and whether they did it while they could see.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 80,
+              "to": 80
+            },
+            {
+              "surah": 27,
+              "from": 54,
+              "to": 54
+            },
+            {
+              "surah": 29,
+              "from": 28,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Lut said that they approached men with desire instead of women, and called them a people who go beyond bounds and a people who act in ignorance.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 81,
+              "to": 81
+            },
+            {
+              "surah": 27,
+              "from": 55,
+              "to": 55
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Lut asked whether they approached the males among the worlds and left what their Lord had created for them of their spouses, and said that they were a people who transgress.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 165,
+              "to": 166
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Lut said that they approached men, cut off the road, and did the wrong in their gathering place.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Lut told his people to be mindful of God and said he was a trustworthy messenger who asked them for no payment [c1][c2]. He asked whether they were committing a shameful deed that none in the worlds had done before them [c3], and said they approached men with desire instead of women [c4].",
+      "body_md": "The people of Lut denied the messengers [c1]. Lut, their brother, asked them whether they would not be mindful of God, and said he was a trustworthy messenger to them [c1]. He told them to be mindful of God and to obey him, and said he asked them for no payment, since his reward lay only with the Lord of the worlds [c2].\n\nLut asked his people whether they were committing the shameful deed, which the Arabic calls fahisha, that none in the worlds had done before them, and whether they did it while they could see [c3]. He said that they approached men with desire instead of women, and called them a people who go beyond bounds and a people who act in ignorance [c4]. In another passage he asked whether they approached the males among the worlds and left what their Lord had created for them of their spouses, and said that they were a people who transgress [c5]. He also said that they approached men, cut off the road, and did the wrong in their gathering place [c6].",
+      "deep_md": "Passages from different surahs give Lut's address to his people, and each adds something [c1][c3][c4][c5][c6]. The opening in the style of the other messengers, with the question about being mindful of God, the claim of trustworthiness and no payment, is at 26:160-164 [c1][c2]. The act itself is named as a shameful deed that none had done before at 7:80 and 29:28 [c3]. The act is described at 7:81 and 27:55 [c4], at 26:165-166 [c5], and at 29:29 [c6]. The Quran does not give these as a single speech [c3][c4][c5][c6].",
+      "kids_md": "God sent Lut to his people [c1]. Lut told them to be mindful of God and to obey him [c2]. He said he was a trustworthy messenger and that he did not ask them for any payment [c1][c2]. He told them that they were doing a shameful deed that nobody in the worlds had done before them [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Lut begins by calling his people to be mindful of God and by saying that he asks no payment [c1][c2], before he names what he objects to [c3]. Another is that the passages describe him as speaking to them directly, by name and by question [c3][c5].",
+      "unknowns_md": "- Not established: when Lut lived, how old he was, who his family was, or how long he called his people.\n- Not established: where the town was; the verses speak of the town of his people and do not name it.\n- Not established: the exact sense of the phrase rendered while they could see (27:54); it may mean that they did it openly or with awareness, and the draft keeps the wording general.\n- Not established: what cut off the road (29:29) refers to; the phrase is read in more than one way and the draft keeps the wording of the verse.\n- Named in later tradition, not in the Quranic text: the names of the towns of Lut's people. None is used in the story texts."
+    },
+    {
+      "anchor": "their-answer",
+      "position": 2,
+      "title_en": "Their answer",
+      "event_slug": "people-of-lut",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 82,
+          "to": 82
+        },
+        {
+          "surah": 26,
+          "from": 167,
+          "to": 169
+        },
+        {
+          "surah": 27,
+          "from": 56,
+          "to": 56
+        },
+        {
+          "surah": 29,
+          "from": 29,
+          "to": 30
+        },
+        {
+          "surah": 54,
+          "from": 33,
+          "to": 33
+        },
+        {
+          "surah": 54,
+          "from": 36,
+          "to": 36
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Their only answer was to say that Lut and those with him should be driven out of their town, because they were people who kept themselves pure.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 82,
+              "to": 82
+            },
+            {
+              "surah": 27,
+              "from": 56,
+              "to": 56
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They said that if Lut did not stop, he would be among those driven out; Lut said that he was one of those who detest their deed.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 167,
+              "to": 168
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Their only answer was to say that he should bring them the punishment of God if he was truthful.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Lut prayed to his Lord to save him and his family from what they did.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 169,
+              "to": 169
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Lut prayed to his Lord to help him against the people who spread corruption.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The people of Lut denied the warnings, and Lut had warned them of God's seizing, but they doubted the warnings.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 33,
+              "to": 33
+            },
+            {
+              "surah": 54,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The people of Lut answered by saying that Lut and those with him should be driven out of the town [c1], and that he should bring them the punishment of God [c3]. Lut prayed to his Lord to save him and his family from what they did [c4].",
+      "body_md": "Their only answer was to say that Lut and those with him should be driven out of their town, because they were people who kept themselves pure [c1]. They said that if Lut did not stop, he would be among those driven out [c2]. Lut said that he was one of those who detest their deed [c2].\n\nTheir only answer was also to say that he should bring them the punishment of God if he was truthful [c3]. Lut prayed to his Lord to save him and his family from what they did [c4]. He prayed to his Lord to help him against the people who spread corruption [c5]. The Quran says that the people of Lut denied the warnings, and that Lut had warned them of God's seizing, but they doubted the warnings [c6].",
+      "deep_md": "The answer of the people is told in more than one passage, and in each the first thing they say is a threat of expulsion or a challenge to bring the punishment [c1][c2][c3]. The reason they give for the expulsion is that the household of Lut keep themselves pure [c1]. Lut's prayers are told in different places and are not joined by the text [c4][c5]. The warnings are described at 54:33 and 54:36 [c6].",
+      "kids_md": "The people of Lut said that Lut and those with him should be driven out of the town [c1]. They asked him to bring them the punishment of God [c3]. Lut prayed to his Lord to save him and his family from what they did [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the people answer a warning with a threat and a challenge rather than with a reply to what Lut had said [c1][c3]. Another is that Lut, for his part, answers by turning to his Lord in prayer [c4][c5].",
+      "unknowns_md": "- Not established: who among the people spoke, or how many were with Lut when they threatened to drive him out.\n- Not established: in what sense they said that Lut and those with him keep themselves pure (7:82); the Arabic verb is yatatahharun and the draft keeps the wording of the verse.\n- Not established: whether the prayers of 26:169 and 29:30 were made at the same time.\n- Not established: how Lut warned them of God's seizing (54:36)."
+    },
+    {
+      "anchor": "the-messengers-come",
+      "position": 3,
+      "title_en": "The messengers come",
+      "event_slug": "people-of-lut",
+      "verses": [
+        {
+          "surah": 11,
+          "from": 77,
+          "to": 77
+        },
+        {
+          "surah": 15,
+          "from": 61,
+          "to": 64
+        },
+        {
+          "surah": 29,
+          "from": 31,
+          "to": 34
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "When God's messengers came to Lut, he was distressed for them and felt powerless on their account, and said that it was a hard day.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 77,
+              "to": 77
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When the messengers came to the household of Lut, he said that they were unfamiliar people.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 61,
+              "to": 62
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They said that they had come to him with what the people had been doubting, that they had brought the truth, and that they were truthful.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 63,
+              "to": 64
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They said to Lut not to fear or grieve, and that they would save him and his family, except his wife, who was among those who stay behind.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 33,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God's messengers came to Ibrahim with good news and said that they would destroy the people of that town because its people were wrongdoers; Ibrahim said that Lut was in it, and they said that they knew better who was in it, and that they would save Lut and his family, except his wife, who was among those who stay behind.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 31,
+              "to": 32
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They said that they were bringing down on the people of that town a punishment from the sky because of their disobedience.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 34,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "When God's messengers came to Lut, he was distressed for them [c1]. They told him not to fear or grieve, and that they would save him and his family except his wife [c4]. They said they were bringing down a punishment from the sky on the people of the town [c6].",
+      "body_md": "When God's messengers came to Lut, he was distressed for them and felt powerless on their account, and said that it was a hard day [c1]. In another passage, when the messengers came to the household of Lut, he said that they were unfamiliar people [c2]. They said that they had come to him with what the people had been doubting, that they had brought the truth, and that they were truthful [c3].\n\nThey said to Lut not to fear or grieve, and that they would save him and his family, except his wife, who was among those who stay behind [c4]. They said that they were bringing down on the people of that town a punishment from the sky because of their disobedience [c6].\n\nGod's messengers came to Ibrahim with good news and said that they would destroy the people of that town because its people were wrongdoers [c5]. Ibrahim said that Lut was in it, and they said that they knew better who was in it, and that they would save Lut and his family, except his wife, who was among those who stay behind [c5].",
+      "deep_md": "The Quran calls those who came to Lut messengers and says no more about them [c1][c2]. They give their purpose in their own words: to bring the truth, to save Lut and his family except his wife, and to bring down a punishment from the sky [c3][c4][c6]. The passage at 29:31-32 tells of messengers who came to Ibrahim with good news and spoke of Lut; the verses do not say that these are the same messengers as those who came to Lut, and the draft does not say so [c5].",
+      "kids_md": "God's messengers came to Lut, and he was distressed for them [c1]. They told him not to fear or grieve [c4]. They said they would save him and his family, except his wife [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the messengers answer Lut's distress with a plain statement of why they have come and with the words not to fear or grieve [c1][c3][c4]. Another is that the passage speaks of a household being set apart from the people of the town [c4].",
+      "unknowns_md": "- Not established: how many messengers came. The Quran calls them messengers and the draft says no more.\n- Not established: whether the messengers who came to Lut are the same as those who came to Ibrahim with good news; the verses do not say.\n- Not established: what the good news given to Ibrahim at 29:31 was; it is not stated in the verse used here.\n- Not established: where Lut was when they came, or at what time of the day.\n- Not established: what the phrase rendered those who stay behind means in the case of his wife; the verse does not give her actions or her words."
+    },
+    {
+      "anchor": "the-crowd-and-the-guests",
+      "position": 4,
+      "title_en": "The crowd and the guests",
+      "event_slug": "people-of-lut",
+      "verses": [
+        {
+          "surah": 11,
+          "from": 78,
+          "to": 80
+        },
+        {
+          "surah": 15,
+          "from": 67,
+          "to": 72
+        },
+        {
+          "surah": 54,
+          "from": 37,
+          "to": 37
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "His people came rushing to him, and before that they had been doing evil deeds.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 78,
+              "to": 78
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Lut told them that his daughters were purer for them, told them to be mindful of God and not to disgrace him in the matter of his guest, and asked whether there was not among them one right-minded man.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 78,
+              "to": 78
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They said that he knew they had no claim on his daughters, and that he knew what they wanted.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 79,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Lut said that if only he had strength against them, or could take refuge in a strong support.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 80,
+              "to": 80
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The people of the town came rejoicing; Lut told them that these were his guest and not to shame him, and told them to be mindful of God and not to disgrace him.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 67,
+              "to": 69
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They asked whether they had not forbidden him from the worlds.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Lut said that these were his daughters, if they were going to act.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 71,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "God swears by the life of the one He addresses, whom the verse does not name, that they were wandering blindly in their intoxication.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 72,
+              "to": 72
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "They pressed Lut about his guest, so God blotted out their sight, and they were told to taste His punishment and His warnings.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "His people came rushing to Lut [c1]. Lut told them to be mindful of God and not to disgrace him in the matter of his guest [c2][c5]. God blotted out the sight of those who pressed him about his guest [c9].",
+      "body_md": "His people came rushing to him, and before that they had been doing evil deeds [c1]. Lut told them that his daughters were purer for them, told them to be mindful of God and not to disgrace him in the matter of his guest, and asked whether there was not among them one right-minded man [c2]. They said that he knew they had no claim on his daughters, and that he knew what they wanted [c3]. Lut said that if only he had strength against them, or could take refuge in a strong support [c4].\n\nIn another passage the people of the town came rejoicing [c5]. Lut told them that these were his guest and not to shame him, and told them to be mindful of God and not to disgrace him [c5]. They asked whether they had not forbidden him from the worlds [c6]. Lut said that these were his daughters, if they were going to act [c7]. God swears by the life of the one He addresses, whom the verse does not name, that they were wandering blindly in their intoxication [c8].\n\nA further passage says that they pressed Lut about his guest, so God blotted out their sight, and they were told to taste His punishment and His warnings [c9].",
+      "deep_md": "This chapter joins passages by theme: 11:78-80, 15:67-72 and 54:37 [c1][c5][c9]. In 11:78 and 15:71 Lut speaks of his daughters [c2][c7], and the verses give his words and nothing more about what he meant. In 11:79 the people answer that they have no claim on them [c3], and in 15:70 they ask about a prohibition [c6]. The oath at 15:72 is addressed to someone the verse does not name [c8].",
+      "kids_md": "His people came rushing to Lut [c1]. Lut told them to be mindful of God and not to disgrace him in the matter of his guest [c2][c5]. He said that if only he had strength against them, or could take refuge in a strong support [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Lut's words in these passages begin with the call to be mindful of God and with the plea not to be disgraced in front of his guest [c2][c5]. Another is that he voices his own weakness plainly, wishing for strength or a strong support [c4].",
+      "unknowns_md": "- Not established: what Lut meant by saying that his daughters were purer for them (11:78) or by saying these are my daughters (15:71). The verses give the words only; readers have understood them in more than one way, and the draft states nothing beyond the wording.\n- Not established: whether the daughters were his own or the women of the town in general; the Arabic wording is the plain word for daughters.\n- Not established: the sense of the question rendered whether they had not forbidden him from the worlds (15:70).\n- Not established: to whom the oath of 15:72 is addressed; the verse says your life and does not name the person.\n- Not established: how God blotted out their sight (54:37); the Arabic word is the plural of ayn, the organ of sight, and the draft uses sight; a reviewer should decide on the closest wording.\n- Not established: how many people were at the door, or how the guest is to be counted; the Arabic word for guest is singular in form."
+    },
+    {
+      "anchor": "the-instruction-to-leave",
+      "position": 5,
+      "title_en": "The instruction to leave",
+      "event_slug": "people-of-lut",
+      "verses": [
+        {
+          "surah": 11,
+          "from": 81,
+          "to": 81
+        },
+        {
+          "surah": 15,
+          "from": 65,
+          "to": 66
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The messengers said to Lut that they were messengers of his Lord and that the people would not reach him.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 81,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They told Lut to travel with his family in part of the night, and that none of them should turn round, with his wife named as an exception, and said that what struck the people would strike her.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 81,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They said that the appointed time of the people was the morning, and asked whether the morning was not near.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 81,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They told Lut to travel with his family in part of the night, to follow behind them, not to let any of them look back, and to go on to where they were commanded.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 65,
+              "to": 65
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God decreed this matter to Lut: that the root of those people would be cut off in the morning.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 66,
+              "to": 66
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The messengers said to Lut that they were messengers of his Lord and that the people would not reach him [c1]. They told him to travel with his family in part of the night [c2][c4], and said that the appointed time was the morning [c3].",
+      "body_md": "The messengers said to Lut that they were messengers of his Lord and that the people would not reach him [c1]. They told Lut to travel with his family in part of the night, and that none of them should turn round, with his wife named as an exception, and said that what struck the people would strike her [c2]. They said that the appointed time of the people was the morning, and asked whether the morning was not near [c3].\n\nIn another passage they told Lut to travel with his family in part of the night, to follow behind them, not to let any of them look back, and to go on to where they were commanded [c4]. God decreed this matter to Lut: that the root of those people would be cut off in the morning [c5].",
+      "deep_md": "The instruction is told in similar words in different passages [c2][c4]. At 11:81 the exception of the wife is attached to a sentence whose grammar can be read in more than one way: either she is the exception to the family who are to travel, or she is the exception to those who are not to turn round [c2]. At 15:65 the instruction to follow behind them and to go where commanded is added [c4]. The time of the matter is the morning in both [c3][c5].",
+      "kids_md": "The messengers said to Lut that they were messengers of his Lord [c1]. They told him to travel with his family in part of the night [c2][c4]. They said that the appointed time of the people was the morning [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the instruction is short and specific: a time to leave, a direction to follow, and not to look back [c2][c4]. Another is that the messengers tell Lut the time of the matter beforehand [c3][c5].",
+      "unknowns_md": "- Not established: the grammar of the exception of the wife at 11:81; the draft keeps the sentence in its own shape and does not decide whether she is excepted from those to travel or from those not to turn round.\n- Not established: who the them in follow behind them (15:65) are; the draft reads it as his family and a reviewer should check it.\n- Not established: where Lut was commanded to go (15:65).\n- Not established: what turning round would have meant, or whether anyone did."
+    },
+    {
+      "anchor": "the-overturning",
+      "position": 6,
+      "title_en": "The town is overturned",
+      "event_slug": "people-of-lut",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 84,
+          "to": 84
+        },
+        {
+          "surah": 11,
+          "from": 82,
+          "to": 83
+        },
+        {
+          "surah": 15,
+          "from": 73,
+          "to": 74
+        },
+        {
+          "surah": 26,
+          "from": 172,
+          "to": 173
+        },
+        {
+          "surah": 27,
+          "from": 58,
+          "to": 58
+        },
+        {
+          "surah": 29,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 54,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 54,
+          "from": 38,
+          "to": 39
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "When God's command came, He made the highest part of the town its lowest and rained on it stones of the kind the Quran calls sijjil, layered, marked with your Lord, in the verse's own wording, and not far from the wrongdoers.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 82,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The cry seized them as they entered the morning, and God made the highest part of the town its lowest and rained on them stones of sijjil.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 73,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God sent against them a wind carrying stones, except the household of Lut, whom He saved before dawn.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 34,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God rained a rain on them, and the Quran tells its hearer to look at the end of the guilty.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 84,
+              "to": 84
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God destroyed the others, rained a rain on them, and the Quran says that evil was the rain of those who were warned.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 172,
+              "to": 173
+            },
+            {
+              "surah": 27,
+              "from": 58,
+              "to": 58
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The messengers said that God was bringing down on the people of that town a punishment from the sky because of their disobedience.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 34,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "In the early morning a punishment came upon them that did not leave them, and they were told to taste His punishment and His warnings.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 38,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "When God's command came, He made the highest part of the town its lowest and rained stones on it [c1]. The Quran also speaks of a cry [c2] and of a wind carrying stones, from which the household of Lut was saved before dawn [c3]. It tells the hearer to look at the end of the guilty [c4].",
+      "body_md": "When God's command came, He made the highest part of the town its lowest and rained on it stones of the kind the Quran calls sijjil, layered, marked with your Lord, in the verse's own wording, and not far from the wrongdoers [c1]. In another passage the cry seized them as they entered the morning, and God made the highest part of the town its lowest and rained on them stones of sijjil [c2].\n\nGod sent against them a wind carrying stones, except the household of Lut, whom He saved before dawn [c3]. God rained a rain on them, and the Quran tells its hearer to look at the end of the guilty [c4]. God destroyed the others, rained a rain on them, and the Quran says that evil was the rain of those who were warned [c5].\n\nThe messengers said that God was bringing down on the people of that town a punishment from the sky because of their disobedience [c6]. In the early morning a punishment came upon them that did not leave them, and they were told to taste His punishment and His warnings [c7].",
+      "deep_md": "The Quran describes the end in different ways: the highest part made the lowest and a rain of stones at 11:82 and 15:74 [c1][c2], a cry at 15:73 [c2], a wind carrying stones at 54:34 [c3], and a punishment that settled on them in the morning at 54:38 [c7]. The draft does not decide whether these name one event or more than one, or in what order they stand [c1][c2][c3][c7]. The word sijjil is left in Arabic because its sense is open [c1][c2]. The statement that the stones were marked with the Lord is at 11:83 [c1].",
+      "kids_md": "When God's command came, He made the highest part of the town its lowest and rained stones on it [c1]. God saved the household of Lut before dawn [c3]. The Quran tells us to look at the end of the guilty [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the Quran tells its hearer to look at the end of the guilty, as an invitation to consider [c4]. Another is that the passages mark a difference between the household of Lut, saved before dawn, and those on whom the rain fell [c3][c5].",
+      "unknowns_md": "- Not established: how long the event lasted, how many people were in the town, or how far the stones fell.\n- Not established: whether the cry (15:73), the stones (11:82) and the wind carrying stones (54:34) are one event or more.\n- Not established: the sense of the Arabic word sijjil, or of marked with your Lord (11:83); the draft keeps the wording general.\n- Not established: the sense of the word translated layered in 11:82.\n- Not established: what the highest part and the lowest part of the town were."
+    },
+    {
+      "anchor": "who-was-saved-and-the-sign",
+      "position": 7,
+      "title_en": "Who was saved, and the sign",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 7,
+          "from": 83,
+          "to": 83
+        },
+        {
+          "surah": 15,
+          "from": 75,
+          "to": 77
+        },
+        {
+          "surah": 21,
+          "from": 74,
+          "to": 75
+        },
+        {
+          "surah": 26,
+          "from": 170,
+          "to": 171
+        },
+        {
+          "surah": 26,
+          "from": 174,
+          "to": 175
+        },
+        {
+          "surah": 27,
+          "from": 57,
+          "to": 57
+        },
+        {
+          "surah": 29,
+          "from": 35,
+          "to": 35
+        },
+        {
+          "surah": 37,
+          "from": 133,
+          "to": 138
+        },
+        {
+          "surah": 54,
+          "from": 35,
+          "to": 35
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God saved Lut and his family, except his wife, who was among those who stayed behind.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 83,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God says of his wife that He decreed her to be among those who stayed behind.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 57,
+              "to": 57
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God saved Lut and his family, all of them, except an elderly woman among those who stayed behind, and then destroyed the others.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 170,
+              "to": 171
+            },
+            {
+              "surah": 37,
+              "from": 134,
+              "to": 136
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God gave Lut judgement and knowledge, saved him from the town that did foul deeds, said that they were an evil, disobedient people, admitted Lut into His mercy, and said that he was among the righteous.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 74,
+              "to": 75
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Lut was among the messengers.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 133,
+              "to": 133
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The Quran says that in what happened there are signs for those who read signs, that it lies on an established road, and that there is a sign in it for the believers.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 75,
+              "to": 77
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God left from it a clear sign for a people who use reason.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "The Quran says to its hearers that they pass by them in the morning and at night, and asks whether they will not understand.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 137,
+              "to": 138
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "The Quran says there is a sign in it and that most of them were not believers, and that Lut's Lord is the Mighty, the Merciful.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 174,
+              "to": 175
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "The rescue was a favour from God, who rewards in this way whoever gives thanks.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God saved Lut and his family, except his wife, who was among those who stayed behind [c1][c2]. The Quran says that Lut was among the messengers [c5], and that God left a clear sign from the town for a people who use reason [c7].",
+      "body_md": "God saved Lut and his family, except his wife, who was among those who stayed behind [c1]. God says of his wife that He decreed her to be among those who stayed behind [c2]. Other passages say that God saved Lut and his family, all of them, except an elderly woman among those who stayed behind, and then destroyed the others [c3]. The Quran says that the rescue was a favour from God, who rewards in this way whoever gives thanks [c10].\n\nGod gave Lut judgement and knowledge, saved him from the town that did foul deeds, said that they were an evil, disobedient people, admitted Lut into His mercy, and said that he was among the righteous [c4]. The Quran says that Lut was among the messengers [c5].\n\nThe Quran says that in what happened there are signs for those who read signs, that it lies on an established road, and that there is a sign in it for the believers [c6]. God left from it a clear sign for a people who use reason [c7]. The Quran says to its hearers that they pass by them in the morning and at night, and asks whether they will not understand [c8]. It says there is a sign in it and that most of them were not believers, and that Lut's Lord is the Mighty, the Merciful [c9].",
+      "deep_md": "The wife of Lut is mentioned as an exception in the rescue at 7:83 and 27:57 [c1][c2]. A different phrase, an elderly woman among those who stayed behind, is used at 26:171 and 37:135 [c3]. The Quran does not say in these verses that the elderly woman and the wife are one person; reading them together is an inference from the matching phrase [c1][c3]. The passage at 21:74-75 speaks of what God gave Lut and of his place among the righteous [c4]. The closing verses speak of a sign that remains [c6][c7][c8][c9].",
+      "kids_md": "God saved Lut and his family, except his wife, who was among those who stayed behind [c1]. The Quran says that Lut was among the messengers [c5]. God left a clear sign for a people who use reason [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passages describe Lut as someone whom God gave judgement and knowledge and counted among the righteous [c4]. Another is that the Quran presents what happened as a sign for those who read signs and who use reason [c6][c7].",
+      "unknowns_md": "- Not established: why Lut's wife was among those who stayed behind; the verses used here give no reason and no words or actions of hers.\n- Not established: whether the elderly woman of 26:171 and 37:135 is Lut's wife; the Quran does not say so in these verses.\n- Not established: the sense of those who stay behind (the Arabic is al-ghabirin), which may mean those who remained in the place or those who lagged behind; the draft keeps the wording of the verses.\n- Not established: what the established road of 15:76 is, or where the remaining sign of 29:35 and the place passed in 37:137 are.\n- Named in later tradition, not in the Quranic text: the names of Lut's wife and daughters, and the name of the place. None is used in the story texts."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Lut. None is used in this draft.",
+    "The event of the people of Lut in the inventory also lists 51:31-37, which are outside the inventory range of Lut and are not used. The wife of Lut is also mentioned at 66:10, which is outside the range as well; a reviewer should decide whether to extend the range.",
+    "The Quran calls those who came to Lut messengers; the draft says nothing else about them, and does not say whether they are the messengers who came to Ibrahim (29:31-32).",
+    "The verses 11:78 and 15:71, in which Lut speaks of his daughters, are stated in their own words only; the draft gives no reading of what he meant and a scholar should look at them first.",
+    "54:37 says that God effaced their sight; the Arabic word is the plural of the word for the organ of sight, and the draft writes sight rather than the literal plural. A reviewer should decide on the closest wording.",
+    "The wording of the exception of the wife at 11:81, the sense of those who stay behind, of sijjil, of marked with your Lord, and of the figure about the highest part made the lowest are left open.",
+    "The oath at 15:72 is addressed to someone the verse does not name; the draft does not name a person.",
+    "Named in later tradition, not in the Quranic text: the names of the towns of Lut's people and the names of his wife and daughters. None is used in the story texts.",
+    "The chapters follow a reading order (his address, the answer, the messengers, the crowd, the instruction, the overturning, the rescue and the sign). The Quran does not give a chronology across these surahs.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "slug": "idris",
+  "title_en": "Idris",
+  "title_ar": "إدريس",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "idris"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. The chapters are a reading order built from the narrative, not a chronology the Quran claims; verses come from several surahs and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "idris-in-the-quran",
+      "position": 1,
+      "title_en": "Idris in the Quran",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 19,
+          "from": 56,
+          "to": 57
+        },
+        {
+          "surah": 21,
+          "from": 85,
+          "to": 86
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran tells its hearer to mention Idris in the scripture, and says that he was a siddiq, a word for someone of great truthfulness, and a prophet.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 56,
+              "to": 56
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God raised Idris to a high place.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 57,
+              "to": 57
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The Quran names Idris together with Ismail and Dhul-Kifl and says that each of them was among the patient.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 85,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God admitted them into His mercy, and the Quran says that they were among the righteous.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 86,
+              "to": 86
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran tells its hearer to mention Idris, and says that he was a siddiq and a prophet [c1]. God raised him to a high place [c2]. The Quran names him with Ismail and Dhul-Kifl, each among the patient [c3].",
+      "body_md": "The Quran tells its hearer to mention Idris in the scripture, and says that he was a siddiq, a word for someone of great truthfulness, and a prophet [c1]. God raised Idris to a high place [c2].\n\nIn another passage the Quran names Idris together with Ismail and Dhul-Kifl and says that each of them was among the patient [c3]. God admitted them into His mercy, and the Quran says that they were among the righteous [c4].",
+      "deep_md": "These passages say little and give no events [c1][c2][c3]. The first speaks of Idris by descriptions and an act of God: he was a siddiq and a prophet, and God raised him to a high place [c1][c2]. The later one names him in a group and gives the same descriptions to all of them: patient and righteous [c3][c4].",
+      "kids_md": "The Quran tells us to remember Idris [c1]. It says he was truthful and a prophet [c1]. God raised him to a high place [c2]. The Quran also says that Idris, Ismail and Dhul-Kifl were each among the patient [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the Quran presents Idris through his qualities, truthfulness and patience, and through what God did for him [c1][c2][c3]. Another is that being admitted into God's mercy is told of him together with others [c4].",
+      "unknowns_md": "- Not established: when or where Idris lived, who his family was, what he said or did, or how long he lived. The Quran gives no events of his life.\n- Not established: what a high place means in 19:57, whether a rank or a place; the verse says only that God raised him to a high place.\n- Not established: the exact sense of the Arabic word siddiq beyond great truthfulness.\n- Not established: in what way each of them was patient (21:85); the verse names them and gives no events.\n- Named in later tradition, not in the Quranic text: the identification of Idris with a figure called Enoch, and the stories told about his life. None is used in the story texts."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, that mention Idris. None is used in this draft.",
+    "The inventory range of Idris is 19:56-57 and 21:85-86, which are all used. The verses 21:85-86 name Ismail and Dhul-Kifl as well, and the inventory also lists 38:48 under their events; the draft uses 21:85-86 only for what they say of Idris and leaves the event link empty because the chapter also cites 19:56-57.",
+    "The sense of a high place (19:57) and of siddiq (19:56) is left open, and the draft does not say whether the raising was a rank or a place.",
+    "The Quran gives no events of his life. The draft is short on purpose and a reviewer should not expect more from these verses.",
+    "Named in later tradition, not in the Quranic text: the identification of Idris with Enoch. It is not used in the story texts.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}
