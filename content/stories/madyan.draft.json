@@ -1,0 +1,521 @@
+{
+  "slug": "madyan",
+  "title_en": "The people of Madyan",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "madyan"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. Madyan and the Companions of the Thicket are kept as separate subjects (as in the inventory); this file states only the ayat that name Madyan.",
+  "chapters": [
+    {
+      "anchor": "shuayb-calls-madyan",
+      "position": 1,
+      "title_en": "Shu'ayb calls Madyan",
+      "event_slug": "madyan",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 85,
+          "to": 87
+        },
+        {
+          "surah": 11,
+          "from": 84,
+          "to": 86
+        },
+        {
+          "surah": 11,
+          "from": 88,
+          "to": 90
+        },
+        {
+          "surah": 29,
+          "from": 36,
+          "to": 36
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God sent Shu'ayb to Madyan, and the ayat call Shu'ayb their brother.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 85,
+              "to": 85
+            },
+            {
+              "surah": 11,
+              "from": 84,
+              "to": 84
+            },
+            {
+              "surah": 29,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Shu'ayb told them to worship God, for they had no deity other than Him, and that a clear proof had come to them from their Lord.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 85,
+              "to": 85
+            },
+            {
+              "surah": 11,
+              "from": 84,
+              "to": 84
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Shu'ayb told them to give full measure and weight, not to diminish people's things, and not to spread corruption in the land after it had been set right.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 85,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Shu'ayb told them that this was better for them if they were believers.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 85,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Shu'ayb told them that he saw them in good, and that he feared for them the punishment of an encompassing day.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 84,
+              "to": 84
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Shu'ayb told them to give full measure and weight with justice and not to spread corruption in the land.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 85,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Shu'ayb told them that what God leaves is better for them if they were believers, and that he was not a guardian over them.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 86,
+              "to": 86
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Shu'ayb told them not to sit on every path making threats, turning away from the way of God those who believed in Him and seeking to make it crooked.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 86,
+              "to": 86
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "Shu'ayb told them to remember that they had been few and that God had made them many, and to look at the end of those who spread corruption.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 86,
+              "to": 86
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "Shu'ayb told them that if a group of them believed in what he was sent with and a group did not, they should be patient until God judged between them, and that He is the best of judges.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 87,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "Shu'ayb told them to ask forgiveness of their Lord and turn back to Him, for his Lord is merciful and loving.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 90,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Shu'ayb told them that he wanted only to put things right as far as he was able, and that his success was only with God, in whom he trusted and to whom he turned.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 88,
+              "to": 88
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "Shu'ayb told them not to let their opposition to him bring on them the like of what struck the people of Nuh, the people of Hud or the people of Salih, and that the people of Lut were not far from them.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 89,
+              "to": 89
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "Shu'ayb told them to hope for the Last Day and not to spread corruption in the land.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God sent Shu'ayb to Madyan, who told them to worship God alone and to give full measure and weight [c1][c2][c3]. He warned them of an encompassing day and told them to ask forgiveness and turn back to God [c5][c11].",
+      "body_md": "God sent Shu'ayb to Madyan, and the ayat call Shu'ayb their brother [c1]. Shu'ayb told them to worship God, for they had no deity other than Him, and that a clear proof had come to them from their Lord [c2]. Shu'ayb told them to give full measure and weight, not to diminish people's things, and not to spread corruption in the land after it had been set right [c3]. Shu'ayb told them that this was better for them if they were believers [c4]. Shu'ayb told them that he saw them in good, and that he feared for them the punishment of an encompassing day [c5]. Shu'ayb told them to give full measure and weight with justice and not to spread corruption in the land [c6]. Shu'ayb told them that what God leaves is better for them if they were believers, and that he was not a guardian over them [c7]. Shu'ayb told them not to sit on every path making threats, turning away from the way of God those who believed in Him and seeking to make it crooked [c8]. Shu'ayb told them to remember that they had been few and that God had made them many, and to look at the end of those who spread corruption [c9]. Shu'ayb told them that if a group of them believed in what he was sent with and a group did not, they should be patient until God judged between them, and that He is the best of judges [c10]. Shu'ayb told them to ask forgiveness of their Lord and turn back to Him, for his Lord is merciful and loving [c11]. Shu'ayb told them that he wanted only to put things right as far as he was able, and that his success was only with God, in whom he trusted and to whom he turned [c12]. Shu'ayb told them not to let their opposition to him bring on them the like of what struck the people of Nuh, the people of Hud or the people of Salih, and that the people of Lut were not far from them [c13]. Shu'ayb told them to hope for the Last Day and not to spread corruption in the land [c14].",
+      "deep_md": "- God sent Shu'ayb to Madyan, and the ayat call Shu'ayb their brother (7:85, 11:84, 29:36) [c1].\n- Shu'ayb told them to worship God, for they had no deity other than Him, and that a clear proof had come to them from their Lord (7:85, 11:84) [c2].\n- Shu'ayb told them to give full measure and weight, not to diminish people's things, and not to spread corruption in the land after it had been set right (7:85) [c3].\n- Shu'ayb told them that this was better for them if they were believers (7:85) [c4].\n- Shu'ayb told them that he saw them in good, and that he feared for them the punishment of an encompassing day (11:84) [c5].\n- Shu'ayb told them to give full measure and weight with justice and not to spread corruption in the land (11:85) [c6].\n- Shu'ayb told them that what God leaves is better for them if they were believers, and that he was not a guardian over them (11:86) [c7].\n- Shu'ayb told them not to sit on every path making threats, turning away from the way of God those who believed in Him and seeking to make it crooked (7:86) [c8].\n- Shu'ayb told them to remember that they had been few and that God had made them many, and to look at the end of those who spread corruption (7:86) [c9].\n- Shu'ayb told them that if a group of them believed in what he was sent with and a group did not, they should be patient until God judged between them, and that He is the best of judges (7:87) [c10].\n- Shu'ayb told them to ask forgiveness of their Lord and turn back to Him, for his Lord is merciful and loving (11:90) [c11].\n- Shu'ayb told them that he wanted only to put things right as far as he was able, and that his success was only with God, in whom he trusted and to whom he turned (11:88) [c12].\n- Shu'ayb told them not to let their opposition to him bring on them the like of what struck the people of Nuh, the people of Hud or the people of Salih, and that the people of Lut were not far from them (11:89) [c13].\n- Shu'ayb told them to hope for the Last Day and not to spread corruption in the land (29:36) [c14].",
+      "kids_md": "God sent Shu'ayb to the people of Madyan [c1]. Shu'ayb told them to worship God alone [c2]. He told them to give full measure and weight, and not to take away from people what belonged to them [c3]. He told them to ask forgiveness of their Lord [c11].",
+      "lessons_md": "Educational interpretation (not scripture): The call joins worship of God with honesty in measure and weight [c2][c3]. One reading is that the passage treats fair dealing between people as part of the same message as belief [c3][c4].",
+      "unknowns_md": "- Not established: where Madyan was, when these things happened, or how many people Madyan numbered; the draft names no place.\n- Not established: the exact meaning of the phrase read here as what God leaves in 11:86 is read in more than one way.\n- Not established: the draft does not say what the paths of 7:86 were; the ayah does not describe them.\n- Named in later tradition, not in the Quranic text: the region of Madyan and any dates; none is used here."
+    },
+    {
+      "anchor": "how-madyan-answered",
+      "position": 2,
+      "title_en": "How Madyan answered",
+      "event_slug": "madyan",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 88,
+          "to": 90
+        },
+        {
+          "surah": 11,
+          "from": 87,
+          "to": 87
+        },
+        {
+          "surah": 11,
+          "from": 91,
+          "to": 93
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The chiefs of his people who were arrogant told Shu'ayb that they would drive him and those who believed with him out of their town unless they returned to their religion.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 88,
+              "to": 88
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Shu'ayb asked whether they would make them return even if they were unwilling.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 88,
+              "to": 88
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Shu'ayb said that they would be inventing a lie against God if they returned to the religion of the chiefs after God had saved them from it.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 89,
+              "to": 89
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Shu'ayb said that it was not for them to return to it unless God, their Lord, willed, that his Lord's knowledge encompassed everything, and that they put their trust in God.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 89,
+              "to": 89
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Shu'ayb asked his Lord to judge between them and their people with truth, saying that He is the best of those who judge.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 89,
+              "to": 89
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The chiefs who disbelieved told their people that if they followed Shu'ayb they would be losers.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 90,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "They asked Shu'ayb whether his prayer told him that they should leave what their fathers worshipped or stop doing what they wished with their wealth, and called him the forbearing, the right-minded.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 87,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "They told Shu'ayb that they did not understand much of what he said, that they saw him weak among them, and that but for his clan they would have stoned him.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 91,
+              "to": 91
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "Shu'ayb asked whether his clan was mightier with them than God, and said that they had cast Him behind their backs.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 92,
+              "to": 92
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "Shu'ayb told them that his Lord encompassed what they did.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 92,
+              "to": 92
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "Shu'ayb told them to act on their position, as he was acting, and that they would soon know who would receive a punishment that disgraces him and who was a liar.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 93,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Shu'ayb told them to watch, because he was watching with them.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 93,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The arrogant chiefs of his people told Shu'ayb that they would drive him and the believers out unless they returned to their religion [c1]. Shu'ayb answered that it was not for them to return unless God willed, and that they put their trust in God [c3][c4].",
+      "body_md": "The chiefs of his people who were arrogant told Shu'ayb that they would drive him and those who believed with him out of their town unless they returned to their religion [c1]. Shu'ayb asked whether they would make them return even if they were unwilling [c2]. Shu'ayb said that they would be inventing a lie against God if they returned to the religion of the chiefs after God had saved them from it [c3]. Shu'ayb said that it was not for them to return to it unless God, their Lord, willed, that his Lord's knowledge encompassed everything, and that they put their trust in God [c4]. Shu'ayb asked his Lord to judge between them and their people with truth, saying that He is the best of those who judge [c5]. The chiefs who disbelieved told their people that if they followed Shu'ayb they would be losers [c6]. They asked Shu'ayb whether his prayer told him that they should leave what their fathers worshipped or stop doing what they wished with their wealth, and called him the forbearing, the right-minded [c7]. They told Shu'ayb that they did not understand much of what he said, that they saw him weak among them, and that but for his clan they would have stoned him [c8]. Shu'ayb asked whether his clan was mightier with them than God, and said that they had cast Him behind their backs [c9]. Shu'ayb told them that his Lord encompassed what they did [c10]. Shu'ayb told them to act on their position, as he was acting, and that they would soon know who would receive a punishment that disgraces him and who was a liar [c11]. Shu'ayb told them to watch, because he was watching with them [c12].",
+      "deep_md": "- The chiefs of his people who were arrogant told Shu'ayb that they would drive him and those who believed with him out of their town unless they returned to their religion (7:88) [c1].\n- Shu'ayb asked whether they would make them return even if they were unwilling (7:88) [c2].\n- Shu'ayb said that they would be inventing a lie against God if they returned to the religion of the chiefs after God had saved them from it (7:89) [c3].\n- Shu'ayb said that it was not for them to return to it unless God, their Lord, willed, that his Lord's knowledge encompassed everything, and that they put their trust in God (7:89) [c4].\n- Shu'ayb asked his Lord to judge between them and their people with truth, saying that He is the best of those who judge (7:89) [c5].\n- The chiefs who disbelieved told their people that if they followed Shu'ayb they would be losers (7:90) [c6].\n- They asked Shu'ayb whether his prayer told him that they should leave what their fathers worshipped or stop doing what they wished with their wealth, and called him the forbearing, the right-minded (11:87) [c7].\n- They told Shu'ayb that they did not understand much of what he said, that they saw him weak among them, and that but for his clan they would have stoned him (11:91) [c8].\n- Shu'ayb asked whether his clan was mightier with them than God, and said that they had cast Him behind their backs (11:92) [c9].\n- Shu'ayb told them that his Lord encompassed what they did (11:92) [c10].\n- Shu'ayb told them to act on their position, as he was acting, and that they would soon know who would receive a punishment that disgraces him and who was a liar (11:93) [c11].\n- Shu'ayb told them to watch, because he was watching with them (11:93) [c12].",
+      "kids_md": "The chiefs of the people told Shu'ayb that he and the believers must leave the town [c1]. Shu'ayb said they trusted God [c4]. He asked his Lord to judge between them with truth [c5].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat show a threat of exile answered with trust and a request for God's judgement [c1][c4][c5]. One reading is that Shu'ayb ties his staying firm to what God wills, not to his own strength [c4].",
+      "unknowns_md": "- Not established: who the chiefs were, how many believed with Shu'ayb, or whether the exile was carried out.\n- Not established: the draft does not say what the clan of 11:91 was; the ayah does not describe it.\n- Not established: whether the words forbearing and right-minded in 11:87 were meant seriously or mockingly; the ayah does not say.\n- Not established: the speaker of the question even if they were unwilling is Shu'ayb in the draft's reading of 7:88; the ayah's grammar could be read as a question from either side."
+    },
+    {
+      "anchor": "the-end-of-madyan",
+      "position": 3,
+      "title_en": "The end of Madyan",
+      "event_slug": "madyan",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 91,
+          "to": 93
+        },
+        {
+          "surah": 11,
+          "from": 94,
+          "to": 95
+        },
+        {
+          "surah": 29,
+          "from": 37,
+          "to": 37
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran says that a tremor seized them and they lay fallen in their home.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 91,
+              "to": 91
+            },
+            {
+              "surah": 29,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Another ayah says that when the command of God came, He saved Shu'ayb and those who believed with him by mercy from Him.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 94,
+              "to": 94
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The same ayah says that the cry seized the wrongdoers and they lay fallen in their homes.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 94,
+              "to": 94
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "It was as if they had never lived there, and the passage says away with Madyan, as Thamud was removed.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 95,
+              "to": 95
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Those who denied Shu'ayb were as if they had never lived there, and the Quran calls them the losers.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 92,
+              "to": 92
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Shu'ayb turned away from them and said that he had conveyed the messages of his Lord and advised them, and asked how he could grieve for a disbelieving people.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 93,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "A tremor and a cry seized the people of Madyan in their homes, and God saved Shu'ayb and those who believed with him [c1][c2][c3]. The Quran calls those who denied Shu'ayb the losers [c5].",
+      "body_md": "The Quran says that a tremor seized them and they lay fallen in their home [c1]. Another ayah says that when the command of God came, He saved Shu'ayb and those who believed with him by mercy from Him [c2]. The same ayah says that the cry seized the wrongdoers and they lay fallen in their homes [c3]. It was as if they had never lived there, and the passage says away with Madyan, as Thamud was removed [c4]. Those who denied Shu'ayb were as if they had never lived there, and the Quran calls them the losers [c5]. Shu'ayb turned away from them and said that he had conveyed the messages of his Lord and advised them, and asked how he could grieve for a disbelieving people [c6].",
+      "deep_md": "- The Quran says that a tremor seized them and they lay fallen in their home (7:91, 29:37) [c1].\n- Another ayah says that when the command of God came, He saved Shu'ayb and those who believed with him by mercy from Him (11:94) [c2].\n- The same ayah says that the cry seized the wrongdoers and they lay fallen in their homes (11:94) [c3].\n- It was as if they had never lived there, and the passage says away with Madyan, as Thamud was removed (11:95) [c4].\n- Those who denied Shu'ayb were as if they had never lived there, and the Quran calls them the losers (7:92) [c5].\n- Shu'ayb turned away from them and said that he had conveyed the messages of his Lord and advised them, and asked how he could grieve for a disbelieving people (7:93) [c6].",
+      "kids_md": "God saved Shu'ayb and the people who believed with him [c2]. The people who would not believe were seized in their homes [c1][c3]. Shu'ayb said he had given them his Lord's message [c6].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat set the safety of the believers beside the loss of those who denied Shu'ayb [c2][c5]. One reading is that Shu'ayb's last words are of a messenger who has delivered the message and turns away [c6].",
+      "unknowns_md": "- Not established: the ayat word what seized them as a tremor (7:91, 29:37) and as a cry (11:94); the draft does not decide whether these are one event.\n- Not established: how long after the warning it happened, or how many were saved.\n- Named in later tradition, not in the Quranic text: any account of the place of Madyan or of the manner of its end; none is used."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Shu'ayb and Madyan. None is used in this draft.",
+    "Inventory refs not used as chapters: none beyond the ayat cited; 29:36-37 is cited in the first and last chapters.",
+    "Wording a scholar should check first: 11:86 (what God leaves), 7:88 (the speaker of the question), 11:87 (the tone of forbearing and right-minded), 11:89 (the list of earlier peoples), 11:91 (weak, clan), 7:91 versus 11:94 (tremor and cry).",
+    "Named in later tradition, not in the Quranic text: the identification of the people of Madyan with the Companions of the Thicket, or the separation of them; the ayat of Madyan do not mention the Thicket."
+  ]
+}

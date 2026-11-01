@@ -1,0 +1,214 @@
+{
+  "slug": "saba",
+  "title_en": "The people of Saba",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "saba"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. Saba is told in seven ayat. The draft states them; where Saba lay and who ruled it are not in the ayat.",
+  "chapters": [
+    {
+      "anchor": "a-land-of-favour",
+      "position": 1,
+      "title_en": "A land of favour",
+      "event_slug": "saba",
+      "verses": [
+        {
+          "surah": 34,
+          "from": 15,
+          "to": 15
+        },
+        {
+          "surah": 34,
+          "from": 18,
+          "to": 18
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran says that there was a sign for Saba in their dwelling place: gardens on the right and on the left.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They were told to eat of the provision of their Lord and to give thanks to Him, for theirs was a good land and a forgiving Lord.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God placed between them and the towns He had blessed visible towns, and measured the journey between them.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They were told to travel in them by night and by day in safety.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran says that Saba had a sign in their dwelling place, gardens on the right and on the left [c1]. They were told to eat of the provision of their Lord and give thanks to Him [c2], and to travel in safety between visible towns [c3][c4].",
+      "body_md": "The Quran says that there was a sign for Saba in their dwelling place: gardens on the right and on the left [c1]. They were told to eat of the provision of their Lord and to give thanks to Him, for theirs was a good land and a forgiving Lord [c2]. God placed between them and the towns He had blessed visible towns, and measured the journey between them [c3]. They were told to travel in them by night and by day in safety [c4].",
+      "deep_md": "- The Quran says that there was a sign for Saba in their dwelling place: gardens on the right and on the left (34:15) [c1].\n- They were told to eat of the provision of their Lord and to give thanks to Him, for theirs was a good land and a forgiving Lord (34:15) [c2].\n- God placed between them and the towns He had blessed visible towns, and measured the journey between them (34:18) [c3].\n- They were told to travel in them by night and by day in safety (34:18) [c4].",
+      "kids_md": "The people of Saba had gardens on the right and on the left [c1]. They were told to eat what their Lord provided and to thank Him [c2]. They could travel safely from town to town [c3][c4].",
+      "lessons_md": "Educational interpretation (not scripture): The first ayat give the favours before the account of what the people did with them [c1][c2][c3]. One reading is that gratitude is the response the passage asks for [c2].",
+      "unknowns_md": "- Not established: where Saba was, when it flourished, who ruled it or how many people lived there; the ayat do not say.\n- Not established: the Arabic of 34:15 uses a dual form for the gardens; the draft says gardens on the right and on the left.\n- Not established: which towns are the towns He had blessed, and where the visible towns stood; the ayat do not say.\n- Named in later tradition, not in the Quranic text: Yemen, Marib and the dam later accounts connect with Saba; none is used here."
+    },
+    {
+      "anchor": "turning-away-and-scattering",
+      "position": 2,
+      "title_en": "Turning away and scattering",
+      "event_slug": "saba",
+      "verses": [
+        {
+          "surah": 34,
+          "from": 16,
+          "to": 17
+        },
+        {
+          "surah": 34,
+          "from": 19,
+          "to": 21
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "They turned away, and God sent on them the flood of the Arim.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 16,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He replaced their gardens with gardens bearing bitter fruit, tamarisk and a few lote trees.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 16,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The Quran says that this was their recompense for their disbelief, and asks whether any is recompensed in this way but the ungrateful.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They said, our Lord, make the distances between our journeys longer, and they wronged themselves.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God made them tales and scattered them completely.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The Quran says that in this are signs for every patient and grateful person.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Iblis proved true his opinion about them, and they followed him except a group of the believers.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Iblis had no authority over them, but it was so that God might know who believes in the Hereafter and who is in doubt about it, and your Lord is a guardian over all things.",
+          "verses": [
+            {
+              "surah": 34,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran says that the people turned away, and God sent on them the flood of the Arim and replaced their gardens [c1][c2]. It calls this their recompense for disbelief and says that God made them tales and scattered them [c3][c5].",
+      "body_md": "They turned away, and God sent on them the flood of the Arim [c1]. He replaced their gardens with gardens bearing bitter fruit, tamarisk and a few lote trees [c2]. The Quran says that this was their recompense for their disbelief, and asks whether any is recompensed in this way but the ungrateful [c3]. They said, our Lord, make the distances between our journeys longer, and they wronged themselves [c4]. God made them tales and scattered them completely [c5]. The Quran says that in this are signs for every patient and grateful person [c6]. Iblis proved true his opinion about them, and they followed him except a group of the believers [c7]. Iblis had no authority over them, but it was so that God might know who believes in the Hereafter and who is in doubt about it, and your Lord is a guardian over all things [c8].",
+      "deep_md": "- They turned away, and God sent on them the flood of the Arim (34:16) [c1].\n- He replaced their gardens with gardens bearing bitter fruit, tamarisk and a few lote trees (34:16) [c2].\n- The Quran says that this was their recompense for their disbelief, and asks whether any is recompensed in this way but the ungrateful (34:17) [c3].\n- They said, our Lord, make the distances between our journeys longer, and they wronged themselves (34:19) [c4].\n- God made them tales and scattered them completely (34:19) [c5].\n- The Quran says that in this are signs for every patient and grateful person (34:19) [c6].\n- Iblis proved true his opinion about them, and they followed him except a group of the believers (34:20) [c7].\n- Iblis had no authority over them, but it was so that God might know who believes in the Hereafter and who is in doubt about it, and your Lord is a guardian over all things (34:21) [c8].",
+      "kids_md": "The people turned away from thanking God [c1]. A great flood came, and their gardens were changed [c1][c2]. The Quran says that there are signs in this for everyone who is patient and thankful [c6].",
+      "lessons_md": "Educational interpretation (not scripture): The passage ends with signs for the patient and grateful, after the account of those who were ungrateful [c3][c6]. One reading is that the ayat set the loss of a land of favour beside the call to give thanks [c1][c3][c6].",
+      "unknowns_md": "- Not established: the Arim is a word read in more than one way (a dam, a flood, a kind of rain); the draft keeps the word as the ayah gives it.\n- Not established: the draft does not say when the flood came, or how many lives it cost; the ayat do not say.\n- Not established: the sense of the plants named in 34:16 (the bitter fruit, tamarisk and lote) is read in more than one way.\n- Not established: how Iblis proved true his opinion, or what the group of believers did; the ayat say only that they followed him except a group.\n- Named in later tradition, not in the Quranic text: the account of the dam of Marib, the emigration of the tribes and the date; none is used here."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Saba. None is used in this draft.",
+    "Wording a scholar should check first: 34:16 (the Arim, and the plants), 34:19 (tales, scattered completely), 34:15 (the dual form of the gardens), 34:19 (make the distances longer), 34:21 (that We might know).",
+    "Named in later tradition, not in the Quranic text: Marib, the dam of Marib, the scattering of the tribes of the south and the dates; none is used."
+  ]
+}

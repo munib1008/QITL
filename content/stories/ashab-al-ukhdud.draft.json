@@ -1,0 +1,111 @@
+{
+  "slug": "ashab-al-ukhdud",
+  "title_en": "The Companions of the Ditch",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "ashab-al-ukhdud"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. Only six ayat speak of the Companions of the Ditch. The draft states them and nothing more; who they were is not stated in the Quran.",
+  "chapters": [
+    {
+      "anchor": "the-companions-of-the-ditch",
+      "position": 1,
+      "title_en": "The Companions of the Ditch",
+      "event_slug": "ashab-al-ukhdud",
+      "verses": [
+        {
+          "surah": 85,
+          "from": 4,
+          "to": 9
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran says that the Companions of the Ditch were slain, a wording that is also read as a curse on them.",
+          "verses": [
+            {
+              "surah": 85,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The ayat speak of the fire full of fuel.",
+          "verses": [
+            {
+              "surah": 85,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They were sitting by it.",
+          "verses": [
+            {
+              "surah": 85,
+              "from": 6,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They were witnesses to what they did to the believers.",
+          "verses": [
+            {
+              "surah": 85,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They resented the believers only because they believed in God, the Mighty, the Praiseworthy.",
+          "verses": [
+            {
+              "surah": 85,
+              "from": 8,
+              "to": 8
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God is the One to whom belongs the dominion of the heavens and the earth, and God is a witness over all things.",
+          "verses": [
+            {
+              "surah": 85,
+              "from": 9,
+              "to": 9
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran says that the Companions of the Ditch were slain, and speaks of a fire full of fuel by which they sat [c1][c2][c3]. They resented the believers only because they believed in God, and God is a witness over all things [c5][c6].",
+      "body_md": "The Quran says that the Companions of the Ditch were slain, a wording that is also read as a curse on them [c1]. The ayat speak of the fire full of fuel [c2]. They were sitting by it [c3]. They were witnesses to what they did to the believers [c4]. They resented the believers only because they believed in God, the Mighty, the Praiseworthy [c5]. God is the One to whom belongs the dominion of the heavens and the earth, and God is a witness over all things [c6].",
+      "deep_md": "- The Quran says that the Companions of the Ditch were slain, a wording that is also read as a curse on them (85:4) [c1].\n- The ayat speak of the fire full of fuel (85:5) [c2].\n- They were sitting by it (85:6) [c3].\n- They were witnesses to what they did to the believers (85:7) [c4].\n- They resented the believers only because they believed in God, the Mighty, the Praiseworthy (85:8) [c5].\n- God is the One to whom belongs the dominion of the heavens and the earth, and God is a witness over all things (85:9) [c6].",
+      "kids_md": "The Quran tells of people who sat by a fire and watched what was done to the believers [c2][c3][c4]. They were angry with the believers only because the believers believed in God [c5].",
+      "lessons_md": "Educational interpretation (not scripture): The passage names the believers' belief in God as the only thing the others resented, and ends by saying that God is a witness over all things [c5][c6]. One reading is that the ayat console those who are wronged for their belief [c5][c6].",
+      "unknowns_md": "- Not established: who the Companions of the Ditch were, where or when they lived, who the believers were, or how many; the Quran does not say.\n- Not established: the ayat do not state that the believers were thrown into the fire; they speak of the fire and of what the Companions did to the believers.\n- Not established: whether the ditch of the title and the fire are one thing; the ayat name the ditch only in 85:4.\n- Named in later tradition, not in the Quranic text: the king, the place and the persons of the accounts later tradition tells about the Companions of the Ditch; none is used here."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the Companions of the Ditch. None is used in this draft; a reviewer should note that the usual account comes from later reports and commentary, not from the ayat.",
+    "Wording a scholar should check first: 85:4 (slain or cursed), 85:7 (witnesses over what they did, or witnesses to it), 85:5 (the fire, as a fire of fuel).",
+    "Named in later tradition, not in the Quranic text: the identity of the Companions of the Ditch and every detail of their story; none is used."
+  ]
+}

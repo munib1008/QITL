@@ -1,0 +1,185 @@
+{
+  "slug": "yajuj-and-majuj",
+  "title_en": "Ya'juj and Ma'juj",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "yajuj-and-majuj"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. The ayat name Ya'juj and Ma'juj and the barrier built against them; they say nothing about who these peoples were, and the draft adds nothing.",
+  "chapters": [
+    {
+      "anchor": "the-barrier",
+      "position": 1,
+      "title_en": "The barrier against Ya'juj and Ma'juj",
+      "event_slug": "yajuj-and-majuj",
+      "verses": [
+        {
+          "surah": 18,
+          "from": 94,
+          "to": 98
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "They told Dhul-Qarnayn that Ya'juj and Ma'juj were causing corruption in the land.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 94,
+              "to": 94
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They asked whether they might pay him a charge on condition that he set a barrier between them and Ya'juj and Ma'juj.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 94,
+              "to": 94
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Dhul-Qarnayn said that what his Lord had established him in was better, and told them to help him with strength so that he might make a rampart between them and Ya'juj and Ma'juj.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 95,
+              "to": 95
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He told them to bring him sheets of iron, and when he had made it level between the cliffs he told them to blow, and when he had made it fire he told them to bring him molten copper to pour over it.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 96,
+              "to": 96
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Ya'juj and Ma'juj could not climb over it, and could not pierce it.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 97,
+              "to": 97
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Dhul-Qarnayn said that this was a mercy from his Lord, that when the promise of his Lord came He would make it level, and that the promise of his Lord is true.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 98,
+              "to": 98
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The people told Dhul-Qarnayn that Ya'juj and Ma'juj caused corruption in the land and asked for a barrier [c1][c2]. He built a rampart of iron and copper, and Ya'juj and Ma'juj could not climb it or pierce it [c4][c5].",
+      "body_md": "They told Dhul-Qarnayn that Ya'juj and Ma'juj were causing corruption in the land [c1]. They asked whether they might pay him a charge on condition that he set a barrier between them and Ya'juj and Ma'juj [c2]. Dhul-Qarnayn said that what his Lord had established him in was better, and told them to help him with strength so that he might make a rampart between them and Ya'juj and Ma'juj [c3]. He told them to bring him sheets of iron, and when he had made it level between the cliffs he told them to blow, and when he had made it fire he told them to bring him molten copper to pour over it [c4]. Ya'juj and Ma'juj could not climb over it, and could not pierce it [c5]. Dhul-Qarnayn said that this was a mercy from his Lord, that when the promise of his Lord came He would make it level, and that the promise of his Lord is true [c6].",
+      "deep_md": "- They told Dhul-Qarnayn that Ya'juj and Ma'juj were causing corruption in the land (18:94) [c1].\n- They asked whether they might pay him a charge on condition that he set a barrier between them and Ya'juj and Ma'juj (18:94) [c2].\n- Dhul-Qarnayn said that what his Lord had established him in was better, and told them to help him with strength so that he might make a rampart between them and Ya'juj and Ma'juj (18:95) [c3].\n- He told them to bring him sheets of iron, and when he had made it level between the cliffs he told them to blow, and when he had made it fire he told them to bring him molten copper to pour over it (18:96) [c4].\n- Ya'juj and Ma'juj could not climb over it, and could not pierce it (18:97) [c5].\n- Dhul-Qarnayn said that this was a mercy from his Lord, that when the promise of his Lord came He would make it level, and that the promise of his Lord is true (18:98) [c6].",
+      "kids_md": "The people asked Dhul-Qarnayn to build a barrier against Ya'juj and Ma'juj [c2]. He used iron and copper [c4]. Ya'juj and Ma'juj could not climb it or pierce it [c5].",
+      "lessons_md": "Educational interpretation (not scripture): Dhul-Qarnayn answers the offer of payment by saying that what his Lord has established him in is better, and asks only for help [c3]. One reading is that he describes the finished barrier as a mercy from his Lord and refers its end to his Lord's promise [c6].",
+      "unknowns_md": "- Not established: who Ya'juj and Ma'juj are, where they live or where the barrier stands; the ayat do not say.\n- Not established: who the people who spoke to Dhul-Qarnayn were; the ayah does not name them.\n- Not established: the Arabic of 18:96 speaks of the cliffs in a dual form; the draft renders it as the cliffs.\n- Named in later tradition, not in the Quranic text: any identification of Ya'juj and Ma'juj with Gog and Magog or with a particular people, and any place for the barrier; none is used here."
+    },
+    {
+      "anchor": "when-they-are-let-loose",
+      "position": 2,
+      "title_en": "When they are let loose",
+      "event_slug": "yajuj-and-majuj",
+      "verses": [
+        {
+          "surah": 18,
+          "from": 99,
+          "to": 99
+        },
+        {
+          "surah": 21,
+          "from": 96,
+          "to": 97
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran says that on that day God will leave some of them surging over others, and that the horn will be blown and God will gather them all together.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 99,
+              "to": 99
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "It says that Ya'juj and Ma'juj will be let loose and will descend from every high place.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 96,
+              "to": 96
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "It says that the true promise will draw near and the gaze of those who disbelieved will be fixed.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 97,
+              "to": 97
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They will say that they had been heedless of this, and that they were wrongdoers.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 97,
+              "to": 97
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran says that Ya'juj and Ma'juj will be let loose and descend from every high place [c2]. It says that the true promise will draw near and that those who disbelieved will say they had been heedless [c3][c4].",
+      "body_md": "The Quran says that on that day God will leave some of them surging over others, and that the horn will be blown and God will gather them all together [c1]. It says that Ya'juj and Ma'juj will be let loose and will descend from every high place [c2]. It says that the true promise will draw near and the gaze of those who disbelieved will be fixed [c3]. They will say that they had been heedless of this, and that they were wrongdoers [c4].",
+      "deep_md": "- The Quran says that on that day God will leave some of them surging over others, and that the horn will be blown and God will gather them all together (18:99) [c1].\n- It says that Ya'juj and Ma'juj will be let loose and will descend from every high place (21:96) [c2].\n- It says that the true promise will draw near and the gaze of those who disbelieved will be fixed (21:97) [c3].\n- They will say that they had been heedless of this, and that they were wrongdoers (21:97) [c4].",
+      "kids_md": "The Quran says that one day Ya'juj and Ma'juj will be let loose [c2]. Those who did not believe will say that they had not paid attention [c4].",
+      "lessons_md": "Educational interpretation (not scripture): The passage joins the release of Ya'juj and Ma'juj with the nearing of the true promise [c2][c3]. One reading is that the words of those who disbelieved ask the hearer not to be heedless [c4].",
+      "unknowns_md": "- Not established: who is meant by some of them in 18:99 (Ya'juj and Ma'juj, or the people gathered on that day); the ayah does not say.\n- Not established: when the release will happen or how it relates to the barrier of 18:98; the ayat do not say.\n- Not established: the ayat of 21:96 do not name the place from which they descend.\n- Named in later tradition, not in the Quranic text: reports about the signs of the Hour that name Ya'juj and Ma'juj; none is used here."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Ya'juj and Ma'juj and the barrier. None is used in this draft; a reviewer should be aware that most of what is popularly said about them comes from later sources.",
+    "Wording a scholar should check first: 18:94 (who speaks), 18:95-96 (the rampart and the dual cliffs), 18:98 (the promise of my Lord), 18:99 (some of them), 21:96 (every high place).",
+    "Named in later tradition, not in the Quranic text: Gog and Magog, and every identification with a nation, a mountain or a date; none is used."
+  ]
+}

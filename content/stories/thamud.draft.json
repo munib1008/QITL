@@ -1,0 +1,901 @@
+{
+  "slug": "thamud",
+  "title_en": "The people of Thamud",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "thamud"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. The ayat word what seized Thamud in several ways; the draft gives each as worded and does not merge them.",
+  "chapters": [
+    {
+      "anchor": "salih-and-the-she-camel",
+      "position": 1,
+      "title_en": "Salih and the she-camel",
+      "event_slug": "thamud",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 73,
+          "to": 74
+        },
+        {
+          "surah": 11,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 11,
+          "from": 64,
+          "to": 64
+        },
+        {
+          "surah": 17,
+          "from": 59,
+          "to": 59
+        },
+        {
+          "surah": 26,
+          "from": 141,
+          "to": 152
+        },
+        {
+          "surah": 26,
+          "from": 155,
+          "to": 156
+        },
+        {
+          "surah": 54,
+          "from": 27,
+          "to": 28
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God sent Salih to Thamud, and the ayat call Salih their brother.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 73,
+              "to": 73
+            },
+            {
+              "surah": 11,
+              "from": 61,
+              "to": 61
+            },
+            {
+              "surah": 26,
+              "from": 141,
+              "to": 142
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Salih told them to worship God, for they had no deity other than Him.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 73,
+              "to": 73
+            },
+            {
+              "surah": 11,
+              "from": 61,
+              "to": 61
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Salih told them that a clear proof had come to them from their Lord.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 73,
+              "to": 73
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Salih told them that this was God's she-camel, a sign for them.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 73,
+              "to": 73
+            },
+            {
+              "surah": 11,
+              "from": 64,
+              "to": 64
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Salih told them to leave her to eat in God's land and not to touch her with harm, or punishment would seize them.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 73,
+              "to": 73
+            },
+            {
+              "surah": 11,
+              "from": 64,
+              "to": 64
+            },
+            {
+              "surah": 26,
+              "from": 156,
+              "to": 156
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Salih told them that the she-camel had a drink and they had a drink, each on a known day.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 155,
+              "to": 155
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Another passage has God say that He was sending the she-camel as a trial for them, and it tells the one addressed to watch them and be patient.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "The same passage says that the water was divided between them, and that each drink was to be attended.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 28,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "Another passage says that God gave Thamud the she-camel as a sign to see, that they did wrong with it, and that signs are sent only to warn.",
+          "verses": [
+            {
+              "surah": 17,
+              "from": 59,
+              "to": 59
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "Salih told them to remember that God had made them successors after 'Ad and settled them in the land, where they took palaces from its plains and carved houses from the mountains.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 74,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "Salih told them to remember the favours of God and not to spread corruption in the land.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 74,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Salih told them that he was a trustworthy messenger, that they should fear God and obey him, and that he asked them for no wage.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 143,
+              "to": 145
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "Salih asked them whether they would be left secure in what was there: gardens and springs, fields and palm trees, and houses carved with skill from the mountains.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 146,
+              "to": 149
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "Salih told them not to obey the order of the transgressors, who spread corruption in the land and did not put things right.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 150,
+              "to": 152
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c15",
+          "statement_en": "Salih told them to ask forgiveness of God and turn back to Him, for his Lord is near and answers.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 61,
+              "to": 61
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God sent Salih to Thamud, who told them to worship God alone and that a clear proof had come to them from their Lord [c1][c2][c3]. The she-camel was a sign for them, and Salih told them to leave her to eat in God's land and not to harm her [c4][c5].",
+      "body_md": "God sent Salih to Thamud, and the ayat call Salih their brother [c1]. Salih told them to worship God, for they had no deity other than Him [c2]. Salih told them that a clear proof had come to them from their Lord [c3]. Salih told them that this was God's she-camel, a sign for them [c4]. Salih told them to leave her to eat in God's land and not to touch her with harm, or punishment would seize them [c5]. Salih told them that the she-camel had a drink and they had a drink, each on a known day [c6]. Another passage has God say that He was sending the she-camel as a trial for them, and it tells the one addressed to watch them and be patient [c7]. The same passage says that the water was divided between them, and that each drink was to be attended [c8]. Another passage says that God gave Thamud the she-camel as a sign to see, that they did wrong with it, and that signs are sent only to warn [c9]. Salih told them to remember that God had made them successors after 'Ad and settled them in the land, where they took palaces from its plains and carved houses from the mountains [c10]. Salih told them to remember the favours of God and not to spread corruption in the land [c11]. Salih told them that he was a trustworthy messenger, that they should fear God and obey him, and that he asked them for no wage [c12]. Salih asked them whether they would be left secure in what was there: gardens and springs, fields and palm trees, and houses carved with skill from the mountains [c13]. Salih told them not to obey the order of the transgressors, who spread corruption in the land and did not put things right [c14]. Salih told them to ask forgiveness of God and turn back to Him, for his Lord is near and answers [c15].",
+      "deep_md": "- God sent Salih to Thamud, and the ayat call Salih their brother (7:73, 11:61, 26:141-142) [c1].\n- Salih told them to worship God, for they had no deity other than Him (7:73, 11:61) [c2].\n- Salih told them that a clear proof had come to them from their Lord (7:73) [c3].\n- Salih told them that this was God's she-camel, a sign for them (7:73, 11:64) [c4].\n- Salih told them to leave her to eat in God's land and not to touch her with harm, or punishment would seize them (7:73, 11:64, 26:156) [c5].\n- Salih told them that the she-camel had a drink and they had a drink, each on a known day (26:155) [c6].\n- Another passage has God say that He was sending the she-camel as a trial for them, and it tells the one addressed to watch them and be patient (54:27) [c7].\n- The same passage says that the water was divided between them, and that each drink was to be attended (54:28) [c8].\n- Another passage says that God gave Thamud the she-camel as a sign to see, that they did wrong with it, and that signs are sent only to warn (17:59) [c9].\n- Salih told them to remember that God had made them successors after 'Ad and settled them in the land, where they took palaces from its plains and carved houses from the mountains (7:74) [c10].\n- Salih told them to remember the favours of God and not to spread corruption in the land (7:74) [c11].\n- Salih told them that he was a trustworthy messenger, that they should fear God and obey him, and that he asked them for no wage (26:143-145) [c12].\n- Salih asked them whether they would be left secure in what was there: gardens and springs, fields and palm trees, and houses carved with skill from the mountains (26:146-149) [c13].\n- Salih told them not to obey the order of the transgressors, who spread corruption in the land and did not put things right (26:150-152) [c14].\n- Salih told them to ask forgiveness of God and turn back to Him, for his Lord is near and answers (11:61) [c15].",
+      "kids_md": "God sent Salih to his people, Thamud [c1]. Salih told them to worship God [c2]. He showed them God's she-camel as a sign [c4]. He told them to let her eat in God's land and not to hurt her [c5].",
+      "lessons_md": "Educational interpretation (not scripture): The reminders of Salih tie the favours his people enjoyed to the call not to spread corruption [c10][c11]. One reading is that the she-camel's drink and the people's drink on separate days put a shared resource in front of them as a test [c6][c7].",
+      "unknowns_md": "- Not established: the Quran does not say where Thamud lived in these ayat, when, or how many they were.\n- Not established: the speaker and the one addressed in 54:27-28 are not named; the draft reads the speaker as God, and the one addressed as a person told to watch them.\n- Not established: what the dual-drink arrangement of 26:155 meant in practice, or how long the she-camel was among them.\n- Not established: the sense of the word read here as did wrong with it in 17:59 is read in more than one way.\n- Named in later tradition, not in the Quranic text: the region where Thamud lived, the manner in which the she-camel appeared, and any dates; none is used here."
+    },
+    {
+      "anchor": "what-thamud-said-and-did",
+      "position": 2,
+      "title_en": "What Thamud said and did",
+      "event_slug": "thamud",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 75,
+          "to": 76
+        },
+        {
+          "surah": 11,
+          "from": 62,
+          "to": 63
+        },
+        {
+          "surah": 26,
+          "from": 153,
+          "to": 154
+        },
+        {
+          "surah": 27,
+          "from": 45,
+          "to": 49
+        },
+        {
+          "surah": 41,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 54,
+          "from": 23,
+          "to": 26
+        },
+        {
+          "surah": 91,
+          "from": 11,
+          "to": 13
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The chiefs who were arrogant asked those considered weak, who had believed, whether they knew that Salih was sent by his Lord, and the believers answered that they believed in what he was sent with.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 75,
+              "to": 75
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Those who were arrogant said that they disbelieved in what the others believed.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 76,
+              "to": 76
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They told Salih that he had been hoped for among them before this, asked whether he forbade them to worship what their fathers worshipped, and said they were in grave doubt about what he called them to.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 62,
+              "to": 62
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Salih asked them to consider whether, if he was on a clear proof from his Lord and had mercy from Him, anyone could help him against God if he disobeyed Him, and said they would add nothing for him but loss.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 63,
+              "to": 63
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They told Salih that he was only one of the bewitched, only a human like them, and told him to bring a sign if he was truthful.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 153,
+              "to": 154
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Another passage says that Thamud denied the warnings, and asked whether they would follow one human from among them, saying that then they would be in error and madness.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 23,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "They asked whether the reminder had been cast on him from among them, and said that he was an insolent liar.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "The next ayah says that they will know tomorrow who the insolent liar is.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "The Quran says that God guided Thamud, but they preferred blindness to guidance.",
+          "verses": [
+            {
+              "surah": 41,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "Another passage says that they became opposed groups disputing with each other.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 45,
+              "to": 45
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "Salih asked them why they hastened evil before good, and why they did not ask forgiveness of God so that they might receive mercy.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 46,
+              "to": 46
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "They told Salih that they took him and those with him as an ill omen, and he answered that their omen was with God and that they were a people being tested.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 47,
+              "to": 47
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "The ayat say that there were nine groups in the city who spread corruption and did not put things right.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 48,
+              "to": 48
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "They told one another to swear by God that they would attack him and his family by night, and then tell his guardian that they had not witnessed the destruction of his family and were telling the truth.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 49,
+              "to": 49
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c15",
+          "statement_en": "The Quran says that Thamud denied through their transgression, when the most wretched of them rose up.",
+          "verses": [
+            {
+              "surah": 91,
+              "from": 11,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c16",
+          "statement_en": "The messenger sent by God told them: the she-camel of God and her drink.",
+          "verses": [
+            {
+              "surah": 91,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The chiefs who were arrogant refused to believe, and Thamud told Salih that he was only a human like them and asked for a sign [c1][c2][c5]. Salih answered that his Lord would not be disobeyed and asked them why they hastened evil before good [c4][c11].",
+      "body_md": "The chiefs who were arrogant asked those considered weak, who had believed, whether they knew that Salih was sent by his Lord, and the believers answered that they believed in what he was sent with [c1]. Those who were arrogant said that they disbelieved in what the others believed [c2]. They told Salih that he had been hoped for among them before this, asked whether he forbade them to worship what their fathers worshipped, and said they were in grave doubt about what he called them to [c3]. Salih asked them to consider whether, if he was on a clear proof from his Lord and had mercy from Him, anyone could help him against God if he disobeyed Him, and said they would add nothing for him but loss [c4]. They told Salih that he was only one of the bewitched, only a human like them, and told him to bring a sign if he was truthful [c5]. Another passage says that Thamud denied the warnings, and asked whether they would follow one human from among them, saying that then they would be in error and madness [c6]. They asked whether the reminder had been cast on him from among them, and said that he was an insolent liar [c7]. The next ayah says that they will know tomorrow who the insolent liar is [c8]. The Quran says that God guided Thamud, but they preferred blindness to guidance [c9]. Another passage says that they became opposed groups disputing with each other [c10]. Salih asked them why they hastened evil before good, and why they did not ask forgiveness of God so that they might receive mercy [c11]. They told Salih that they took him and those with him as an ill omen, and he answered that their omen was with God and that they were a people being tested [c12]. The ayat say that there were nine groups in the city who spread corruption and did not put things right [c13]. They told one another to swear by God that they would attack him and his family by night, and then tell his guardian that they had not witnessed the destruction of his family and were telling the truth [c14]. The Quran says that Thamud denied through their transgression, when the most wretched of them rose up [c15]. The messenger sent by God told them: the she-camel of God and her drink [c16].",
+      "deep_md": "- The chiefs who were arrogant asked those considered weak, who had believed, whether they knew that Salih was sent by his Lord, and the believers answered that they believed in what he was sent with (7:75) [c1].\n- Those who were arrogant said that they disbelieved in what the others believed (7:76) [c2].\n- They told Salih that he had been hoped for among them before this, asked whether he forbade them to worship what their fathers worshipped, and said they were in grave doubt about what he called them to (11:62) [c3].\n- Salih asked them to consider whether, if he was on a clear proof from his Lord and had mercy from Him, anyone could help him against God if he disobeyed Him, and said they would add nothing for him but loss (11:63) [c4].\n- They told Salih that he was only one of the bewitched, only a human like them, and told him to bring a sign if he was truthful (26:153-154) [c5].\n- Another passage says that Thamud denied the warnings, and asked whether they would follow one human from among them, saying that then they would be in error and madness (54:23-24) [c6].\n- They asked whether the reminder had been cast on him from among them, and said that he was an insolent liar (54:25) [c7].\n- The next ayah says that they will know tomorrow who the insolent liar is (54:26) [c8].\n- The Quran says that God guided Thamud, but they preferred blindness to guidance (41:17) [c9].\n- Another passage says that they became opposed groups disputing with each other (27:45) [c10].\n- Salih asked them why they hastened evil before good, and why they did not ask forgiveness of God so that they might receive mercy (27:46) [c11].\n- They told Salih that they took him and those with him as an ill omen, and he answered that their omen was with God and that they were a people being tested (27:47) [c12].\n- The ayat say that there were nine groups in the city who spread corruption and did not put things right (27:48) [c13].\n- They told one another to swear by God that they would attack him and his family by night, and then tell his guardian that they had not witnessed the destruction of his family and were telling the truth (27:49) [c14].\n- The Quran says that Thamud denied through their transgression, when the most wretched of them rose up (91:11-12) [c15].\n- The messenger sent by God told them: the she-camel of God and her drink (91:13) [c16].",
+      "kids_md": "Some of the people of Thamud would not believe Salih [c2]. They said he was only a human like them [c5]. Salih asked them to ask forgiveness of God so that they might receive mercy [c11].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat show an argument between those who thought themselves strong and those they thought weak, about whether to believe a messenger [c1][c2]. One reading is that Salih answers a challenge with a question about asking forgiveness [c11].",
+      "unknowns_md": "- Not established: who the chiefs, the most wretched one, the guardian or the nine groups were by name, or whether the nine groups were the same people as the chiefs.\n- Not established: in 27:49 the ayat do not name whose family is meant; the draft reads him as Salih.\n- Not established: the pronoun of he is not named in 91:13; the ayah says the messenger of God, and the draft reads this as Salih.\n- Not established: the sense of the word read here as bewitched in 26:153 is read in more than one way."
+    },
+    {
+      "anchor": "the-end-of-thamud",
+      "position": 3,
+      "title_en": "The end of Thamud",
+      "event_slug": "thamud",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 77,
+          "to": 79
+        },
+        {
+          "surah": 11,
+          "from": 65,
+          "to": 68
+        },
+        {
+          "surah": 26,
+          "from": 157,
+          "to": 158
+        },
+        {
+          "surah": 27,
+          "from": 50,
+          "to": 53
+        },
+        {
+          "surah": 41,
+          "from": 17,
+          "to": 18
+        },
+        {
+          "surah": 51,
+          "from": 43,
+          "to": 45
+        },
+        {
+          "surah": 54,
+          "from": 29,
+          "to": 29
+        },
+        {
+          "surah": 54,
+          "from": 31,
+          "to": 31
+        },
+        {
+          "surah": 69,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 91,
+          "from": 14,
+          "to": 15
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "They hamstrung the she-camel, defied the command of their Lord, and told Salih to bring what he threatened if he was one of the messengers.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 77,
+              "to": 77
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Another passage says that they called their companion, who took it up and hamstrung her.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Another passage says that they denied Salih and hamstrung her.",
+          "verses": [
+            {
+              "surah": 91,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Salih told them to enjoy themselves in their home three days, saying that this was a promise not to be denied.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 65,
+              "to": 65
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The Quran says that they were told to enjoy themselves for a while, but they defied the command of their Lord.",
+          "verses": [
+            {
+              "surah": 51,
+              "from": 43,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The Quran says that in the morning they were regretful.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 157,
+              "to": 157
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The ayat word what seized them in different ways: a tremor, so that they lay fallen in their home.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 78,
+              "to": 78
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "The ayat also say that a cry seized the wrongdoers so that they lay fallen in their homes, and that God sent on them one cry and they became like dry twigs.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 67,
+              "to": 67
+            },
+            {
+              "surah": 54,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "The ayat also say that a thunderbolt of the humiliating punishment seized them, that it seized them while they looked on, and that they could not stand up and could not help themselves.",
+          "verses": [
+            {
+              "surah": 41,
+              "from": 17,
+              "to": 17
+            },
+            {
+              "surah": 51,
+              "from": 44,
+              "to": 45
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "The Quran says that Thamud were destroyed by the overpowering one.",
+          "verses": [
+            {
+              "surah": 69,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "Their Lord crushed them for their sin and levelled it, and He does not fear its consequence.",
+          "verses": [
+            {
+              "surah": 91,
+              "from": 14,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Salih turned away from them and said that he had conveyed the message of his Lord and advised them, but that they did not love those who advise.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 79,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "God saved Salih and those who believed with him by mercy from Him, and from the disgrace of that day.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 66,
+              "to": 66
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "God saved those who believed and feared Him.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 53,
+              "to": 53
+            },
+            {
+              "surah": 41,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c15",
+          "statement_en": "They plotted a plot and God plotted a plot, and they did not perceive.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c16",
+          "statement_en": "God destroyed them and their people all together, and their houses stand empty because of their wrongdoing.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 51,
+              "to": 52
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c17",
+          "statement_en": "The passage says that it was as if they had never lived there, and ends by saying away with Thamud.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 68,
+              "to": 68
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c18",
+          "statement_en": "The Quran says that in this there is a sign, and that most of them were not believers.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 158,
+              "to": 158
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Thamud hamstrung the she-camel and defied their Lord's command [c1]. Salih told them to enjoy themselves in their home three days, and then punishment seized them; God saved Salih and those who believed with him [c4][c7][c8][c13].",
+      "body_md": "They hamstrung the she-camel, defied the command of their Lord, and told Salih to bring what he threatened if he was one of the messengers [c1]. Another passage says that they called their companion, who took it up and hamstrung her [c2]. Another passage says that they denied Salih and hamstrung her [c3]. Salih told them to enjoy themselves in their home three days, saying that this was a promise not to be denied [c4]. The Quran says that they were told to enjoy themselves for a while, but they defied the command of their Lord [c5]. The Quran says that in the morning they were regretful [c6]. The ayat word what seized them in different ways: a tremor, so that they lay fallen in their home [c7]. The ayat also say that a cry seized the wrongdoers so that they lay fallen in their homes, and that God sent on them one cry and they became like dry twigs [c8]. The ayat also say that a thunderbolt of the humiliating punishment seized them, that it seized them while they looked on, and that they could not stand up and could not help themselves [c9]. The Quran says that Thamud were destroyed by the overpowering one [c10]. Their Lord crushed them for their sin and levelled it, and He does not fear its consequence [c11]. Salih turned away from them and said that he had conveyed the message of his Lord and advised them, but that they did not love those who advise [c12]. God saved Salih and those who believed with him by mercy from Him, and from the disgrace of that day [c13]. God saved those who believed and feared Him [c14]. They plotted a plot and God plotted a plot, and they did not perceive [c15]. God destroyed them and their people all together, and their houses stand empty because of their wrongdoing [c16]. The passage says that it was as if they had never lived there, and ends by saying away with Thamud [c17]. The Quran says that in this there is a sign, and that most of them were not believers [c18].",
+      "deep_md": "- They hamstrung the she-camel, defied the command of their Lord, and told Salih to bring what he threatened if he was one of the messengers (7:77) [c1].\n- Another passage says that they called their companion, who took it up and hamstrung her (54:29) [c2].\n- Another passage says that they denied Salih and hamstrung her (91:14) [c3].\n- Salih told them to enjoy themselves in their home three days, saying that this was a promise not to be denied (11:65) [c4].\n- The Quran says that they were told to enjoy themselves for a while, but they defied the command of their Lord (51:43-44) [c5].\n- The Quran says that in the morning they were regretful (26:157) [c6].\n- The ayat word what seized them in different ways: a tremor, so that they lay fallen in their home (7:78) [c7].\n- The ayat also say that a cry seized the wrongdoers so that they lay fallen in their homes, and that God sent on them one cry and they became like dry twigs (11:67, 54:31) [c8].\n- The ayat also say that a thunderbolt of the humiliating punishment seized them, that it seized them while they looked on, and that they could not stand up and could not help themselves (41:17, 51:44-45) [c9].\n- The Quran says that Thamud were destroyed by the overpowering one (69:5) [c10].\n- Their Lord crushed them for their sin and levelled it, and He does not fear its consequence (91:14-15) [c11].\n- Salih turned away from them and said that he had conveyed the message of his Lord and advised them, but that they did not love those who advise (7:79) [c12].\n- God saved Salih and those who believed with him by mercy from Him, and from the disgrace of that day (11:66) [c13].\n- God saved those who believed and feared Him (27:53, 41:18) [c14].\n- They plotted a plot and God plotted a plot, and they did not perceive (27:50) [c15].\n- God destroyed them and their people all together, and their houses stand empty because of their wrongdoing (27:51-52) [c16].\n- The passage says that it was as if they had never lived there, and ends by saying away with Thamud (11:68) [c17].\n- The Quran says that in this there is a sign, and that most of them were not believers (26:158) [c18].",
+      "kids_md": "The people of Thamud hurt the she-camel, though they had been told not to [c1]. Salih told them they had only three days at home [c4]. Then God's punishment came, and God saved Salih and those who believed with him [c13].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat set the respite given to Thamud beside the warning that went unheeded [c4][c5]. One reading is that a warning given plainly and answered by defiance is the theme of this chapter [c1][c12].",
+      "unknowns_md": "- Not established: the Quran does not say how long ago this was, where it happened, or how many were saved.\n- Not established: whether the tremor, the cry, the thunderbolt and the overpowering one are one event described in different ways or different aspects of it; the draft does not decide.\n- Not established: who the companion of 54:29 was, and whether one person or more than one hamstrung the she-camel (7:77 and 91:14 are worded in the plural).\n- Not established: the three days of 11:65 are stated by Salih in the ayah; the ayat do not say when they began.\n- Named in later tradition, not in the Quranic text: the names of the people involved, the sign that marked the days, and the location of Thamud's dwellings."
+    },
+    {
+      "anchor": "the-companions-of-al-hijr",
+      "position": 4,
+      "title_en": "The Companions of al-Hijr",
+      "event_slug": "thamud",
+      "verses": [
+        {
+          "surah": 15,
+          "from": 80,
+          "to": 84
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran says that the Companions of al-Hijr denied the messengers.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 80,
+              "to": 80
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God gave them His signs, but they turned away from them.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 81,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They used to carve houses from the mountains, in security.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 82,
+              "to": 82
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The cry seized them in the morning.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 83,
+              "to": 83
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "What they used to earn did not help them.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 84,
+              "to": 84
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Companions of al-Hijr denied the messengers and turned away from the signs God gave them [c1][c2]. The cry seized them, and what they had earned did not help them [c4][c5].",
+      "body_md": "The Quran says that the Companions of al-Hijr denied the messengers [c1]. God gave them His signs, but they turned away from them [c2]. They used to carve houses from the mountains, in security [c3]. The cry seized them in the morning [c4]. What they used to earn did not help them [c5].",
+      "deep_md": "- The Quran says that the Companions of al-Hijr denied the messengers (15:80) [c1].\n- God gave them His signs, but they turned away from them (15:81) [c2].\n- They used to carve houses from the mountains, in security (15:82) [c3].\n- The cry seized them in the morning (15:83) [c4].\n- What they used to earn did not help them (15:84) [c5].",
+      "kids_md": "The Companions of al-Hijr turned away from God's signs [c2]. They had carved houses in the mountains and felt safe [c3]. But the cry came in the morning, and what they had earned did not help them [c4][c5].",
+      "lessons_md": "Educational interpretation (not scripture): The passage sets security in houses against turning away from signs [c2][c3]. One reading is that earnings and safe houses did not decide the outcome [c3][c5].",
+      "unknowns_md": "- Not established: the ayat do not say that the Companions of al-Hijr are Thamud; the inventory places this passage with Thamud.\n- Named in later tradition, not in the Quranic text: the identification of the Companions of al-Hijr with Thamud, and of al-Hijr with a particular place."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Salih and Thamud. None is used in this draft.",
+    "Inventory refs not used: 85:17-18 (a single mention beside another people) and 69:4 (shared with 'Ad).",
+    "Wording a scholar should check first: 17:59 (the sense of the verb read as did wrong with it), 26:153 (bewitched), 54:29 (the companion), 27:48-49 (the nine groups and whose family), 91:13 (the messenger of God), 54:26 (the speaker), 69:5 (the overpowering one), 7:78 (tremor), 51:43 (for a while), 27:45 (the dual number of the opposed groups is rendered as groups).",
+    "Named in later tradition, not in the Quranic text: the place, date and size of Thamud, and the identification of the Companions of al-Hijr with them; none is used."
+  ]
+}

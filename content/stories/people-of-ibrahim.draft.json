@@ -1,0 +1,647 @@
+{
+  "slug": "people-of-ibrahim",
+  "title_en": "The people of Ibrahim",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "people-of-ibrahim"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. This file follows the people of Ibrahim: his father and his people, their answer and the fire. Ibrahim's own story is told in the draft on the prophet Ibrahim; the two share ayat.",
+  "chapters": [
+    {
+      "anchor": "ibrahim-and-his-father",
+      "position": 1,
+      "title_en": "Ibrahim and his father",
+      "event_slug": "people-of-ibrahim",
+      "verses": [
+        {
+          "surah": 19,
+          "from": 42,
+          "to": 50
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ibrahim said to his father: why do you worship what neither hears nor sees nor helps you in any way?",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Ibrahim told his father that knowledge had come to him which had not come to his father, and told him to follow him so that he would guide him to a level way.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 43,
+              "to": 43
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Ibrahim told his father not to worship Satan, who was disobedient to the Merciful.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 44,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Ibrahim told his father that he feared that a punishment from the Merciful would touch him and that he would become a friend of Satan.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 45,
+              "to": 45
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "His father asked whether Ibrahim was turning away from his gods, and said that if he did not stop he would stone him, and told him to leave him for a long time.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 46,
+              "to": 46
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Ibrahim said peace be on you, that he would ask his Lord to forgive his father, and that his Lord had been gracious to him.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 47,
+              "to": 47
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Ibrahim said that he would withdraw from them and from what they called on besides God, and would call on his Lord, hoping not to be unhappy in calling on his Lord.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 48,
+              "to": 48
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "When he withdrew from them and from what they worshipped besides God, God granted him Ishaq and Yaqub, and made each of them a prophet.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 49,
+              "to": 49
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "God granted them of His mercy and gave them a high tongue of truth.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Ibrahim asked his father why he worshipped what neither hears nor sees, and told him to follow him and not to worship Satan [c1][c2][c3]. His father threatened to stone him, and Ibrahim withdrew from them and called on his Lord [c5][c7].",
+      "body_md": "Ibrahim said to his father: why do you worship what neither hears nor sees nor helps you in any way? [c1]. Ibrahim told his father that knowledge had come to him which had not come to his father, and told him to follow him so that he would guide him to a level way [c2]. Ibrahim told his father not to worship Satan, who was disobedient to the Merciful [c3]. Ibrahim told his father that he feared that a punishment from the Merciful would touch him and that he would become a friend of Satan [c4]. His father asked whether Ibrahim was turning away from his gods, and said that if he did not stop he would stone him, and told him to leave him for a long time [c5]. Ibrahim said peace be on you, that he would ask his Lord to forgive his father, and that his Lord had been gracious to him [c6]. Ibrahim said that he would withdraw from them and from what they called on besides God, and would call on his Lord, hoping not to be unhappy in calling on his Lord [c7]. When he withdrew from them and from what they worshipped besides God, God granted him Ishaq and Yaqub, and made each of them a prophet [c8]. God granted them of His mercy and gave them a high tongue of truth [c9].",
+      "deep_md": "- Ibrahim said to his father: why do you worship what neither hears nor sees nor helps you in any way? (19:42) [c1].\n- Ibrahim told his father that knowledge had come to him which had not come to his father, and told him to follow him so that he would guide him to a level way (19:43) [c2].\n- Ibrahim told his father not to worship Satan, who was disobedient to the Merciful (19:44) [c3].\n- Ibrahim told his father that he feared that a punishment from the Merciful would touch him and that he would become a friend of Satan (19:45) [c4].\n- His father asked whether Ibrahim was turning away from his gods, and said that if he did not stop he would stone him, and told him to leave him for a long time (19:46) [c5].\n- Ibrahim said peace be on you, that he would ask his Lord to forgive his father, and that his Lord had been gracious to him (19:47) [c6].\n- Ibrahim said that he would withdraw from them and from what they called on besides God, and would call on his Lord, hoping not to be unhappy in calling on his Lord (19:48) [c7].\n- When he withdrew from them and from what they worshipped besides God, God granted him Ishaq and Yaqub, and made each of them a prophet (19:49) [c8].\n- God granted them of His mercy and gave them a high tongue of truth (19:50) [c9].",
+      "kids_md": "Ibrahim asked his father why he worshipped what cannot hear or see [c1]. He told him not to worship Satan [c3]. Ibrahim said peace to his father and went away from them to call on his Lord [c6][c7].",
+      "lessons_md": "Educational interpretation (not scripture): Ibrahim's words to his father join respect with a plain refusal to worship what cannot hear, see or help [c1][c6][c7]. One reading is that the ayat show him answering a threat with a greeting of peace and a prayer [c5][c6].",
+      "unknowns_md": "- Not established: the name of Ibrahim's father is not given in these ayat; the draft names no one.\n- Not established: where this happened, how old Ibrahim was, or how long he stayed with them before withdrawing.\n- Not established: the sense of the phrase translated for a long time in 19:46 is read in more than one way.\n- Not established: whether the forgiveness Ibrahim promised his father was asked for or received; these ayat state only the promise.\n- Named in later tradition, not in the Quranic text: the name of Ibrahim's father and the place where he lived; none is used here."
+    },
+    {
+      "anchor": "what-ibrahim-asked-his-people",
+      "position": 2,
+      "title_en": "What Ibrahim asked his people",
+      "event_slug": "people-of-ibrahim",
+      "verses": [
+        {
+          "surah": 21,
+          "from": 52,
+          "to": 56
+        },
+        {
+          "surah": 26,
+          "from": 70,
+          "to": 77
+        },
+        {
+          "surah": 29,
+          "from": 16,
+          "to": 17
+        },
+        {
+          "surah": 37,
+          "from": 85,
+          "to": 87
+        },
+        {
+          "surah": 43,
+          "from": 26,
+          "to": 28
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ibrahim asked his father and his people what these statues were, to which they were devoted.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 52,
+              "to": 52
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They said that they had found their fathers worshipping them.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 53,
+              "to": 53
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Ibrahim said that they and their fathers had been in clear error.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 54,
+              "to": 54
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They asked whether he had come with the truth or was one of those who play.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 55,
+              "to": 55
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Ibrahim said that their Lord was the Lord of the heavens and the earth, who created them, and that he was a witness to it.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 56,
+              "to": 56
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Ibrahim asked his father and his people what they worshipped, and they said that they worshipped idols and remained devoted to them.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 70,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Ibrahim asked whether the idols heard them when they called, or helped them, or harmed them, and they said that they had found their fathers doing the same.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 72,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Ibrahim told them to consider what they worshipped, they and their fathers of old, and said that those were enemies to him, except the Lord of the worlds.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 75,
+              "to": 77
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "Ibrahim told his people to worship God and fear Him, since that was better for them, if they knew.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 16,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "Ibrahim told them that they worshipped idols besides God and invented falsehood, and that those they worshipped did not own any provision for them.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "Ibrahim told them to seek provision from God, to worship Him and give thanks to Him, since to Him they would be returned.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Ibrahim asked his father and his people what they worshipped, asked whether it was falsehood, gods other than God, that they wanted, and asked what they thought of the Lord of the worlds.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 85,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "Ibrahim told his father and his people that he was free of what they worshipped except Him who had created him, and that He would guide him.",
+          "verses": [
+            {
+              "surah": 43,
+              "from": 26,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "The Quran says that a lasting word was made among his descendants so that they might return.",
+          "verses": [
+            {
+              "surah": 43,
+              "from": 28,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Ibrahim asked his people what they worshipped, and they said that they had found their fathers worshipping idols [c6][c7][c2]. He told them that their Lord is the Lord of the heavens and the earth, and told them to worship God alone [c5][c9][c11].",
+      "body_md": "Ibrahim asked his father and his people what these statues were, to which they were devoted [c1]. They said that they had found their fathers worshipping them [c2]. Ibrahim said that they and their fathers had been in clear error [c3]. They asked whether he had come with the truth or was one of those who play [c4]. Ibrahim said that their Lord was the Lord of the heavens and the earth, who created them, and that he was a witness to it [c5]. Ibrahim asked his father and his people what they worshipped, and they said that they worshipped idols and remained devoted to them [c6]. Ibrahim asked whether the idols heard them when they called, or helped them, or harmed them, and they said that they had found their fathers doing the same [c7]. Ibrahim told them to consider what they worshipped, they and their fathers of old, and said that those were enemies to him, except the Lord of the worlds [c8]. Ibrahim told his people to worship God and fear Him, since that was better for them, if they knew [c9]. Ibrahim told them that they worshipped idols besides God and invented falsehood, and that those they worshipped did not own any provision for them [c10]. Ibrahim told them to seek provision from God, to worship Him and give thanks to Him, since to Him they would be returned [c11]. Ibrahim asked his father and his people what they worshipped, asked whether it was falsehood, gods other than God, that they wanted, and asked what they thought of the Lord of the worlds [c12]. Ibrahim told his father and his people that he was free of what they worshipped except Him who had created him, and that He would guide him [c13]. The Quran says that a lasting word was made among his descendants so that they might return [c14].",
+      "deep_md": "- Ibrahim asked his father and his people what these statues were, to which they were devoted (21:52) [c1].\n- They said that they had found their fathers worshipping them (21:53) [c2].\n- Ibrahim said that they and their fathers had been in clear error (21:54) [c3].\n- They asked whether he had come with the truth or was one of those who play (21:55) [c4].\n- Ibrahim said that their Lord was the Lord of the heavens and the earth, who created them, and that he was a witness to it (21:56) [c5].\n- Ibrahim asked his father and his people what they worshipped, and they said that they worshipped idols and remained devoted to them (26:70-71) [c6].\n- Ibrahim asked whether the idols heard them when they called, or helped them, or harmed them, and they said that they had found their fathers doing the same (26:72-74) [c7].\n- Ibrahim told them to consider what they worshipped, they and their fathers of old, and said that those were enemies to him, except the Lord of the worlds (26:75-77) [c8].\n- Ibrahim told his people to worship God and fear Him, since that was better for them, if they knew (29:16) [c9].\n- Ibrahim told them that they worshipped idols besides God and invented falsehood, and that those they worshipped did not own any provision for them (29:17) [c10].\n- Ibrahim told them to seek provision from God, to worship Him and give thanks to Him, since to Him they would be returned (29:17) [c11].\n- Ibrahim asked his father and his people what they worshipped, asked whether it was falsehood, gods other than God, that they wanted, and asked what they thought of the Lord of the worlds (37:85-87) [c12].\n- Ibrahim told his father and his people that he was free of what they worshipped except Him who had created him, and that He would guide him (43:26-27) [c13].\n- The Quran says that a lasting word was made among his descendants so that they might return (43:28) [c14].",
+      "kids_md": "Ibrahim asked his people what they worshipped [c6]. They said that their fathers had worshipped idols [c2]. Ibrahim told them to worship God, who created them [c5][c9].",
+      "lessons_md": "Educational interpretation (not scripture): The questions Ibrahim asks, whether the idols hear, help or harm, are put to the people themselves [c7]. One reading is that the passage meets the answer we found our fathers doing so with a question about what the idols can do [c2][c7].",
+      "unknowns_md": "- Not established: where Ibrahim's people lived, how many they were, or how long he spoke to them; the draft names no place.\n- Not established: what the statues were made of or how many there were; the ayat say only that they were idols.\n- Not established: the pronoun in 43:28 (who made the lasting word) is not named in the ayah; the draft states the ayah as worded.\n- Not established: the draft does not use 21:60, which gives Ibrahim a word for his age; it is left to reviewers whether to use it.\n- Named in later tradition, not in the Quranic text: the names of the idols and the place of the city; none is used here."
+    },
+    {
+      "anchor": "the-idols-and-the-fire",
+      "position": 3,
+      "title_en": "The idols and the fire",
+      "event_slug": "people-of-ibrahim",
+      "verses": [
+        {
+          "surah": 21,
+          "from": 57,
+          "to": 70
+        },
+        {
+          "surah": 29,
+          "from": 24,
+          "to": 24
+        },
+        {
+          "surah": 37,
+          "from": 88,
+          "to": 98
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ibrahim said that he would plan against their idols after they had turned away, and he made them pieces except the largest of them, so that they might return to it.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 57,
+              "to": 58
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They asked who had done this to their gods, and said that he must be one of the wrongdoers.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 59,
+              "to": 59
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They said that they had heard someone mention them, and that he was called Ibrahim.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 60,
+              "to": 60
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They said to bring him before the people, so that they might bear witness, and asked whether he had done this to their gods.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 61,
+              "to": 62
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Ibrahim said that the largest of them had done it, and told them to ask the idols if they could speak.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 63,
+              "to": 63
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They turned to themselves and said that they were the wrongdoers, and then they turned back and said that he knew that the idols did not speak.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 64,
+              "to": 65
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Ibrahim asked whether they worshipped besides God what could neither help nor harm them, and said fie on them and on what they worshipped besides God.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 66,
+              "to": 67
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Another passage says that he looked at the stars and said that he was sick, and they turned away from him.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 88,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "He went to their gods and asked whether they would not eat, and why they did not speak, and struck them a blow.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 91,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "They came rushing to him, and he asked whether they worshipped what they carved, when God created them and what they made.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 94,
+              "to": 96
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "They said to burn him and support their gods if they were going to act.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 68,
+              "to": 68
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Their answer was only to say to kill him or burn him, and God saved him from the fire.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "God said: O fire, be coolness and safety for Ibrahim.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 69,
+              "to": 69
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c14",
+          "statement_en": "They wanted to plot against him, and God made them the greatest losers.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c15",
+          "statement_en": "Another passage says that they said to build a structure for him and throw him into the blazing fire, that they wanted to plot against him, and that God made them the lowest.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 97,
+              "to": 98
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran says that Ibrahim made the idols pieces except the largest, and that his people asked who had done it and then said to burn him [c1][c2][c11]. God said to the fire to be coolness and safety for Ibrahim, and the plot of his people failed [c13][c14].",
+      "body_md": "Ibrahim said that he would plan against their idols after they had turned away, and he made them pieces except the largest of them, so that they might return to it [c1]. They asked who had done this to their gods, and said that he must be one of the wrongdoers [c2]. They said that they had heard someone mention them, and that he was called Ibrahim [c3]. They said to bring him before the people, so that they might bear witness, and asked whether he had done this to their gods [c4]. Ibrahim said that the largest of them had done it, and told them to ask the idols if they could speak [c5]. They turned to themselves and said that they were the wrongdoers, and then they turned back and said that he knew that the idols did not speak [c6]. Ibrahim asked whether they worshipped besides God what could neither help nor harm them, and said fie on them and on what they worshipped besides God [c7]. Another passage says that he looked at the stars and said that he was sick, and they turned away from him [c8]. He went to their gods and asked whether they would not eat, and why they did not speak, and struck them a blow [c9]. They came rushing to him, and he asked whether they worshipped what they carved, when God created them and what they made [c10]. They said to burn him and support their gods if they were going to act [c11]. Their answer was only to say to kill him or burn him, and God saved him from the fire [c12]. God said: O fire, be coolness and safety for Ibrahim [c13]. They wanted to plot against him, and God made them the greatest losers [c14]. Another passage says that they said to build a structure for him and throw him into the blazing fire, that they wanted to plot against him, and that God made them the lowest [c15].",
+      "deep_md": "- Ibrahim said that he would plan against their idols after they had turned away, and he made them pieces except the largest of them, so that they might return to it (21:57-58) [c1].\n- They asked who had done this to their gods, and said that he must be one of the wrongdoers (21:59) [c2].\n- They said that they had heard someone mention them, and that he was called Ibrahim (21:60) [c3].\n- They said to bring him before the people, so that they might bear witness, and asked whether he had done this to their gods (21:61-62) [c4].\n- Ibrahim said that the largest of them had done it, and told them to ask the idols if they could speak (21:63) [c5].\n- They turned to themselves and said that they were the wrongdoers, and then they turned back and said that he knew that the idols did not speak (21:64-65) [c6].\n- Ibrahim asked whether they worshipped besides God what could neither help nor harm them, and said fie on them and on what they worshipped besides God (21:66-67) [c7].\n- Another passage says that he looked at the stars and said that he was sick, and they turned away from him (37:88-90) [c8].\n- He went to their gods and asked whether they would not eat, and why they did not speak, and struck them a blow (37:91-93) [c9].\n- They came rushing to him, and he asked whether they worshipped what they carved, when God created them and what they made (37:94-96) [c10].\n- They said to burn him and support their gods if they were going to act (21:68) [c11].\n- Their answer was only to say to kill him or burn him, and God saved him from the fire (29:24) [c12].\n- God said: O fire, be coolness and safety for Ibrahim (21:69) [c13].\n- They wanted to plot against him, and God made them the greatest losers (21:70) [c14].\n- Another passage says that they said to build a structure for him and throw him into the blazing fire, that they wanted to plot against him, and that God made them the lowest (37:97-98) [c15].",
+      "kids_md": "Ibrahim broke the idols into pieces, except the biggest one [c1]. His people asked who had done it [c2]. They wanted to burn him, but God said to the fire to be cool and safe for Ibrahim [c11][c13].",
+      "lessons_md": "Educational interpretation (not scripture): The ayat show the idols unable to answer a question put to them [c5][c6]. One reading is that the passage then places God's word to the fire beside the threat of the people [c11][c13].",
+      "unknowns_md": "- Not established: where the fire was, how long it burned, or who lit it; the ayat do not say.\n- Not established: the speaker of the words about the plan against the idols in 21:57 is Ibrahim in the draft's reading; the ayah does not name him in that verse.\n- Not established: Ibrahim's words I am sick in 37:89 are read in more than one way; the draft states them as the ayah gives them and adds no explanation.\n- Not established: whether the largest idol was left so that they might return to it or to him is read in more than one way in 21:58.\n- Not established: the wording of 37:93 (a blow with the right hand, or with strength) is read in more than one way; the draft says a blow.\n- Not established: 21:60 calls him by a word that may refer to his age; the draft does not use it.\n- Named in later tradition, not in the Quranic text: the name of the ruler, the name of the city, and any detail of the fire; none is used here."
+    },
+    {
+      "anchor": "after-the-fire",
+      "position": 4,
+      "title_en": "After the fire",
+      "event_slug": "people-of-ibrahim",
+      "verses": [
+        {
+          "surah": 29,
+          "from": 16,
+          "to": 16
+        },
+        {
+          "surah": 29,
+          "from": 25,
+          "to": 27
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ibrahim told them that they had taken idols besides God as a bond of affection among themselves in the life of this world.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 16,
+              "to": 16
+            },
+            {
+              "surah": 29,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "On the Day of Resurrection they would deny one another and curse one another, and their home would be the fire, and they would have no helpers.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Lut believed him and said that he was emigrating to his Lord.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God granted him Ishaq and Yaqub, placed prophethood and the Book among his descendants, gave him his reward in this world, and in the Hereafter he is among the righteous.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Ibrahim told his people that their idols were only a bond among themselves in this life and that on the Day of Resurrection they would deny one another [c1][c2]. Lut believed him, and God granted him Ishaq and Yaqub [c3][c4].",
+      "body_md": "Ibrahim told them that they had taken idols besides God as a bond of affection among themselves in the life of this world [c1]. On the Day of Resurrection they would deny one another and curse one another, and their home would be the fire, and they would have no helpers [c2]. Lut believed him and said that he was emigrating to his Lord [c3]. God granted him Ishaq and Yaqub, placed prophethood and the Book among his descendants, gave him his reward in this world, and in the Hereafter he is among the righteous [c4].",
+      "deep_md": "- Ibrahim told them that they had taken idols besides God as a bond of affection among themselves in the life of this world (29:16, 29:25) [c1].\n- On the Day of Resurrection they would deny one another and curse one another, and their home would be the fire, and they would have no helpers (29:25) [c2].\n- Lut believed him and said that he was emigrating to his Lord (29:26) [c3].\n- God granted him Ishaq and Yaqub, placed prophethood and the Book among his descendants, gave him his reward in this world, and in the Hereafter he is among the righteous (29:27) [c4].",
+      "kids_md": "Lut believed Ibrahim [c3]. God granted Ibrahim Ishaq and Yaqub [c4].",
+      "lessons_md": "Educational interpretation (not scripture): The passage sets a bond built on idols that will end on the Day of Resurrection beside the gifts given to Ibrahim [c1][c2][c4]. One reading is that Lut's emigration to his Lord is placed beside the end of that bond [c2][c3].",
+      "unknowns_md": "- Not established: where Lut emigrated to, when, or how many others believed with him; the ayah gives only his words.\n- Not established: the pronoun he in 29:26 (who said that he was emigrating) is read as Lut by most readers, but the ayah does not mark the speaker.\n- Not established: 26:78-104 (Ibrahim's prayers and the scene of the day of judgement) is not drafted here; it belongs to the draft on Ibrahim and needs a scholar's wording."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Ibrahim and his people. None is used in this draft.",
+    "Inventory refs not drafted as chapters: 26:78-104 (prayers of Ibrahim and the scene of the day), 37:83-84; left to the draft on the prophet Ibrahim.",
+    "Wording a scholar should check first: 19:46 (a long time), 21:58 (the largest of them, and the pronoun), 37:89 (I am sick), 43:28 (the lasting word and its pronoun), 29:26 (the speaker), 21:63 (the largest did it).",
+    "Named in later tradition, not in the Quranic text: the name of Ibrahim's father, of the king and of the city; none is used."
+  ]
+}

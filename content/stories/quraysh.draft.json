@@ -1,0 +1,87 @@
+{
+  "slug": "quraysh",
+  "title_en": "Quraysh",
+  "title_ar": null,
+  "subject": {
+    "type": "community",
+    "event_slug": "quraysh"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order grouped by theme, not a chronology; surah order is not time order. Quraysh is named in a single short passage; the draft states it and nothing more. Other passages that address the people of the Prophet's own time are not part of this inventory item.",
+  "chapters": [
+    {
+      "anchor": "a-reminder-to-quraysh",
+      "position": 1,
+      "title_en": "A reminder to Quraysh",
+      "event_slug": "quraysh",
+      "verses": [
+        {
+          "surah": 106,
+          "from": 1,
+          "to": 4
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran speaks of the accustoming of Quraysh.",
+          "verses": [
+            {
+              "surah": 106,
+              "from": 1,
+              "to": 1
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "It speaks of their accustomed journey of winter and summer.",
+          "verses": [
+            {
+              "surah": 106,
+              "from": 2,
+              "to": 2
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "It tells them to worship the Lord of this House.",
+          "verses": [
+            {
+              "surah": 106,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "It says that He is the One who fed them against hunger and made them secure from fear.",
+          "verses": [
+            {
+              "surah": 106,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran speaks of the accustoming of Quraysh and of their journey of winter and summer [c1][c2]. It tells them to worship the Lord of this House, who fed them against hunger and made them secure from fear [c3][c4].",
+      "body_md": "The Quran speaks of the accustoming of Quraysh [c1]. It speaks of their accustomed journey of winter and summer [c2]. It tells them to worship the Lord of this House [c3]. It says that He is the One who fed them against hunger and made them secure from fear [c4].",
+      "deep_md": "- The Quran speaks of the accustoming of Quraysh (106:1) [c1].\n- It speaks of their accustomed journey of winter and summer (106:2) [c2].\n- It tells them to worship the Lord of this House (106:3) [c3].\n- It says that He is the One who fed them against hunger and made them secure from fear (106:4) [c4].",
+      "kids_md": "The Quran reminds Quraysh of their journeys in winter and in summer [c2]. It tells them to worship the Lord of this House [c3]. He is the One who fed them and kept them safe from fear [c4].",
+      "lessons_md": "Educational interpretation (not scripture): The passage ties the food and safety Quraysh enjoyed to a call to worship their Lord [c3][c4]. One reading is that the ayat ask the hearers to answer gifts with worship [c3][c4].",
+      "unknowns_md": "- Not established: the ayat do not say where Quraysh lived, who they were or how many; the draft names no place.\n- Not established: which House is meant by this House, and which journeys are meant, are not stated beyond the words of the ayat.\n- Not established: how the first ayah is joined to the rest (the grammar of the opening letter) is read in more than one way; the draft states the ayat in order.\n- Named in later tradition, not in the Quranic text: the cities, the trade routes and the House that later accounts connect with the passage; none is used here."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Quraysh and this passage. None is used in this draft.",
+    "Wording a scholar should check first: 106:1 (the accustoming, and its grammatical link to the preceding passage as some read it), 106:2 (the journey of winter and summer), 106:3 (this House).",
+    "Named in later tradition, not in the Quranic text: Makkah, the Kaaba, the routes to the south and to the north, and the tribe's history; none is used."
+  ]
+}
