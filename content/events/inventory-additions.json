@@ -1,0 +1,59 @@
+{
+ "migration": "20261031002580_event_universe_inventory_additions.sql",
+ "note": "Verse references added after migration 20261031002451 was applied. That migration is frozen; these refs are inserted by the additive migration named here (idempotent, by slug). They are also appended, in this order, to the refs of the same items in inventory.draft.json, so positions continue where the base migration stopped. Added 2026-11-01 so that the story drafts can cite the ayat of their chapters (the draft validator requires a chapter's verses to lie inside the subject's refs). Each range exists in the Quran text and has an anchor word in tests/fixtures/event-anchors.json.",
+ "added": [
+  {
+   "slug": "muhammad",
+   "refs": [
+    "96:1-5",
+    "97:1-5",
+    "44:1-6",
+    "2:185",
+    "17:106",
+    "25:32",
+    "17:1",
+    "8:30",
+    "9:40",
+    "3:13",
+    "3:123-127",
+    "8:5-12",
+    "8:17",
+    "8:41-48",
+    "3:121-122",
+    "3:139-146",
+    "3:152-155",
+    "9:25-27",
+    "9:38-42",
+    "9:117-118"
+   ]
+  },
+  {
+   "slug": "isa",
+   "refs": [
+    "3:35-37",
+    "3:42-44",
+    "19:16-26",
+    "21:91",
+    "23:50",
+    "66:12"
+   ]
+  },
+  {
+   "slug": "musa",
+   "refs": [
+    "2:63",
+    "2:93",
+    "4:154",
+    "7:171",
+    "19:51-53",
+    "44:23-31"
+   ]
+  },
+  {
+   "slug": "musa-before-pharaoh-and-the-magicians",
+   "refs": [
+    "79:17-19"
+   ]
+  }
+ ]
+}

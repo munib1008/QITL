@@ -280,7 +280,7 @@
         },
         {
           "surah": 26,
-          "from": 70,
+          "from": 69,
           "to": 82
         },
         {
@@ -390,11 +390,23 @@
             }
           ],
           "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "In another passage, God tells the listener to recite to them the news of Ibrahim.",
+          "verses": [
+            {
+              "surah": 26,
+              "from": 69,
+              "to": 69
+            }
+          ],
+          "evidence": "quran"
         }
       ],
       "summary_md": "The Quran records Ibrahim asking his people what they worshipped [c2][c4][c6][c7]. They answered that they followed their fathers [c2][c4]. He said that his Lord is the Lord of the heavens and the earth [c3], who created him, guides him, feeds him, heals him, and will cause him to die and live again [c5].",
-      "body_md": "God says He gave Ibrahim his right judgement before, and knew him [c1]. In another passage, Ibrahim asked his father and his people what the images were to which they were devoted [c2]. They said they found their fathers worshipping them, and he told them they and their fathers were in manifest error [c2]. They asked whether he came with the truth or was playing, and he said their Lord is the Lord of the heavens and the earth, who originated them, and that he was a witness to that [c3].\n\nIn another passage, he asked what they worshipped; they said they worshipped idols and stayed devoted to them [c4]. He asked whether the idols hear when they are called, or benefit or harm, and they answered that they found their fathers doing so [c4]. He then said all they worshipped were enemies to him except the Lord of the worlds, who created him and guides him, feeds him and gives him drink, heals him when he is ill, causes him to die and then gives life, and from whom he hopes forgiveness on the Day of Recompense [c5].\n\nIn another passage, he tells them to worship God and be mindful of Him, says that those they worship besides God own no provision for them, and tells them to seek provision from God, worship Him and be grateful [c6]. In another passage, which says he came to his Lord with a sound heart [c8], he asks what they worship, whether they want false gods besides God, and what they think of the Lord of the worlds [c7].",
-      "deep_md": "The question about the images and the people's reply about their fathers are told in one passage [c2]. Another adds the question whether the idols hear, benefit or harm [c4] and a long statement about the Lord who creates, guides, feeds, heals and gives life after death [c5]. A further passage stresses provision [c6], and the last opens with the sound heart [c8] and ends in a question to the people [c7].",
+      "body_md": "God says He gave Ibrahim his right judgement before, and knew him [c1]. In another passage, Ibrahim asked his father and his people what the images were to which they were devoted [c2]. They said they found their fathers worshipping them, and he told them they and their fathers were in manifest error [c2]. They asked whether he came with the truth or was playing, and he said their Lord is the Lord of the heavens and the earth, who originated them, and that he was a witness to that [c3].\n\nAnother passage opens with the instruction to recite to them the news of Ibrahim [c9]. In it, he asked what they worshipped; they said they worshipped idols and stayed devoted to them [c4]. He asked whether the idols hear when they are called, or benefit or harm, and they answered that they found their fathers doing so [c4]. He then said all they worshipped were enemies to him except the Lord of the worlds, who created him and guides him, feeds him and gives him drink, heals him when he is ill, causes him to die and then gives life, and from whom he hopes forgiveness on the Day of Recompense [c5].\n\nIn another passage, he tells them to worship God and be mindful of Him, says that those they worship besides God own no provision for them, and tells them to seek provision from God, worship Him and be grateful [c6]. In another passage, which says he came to his Lord with a sound heart [c8], he asks what they worship, whether they want false gods besides God, and what they think of the Lord of the worlds [c7].",
+      "deep_md": "The question about the images and the people's reply about their fathers are told in one passage [c2]. Another adds the question whether the idols hear, benefit or harm [c4] and a long statement about the Lord who creates, guides, feeds, heals and gives life after death [c5]. A further passage stresses provision [c6], and the last opens with the sound heart [c8] and ends in a question to the people [c7]. That passage begins by telling the listener to recite the news of Ibrahim [c9].",
       "kids_md": "Ibrahim asked his people what they worshipped [c4]. They said they followed what their fathers did [c2][c4]. Ibrahim said that his Lord made him, feeds him, helps him when he is ill, and will bring him back to life [c5].",
       "lessons_md": "Educational interpretation (not scripture): the people's reply, that they found their fathers doing the same, is a reason of habit and not of truth [c2][c4]. Ibrahim answers by naming what his Lord does for him [c5].",
       "unknowns_md": "Not established: the place, the date, and the order of the accounts. The ayat from 29:18 onward continue the discourse; whether they are Ibrahim's continuing speech or an address to the later audience is read differently by interpreters, so this draft makes no claim from 29:18-23 and leaves them to a scholar. The names of the people's idols are not given in these ayat."

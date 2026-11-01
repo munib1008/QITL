@@ -3,12 +3,13 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, test } from "vitest";
 import inventory from "../../content/events/inventory.draft.json";
+import additions from "../../content/events/inventory-additions.json";
 import narrative from "../../content/events/narrative-ranges.json";
 import anchors from "../fixtures/event-anchors.json";
 import { computeCoverage, keysOf, rangesOf } from "@/lib/events/coverage";
 import { chunk, groupLanes, type UniverseEvent } from "@/lib/events/model";
 import { compareInLane, dateLabel, laneOf } from "@/lib/events/ordering";
-import { inventorySql, type Inventory } from "@/lib/events/seed-sql";
+import { additionsSql, baseInventory, inventorySql, type Inventory, type InventoryAdditions } from "@/lib/events/seed-sql";
 import { completeHref, filterByTracks, parseTracks, serializeTracks, toggleTrack, TRACK_IDS } from "@/lib/events/tracks";
 import { anchorOk, ayahCounts, formatRef, loadQuran, norm, parseRef, rangeExists, rangeHasAnchor } from "@/lib/events/verify";
 
@@ -83,16 +84,39 @@ describe("every seeded verse reference exists in the Quran text", () => {
     expect(problems).toEqual([]);
   });
 
-  test("the migration that seeds the database holds exactly those references, and every one exists in the text", () => {
-    const sql = readFileSync(join(root, "supabase", "migrations", "20261031002451_event_universe_inventory.sql"), "utf8");
-    expect(sql).toBe(inventorySql(inv)); // regenerate with: pnpm tsx scripts/gen-event-inventory.ts
-    const rows = [...sql.matchAll(/^\s+\('([a-z0-9-]+)', (\d+), (\d+), (\d+), (\d+)\)/gm)];
-    expect(rows.length).toBe(inv.items.reduce((s, i) => s + i.refs.length, 0));
-    for (const [, slug, s, f, t] of rows) {
+  test("the frozen base migration plus the additive migration hold exactly those references, and every one exists in the text", () => {
+    const add = additions as unknown as InventoryAdditions;
+    const base = readFileSync(join(root, "supabase", "migrations", "20261031002451_event_universe_inventory.sql"), "utf8");
+    const extra = readFileSync(join(root, "supabase", "migrations", add.migration), "utf8");
+    // The base migration is already applied in production and must never change: it is the file minus the added references.
+    expect(base).toBe(inventorySql(baseInventory(inv, add))); // regenerate with: pnpm tsx scripts/gen-event-inventory.ts
+    expect(extra).toBe(additionsSql(inv, add));
+    expect(add.migration).toMatch(/^2026103100258\d_/);
+    const rowRe = /^\s+\('([a-z0-9-]+)', (\d+), (\d+), (\d+), (\d+)\)/gm;
+    const baseRows = [...base.matchAll(rowRe)]; // item rows have string fields only and do not match the numeric row pattern
+    const extraRows = [...extra.matchAll(rowRe)];
+    expect(baseRows.length).toBe(baseInventory(inv, add).items.reduce((s, i) => s + i.refs.length, 0));
+    expect(extraRows.length).toBe(add.added.reduce((s, a) => s + a.refs.length, 0));
+    const seen = new Set<string>();
+    for (const [, slug, s, f, t, pos] of [...baseRows, ...extraRows]) {
       const r = { surah: Number(s), from: Number(f), to: Number(t) };
       expect(rangeExists(q, r), `${slug} ${s}:${f}-${t}`).toBe(true);
-      expect(inv.items.find((i) => i.slug === slug)?.refs).toContain(formatRef(r));
+      const refs = inv.items.find((i) => i.slug === slug)?.refs ?? [];
+      expect(refs, `${slug} ${formatRef(r)}`).toContain(formatRef(r));
+      expect(refs.indexOf(formatRef(r)), `position of ${slug} ${formatRef(r)}`).toBe(Number(pos)); // positions continue where the base stopped
+      seen.add(`${slug} ${formatRef(r)}`);
     }
+    // Together they are the whole inventory: nothing in the file is missing from the migrations, nothing is in both.
+    expect(seen.size).toBe(baseRows.length + extraRows.length);
+    expect(seen.size).toBe(inv.items.reduce((s, i) => s + i.refs.length, 0));
+    // The additions only extend existing items and only at the end of their lists.
+    for (const a of add.added) {
+      const refs = inv.items.find((i) => i.slug === a.slug)!.refs;
+      expect(refs.slice(refs.length - a.refs.length)).toEqual(a.refs);
+    }
+    // The additive migration creates no event and touches nothing else.
+    expect(extra).not.toMatch(/insert into public\.historical_events|update |delete |drop |alter /i);
+    expect(extra).toMatch(/on conflict \(event_id, surah, ayah_from, ayah_to\) do nothing/);
   });
 
   test("no item is a duplicate; slugs and tracks are valid; no item carries more than shell fields", () => {
