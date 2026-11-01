@@ -51,7 +51,7 @@ export const StoryDraftSchema = z
     slug: z.string().regex(kebab),
     title_en: z.string().min(1).max(200),
     title_ar: z.string().min(1).max(60).nullable(),
-    subject: z.object({ type: z.literal("prophet"), event_slug: z.string().regex(kebab) }).strict(),
+    subject: z.object({ type: z.enum(["prophet", "person", "community", "event", "parable", "seerah"]), event_slug: z.string().regex(kebab) }).strict(),
     status: z.literal("draft"),
     notes: z.string().max(4000).optional(),
     chapters: z.array(ChapterSchema).min(1),
@@ -63,6 +63,9 @@ export type VerseRange = z.infer<typeof VerseRangeSchema>;
 export type DraftClaim = z.infer<typeof ClaimSchema>;
 export type DraftChapter = z.infer<typeof ChapterSchema>;
 export type StoryDraft = z.infer<typeof StoryDraftSchema>;
+
+/** The Event Universe track each subject type belongs to (content/events/inventory.draft.json). */
+export const SUBJECT_TRACK = { prophet: "prophets", person: "people", community: "communities", event: "events", parable: "parables", seerah: "seerah" } as const;
 
 export const LESSONS_PREFIX = "Educational interpretation (not scripture):";
 export const TRADITION_LABEL = "Named in later tradition, not in the Quranic text";
@@ -330,7 +333,7 @@ export function validateStoryDraft(raw: unknown, ctx: DraftContext, opts: Valida
   // subject and the inventory
   const inv = ctx.inventory.find((i) => i.slug === d.subject.event_slug);
   if (!inv) err("subject", "subject.event_slug", `"${d.subject.event_slug}" is not in content/events/inventory.draft.json`);
-  else if (inv.track !== "prophets") err("subject", "subject.event_slug", `"${inv.slug}" is on the "${inv.track}" track, not "prophets"`);
+  else if (inv.track !== SUBJECT_TRACK[d.subject.type]) err("subject", "subject.event_slug", `"${inv.slug}" is on the "${inv.track}" track, not "${SUBJECT_TRACK[d.subject.type]}" (subject.type "${d.subject.type}")`);
   const subjectAyat = ayatOfRanges(refsToRanges(inv?.refs ?? []));
 
   if (d.title_ar !== null) {

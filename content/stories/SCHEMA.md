@@ -13,7 +13,7 @@ Source of truth for the rules: `src/lib/stories/draft.ts` (zod schema and valida
   "slug": "yusuf",                       // kebab-case; must equal the file name
   "title_en": "Yusuf",
   "title_ar": "يوسف",                    // only the well-known Arabic name of the subject (tests/fixtures titles_ar); otherwise null
-  "subject": { "type": "prophet", "event_slug": "yusuf" },   // an inventory item on the "prophets" track
+  "subject": { "type": "prophet", "event_slug": "yusuf" },   // type prophet|person|community|event|parable|seerah; an inventory item on the matching track (prophets|people|communities|events|parables|seerah)
   "status": "draft",                     // the only value the schema accepts
   "notes": "DRAFT ... Arabic and Urdu left null for translators ...",   // header comment
   "chapters": [

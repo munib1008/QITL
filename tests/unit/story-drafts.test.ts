@@ -69,10 +69,12 @@ describe("the base draft", () => {
 });
 
 describe("schema", () => {
-  test("rejects a status other than draft, unknown keys and a non-prophet subject", () => {
+  test("rejects a status other than draft, unknown keys and an unknown subject type; a subject type must match its track", () => {
     expect(StoryDraftSchema.safeParse({ ...base(), status: "published" }).success).toBe(false);
     expect(StoryDraftSchema.safeParse({ ...base(), approved: true }).success).toBe(false);
-    expect(StoryDraftSchema.safeParse({ ...base(), subject: { type: "event", event_slug: "yusuf" } }).success).toBe(false);
+    expect(StoryDraftSchema.safeParse({ ...base(), subject: { type: "hadith", event_slug: "yusuf" } }).success).toBe(false);
+    const wrongTrack = validateStoryDraft({ ...base(), subject: { type: "event", event_slug: "yusuf" } }, ctx);
+    expect(wrongTrack.some((i) => i.code === "subject")).toBe(true);
     expect(StoryDraftSchema.safeParse({ ...base(), chapters: [] }).success).toBe(false);
   });
   test("a claim must be Quran evidence with at least one verse", () => {
