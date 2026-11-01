@@ -14,6 +14,7 @@ import { muftiT } from "./modules/mufti";
 import { muftiApplyT } from "./modules/muftiApply";
 import { notificationsT } from "./modules/notifications";
 import { siteAdminT } from "./modules/siteAdmin";
+import { peopleAdminStrings } from "./modules/peopleAdmin";
 import { getPlayerStrings } from "./modules/player";
 import { prophetStrings, storiesStrings } from "./modules/prophets";
 import { qiraatStrings } from "./modules/qiraat";
@@ -28,6 +29,22 @@ import { storyChaptersStrings } from "./modules/storyChapters";
 import { uiStrings } from "./modules/ui";
 import { adminStrings } from "./modules/admin";
 import { lineageStrings, scriptureStrings } from "./modules/lineage";
+import { adminChapterStrings } from "./modules/adminChapter";
+import { adminCoverageStrings } from "./modules/adminCoverage";
+import { adminCreationStrings } from "./modules/adminCreation";
+import { adminGuidanceStrings } from "./modules/adminGuidance";
+import { adminHadithStoriesStrings } from "./modules/adminHadithStories";
+import { adminInterpretationStrings } from "./modules/adminInterpretation";
+import { adminLicencesStrings } from "./modules/adminLicences";
+import { adminLifestyleStrings } from "./modules/adminLifestyle";
+import { adminLineageStrings } from "./modules/adminLineage";
+import { adminMediaStrings } from "./modules/adminMedia";
+import { adminQiraatStrings } from "./modules/adminQiraat";
+import { adminSharedStrings } from "./modules/adminShared";
+import { adminShifaStrings } from "./modules/adminShifa";
+import { adminStoryStrings } from "./modules/adminStory";
+import { adminToolsStrings } from "./modules/adminTools";
+import { adminUniverseStrings } from "./modules/adminUniverse";
 
 /**
  * Every interface strings file, with the module it serves. Used by the inventory (scripts/i18n-inventory.ts,
@@ -66,7 +83,24 @@ export const STRING_FILES: Array<{ module: string; file: string; get: (locale: s
   { module: "mufti", file: "modules/muftiApply.ts", get: muftiApplyT },
   { module: "account", file: "modules/notifications.ts", get: notificationsT },
   { module: "admin", file: "modules/siteAdmin.ts", get: siteAdminT },
+  { module: "admin", file: "modules/peopleAdmin.ts", get: peopleAdminStrings },
   { module: "player", file: "modules/player.ts", get: getPlayerStrings },
   { module: "qiraat", file: "modules/qiraat.ts", get: qiraatStrings },
   { module: "lineage", file: "modules/lineage.ts", get: (l) => ({ lineage: lineageStrings(l), scriptures: scriptureStrings(l) }) },
+  { module: "admin", file: "modules/adminChapter.ts", get: adminChapterStrings },
+  { module: "admin", file: "modules/adminCoverage.ts", get: adminCoverageStrings },
+  { module: "admin", file: "modules/adminCreation.ts", get: adminCreationStrings },
+  { module: "admin", file: "modules/adminGuidance.ts", get: adminGuidanceStrings },
+  { module: "admin", file: "modules/adminHadithStories.ts", get: adminHadithStoriesStrings },
+  { module: "admin", file: "modules/adminInterpretation.ts", get: adminInterpretationStrings },
+  { module: "admin", file: "modules/adminLicences.ts", get: adminLicencesStrings },
+  { module: "admin", file: "modules/adminLifestyle.ts", get: adminLifestyleStrings },
+  { module: "admin", file: "modules/adminLineage.ts", get: adminLineageStrings },
+  { module: "admin", file: "modules/adminMedia.ts", get: adminMediaStrings },
+  { module: "admin", file: "modules/adminQiraat.ts", get: adminQiraatStrings },
+  { module: "admin", file: "modules/adminShared.ts", get: adminSharedStrings },
+  { module: "admin", file: "modules/adminShifa.ts", get: adminShifaStrings },
+  { module: "admin", file: "modules/adminStory.ts", get: adminStoryStrings },
+  { module: "admin", file: "modules/adminTools.ts", get: adminToolsStrings },
+  { module: "admin", file: "modules/adminUniverse.ts", get: adminUniverseStrings },
 ];

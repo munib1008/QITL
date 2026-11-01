@@ -3,6 +3,9 @@ import { STRING_FILES } from "@/lib/i18n/registry";
 import { englishContent } from "@/lib/i18n/locales";
 import { apiErrorText } from "@/lib/i18n/modules/api";
 import { langHref } from "@/components/shell/toggles";
+import fs from "node:fs";
+import path from "node:path";
+import { ROUTES } from "../e2e/routes";
 
 /** Every string leaf of a strings object as [dotted key, value]; functions are called with sample arguments. */
 function leaves(o: unknown, prefix = ""): Array<[string, string]> {
@@ -62,5 +65,23 @@ describe("language switch links", () => {
     expect(langHref("en", "/ar/quran/1", "", "#ayah-5")).toBe("/en/quran/1#ayah-5");
     expect(langHref("en", "/", "", "")).toBe("/en");
     expect(langHref("ur", "/", "?x=1", "#top")).toBe("/ur?x=1#top");
+  });
+});
+
+describe("admin routes are in the language sweeps", () => {
+  /** Every /admin page of the app, from the file tree. */
+  function adminPages(dir: string, base = "/admin"): string[] {
+    const out: string[] = [];
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (e.isDirectory()) out.push(...adminPages(path.join(dir, e.name), `${base}/${e.name}`));
+      else if (e.name === "page.tsx") out.push(base);
+    }
+    return out;
+  }
+  test("every admin page is a route in tests/e2e/routes.ts, so i18n.spec.ts and responsive.spec.ts sweep it in en, ar and ur", () => {
+    const pages = adminPages(path.join(process.cwd(), "src", "app", "[locale]", "admin"));
+    expect(pages.length).toBeGreaterThan(25);
+    const swept = new Set(ROUTES.filter((r) => r.startsWith("/admin")));
+    expect(pages.filter((p) => !swept.has(p)).sort()).toEqual([]);
   });
 });

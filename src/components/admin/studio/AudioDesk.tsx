@@ -1,5 +1,6 @@
 "use client";
 
+import { LoadErrorText } from "../feedback";
 import { useState } from "react";
 import { Skeleton } from "@/components/ui/misc";
 import { getPlayerStrings } from "@/lib/i18n/modules/player";
@@ -87,9 +88,9 @@ function AmbienceRegistry({ s }: { s: ReturnType<typeof getPlayerStrings>["studi
         <ul className="st-list">
           {list.rows.map((r) => (
             <li key={r.key} className="st-row st-between">
-              <span>{`${r.key} · ${r.label} · gain ${r.default_gain}${r.kids_ok ? " · kids" : ""}`}</span>
+              <span>{`${r.key} · ${r.label} · ${s.gainWord} ${r.default_gain}${r.kids_ok ? ` · ${s.kidsWord}` : ""}`}</span>
               {r.approved_by ? (
-                <span className="zq-meta">{s.approve}d</span>
+                <span className="zq-meta">{s.approvedWord}</span>
               ) : (
                 <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={act.busy} onClick={() => void act.run(() => call("/api/admin/studio/ambience", "POST", { action: "approve", key: r.key }), s.approveAmbience, list.reload)}>
                   {s.approveAmbience}
@@ -156,7 +157,7 @@ export function AudioDesk({ locale }: { locale: string }) {
   return (
     <>
       <Panel title={s.audioQa} id="st-qa">
-        {pending.error ? <p className="zq-error">{pending.error}</p> : null}
+        {pending.error ? <p className="zq-error"><LoadErrorText error={pending.error} /></p> : null}
         {!pending.rows ? (
           <Skeleton height={20} />
         ) : pending.rows.length ? (

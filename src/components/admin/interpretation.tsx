@@ -1,26 +1,22 @@
 "use client";
 
-import { useCallback, useEffect, useState, type FormEvent, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useState, type FormEvent, type ReactNode } from "react";
 import { getBrowserSupabase } from "@/lib/supabase/browser";
 import { EditorialStatus, type EditorialState } from "@/components/ui/evidence";
 import { EmptyState, Skeleton } from "@/components/ui/misc";
 import { CHECKS, canSign, checkStatus, type ReviewRecord } from "@/lib/interpretation/checks";
 import { DIFFERENCE_KINDS } from "@/lib/interpretation/state";
+import { useLocale } from "@/lib/i18n/useLocale";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { adminInterpretationStrings } from "@/lib/i18n/modules/adminInterpretation";
+import { AdminFeedback as Feedback, errMsg, type AdminMsg } from "./feedback";
 import type { CheckKey, DifferenceKind } from "@/lib/interpretation/types";
 
 /* Editorial tools for the Interpretation Explorer. Every write is authorised again by RLS and triggers. */
 
-type Msg = { tone: "ok" | "err"; text: string } | null;
+type Msg = AdminMsg;
+const NC = "Not configured";
 const sb = () => getBrowserSupabase();
-
-function Feedback({ msg }: { msg: Msg }) {
-  if (!msg) return null;
-  return (
-    <p role={msg.tone === "err" ? "alert" : "status"} className={msg.tone === "err" ? "zq-error" : "zq-help"}>
-      {msg.text}
-    </p>
-  );
-}
 
 function Field({ id, label, children, help }: { id: string; label: string; children: ReactNode; help?: string }) {
   return (
@@ -70,15 +66,18 @@ const KINDS = ["quran_translation", "tafsir", "early_tafsir", "hadith_translatio
 const ORIGINS = ["qurancomplex", "quran_foundation", "quranenc", "tanzil", "sunnah_com", "publisher", "other"] as const;
 
 export function EditionRegistry({ canEdit }: { canEdit: boolean }) {
+  const locale = useLocale();
+  const t = useMemo(() => adminInterpretationStrings(locale), [locale]);
   const [rows, setRows] = useState<EditionRow[] | null>(null);
   const [translators, setTranslators] = useState<Array<{ id: string; name: string }>>([]);
   const [sources, setSources] = useState<Array<{ id: string; work: string; rights_status: string }>>([]);
-  const [msg, setMsg] = useState<Msg>(null);
+  const [msg, setMsgState] = useState<Msg>(null);
+  const setMsg = useCallback((m: Msg) => setMsgState(m && m.tone === "err" && !m.server ? errMsg(locale, t.failedPrefix, m.text, t.notConfigured) : m), [locale, t]);
   const [kind, setKind] = useState<string>("quran_translation");
 
   const load = useCallback(async () => {
     const c = sb();
-    if (!c) return setMsg({ tone: "err", text: "Not configured" });
+    if (!c) return setMsg({ tone: "err", text: NC });
     const [e, t, s] = await Promise.all([
       c.from("translation_editions").select("id, kind, language, title, publication_year, edition, origin, origin_ref, registry_status, reliability_note, verified_at, translator_profiles(name), sources(work, rights_status)").order("kind").order("position", { nullsFirst: false }).limit(500),
       c.from("translator_profiles").select("id, name").order("name").limit(500),
@@ -88,7 +87,7 @@ export function EditionRegistry({ canEdit }: { canEdit: boolean }) {
     setRows((e.data ?? []) as unknown as EditionRow[]);
     setTranslators((t.data ?? []) as Array<{ id: string; name: string }>);
     setSources((s.data ?? []) as Array<{ id: string; work: string; rights_status: string }>);
-  }, []);
+  }, [setMsg]);
   useEffect(() => {
     void load();
   }, [load]);
@@ -104,7 +103,7 @@ export function EditionRegistry({ canEdit }: { canEdit: boolean }) {
           .from("translation_editions")
           .update(status === "verified" ? { registry_status: "verified", verified_by: uid, verified_at: new Date().toISOString() } : { registry_status: status, verified_by: null, verified_at: null })
           .eq("id", r.id),
-      status === "verified" ? `Verified "${r.title}". Its text shows only while its source licence is cleared.` : `"${r.title}" is now ${status}.`,
+      status === "verified" ? t.okVerified(r.title) : t.okNowState(r.title, t.registryStates[status] ?? status),
       setMsg,
       load,
     );
@@ -116,23 +115,23 @@ export function EditionRegistry({ canEdit }: { canEdit: boolean }) {
       {!rows ? (
         <Skeleton height={20} />
       ) : !rows.length ? (
-        <EmptyState title="No editions registered yet.">
-          <p>Register each candidate edition before anything is imported. Nothing shows to readers until it is verified and its source licence is cleared.</p>
+        <EmptyState title={t.noEditions}>
+          <p>{t.noEditionsBody}</p>
         </EmptyState>
       ) : (
         <div className="zq-table-scroll">
           <table className="zq-table">
-            <caption className="sr-only">Registered editions</caption>
+            <caption className="sr-only">{t.registeredEditions}</caption>
             <thead>
               <tr>
-                <th scope="col">Edition</th>
-                <th scope="col">Kind</th>
-                <th scope="col">Translator / scholar</th>
-                <th scope="col">Year</th>
-                <th scope="col">Origin</th>
-                <th scope="col">Licence</th>
-                <th scope="col">Registry</th>
-                {canEdit ? <th scope="col">Actions</th> : null}
+                <th scope="col">{t.edition}</th>
+                <th scope="col">{t.kind}</th>
+                <th scope="col">{t.translatorScholar}</th>
+                <th scope="col">{t.year}</th>
+                <th scope="col">{t.origin}</th>
+                <th scope="col">{t.licence}</th>
+                <th scope="col">{t.registry}</th>
+                {canEdit ? <th scope="col">{t.actions}</th> : null}
               </tr>
             </thead>
             <tbody>
@@ -141,32 +140,32 @@ export function EditionRegistry({ canEdit }: { canEdit: boolean }) {
                   <td>
                     <b>{r.title}</b>
                     {r.edition ? <div className="zq-meta">{r.edition}</div> : null}
-                    {r.reliability_note ? <div className="zq-meta">Reliability: {r.reliability_note}</div> : null}
+                    {r.reliability_note ? <div className="zq-meta">{t.reliabilityLabel} {r.reliability_note}</div> : null}
                   </td>
-                  <td>{r.kind.replace(/_/g, " ")}</td>
-                  <td>{r.translator_profiles?.name ?? <span className="zq-licence-pending">Not recorded</span>}</td>
+                  <td>{t.editionKinds[r.kind] ?? r.kind.replace(/_/g, " ")}</td>
+                  <td>{r.translator_profiles?.name ?? <span className="zq-licence-pending">{t.notRecorded}</span>}</td>
                   <td>{r.publication_year ?? "—"}</td>
                   <td>
                     {r.origin}
                     {r.origin_ref ? <div className="zq-meta">{r.origin_ref}</div> : null}
                   </td>
-                  <td>{r.sources ? `${r.sources.work} · ${r.sources.rights_status.replace("_", " ")}` : <span className="zq-licence-pending">No source</span>}</td>
-                  <td>{r.registry_status}</td>
+                  <td>{r.sources ? `${r.sources.work} · ${t.rightsValues[r.sources.rights_status] ?? r.sources.rights_status.replace("_", " ")}` : <span className="zq-licence-pending">{t.noSource}</span>}</td>
+                  <td>{t.registryStates[r.registry_status] ?? r.registry_status}</td>
                   {canEdit ? (
                     <td>
                       <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                         {r.registry_status !== "verified" ? (
-                          <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={!r.sources || !r.translator_profiles} title={!r.sources ? "Link a source first" : undefined} onClick={() => verify(r, "verified")}>
-                            Verify edition
+                          <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={!r.sources || !r.translator_profiles} title={!r.sources ? t.linkSourceFirst : undefined} onClick={() => verify(r, "verified")}>
+                            {t.verifyEdition}
                           </button>
                         ) : (
                           <button type="button" className="zq-btn zq-btn-quiet zq-btn-sm" onClick={() => verify(r, "candidate")}>
-                            Return to candidate
+                            {t.returnCandidate}
                           </button>
                         )}
                         {r.registry_status !== "rejected" ? (
                           <button type="button" className="zq-btn zq-btn-quiet zq-btn-sm" onClick={() => verify(r, "rejected")}>
-                            Reject
+                            {t.reject}
                           </button>
                         ) : null}
                       </div>
@@ -188,27 +187,27 @@ export function EditionRegistry({ canEdit }: { canEdit: boolean }) {
               e.preventDefault();
               const f = fd(e);
               const form = e.currentTarget;
-              await run(() => sb()!.from("translator_profiles").insert({ name: str(f, "name"), name_ar: str(f, "name_ar"), died: str(f, "died"), description: str(f, "description") }), "Translator profile added.", setMsg, async () => {
+              await run(() => sb()!.from("translator_profiles").insert({ name: str(f, "name"), name_ar: str(f, "name_ar"), died: str(f, "died"), description: str(f, "description") }), t.okProfile, setMsg, async () => {
                 form.reset();
                 await load();
               });
             }}
           >
-            <h2 id="tp-h">Add a translator or scholar</h2>
-            <Field id="tp-name" label="Name (as printed in the edition)">
+            <h2 id="tp-h">{t.addTranslator}</h2>
+            <Field id="tp-name" label={t.namePrinted}>
               <input id="tp-name" name="name" className="zq-input" required minLength={2} />
             </Field>
-            <Field id="tp-name-ar" label="Name in Arabic (optional)">
+            <Field id="tp-name-ar" label={t.nameArOptional}>
               <input id="tp-name-ar" name="name_ar" className="zq-input" lang="ar" dir="rtl" />
             </Field>
-            <Field id="tp-died" label="Died (as printed, optional)" help="Copy it from the edition, for example '150 AH / 767 CE'. Never estimate.">
+            <Field id="tp-died" label={t.diedPrinted} help={t.diedHelp}>
               <input id="tp-died" name="died" className="zq-input" />
             </Field>
-            <Field id="tp-desc" label="Description (optional)">
+            <Field id="tp-desc" label={t.descriptionOptional}>
               <input id="tp-desc" name="description" className="zq-input" />
             </Field>
             <button type="submit" className="zq-btn zq-btn-primary">
-              Add profile
+              {t.addProfile}
             </button>
           </form>
 
@@ -239,7 +238,7 @@ export function EditionRegistry({ canEdit }: { canEdit: boolean }) {
                       reliability_note: str(f, "reliability_note"),
                       position: str(f, "position") ? Number(str(f, "position")) : null,
                     }),
-                "Edition registered as a candidate. Verify it once translator, edition, year and origin are checked.",
+                t.okEditionRegistered,
                 setMsg,
                 async () => {
                   form.reset();
@@ -248,28 +247,28 @@ export function EditionRegistry({ canEdit }: { canEdit: boolean }) {
               );
             }}
           >
-            <h2 id="ed-h">Register an edition</h2>
-            <Field id="ed-kind" label="Kind">
+            <h2 id="ed-h">{t.registerEdition}</h2>
+            <Field id="ed-kind" label={t.kind}>
               <select id="ed-kind" name="kind" className="zq-input" value={kind} onChange={(e) => setKind(e.target.value)}>
                 {KINDS.map((k) => (
                   <option key={k} value={k}>
-                    {k.replace(/_/g, " ")}
+                    {t.editionKinds[k] ?? k.replace(/_/g, " ")}
                   </option>
                 ))}
               </select>
             </Field>
-            <Field id="ed-title" label="Title">
+            <Field id="ed-title" label={t.title}>
               <input id="ed-title" name="title" className="zq-input" required />
             </Field>
-            <Field id="ed-title-ar" label="Title in Arabic (optional)">
+            <Field id="ed-title-ar" label={t.titleArOptional}>
               <input id="ed-title-ar" name="title_ar" className="zq-input" lang="ar" dir="rtl" />
             </Field>
-            <Field id="ed-lang" label="Language" help="ISO code, e.g. en, ar, ur.">
+            <Field id="ed-lang" label={t.language} help={t.languageHelp}>
               <input id="ed-lang" name="language" className="zq-input" required pattern="[a-z]{2}(-[A-Za-z]{2,4})?" />
             </Field>
-            <Field id="ed-tr" label="Translator / scholar">
+            <Field id="ed-tr" label={t.translatorScholar}>
               <select id="ed-tr" name="translator_id" className="zq-input">
-                <option value="">Not recorded yet</option>
+                <option value="">{t.notRecordedYet}</option>
                 {translators.map((t) => (
                   <option key={t.id} value={t.id}>
                     {t.name}
@@ -277,13 +276,13 @@ export function EditionRegistry({ canEdit }: { canEdit: boolean }) {
                 ))}
               </select>
             </Field>
-            <Field id="ed-year" label="Publication year (optional)">
+            <Field id="ed-year" label={t.pubYearOptional}>
               <input id="ed-year" name="publication_year" className="zq-input" inputMode="numeric" pattern="[0-9]{3,4}" />
             </Field>
-            <Field id="ed-edition" label="Edition statement (optional)">
+            <Field id="ed-edition" label={t.editionStatement}>
               <input id="ed-edition" name="edition" className="zq-input" />
             </Field>
-            <Field id="ed-origin" label="Origin">
+            <Field id="ed-origin" label={t.origin}>
               <select id="ed-origin" name="origin" className="zq-input" defaultValue="publisher">
                 {ORIGINS.map((o) => (
                   <option key={o} value={o}>
@@ -292,30 +291,30 @@ export function EditionRegistry({ canEdit }: { canEdit: boolean }) {
                 ))}
               </select>
             </Field>
-            <Field id="ed-ref" label="Provider reference (optional)" help="QuranEnc translation key, Quran Foundation translation id, or sunnah.com collection.">
+            <Field id="ed-ref" label={t.providerRef} help={t.providerHelp}>
               <input id="ed-ref" name="origin_ref" className="zq-input" />
             </Field>
-            <Field id="ed-src" label="Source and licence" help="Verifying needs a source; text shows only while that source's licence is cleared.">
+            <Field id="ed-src" label={t.sourceLicence} help={t.sourceLicenceHelp}>
               <select id="ed-src" name="source_id" className="zq-input">
-                <option value="">None yet</option>
+                <option value="">{t.noneYet}</option>
                 {sources.map((s) => (
                   <option key={s.id} value={s.id}>
-                    {s.work} · {s.rights_status.replace("_", " ")}
+                    {s.work} · {t.rightsValues[s.rights_status] ?? s.rights_status.replace("_", " ")}
                   </option>
                 ))}
               </select>
             </Field>
-            <Field id="ed-period" label="Historical period (optional)">
+            <Field id="ed-period" label={t.historicalPeriod}>
               <input id="ed-period" name="historical_period" className="zq-input" />
             </Field>
-            <Field id="ed-rel" label={kind === "early_tafsir" ? "Reliability note (required for early tafsir)" : "Reliability note (optional)"}>
+            <Field id="ed-rel" label={kind === "early_tafsir" ? t.reliabilityRequired : t.reliabilityOptional}>
               <textarea id="ed-rel" name="reliability_note" className="zq-input" rows={2} required={kind === "early_tafsir"} />
             </Field>
-            <Field id="ed-pos" label="Display position (optional)">
+            <Field id="ed-pos" label={t.displayPosition}>
               <input id="ed-pos" name="position" className="zq-input" inputMode="numeric" pattern="[0-9]{1,3}" />
             </Field>
             <button type="submit" className="zq-btn zq-btn-primary">
-              Register edition
+              {t.registerBtn}
             </button>
           </form>
         </>
@@ -352,25 +351,28 @@ interface Difference {
   position: number;
 }
 
-const KIND_LABEL: Record<DifferenceKind, string> = { translation_choice: "Translation choice", linguistic: "Linguistic", grammatical: "Grammatical", exegetical: "Exegetical disagreement" };
-
 export function ExplanationEditor({ roles }: { roles: string[] }) {
+  const locale = useLocale();
+  const t = useMemo(() => adminInterpretationStrings(locale), [locale]);
+  const statusWord = (s: string) => (uiStrings(locale).status as Record<string, string>)[s] ?? s.replace("_", " ");
+  const checkLabel = (key: string, fallback: string) => t.checks[key]?.split("|")[0] ?? fallback;
   const isEditor = roles.includes("editor") || roles.includes("admin");
   const isScholar = roles.includes("scholarly_reviewer") || roles.includes("admin");
   const [list, setList] = useState<Explanation[] | null>(null);
   const [sel, setSel] = useState<string | null>(null);
   const [reviews, setReviews] = useState<ReviewRecord[]>([]);
   const [diffs, setDiffs] = useState<Difference[]>([]);
-  const [msg, setMsg] = useState<Msg>(null);
+  const [msg, setMsgState] = useState<Msg>(null);
+  const setMsg = useCallback((m: Msg) => setMsgState(m && m.tone === "err" && !m.server ? errMsg(locale, t.failedPrefix, m.text, t.notConfigured) : m), [locale, t]);
   const current = list?.find((e) => e.id === sel) ?? null;
 
   const load = useCallback(async () => {
     const c = sb();
-    if (!c) return setMsg({ tone: "err", text: "Not configured" });
+    if (!c) return setMsg({ tone: "err", text: NC });
     const { data, error } = await c.from("interpretation_explanations").select("id, surah_id, ayah_from, ayah_to, language, title, body_md, origin, model, prompt_version, version, status, updated_at").order("updated_at", { ascending: false }).limit(200);
     if (error) setMsg({ tone: "err", text: error.message });
     setList((data ?? []) as Explanation[]);
-  }, []);
+  }, [setMsg]);
   const loadDetail = useCallback(async (id: string) => {
     const c = sb();
     if (!c) return;
@@ -399,7 +401,7 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
     const { data } = await c.auth.getUser();
     await run(
       () => c.from("interpretation_reviews").insert({ explanation_id: current.id, explanation_version: current.version, check_key: key, passed, reviewer_id: data.user?.id, note: note || null }),
-      `${passed ? "Passed" : "Failed"} "${CHECKS.find((x) => x.key === key)?.label}" on version ${current.version}.`,
+      t.okSigned(passed, checkLabel(key, CHECKS.find((x) => x.key === key)?.label ?? key), current.version),
       setMsg,
       refresh,
     );
@@ -407,7 +409,7 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
 
   const setStatus = async (status: EditorialState) => {
     if (!current) return;
-    await run(() => sb()!.from("interpretation_explanations").update({ status }).eq("id", current.id), `Status set to ${status.replace("_", " ")}.`, setMsg, refresh);
+    await run(() => sb()!.from("interpretation_explanations").update({ status }).eq("id", current.id), t.okStatusSet(statusWord(status)), setMsg, refresh);
   };
 
   const approve = async () => {
@@ -415,7 +417,7 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
     setMsg(null);
     const r = await fetch("/api/admin/review", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ entityType: "interpretation", entityId: current.id, decision: "approved" }) });
     const d = (await r.json().catch(() => ({}))) as { error?: string };
-    setMsg(r.ok ? { tone: "ok", text: "Scholarly approval recorded." } : { tone: "err", text: d.error ?? `Failed (${r.status})` });
+    setMsg(r.ok ? { tone: "ok", text: t.okApproval } : { tone: "err", text: d.error ?? `Failed (${r.status})` });
   };
 
   const aiDraft = async (e: FormEvent<HTMLFormElement>) => {
@@ -429,7 +431,7 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
     });
     const d = (await r.json().catch(() => ({}))) as { error?: string; id?: string };
     if (r.ok && d.id) {
-      setMsg({ tone: "ok", text: "AI-assisted draft saved. It cannot publish until all eight checks pass and a scholar approves." });
+      setMsg({ tone: "ok", text: t.okAiDraft });
       await load();
       setSel(d.id);
     } else setMsg({ tone: "err", text: d.error ?? `Failed (${r.status})` });
@@ -441,18 +443,18 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
     <div style={{ display: "grid", gap: 24 }}>
       <Feedback msg={msg} />
       <section className="pp-card" aria-labelledby="ex-list-h">
-        <h2 id="ex-list-h">Explanations</h2>
+        <h2 id="ex-list-h">{t.explanations}</h2>
         {!list ? (
           <Skeleton height={20} />
         ) : !list.length ? (
-          <EmptyState title="No explanations yet." />
+          <EmptyState title={t.noExplanations} />
         ) : (
           <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gap: 8 }}>
             {list.map((e) => (
               <li key={e.id}>
                 <button type="button" className="zq-btn zq-btn-quiet" aria-pressed={sel === e.id} onClick={() => setSel(e.id)} style={{ inlineSize: "100%", justifyContent: "space-between", textAlign: "start" }}>
                   <span>
-                    {e.surah_id ? `Q ${e.surah_id}:${e.ayah_from}${e.ayah_to !== e.ayah_from ? `–${e.ayah_to}` : ""}` : "Hadith"} · {e.title} · v{e.version} · {e.origin === "ai_assisted" ? `AI-assisted (${e.model})` : "human"}
+                    {t.explLabel(e.surah_id ? `Q ${e.surah_id}:${e.ayah_from}${e.ayah_to !== e.ayah_from ? `–${e.ayah_to}` : ""}` : t.hadithWord, e.title, e.version, e.origin === "ai_assisted" ? t.originAi(String(e.model)) : t.originHuman())}
                   </span>
                   <EditorialStatus status={e.status} />
                 </button>
@@ -487,7 +489,7 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
                     status: "draft",
                     created_by: data.user?.id,
                   }),
-                "Draft saved.",
+                t.okDraftSaved,
                 setMsg,
                 async () => {
                   form.reset();
@@ -496,24 +498,24 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
               );
             }}
           >
-            <h2 id="ex-new-h">New explanation (written by a person)</h2>
+            <h2 id="ex-new-h">{t.newExplanation}</h2>
             <RefFields prefix="nx" />
-            <Field id="nx-title" label="Title">
+            <Field id="nx-title" label={t.title}>
               <input id="nx-title" name="title" className="zq-input" required />
             </Field>
-            <Field id="nx-body" label="Explanation (Markdown)" help="Explain the licensed sources. Never write a new, averaged or 'most accurate' translation.">
+            <Field id="nx-body" label={t.explanationMd} help={t.explanationHelp}>
               <textarea id="nx-body" name="body" className="zq-input" rows={6} required />
             </Field>
             <button type="submit" className="zq-btn zq-btn-primary">
-              Save draft
+              {t.saveDraft}
             </button>
           </form>
           <form className="pp-card zq-form" aria-labelledby="ex-ai-h" onSubmit={aiDraft}>
-            <h2 id="ex-ai-h">AI-assisted draft</h2>
-            <p className="zq-meta">Uses Claude only when ANTHROPIC_API_KEY is set, and only stored, licensed sources. Saved as a draft labelled AI-assisted with its model and prompt version.</p>
+            <h2 id="ex-ai-h">{t.aiDraft}</h2>
+            <p className="zq-meta">{t.aiNote}</p>
             <RefFields prefix="ai" />
             <button type="submit" className="zq-btn zq-btn-secondary">
-              Request draft
+              {t.requestDraft}
             </button>
           </form>
         </div>
@@ -523,10 +525,10 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
         <>
           <section className="pp-card zq-form" aria-labelledby="ex-edit-h">
             <h2 id="ex-edit-h">
-              Edit: {current.title} <EditorialStatus status={current.status} />
+              {t.editPrefix} {current.title} <EditorialStatus status={current.status} />
             </h2>
             <p className="zq-meta">
-              Version {current.version} · {current.origin === "ai_assisted" ? `AI-assisted, ${current.model}, prompt ${current.prompt_version}` : "written by a person"}. Changing the text makes a new version: earlier checks stop counting.
+              {t.versionLine(current.version, current.origin === "ai_assisted" ? t.originAiLong(String(current.model), String(current.prompt_version)) : t.originPerson)} {t.newVersionNote}
             </p>
             {isEditor && current.status !== "published" ? (
               <form
@@ -534,17 +536,17 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
                 onSubmit={async (e) => {
                   e.preventDefault();
                   const f = fd(e);
-                  await run(() => sb()!.from("interpretation_explanations").update({ title: str(f, "title"), body_md: str(f, "body") }).eq("id", current.id), "Saved as a new version.", setMsg, refresh);
+                  await run(() => sb()!.from("interpretation_explanations").update({ title: str(f, "title"), body_md: str(f, "body") }).eq("id", current.id), t.okNewVersion, setMsg, refresh);
                 }}
               >
-                <Field id="ed-x-title" label="Title">
+                <Field id="ed-x-title" label={t.title}>
                   <input id="ed-x-title" name="title" className="zq-input" defaultValue={current.title} key={`t-${current.id}-${current.version}`} required />
                 </Field>
-                <Field id="ed-x-body" label="Explanation (Markdown)">
+                <Field id="ed-x-body" label={t.explanationMd}>
                   <textarea id="ed-x-body" name="body" className="zq-input" rows={8} defaultValue={current.body_md} key={`b-${current.id}-${current.version}`} required />
                 </Field>
                 <button type="submit" className="zq-btn zq-btn-secondary">
-                  Save new version
+                  {t.saveNewVersion}
                 </button>
               </form>
             ) : (
@@ -553,30 +555,30 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
               {isEditor && current.status === "draft" ? (
                 <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => setStatus("in_review")}>
-                  Send to review
+                  {t.sendToReview}
                 </button>
               ) : null}
               {isScholar ? (
                 <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={approve}>
-                  Record scholarly approval
+                  {t.recordApproval}
                 </button>
               ) : null}
               {isEditor && current.status !== "published" ? (
                 <button type="button" className="zq-btn zq-btn-primary zq-btn-sm" onClick={() => setStatus("published")}>
-                  Publish
+                  {t.publish}
                 </button>
               ) : null}
               {isEditor && current.status === "published" ? (
                 <button type="button" className="zq-btn zq-btn-quiet zq-btn-sm" onClick={() => setStatus("correction")}>
-                  Move to correction
+                  {t.moveCorrection}
                 </button>
               ) : null}
             </div>
           </section>
 
           <section className="pp-card" aria-labelledby="ex-checks-h">
-            <h2 id="ex-checks-h">The eight checks (version {current.version})</h2>
-            <p className="zq-meta">The database refuses to publish until every check passes on this version and a scholar approves. Each check can be signed only by its role.</p>
+            <h2 id="ex-checks-h">{t.eightChecks(current.version)}</h2>
+            <p className="zq-meta">{t.checksNote}</p>
             <ol style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gap: 10 }}>
               {status.map((c) => (
                 <CheckRow key={c.key} check={c} allowed={canSign(c.key, roles)} onSign={sign} />
@@ -585,16 +587,16 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
           </section>
 
           <section className="pp-card" aria-labelledby="ex-diff-h">
-            <h2 id="ex-diff-h">Differences explained</h2>
-            <p className="zq-meta">Each difference has one kind. Kinds are never merged; a recognised scholarly disagreement is shown, never resolved.</p>
+            <h2 id="ex-diff-h">{t.differencesExplained}</h2>
+            <p className="zq-meta">{t.differencesNote}</p>
             {diffs.length ? (
               <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gap: 8 }}>
                 {diffs.map((d) => (
                   <li key={d.id} className="zq-card" style={{ maxWidth: "none" }}>
                     <p className="zq-eyebrow">
-                      {KIND_LABEL[d.kind]}
-                      {d.recognised_disagreement ? " · recognised disagreement" : ""}
-                      {d.ayah_no ? ` · ayah ${d.ayah_no}${d.word_no ? `, word ${d.word_no}` : ""}` : ""}
+                      {t.diffKinds[d.kind] ?? d.kind}
+                      {d.recognised_disagreement ? t.recognisedDisagreement : ""}
+                      {d.ayah_no ? t.ayahWord(d.ayah_no, d.word_no) : ""}
                     </p>
                     {d.term_ar ? (
                       <p lang="ar" dir="rtl" style={{ margin: 0 }}>
@@ -603,15 +605,15 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
                     ) : null}
                     <p style={{ margin: 0 }}>{d.summary}</p>
                     {isEditor || isScholar ? (
-                      <button type="button" className="zq-btn zq-btn-quiet zq-btn-sm" onClick={() => run(() => sb()!.from("interpretation_differences").delete().eq("id", d.id), "Difference removed.", setMsg, refresh)}>
-                        Remove
+                      <button type="button" className="zq-btn zq-btn-quiet zq-btn-sm" onClick={() => run(() => sb()!.from("interpretation_differences").delete().eq("id", d.id), t.okDiffRemoved, setMsg, refresh)}>
+                        {t.remove}
                       </button>
                     ) : null}
                   </li>
                 ))}
               </ul>
             ) : (
-              <EmptyState title="No differences recorded for this explanation." />
+              <EmptyState title={t.noDifferences} />
             )}
             {isEditor || isScholar ? (
               <form
@@ -637,7 +639,7 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
                           recognised_disagreement: f.get("recognised") === "on",
                           position: (diffs.at(-1)?.position ?? 0) + 1,
                         }),
-                    "Difference added.",
+                    t.okDiffAdded,
                     setMsg,
                     async () => {
                       form.reset();
@@ -646,33 +648,33 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
                   );
                 }}
               >
-                <h3 style={{ margin: 0 }}>Add a difference</h3>
-                <Field id="df-kind" label="Kind">
+                <h3 style={{ margin: 0 }}>{t.addDifference}</h3>
+                <Field id="df-kind" label={t.kind}>
                   <select id="df-kind" name="kind" className="zq-input" required>
                     {DIFFERENCE_KINDS.map((k) => (
                       <option key={k} value={k}>
-                        {KIND_LABEL[k]}
+                        {t.diffKinds[k] ?? k}
                       </option>
                     ))}
                   </select>
                 </Field>
-                <Field id="df-term" label="Arabic term (optional)">
+                <Field id="df-term" label={t.arabicTermOptional}>
                   <input id="df-term" name="term_ar" className="zq-input" lang="ar" dir="rtl" />
                 </Field>
-                <Field id="df-ayah" label="Ayah (optional)">
+                <Field id="df-ayah" label={t.ayahOptional}>
                   <input id="df-ayah" name="ayah_no" className="zq-input" inputMode="numeric" pattern="[0-9]{1,3}" />
                 </Field>
-                <Field id="df-word" label="Word number (optional)">
+                <Field id="df-word" label={t.wordNumberOptional}>
                   <input id="df-word" name="word_no" className="zq-input" inputMode="numeric" pattern="[0-9]{1,3}" />
                 </Field>
-                <Field id="df-summary" label="Summary">
+                <Field id="df-summary" label={t.summary}>
                   <textarea id="df-summary" name="summary" className="zq-input" rows={3} required />
                 </Field>
                 <label style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                  <input type="checkbox" name="recognised" /> A recognised scholarly disagreement
+                  <input type="checkbox" name="recognised" /> {t.recognisedCheck}
                 </label>
                 <button type="submit" className="zq-btn zq-btn-secondary">
-                  Add difference
+                  {t.addDiffBtn}
                 </button>
               </form>
             ) : null}
@@ -684,22 +686,23 @@ export function ExplanationEditor({ roles }: { roles: string[] }) {
 }
 
 function RefFields({ prefix }: { prefix: string }) {
+  const t = adminInterpretationStrings(useLocale());
   return (
     <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-      <Field id={`${prefix}-s`} label="Surah">
+      <Field id={`${prefix}-s`} label={t.surah}>
         <input id={`${prefix}-s`} name="surah" className="zq-input" type="number" min={1} max={114} required style={{ inlineSize: 90 }} />
       </Field>
-      <Field id={`${prefix}-f`} label="From ayah">
+      <Field id={`${prefix}-f`} label={t.fromAyah}>
         <input id={`${prefix}-f`} name="from" className="zq-input" type="number" min={1} max={286} required style={{ inlineSize: 90 }} />
       </Field>
-      <Field id={`${prefix}-t`} label="To ayah">
+      <Field id={`${prefix}-t`} label={t.toAyah}>
         <input id={`${prefix}-t`} name="to" className="zq-input" type="number" min={1} max={286} required style={{ inlineSize: 90 }} />
       </Field>
-      <Field id={`${prefix}-l`} label="Language">
+      <Field id={`${prefix}-l`} label={t.language}>
         <select id={`${prefix}-l`} name="language" className="zq-input" defaultValue="en">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="ur">Urdu</option>
+          <option value="en">{t.langNames.en}</option>
+          <option value="ar">{t.langNames.ar}</option>
+          <option value="ur">{t.langNames.ur}</option>
         </select>
       </Field>
     </div>
@@ -708,38 +711,40 @@ function RefFields({ prefix }: { prefix: string }) {
 
 function CheckRow({ check, allowed, onSign }: { check: ReturnType<typeof checkStatus>[number]; allowed: boolean; onSign: (key: CheckKey, passed: boolean, note: string) => Promise<void> }) {
   const [note, setNote] = useState("");
-  const label = { passed: "Passed", failed: "Failed", stale: "Signed on an older version", unsigned: "Not signed" }[check.state];
+  const locale = useLocale();
+  const t = adminInterpretationStrings(locale);
+  const label = t.checkStates[check.state];
+  const [cLabel, cHelp] = (t.checks[check.key] ?? "").split("|");
   return (
     <li className="zq-card" style={{ maxWidth: "none" }} data-check={check.key} data-check-state={check.state}>
       <div style={{ display: "flex", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
-        <b>{check.label}</b>
+        <b>{cLabel || check.label}</b>
         <span className={check.state === "passed" ? "zq-help" : "zq-licence-pending"}>{label}</span>
       </div>
       <p className="zq-meta" style={{ margin: 0 }}>
-        {check.help} Signed by: {check.roles.map((r) => r.replace("_", " ")).join(" or ")}.
+        {cHelp || check.help} {t.signedBy(check.roles.map((r) => t.roleNames[r] ?? r.replace("_", " ")).join(t.or))}
       </p>
       {check.latest ? (
         <p className="zq-meta" style={{ margin: 0 }}>
-          Last: {check.latest.passed ? "pass" : "fail"} on v{check.latest.explanation_version}, {new Date(check.latest.created_at).toLocaleString()}
-          {check.latest.note ? ` — ${check.latest.note}` : ""}
+          {t.lastCheck(check.latest.passed, check.latest.explanation_version, new Date(check.latest.created_at).toLocaleString(), check.latest.note)}
         </p>
       ) : null}
       {allowed ? (
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "end" }}>
           <div className="zq-field">
-            <label htmlFor={`note-${check.key}`}>Note</label>
+            <label htmlFor={`note-${check.key}`}>{t.note}</label>
             <input id={`note-${check.key}`} className="zq-input" value={note} onChange={(e) => setNote(e.target.value)} />
           </div>
           <button type="button" className="zq-btn zq-btn-primary zq-btn-sm" onClick={() => onSign(check.key, true, note)}>
-            Sign: pass
+            {t.signPass}
           </button>
           <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => onSign(check.key, false, note)}>
-            Sign: fail
+            {t.signFail}
           </button>
         </div>
       ) : (
         <p className="zq-meta" style={{ margin: 0 }}>
-          Your role cannot sign this check.
+          {t.cannotSign}
         </p>
       )}
     </li>

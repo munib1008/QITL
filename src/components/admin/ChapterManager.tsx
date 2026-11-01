@@ -5,6 +5,11 @@ import { getBrowserSupabase } from "@/lib/supabase/browser";
 import { EditorialStatus, type EditorialState } from "@/components/ui/evidence";
 import { TextField } from "@/components/ui/misc";
 import { MODE_FIELDS } from "@/lib/stories/admin-fields";
+import { englishContent } from "@/lib/i18n/locales";
+import { useLocale } from "@/lib/i18n/useLocale";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { adminChapterStrings } from "@/lib/i18n/modules/adminChapter";
+import { AdminFeedback as Feedback, ServerText, errMsg, type AdminMsg } from "./feedback";
 
 interface Story {
   id: string;
@@ -50,6 +55,9 @@ async function setStatus(entityType: "chapter" | "story", entityId: string, stat
  */
 export function ChapterManager() {
   const sb = getBrowserSupabase();
+  const locale = useLocale();
+  const t = useMemo(() => adminChapterStrings(locale), [locale]);
+  const statusWord = (s: string) => (uiStrings(locale).status as Record<string, string>)[s] ?? s;
   const [stories, setStories] = useState<Story[] | null>(null);
   const [people, setPeople] = useState<Option[]>([]);
   const [events, setEvents] = useState<Option[]>([]);
@@ -60,7 +68,7 @@ export function ChapterManager() {
   const [flagged, setFlagged] = useState<Record<string, string[]>>({});
   const [editing, setEditing] = useState<Chapter | null>(null);
   const [note, setNote] = useState("");
-  const [msg, setMsg] = useState<{ tone: "ok" | "err"; text: string } | null>(null);
+  const [msg, setMsg] = useState<AdminMsg>(null);
   const say = (tone: "ok" | "err", text: string) => setMsg({ tone, text });
   const story = stories?.find((s) => s.id === storyId);
 
@@ -98,7 +106,7 @@ export function ChapterManager() {
       }
       setReviewed(r);
       const f: Record<string, string[]> = {};
-      for (const x of (fl.data ?? []) as Array<{ dependant_id: string; reason: string | null }>) f[x.dependant_id] = [...(f[x.dependant_id] ?? []), x.reason ?? "A source changed."];
+      for (const x of (fl.data ?? []) as Array<{ dependant_id: string; reason: string | null }>) f[x.dependant_id] = [...(f[x.dependant_id] ?? []), x.reason ?? ""];
       setFlagged(f);
     }
     const ev = await sb.from("event_stories").select("event_id").eq("story_id", storyId);
@@ -118,7 +126,7 @@ export function ChapterManager() {
       await fn();
       say("ok", ok);
     } catch (e) {
-      say("err", (e as Error).message);
+      setMsg(errMsg(locale, t.failedPrefix, (e as Error).message));
     }
     void loadChapters();
     void loadStories();
@@ -163,7 +171,7 @@ export function ChapterManager() {
       }
       setEditing(null);
       form.reset();
-    }, editing ? "Chapter saved. A change to a reviewed chapter is a new version and needs a new scholarly review." : "Chapter saved as a draft.");
+    }, editing ? t.okChapterSavedEdit : t.okChapterSaved);
   };
 
   const eventLabel = useMemo(() => new Map(events.map((e) => [e.id, e.label])), [events]);
@@ -172,24 +180,20 @@ export function ChapterManager() {
   return (
     <div style={{ display: "grid", gap: 20 }} data-testid="chapter-manager">
       <div>
-        <h2 style={{ font: "500 24px/32px var(--font-display)", margin: 0 }}>Chapters and depth modes</h2>
+        <h2 style={{ font: "500 24px/32px var(--font-display)", margin: 0 }}>{t.heading}</h2>
         <p className="zq-meta">
-          Write only what the sources support. A mode left empty shows readers &ldquo;not established&rdquo;; nothing is generated or filled in. Life lessons are shown labelled as educational interpretation.
+          {t.lead}
         </p>
       </div>
-      {msg ? (
-        <p role={msg.tone === "err" ? "alert" : "status"} className={msg.tone === "err" ? "zq-error" : "zq-help"}>
-          {msg.text}
-        </p>
-      ) : null}
+      <Feedback msg={msg} />
 
       <div className="zq-field">
-        <label htmlFor="cm-story">Story</label>
+        <label htmlFor="cm-story">{t.story}</label>
         <select id="cm-story" className="zq-input" value={storyId} onChange={(e) => setStoryId(e.target.value)}>
-          <option value="">Choose…</option>
+          <option value="">{t.chooseDots}</option>
           {(stories ?? []).map((s) => (
-            <option key={s.id} value={s.id}>
-              {s.title} ({s.status})
+            <option key={s.id} value={s.id} {...englishContent(locale)}>
+              {s.title} ({statusWord(s.status)})
             </option>
           ))}
         </select>
@@ -198,12 +202,12 @@ export function ChapterManager() {
       {story ? (
         <>
           <section className="pp-card" aria-labelledby="cm-subject">
-            <h3 id="cm-subject">About this story</h3>
+            <h3 id="cm-subject">{t.aboutStory}</h3>
             <p className="zq-meta" style={{ margin: 0 }}>
-              <EditorialStatus status={story.status} /> version {story.version}. The story is told about one person (a prophet or other person) and linked to any events it covers; its chapters can name their own event.
+              <EditorialStatus status={story.status} /> {t.versionWord} {story.version}. {t.aboutNote}
             </p>
             <div className="zq-field">
-              <label htmlFor="cm-person">Told about</label>
+              <label htmlFor="cm-person">{t.toldAbout}</label>
               <select
                 id="cm-person"
                 className="zq-input"
@@ -213,19 +217,19 @@ export function ChapterManager() {
                   void act(async () => {
                     const { error } = await sb!.from("stories").update({ person_id: e.target.value || null }).eq("id", story.id);
                     if (error) throw new Error(error.message);
-                  }, "Subject saved.")
+                  }, t.okSubjectSaved)
                 }
               >
-                <option value="">No one in particular</option>
+                <option value="">{t.noOneInParticular}</option>
                 {people.map((p) => (
-                  <option key={p.id} value={p.id}>
+                  <option key={p.id} value={p.id} {...englishContent(locale)}>
                     {p.label}
                   </option>
                 ))}
               </select>
             </div>
             <div className="zq-field">
-              <label htmlFor="cm-link-event">Link an event</label>
+              <label htmlFor="cm-link-event">{t.linkEvent}</label>
               <select
                 id="cm-link-event"
                 className="zq-input"
@@ -235,13 +239,13 @@ export function ChapterManager() {
                     ? void act(async () => {
                         const { error } = await sb!.from("event_stories").insert({ story_id: story.id, event_id: e.target.value });
                         if (error) throw new Error(error.message);
-                      }, "Event linked.")
+                      }, t.okEventLinked)
                     : undefined
                 }
               >
-                <option value="">Choose an event…</option>
+                <option value="">{t.chooseEventDots}</option>
                 {events.filter((e) => !linkedEvents.includes(e.id)).map((e) => (
-                  <option key={e.id} value={e.id}>
+                  <option key={e.id} value={e.id} {...englishContent(locale)}>
                     {e.label}
                   </option>
                 ))}
@@ -258,10 +262,10 @@ export function ChapterManager() {
                           void act(async () => {
                             const { error } = await sb!.from("event_stories").delete().eq("story_id", story.id).eq("event_id", id);
                             if (error) throw new Error(error.message);
-                          }, "Event unlinked.")
+                          }, t.okEventUnlinked)
                         }
                       >
-                        Unlink
+                        {t.unlink}
                       </button>
                     </li>
                   ))}
@@ -270,20 +274,20 @@ export function ChapterManager() {
             </div>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
               {story.status === "draft" || story.status === "correction" ? (
-                <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => void act(() => setStatus("story", story.id, "in_review"), "Story sent for review.")}>
-                  Send story for review
+                <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => void act(() => setStatus("story", story.id, "in_review"), t.okStorySent)}>
+                  {t.sendStory}
                 </button>
               ) : null}
               {story.status === "in_review" || story.status === "approved" ? (
-                <button type="button" className="zq-btn zq-btn-primary zq-btn-sm" onClick={() => void act(() => setStatus("story", story.id, "published"), "Story published.")}>
-                  Publish story
+                <button type="button" className="zq-btn zq-btn-primary zq-btn-sm" onClick={() => void act(() => setStatus("story", story.id, "published"), t.okStoryPublished)}>
+                  {t.publishStory}
                 </button>
               ) : null}
             </div>
           </section>
 
           <section aria-labelledby="cm-list">
-            <h3 id="cm-list">Chapters of {story.title}</h3>
+            <h3 id="cm-list">{t.chaptersOf} <span {...englishContent(locale)}>{story.title}</span></h3>
             {chapters.length ? (
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 10 }}>
                 {chapters.map((c) => (
@@ -296,29 +300,29 @@ export function ChapterManager() {
                       <span className="zq-order">#chapter-{c.anchor}</span>
                       <span className="zq-meta">
                         v{c.version} ·{" "}
-                        {reviewed[c.id] === "approved" ? "scholar-approved (this version)" : reviewed[c.id] === "stale" ? "review is for another version or not an approval" : "not reviewed"}
-                        {c.event_id ? ` · event: ${eventLabel.get(c.event_id) ?? c.event_id}` : ""} · {c.chapter_claims.length} claim(s)
+                        {reviewed[c.id] === "approved" ? t.reviewApproved : reviewed[c.id] === "stale" ? t.reviewStale : t.reviewNone}
+                        {c.event_id ? t.eventLabel(eventLabel.get(c.event_id) ?? c.event_id) : ""} · {t.claimsCount(c.chapter_claims.length)}
                       </span>
                     </div>
                     {flagged[c.id]?.length ? (
                       <p role="note" className="zq-error" data-testid="needs-rereview">
-                        Needs re-review: {flagged[c.id]!.join(" ")}
+                        {t.needsRereview} {flagged[c.id]!.map((r, i) => (r ? <ServerText key={i}>{r} </ServerText> : <span key={i}>{t.sourceChanged} </span>))}
                       </p>
                     ) : null}
                     <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                       {editable(c.status) ? (
                         <button type="button" className="zq-btn zq-btn-quiet zq-btn-sm" onClick={() => setEditing(c)}>
-                          Edit
+                          {t.edit}
                         </button>
                       ) : null}
                       {c.status === "draft" || c.status === "correction" ? (
-                        <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => void act(() => setStatus("chapter", c.id, "in_review"), "Chapter sent for review.")}>
-                          Send for review
+                        <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => void act(() => setStatus("chapter", c.id, "in_review"), t.okChapterSent)}>
+                          {t.sendForReview}
                         </button>
                       ) : null}
                       {c.status === "in_review" || c.status === "approved" ? (
-                        <button type="button" className="zq-btn zq-btn-primary zq-btn-sm" onClick={() => void act(() => setStatus("chapter", c.id, "published"), "Chapter published.")}>
-                          Publish chapter
+                        <button type="button" className="zq-btn zq-btn-primary zq-btn-sm" onClick={() => void act(() => setStatus("chapter", c.id, "published"), t.okChapterPublished)}>
+                          {t.publishChapter}
                         </button>
                       ) : null}
                       {c.status === "published" ? (
@@ -326,9 +330,9 @@ export function ChapterManager() {
                           type="button"
                           className="zq-btn zq-btn-quiet zq-btn-sm"
                           disabled={note.trim().length < 3}
-                          onClick={() => void act(() => setStatus("chapter", c.id, "correction", note.trim()), "Moved to correction. Readers still see the published text until it is corrected and published again.")}
+                          onClick={() => void act(() => setStatus("chapter", c.id, "correction", note.trim()), t.okMovedCorrection)}
                         >
-                          Move to correction (needs the public note below)
+                          {t.moveCorrectionBtn}
                         </button>
                       ) : null}
                     </div>
@@ -336,10 +340,10 @@ export function ChapterManager() {
                 ))}
               </ul>
             ) : (
-              <p className="zq-meta">No chapters yet.</p>
+              <p className="zq-meta">{t.noChapters}</p>
             )}
             <div className="zq-field">
-              <label htmlFor="cm-note">Public revision note (for a correction)</label>
+              <label htmlFor="cm-note">{t.revisionNote}</label>
               <input id="cm-note" className="zq-input" value={note} onChange={(e) => setNote(e.target.value)} />
             </div>
           </section>
@@ -353,16 +357,16 @@ export function ChapterManager() {
               void save(e.currentTarget);
             }}
           >
-            <h3>{editing ? `Edit chapter ${editing.position}` : "Add a chapter"}</h3>
-            <TextField label="Position" id="cm-pos" name="position" type="number" min={1} required defaultValue={editing?.position ?? chapters.length + 1} />
-            <TextField label="Chapter title" id="cm-title" name="title" required defaultValue={editing?.title ?? ""} />
-            <TextField label="Link anchor (optional)" id="cm-anchor" name="anchor" pattern="[a-z0-9]+(-[a-z0-9]+)*" defaultValue={editing?.anchor ?? ""} help="Lowercase letters, digits and hyphens. The chapter is linked as /stories/slug#chapter-anchor. Defaults to the position." />
+            <h3>{editing ? t.editChapterN(editing.position) : t.addChapter}</h3>
+            <TextField label={t.position} id="cm-pos" name="position" type="number" min={1} required defaultValue={editing?.position ?? chapters.length + 1} />
+            <TextField label={t.chapterTitle} id="cm-title" name="title" required defaultValue={editing?.title ?? ""} />
+            <TextField label={t.anchor} id="cm-anchor" name="anchor" pattern="[a-z0-9]+(-[a-z0-9]+)*" defaultValue={editing?.anchor ?? ""} help={t.anchorHelp} />
             <div className="zq-field">
-              <label htmlFor="cm-event">Timeline event (optional)</label>
+              <label htmlFor="cm-event">{t.timelineEvent}</label>
               <select id="cm-event" name="event_id" className="zq-input" defaultValue={editing?.event_id ?? ""}>
-                <option value="">None</option>
+                <option value="">{t.none}</option>
                 {events.map((e) => (
-                  <option key={e.id} value={e.id}>
+                  <option key={e.id} value={e.id} {...englishContent(locale)}>
                     {e.label}
                   </option>
                 ))}
@@ -370,7 +374,7 @@ export function ChapterManager() {
             </div>
             {MODE_FIELDS.map((m) => (
               <div className="zq-field" style={{ maxWidth: "none" }} key={m.column}>
-                <label htmlFor={`cm-${m.column}`}>{m.label}</label>
+                <label htmlFor={`cm-${m.column}`}>{t.modeLabels[m.column] ?? m.label}</label>
                 <textarea
                   id={`cm-${m.column}`}
                   name={m.column}
@@ -379,29 +383,29 @@ export function ChapterManager() {
                   defaultValue={(editing?.[m.column as keyof Chapter] as string | null) ?? ""}
                   maxLength={m.max}
                 />
-                <span className="zq-help">{m.help}</span>
+                <span className="zq-help">{t.modeHelps[m.column] ?? m.help}</span>
               </div>
             ))}
             <div className="zq-field" style={{ maxWidth: "none" }}>
-              <label htmlFor="cm-unknowns">What the sources do not establish</label>
+              <label htmlFor="cm-unknowns">{t.unknownsLabel}</label>
               <textarea id="cm-unknowns" name="unknowns_md" className="zq-textarea" style={{ minHeight: 90 }} defaultValue={editing?.unknowns_md ?? ""} maxLength={4000} />
-              <span className="zq-help">Listed under &ldquo;Sources and uncertainties&rdquo;. Name what the Quran and the authentic Hadith leave open.</span>
+              <span className="zq-help">{t.unknownsHelp}</span>
             </div>
             <TextField
-              label="Claim ids this chapter rests on"
+              label={t.claimsLabel}
               id="cm-claims"
               name="claims"
               dir="ltr"
               defaultValue={(editing?.chapter_claims ?? []).map((c) => c.claim_id).join(" ")}
-              help="Separate with spaces or commas. Every claim must be approved, at least one needs a Quran or authentic hadith reference, and the verses of the chapter are taken from them."
+              help={t.claimsHelp}
             />
             <div style={{ display: "flex", gap: 8 }}>
               <button type="submit" className="zq-btn zq-btn-primary">
-                {editing ? "Save changes" : "Save chapter draft"}
+                {editing ? t.saveChanges : t.saveChapterDraft}
               </button>
               {editing ? (
                 <button type="button" className="zq-btn zq-btn-quiet" onClick={() => setEditing(null)}>
-                  Cancel
+                  {t.cancel}
                 </button>
               ) : null}
             </div>

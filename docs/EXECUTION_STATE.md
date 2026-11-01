@@ -28,7 +28,7 @@ Unapplied (in repo/branches): none known after the last merge. People-admin adde
 | 1 | Audit | Done: `docs/FINAL_PLATFORM_AUDIT.md`, `docs/STORY_ENCYCLOPEDIA_AUDIT.md` |
 | 2 | Security and foundations | Built and tested (RLS forced, nonce CSP, review/no-self-review registry). Open: real-device and live-Supabase checks; `person_aliases` audit trigger and published-person freeze: migration 20261031002630 (branch `mod/perf-visual`, not yet applied) |
 | 3 | Primary sources | Quran Arabic (Tanzil) imported; hadith/translation/tafsir structure built but EMPTY pending licences (`docs/LICENSING.md`, `docs/PERMISSION_REQUESTS.md`: emails drafted, not sent) |
-| 4 | Multilingual UI | EN/AR/UR interface complete as DRAFT strings (translator review pending); reader preferences independent (interface/translation/narration) |
+| 4 | Multilingual UI | EN/AR/UR interface and admin editors complete as DRAFT strings (translator review pending; glossary in `docs/I18N.md`); reader preferences independent (interface/translation/narration) |
 | 5 | Timeline and stories | Journey (29), Complete Timeline + Event Universe (159 draft items), chapters/depth modes, coverage dashboard, hadith stories, people/communities pages and admin: built. Content: 7 Quran-only story drafts in `content/stories` (validated, unreviewed, not imported); reading packs in `docs/review-packs` |
 | 6 | Interactive learning | Story Player, narration plumbing, media library incl. video: built; no audio provider/licensed ambience; concept image/GIF packs are review-only (`design/concepts`, blocked from the site) |
 | 7 | Specialised learning | Life Guidance, Shifa, dreams, Life Through the Ages: built, empty by design |
@@ -40,7 +40,7 @@ Unapplied (in repo/branches): none known after the last merge. People-admin adde
 2. After 1: import the seven drafts as drafts (`pnpm import:drafts --db`), scholars review in `/admin/stories` using `docs/review-packs`.
 3. Arabic/Urdu story text via the Story Studio translation job (Lara keys) and translator review; hadith entries after permissions; then remaining prophets, people, communities, hadith stories.
 4. Quiet-machine full test run recorded in `PRODUCTION_READINESS.md`; counsel review of legal pages; backup/restore rehearsal.
-5. Small follow-ups: Muhammad/Isa/Musa drafts need scholar attribution check; admin editor forms still English-only.
+5. Small follow-ups: Muhammad/Isa/Musa drafts need scholar attribution check; translators review the Arabic and Urdu drafts, including the admin editors (localised in draft on `mod/admin-l10n`, 2026-11-01).
 
 ## Completion indicators (kept separate on purpose)
 "Verified completion" means every agreed requirement passes its acceptance criteria. A working platform is not a finished one while content, approval and licences are missing, so

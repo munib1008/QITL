@@ -1,5 +1,6 @@
 "use client";
 
+import { LoadErrorText } from "../feedback";
 import "@/styles/player.css";
 import { useEffect, useState } from "react";
 import { EditorialStatus, type EditorialState } from "@/components/ui/evidence";
@@ -566,7 +567,7 @@ export function Studio({ locale, flags, roles }: { locale: string; flags: Studio
       {subject ? (
         <>
           <Panel title={s.scripts} id="st-scripts">
-            {scripts.error ? <p className="zq-error">{scripts.error}</p> : null}
+            {scripts.error ? <p className="zq-error"><LoadErrorText error={scripts.error} /></p> : null}
             {!scripts.rows ? (
               <Skeleton height={20} />
             ) : (

@@ -1,9 +1,14 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { getBrowserSupabase } from "@/lib/supabase/browser";
 import { EditorialStatus, type EditorialState } from "@/components/ui/evidence";
 import { EmptyState, Skeleton } from "@/components/ui/misc";
+import { useLocale } from "@/lib/i18n/useLocale";
+import { lifestyleStrings } from "@/lib/i18n/modules/lifestyle";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { adminLifestyleStrings } from "@/lib/i18n/modules/adminLifestyle";
+import { AdminFeedback as Feedback, ServerText, errMsg, type AdminMsg } from "./feedback";
 import { FIELD_KEYS, LIFESPAN_KINDS, LIFESPAN_MEASURES, RECORD_TYPES, requiredPathways, type EvidenceCategory, type Pathway, type RecordType } from "@/lib/lifestyle/model";
 
 /**
@@ -28,24 +33,6 @@ const TITLE_COL: Partial<Record<RecordType, string>> = {
   lifestyle_demographic: "title",
   lifestyle_source: "citation",
 };
-const TYPE_LABEL: Record<RecordType, string> = {
-  lifestyle_era: "Era",
-  lifestyle_community: "Community",
-  lifestyle_profile: "Prophet profile",
-  lifestyle_field: "Profile field",
-  lifestyle_food: "Food",
-  lifestyle_food_link: "Food evidence link",
-  lifestyle_occupation: "Occupation",
-  lifestyle_housing: "Housing",
-  lifestyle_transport: "Transport",
-  lifestyle_activity: "Daily activity",
-  lifestyle_health: "Health condition",
-  lifestyle_lifespan: "Lifespan claim",
-  lifestyle_demographic: "Demographic research",
-  lifestyle_reconstruction: "Reconstruction (class D)",
-  lifestyle_infographic: "Infographic",
-  lifestyle_source: "Source reference",
-};
 
 interface Item {
   type: RecordType;
@@ -58,8 +45,11 @@ interface Item {
 }
 
 export function LifestyleAdmin({ canEdit, canReligious, canScience }: { canEdit: boolean; canReligious: boolean; canScience: boolean }) {
+  const locale = useLocale();
+  const tx = useMemo(() => adminLifestyleStrings(locale), [locale]);
+  const statusWord = (s: string) => (uiStrings(locale).status as Record<string, string>)[s] ?? s.replace("_", " ");
   const [items, setItems] = useState<Item[] | null>(null);
-  const [msg, setMsg] = useState<{ tone: "ok" | "err"; text: string } | null>(null);
+  const [msg, setMsg] = useState<AdminMsg>(null);
   const [filter, setFilter] = useState<RecordType | "all">("all");
 
   const load = useCallback(async () => {
@@ -110,96 +100,92 @@ export function LifestyleAdmin({ canEdit, canReligious, canScience }: { canEdit:
       setMsg({ tone: "ok", text: ok });
       await load();
     } catch (e) {
-      setMsg({ tone: "err", text: (e as Error).message });
+      setMsg(errMsg(locale, tx.failedPrefix, (e as Error).message));
     }
   };
   const review = (it: Item, pathway: Pathway, decision: "approved" | "changes_requested") => {
-    const comment = decision === "changes_requested" ? (window.prompt("What needs to change?") ?? "") : undefined;
+    const comment = decision === "changes_requested" ? (window.prompt(tx.whatChanges) ?? "") : undefined;
     if (decision === "changes_requested" && !comment) return;
-    void act(() => call("/api/admin/lifestyle/review", { entityType: it.type, entityId: it.id, pathway, decision, comment }), decision === "approved" ? "Review recorded." : "Changes requested.");
+    void act(() => call("/api/admin/lifestyle/review", { entityType: it.type, entityId: it.id, pathway, decision, comment }), decision === "approved" ? tx.okReview : tx.okChanges);
   };
-  const status = (it: Item, s: string, revisionNote?: string) => act(() => call("/api/admin/status", { entityType: it.type, entityId: it.id, status: s, revisionNote }), `Status: ${s.replace("_", " ")}.`);
+  const status = (it: Item, s: string, revisionNote?: string) => act(() => call("/api/admin/status", { entityType: it.type, entityId: it.id, status: s, revisionNote }), tx.statusSet(statusWord(s)));
 
   return (
     <div style={{ display: "grid", gap: 24 }}>
       <section className="pp-card" aria-labelledby="lta-rules-h">
-        <h3 id="lta-rules-h">Evidence and review rules</h3>
+        <h3 id="lta-rules-h">{tx.rulesHeading}</h3>
         <ul style={{ margin: 0, paddingInlineStart: 20 }}>
-          <li>A (Quran) and B (authentic hadith: Bukhari, Muslim, or individually sahih in Tirmidhi / Ibn Majah) need an approved evidence claim and the religious review by a scholarly reviewer.</li>
-          <li>C (historical / archaeological / scientific) needs a named publication and citation and the historical/scientific review by a science reviewer.</li>
-          <li>D (reconstruction) needs the reconstruction flag and the historical/scientific review; it is always shown apart, never as fact.</li>
-          <li>A record mixing classes needs both reviews. Never enter a citation you have not checked against the publication itself.</li>
+          <li>{tx.rule1}</li>
+          <li>{tx.rule2}</li>
+          <li>{tx.rule3}</li>
+          <li>{tx.rule4}</li>
         </ul>
       </section>
 
-      {canEdit ? <Editor onSaved={(t) => act(async () => undefined, t)} /> : null}
+      {canEdit ? <Editor onSaved={(text) => act(async () => undefined, text)} /> : null}
 
       <div className="zq-field" style={{ maxWidth: 360 }}>
-        <label htmlFor="lta-filter">Show</label>
+        <label htmlFor="lta-filter">{tx.show}</label>
         <select id="lta-filter" className="zq-input" value={filter} onChange={(e) => setFilter(e.target.value as RecordType | "all")}>
-          <option value="all">All record types</option>
+          <option value="all">{tx.allTypes}</option>
           {(Object.keys(RECORD_TYPES) as RecordType[]).map((t) => (
             <option key={t} value={t}>
-              {TYPE_LABEL[t]}
+              {tx.types[t]}
             </option>
           ))}
         </select>
       </div>
-      {msg ? (
-        <p role={msg.tone === "err" ? "alert" : "status"} className={msg.tone === "err" ? "zq-error" : "zq-help"}>
-          {msg.text}
-        </p>
-      ) : null}
+      <Feedback msg={msg} />
       {!items ? (
         <Skeleton height={20} />
       ) : !items.length ? (
-        <EmptyState title="No Life Through the Ages records yet." />
+        <EmptyState title={tx.noRecords} />
       ) : (
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gap: 12 }} data-testid="lta-queue">
           {items.map((it) => (
             <li key={it.type + it.id} className="pp-card">
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center" }}>
-                <span className="zq-eyebrow">{TYPE_LABEL[it.type]}</span>
+                <span className="zq-eyebrow">{tx.types[it.type]}</span>
                 <EditorialStatus status={it.status} />
-                <span className="zq-meta">Class {it.category ?? "— (not established)"}</span>
+                <span className="zq-meta">{tx.classWord} {it.category ?? tx.classNone}</span>
               </div>
               <p style={{ margin: 0 }}>{it.label}</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
                 {(["religious", "scientific"] as Pathway[]).map((p) => (
                   <span key={p} className="zq-meta" data-pathway={p}>
-                    {p === "religious" ? "Religious review" : "Historical/scientific review"}: {it.pathways.includes(p) ? (it.reviews[p]?.replace("_", " ") ?? "pending") : "not required"}
+                    {p === "religious" ? tx.religiousReview : tx.scienceReview}: {it.pathways.includes(p) ? (it.reviews[p] ? (tx.decisions[it.reviews[p]!] ?? it.reviews[p]!.replace("_", " ")) : tx.pending) : tx.notRequired}
                   </span>
                 ))}
               </div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                 {canEdit && it.status === "draft" ? (
                   <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => status(it, "in_review")}>
-                    Send for review
+                    {tx.sendForReview}
                   </button>
                 ) : null}
                 {canReligious && it.pathways.includes("religious") ? (
                   <>
                     <button type="button" className="zq-btn zq-btn-primary zq-btn-sm" onClick={() => review(it, "religious", "approved")}>
-                      Approve (religious)
+                      {tx.approveReligious}
                     </button>
                     <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => review(it, "religious", "changes_requested")}>
-                      Request changes (religious)
+                      {tx.changesReligious}
                     </button>
                   </>
                 ) : null}
                 {canScience && it.pathways.includes("scientific") ? (
                   <>
                     <button type="button" className="zq-btn zq-btn-primary zq-btn-sm" onClick={() => review(it, "scientific", "approved")}>
-                      Approve (historical/scientific)
+                      {tx.approveScience}
                     </button>
                     <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => review(it, "scientific", "changes_requested")}>
-                      Request changes (historical/scientific)
+                      {tx.changesScience}
                     </button>
                   </>
                 ) : null}
                 {canEdit && it.status !== "published" ? (
                   <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => status(it, "published")}>
-                    Publish
+                    {tx.publish}
                   </button>
                 ) : null}
                 {canEdit && it.status === "published" ? (
@@ -207,11 +193,11 @@ export function LifestyleAdmin({ canEdit, canReligious, canScience }: { canEdit:
                     type="button"
                     className="zq-btn zq-btn-secondary zq-btn-sm"
                     onClick={() => {
-                      const note = window.prompt("Public revision note: what is being corrected and why?") ?? "";
+                      const note = window.prompt(tx.revisionPrompt) ?? "";
                       if (note.trim().length >= 3) void status(it, "correction", note);
                     }}
                   >
-                    Start a correction
+                    {tx.startCorrection}
                   </button>
                 ) : null}
               </div>
@@ -228,8 +214,12 @@ export function LifestyleAdmin({ canEdit, canReligious, canScience }: { canEdit:
 const EVIDENCE_TYPES: RecordType[] = (Object.keys(RECORD_TYPES) as RecordType[]).filter((t) => t !== "lifestyle_profile" && t !== "lifestyle_source");
 
 function Editor({ onSaved }: { onSaved: (text: string) => void }) {
+  const locale = useLocale();
+  const tx = useMemo(() => adminLifestyleStrings(locale), [locale]);
+  const lf = useMemo(() => lifestyleStrings(locale), [locale]);
+  const optLabel = (o: string) => tx.opt[o] ?? (lf.fields as Record<string, string>)[o] ?? tx.types[o] ?? o.replace(/_/g, " ");
   const [type, setType] = useState<RecordType>("lifestyle_field");
-  const [err, setErr] = useState<string | null>(null);
+  const [err, setErr] = useState<AdminMsg>(null);
   const hasEvidence = EVIDENCE_TYPES.includes(type);
   const titled = ["lifestyle_occupation", "lifestyle_housing", "lifestyle_transport", "lifestyle_activity", "lifestyle_health", "lifestyle_reconstruction"].includes(type);
   const named = ["lifestyle_era", "lifestyle_community", "lifestyle_food"].includes(type);
@@ -246,7 +236,7 @@ function Editor({ onSaved }: { onSaved: (text: string) => void }) {
         {allowEmpty ? <option value="">—</option> : null}
         {options.map((o) => (
           <option key={o} value={o}>
-            {o.replace(/_/g, " ")}
+            {optLabel(o)}
           </option>
         ))}
       </select>
@@ -278,145 +268,141 @@ function Editor({ onSaved }: { onSaved: (text: string) => void }) {
         }
         try {
           await call("/api/admin/lifestyle", { type, data });
-          onSaved("Draft saved. Send it for review when it is complete.");
+          onSaved(tx.draftSaved);
           e.currentTarget.reset();
         } catch (x) {
-          setErr((x as Error).message);
+          setErr(errMsg(locale, tx.failedPrefix, (x as Error).message));
         }
       }}
     >
-      <h3>New draft record</h3>
+      <h3>{tx.newDraftRecord}</h3>
       <div className="zq-field">
-        <label htmlFor="lta-type">Record type</label>
+        <label htmlFor="lta-type">{tx.recordType}</label>
         <select id="lta-type" name="type" className="zq-input" value={type} onChange={(e) => setType(e.target.value as RecordType)}>
           {(Object.keys(RECORD_TYPES) as RecordType[]).map((t) => (
             <option key={t} value={t}>
-              {TYPE_LABEL[t]}
+              {tx.types[t]}
             </option>
           ))}
         </select>
       </div>
 
-      {type === "lifestyle_profile" ? f("person_slug", "Person slug (journey id)", { required: true, pattern: "[a-z0-9-]{2,60}", dir: "ltr" }) : null}
+      {type === "lifestyle_profile" ? f("person_slug", tx.personSlug, { required: true, pattern: "[a-z0-9-]{2,60}", dir: "ltr" }) : null}
       {type === "lifestyle_field" ? (
         <>
-          {f("profile_id", "Profile id", { required: true, dir: "ltr" })}
-          {sel("field_key", "Field", FIELD_KEYS)}
+          {f("profile_id", tx.profileId, { required: true, dir: "ltr" })}
+          {sel("field_key", tx.fieldLabel, FIELD_KEYS)}
           <label className="zq-check">
-            <input type="checkbox" name="known" /> Established by a reviewed source (otherwise “not established”, with no text)
+            <input type="checkbox" name="known" /> {tx.knownCheck}
           </label>
-          {area("body_md", "Text")}
+          {area("body_md", tx.textLabel)}
         </>
       ) : null}
       {named ? (
         <>
-          {f("slug", "Slug", { required: true, pattern: "[a-z0-9-]{2,60}", dir: "ltr" })}
-          {f("name_en", "Name (English)", { required: true })}
-          {f("name_ar", "Name (Arabic)", { dir: "rtl", lang: "ar" })}
-          {area("summary", "Summary")}
+          {f("slug", tx.slugShort, { required: true, pattern: "[a-z0-9-]{2,60}", dir: "ltr" })}
+          {f("name_en", tx.nameEn, { required: true })}
+          {f("name_ar", tx.nameAr, { dir: "rtl", lang: "ar" })}
+          {area("summary", tx.summary)}
         </>
       ) : null}
-      {type === "lifestyle_food" ? sel("food_group", "Food group", ["grain", "fruit", "vegetable", "legume", "dairy", "meat", "fish", "honey", "oil", "beverage", "spice", "other"]) : null}
+      {type === "lifestyle_food" ? sel("food_group", tx.foodGroup, ["grain", "fruit", "vegetable", "legume", "dairy", "meat", "fish", "honey", "oil", "beverage", "spice", "other"]) : null}
       {titled ? (
         <>
-          {f("slug", "Slug", { required: true, pattern: "[a-z0-9-]{2,60}", dir: "ltr" })}
-          {f("title_en", "Title (English)", { required: true })}
-          {f("title_ar", "Title (Arabic)", { dir: "rtl", lang: "ar" })}
+          {f("slug", tx.slugShort, { required: true, pattern: "[a-z0-9-]{2,60}", dir: "ltr" })}
+          {f("title_en", tx.titleEn, { required: true })}
+          {f("title_ar", tx.titleAr, { dir: "rtl", lang: "ar" })}
           {type === "lifestyle_reconstruction" ? (
             <>
-              {sel("kind", "Kind", ["day_in_era", "settlement", "diet", "scene", "other"])}
-              {area("intro_md", "Introduction")}
-              {area("segments", "Parts of the day, one per line as part|text (dawn, morning, midday…; no clock times)")}
-              {area("limitations_md", "Limitations")}
+              {sel("kind", tx.kind, ["day_in_era", "settlement", "diet", "scene", "other"])}
+              {area("intro_md", tx.introduction)}
+              {area("segments", tx.segmentsLabel)}
+              {area("limitations_md", tx.limitationsMd)}
             </>
           ) : (
             <>
-              {area("body_md", "Text")}
-              {sel("comparison_band", "Comparison column", ["ancient", "documented", "contemporary"], true)}
+              {area("body_md", tx.textLabel)}
+              {sel("comparison_band", tx.comparisonColumn, ["ancient", "documented", "contemporary"], true)}
             </>
           )}
-          {type === "lifestyle_occupation" ? sel("domain", "Domain", ["farming", "herding", "crafts", "trade", "building", "seafaring", "learning", "household", "other"]) : null}
+          {type === "lifestyle_occupation" ? sel("domain", tx.domain, ["farming", "herding", "crafts", "trade", "building", "seafaring", "learning", "household", "other"]) : null}
         </>
       ) : null}
       {type === "lifestyle_food_link" ? (
         <>
-          {f("food_id", "Food id", { required: true, dir: "ltr" })}
-          {sel("link_kind", "Kind (fixes the class)", ["scripture_mention", "hadith_mention", "archaeological_find", "historical_record", "nutrition_research", "reconstruction"])}
-          {area("statement", "Statement")}
+          {f("food_id", tx.foodId, { required: true, dir: "ltr" })}
+          {sel("link_kind", tx.kindFixesClass, ["scripture_mention", "hadith_mention", "archaeological_find", "historical_record", "nutrition_research", "reconstruction"])}
+          {area("statement", tx.statement)}
           <label className="zq-check">
-            <input type="checkbox" name="health_claim" /> Health claim (only modern nutrition research, class C)
+            <input type="checkbox" name="health_claim" /> {tx.healthClaim}
           </label>
         </>
       ) : null}
       {type === "lifestyle_lifespan" ? (
         <>
-          {sel("kind", "Kind (fixes the class)", LIFESPAN_KINDS)}
-          {sel("measure", "Measure", LIFESPAN_MEASURES, true)}
-          {area("statement", "Statement")}
-          {f("population", "Population")}
-          {f("value_years", "Value (years)", { inputMode: "decimal", dir: "ltr" })}
-          {f("value_low", "Range low", { inputMode: "decimal", dir: "ltr" })}
-          {f("value_high", "Range high", { inputMode: "decimal", dir: "ltr" })}
-          {f("value_note", "Note on the value")}
+          {sel("kind", tx.kindFixesClass, LIFESPAN_KINDS)}
+          {sel("measure", tx.measure, LIFESPAN_MEASURES, true)}
+          {area("statement", tx.statement)}
+          {f("population", tx.population)}
+          {f("value_years", tx.valueYears, { inputMode: "decimal", dir: "ltr" })}
+          {f("value_low", tx.rangeLow, { inputMode: "decimal", dir: "ltr" })}
+          {f("value_high", tx.rangeHigh, { inputMode: "decimal", dir: "ltr" })}
+          {f("value_note", tx.valueNote)}
         </>
       ) : null}
       {type === "lifestyle_demographic" ? (
         <>
-          {f("title", "Title", { required: true })}
-          {sel("metric", "Metric", ["population_size", "life_expectancy_at_birth", "life_expectancy_after_childhood", "mortality", "fertility", "stature", "other"])}
-          {f("population", "Population")}
-          {f("value", "Value", { inputMode: "decimal", dir: "ltr" })}
-          {f("unit", "Unit")}
-          {area("method_note", "Method")}
+          {f("title", tx.title, { required: true })}
+          {sel("metric", tx.metric, ["population_size", "life_expectancy_at_birth", "life_expectancy_after_childhood", "mortality", "fertility", "stature", "other"])}
+          {f("population", tx.population)}
+          {f("value", tx.value, { inputMode: "decimal", dir: "ltr" })}
+          {f("unit", tx.unit)}
+          {area("method_note", tx.method)}
         </>
       ) : null}
       {type === "lifestyle_infographic" ? (
         <>
-          {f("slug", "Slug", { required: true, pattern: "[a-z0-9-]{2,60}", dir: "ltr" })}
-          {sel("kind", "Kind", ["diagram", "map", "chart", "landscape", "objects", "pattern"])}
-          {f("animation_key", "Scene key", { required: true, dir: "ltr" })}
-          {f("alt_text", "Alt text", { required: true })}
-          {f("caption", "Caption")}
-          <p className="zq-help">Non-figurative only: no person, nothing unseen, nothing presented as a prophet’s possession. The database refuses anything else.</p>
+          {f("slug", tx.slugShort, { required: true, pattern: "[a-z0-9-]{2,60}", dir: "ltr" })}
+          {sel("kind", tx.kind, ["diagram", "map", "chart", "landscape", "objects", "pattern"])}
+          {f("animation_key", tx.sceneKey, { required: true, dir: "ltr" })}
+          {f("alt_text", tx.altText, { required: true })}
+          {f("caption", tx.caption)}
+          <p className="zq-help">{tx.infographicNote}</p>
         </>
       ) : null}
       {type === "lifestyle_source" ? (
         <>
-          {sel("entity_type", "Record type", Object.keys(RECORD_TYPES))}
-          {f("entity_id", "Record id", { required: true, dir: "ltr" })}
-          {f("citation", "Citation (as printed in the publication)", { required: true })}
-          {f("publication", "Publication")}
-          {f("edition", "Edition")}
-          {f("locator", "Page / section")}
-          {f("url", "URL (https)", { dir: "ltr" })}
+          {sel("entity_type", tx.recordType, Object.keys(RECORD_TYPES))}
+          {f("entity_id", tx.recordId, { required: true, dir: "ltr" })}
+          {f("citation", tx.citationPrinted, { required: true })}
+          {f("publication", tx.publication)}
+          {f("edition", tx.edition)}
+          {f("locator", tx.pageSection)}
+          {f("url", tx.urlHttps, { dir: "ltr" })}
         </>
       ) : null}
 
       {hasEvidence ? (
         <fieldset className="zq-field" style={{ border: "1px solid var(--hairline)", borderRadius: 8, padding: 12 }}>
-          <legend>Evidence</legend>
-          {sel("evidence_category", "Class", ["A", "B", "C", "D"], type === "lifestyle_field")}
-          {f("claim_id", "Approved evidence claim id (A/B)", { dir: "ltr" })}
-          {f("primary_citation", "Primary citation (C: required)")}
-          {f("publication", "Publication / edition (C: required)")}
-          {f("dating_method", "Dating method")}
-          {f("geographic_relevance", "Geographic relevance")}
-          {sel("confidence", "Confidence", ["high", "moderate", "low", "speculative"], true)}
-          {f("language", "Language code", { defaultValue: "en", dir: "ltr" })}
-          {area("limitations", "Limitations")}
+          <legend>{tx.evidenceLegend}</legend>
+          {sel("evidence_category", tx.classWord, ["A", "B", "C", "D"], type === "lifestyle_field")}
+          {f("claim_id", tx.approvedClaimId, { dir: "ltr" })}
+          {f("primary_citation", tx.primaryCitation)}
+          {f("publication", tx.publicationEdition)}
+          {f("dating_method", tx.datingMethod)}
+          {f("geographic_relevance", tx.geoRelevance)}
+          {sel("confidence", tx.confidence, ["high", "moderate", "low", "speculative"], true)}
+          {f("language", tx.languageCode, { defaultValue: "en", dir: "ltr" })}
+          {area("limitations", tx.limitationsMd)}
           <label className="zq-check">
-            <input type="checkbox" name="is_reconstruction" /> Reconstruction (class D only)
+            <input type="checkbox" name="is_reconstruction" /> {tx.reconstructionCheck}
           </label>
         </fieldset>
       ) : null}
-      {err ? (
-        <p role="alert" className="zq-error">
-          {err}
-        </p>
-      ) : null}
+      <Feedback msg={err} />
       <div>
         <button type="submit" className="zq-btn zq-btn-primary">
-          Save draft
+          {tx.saveDraft}
         </button>
       </div>
     </form>

@@ -1,8 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { getBrowserSupabase } from "@/lib/supabase/browser";
 import { EmptyState, Skeleton } from "@/components/ui/misc";
+import { useLocale } from "@/lib/i18n/useLocale";
+import { adminLicencesStrings } from "@/lib/i18n/modules/adminLicences";
+import { AdminFeedback as Feedback, ServerText, errMsg, type AdminMsg } from "./feedback";
 import { ASSET_TYPES, PERMISSION_STATUSES, RIWAYAH_IDS, TRISTATE, permissionAllowed, riwayahLabel, type PermissionStatus } from "@/lib/qiraat/model";
 
 interface Row {
@@ -69,16 +72,18 @@ const blank = (): Form => ({ source_id: "", asset_type: "text", scope: "all", st
  * written-permission reference and evidence, and the database stamps the acting admin as the verifier.
  */
 export function LicencesAdmin({ isAdmin }: { isAdmin: boolean }) {
+  const locale = useLocale();
+  const t = useMemo(() => adminLicencesStrings(locale), [locale]);
   const [rows, setRows] = useState<Row[] | null>(null);
   const [sources, setSources] = useState<Array<{ id: string; work: string }>>([]);
   const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState<Form>(blank);
   const [editing, setEditing] = useState<string | null>(null);
-  const [msg, setMsg] = useState<{ tone: "ok" | "err"; text: string } | null>(null);
+  const [msg, setMsg] = useState<AdminMsg>(null);
 
   const load = useCallback(async () => {
     const c = getBrowserSupabase();
-    if (!c) return setError("Not configured");
+    if (!c) return setError(t.notConfigured);
     const [r, s] = await Promise.all([
       c.from("content_licence_registry").select("*").order("work").order("asset_type").order("scope"),
       c.from("sources").select("id, work").order("work"),
@@ -86,7 +91,7 @@ export function LicencesAdmin({ isAdmin }: { isAdmin: boolean }) {
     if (r.error) setError(r.error.message);
     else setRows((r.data ?? []) as Row[]);
     setSources((s.data ?? []) as Array<{ id: string; work: string }>);
-  }, []);
+  }, [t]);
   useEffect(() => {
     void load();
   }, [load]);
@@ -105,8 +110,8 @@ export function LicencesAdmin({ isAdmin }: { isAdmin: boolean }) {
     for (const k of ["source_id", "asset_type", "scope", "status", "riwayah_id", "attribution_required", "verify", ...TEXT_FIELDS.map(([k]) => k), ...TRI_FIELDS.map(([k]) => k)]) data[k] = form[k] === "" ? null : form[k];
     const res = await fetch("/api/admin/licences", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ id: editing ?? undefined, data }) });
     const d = (await res.json().catch(() => ({}))) as { error?: string };
-    if (!res.ok) return setMsg({ tone: "err", text: d.error ?? `Request failed (${res.status})` });
-    setMsg({ tone: "ok", text: editing ? "Saved." : "Added." });
+    if (!res.ok) return setMsg(errMsg(locale, t.failedPrefix, d.error ?? `Request failed (${res.status})`));
+    setMsg({ tone: "ok", text: editing ? t.okSaved : t.okAdded });
     setEditing(null);
     setForm(blank());
     await load();
@@ -116,36 +121,36 @@ export function LicencesAdmin({ isAdmin }: { isAdmin: boolean }) {
     <div style={{ display: "grid", gap: 16 }}>
       {error ? (
         <p className="zq-error" role="alert">
-          Could not load: {error}
+          {t.couldNotLoad} {error === t.notConfigured ? error : <ServerText>{error}</ServerText>}
         </p>
       ) : !rows ? (
         <Skeleton height={20} />
       ) : !rows.length ? (
-        <EmptyState title="No licence rows yet." />
+        <EmptyState title={t.noRows} />
       ) : (
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gap: 12 }} data-testid="licence-rows">
           {rows.map((r) => (
             <li key={r.permission_id} className="pp-card" data-status={r.status}>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center" }}>
                 <span className="zq-eyebrow">
-                  {r.asset_type} · {r.scope}
+                  {t.assetTypes[r.asset_type] ?? r.asset_type} · {r.scope}
                 </span>
-                <b>{r.status.replace("_", " ")}</b>
-                <span className={permissionAllowed(r) ? "zq-help" : "zq-licence-pending"}>{permissionAllowed(r) ? "Allowed for display" : "Not allowed for display"}</span>
+                <b>{t.statuses[r.status] ?? r.status.replace("_", " ")}</b>
+                <span className={permissionAllowed(r) ? "zq-help" : "zq-licence-pending"}>{permissionAllowed(r) ? t.allowedDisplay : t.notAllowedDisplay}</span>
               </div>
               <p style={{ margin: 0 }}>
                 {r.work}
                 {r.riwayah_id ? ` · ${riwayahLabel(r.riwayah_id)}` : r.qiraah_riwayah_note ? ` · ${r.qiraah_riwayah_note}` : ""}
               </p>
-              {r.conditions ? <p className="zq-meta" style={{ margin: 0 }}>Conditions: {r.conditions}</p> : null}
+              {r.conditions ? <p className="zq-meta" style={{ margin: 0 }}>{t.conditionsLabel} {r.conditions}</p> : null}
               <p className="zq-meta" style={{ margin: 0 }}>
-                Evidence: {r.evidence_url ? <a href={r.evidence_url} rel="noopener noreferrer" target="_blank">{r.evidence_url}</a> : "none"}
-                {r.evidence_checked_on ? ` (read ${r.evidence_checked_on})` : ""} · {r.verified_at ? `verified ${r.verified_at.slice(0, 10)}` : "not verified by the owner"}
+                {t.evidenceLabel} {r.evidence_url ? <a href={r.evidence_url} rel="noopener noreferrer" target="_blank">{r.evidence_url}</a> : t.noneLower()}
+                {r.evidence_checked_on ? t.readOn(r.evidence_checked_on) : ""} · {r.verified_at ? t.verifiedOn(r.verified_at.slice(0, 10)) : t.notVerified}
               </p>
               {isAdmin ? (
                 <div>
                   <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => edit(r)}>
-                    Edit
+                    {t.edit}
                   </button>
                 </div>
               ) : null}
@@ -163,11 +168,11 @@ export function LicencesAdmin({ isAdmin }: { isAdmin: boolean }) {
             void save();
           }}
         >
-          <h2 style={{ margin: 0, font: "600 20px/28px var(--font-sans)" }}>{editing ? "Edit permission" : "Add a permission"}</h2>
+          <h2 style={{ margin: 0, font: "600 20px/28px var(--font-sans)" }}>{editing ? t.editPermission : t.addPermission}</h2>
           <div className="zq-field">
-            <label htmlFor="lic-source">Source</label>
+            <label htmlFor="lic-source">{t.source}</label>
             <select id="lic-source" className="zq-input" value={String(form.source_id ?? "")} onChange={(e) => set("source_id", e.target.value)} required>
-              <option value="">Choose a source</option>
+              <option value="">{t.chooseSource}</option>
               {sources.map((s) => (
                 <option key={s.id} value={s.id}>
                   {s.work}
@@ -177,29 +182,29 @@ export function LicencesAdmin({ isAdmin }: { isAdmin: boolean }) {
           </div>
           <div style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))" }}>
             <div className="zq-field">
-              <label htmlFor="lic-asset">Asset type</label>
+              <label htmlFor="lic-asset">{t.assetType}</label>
               <select id="lic-asset" className="zq-input" value={String(form.asset_type)} onChange={(e) => set("asset_type", e.target.value)}>
                 {ASSET_TYPES.map((a) => (
-                  <option key={a}>{a}</option>
+                  <option key={a} value={a}>{t.assetTypes[a] ?? a}</option>
                 ))}
               </select>
             </div>
             <div className="zq-field">
-              <label htmlFor="lic-scope">Scope</label>
+              <label htmlFor="lic-scope">{t.scope}</label>
               <input id="lic-scope" className="zq-input" value={String(form.scope ?? "")} onChange={(e) => set("scope", e.target.value)} />
             </div>
             <div className="zq-field">
-              <label htmlFor="lic-status">Status</label>
+              <label htmlFor="lic-status">{t.status}</label>
               <select id="lic-status" className="zq-input" value={String(form.status)} onChange={(e) => set("status", e.target.value)}>
                 {PERMISSION_STATUSES.map((s) => (
-                  <option key={s}>{s}</option>
+                  <option key={s} value={s}>{t.statuses[s] ?? s}</option>
                 ))}
               </select>
             </div>
             <div className="zq-field">
-              <label htmlFor="lic-riwayah">Riwayah</label>
+              <label htmlFor="lic-riwayah">{t.riwayah}</label>
               <select id="lic-riwayah" className="zq-input" value={String(form.riwayah_id ?? "")} onChange={(e) => set("riwayah_id", e.target.value)}>
-                <option value="">None / several</option>
+                <option value="">{t.noneSeveral}</option>
                 {RIWAYAH_IDS.map((r) => (
                   <option key={r} value={r}>
                     {riwayahLabel(r)}
@@ -209,28 +214,28 @@ export function LicencesAdmin({ isAdmin }: { isAdmin: boolean }) {
             </div>
             {TRI_FIELDS.map(([k, label]) => (
               <div className="zq-field" key={k}>
-                <label htmlFor={`lic-${k}`}>{label}</label>
+                <label htmlFor={`lic-${k}`}>{t.fields[k] ?? label}</label>
                 <select id={`lic-${k}`} className="zq-input" value={String(form[k] ?? "unknown")} onChange={(e) => set(k, e.target.value)}>
                   {TRISTATE.map((s) => (
                     <option key={s} value={s}>
-                      {s.replace("_", " ")}
+                      {t.tristate[s] ?? s.replace("_", " ")}
                     </option>
                   ))}
                 </select>
               </div>
             ))}
             <div className="zq-field">
-              <label htmlFor="lic-attr">Attribution required</label>
+              <label htmlFor="lic-attr">{t.attributionRequired}</label>
               <select id="lic-attr" className="zq-input" value={form.attribution_required === null ? "" : String(form.attribution_required)} onChange={(e) => set("attribution_required", e.target.value === "" ? null : e.target.value === "true")}>
-                <option value="">Not stated</option>
-                <option value="true">Yes</option>
-                <option value="false">No</option>
+                <option value="">{t.notStated}</option>
+                <option value="true">{t.yesCap}</option>
+                <option value="false">{t.noCap}</option>
               </select>
             </div>
           </div>
           {TEXT_FIELDS.map(([k, label, kind]) => (
             <div className="zq-field" key={k}>
-              <label htmlFor={`lic-${k}`}>{label}</label>
+              <label htmlFor={`lic-${k}`}>{t.fields[k] ?? label}</label>
               {kind === "area" ? (
                 <textarea id={`lic-${k}`} className="zq-input" rows={3} value={String(form[k] ?? "")} onChange={(e) => set(k, e.target.value)} />
               ) : (
@@ -239,16 +244,12 @@ export function LicencesAdmin({ isAdmin }: { isAdmin: boolean }) {
             </div>
           ))}
           <label style={{ display: "flex", gap: 8, alignItems: "center" }}>
-            <input type="checkbox" checked={Boolean(form.verify)} onChange={(e) => set("verify", e.target.checked)} /> I checked this evidence myself (records me as the verifier)
+            <input type="checkbox" checked={Boolean(form.verify)} onChange={(e) => set("verify", e.target.checked)} /> {t.verifyCheck}
           </label>
-          {msg ? (
-            <p role={msg.tone === "err" ? "alert" : "status"} className={msg.tone === "err" ? "zq-error" : "zq-help"}>
-              {msg.text}
-            </p>
-          ) : null}
+              <Feedback msg={msg} />
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
             <button type="submit" className="zq-btn zq-btn-primary">
-              {editing ? "Save" : "Add"}
+              {editing ? t.save : t.add}
             </button>
             {editing ? (
               <button
@@ -259,13 +260,13 @@ export function LicencesAdmin({ isAdmin }: { isAdmin: boolean }) {
                   setForm(blank());
                 }}
               >
-                Cancel
+                {t.cancel}
               </button>
             ) : null}
           </div>
         </form>
       ) : (
-        <p className="zq-meta">Only an admin can change the registry.</p>
+        <p className="zq-meta">{t.adminOnly}</p>
       )}
     </div>
   );

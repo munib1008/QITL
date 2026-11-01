@@ -51,7 +51,7 @@ clips in `design/concepts/` are not on the site (a test enforces this).
 - Every page renders per request (nonce CSP); monitor cost and first-byte time.
 - Rate limiting is per server instance until Upstash is configured.
 - Reader performance on very long surahs on slow phones: improved, not solved (`docs/RESPONSIVE.md`).
-- Admin editor forms are English only (about 600 strings); the rest of the interface is localised in draft.
+- The interface, the admin editor forms and the admin screens are localised in Arabic and Urdu as DRAFTS awaiting translator review (`docs/LOCALISATION_STATUS.md`). What stays English on purpose: server and database messages (shown verbatim in a `lang="en"` span after a localised prefix), database rows, names and other data, identifiers, example syntax, the scene descriptions of animations and visuals, and the titles and findings of the automated story checks. The signed-in editor screens in Arabic and Urdu have not been opened in a browser: only the signed-out and not-configured states are in the end-to-end sweeps.
 - No real-device, screen-reader or load testing; Playwright emulation and axe only.
 - The media library accepts images and short video clips (WebM VP8/VP9/AV1, MP4 H.264; 8 MB, 20 s when the container states it). Clips are stored unchanged: no transcoding, no poster, no metadata stripping, and a live-recorded WebM without a duration is limited by bytes only. No clip is published or seeded; each needs the full scan, review and approval path.
 

@@ -3,6 +3,10 @@
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { getBrowserSupabase } from "@/lib/supabase/browser";
 import { EmptyState, Skeleton } from "@/components/ui/misc";
+import { useLocale } from "@/lib/i18n/useLocale";
+import { englishContent } from "@/lib/i18n/locales";
+import { adminMediaStrings } from "@/lib/i18n/modules/adminMedia";
+import { AdminFeedback as Feedback, ServerText, errMsg, type AdminMsg } from "./feedback";
 import { MEDIA_CATEGORIES, NON_FIGURATIVE_ITEMS, VIDEO_CONFIRMATION, type MediaMetadata } from "@/lib/media/validate";
 import { MAX_VIDEO_BYTES, MAX_VIDEO_SECONDS, MIN_VIDEO_DESCRIPTION } from "@/lib/media/video";
 import { folderOf, type MediaVariant } from "@/lib/media/render";
@@ -78,17 +82,14 @@ interface CleanupItem {
   reason: string;
 }
 
-type Msg = { tone: "ok" | "err"; text: string } | null;
+type Msg = AdminMsg;
+
+function fail(locale: string, t: { failedPrefix: string }, error: unknown, fallback: string): NonNullable<AdminMsg> {
+  return error ? errMsg(locale, t.failedPrefix, String(error)) : { tone: "err", text: fallback };
+}
 type Flags = { isEditor: boolean; isReviewer: boolean; isAdmin: boolean; scannerConfigured: boolean; serviceConfigured: boolean };
 
 const STATUS_FILTERS = ["all", "draft", "in_review", "approved", "published", "correction", "rejected", "archived"] as const;
-const SCAN_LABEL: Record<string, string> = {
-  not_scanned: "Not scanned",
-  clean: "Scanned: clean",
-  infected: "Infected",
-  failed: "Scan failed",
-  skipped_acknowledged: "Scan skipped (acknowledged by an admin)",
-};
 const EMPTY_META: MediaMetadata = { altText: "", altTextAr: null, altTextUr: null, captionEn: null, captionAr: null, captionUr: null, category: "pattern", kind: "image", credit: "", sourceId: "", permissionId: null };
 const ALL_CONFIRMED = Object.fromEntries(NON_FIGURATIVE_ITEMS.map(([k]) => [k, true]));
 const VIDEO_CONFIRMED = { ...ALL_CONFIRMED, [VIDEO_CONFIRMATION[0]]: true };
@@ -110,6 +111,8 @@ async function post(url: string, body: unknown): Promise<{ ok: boolean; data: Re
  */
 export function MediaAdmin(flags: Flags) {
   const sb = getBrowserSupabase();
+  const locale = useLocale();
+  const t = useMemo(() => adminMediaStrings(locale), [locale]);
   const [assets, setAssets] = useState<AssetRow[] | null>(null);
   const [files, setFiles] = useState<FileRow[]>([]);
   const [sources, setSources] = useState<SourceRow[]>([]);
@@ -174,11 +177,11 @@ export function MediaAdmin(flags: Flags) {
     setMsg(null);
     const r = await post("/api/admin/media", body);
     setBusy(false);
-    setMsg(r.ok ? { tone: "ok", text: done } : { tone: "err", text: String(r.data.error ?? "That did not work.") });
+    setMsg(r.ok ? { tone: "ok", text: done } : fail(locale, t, r.data.error, t.didNotWork));
     if (r.ok) await load();
   };
 
-  if (!sb) return <EmptyState title="The Media Library needs the database." />;
+  if (!sb) return <EmptyState title={t.needsDb} />;
   if (assets === null) return <Skeleton height={120} />;
 
   const shown = filter === "all" ? assets : assets.filter((a) => a.status === filter);
@@ -188,39 +191,35 @@ export function MediaAdmin(flags: Flags) {
     <div style={{ display: "grid", gap: 24 }}>
       {!flags.scannerConfigured ? (
         <p className="zq-help" role="note" data-testid="scanner-note">
-          No malware scanner is configured (MALWARE_SCAN_URL). Uploads stay in the private pending/ folder until an admin acknowledges &ldquo;scan skipped&rdquo; for each file version.
+          {t.scannerNote()}
         </p>
       ) : !flags.serviceConfigured ? (
         <p className="zq-error" role="note">
-          A scanner is configured but SUPABASE_SERVICE_ROLE_KEY is missing, so scan results cannot be recorded; uploads stay unscanned.
+          {t.scannerMissingKey}
         </p>
       ) : null}
-      {msg ? (
-        <p role={msg.tone === "err" ? "alert" : "status"} className={msg.tone === "err" ? "zq-error" : "zq-help"}>
-          {msg.text}
-        </p>
-      ) : null}
+      <Feedback msg={msg} />
 
       {flags.isEditor ? <UploadForm sources={sources} perms={perms} onDone={load} setMsg={setMsg} /> : null}
 
       <section style={{ display: "grid", gap: 12 }} aria-labelledby="media-list-h">
         <div style={{ display: "flex", flexWrap: "wrap", gap: 12, alignItems: "end", justifyContent: "space-between" }}>
           <h2 id="media-list-h" style={{ margin: 0 }}>
-            Library
+            {t.library}
           </h2>
           <div className="zq-field">
-            <label htmlFor="media-filter">Status</label>
+            <label htmlFor="media-filter">{t.status}</label>
             <select id="media-filter" className="zq-input" value={filter} onChange={(e) => setFilter(e.target.value as typeof filter)}>
               {STATUS_FILTERS.map((s) => (
                 <option key={s} value={s}>
-                  {s.replace("_", " ")}
+                  {t.statusFilters[s] ?? s.replace("_", " ")}
                 </option>
               ))}
             </select>
           </div>
         </div>
         {!shown.length ? (
-          <EmptyState title={filter === "all" ? "No images or clips yet." : `No ${filter.replace("_", " ")} images or clips.`} />
+          <EmptyState title={filter === "all" ? t.noItems : t.noItemsFiltered(t.statusFilters[filter] ?? filter.replace("_", " "))} />
         ) : (
           <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 16 }}>
             {shown.map((a) => {
@@ -235,18 +234,18 @@ export function MediaAdmin(flags: Flags) {
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 16 }}>
                     {current && previews[current.id] && isVideoMime(current.mime_type) ? (
                       // No autoplay, muted, metadata only: a staff preview of a file that is still being reviewed.
-                      <video src={previews[current.id]} controls muted playsInline preload="metadata" aria-label={`Preview: ${a.alt_text}`} width={240} style={{ maxWidth: "100%", height: "auto", borderRadius: 6, background: "#000" }} data-testid="admin-video-preview" />
+                      <video src={previews[current.id]} controls muted playsInline preload="metadata" aria-label={t.previewOf(a.alt_text)} width={240} style={{ maxWidth: "100%", height: "auto", borderRadius: 6, background: "#000" }} data-testid="admin-video-preview" />
                     ) : current && previews[current.id] ? (
                       // eslint-disable-next-line @next/next/no-img-element -- a short-lived signed staff preview, not a public image
                       <img src={previews[current.id]} alt={a.alt_text} width={160} style={{ maxWidth: "100%", height: "auto", borderRadius: 6, background: "var(--surface-2, transparent)" }} />
                     ) : null}
                     <div style={{ display: "grid", gap: 4, minWidth: 0, flex: "1 1 240px" }}>
                       <span className="zq-eyebrow">
-                        {a.status.replace("_", " ")} · {a.category} · {current ? `v${current.version} ${current.mime_type} ${current.width}×${current.height}` : "no file"}
+                        {t.statusFilters[a.status] ?? a.status.replace("_", " ")} · {t.categories[a.category] ?? a.category} · {current ? `v${current.version} ${current.mime_type} ${current.width}×${current.height}` : t.noFile}
                       </span>
                       <b style={{ overflowWrap: "anywhere" }}>{a.alt_text}</b>
                       <span className="zq-meta">
-                        Credit: {a.credit} · Source: {src?.work ?? "?"} ({src?.rights_status ?? "?"}) · Licence: {perm ? `${perm.status}${perm.allowed ? " (allowed)" : " (not allowed)"}` : src && ["cleared", "public_domain"].includes(src.rights_status) ? "source cleared" : "none — cannot be approved"}
+                        {t.creditLabel} {a.credit} · {t.sourceLabel} {src?.work ?? "?"} ({src?.rights_status ?? "?"}) · {t.licenceLabel} {perm ? `${perm.status}${perm.allowed ? t.allowedSp : t.notAllowedSp}` : src && ["cleared", "public_domain"].includes(src.rights_status) ? t.sourceCleared : t.noLicence}
                       </span>
                       {current ? <FileStatus f={current} review={latestReview(current.id)} /> : null}
                     </div>
@@ -254,12 +253,12 @@ export function MediaAdmin(flags: Flags) {
                   <Actions a={a} current={current} flags={flags} busy={busy} act={act} />
                   {newer.map((f) => (
                     <div key={f.id} className="pp-card" style={{ display: "grid", gap: 6 }}>
-                      <span className="zq-eyebrow">Replacement version v{f.version} (pending)</span>
+                      <span className="zq-eyebrow">{t.replacementVersion(f.version)}</span>
                       <FileStatus f={f} review={latestReview(f.id)} />
                       <FileActions f={f} flags={flags} busy={busy} act={act} />
                       {flags.isEditor ? (
-                        <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={busy} onClick={() => act({ action: "activate_version", assetId: a.id, fileId: f.id }, `Version ${f.version} is now the current file.`)}>
-                          Make v{f.version} the current file
+                        <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={busy} onClick={() => act({ action: "activate_version", assetId: a.id, fileId: f.id }, t.versionCurrent(f.version))}>
+                          {t.makeCurrent(f.version)}
                         </button>
                       ) : null}
                     </div>
@@ -267,7 +266,7 @@ export function MediaAdmin(flags: Flags) {
                   {flags.isEditor && ["draft", "in_review", "approved", "published", "correction"].includes(a.status) ? <ReplaceFile assetId={a.id} onDone={load} setMsg={setMsg} /> : null}
                   <details>
                     <summary>
-                      Used in {uses.length} place{uses.length === 1 ? "" : "s"} · {versions.length} version{versions.length === 1 ? "" : "s"}
+                      {t.usedIn(uses.length, versions.length)}
                     </summary>
                     {uses.length ? (
                       <ul className="zq-meta">
@@ -279,12 +278,12 @@ export function MediaAdmin(flags: Flags) {
                         ))}
                       </ul>
                     ) : (
-                      <p className="zq-meta">Not used anywhere yet.</p>
+                      <p className="zq-meta">{t.notUsed}</p>
                     )}
                     <ul className="zq-meta">
                       {versions.map((f) => (
                         <li key={f.id}>
-                          v{f.version} · {f.state} · {SCAN_LABEL[f.scan_status] ?? f.scan_status} · {Math.round(f.bytes / 1024)} KB · {isVideoMime(f.mime_type) ? "video, stored unchanged (no transcoding)" : `${f.variants.length} WebP renditions`}{f.sanitised ? " · SVG sanitised" : ""}
+                          v{f.version} · {t.fileStates[f.state] ?? f.state} · {t.scan[f.scan_status] ?? f.scan_status} · {Math.round(f.bytes / 1024)} KB · {isVideoMime(f.mime_type) ? t.videoStored : t.renditions(f.variants.length)}{f.sanitised ? t.svgSanitised : ""}
                         </li>
                       ))}
                     </ul>
@@ -302,16 +301,18 @@ export function MediaAdmin(flags: Flags) {
 }
 
 function FileStatus({ f, review }: { f: FileRow; review?: ReviewRow }) {
+  const t = adminMediaStrings(useLocale());
   return (
     <span className="zq-meta">
-      {SCAN_LABEL[f.scan_status] ?? f.scan_status} · {f.non_figurative_confirmed ? "Non-figurative: confirmed" : "Non-figurative: not confirmed"} · Religious review:{" "}
-      {review ? review.decision.replace("_", " ") : "none yet"}
+      {t.scan[f.scan_status] ?? f.scan_status} · {f.non_figurative_confirmed ? t.nonFigConfirmed : t.nonFigNot} · {t.religiousReview}{" "}
+      {review ? (t.decisions[review.decision] ?? review.decision.replace("_", " ")) : t.noneYet}
       {review?.comment ? ` (“${review.comment}”)` : ""}
     </span>
   );
 }
 
 function FileActions({ f, flags, busy, act }: { f: FileRow; flags: Flags; busy: boolean; act: (b: Record<string, unknown>, done: string) => Promise<void> }) {
+  const t = adminMediaStrings(useLocale());
   const [clipTick, setClipTick] = useState(false);
   if (f.state !== "pending") return null;
   const clip = isVideoMime(f.mime_type);
@@ -322,27 +323,27 @@ function FileActions({ f, flags, busy, act }: { f: FileRow; flags: Flags; busy: 
           {clip ? (
             <label style={{ display: "flex", gap: 8, alignItems: "center" }}>
               <input type="checkbox" checked={clipTick} onChange={(e) => setClipTick(e.target.checked)} />
-              <span>{VIDEO_CONFIRMATION[1]}</span>
+              <span>{t.videoConfirm}</span>
             </label>
           ) : null}
           <button
             type="button"
             className="zq-btn zq-btn-secondary zq-btn-sm"
             disabled={busy || (clip && !clipTick)}
-            onClick={() => act({ action: "confirm_non_figurative", fileId: f.id, confirmation: clip ? VIDEO_CONFIRMED : ALL_CONFIRMED }, "Non-figurative confirmation recorded.")}
+            onClick={() => act({ action: "confirm_non_figurative", fileId: f.id, confirmation: clip ? VIDEO_CONFIRMED : ALL_CONFIRMED }, t.nonFigRecorded)}
           >
-            Confirm non-figurative
+            {t.confirmNonFig}
           </button>
         </>
       ) : null}
       {flags.isAdmin && (f.scan_status === "not_scanned" || f.scan_status === "failed") ? (
-        <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={busy} onClick={() => act({ action: "acknowledge_scan", fileId: f.id, acknowledgement: "scan skipped" }, "Scan skipped: acknowledged.")}>
-          Acknowledge &ldquo;scan skipped&rdquo;
+        <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={busy} onClick={() => act({ action: "acknowledge_scan", fileId: f.id, acknowledgement: "scan skipped" }, t.scanAcked)}>
+          {t.ackScan}
         </button>
       ) : null}
       {flags.isEditor && flags.scannerConfigured && (f.scan_status === "not_scanned" || f.scan_status === "failed") ? (
-        <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={busy} onClick={() => act({ action: "rescan", fileId: f.id }, "Scanned again.")}>
-          Scan again
+        <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={busy} onClick={() => act({ action: "rescan", fileId: f.id }, t.scannedAgain)}>
+          {t.scanAgain}
         </button>
       ) : null}
       {flags.isReviewer ? <ReviewButtons fileId={f.id} busy={busy} act={act} /> : null}
@@ -351,16 +352,17 @@ function FileActions({ f, flags, busy, act }: { f: FileRow; flags: Flags; busy: 
 }
 
 function ReviewButtons({ fileId, busy, act }: { fileId: string; busy: boolean; act: (b: Record<string, unknown>, done: string) => Promise<void> }) {
+  const t = adminMediaStrings(useLocale());
   const [comment, setComment] = useState("");
   return (
     <div style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "end" }}>
       <div className="zq-field">
-        <label htmlFor={`rev-${fileId}`}>Religious review comment</label>
+        <label htmlFor={`rev-${fileId}`}>{t.religiousComment}</label>
         <input id={`rev-${fileId}`} className="zq-input" value={comment} onChange={(e) => setComment(e.target.value)} maxLength={2000} />
       </div>
       {(["approved", "changes_requested", "rejected"] as const).map((d) => (
-        <button key={d} type="button" className={`zq-btn zq-btn-sm ${d === "approved" ? "zq-btn-primary" : "zq-btn-secondary"}`} disabled={busy} onClick={() => act({ action: "review", fileId, decision: d, comment: comment || undefined }, `Review recorded: ${d.replace("_", " ")}.`)}>
-          {d === "approved" ? "Approve (non-figurative)" : d === "changes_requested" ? "Request changes" : "Reject"}
+        <button key={d} type="button" className={`zq-btn zq-btn-sm ${d === "approved" ? "zq-btn-primary" : "zq-btn-secondary"}`} disabled={busy} onClick={() => act({ action: "review", fileId, decision: d, comment: comment || undefined }, t.reviewRecorded(t.decisions[d] ?? d.replace("_", " ")))}>
+          {d === "approved" ? t.approveNonFig : d === "changes_requested" ? t.requestChanges : t.reject}
         </button>
       ))}
     </div>
@@ -368,6 +370,7 @@ function ReviewButtons({ fileId, busy, act }: { fileId: string; busy: boolean; a
 }
 
 function Actions({ a, current, flags, busy, act }: { a: AssetRow; current?: FileRow; flags: Flags; busy: boolean; act: (b: Record<string, unknown>, done: string) => Promise<void> }) {
+  const t = adminMediaStrings(useLocale());
   const btn = (label: string, body: Record<string, unknown>, done: string, primary = false) => (
     <button type="button" className={`zq-btn zq-btn-sm ${primary ? "zq-btn-primary" : "zq-btn-secondary"}`} disabled={busy} onClick={() => act(body, done)}>
       {label}
@@ -378,12 +381,12 @@ function Actions({ a, current, flags, busy, act }: { a: AssetRow; current?: File
       {current ? <FileActions f={current} flags={flags} busy={busy} act={act} /> : null}
       {flags.isEditor ? (
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-          {["draft", "correction", "rejected"].includes(a.status) ? btn("Submit for review", { action: "submit", assetId: a.id }, "Submitted for review.") : null}
-          {["draft", "in_review", "correction"].includes(a.status) ? btn("Approve", { action: "approve", assetId: a.id }, "Approved.", true) : null}
-          {a.status === "approved" ? btn("Publish", { action: "publish", assetId: a.id }, "Published.", true) : null}
-          {a.status === "published" ? btn("Move to correction", { action: "correction", assetId: a.id }, "Moved to correction.") : null}
-          {a.status === "published" ? btn("Withdraw", { action: "withdraw", assetId: a.id }, "Withdrawn and archived.") : null}
-          {["draft", "in_review", "correction"].includes(a.status) ? btn("Reject", { action: "reject", assetId: a.id }, "Rejected.") : null}
+          {["draft", "correction", "rejected"].includes(a.status) ? btn(t.submitReview, { action: "submit", assetId: a.id }, t.okSubmitted) : null}
+          {["draft", "in_review", "correction"].includes(a.status) ? btn(t.approve, { action: "approve", assetId: a.id }, t.okApproved, true) : null}
+          {a.status === "approved" ? btn(t.publish, { action: "publish", assetId: a.id }, t.okPublished, true) : null}
+          {a.status === "published" ? btn(t.moveCorrection, { action: "correction", assetId: a.id }, t.okCorrection) : null}
+          {a.status === "published" ? btn(t.withdraw, { action: "withdraw", assetId: a.id }, t.okWithdrawn) : null}
+          {["draft", "in_review", "correction"].includes(a.status) ? btn(t.reject, { action: "reject", assetId: a.id }, t.okRejected) : null}
         </div>
       ) : null}
     </div>
@@ -391,17 +394,19 @@ function Actions({ a, current, flags, busy, act }: { a: AssetRow; current?: File
 }
 
 function ReplaceFile({ assetId, onDone, setMsg }: { assetId: string; onDone: () => Promise<void>; setMsg: (m: Msg) => void }) {
+  const locale = useLocale();
+  const t = adminMediaStrings(locale);
   const [busy, setBusy] = useState(false);
   const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
-    if (!(fd.get("file") instanceof File) || !(fd.get("file") as File).size) return setMsg({ tone: "err", text: "Choose the new file." });
+    if (!(fd.get("file") instanceof File) || !(fd.get("file") as File).size) return setMsg({ tone: "err", text: t.chooseNewFile });
     fd.set("assetId", assetId);
     setBusy(true);
     const res = await fetch("/api/admin/media/upload", { method: "POST", body: fd });
     const data = (await res.json().catch(() => ({}))) as Record<string, unknown>;
     setBusy(false);
-    setMsg(res.ok ? { tone: "ok", text: `New version v${String(data.version)} uploaded. It needs its own scan, confirmation and review; the current file stays until it is replaced.` } : { tone: "err", text: String(data.error ?? "Upload failed.") });
+    setMsg(res.ok ? { tone: "ok", text: t.newVersionUploaded(String(data.version)) } : fail(locale, t, data.error, t.uploadFailed));
     if (res.ok) {
       e.currentTarget?.reset();
       await onDone();
@@ -410,17 +415,19 @@ function ReplaceFile({ assetId, onDone, setMsg }: { assetId: string; onDone: () 
   return (
     <form onSubmit={submit} style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "end" }}>
       <div className="zq-field">
-        <label htmlFor={`replace-${assetId}`}>Replace the file (new version)</label>
+        <label htmlFor={`replace-${assetId}`}>{t.replaceFile}</label>
         <input id={`replace-${assetId}`} name="file" type="file" accept={FILE_ACCEPT} className="zq-input" />
       </div>
       <button type="submit" className="zq-btn zq-btn-secondary zq-btn-sm" disabled={busy}>
-        Upload new version
+        {t.uploadNewVersion}
       </button>
     </form>
   );
 }
 
 function UploadForm({ sources, perms, onDone, setMsg }: { sources: SourceRow[]; perms: PermRow[]; onDone: () => Promise<void>; setMsg: (m: Msg) => void }) {
+  const locale = useLocale();
+  const t = adminMediaStrings(locale);
   const [meta, setMeta] = useState<MediaMetadata>(EMPTY_META);
   const [confirmed, setConfirmed] = useState<Record<string, boolean>>({});
   const [busy, setBusy] = useState(false);
@@ -433,10 +440,10 @@ function UploadForm({ sources, perms, onDone, setMsg }: { sources: SourceRow[]; 
     e.preventDefault();
     const form = e.currentTarget;
     const file = new FormData(form).get("file");
-    if (!(file instanceof File) || !file.size) return setMsg({ tone: "err", text: "Choose an image or a video clip to upload." });
-    if (!allConfirmed) return setMsg({ tone: "err", text: "Tick every non-figurative confirmation, or do not upload the file." });
-    if (isVideo && meta.altText.trim().length < MIN_VIDEO_DESCRIPTION) return setMsg({ tone: "err", text: `A video needs a description of at least ${MIN_VIDEO_DESCRIPTION} characters.` });
-    if (isVideo && !(meta.captionEn ?? "").trim()) return setMsg({ tone: "err", text: "A video needs a caption (English)." });
+    if (!(file instanceof File) || !file.size) return setMsg({ tone: "err", text: t.chooseUpload });
+    if (!allConfirmed) return setMsg({ tone: "err", text: t.tickAll });
+    if (isVideo && meta.altText.trim().length < MIN_VIDEO_DESCRIPTION) return setMsg({ tone: "err", text: t.videoNeedsDesc(MIN_VIDEO_DESCRIPTION) });
+    if (isVideo && !(meta.captionEn ?? "").trim()) return setMsg({ tone: "err", text: t.videoNeedsCaption });
     const fd = new FormData();
     fd.set("file", file);
     fd.set("metadata", JSON.stringify(meta));
@@ -445,9 +452,9 @@ function UploadForm({ sources, perms, onDone, setMsg }: { sources: SourceRow[]; 
     const data = (await res.json().catch(() => ({}))) as Record<string, unknown>;
     if (res.ok) await post("/api/admin/media", { action: "confirm_non_figurative", fileId: data.fileId, confirmation: data.type === "webm" || data.type === "mp4" ? VIDEO_CONFIRMED : ALL_CONFIRMED });
     setBusy(false);
-    if (!res.ok) return setMsg({ tone: "err", text: String(data.error ?? "Upload failed.") });
-    const removed = (data.removed as string[] | undefined)?.length ? ` Removed from the SVG: ${(data.removed as string[]).join(", ")}.` : "";
-    setMsg({ tone: "ok", text: `Uploaded as a draft (scan: ${String(data.scan).replace("_", " ")}).${removed}` });
+    if (!res.ok) return setMsg(fail(locale, t, data.error, t.uploadFailed));
+    const removed = (data.removed as string[] | undefined)?.length ? t.removedFromSvg((data.removed as string[]).join(", ")) : "";
+    setMsg({ tone: "ok", text: t.uploadedDraft(t.scan[String(data.scan)] ?? String(data.scan).replace("_", " "), removed) });
     form.reset();
     setIsVideo(false);
     setMeta(EMPTY_META);
@@ -469,39 +476,37 @@ function UploadForm({ sources, perms, onDone, setMsg }: { sources: SourceRow[]; 
   return (
     <form className="pp-card" onSubmit={submit} style={{ display: "grid", gap: 12 }} aria-labelledby="media-upload-h">
       <h2 id="media-upload-h" style={{ margin: 0 }}>
-        Upload an image or a video clip
+        {t.uploadTitle}
       </h2>
       <p className="zq-meta" style={{ margin: 0 }}>
-        PNG, JPEG, WebP, GIF or SVG (checked by content, not by name). Rasters up to 10 MB (GIF 5 MB, SVG 1 MB), at most 12,000 px a side. SVGs are sanitised: scripts, foreign objects, event handlers and external references are removed.
-        Video: WebM (VP8, VP9, AV1) or MP4 (H.264) only, at most {Math.round(MAX_VIDEO_BYTES / 1024 / 1024)} MB and {MAX_VIDEO_SECONDS} seconds (the length is checked when the file states it). A clip is stored exactly as uploaded: it is not
-        re-encoded, no poster is made and its metadata is not stripped, so check the file before uploading. It never autoplays.
+        {t.uploadHelp(Math.round(MAX_VIDEO_BYTES / 1024 / 1024), MAX_VIDEO_SECONDS)}
       </p>
       <div className="zq-field">
-        <label htmlFor="up-file">Image or video file</label>
+        <label htmlFor="up-file">{t.imageOrVideoFile}</label>
         <input id="up-file" name="file" type="file" required accept={FILE_ACCEPT} className="zq-input" onChange={(e) => setIsVideo(looksLikeVideo(e.target.files?.[0]))} />
       </div>
       <div className="zq-grid" style={{ gap: 12 }}>
-        {text("altText", isVideo ? `Description of the clip (English, required, at least ${MIN_VIDEO_DESCRIPTION} characters: what it shows, in words)` : "Alt text (English, required)", { required: true, area: isVideo })}
-        {text("altTextAr", isVideo ? "Description (Arabic)" : "Alt text (Arabic)", { lang: "ar" })}
-        {text("altTextUr", isVideo ? "Description (Urdu)" : "Alt text (Urdu)", { lang: "ur" })}
-        {text("captionEn", isVideo ? "Caption (English, required for a clip)" : "Caption (English)", { area: true })}
-        {text("captionAr", "Caption (Arabic)", { area: true, lang: "ar" })}
-        {text("captionUr", "Caption (Urdu)", { area: true, lang: "ur" })}
+        {text("altText", isVideo ? t.clipDescription(MIN_VIDEO_DESCRIPTION) : t.altEn, { required: true, area: isVideo })}
+        {text("altTextAr", isVideo ? t.descAr : t.altAr, { lang: "ar" })}
+        {text("altTextUr", isVideo ? t.descUr : t.altUr, { lang: "ur" })}
+        {text("captionEn", isVideo ? t.captionClip : t.captionEn, { area: true })}
+        {text("captionAr", t.captionAr, { area: true, lang: "ar" })}
+        {text("captionUr", t.captionUr, { area: true, lang: "ur" })}
         <div className="zq-field">
-          <label htmlFor="up-category">Category</label>
+          <label htmlFor="up-category">{t.category}</label>
           <select id="up-category" className="zq-input" value={meta.category} onChange={(e) => set("category", e.target.value as MediaMetadata["category"])}>
             {MEDIA_CATEGORIES.map((c) => (
               <option key={c} value={c}>
-                {c}
+                {t.categories[c] ?? c}
               </option>
             ))}
           </select>
         </div>
-        {text("credit", "Credit line (shown with the image)", { required: true })}
+        {text("credit", t.creditLine, { required: true })}
         <div className="zq-field">
-          <label htmlFor="up-source">Source</label>
+          <label htmlFor="up-source">{t.source}</label>
           <select id="up-source" className="zq-input" required value={meta.sourceId} onChange={(e) => setMeta((m) => ({ ...m, sourceId: e.target.value, permissionId: null }))}>
-            <option value="">Choose…</option>
+            <option value="">{t.chooseDots}</option>
             {sources.map((s) => (
               <option key={s.id} value={s.id}>
                 {s.work} ({s.rights_status})
@@ -510,35 +515,35 @@ function UploadForm({ sources, perms, onDone, setMsg }: { sources: SourceRow[]; 
           </select>
         </div>
         <div className="zq-field">
-          <label htmlFor="up-licence">Licence (image permission)</label>
+          <label htmlFor="up-licence">{t.licenceImage}</label>
           <select id="up-licence" className="zq-input" value={meta.permissionId ?? ""} onChange={(e) => set("permissionId", e.target.value || null)}>
-            <option value="">The source&apos;s own rights status</option>
+            <option value="">{t.sourceOwnRights}</option>
             {sourcePerms.map((p) => (
               <option key={p.permission_id} value={p.permission_id}>
-                {p.scope} · {p.status} {p.allowed ? "(allowed)" : "(not allowed)"}
+                {p.scope} · {p.status} {p.allowed ? t.allowed : t.notAllowed}
               </option>
             ))}
           </select>
         </div>
       </div>
       <fieldset style={{ display: "grid", gap: 6, border: "1px solid var(--line, currentColor)", borderRadius: 8, padding: 12 }}>
-        <legend>Non-figurative confirmation (all required)</legend>
+        <legend>{t.nonFigLegend}</legend>
         {NON_FIGURATIVE_ITEMS.map(([k, label]) => (
           <label key={k} style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
             <input type="checkbox" checked={Boolean(confirmed[k])} onChange={(e) => setConfirmed((c) => ({ ...c, [k]: e.target.checked }))} />
-            <span>{label}</span>
+            <span>{t.confirmItems[k] ?? label}</span>
           </label>
         ))}
         {isVideo ? (
           <label style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
             <input type="checkbox" required data-testid="video-confirmation" checked={Boolean(confirmed[VIDEO_CONFIRMATION[0]])} onChange={(e) => setConfirmed((c) => ({ ...c, [VIDEO_CONFIRMATION[0]]: e.target.checked }))} />
-            <span>{VIDEO_CONFIRMATION[1]}</span>
+            <span>{t.videoConfirm}</span>
           </label>
         ) : null}
       </fieldset>
       <div>
         <button type="submit" className="zq-btn zq-btn-primary" disabled={busy}>
-          {busy ? "Uploading…" : "Upload as draft"}
+          {busy ? t.uploading : t.uploadAsDraft}
         </button>
       </div>
     </form>
@@ -546,6 +551,8 @@ function UploadForm({ sources, perms, onDone, setMsg }: { sources: SourceRow[]; 
 }
 
 function Cleanup({ setMsg, onDone }: { setMsg: (m: Msg) => void; onDone: () => Promise<void> }) {
+  const locale = useLocale();
+  const t = adminMediaStrings(locale);
   const [grace, setGrace] = useState(7);
   const [plan, setPlan] = useState<CleanupItem[] | null>(null);
   const [busy, setBusy] = useState(false);
@@ -553,7 +560,7 @@ function Cleanup({ setMsg, onDone }: { setMsg: (m: Msg) => void; onDone: () => P
     setBusy(true);
     const r = await post("/api/admin/media/cleanup", { execute: false, graceDays: grace });
     setBusy(false);
-    if (!r.ok) return setMsg({ tone: "err", text: String(r.data.error ?? "The dry run failed.") });
+    if (!r.ok) return setMsg(fail(locale, t, r.data.error, t.dryRunFailed));
     setPlan(r.data.candidates as CleanupItem[]);
   };
   const run = async () => {
@@ -562,28 +569,28 @@ function Cleanup({ setMsg, onDone }: { setMsg: (m: Msg) => void; onDone: () => P
     const r = await post("/api/admin/media/cleanup", { execute: true, graceDays: grace, confirm: plan.map((p) => p.key) });
     setBusy(false);
     setPlan(null);
-    setMsg(r.ok ? { tone: "ok", text: `Removed ${(r.data.removed as string[]).length}; failed ${(r.data.failed as string[]).length}.` } : { tone: "err", text: String(r.data.error ?? "Cleanup failed.") });
+    setMsg(r.ok ? { tone: "ok", text: t.removedFailed((r.data.removed as string[]).length, (r.data.failed as string[]).length) } : fail(locale, t, r.data.error, t.cleanupFailed));
     await onDone();
   };
   return (
     <section className="pp-card" style={{ display: "grid", gap: 12 }} aria-labelledby="media-cleanup-h">
       <h2 id="media-cleanup-h" style={{ margin: 0 }}>
-        Orphaned files
+        {t.orphaned}
       </h2>
       <p className="zq-meta" style={{ margin: 0 }}>
-        Superseded and rejected versions past the grace period, files of rejected or archived images that nothing uses, and storage folders with no file version. Always a dry run first; the current file of an approved or published image is never listed.
+        {t.orphanedHelp}
       </p>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "end" }}>
         <div className="zq-field">
-          <label htmlFor="cleanup-grace">Grace period (days)</label>
+          <label htmlFor="cleanup-grace">{t.grace}</label>
           <input id="cleanup-grace" type="number" min={1} max={365} className="zq-input" value={grace} onChange={(e) => setGrace(Math.max(1, Number(e.target.value) || 7))} />
         </div>
         <button type="button" className="zq-btn zq-btn-secondary" disabled={busy} onClick={dry}>
-          Dry run
+          {t.dryRun}
         </button>
         {plan?.length ? (
           <button type="button" className="zq-btn zq-btn-primary" disabled={busy} onClick={run}>
-            Remove these {plan.length}
+            {t.removeThese(plan.length)}
           </button>
         ) : null}
       </div>
@@ -592,13 +599,13 @@ function Cleanup({ setMsg, onDone }: { setMsg: (m: Msg) => void; onDone: () => P
           <ul className="zq-meta">
             {plan.map((p) => (
               <li key={p.key}>
-                {p.path} · {p.reason}
+                {p.path} · <ServerText>{p.reason}</ServerText>
               </li>
             ))}
           </ul>
         ) : (
           <p className="zq-help" role="status">
-            Nothing to clean up.
+            {t.nothingToClean}
           </p>
         )
       ) : null}
