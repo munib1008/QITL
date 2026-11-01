@@ -1,0 +1,325 @@
+{
+  "slug": "call-at-the-mountain",
+  "title_en": "The call to Musa at the mountain",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "call-at-the-mountain"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-fire-and-the-call",
+      "position": 1,
+      "title_en": "The fire and the call",
+      "event_slug": "call-at-the-mountain",
+      "verses": [
+        {
+          "surah": 19,
+          "from": 51,
+          "to": 52
+        },
+        {
+          "surah": 20,
+          "from": 9,
+          "to": 16
+        },
+        {
+          "surah": 27,
+          "from": 7,
+          "to": 9
+        },
+        {
+          "surah": 28,
+          "from": 29,
+          "to": 30
+        },
+        {
+          "surah": 79,
+          "from": 15,
+          "to": 16
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "One passage asks the listener whether the account of Musa has reached him, and another asks the same and says his Lord called him in the sacred valley of Tuwa.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 9,
+              "to": 9
+            },
+            {
+              "surah": 79,
+              "from": 15,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When Musa had completed the term and set out with his family, he perceived a fire on the side of the mountain and told his family to stay, saying that perhaps he would bring them news or a burning brand from it, so that they might warm themselves, or find guidance at the fire.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 29,
+              "to": 29
+            },
+            {
+              "surah": 20,
+              "from": 10,
+              "to": 10
+            },
+            {
+              "surah": 27,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When he came to it he was called by name: God is his Lord, and he was in the sacred valley of Tuwa, so he was to take off his sandals.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 11,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "In another passage he was called from the right side of the valley, in the blessed spot, from the tree: God is the Lord of the worlds.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "In another passage the call says that blessed is whoever is in the fire and whoever is around it, glory be to God, Lord of the worlds, and that God is the Almighty, the Wise.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 8,
+              "to": 9
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God told him that He had chosen him, so he should listen to what was revealed; that He is God, there is no god but He, so he should worship Him and establish prayer for His remembrance.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 13,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God told him that the Hour is coming, which He almost keeps hidden, so that every soul is recompensed for its striving, and that one who does not believe in it and follows his desire must not turn him from it.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 15,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Another passage says of Musa that he was chosen, a messenger and a prophet, and that God called him from the right side of the mountain and brought him near in private converse.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 51,
+              "to": 52
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Musa perceived a fire on the side of the mountain, told his family to stay, and went to it [c2]. He was called by name, told that he was in the sacred valley of Tuwa, and told that God had chosen him [c3][c6].",
+      "body_md": "A passage asks the listener whether the account of Musa has reached him [c1]. When Musa had completed the term and set out with his family, he perceived a fire on the side of the mountain and told his family to stay, saying that perhaps he would bring them news or a burning brand from it [c2].\n\nWhen he came to it he was called by name: God is his Lord, and he was in the sacred valley of Tuwa, so he was to take off his sandals [c3]. In another passage he was called from the right side of the valley, in the blessed spot, from the tree: God is the Lord of the worlds [c4]. The call in a further passage says that blessed is whoever is in the fire and whoever is around it, and that God is the Almighty, the Wise [c5].\n\nGod told him that He had chosen him, so he should listen to what was revealed, that He is God, and that he should worship Him and establish prayer [c6]. He told him that the Hour is coming, which He almost keeps hidden [c7]. Another passage says of Musa that he was chosen, a messenger and a prophet, and that God brought him near in private converse [c8].",
+      "deep_md": "The call is told in more than one passage with different emphases [c3]. One gives the sandals and the valley of Tuwa [c3], one the tree and the blessed spot [c4], one the blessing on those in and around the fire [c5]. The content of the call is the declaration of who is calling [c3][c4][c5], the choosing of Musa [c6] and the coming of the Hour [c7]. A passage elsewhere sums up his standing [c8].",
+      "kids_md": "Musa saw a fire on the side of the mountain and went toward it [c2]. A voice called him by name and said that God had chosen him [c3][c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the call first states who is calling and only then gives instructions [c3][c6]. Another is that the passage joins the choosing of Musa with a reminder that every soul is recompensed [c6][c7].",
+      "unknowns_md": "- Not established: the exact place or the date, what the fire was, what the tree was, which night, or the names of those with him; the verses say his family and do not list them.\n- The caller's voice is described only as a call, and the verses give no further description.\n- Whether the words about whoever is in the fire name a particular being is read differently by interpreters; the draft makes no claim.\n- The word rendered chosen in 19:51 is read in more than one way (the Arabic differs by a vowel in the variant readings); the page should state which reading it follows.\n- Not established: how the different calls relate in time to one another."
+    },
+    {
+      "anchor": "the-signs-and-the-mission",
+      "position": 2,
+      "title_en": "The signs and the mission",
+      "event_slug": "call-at-the-mountain",
+      "verses": [
+        {
+          "surah": 19,
+          "from": 53,
+          "to": 53
+        },
+        {
+          "surah": 20,
+          "from": 17,
+          "to": 24
+        },
+        {
+          "surah": 27,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 27,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 28,
+          "from": 31,
+          "to": 35
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God asked what was in his right hand, and he said that it was his staff, that he leans on it, beats down leaves with it for his sheep, and has other uses for it.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 17,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He was told to throw it, and it became a moving snake; he was told to take it and not to fear, for God would return it to its first state.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 19,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "In other passages, when he saw it moving as if it were a snake, he turned in flight and did not look back; he was told to come forward and not to fear, that he was secure, and that the messengers do not fear in God's presence.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 31,
+              "to": 31
+            },
+            {
+              "surah": 27,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He was told to put his hand to his side, or into his bosom, and it would come out white without harm, as another sign; these are a pair of proofs from his Lord to Fir'awn and his chiefs, among nine signs; they were a defiantly disobedient people.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 22,
+              "to": 23
+            },
+            {
+              "surah": 28,
+              "from": 32,
+              "to": 32
+            },
+            {
+              "surah": 27,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He was told to go to Fir'awn, who had transgressed.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "In another passage Musa said that he had killed a person among them and feared they would kill him, and that his brother Harun was more fluent than he in speech, so he asked that he be sent with him as support.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 33,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God said that He would strengthen his arm with his brother and give them authority so that they could not reach them; with God's signs, they and those who followed them would be the victors.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Another passage says that out of His mercy God gave him his brother Harun as a prophet.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 53,
+              "to": 53
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God asked what was in Musa's right hand, told him to throw it, and it became a moving snake [c1][c2]. He was given another sign and told to go to Fir'awn, and he asked that his brother Harun be sent to help him [c4][c5][c6].",
+      "body_md": "God asked what was in his right hand, and Musa said that it was his staff, which he leans on and uses for his sheep [c1]. He was told to throw it, and it became a moving snake; he was told to take it and not to fear [c2]. In other passages he turned in flight when he saw it move, and was told to come forward and not to fear [c3].\n\nHe was told to put his hand to his side, or into his bosom, and it would come out white without harm, as another sign; these are a pair of proofs to Fir'awn and his chiefs, among nine signs [c4]. He was told to go to Fir'awn, who had transgressed [c5].\n\nIn another passage Musa said he had killed a person among them and feared they would kill him, and that Harun was more fluent in speech [c6]. God said He would strengthen his arm with his brother and give them authority [c7]. Another passage says God gave him Harun as a prophet [c8].",
+      "deep_md": "The signs are given in more than one passage: the staff [c1][c2][c3] and the hand [c4]. The mission to Fir'awn is stated in the same breath [c5]. The request for help is told in one passage [c6], and the answer is given in the next verse [c7]. A further passage names Harun as given a prophet's rank by God's mercy [c8]. The hand comes out white as a sign, and the draft says nothing more about it [c4].",
+      "kids_md": "God asked Musa what was in his hand, and he said it was his staff [c1]. When he threw it, it became a moving snake [c2]. God told him to go to Fir'awn, and Musa asked that his brother Harun help him [c5][c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Musa is told not to fear before he is sent, and asks for help for his task [c3][c6]. Another is that God answers by giving him his brother as support [c7][c8].",
+      "unknowns_md": "- Not established: what the nine signs are; the plagues are listed elsewhere and are not assumed to be the nine.\n- Not established: what Musa's difficulty in speech was; the verses record only his words about Harun in this chapter.\n- Not established: the age of Harun relative to Musa, or where Harun was when he was sent for.\n- The verse 27:11 (an exception to the reassurance at 27:10) is in the inventory range but is not used; its grammar and reference are discussed by interpreters and a scholar should decide how to word it. The long prayer of Musa at 20:25-36 lies outside the event's inventory refs and is left to the prophet story.\n- The verse 28:32 speaks of drawing the arm to the side as a gesture of fear; the draft keeps the wording general."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the call to Musa. None is used in this draft.",
+    "The event is also told inside the longer story of Musa (content/stories/musa.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "Named in later tradition, not in the Quranic text: personal names for Musa's mother, sister and wife, for the believing man and for this Fir'awn, and dates and places. None is used in the story texts.",
+    "The passages are read as one call on matching wording (an inference); the details differ between them.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

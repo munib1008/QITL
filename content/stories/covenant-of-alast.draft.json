@@ -1,0 +1,101 @@
+{
+  "slug": "covenant-of-alast",
+  "title_en": "The covenant taken from the descendants of Adam",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "covenant-of-alast"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-descendants-bear-witness",
+      "position": 1,
+      "title_en": "The descendants bear witness",
+      "event_slug": "covenant-of-alast",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 172,
+          "to": 174
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God took from the children of Adam, from their loins, their descendants.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 172,
+              "to": 172
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He made them bear witness over themselves, asking whether He was not their Lord, and they said yes, they bore witness.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 172,
+              "to": 172
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "This was so that they would not say on the Day of Resurrection that they had been unaware of this.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 172,
+              "to": 172
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "It was also so that they would not say that only their forefathers had associated others with God before, and that they themselves were descendants after them, asking whether He would destroy them for what the falsifiers had done.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 173,
+              "to": 173
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God says that in this way He makes the signs clear in detail, so that perhaps they will return.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 174,
+              "to": 174
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God took from the children of Adam their descendants and made them bear witness over themselves, asking whether He was not their Lord, and they said yes [c1][c2]. The Quran gives the purpose: that they could not say on the Day of Resurrection that they had been unaware [c3].",
+      "body_md": "God took from the children of Adam, from their loins, their descendants [c1]. He made them bear witness over themselves, asking whether He was not their Lord, and they said yes, they bore witness [c2].\n\nThe Quran gives the purpose [c3]. It was so that they would not say on the Day of Resurrection that they had been unaware of this [c3]. It was also so that they would not say that only their forefathers had associated others with God, and that they were descendants after them, and ask whether God would destroy them for what the falsifiers had done [c4]. God says that in this way He makes the signs clear in detail, so that perhaps they will return [c5].",
+      "deep_md": "The passage moves from the taking and the witnessing [c1][c2] to the excuses it closes off [c3][c4] and ends with a closing remark on the explaining of the signs [c5]. The verses speak of descendants taken from the loins of the children of Adam [c1]; they do not say how this relates to a person's later birth.",
+      "kids_md": "God asked the children of Adam whether He was not their Lord, and they said yes [c1][c2]. This was so that nobody could say on the Day of Resurrection that they had not known [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage presents knowing God as a witness every person carries, so that ignorance is not a final excuse [c3]. Another is that blaming one's forefathers is closed off as a plea [c4].",
+      "unknowns_md": "- Not established: when, where or how the taking and the witnessing happened; the verses give no time, place or manner.\n- Not established: how the taking of descendants from loins relates to a person's later birth or life; interpreters understand the passage in more than one way, and a scholar should decide how the page words it.\n- Not established: who is meant by the falsifiers in the last excuse beyond the word itself.\n- The verses do not use the word covenant; the inventory title reflects the usual name of the passage, which a reviewer may wish to word with care."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the taking of the descendants. None is used in this draft.",
+    "How this passage is understood (as a real event before birth, or as a way of describing the nature given to people) is disputed among interpreters; the draft states only what the verses say and gives no reading.",
+    "The usual title of the passage comes from its own question to the descendants; a scholar should decide whether the page uses that title or only a description.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "slug": "musa-and-the-egyptian",
+  "title_en": "Musa kills a man and flees",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "musa-and-the-egyptian"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-man-in-the-city-and-the-flight",
+      "position": 1,
+      "title_en": "The man in the city and the flight",
+      "event_slug": "musa-and-the-egyptian",
+      "verses": [
+        {
+          "surah": 28,
+          "from": 14,
+          "to": 21
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "When Musa reached his full strength and was established, God gave him judgement and knowledge.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He entered the city at a time of heedlessness of its people and found a pair of men fighting, one from his party and one from his enemy; the one from his party asked him for help against the one from his enemy; Musa struck him, and ended his life.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He said that this was of the work of Satan, a clear misleading enemy.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He said that he had wronged himself and asked his Lord to forgive him, and He forgave him; He is the forgiving, the merciful.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 16,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He said that, for the favour his Lord had shown him, he would never be a supporter of the criminals.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "In the morning he was in the city, fearful and watching; the one who had asked for his help the day before cried out to him again, and Musa told him he was clearly misguided.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "When he wished to seize the one who was an enemy to both of them, a speaker asked whether he wanted to kill him as he had killed a person the day before, and said that he only wanted to be a tyrant in the land and not to be among the reformers.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "A man came running from the far end of the city and said that the chiefs were conspiring about him to kill him, and told him to leave, for he was one of the sincere advisers.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "Musa left the city fearful and watching, and asked his Lord to save him from the wrongdoing people.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Musa entered the city and found a pair of men fighting; he struck one, who died, and said it was of the work of Satan [c2][c3]. He asked his Lord to forgive him and was forgiven, and when a man warned him that the chiefs were conspiring, he left the city fearful and asked to be saved from the wrongdoing people [c4][c8][c9].",
+      "body_md": "When Musa reached his full strength and was established, God gave him judgement and knowledge [c1]. He entered the city at a time of heedlessness of its people and found a pair of men fighting, one from his party and one from his enemy; the one from his party asked him for help, and Musa struck the other, and ended his life [c2]. He said that this was of the work of Satan, a clear misleading enemy [c3]. He asked his Lord to forgive him, and He forgave him [c4], and said that he would never be a supporter of the criminals [c5].\n\nIn the morning he was in the city, fearful and watching; the one who had asked for his help the day before cried out to him again, and Musa told him he was clearly misguided [c6]. When he wished to seize the one who was an enemy to both of them, a speaker asked whether he wanted to kill him as he had killed a person the day before [c7].\n\nA man came running from the far end of the city and said that the chiefs were conspiring to kill him, and told him to leave [c8]. Musa left the city fearful and watching, and asked his Lord to save him from the wrongdoing people [c9].",
+      "deep_md": "The chapter has the deed [c2][c3], the prayer for forgiveness and the resolve [c4][c5], and the flight [c6][c7][c8][c9]. The verses do not say who the speaker of 28:19 is; the word of the speaker is read as that of the enemy or of the one he had helped [c7]. The man who warns him is not named [c8].",
+      "kids_md": "Musa went into the city and a man died after Musa struck him [c2]. Musa asked his Lord to forgive him, and God forgave him [c4]. Then a man warned him that the chiefs were planning to hurt him, and Musa left [c8][c9].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Musa turns to his Lord at once and asks forgiveness, and is forgiven [c4]. Another is that the passage records his wish never to support the criminals after the favour he had been shown [c5].",
+      "unknowns_md": "- Not established: the name of the city, how Musa struck the man, or how long the interval was between the days.\n- Not established: who spoke in 28:19; interpreters differ and the draft keeps the speaker unnamed.\n- Not established: the name of the man who warned him.\n- The verses call the pair of men one from his party and one from his enemy; the draft does not name their peoples.\n- The verses give Musa's own words about the deed (28:15-16); this draft gives no further verdict on it."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the killing and the flight. None is used in this draft.",
+    "The event is also told inside the longer story of Musa (content/stories/musa.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "Named in later tradition, not in the Quranic text: personal names for Musa's mother, sister and wife, for the believing man and for this Fir'awn, and dates and places. None is used in the story texts.",
+    "The inventory slug gives the man a nationality; the verses say only one from his enemy and do not use that word, and the draft follows the verses.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

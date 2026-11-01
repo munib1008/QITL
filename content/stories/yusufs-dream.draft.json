@@ -1,0 +1,77 @@
+{
+  "slug": "yusufs-dream",
+  "title_en": "Yusuf's dream",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "yusufs-dream"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-dream-and-the-warning",
+      "position": 1,
+      "title_en": "The dream and the warning",
+      "event_slug": "yusufs-dream",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 4,
+          "to": 6
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Yusuf told his father that he had seen eleven stars, and the sun and the moon, and that he had seen them prostrating to him.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "His father told him not to relate his dream to his brothers, or they would plot a plot against him, and said that Satan is a clear enemy to the human being.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "His father said that in this way his Lord would choose him, teach him the interpretation of events, and complete His favour on him and on the family of Yaqub, as He had completed it before on his forefathers Ibrahim and Ishaq; his Lord is knowing and wise.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 6,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Yusuf told his father that he had seen eleven stars, the sun and the moon prostrating to him [c1]. His father told him not to tell his brothers, and said that his Lord would choose him and complete His favour on him [c2][c3].",
+      "body_md": "Yusuf told his father that he had seen eleven stars, and the sun and the moon, and that he had seen them prostrating to him [c1].\n\nHis father told him not to relate his dream to his brothers, or they would plot a plot against him, and said that Satan is a clear enemy to the human being [c2]. He said that in this way his Lord would choose him, teach him the interpretation of events, and complete His favour on him and on the family of Yaqub, as He had completed it before on his forefathers Ibrahim and Ishaq [c3].",
+      "deep_md": "The passage is a short exchange: the dream [c1], the warning to keep it from the brothers [c2], and the father's words about what his Lord would do [c3]. The dream is given as seen and told, and the verses do not interpret it here [c1]. The father names the forefathers on whom God had completed His favour [c3].",
+      "kids_md": "Yusuf told his father about a dream in which eleven stars, the sun and the moon bowed down to him [c1]. His father told him not to tell his brothers [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the father answers the dream with care for his son and with trust in God's choosing [c2][c3]. Another is that the warning names Satan as a clear enemy to the human being [c2].",
+      "unknowns_md": "- Not established: how old Yusuf was when he saw the dream, or where the family lived in this passage.\n- Not established: the meaning of the dream in this passage; Yusuf speaks of its interpretation later in the surah (12:100), which is outside this record.\n- Not established: how the brothers learned of the dream, or whether they did.\n- The Quran says the stars were eleven; it does not say what they stood for. Named in later tradition, not in the Quranic text: identifications of the stars, the sun and the moon with named persons; none is used here."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the dream of Yusuf. None is used in this draft.",
+    "The event is also told inside the longer story of Yusuf (content/stories/yusuf.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "Named in later tradition, not in the Quranic text: personal names for Yusuf's brothers, mother, the Aziz, his wife and the king, and the name and story of the wolf. None is used in the story texts.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

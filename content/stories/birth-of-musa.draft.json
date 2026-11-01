@@ -1,0 +1,229 @@
+{
+  "slug": "birth-of-musa",
+  "title_en": "The birth of Musa and the river",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "birth-of-musa"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-inspiration-and-the-river",
+      "position": 1,
+      "title_en": "The inspiration and the river",
+      "event_slug": "birth-of-musa",
+      "verses": [
+        {
+          "surah": 28,
+          "from": 3,
+          "to": 7
+        },
+        {
+          "surah": 20,
+          "from": 37,
+          "to": 39
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God recites to the listener the news of Musa and Fir'awn in truth, for a people who believe.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 3,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Fir'awn exalted himself in the land and made its people into factions, oppressing one group of them, slaughtering their sons and keeping their women alive; he was among the corrupters.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God says He wished to show favour to those who were oppressed in the land, make them leaders and inheritors, establish them in the land, and show Fir'awn, Haman and their soldiers what they feared from them.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 5,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God inspired the mother of Musa to nurse him, and, when she feared for him, to cast him into the river, and not to fear or grieve, for He would return him to her and make him one of the messengers.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "In another passage God reminds Musa that He had favoured him another time, when He inspired his mother with what was inspired: to put him in the chest and cast it into the river, so that the river would throw it on the bank, where an enemy of God and of Musa would take him.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 37,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God says He cast love from Himself upon Musa, so that he would be brought up under His watch.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God inspired the mother of Musa to nurse him and, when she feared for him, to cast him into the river, promising to return him to her and make him one of the messengers [c4]. This came while Fir'awn was slaughtering the sons of one group and keeping their women alive [c2].",
+      "body_md": "God recites the news of Musa and Fir'awn in truth, for a people who believe [c1]. Fir'awn exalted himself in the land and made its people into factions, oppressing one group of them, slaughtering their sons and keeping their women alive [c2]. God says He wished to show favour to those who were oppressed, make them leaders and inheritors, and show Fir'awn, Haman and their soldiers what they feared from them [c3].\n\nGod inspired the mother of Musa to nurse him, and, when she feared for him, to cast him into the river, and not to fear or grieve, for He would return him to her and make him one of the messengers [c4]. Another passage tells the same inspiration to Musa: to put him in the chest and cast it into the river, so that the river would throw it on the bank, where an enemy of God and of Musa would take him [c5]. God says He cast love from Himself upon Musa, so that he would be brought up under His watch [c6].",
+      "deep_md": "The passages give the inspiration to his mother from different sides: the first sets it beside Fir'awn's oppression and God's wish to favour the oppressed [c2][c3][c4], and a later one recalls it to Musa himself as a favour [c5][c6]. The command to cast the child into the river comes with a promise to return him [c4]. The chest is named only in the passage that recalls it to Musa [c5].",
+      "kids_md": "Fir'awn was harsh to a group of people [c2]. God told the mother of Musa to nurse him and, when she was afraid, to put him in the river, and promised to give him back to her [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the command to cast the child away comes joined to a promise, not to fear or grieve [c4]. Another is that God says He cast love upon Musa [c6].",
+      "unknowns_md": "- Not established: the name of the mother, the name of the river (the Arabic says yamm, the river or the sea), the date, the years of the oppression, or the name or dynasty of Fir'awn.\n- Not established: how the child came to the bank, or how long the chest travelled.\n- The verses give no detail on Haman beyond naming him with Fir'awn.\n- The enemy of God and of Musa who would take him (20:39) is not named."
+    },
+    {
+      "anchor": "in-the-household-and-back-to-his-mother",
+      "position": 2,
+      "title_en": "In the household and back to his mother",
+      "event_slug": "birth-of-musa",
+      "verses": [
+        {
+          "surah": 28,
+          "from": 8,
+          "to": 13
+        },
+        {
+          "surah": 20,
+          "from": 40,
+          "to": 40
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The household of Fir'awn picked him up so that he would become to them an enemy and a grief; Fir'awn, Haman and their soldiers were sinners.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 8,
+              "to": 8
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The wife of Fir'awn said that he was a comfort for her and for him, and told them not to kill him, for perhaps he would benefit them or they might take him as a son; and they did not perceive.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 9,
+              "to": 9
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The heart of the mother of Musa became empty; she was about to disclose it, had God not strengthened her heart so that she would be among the believers.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "She told his sister to follow him; the sister watched him from a distance while they did not perceive.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God had forbidden wet-nurses to him beforehand; and she asked whether she should direct them to a household who would take care of him for them and be sincere to him.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God returned him to his mother so that she would be comforted and not grieve, and so that she would know that God's promise is true, though most of them do not know.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "In another passage God reminds Musa that his sister walked and asked whether she should direct them to someone who would take care of him, and that God returned him to his mother so that she would be comforted and not grieve.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The household of Fir'awn picked up the child, and the wife of Fir'awn said they should not kill him [c1][c2]. His sister followed him, and God returned him to his mother so that she would be comforted [c4][c6].",
+      "body_md": "The household of Fir'awn picked him up so that he would become to them an enemy and a grief [c1]. The wife of Fir'awn said that he was a comfort for her and for him, and told them not to kill him, for perhaps he would benefit them or they might take him as a son [c2].\n\nThe heart of the mother of Musa became empty; she was about to disclose it, had God not strengthened her heart [c3]. She told his sister to follow him, and the sister watched him from a distance [c4]. God had forbidden wet-nurses to him beforehand, and his sister asked whether she should direct them to a household who would take care of him for them [c5].\n\nGod returned him to his mother so that she would be comforted and not grieve, and so that she would know that God's promise is true [c6]. Another passage recalls this to Musa [c7].",
+      "deep_md": "The chapter follows the child from the household of Fir'awn [c1][c2] to the mother's heart [c3], the sister [c4][c5] and the return [c6]. The first passage says it was done so that she would know God's promise is true [c6]; the other recalls it to Musa as a favour [c7]. The Arabic idiom for being comforted is rendered here without the literal image [c6].",
+      "kids_md": "The household of Fir'awn picked up the baby, and the wife of Fir'awn said not to kill him [c1][c2]. His sister watched, and God gave him back to his mother so that she would not grieve [c4][c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that God strengthened the mother's heart so that she would be among the believers [c3]. Another is that the return is described as a sign that God's promise is true [c6].",
+      "unknowns_md": "- Not established: the names of the wife of Fir'awn, of Musa's sister, and of the household that took care of him.\n- Not established: where in the household of Fir'awn he lived; the verses describe no building.\n- Not established: how long he was with his mother before he returned to the household, or how old he was.\n- The verse 28:9 does not say whom the wife of Fir'awn addressed beyond the words, and the pronouns are read in more than one way; the draft keeps them close to the Arabic."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about the birth of Musa. None is used in this draft.",
+    "The event is also told inside the longer story of Musa (content/stories/musa.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "Named in later tradition, not in the Quranic text: personal names for Musa's mother, sister and wife, for the believing man and for this Fir'awn, and dates and places. None is used in the story texts.",
+    "20:40 also speaks of events after this one (a person killed, years among the people of Madyan); only its first part is used here.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

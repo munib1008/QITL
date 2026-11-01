@@ -1,0 +1,136 @@
+{
+  "slug": "fire-for-ibrahim",
+  "title_en": "The fire prepared for Ibrahim",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "fire-for-ibrahim"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-fire-and-the-coolness",
+      "position": 1,
+      "title_en": "The fire and the coolness",
+      "event_slug": "fire-for-ibrahim",
+      "verses": [
+        {
+          "surah": 21,
+          "from": 68,
+          "to": 70
+        },
+        {
+          "surah": 29,
+          "from": 24,
+          "to": 24
+        },
+        {
+          "surah": 37,
+          "from": 97,
+          "to": 98
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "His people said: burn him, and help your gods, if you are going to act.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 68,
+              "to": 68
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "In another passage the only answer of his people was to say: kill him, or burn him.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "In another passage they said: build a structure for him, and throw him into the blaze.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 97,
+              "to": 97
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God told the fire to be coolness and safety for Ibrahim.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 69,
+              "to": 69
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They wanted to plot against him, and God made them the greatest losers.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "In another passage God made them the lowest.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 98,
+              "to": 98
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God saved him from the fire, and in that, God says, are signs for people who believe.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "His people said to burn Ibrahim [c1][c2], but God told the fire to be coolness and safety for him [c4]. They wanted to plot against him, and God made them the losers [c5][c7].",
+      "body_md": "His people said: burn him, and help your gods, if you are going to act [c1]. In another passage their only answer was to say: kill him, or burn him [c2], and in another they said: build a structure for him, and throw him into the blaze [c3].\n\nGod told the fire to be coolness and safety for Ibrahim [c4]. They wanted to plot against him, and God made them the greatest losers [c5]; in another passage He made them the lowest [c6]. God saved him from the fire, and in that, He says, are signs for people who believe [c7].",
+      "deep_md": "The passages report the people's decision in slightly different words: burn him [c1], kill him or burn him [c2], build a structure and throw him into the blaze [c3]. The words said to the fire come in one passage only [c4], and the outcome is told in different words, greatest losers and lowest [c5][c6]. The rescue is stated in one passage, with a remark that it contains signs [c7].",
+      "kids_md": "Ibrahim's people said to burn him [c1]. God told the fire to be cool and safe for Ibrahim [c4]. God saved him from the fire [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage presents the fire as acting only at God's word [c4]. Another is that the plot of Ibrahim's people ends in their own loss [c5].",
+      "unknowns_md": "- Not established: where this took place, how long the fire burned, or who built the structure.\n- The verses state the command to the fire and the rescue; they do not describe Ibrahim in the fire or how he came out of it.\n- Not established: whether the passages (21:68-70, 29:24, 37:97-98) describe one decision or more than one; this draft reads them together as the same event.\n- Not established: how the structure and the blaze of 37:97 relate to the fire of the other passages."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on Ibrahim and the fire. None is used in this draft.",
+    "The event is also told inside the longer story of Ibrahim (content/stories/ibrahim.draft.json); this record is a shorter account that refers to it only in general words.",
+    "Named in later tradition, not in the Quranic text: the name of the ruler, the place and the size of the fire. None is used in the story texts.",
+    "The passages are read as one event on matching wording (an inference).",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

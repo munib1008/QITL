@@ -1,0 +1,428 @@
+{
+  "slug": "the-flood",
+  "title_en": "The Flood and the Ark",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "the-flood"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-ship-is-built",
+      "position": 1,
+      "title_en": "The ship is built",
+      "event_slug": "the-flood",
+      "verses": [
+        {
+          "surah": 11,
+          "from": 36,
+          "to": 39
+        },
+        {
+          "surah": 23,
+          "from": 26,
+          "to": 27
+        },
+        {
+          "surah": 54,
+          "from": 9,
+          "to": 10
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God revealed to Nuh that none of his people would believe except those who already had, and told him not to be distressed by what they were doing.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 36,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God told Nuh to make the ship under His watch and by His revelation, and not to address Him about those who had done wrong, for they were to be drowned.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "While Nuh made the ship, whenever a group of the leaders of his people passed him they mocked him.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Nuh said that if they mocked him, he would in the same way mock them, and that they would know on whom a punishment would come to disgrace him and on whom a lasting punishment would fall.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 38,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The people of Nuh denied God's servant, said that he was a madman, and he was rebuffed.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 9,
+              "to": 9
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Nuh called on his Lord, saying that he was overcome, and asked for help.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Nuh also prayed to his Lord to help him because they had denied him, and God revealed to him to make the ship.",
+          "verses": [
+            {
+              "surah": 23,
+              "from": 26,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God told Nuh to make the ship under His watch and by His revelation [c2]. His people mocked him as he worked, and he asked his Lord for help [c3][c6][c7].",
+      "body_md": "God revealed to Nuh that none of his people would believe except those who already had, and told him not to be distressed by what they were doing [c1]. He told Nuh to make the ship under His watch and by His revelation, and not to address Him about those who had done wrong, for they were to be drowned [c2].\n\nWhile Nuh made the ship, whenever a group of the leaders of his people passed him they mocked him [c3]. He said that if they mocked him, he would in the same way mock them, and that they would know on whom a punishment would come [c4]. In another passage the Quran says his people denied God's servant and called him a madman [c5]. Nuh called on his Lord, saying he was overcome, and asked for help [c6][c7].",
+      "deep_md": "The building of the ship is told together with the denial that surrounded it [c3][c5]. Nuh's call for help is recorded in different words in different passages [c6][c7]. The command to build is given in two passages, with the same phrase about God's watch and revelation [c2][c7].",
+      "kids_md": "God told Nuh to build a ship [c2]. The leaders of his people laughed at him whenever they passed [c3]. Nuh asked his Lord for help [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Nuh keeps to the work he was given while he is mocked [c2][c3]. Another is that he turns to his Lord with his need [c6].",
+      "unknowns_md": "- Not established: where the ship was built, how long it took, its size or its materials beyond what 54:13 says in the next chapter.\n- Not established: who the leaders were, or how many passed him.\n- The Arabic word rendered 'rebuffed' (54:9) is understood in more than one way; a scholar should decide the rendering.\n- The verse 11:35 is an aside addressed to the one receiving the revelation and is not used."
+    },
+    {
+      "anchor": "the-waters-rise",
+      "position": 2,
+      "title_en": "The waters rise",
+      "event_slug": "the-flood",
+      "verses": [
+        {
+          "surah": 7,
+          "from": 64,
+          "to": 64
+        },
+        {
+          "surah": 11,
+          "from": 40,
+          "to": 42
+        },
+        {
+          "surah": 21,
+          "from": 76,
+          "to": 77
+        },
+        {
+          "surah": 23,
+          "from": 27,
+          "to": 29
+        },
+        {
+          "surah": 26,
+          "from": 118,
+          "to": 120
+        },
+        {
+          "surah": 29,
+          "from": 14,
+          "to": 15
+        },
+        {
+          "surah": 54,
+          "from": 11,
+          "to": 14
+        },
+        {
+          "surah": 69,
+          "from": 11,
+          "to": 12
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "When God's command came and the tannur boiled over, God told Nuh to carry on the ship a pair of every kind, and his family, except those against whom the word had already gone out, and those who believed; few had believed with him.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 40,
+              "to": 40
+            },
+            {
+              "surah": 23,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God opened the gates of the sky with pouring water and made the earth burst with springs, and the waters met for a matter already decreed.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 11,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God carried Nuh on a vessel of planks and dusur, a word often rendered nails or fibres, which sailed under His watch.",
+          "verses": [
+            {
+              "surah": 54,
+              "from": 13,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Nuh told those with him to embark, saying that in God's name was its sailing and its anchoring, for his Lord is forgiving and merciful.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 41,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The ship sailed with them through waves like mountains.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God told Nuh to say, once he and those with him were settled on the ship, that praise belongs to God who saved them from the wrongdoing people, and to ask to be landed at a blessed landing place.",
+          "verses": [
+            {
+              "surah": 23,
+              "from": 28,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God saved Nuh and those with him in the laden ship, and afterwards drowned the rest, who had denied His signs.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 64,
+              "to": 64
+            },
+            {
+              "surah": 26,
+              "from": 118,
+              "to": 120
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "In another passage God says that He answered Nuh's earlier call and saved him and his family from the great distress, and helped him against the people who denied His signs, drowning them all.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 76,
+              "to": 77
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "God says that the flood took the people of Nuh while they were wrongdoers, and that He saved him and the companions of the ship and made it a sign for the worlds.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 14,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "God says that when the water overflowed He carried those addressed in the running ship, to make it a reminder that a retaining ear would retain.",
+          "verses": [
+            {
+              "surah": 69,
+              "from": 11,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "When God's command came, Nuh carried on the ship a pair of every kind, his family except those against whom the word had gone out, and those who believed [c1]. The waters poured and burst out, the ship sailed, and God saved Nuh and those with him and drowned the rest [c2][c5][c7].",
+      "body_md": "When God's command came and the tannur boiled over, God told Nuh to carry on the ship a pair of every kind, and his family, except those against whom the word had already gone out, and those who believed; few had believed with him [c1]. Nuh told them to embark, saying that in God's name was its sailing and its anchoring [c4].\n\nGod opened the gates of the sky with pouring water and made the earth burst with springs, and the waters met for a matter already decreed [c2]. He carried Nuh on a vessel of planks and dusur which sailed under His watch [c3], and it sailed with them through waves like mountains [c5]. Nuh was told to say, once he and those with him were settled, that praise belongs to God who saved them from the wrongdoing people, and to ask to be landed at a blessed landing place [c6].\n\nGod saved Nuh and those with him in the laden ship, and afterwards drowned the rest, who had denied His signs [c7][c8]. He made the ship a sign for the worlds [c9] and a reminder [c10].",
+      "deep_md": "The flood is told from different sides: the sign and the command to embark [c1], the boarding words [c4][c6], the description of the water [c2], the vessel [c3] and the waves [c5]. The outcome is the same in every passage that tells it: Nuh and those with him are saved and the rest are drowned [c7][c8][c9]. Two passages stress the ship as a sign and a reminder [c9][c10].",
+      "kids_md": "God told Nuh to take on the ship a pair of every kind, his family and those who believed [c1]. The water poured from the sky and burst from the earth [c2]. The ship sailed on waves like mountains, and God saved Nuh and those with him [c5][c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Nuh and the others were told to begin their voyage in God's name and to praise Him for their rescue [c4][c6]. Another is that the ship is offered as a reminder to those who listen [c10].",
+      "unknowns_md": "- The Quran does not say what the tannur was or where it was; oven is a common rendering and its sense is discussed.\n- It does not say how many people were on the ship, which animals were carried or how many kinds, or how they were gathered.\n- It does not say how long the flood lasted, how deep the water rose, or whether it covered the whole earth or only the region of Nuh's people. A scholar should decide how to word the extent.\n- The Arabic word dusur is explained as nails and as fibres; this draft does not decide.\n- 29:14 also gives a span for Nuh's stay among his people before the flood; the verse does not say whether it is his life or his time of calling, and it is left to the prophet story.\n- In 69:11-12 those addressed are carried in the running ship; the verses do not say who is meant beyond the people addressed."
+    },
+    {
+      "anchor": "the-son-and-the-end-of-the-flood",
+      "position": 3,
+      "title_en": "The son and the end of the flood",
+      "event_slug": "the-flood",
+      "verses": [
+        {
+          "surah": 11,
+          "from": 42,
+          "to": 48
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Nuh called to his son, who was standing apart, to embark with them and not to be with the disbelievers.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The son said that he would take refuge on a mountain that would protect him from the water; Nuh said there was no protector that day from God's command, except the one on whom He had mercy; then the wave came between them and the son was among the drowned.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 43,
+              "to": 43
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The earth was told to swallow its water and the sky to stop; the water subsided, the matter was decided, the ship settled on al-Judi, and a call went out: away with the wrongdoing people.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 44,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Nuh called to his Lord, saying that his son was of his family, that God's promise is true, and that He is the most just of judges.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 45,
+              "to": 45
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God said that the son was not of Nuh's family, for he was a deed not righteous, told him not to ask what he had no knowledge of, and warned him against being among the ignorant.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 46,
+              "to": 46
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Nuh said that he sought refuge in God from asking what he had no knowledge of, and that unless God forgave him and had mercy on him he would be among the losers.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 47,
+              "to": 47
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "A word came to Nuh: come down in peace from Him, with blessings on you and on nations from those with you, and there will be nations to whom God will give enjoyment, then a painful punishment will touch them from Him.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 48,
+              "to": 48
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Nuh called to his son to embark, but the son said he would take refuge on a mountain, and the wave came between them [c1][c2]. The water subsided and the ship settled on al-Judi, and Nuh was told to come down in peace [c3][c7].",
+      "body_md": "Nuh called to his son, who was standing apart, to embark with them and not to be with the disbelievers [c1]. The son said he would take refuge on a mountain that would protect him from the water; Nuh answered that there was no protector that day from God's command, except the one on whom He had mercy [c2]. Then the wave came between them and the son was among the drowned [c2].\n\nThe earth was told to swallow its water and the sky to stop; the water subsided, the matter was decided, and the ship settled on al-Judi [c3]. Nuh called to his Lord that his son was of his family, that God's promise is true and that He is the most just of judges [c4]. God said that the son was not of his family, told him not to ask what he had no knowledge of and warned him against being among the ignorant [c5]. Nuh sought refuge in God from asking what he had no knowledge of and asked for forgiveness and mercy [c6].\n\nNuh was told to come down in peace from God, with blessings on him and on nations from those with him [c7].",
+      "deep_md": "The passage places Nuh's call to his son [c1][c2] beside Nuh's call to his Lord about him [c4], and the answer [c5] and the prayer for forgiveness [c6] follow. The ending is the settling of the ship [c3] and the word of peace and blessing [c7]. The words 'a deed not righteous' in 11:46 can be rendered in more than one way, and the draft keeps the wording close to the Arabic [c5].",
+      "kids_md": "Nuh called his son to come on the ship, but the son would not [c1][c2]. Then the water went down and the ship settled on al-Judi [c3]. Nuh was told to come down in peace [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Nuh, told not to ask what he does not know, turns at once to ask forgiveness [c5][c6]. Another is that the passage shows closeness of family alone does not decide a person's place [c5].",
+      "unknowns_md": "- The Quran does not name the son, and does not say what became of him after the wave beyond that he was among the drowned.\n- It does not say where al-Judi is.\n- The phrase rendered 'for he was a deed not righteous' (11:46) is read in more than one way, for example as a statement about the son's deed or about the matter Nuh asked; a scholar should decide.\n- Not established: who calls out the words 'away with the wrongdoing people' (11:44); the verse gives no speaker.\n- Not established: how long after the flood began the water subsided.\n- The verse 11:49 is an aside addressed to the one receiving the revelation and is not used."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Nuh, the flood and the ship. None is used in this draft.",
+    "The flood is also told inside the longer story of Nuh (content/stories/nuh.draft.json); this record is a shorter account of the event and refers to it only in general words.",
+    "The extent of the flood (the whole earth or the region of Nuh's people) is not stated in the verses; the draft says so and does not choose.",
+    "Named in later tradition, not in the Quranic text: names for Nuh's wife, sons and the mountain, and the ship's dimensions. None is used in the story texts.",
+    "The sense of tannur (11:40) and of dusur (54:13) is left open in the texts.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

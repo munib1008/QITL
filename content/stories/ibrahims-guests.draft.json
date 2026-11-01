@@ -1,0 +1,380 @@
+{
+  "slug": "ibrahims-guests",
+  "title_en": "Ibrahim's guests and the glad tidings",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "ibrahims-guests"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-guests-and-the-glad-tidings",
+      "position": 1,
+      "title_en": "The guests and the glad tidings",
+      "event_slug": "ibrahims-guests",
+      "verses": [
+        {
+          "surah": 11,
+          "from": 69,
+          "to": 73
+        },
+        {
+          "surah": 15,
+          "from": 51,
+          "to": 56
+        },
+        {
+          "surah": 51,
+          "from": 24,
+          "to": 30
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "One passage tells the one addressed to inform people about the guests of Ibrahim, and another asks whether the account of Ibrahim's honoured guests has reached the listener.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 51,
+              "to": 51
+            },
+            {
+              "surah": 51,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Messengers came to Ibrahim with glad tidings; they said peace, and he answered peace.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 69,
+              "to": 69
+            },
+            {
+              "surah": 15,
+              "from": 52,
+              "to": 52
+            },
+            {
+              "surah": 51,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He soon brought a roasted calf, which another passage calls a fat calf; he turned quietly to his family for it, and set it near them, asking whether they would not eat.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 69,
+              "to": 69
+            },
+            {
+              "surah": 51,
+              "from": 26,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "When he saw that their hands did not reach it, he found them strange and felt fear of them.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 70,
+              "to": 70
+            },
+            {
+              "surah": 51,
+              "from": 28,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "In another passage he told them that he was afraid of them.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 52,
+              "to": 52
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They told him not to fear: they had been sent to the people of Lut, and they gave him glad tidings of a knowing boy.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 70,
+              "to": 70
+            },
+            {
+              "surah": 15,
+              "from": 53,
+              "to": 53
+            },
+            {
+              "surah": 51,
+              "from": 28,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "His wife was standing there; she laughed, and they gave her glad tidings of Ishaq and, after Ishaq, of Yaqub.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 71,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "She said: woe to me, shall I give birth when I am an old woman and this husband of mine is old? This is a strange thing.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 72,
+              "to": 72
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "In another passage she came forward with a cry, struck her face and said that she was an old woman, barren.",
+          "verses": [
+            {
+              "surah": 51,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "They said: do you wonder at God's command? God's mercy and blessings are upon you, people of the house; He is praiseworthy and glorious.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 73,
+              "to": 73
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "In another passage they said that it was so because her Lord had said so, and that He is the wise, the knowing.",
+          "verses": [
+            {
+              "surah": 51,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Ibrahim asked whether they had given him glad tidings although old age had touched him, and on what basis they gave glad tidings.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 54,
+              "to": 54
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "They said that they had given him glad tidings in truth and that he should not be among the despairing; he said that only those who are astray despair of the mercy of their Lord.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 55,
+              "to": 56
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Messengers came to Ibrahim with glad tidings, and he served them a calf [c2][c3]. They told him not to fear and gave glad tidings of a boy to him and to his wife, of Ishaq and then of Yaqub [c6][c7].",
+      "body_md": "Messengers came to Ibrahim with glad tidings; they said peace, and he answered peace [c2]. He soon brought a roasted calf, and set it near them [c3]. When he saw that their hands did not reach it, he found them strange and felt fear of them [c4], and he told them that he was afraid [c5].\n\nThey told him not to fear: they had been sent to the people of Lut, and they gave him glad tidings of a knowing boy [c6]. His wife was standing there; she laughed, and they gave her glad tidings of Ishaq and, after Ishaq, of Yaqub [c7]. She said she was an old woman and her husband old, and called it a strange thing [c8]; in another passage she came forward with a cry, struck her face and said she was barren [c9].\n\nThe messengers asked whether she wondered at God's command, and wished mercy and blessings on the people of the house [c10]. Ibrahim asked whether they had given him glad tidings although old age had touched him [c12]. They said they had given them in truth and that he should not despair [c13], and he answered that only the astray despair of the mercy of their Lord [c13].",
+      "deep_md": "The visit is told in more than one passage, each with its own details: the roasted calf and the peace greeting [c2][c3], the fear and the words that answered it [c4][c5][c6], the glad tidings to the wife and to Ibrahim [c7][c12]. Her reaction is given in different forms [c8][c9], and so is the answer of the guests [c10][c11]. The passages also open with a call to attention [c1].",
+      "kids_md": "Messengers came to Ibrahim with good news [c2]. He brought them a calf, but they did not eat it, and he felt afraid [c3][c4]. They told him not to be afraid and gave him good news of a boy [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage joins hospitality with a surprise: the guest's food is set out before the news is given [c3][c6]. Another is that Ibrahim answers the news by saying that only the astray despair of their Lord's mercy [c13].",
+      "unknowns_md": "- Not established: who the messengers were, how many they were, or what form they had; the verses call them messengers and guests only.\n- Not established: where Ibrahim lived at the time, or the age of Ibrahim and his wife; the verses speak of old age but give no numbers.\n- The Arabic word for her laughing (11:71) is understood in more than one way; a scholar should decide the rendering.\n- The identity of the knowing boy of 15:53 and 51:28, and its relation to the glad tidings of Ishaq in 11:71, is read in more than one way; this draft does not decide.\n- The wife is not named in these verses.\n- The passages 11:69-73, 15:51-56 and 51:24-30 are read as one visit on matching wording (an inference)."
+    },
+    {
+      "anchor": "the-business-of-the-messengers",
+      "position": 2,
+      "title_en": "The business of the messengers",
+      "event_slug": "ibrahims-guests",
+      "verses": [
+        {
+          "surah": 11,
+          "from": 74,
+          "to": 76
+        },
+        {
+          "surah": 15,
+          "from": 57,
+          "to": 60
+        },
+        {
+          "surah": 51,
+          "from": 31,
+          "to": 37
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ibrahim asked the messengers what their business was.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 57,
+              "to": 57
+            },
+            {
+              "surah": 51,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They said that they had been sent to a people of criminals, to send down on them stones of clay marked with their Lord for those who exceed all bounds.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 58,
+              "to": 58
+            },
+            {
+              "surah": 51,
+              "from": 32,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The family of Lut would be saved, all of them, except his wife, whom God had decreed to be among those who stay behind.",
+          "verses": [
+            {
+              "surah": 15,
+              "from": 59,
+              "to": 60
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "When the fear had left Ibrahim and the glad tidings had come to him, he began to plead with God about the people of Lut.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 74,
+              "to": 74
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God describes Ibrahim as forbearing, awwah and turning back to Him, awwah being a word understood in more than one way.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 75,
+              "to": 75
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Ibrahim was told to turn away from this, for the command of his Lord had come and a punishment that could not be turned back was coming to them.",
+          "verses": [
+            {
+              "surah": 11,
+              "from": 76,
+              "to": 76
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God says that He brought out the believers who were in it, and found in it only one house of those who submitted.",
+          "verses": [
+            {
+              "surah": 51,
+              "from": 35,
+              "to": 36
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "God says that He left in it a sign for those who fear the painful punishment.",
+          "verses": [
+            {
+              "surah": 51,
+              "from": 37,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Ibrahim asked the messengers what their business was, and they said they were sent to a people of criminals, but the family of Lut would be saved [c1][c2][c3]. Ibrahim pleaded with God about the people of Lut and was told to turn away from this [c4][c6].",
+      "body_md": "Ibrahim asked the messengers what their business was [c1]. They said that they had been sent to a people of criminals, to send down on them stones of clay marked with their Lord [c2]. The family of Lut would be saved, all of them, except his wife, whom God had decreed to be among those who stay behind [c3].\n\nWhen the fear had left Ibrahim and the glad tidings had come to him, he began to plead with God about the people of Lut [c4]. God describes Ibrahim as forbearing, awwah and turning back to Him [c5]. He was told to turn away from this, for the command of his Lord had come and a punishment that could not be turned back was coming to them [c6].\n\nGod says He brought out the believers who were in it and found only one house of those who submitted [c7], and that He left in it a sign for those who fear the painful punishment [c8].",
+      "deep_md": "The later part of the visit turns from the glad tidings to the sending [c1][c2]. The exception for the family of Lut and the one who stays behind [c3] is told in one passage, Ibrahim's pleading in another [c4][c5][c6], and the outcome in yet another [c7][c8]. The passages differ in what they include, and the pleading is told only in 11:74-76 [c4].",
+      "kids_md": "Ibrahim asked the messengers why they had come [c1]. They said they were sent to a people who did wrong, but that the family of Lut would be saved [c2][c3]. Ibrahim pleaded for them, and was told to turn away from this [c4][c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that God's description of Ibrahim as forbearing and turning back to Him sits beside his pleading [c4][c5]. Another is that the passage records a limit: a command that had come could not be turned back [c6].",
+      "unknowns_md": "- Not established: the name of the place, how long it took, or how the believers were brought out.\n- Not established: how many were in the one house of those who submitted.\n- The word awwah (11:75) is rendered in different ways, for example tender-hearted or one who often calls on God; a scholar should decide.\n- The wife of Lut is not named in these verses.\n- The pronoun in 51:35-37, rendered 'it', refers to a place the verses do not name here.\n- The inventory range stops at these ayat; the destruction itself is told elsewhere and is not part of this record."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the visit of the messengers to Ibrahim. None is used in this draft.",
+    "The visit is also told inside the longer story of Ibrahim (content/stories/ibrahim.draft.json); this record is a shorter account that refers to it only in general words.",
+    "Named in later tradition, not in the Quranic text: the names of the messengers, of Ibrahim's wife and of the place. None is used in the story texts.",
+    "The passages are read as one visit on matching wording (an inference); the details differ between them.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "slug": "yusuf-in-the-house-of-the-aziz",
+  "title_en": "Yusuf in the house of the Aziz",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "yusuf-in-the-house-of-the-aziz"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "into-the-household-and-the-trial",
+      "position": 1,
+      "title_en": "Into the household and the trial",
+      "event_slug": "yusuf-in-the-house-of-the-aziz",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 21,
+          "to": 29
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The man in Egypt who bought him told his wife to give him an honourable place to stay, saying that he might benefit them or they might take him as a son.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God says that in this way He established Yusuf in the land so that He might teach him the interpretation of events; God prevails over His affair, but most people do not know.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When Yusuf reached his full strength, God gave him judgement and knowledge.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The woman in whose house Yusuf was staying tried to seduce him; she closed the doors and called him to her; Yusuf said that he sought refuge in God, that his lord had made his stay good, and that the wrongdoers do not succeed.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The verse says that she was set on him, and that he would have inclined toward her had he not seen a proof from his Lord; in this way God turned evil and indecency away from him, for he was among His sincere servants.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They raced to the door and she tore his shirt from behind; they met her master at the door, and she said that the penalty for one who wanted evil for his family should be prison or a painful punishment.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Yusuf said that she had tried to seduce him; a witness from her household said that if his shirt was torn from the front she spoke truly, and if it was torn from behind she had lied and he was truthful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 26,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "When he saw that the shirt was torn from behind, he said that this was from their plotting, and that their plotting was great; he told Yusuf to turn away from this, and told her to ask forgiveness for her sin, for she was among the wrongdoers.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 28,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "A man in Egypt bought Yusuf and told his wife to give him an honourable place, and God says He established Yusuf in the land [c1][c2]. The woman of the house tried to seduce him, and a witness from her household spoke about his torn shirt [c4][c7].",
+      "body_md": "The man in Egypt who bought him told his wife to give him an honourable place to stay, saying that he might benefit them or they might take him as a son [c1]. God says that in this way He established Yusuf in the land so that He might teach him the interpretation of events [c2]. When Yusuf reached his full strength, God gave him judgement and knowledge [c3].\n\nThe woman in whose house Yusuf was staying tried to seduce him; she closed the doors and called him to her [c4]. Yusuf said that he sought refuge in God and that the wrongdoers do not succeed [c4]. The verse says that she was set on him, and that he would have inclined toward her had he not seen a proof from his Lord; in this way God turned evil and indecency away from him, for he was among His sincere servants [c5].\n\nThey raced to the door and she tore his shirt from behind [c6]. A witness from her household said that if his shirt was torn from the front she spoke truly, and if it was torn from behind she had lied and he was truthful [c7]. When he saw that the shirt was torn from behind, he said that this was from their plotting, and told Yusuf to turn away from this and her to ask forgiveness for her sin [c8].",
+      "deep_md": "The passage joins God's establishing of Yusuf in the land [c1][c2][c3] with the trial in the household [c4][c5][c6]. The word rendered 'lord' in 12:23 can mean his master or his Lord, and the draft keeps both [c4]. The verse about what each was set on (12:24) is read in more than one way, and this draft states only the verse's condition and the statement that God turned evil away from him [c5]. The testimony turns on the shirt torn from behind [c7][c8].",
+      "kids_md": "A man in Egypt bought Yusuf and told his wife to treat him well [c1]. When she tried to make him do wrong, Yusuf said he sought refuge in God [c4]. The torn shirt showed who was telling the truth [c7][c8].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Yusuf's first answer is to seek refuge in God [c4]. Another is that the verse says God turned evil and indecency away from him because he was among His sincere servants [c5].",
+      "unknowns_md": "- The Quran does not name the buyer, his wife, his position or the household in this passage. Named in later tradition, not in the Quranic text: personal names for the buyer and his wife; none is used here.\n- Not established: how old Yusuf was when he was bought, when he reached his full strength, or how long he was in the household.\n- The Arabic of 12:24 about Yusuf's part is read in more than one way; this draft states the verse's condition and decides nothing more, and a reviewer must check the wording against the classical readings.\n- The verse does not say what the proof from his Lord was.\n- The verses do not say whether the witness was a man or a woman or how related to her; the speaker of 12:28-29 is not named in the verses and the draft reads it as her master.\n- The Arabic word rendered 'lord' in 12:23 can mean his master or his Lord; this draft keeps both."
+    },
+    {
+      "anchor": "the-women-of-the-city",
+      "position": 2,
+      "title_en": "The women of the city",
+      "event_slug": "yusuf-in-the-house-of-the-aziz",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 30,
+          "to": 34
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Women in the city said that the wife of the Aziz was seducing her young manservant, that love for him had gripped her, and that they saw her in clear error.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 30,
+              "to": 30
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When she heard of their scheming she sent for them and prepared a place for them to recline; she gave each of them a knife and told him to come out before them.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When they saw him they were amazed at him and cut their hands, and said, glorifying God, that this was no human being but a noble angel.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 31,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "She told them that this was the one they had blamed her for, that she had tried to seduce him and he had held back, and that if he did not do what she ordered him he would be imprisoned and be among the humiliated.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 32,
+              "to": 32
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The young man said to his Lord that prison was dearer to him than what they called him to, and that unless God turned their plotting away from him he might incline to them and be among the ignorant.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 33,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "His Lord answered him and turned their plotting away from him; He hears and knows.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 34,
+              "to": 34
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Women in the city blamed the wife of the Aziz, and she gave them a gathering at which they saw her young manservant and were amazed [c1][c2][c3]. The young man said to his Lord that prison was dearer to him, and God turned their plotting away from him [c5][c6].",
+      "body_md": "Women in the city said that the wife of the Aziz was seducing her young manservant and that they saw her in clear error [c1]. When she heard of their scheming she sent for them and prepared a place for them to recline; she gave each of them a knife and told him to come out before them [c2]. When they saw him they were amazed at him and cut their hands, and said, glorifying God, that this was no human being but a noble angel [c3].\n\nShe told them that this was the one they had blamed her for, and that if he did not do what she ordered him he would be imprisoned [c4]. The young man said to his Lord that prison was dearer to him than what they called him to, and that unless God turned their plotting away from him he might incline to them [c5]. His Lord answered him and turned their plotting away from him [c6].",
+      "deep_md": "The scene moves from the talk of the women [c1] to the gathering [c2][c3], the woman's warning [c4] and the young man's prayer [c5], and ends with God's answer [c6]. The verses record what the women did and said and do not describe the young man [c3]. Aziz is a title; the verses do not say what office it names [c1].",
+      "kids_md": "Some women in the city talked about the wife of the Aziz [c1]. She invited them and they were amazed at the young man [c2][c3]. The young man asked his Lord for help, and God turned their plotting away from him [c5][c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the young man asks his Lord for help against plotting and puts his trust in Him [c5]. Another is that the passage ends with God's answer to the prayer [c6].",
+      "unknowns_md": "- Not established: who the women were or how many, or what the knives were for beyond each being given one; the verses say they cut their hands and give no further detail.\n- The verses do not describe the young man or say what the women saw beyond their amazement and their words.\n- Not established: how long after the earlier events this was.\n- Aziz is a title; the Quran does not say what office it names. Named in later tradition, not in the Quranic text: personal names for the Aziz and his wife; none is used here."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Yusuf in the household. None is used in this draft.",
+    "The event is also told inside the longer story of Yusuf (content/stories/yusuf.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "Named in later tradition, not in the Quranic text: personal names for Yusuf's brothers, mother, the Aziz, his wife and the king, and the name and story of the wolf. None is used in the story texts.",
+    "12:24: the Arabic about Yusuf's part is read in more than one way; the draft states only the verse's condition and a reviewer must check the wording.",
+    "The 'lord' of 12:23 can mean his master or his Lord; the draft keeps both.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

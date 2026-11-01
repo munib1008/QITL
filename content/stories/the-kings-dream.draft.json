@@ -1,0 +1,232 @@
+{
+  "slug": "the-kings-dream",
+  "title_en": "The king's dream and Yusuf's rise",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "the-kings-dream"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT record: it stays inside the event's own inventory refs, is shorter than the prophet story that also tells the event, and refers to that story only in general words. Chapters are a reading order, not a chronology the Quran claims; passages from several surahs are grouped by theme and surah order is not time order. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-dream-of-the-king",
+      "position": 1,
+      "title_en": "The dream of the king",
+      "event_slug": "the-kings-dream",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 43,
+          "to": 49
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The king said that he saw seven fat cows being eaten by seven lean ones, and seven green ears of grain and other dry ones; he asked his chiefs to explain his vision if they could interpret visions.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 43,
+              "to": 43
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They said that it was a confusion of dreams and that they had no knowledge of the interpretation of such dreams.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 44,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The one who had been saved remembered after a period, said that he would inform them of its interpretation and asked to be sent.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 45,
+              "to": 45
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He came to Yusuf, addressed him as the truthful one, and asked for the interpretation of the cows and the ears, so that he might return to the people and they might know.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 46,
+              "to": 46
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Yusuf said that they would sow for seven years continuously, and that what they harvested they should leave in its ear, except a little for eating.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 47,
+              "to": 47
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Yusuf said that after that would come seven hard years that would eat what they had stored for them, except a little of what they preserved.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 48,
+              "to": 48
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Yusuf said that after that would come a year in which people would be given relief and in which they would press.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 49,
+              "to": 49
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The king saw seven fat cows eaten by seven lean ones and seven green ears and seven dry ones, and his chiefs could not interpret it [c1][c2]. The man who had been saved came to Yusuf, and Yusuf gave the interpretation of seven years, then seven hard years, then a year of relief [c4][c5][c6][c7].",
+      "body_md": "The king said that he saw seven fat cows being eaten by seven lean ones, and seven green ears of grain and other dry ones, and asked his chiefs to explain his vision if they could interpret visions [c1]. They said that it was a confusion of dreams and that they had no knowledge of the interpretation of such dreams [c2].\n\nThe one who had been saved remembered after a period, said that he would inform them of its interpretation and asked to be sent [c3]. He came to Yusuf, addressed him as the truthful one, and asked for the interpretation, so that he might return to the people and they might know [c4].\n\nYusuf said that they would sow for seven years continuously, and that what they harvested they should leave in its ear, except a little for eating [c5]. After that would come seven hard years that would eat what they had stored, except a little of what they preserved [c6]. After that would come a year in which people would be given relief and in which they would press [c7].",
+      "deep_md": "The vision is given once and the interpretation follows it in steps [c1][c5][c6][c7]. The chiefs decline [c2], and the man who had been saved is the link to Yusuf [c3][c4]. The Arabic for what the people would press does not say what was pressed [c7].",
+      "kids_md": "The king dreamed of seven fat cows eaten by seven thin ones [c1]. Yusuf said there would be seven years of sowing, then seven hard years, then a year of relief [c5][c6][c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the interpretation comes with instructions to keep a store through the years of plenty [c5][c6]. Another is that the one who forgot Yusuf earlier remembers him when the chiefs cannot answer [c3].",
+      "unknowns_md": "- The Quran does not name the king or the land he ruled; it uses the word king for the ruler in this account. Named in later tradition, not in the Quranic text: names for the king, his dynasty and his title; none is used here.\n- Not established: who the chiefs were or how long the period of 12:45 was.\n- The Arabic for press does not say what was pressed (grapes, olives or something else).\n- Not established: how long after the prison scene this came."
+    },
+    {
+      "anchor": "from-prison-to-authority",
+      "position": 2,
+      "title_en": "From prison to authority",
+      "event_slug": "the-kings-dream",
+      "verses": [
+        {
+          "surah": 12,
+          "from": 50,
+          "to": 57
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The king ordered that Yusuf be brought to him; when the messenger came, Yusuf told him to return to his lord and ask about the women who had cut their hands, for his Lord knows their plotting.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The king asked the women what their affair was when they tried to seduce Yusuf; they said that they knew no evil against him; and the wife of the Aziz said that now the truth had become clear: she had tried to seduce him and he was among the truthful.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 51,
+              "to": 51
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "A speaker, not named in the verses, says that this was so that the master would know that he had not betrayed him in his absence, and that God does not guide the plotting of the betrayers; and that he does not declare himself innocent, for the self commands evil except where his Lord has mercy.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 52,
+              "to": 53
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The king said to bring Yusuf to him, that he would take him for himself; and when he had spoken with him, the king said that he was that day established with them and trusted.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 54,
+              "to": 54
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Yusuf asked to be set over the storehouses of the land, saying that he was a knowing guardian.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 55,
+              "to": 55
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God says that in this way He established Yusuf in the land, where he could settle wherever he wished; He reaches with His mercy whomever He wills and does not waste the reward of those who do good.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 56,
+              "to": 56
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The reward of the Hereafter is better for those who believe and are mindful of God.",
+          "verses": [
+            {
+              "surah": 12,
+              "from": 57,
+              "to": 57
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The king sent for Yusuf, and Yusuf asked him to look into the matter of the women who had cut their hands [c1]. The women and the wife of the Aziz spoke, and the king then gave Yusuf his trust, and Yusuf asked to be set over the storehouses of the land [c2][c4][c5].",
+      "body_md": "The king ordered that Yusuf be brought to him; when the messenger came, Yusuf told him to return to his lord and ask about the women who had cut their hands [c1]. The king asked the women what their affair was; they said that they knew no evil against him, and the wife of the Aziz said that now the truth had become clear: she had tried to seduce him and he was among the truthful [c2].\n\nA speaker, not named in the verses, says that this was so that the master would know that he had not betrayed him in his absence, and that he does not declare himself innocent, for the self commands evil except where his Lord has mercy [c3].\n\nThe king said to bring Yusuf to him, and when he had spoken with him, said that he was that day established with them and trusted [c4]. Yusuf asked to be set over the storehouses of the land, saying he was a knowing guardian [c5]. God says that in this way He established Yusuf in the land [c6], and that the reward of the Hereafter is better for those who believe and are mindful of God [c7].",
+      "deep_md": "The chapter has the investigation of the women [c1][c2], a speech whose speaker the verses do not name [c3], the king's trust [c4], Yusuf's request [c5] and God's comment on it [c6][c7]. The draft does not decide who speaks 12:52-53 and says so [c3]. The Quran does not narrate the moment of Yusuf's release from prison [c1].",
+      "kids_md": "The king sent for Yusuf, and the women said they knew no evil against him [c1][c2]. The king trusted him, and Yusuf asked to be set over the storehouses of the land [c4][c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Yusuf asks that the matter of the women be cleared before he comes out [c1][c2]. Another is that the passage ends by saying the reward of the Hereafter is better for those who believe and are mindful of God [c7].",
+      "unknowns_md": "- Not established: how long after the king's dream these events came, or the title and rank of the post Yusuf asked for; the verse says the storehouses of the land.\n- The verses do not say who speaks 12:52-53. Some read it as Yusuf and some as the wife of the Aziz; a reviewer must confirm, because the verses do not name the speaker.\n- The Quran does not narrate the moment of Yusuf's release; he says later (12:100) that God brought him out of the prison, which is outside this record.\n- The Quran does not say in so many words that the king granted the post; 12:56 says God established Yusuf in the land."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about Yusuf and the king. None is used in this draft.",
+    "The event is also told inside the longer story of Yusuf (content/stories/yusuf.draft.json); this record is a shorter, event-focused account that refers to it only in general words.",
+    "Named in later tradition, not in the Quranic text: personal names for Yusuf's brothers, mother, the Aziz, his wife and the king, and the name and story of the wolf. None is used in the story texts.",
+    "The speaker of 12:52-53 is not named in the verses; the draft marks it as unnamed and does not choose.",
+    "The numbers in this event (seven cows, ears and years) are those stated in 12:43-49; no other number is used.",
+    "The chapters group repeated passages by theme. The Quran does not give a chronology across the surahs, so the order of the chapters is a reading order only.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}
