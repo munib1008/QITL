@@ -1,0 +1,229 @@
+{
+  "slug": "qarun",
+  "title_en": "Qarun",
+  "title_ar": "قارون",
+  "subject": {
+    "type": "person",
+    "event_slug": "qarun"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "qarun-and-his-wealth",
+      "position": 1,
+      "title_en": "Qarun and his wealth",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 28,
+          "from": 76,
+          "to": 78
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Qarun was of the people of Musa, and he oppressed them, and God had given him treasures whose keys would weigh down a band of strong men.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 76,
+              "to": 76
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "His people told him not to exult, for God does not love the exultant.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 76,
+              "to": 76
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They told him to seek, in what God had given him, the home of the Hereafter, not to forget his share of this world, to do good as God had done good to him, and not to seek corruption in the land, for God does not love the corrupters.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 77,
+              "to": 77
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He said that he had been given it only because of knowledge that he had, and the ayah asks whether he did not know that God had destroyed before him generations who were stronger than him and had gathered more, and that the guilty are not asked about their sins.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 78,
+              "to": 78
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Qarun was of the people of Musa, and God had given him treasures [c1]. His people told him not to exult and to seek the home of the Hereafter in what God had given him [c2][c3]. He said that he had been given it because of knowledge that he had [c4].",
+      "body_md": "Qarun was of the people of Musa, and he oppressed them, and God had given him treasures whose keys would weigh down a band of strong men [c1]. His people told him not to exult, for God does not love the exultant [c2]. They told him to seek, in what God had given him, the home of the Hereafter, not to forget his share of this world, to do good as God had done good to him, and not to seek corruption in the land, for God does not love the corrupters [c3]. He said that he had been given it only because of knowledge that he had, and the ayah asks whether he did not know that God had destroyed before him generations who were stronger than him and had gathered more, and that the guilty are not asked about their sins [c4].",
+      "deep_md": "The ayat give his people's counsel as a warning against exulting and a call to seek the Hereafter without forgetting his share of this world [c2][c3]. The knowledge he claims is not described [c4].",
+      "kids_md": "Qarun had been given great treasures by God [c1]. His people told him not to exult [c2]. He said that he had been given them because of knowledge that he had [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage sets his people's counsel beside his answer that his wealth came from his own knowledge [c3][c4].",
+      "unknowns_md": "- Not established: how much wealth he had, or how he came by it.\n- Not established: how he was related to the people of Musa, beyond the words that he was of them.\n- Not established: what knowledge he claimed."
+    },
+    {
+      "anchor": "his-display-and-his-end",
+      "position": 2,
+      "title_en": "His display and his end",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 28,
+          "from": 79,
+          "to": 82
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "He came out before his people in his finery, and those who wanted the life of this world said that they wished they had what Qarun had been given, for he was possessor of a great fortune.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 79,
+              "to": 79
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Those who had been given knowledge said, woe to you, the reward of God is better for one who believes and does good, and none will attain it except the patient.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 80,
+              "to": 80
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God made the earth swallow him and his house, and he had no group to help him other than God, and was not of those who could defend themselves.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 81,
+              "to": 81
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The next morning, those who had wished for his place the day before said that it is God who extends provision to whom He wills of His servants and restricts it, and that had God not favoured them, He would have made the earth swallow them, and that the disbelievers do not succeed.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 82,
+              "to": 82
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Qarun came out before his people in his finery, and those who wanted this life wished they had what he had [c1]. Those who had been given knowledge said that the reward of God is better [c2]. God made the earth swallow him and his house [c3].",
+      "body_md": "He came out before his people in his finery, and those who wanted the life of this world said that they wished they had what Qarun had been given, for he was possessor of a great fortune [c1]. Those who had been given knowledge said, woe to you, the reward of God is better for one who believes and does good, and none will attain it except the patient [c2]. God made the earth swallow him and his house, and he had no group to help him other than God, and was not of those who could defend themselves [c3]. The next morning, those who had wished for his place the day before said that it is God who extends provision to whom He wills of His servants and restricts it, and that had God not favoured them, He would have made the earth swallow them, and that the disbelievers do not succeed [c4].",
+      "deep_md": "The passage sets groups of onlookers against each other, those who wanted the life of this world and those who had been given knowledge [c1][c2]. The next morning the first group speaks of God's extending and restricting provision [c4].",
+      "kids_md": "Qarun came out before his people in his finery [c1]. Those who had knowledge said that the reward of God is better [c2]. God made the earth swallow him and his house [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the onlookers change their words after the earth swallows him, and speak of God as the one who extends and restricts provision [c1][c4]. Another is that the reward of God is described as better and as reached only by the patient [c2].",
+      "unknowns_md": "- Not established: what the finery was, or where this took place.\n- Not established: how the earth swallowed him and his house, or how long after the display.\n- Not established: how many were in the groups of onlookers."
+    },
+    {
+      "anchor": "named-with-firawn-and-haman",
+      "position": 3,
+      "title_en": "Named with Fir'awn and Haman",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 29,
+          "from": 39,
+          "to": 40
+        },
+        {
+          "surah": 40,
+          "from": 24,
+          "to": 25
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Musa came to Qarun, Fir'awn and Haman with clear proofs, but they were arrogant in the land, and they could not outrun God.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God seized each for his sin, so that against some He sent a storm of stones, some were seized by the blast, some He made the earth swallow, and some He drowned, and God did not wrong them but they wronged themselves.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God sent Musa to Fir'awn, Haman and Qarun, and they said that he was a lying sorcerer.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "When he brought them the truth from God, they said to kill the sons of those who believed with him and spare their women, and the plotting of the disbelievers was only in error.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Musa came to Qarun, Fir'awn and Haman with clear proofs, but they were arrogant in the land [c1]. They said that he was a lying sorcerer [c3]. God seized each for his sin, and the ayah lists various ways in which He did so [c2].",
+      "body_md": "Musa came to Qarun, Fir'awn and Haman with clear proofs, but they were arrogant in the land, and they could not outrun God [c1]. God seized each for his sin, so that against some He sent a storm of stones, some were seized by the blast, some He made the earth swallow, and some He drowned, and God did not wrong them but they wronged themselves [c2]. God sent Musa to Fir'awn, Haman and Qarun, and they said that he was a lying sorcerer [c3]. When he brought them the truth from God, they said to kill the sons of those who believed with him and spare their women, and the plotting of the disbelievers was only in error [c4].",
+      "deep_md": "The ayat name Qarun together with Fir'awn and Haman [c1][c3]. The ayah that lists the ways in which God seized them does not say which fate belonged to whom [c2].",
+      "kids_md": "Musa came to Qarun, Fir'awn and Haman with clear proofs [c1]. They were arrogant in the land [c1]. They called Musa a lying sorcerer [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage names Qarun beside the rulers to whom Musa was sent [c1][c3]. Another is that it ends with God saying that He did not wrong them but they wronged themselves [c2].",
+      "unknowns_md": "- Not established: which of the fates in the ayah was Qarun's.\n- Not established: when Qarun spoke against Musa, or in what words beyond those recorded."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: later works describe a kinship between Qarun and Musa, give the source of his wealth, and give other names for him.",
+    "Hadith to add later: reports about Qarun, with a named grader for each; none is used here."
+  ]
+}

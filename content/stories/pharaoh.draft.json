@@ -1,0 +1,497 @@
+{
+  "slug": "pharaoh",
+  "title_en": "Fir'awn",
+  "title_ar": "فرعون",
+  "subject": {
+    "type": "person",
+    "event_slug": "pharaoh"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "exalted-in-the-land",
+      "position": 1,
+      "title_en": "Exalted in the land",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 28,
+          "from": 4,
+          "to": 6
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Fir'awn exalted himself in the land and divided its people into groups, weakening one group by killing their sons and sparing their women, and he was one of the corrupters.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God wished to favour those who were weakened in the land, make them leaders and heirs, establish them in the land, and show Fir'awn, Haman and their forces through them what they feared.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 5,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Fir'awn exalted himself in the land and divided its people into groups [c1]. He weakened one group by killing their sons and sparing their women [c1]. God wished to favour those who were weakened, and to show Fir'awn, Haman and their forces what they feared [c2].",
+      "body_md": "Fir'awn exalted himself in the land and divided its people into groups, weakening one group by killing their sons and sparing their women, and he was one of the corrupters [c1]. God wished to favour those who were weakened in the land, make them leaders and heirs, establish them in the land, and show Fir'awn, Haman and their forces through them what they feared [c2].",
+      "deep_md": "The ayah says that Fir'awn divided the people of the land into groups and weakened one of them [c1]. These ayat do not name the weakened group [c1][c2].",
+      "kids_md": "Fir'awn weakened one group of people in the land [c1]. God wished to favour those who were weakened [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage sets Fir'awn's exalting of himself beside God's wish to favour the weakened [c1][c2].",
+      "unknowns_md": "- Not established: Fir'awn's personal name, his dynasty or his time; the Quran uses the word Fir'awn.\n- Not established: which group was weakened, how many were killed, or for how long.\n- Not established: what they feared, beyond the words of the ayah."
+    },
+    {
+      "anchor": "sent-to-firawn",
+      "position": 2,
+      "title_en": "Sent to Fir'awn",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 79,
+          "from": 15,
+          "to": 24
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God called to Musa in the sacred valley of Tuwa and told him to go to Fir'awn, who had transgressed.",
+          "verses": [
+            {
+              "surah": 79,
+              "from": 15,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God told Musa to ask Fir'awn whether he wished to be purified, and that he would guide him to his Lord so that he would fear.",
+          "verses": [
+            {
+              "surah": 79,
+              "from": 18,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Musa showed him the greatest sign, but Fir'awn denied it and disobeyed.",
+          "verses": [
+            {
+              "surah": 79,
+              "from": 20,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Then he turned his back, hurrying, gathered people and called out, saying that he was their lord, the highest.",
+          "verses": [
+            {
+              "surah": 79,
+              "from": 22,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God called to Musa and told him to go to Fir'awn, who had transgressed [c1]. Musa was to ask Fir'awn whether he wished to be purified and to offer to guide him to his Lord [c2]. Musa showed him the greatest sign, but Fir'awn denied and disobeyed, gathered people and said that he was their lord, the highest [c3][c4].",
+      "body_md": "God called to Musa in the sacred valley of Tuwa and told him to go to Fir'awn, who had transgressed [c1]. God told Musa to ask Fir'awn whether he wished to be purified, and that he would guide him to his Lord so that he would fear [c2]. Musa showed him the greatest sign, but Fir'awn denied it and disobeyed [c3]. Then he turned his back, hurrying, gathered people and called out, saying that he was their lord, the highest [c4].",
+      "deep_md": "The ayat do not say what the greatest sign was [c3]. The words that he was their lord, the highest, are recorded as Fir'awn's own, and the ayat do not explain how he meant them [c4].",
+      "kids_md": "God told Musa to go to Fir'awn [c1]. Musa was to ask Fir'awn whether he wished to be purified [c2]. Fir'awn denied and disobeyed, and said that he was their lord, the highest [c3][c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Musa is sent first with a question and an offer of guidance [c2]. Another is that Fir'awn's answer is denial and a claim to be the highest lord [c3][c4].",
+      "unknowns_md": "- Not established: when and where Musa went to Fir'awn, beyond the sacred valley where he was called.\n- Not established: what the greatest sign was.\n- Not established: whom Fir'awn gathered, or where."
+    },
+    {
+      "anchor": "the-signs-are-mocked",
+      "position": 3,
+      "title_en": "The signs are mocked",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 40,
+          "from": 23,
+          "to": 27
+        },
+        {
+          "surah": 43,
+          "from": 46,
+          "to": 50
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God sent Musa with His signs and clear authority to Fir'awn, Haman and Qarun, and they said that he was a lying sorcerer.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 23,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "When he brought them the truth from God, they said to kill the sons of those who believed with him and spare their women, and the plotting of the disbelievers was only in error.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Fir'awn said that they should leave him to kill Musa and let him call on his Lord, for he feared that Musa would change their religion or cause corruption to appear in the land.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Musa said that he took refuge in his Lord and their Lord from every arrogant one who does not believe in the Day of Account.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God sent Musa with His signs to Fir'awn and his chiefs, and he said that he was a messenger of the Lord of the worlds, and when he brought them the signs, they laughed at them.",
+          "verses": [
+            {
+              "surah": 43,
+              "from": 46,
+              "to": 47
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Each sign that God showed them was greater than its sister, and He seized them with punishment so that they might return.",
+          "verses": [
+            {
+              "surah": 43,
+              "from": 48,
+              "to": 48
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "They addressed him as sorcerer and asked him to call on his Lord for them by what He had covenanted with him, saying that they would be guided, but when God removed the punishment from them, they broke their word.",
+          "verses": [
+            {
+              "surah": 43,
+              "from": 49,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Musa came to Fir'awn, Haman and Qarun with God's signs, and they called him a lying sorcerer [c1]. They said to kill the sons of those who believed with him [c2], and Fir'awn said that he feared Musa would change their religion [c3]. They laughed at the signs [c5], and when the punishment was removed from them they broke their word [c7].",
+      "body_md": "God sent Musa with His signs and clear authority to Fir'awn, Haman and Qarun, and they said that he was a lying sorcerer [c1]. When he brought them the truth from God, they said to kill the sons of those who believed with him and spare their women, and the plotting of the disbelievers was only in error [c2]. Fir'awn said that they should leave him to kill Musa and let him call on his Lord, for he feared that Musa would change their religion or cause corruption to appear in the land [c3]. Musa said that he took refuge in his Lord and their Lord from every arrogant one who does not believe in the Day of Account [c4]. God sent Musa with His signs to Fir'awn and his chiefs, and he said that he was a messenger of the Lord of the worlds, and when he brought them the signs, they laughed at them [c5]. Each sign that God showed them was greater than its sister, and He seized them with punishment so that they might return [c6]. They addressed him as sorcerer and asked him to call on his Lord for them by what He had covenanted with him, saying that they would be guided, but when God removed the punishment from them, they broke their word [c7].",
+      "deep_md": "The ayat place Qarun and Haman with Fir'awn as those to whom Musa was sent [c1]. They record that each sign was greater than its sister [c6]. The ayat do not say what the signs or the punishments were [c6].",
+      "kids_md": "Musa came with signs from God, and Fir'awn and his chiefs laughed at them [c5]. They called Musa a sorcerer and said that they would be guided if he called on his Lord [c1][c7]. But when God removed the punishment, they broke their word [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage shows a promise made under punishment and broken when the punishment was removed [c7]. Another is that Musa answered Fir'awn's threat by taking refuge in his Lord [c3][c4].",
+      "unknowns_md": "- Not established: what the signs were, or in what order they came.\n- Not established: what the punishments were that were removed, or how many times this happened.\n- Not established: what the covenant was that they mention."
+    },
+    {
+      "anchor": "firawns-claims",
+      "position": 4,
+      "title_en": "Fir'awn's claims",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 28,
+          "from": 38,
+          "to": 39
+        },
+        {
+          "surah": 40,
+          "from": 29,
+          "to": 29
+        },
+        {
+          "surah": 40,
+          "from": 36,
+          "to": 37
+        },
+        {
+          "surah": 43,
+          "from": 51,
+          "to": 51
+        },
+        {
+          "surah": 43,
+          "from": 53,
+          "to": 54
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Fir'awn called out among his people, asking whether the kingdom of Egypt was not his and these rivers flowing beneath him, and asking whether they did not see.",
+          "verses": [
+            {
+              "surah": 43,
+              "from": 51,
+              "to": 51
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He asked why gold ornaments had not been cast upon Musa and why angels had not come with him as companions.",
+          "verses": [
+            {
+              "surah": 43,
+              "from": 53,
+              "to": 53
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He swayed his people and they obeyed him, for they were a defiantly disobedient people.",
+          "verses": [
+            {
+              "surah": 43,
+              "from": 54,
+              "to": 54
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Fir'awn said to the chiefs that he knew of no god for them other than himself, told Haman to light a fire on clay and make him a lofty tower so that he might climb up to the god of Musa, and said that he thought Musa a liar.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He and his forces were arrogant in the land without right and thought that they would not be returned to God.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Fir'awn said that he showed them only what he saw and guided them only to the way of right conduct.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 29,
+              "to": 29
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Fir'awn told Haman to build him a tower so that he might reach the ways, the ways of the heavens, and look at the god of Musa, and said that he thought Musa a liar, and his evil deed was made to seem fair to him and he was barred from the way, and his plotting was only in ruin.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 36,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Fir'awn asked his people whether the kingdom of Egypt and its rivers were not his [c1]. He told the chiefs that he knew of no god for them other than himself, and told Haman to build him a lofty tower to climb up to the god of Musa [c4][c7]. The ayat say that he and his forces were arrogant in the land and thought that they would not be returned to God [c5].",
+      "body_md": "Fir'awn called out among his people, asking whether the kingdom of Egypt was not his and these rivers flowing beneath him, and asking whether they did not see [c1]. He asked why gold ornaments had not been cast upon Musa and why angels had not come with him as companions [c2]. He swayed his people and they obeyed him, for they were a defiantly disobedient people [c3]. Fir'awn said to the chiefs that he knew of no god for them other than himself, told Haman to light a fire on clay and make him a lofty tower so that he might climb up to the god of Musa, and said that he thought Musa a liar [c4]. He and his forces were arrogant in the land without right and thought that they would not be returned to God [c5]. Fir'awn said that he showed them only what he saw and guided them only to the way of right conduct [c6]. Fir'awn told Haman to build him a tower so that he might reach the ways, the ways of the heavens, and look at the god of Musa, and said that he thought Musa a liar, and his evil deed was made to seem fair to him and he was barred from the way, and his plotting was only in ruin [c7].",
+      "deep_md": "The ayat record Fir'awn's claims in his own words, including that he guided only to the way of right conduct [c6]. They also record that his evil deed was made to seem fair to him [c7]. An ayah in this passage records a remark by Fir'awn about Musa himself, which this draft does not restate [c2].",
+      "kids_md": "Fir'awn said that he knew of no god for the chiefs other than himself [c4]. He told Haman to build him a lofty tower so that he could climb up to the god of Musa [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage sets Fir'awn's claims beside the statement that he and his forces thought they would not be returned to God [c5]. Another is that his tower is presented as an attempt to reach the god of Musa [c7].",
+      "unknowns_md": "- Not established: whether the tower was built, or what happened to it.\n- Not established: what the ways of the heavens means in detail.\n- Not established: how far the kingdom of Egypt extended, or which rivers are meant.\n- Not established: how Haman answered."
+    },
+    {
+      "anchor": "the-end",
+      "position": 5,
+      "title_en": "The end",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 28,
+          "from": 40,
+          "to": 42
+        },
+        {
+          "surah": 40,
+          "from": 45,
+          "to": 46
+        },
+        {
+          "surah": 43,
+          "from": 55,
+          "to": 56
+        },
+        {
+          "surah": 73,
+          "from": 15,
+          "to": 16
+        },
+        {
+          "surah": 79,
+          "from": 25,
+          "to": 26
+        },
+        {
+          "surah": 85,
+          "from": 17,
+          "to": 20
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God seized him and his forces and cast them into the sea, and the ayah tells the listener to look at the end of the wrongdoers.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God made them leaders who call to the Fire, on the Day of Resurrection they will not be helped, in this world a curse followed them, and on the Day of Resurrection they will be among the despised.",
+          "verses": [
+            {
+              "surah": 28,
+              "from": 41,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When they angered God, He took vengeance on them and drowned them all, and made them a precedent and an example for later people.",
+          "verses": [
+            {
+              "surah": 43,
+              "from": 55,
+              "to": 56
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God seized him with the punishment of the Hereafter and of the first life, and the ayah says that in this is a lesson for whoever fears.",
+          "verses": [
+            {
+              "surah": 79,
+              "from": 25,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God says that as He sent a messenger to Fir'awn, He has sent a messenger to the listeners as a witness over them, and that Fir'awn disobeyed the messenger, so God seized him with a heavy seizing.",
+          "verses": [
+            {
+              "surah": 73,
+              "from": 15,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The family of Fir'awn were enveloped by the worst of punishment, the Fire is shown to them morning and evening, and on the day the Hour is established they are to be entered into the severest punishment.",
+          "verses": [
+            {
+              "surah": 40,
+              "from": 45,
+              "to": 46
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The Quran asks whether the story of the forces has reached the listener, Fir'awn and Thamud, and says that those who disbelieve are in denial while God encompasses them from behind.",
+          "verses": [
+            {
+              "surah": 85,
+              "from": 17,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God seized Fir'awn and his forces and cast them into the sea [c1]. The Quran says that a curse followed them in this world [c2] and that God took vengeance on them and drowned them all, making them an example for later people [c3]. It adds that in this is a lesson for whoever fears [c4].",
+      "body_md": "God seized him and his forces and cast them into the sea, and the ayah tells the listener to look at the end of the wrongdoers [c1]. God made them leaders who call to the Fire, on the Day of Resurrection they will not be helped, in this world a curse followed them, and on the Day of Resurrection they will be among the despised [c2]. When they angered God, He took vengeance on them and drowned them all, and made them a precedent and an example for later people [c3]. God seized him with the punishment of the Hereafter and of the first life, and the ayah says that in this is a lesson for whoever fears [c4]. God says that as He sent a messenger to Fir'awn, He has sent a messenger to the listeners as a witness over them, and that Fir'awn disobeyed the messenger, so God seized him with a heavy seizing [c5]. The family of Fir'awn were enveloped by the worst of punishment, the Fire is shown to them morning and evening, and on the day the Hour is established they are to be entered into the severest punishment [c6]. The Quran asks whether the story of the forces has reached the listener, Fir'awn and Thamud, and says that those who disbelieve are in denial while God encompasses them from behind [c7].",
+      "deep_md": "The ayat speak of the end in various ways: a seizing, a drowning, a curse in this world and the Fire shown morning and evening [c1][c3][c5][c6]. The ayat do not explain what the Fire shown morning and evening means for the time between the drowning and the Hour [c6].",
+      "kids_md": "God seized Fir'awn and his forces and cast them into the sea [c1]. God made them an example for later people [c3]. The Quran says that in this is a lesson for whoever fears [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat present the end of Fir'awn as a lesson for whoever fears [c4]. Another is that they present his end as an example for later people [c3].",
+      "unknowns_md": "- Not established: the date or the place of the drowning, or how many were with him.\n- Not established in these ayat: what became of his body.\n- Not established: who succeeded him, or what became of his people.\n- Not established: how the Fire shown morning and evening is to be understood."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: later works give a personal name to the ruler and place him in a dynasty, with different identifications.",
+    "Whether Fir'awn is a personal name or a title is not settled by the text.",
+    "Hadith to add later: reports about Fir'awn and his end, with a named grader for each; none is used here."
+  ]
+}

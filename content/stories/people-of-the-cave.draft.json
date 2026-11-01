@@ -1,0 +1,341 @@
+{
+  "slug": "people-of-the-cave",
+  "title_en": "The People of the Cave",
+  "title_ar": "أصحاب الكهف",
+  "subject": {
+    "type": "person",
+    "event_slug": "people-of-the-cave"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-youths-take-refuge",
+      "position": 1,
+      "title_en": "The youths take refuge",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 18,
+          "from": 9,
+          "to": 16
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran asks whether the listener thought that the companions of the cave and the Raqim were an extraordinary sign among God's signs.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 9,
+              "to": 9
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The youths took refuge in the cave and said, our Lord, grant us mercy from You and prepare right guidance for us in our affair.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God struck over their ears in the cave for a number of years, an expression commonly read as sleep, and then raised them up so that He might know which of the parties best counted the time that they had stayed.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 11,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God said that He relates their news in truth, that they were youths who believed in their Lord, and that He increased them in guidance.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God strengthened their hearts when they stood up and said, our Lord is the Lord of the heavens and the earth, we will never call on any god besides Him, for then we would have spoken an outrage.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They said of their people that they had taken gods besides Him, asked why they did not bring a clear authority for them, and asked who does greater wrong than one who invents a lie against God.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "One of them said that, since they had withdrawn from them and from what they worship except God, they should take refuge in the cave, where their Lord would spread His mercy for them and prepare ease for them in their affair.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 16,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The companions of the cave were youths who believed in their Lord, and God increased them in guidance [c4]. They took refuge in the cave and asked their Lord for mercy [c2]. They said that they would never call on any god besides Him [c5], and agreed to withdraw from their people to the cave [c7].",
+      "body_md": "The Quran asks whether the listener thought that the companions of the cave and the Raqim were an extraordinary sign among God's signs [c1]. The youths took refuge in the cave and said, our Lord, grant us mercy from You and prepare right guidance for us in our affair [c2]. God struck over their ears in the cave for a number of years, an expression commonly read as sleep, and then raised them up so that He might know which of the parties best counted the time that they had stayed [c3]. God said that He relates their news in truth, that they were youths who believed in their Lord, and that He increased them in guidance [c4]. God strengthened their hearts when they stood up and said, our Lord is the Lord of the heavens and the earth, we will never call on any god besides Him, for then we would have spoken an outrage [c5]. They said of their people that they had taken gods besides Him, asked why they did not bring a clear authority for them, and asked who does greater wrong than one who invents a lie against God [c6]. One of them said that, since they had withdrawn from them and from what they worship except God, they should take refuge in the cave, where their Lord would spread His mercy for them and prepare ease for them in their affair [c7].",
+      "deep_md": "The Quran names them the companions of the cave and the Raqim, and the ayat do not explain the word Raqim [c1]. The expression struck over their ears is commonly read as sleep [c3]. The ayat leave open who speaks the last words [c7].",
+      "kids_md": "The youths believed in their Lord, and God increased them in guidance [c4]. They took refuge in the cave and asked their Lord for mercy [c2]. They said that they would never call on any god besides God [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the youths took refuge in the cave and asked their Lord for mercy and right guidance [c2]. Another is that God says He strengthened their hearts when they stood up [c5].",
+      "unknowns_md": "- Not established: how many youths there were, their names, their city, their time or where the cave was.\n- Not established: what the Raqim is; the ayah mentions it beside the companions of the cave without explaining it.\n- Not established: how many years they stayed in this passage; it says only a number of years, and the length is taken up later in the passage.\n- Not established: who their people were, beyond the words their people."
+    },
+    {
+      "anchor": "in-the-cave",
+      "position": 2,
+      "title_en": "In the cave",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 18,
+          "from": 17,
+          "to": 18
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The listener would see the sun, when it rose, inclining away from their cave on the right, and when it set, passing them on the left, while they were in a wide space within it, which the ayah calls one of God's signs.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Whoever God guides is rightly guided, and whoever He leads astray, for him the listener will find no guiding friend.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The listener would think them awake while they were asleep, and God turned them to the right and to the left, and their dog was at the threshold.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "If the listener had looked at them, he would have turned away from them in flight and been filled with fear.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat describe the sun inclining away from their cave on the right when it rose and passing them on the left when it set, while they were in a wide space within it [c1]. They seemed awake though they were asleep, and God turned them to the right and to the left [c3].",
+      "body_md": "The listener would see the sun, when it rose, inclining away from their cave on the right, and when it set, passing them on the left, while they were in a wide space within it, which the ayah calls one of God's signs [c1]. Whoever God guides is rightly guided, and whoever He leads astray, for him the listener will find no guiding friend [c2]. The listener would think them awake while they were asleep, and God turned them to the right and to the left, and their dog was at the threshold [c3]. If the listener had looked at them, he would have turned away from them in flight and been filled with fear [c4].",
+      "deep_md": "The ayah calls the movement of the sun one of God's signs [c1]. It speaks of their dog at the threshold and gives no more about it [c3]. The words about turning away in flight are addressed to the listener and describe the listener's reaction, not the youths [c4].",
+      "kids_md": "The sun inclined away from their cave when it rose and passed them when it set [c1]. They seemed awake though they were asleep, and God turned them to the right and to the left [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayah describes the youths as kept by God, who turned them to the right and to the left [c3]. Another is that whoever God guides is rightly guided [c2].",
+      "unknowns_md": "- Not established: how they slept, or why God turned them.\n- Not established: which way the cave faced; the ayah speaks of the movement of the sun and gives no compass direction.\n- Not established: anything about the dog beyond the words their dog and the threshold. Named in later tradition, not in the Quranic text: the dog is given a name in later works."
+    },
+    {
+      "anchor": "awakened",
+      "position": 3,
+      "title_en": "Awakened",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 18,
+          "from": 19,
+          "to": 21
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God raised them so that they might question one another, and one of them asked how long they had stayed, and they answered a day or part of a day, and others said that their Lord knew best how long they had stayed.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They said to send one of them with this silver to the city, to see which food is purest and bring provision from it, and to be gentle and let no one learn of them.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They said that if those people found them out, they would stone them or return them to their religion, and then they would never succeed.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 20,
+              "to": 20
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God caused them to be found so that people would know that God's promise is true and that the Hour is beyond doubt, when people were disputing among themselves about their affair.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Some said to build a structure over them, their Lord knowing best about them, and those who prevailed over their affair said that they would build a place of prostration over them.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 21,
+              "to": 21
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God raised them so that they might question one another, and they answered that they had stayed a day or part of a day [c1]. They sent one of them to the city with silver, asking him to be gentle and let no one learn of them [c2]. God caused them to be found so that people would know that God's promise is true and that the Hour is beyond doubt [c4].",
+      "body_md": "God raised them so that they might question one another, and one of them asked how long they had stayed, and they answered a day or part of a day, and others said that their Lord knew best how long they had stayed [c1]. They said to send one of them with this silver to the city, to see which food is purest and bring provision from it, and to be gentle and let no one learn of them [c2]. They said that if those people found them out, they would stone them or return them to their religion, and then they would never succeed [c3]. God caused them to be found so that people would know that God's promise is true and that the Hour is beyond doubt, when people were disputing among themselves about their affair [c4]. Some said to build a structure over them, their Lord knowing best about them, and those who prevailed over their affair said that they would build a place of prostration over them [c5].",
+      "deep_md": "The ayah says that others among them replied that their Lord knew best how long they had stayed [c1]. It records a dispute among people about their affair, and the words of those who prevailed over it [c4][c5].",
+      "kids_md": "God raised them so that they could ask one another how long they had stayed [c1]. They sent one of them to the city with silver to buy food [c2]. God caused them to be found so that people would know that God's promise is true [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat give them the words their Lord knew best about how long they had stayed [c1]. Another is that being found is presented as a way for people to know that God's promise is true [c4].",
+      "unknowns_md": "- Not established: the name of the city, or who ruled it.\n- Not established: who those people were that they feared, or how they would have treated them.\n- Not established: who the people were who found them, or who prevailed over their affair.\n- Not established: what structure or place of prostration was built, or where."
+    },
+    {
+      "anchor": "the-count-and-the-length-of-the-stay",
+      "position": 4,
+      "title_en": "The count and the length of the stay",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 18,
+          "from": 22,
+          "to": 26
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Quran says that people will give differing numbers for the youths, calling these guesses at the unseen, and tells the listener to say that his Lord knows best their number, that few know it, and not to argue about them except with plain argument nor seek information about them from any of them.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The Quran tells the one addressed not to say of anything that he will do it tomorrow, without adding if God wills, to remember his Lord when he forgets, and to say, perhaps my Lord will guide me to something closer to right guidance than this.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 23,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The ayah says that they stayed in their cave three hundred years and added nine.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 25,
+              "to": 25
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The next ayah tells the listener to say that God knows best how long they stayed, that the unseen of the heavens and the earth belongs to Him, that He sees and hears perfectly, that they have no guardian besides Him, and that He shares His judgement with no one.",
+          "verses": [
+            {
+              "surah": 18,
+              "from": 26,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The Quran says that people will give differing numbers for the youths, and tells the listener to say that his Lord knows best their number [c1]. It states that they stayed in their cave three hundred years and added nine [c3], and the next ayah says that God knows best how long they stayed [c4].",
+      "body_md": "The Quran says that people will give differing numbers for the youths, calling these guesses at the unseen, and tells the listener to say that his Lord knows best their number, that few know it, and not to argue about them except with plain argument nor seek information about them from any of them [c1]. The Quran tells the one addressed not to say of anything that he will do it tomorrow, without adding if God wills, to remember his Lord when he forgets, and to say, perhaps my Lord will guide me to something closer to right guidance than this [c2]. The ayah says that they stayed in their cave three hundred years and added nine [c3]. The next ayah tells the listener to say that God knows best how long they stayed, that the unseen of the heavens and the earth belongs to Him, that He sees and hears perfectly, that they have no guardian besides Him, and that He shares His judgement with no one [c4].",
+      "deep_md": "The sentence about three hundred years and nine added is followed at once by the statement that God knows best how long they stayed, and readers differ on whether the first is God's own statement or a report of what people say [c3][c4]. The words about saying if God wills are addressed to the listener and sit inside this passage [c2].",
+      "kids_md": "People will give different numbers for the youths, but God knows best their number [c1]. The Quran says that they stayed in their cave three hundred years and added nine [c3]. Then it says that God knows best how long they stayed [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage sends questions about the number and the length of the stay back to God's knowledge [c1][c4]. Another is that it tells the one addressed to say if God wills when speaking of tomorrow [c2].",
+      "unknowns_md": "- Not established: the number of the youths; the passage reports differing guesses without confirming one, and says that few know it.\n- Not established: whether the years are solar or lunar, or whether the sentence about three hundred years and nine added is God's own statement or a report; readers differ.\n- Not established: how the words about saying if God wills relate to the account of the youths, beyond their place in the passage."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: later works give names to the youths, their dog, the ruler and the city, say how many they were, and place the cave in different lands.",
+    "Hadith to add later: reports about the companions of the cave, with a named grader for each; none is used here."
+  ]
+}

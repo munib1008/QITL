@@ -1,0 +1,168 @@
+{
+  "slug": "luqman",
+  "title_en": "Luqman",
+  "title_ar": "لقمان",
+  "subject": {
+    "type": "person",
+    "event_slug": "luqman"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "wisdom-given",
+      "position": 1,
+      "title_en": "Wisdom given",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 31,
+          "from": 12,
+          "to": 12
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God gave Luqman wisdom, saying, be grateful to God.",
+          "verses": [
+            {
+              "surah": 31,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Whoever is grateful is grateful only for himself, and whoever is ungrateful, God is self-sufficient and worthy of praise.",
+          "verses": [
+            {
+              "surah": 31,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God gave Luqman wisdom [c1]. The ayah adds that whoever is grateful is grateful only for himself [c2].",
+      "body_md": "God gave Luqman wisdom, saying, be grateful to God [c1]. Whoever is grateful is grateful only for himself, and whoever is ungrateful, God is self-sufficient and worthy of praise [c2].",
+      "deep_md": "The ayah says that God gave Luqman wisdom, and it does not say that he was a prophet [c1]. The words be grateful to God follow the gift of wisdom [c1].",
+      "kids_md": "God gave Luqman wisdom [c1]. Whoever is grateful is grateful only for himself [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the gift of wisdom is joined at once to a call to be grateful to God [c1]. Another is that the ayah says gratitude is for the grateful one's own benefit [c2].",
+      "unknowns_md": "- Not established: whether Luqman was a prophet, a sage or a righteous person; the ayah says only that God gave him wisdom, and readers have differed.\n- Not established: his time, his land or his occupation."
+    },
+    {
+      "anchor": "luqman-advises-his-son",
+      "position": 2,
+      "title_en": "Luqman advises his son",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 31,
+          "from": 13,
+          "to": 19
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Luqman said to his son, while advising him, that he should not associate anything with God, since association is a great wrong.",
+          "verses": [
+            {
+              "surah": 31,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The passage then states that the human being has been enjoined to be kind to his parents, that his mother bore him in weakness upon weakness, and that he should be grateful to God and to his parents, since the return is to God.",
+          "verses": [
+            {
+              "surah": 31,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "It adds that if they strive with him to make him associate with God what he has no knowledge of, he is not to obey them, but is to keep company with them in this world with kindness and follow the way of one who turns to God, for the return is to God, who will tell them what they did.",
+          "verses": [
+            {
+              "surah": 31,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Luqman told his son that even if a thing were the weight of a grain of mustard seed, inside a rock or in the heavens or in the earth, God would bring it, for God is subtle and aware.",
+          "verses": [
+            {
+              "surah": 31,
+              "from": 16,
+              "to": 16
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He told him to establish prayer, enjoin what is right, forbid what is wrong and be patient with whatever befalls him, for that is among matters of firm resolve.",
+          "verses": [
+            {
+              "surah": 31,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "He told him not to turn away from people in scorn and not to walk in the earth exultantly, for God does not love any self-deluded boaster.",
+          "verses": [
+            {
+              "surah": 31,
+              "from": 18,
+              "to": 18
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "He told him to be moderate in his walking and to lower his voice, for the most disagreeable of voices is the voice of donkeys.",
+          "verses": [
+            {
+              "surah": 31,
+              "from": 19,
+              "to": 19
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Luqman told his son not to associate anything with God [c1]. He told him that God would bring even a thing the weight of a grain of mustard seed [c4], and to establish prayer and be patient [c5]. He told him not to walk exultantly, to be moderate in his walking and to lower his voice [c6][c7].",
+      "body_md": "Luqman said to his son, while advising him, that he should not associate anything with God, since association is a great wrong [c1]. The passage then states that the human being has been enjoined to be kind to his parents, that his mother bore him in weakness upon weakness, and that he should be grateful to God and to his parents, since the return is to God [c2]. It adds that if they strive with him to make him associate with God what he has no knowledge of, he is not to obey them, but is to keep company with them in this world with kindness and follow the way of one who turns to God, for the return is to God, who will tell them what they did [c3]. Luqman told his son that even if a thing were the weight of a grain of mustard seed, inside a rock or in the heavens or in the earth, God would bring it, for God is subtle and aware [c4]. He told him to establish prayer, enjoin what is right, forbid what is wrong and be patient with whatever befalls him, for that is among matters of firm resolve [c5]. He told him not to turn away from people in scorn and not to walk in the earth exultantly, for God does not love any self-deluded boaster [c6]. He told him to be moderate in his walking and to lower his voice, for the most disagreeable of voices is the voice of donkeys [c7].",
+      "deep_md": "The passage places a statement about kindness to parents between Luqman's first and later words, and the ayat do not mark whether it is his speech or God's [c2][c3]. The ayah also gives a period for weaning, which this draft leaves out of its claims [c2].",
+      "kids_md": "Luqman told his son not to associate anything with God [c1]. He told him that God would bring even a thing the weight of a grain of mustard seed [c4]. He told him to be patient, to be moderate in his walking and to lower his voice [c5][c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Luqman begins his advice with the greatest wrong and ends with matters of conduct such as walking and speaking [c1][c7]. Another is that the passage places kindness to parents beside the warning not to obey them in association with God [c2][c3].",
+      "unknowns_md": "- Not established: the son's name or age, or how he answered.\n- Not established: whether the passage about parents is Luqman's speech or God's own words added within it.\n- Not established: what the voice of donkeys refers to beyond the comparison in the ayah.\n- Not established: where and when Luqman said these things."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: later works give a name to Luqman's son and describe Luqman's origin and occupation.",
+    "Whether Luqman was a prophet is not stated by the Quran; the text says that God gave him wisdom.",
+    "Hadith to add later: reports about Luqman, with a named grader for each; none is used here."
+  ]
+}

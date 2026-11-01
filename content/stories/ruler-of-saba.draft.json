@@ -1,0 +1,272 @@
+{
+  "slug": "ruler-of-saba",
+  "title_en": "The woman who ruled Saba",
+  "title_ar": null,
+  "subject": {
+    "type": "person",
+    "event_slug": "ruler-of-saba"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-report-from-saba",
+      "position": 1,
+      "title_en": "The report from Saba",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 27,
+          "from": 22,
+          "to": 26
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "A speaker who had stayed away only a short while said to the one he addressed that he had learned what the other had not, and that he had come from Saba with certain news.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 22,
+              "to": 22
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He said that he had found a woman who rules over them, who had been given of everything and had a great throne.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 23,
+              "to": 23
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He said that he had found her and her people prostrating to the sun instead of God, that Satan had made their deeds seem fair to them and turned them from the way, so that they were not guided.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 24,
+              "to": 24
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The speaker said that they did not prostrate to God, who brings out what is hidden in the heavens and the earth and knows what they hide and what they declare, God, besides whom there is no god, Lord of the great throne.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 25,
+              "to": 26
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "A speaker came with certain news from Saba [c1]. He said that he had found a woman who rules over them and who had a great throne [c2], and that she and her people prostrated to the sun instead of God [c3].",
+      "body_md": "A speaker who had stayed away only a short while said to the one he addressed that he had learned what the other had not, and that he had come from Saba with certain news [c1]. He said that he had found a woman who rules over them, who had been given of everything and had a great throne [c2]. He said that he had found her and her people prostrating to the sun instead of God, that Satan had made their deeds seem fair to them and turned them from the way, so that they were not guided [c3]. The speaker said that they did not prostrate to God, who brings out what is hidden in the heavens and the earth and knows what they hide and what they declare, God, besides whom there is no god, Lord of the great throne [c4].",
+      "deep_md": "The ayat do not name the speaker or the one he addresses [c1]. The end of the report can be read as a statement that they do not prostrate to God or as a call to prostrate to Him, since the Arabic allows both [c4].",
+      "kids_md": "A speaker brought news from Saba [c1]. He had found a woman who ruled over the people there [c2]. They prostrated to the sun and not to God [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the report notes the woman's wealth and great throne and then turns to what she and her people worshipped [c2][c3]. Another is that the report ends by naming God as the Lord of the great throne [c4].",
+      "unknowns_md": "- Not established in these ayat: who the speaker is or whom he addresses; the identification comes from the ayat before this item.\n- Not established: where Saba lay, or when this took place.\n- Not established: her name, how she came to rule, or how long she ruled.\n- Not established: what given of everything means in detail."
+    },
+    {
+      "anchor": "the-letter-and-the-gift",
+      "position": 2,
+      "title_en": "The letter and the gift",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 27,
+          "from": 27,
+          "to": 37
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The one addressed said that they would see whether the speaker had told the truth or was a liar, and told him to take his letter, throw it to them, turn away from them and see what they would answer.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 27,
+              "to": 28
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "She told the chiefs that a noble letter had been thrown to her, that it was from Sulayman, that it began in the name of God, and that it said not to exalt themselves against him but to come to him in submission.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 29,
+              "to": 31
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "She asked the chiefs to advise her on her matter, saying that she decided no matter until they were present, and they answered that they had strength and great might, but the command was hers, so she should consider what to command.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 32,
+              "to": 33
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "She said that kings, when they enter a town, ruin it and make its mighty people low, and that this is what they do, and that she was sending them a gift and would see with what the envoys would return.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 34,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "When the envoy came to Sulayman, he said that they should not supply him with wealth, since what God had given him was better than what He had given them, and that they rejoiced in their gift, and he told the envoy to go back to them and said that he would come to them with forces they could not face and drive them out from there humbled and in disgrace.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 36,
+              "to": 37
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "A letter from Sulayman was thrown to her, and she told the chiefs what it said and asked their advice [c2][c3]. She said that she would send a gift and see what the envoys returned with [c4]. Sulayman answered that what God had given him was better than their gift [c5].",
+      "body_md": "The one addressed said that they would see whether the speaker had told the truth or was a liar, and told him to take his letter, throw it to them, turn away from them and see what they would answer [c1]. She told the chiefs that a noble letter had been thrown to her, that it was from Sulayman, that it began in the name of God, and that it said not to exalt themselves against him but to come to him in submission [c2]. She asked the chiefs to advise her on her matter, saying that she decided no matter until they were present, and they answered that they had strength and great might, but the command was hers, so she should consider what to command [c3]. She said that kings, when they enter a town, ruin it and make its mighty people low, and that this is what they do, and that she was sending them a gift and would see with what the envoys would return [c4]. When the envoy came to Sulayman, he said that they should not supply him with wealth, since what God had given him was better than what He had given them, and that they rejoiced in their gift, and he told the envoy to go back to them and said that he would come to them with forces they could not face and drive them out from there humbled and in disgrace [c5].",
+      "deep_md": "The ayat show her asking for advice before deciding, and the chiefs leaving the command to her [c3]. She gives her words about kings entering a town beside her decision to send a gift [c4]. The Arabic verb for the coming to Sulayman is singular while the envoys in the previous ayah are plural, and the ayat do not explain this [c5].",
+      "kids_md": "She received a letter from Sulayman [c2]. She asked the chiefs for their advice [c3]. She decided to send a gift [c4]. Sulayman said that what God had given him was better [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that she asked for advice before she acted [c3]. Another is that Sulayman put what God had given him above a gift of wealth [c5].",
+      "unknowns_md": "- Not established: how the letter was delivered, or what else it said beyond the words recorded.\n- Not established: what the gift was, or how many envoys carried it.\n- Not established: how many forces Sulayman meant, or whether they were ever sent.\n- Not established: who the chiefs were, or how many."
+    },
+    {
+      "anchor": "the-throne-and-the-palace",
+      "position": 3,
+      "title_en": "The throne and the palace",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 27,
+          "from": 38,
+          "to": 44
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Sulayman asked the chiefs which of them would bring him her throne before they came to him in submission.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 38,
+              "to": 38
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "A strong one from the jinn said that he would bring it before Sulayman rose from his place, and one who had knowledge of the Book said that he would bring it before his glance returned to him.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 39,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When he saw it set before him, he said that it was of the favour of his Lord, to test whether he would be thankful or ungrateful, and that whoever is thankful is thankful only for himself, while whoever is ungrateful, his Lord is self-sufficient and generous.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 40,
+              "to": 40
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He said to disguise her throne for her, to see whether she would be guided or be among those who are not guided, and when she came she was asked whether her throne was like this, and she said that it seemed to be it.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 41,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "A statement follows that they had been given knowledge before her and had been in submission, and the ayah does not mark who says it.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "The ayah says that what she used to worship besides God had barred her, for she was of a disbelieving people.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 43,
+              "to": 43
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "She was told to enter the palace, and when she saw it she took it for a pool of water, and he said that it was a palace smoothed with glass, and she said, my Lord, I have wronged myself, and I submit with Sulayman to God, Lord of the worlds.",
+          "verses": [
+            {
+              "surah": 27,
+              "from": 44,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Sulayman asked which of the chiefs would bring her throne before they came to him in submission [c1], and one who had knowledge of the Book offered to bring it before his glance returned [c2]. She was asked whether her throne was like this and said that it seemed to be it [c4]. In the end she said that she had wronged herself and submitted with Sulayman to God, Lord of the worlds [c7].",
+      "body_md": "Sulayman asked the chiefs which of them would bring him her throne before they came to him in submission [c1]. A strong one from the jinn said that he would bring it before Sulayman rose from his place, and one who had knowledge of the Book said that he would bring it before his glance returned to him [c2]. When he saw it set before him, he said that it was of the favour of his Lord, to test whether he would be thankful or ungrateful, and that whoever is thankful is thankful only for himself, while whoever is ungrateful, his Lord is self-sufficient and generous [c3]. He said to disguise her throne for her, to see whether she would be guided or be among those who are not guided, and when she came she was asked whether her throne was like this, and she said that it seemed to be it [c4]. A statement follows that they had been given knowledge before her and had been in submission, and the ayah does not mark who says it [c5]. The ayah says that what she used to worship besides God had barred her, for she was of a disbelieving people [c6]. She was told to enter the palace, and when she saw it she took it for a pool of water, and he said that it was a palace smoothed with glass, and she said, my Lord, I have wronged myself, and I submit with Sulayman to God, Lord of the worlds [c7].",
+      "deep_md": "The first speaker in the passage is not named in these ayat, and the draft names Sulayman because the passage continues from his earlier words [c1]. The ayah leaves open who says that they had been given knowledge before her [c5]. The one with knowledge of the Book is not named [c2].",
+      "kids_md": "Sulayman asked who could bring her throne [c1]. One who had knowledge of the Book said that he could bring it before his glance came back [c2]. When she came, she said that her throne seemed to be it [c4]. At the end she said that she submitted to God, Lord of the worlds [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Sulayman, on seeing the throne before him, spoke of it as a favour from his Lord and a test of thanks [c3]. Another is that her last words in the passage are an admission of having wronged herself and a statement of submission to God [c7].",
+      "unknowns_md": "- Not established: who the one with knowledge of the Book was, or what knowledge he had. Named in later tradition, not in the Quranic text: he is called Asaf.\n- Not established: how the throne was brought, or how far it was.\n- Not established: who speaks the statement about knowledge and submission in the ayah, and who says that the palace is smoothed with glass; the pronouns are not marked.\n- Not established: anything about her life after the last words of the passage.\n- The ayah mentions an action she took on seeing the palace; this draft leaves that detail out."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: she is called Bilqis (or Balqis), and later works give her lineage, her city and the later course of her life.",
+    "Hadith to add later: reports about the woman who ruled Saba, with a named grader for each; none is used here."
+  ]
+}

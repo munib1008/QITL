@@ -1,0 +1,182 @@
+{
+  "slug": "samiri",
+  "title_en": "The Samiri",
+  "title_ar": null,
+  "subject": {
+    "type": "person",
+    "event_slug": "samiri"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: Arabic and Urdu are left for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words, and from nothing else: no hadith, no tafsir, no later tradition in the story texts. Chapters are a reading order, not a chronology the Quran claims. Where the Quran leaves a person unnamed or names only a title, the draft keeps them unnamed; identifications and later-tradition names appear only in the unknowns and uncertainties. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-calf-and-the-questions",
+      "position": 1,
+      "title_en": "The calf and the questions",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 20,
+          "from": 85,
+          "to": 97
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God told Musa that his people had been tried after he left, and that the Samiri had led them astray.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 85,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Musa returned to his people angry and grieved, and asked whether their Lord had not promised them a good promise, whether the time had seemed long to them, or whether they had wished that anger from their Lord should fall on them, so that they broke their promise to him.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 86,
+              "to": 86
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They answered that they had not broken their promise to him of their own accord, but had been made to carry loads of the people's ornaments, which they threw, and that the Samiri threw likewise.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 87,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "He brought out for them a calf, a body that made a lowing sound, and they said that this was their god and the god of Musa, and that he had forgotten.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 88,
+              "to": 88
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God asks whether they did not see that it returned no word to them and had no power to harm or benefit them.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 89,
+              "to": 89
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Harun had told them before this that they were only being tried by it, that their Lord is the Merciful, and that they should follow him and obey his command.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 90,
+              "to": 90
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "They said that they would not cease to be devoted to it until Musa returned to them.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 91,
+              "to": 91
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "Musa asked Harun what had prevented him, when he saw them go astray, from following him, and asked whether he had disobeyed his command.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 92,
+              "to": 93
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "Harun, addressing him as son of his mother, asked him not to seize him, and said that he had feared that Musa would say that he had caused division among the Children of Israel and had not waited for his word.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 94,
+              "to": 94
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "Musa asked the Samiri what his concern was.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 95,
+              "to": 95
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "The Samiri said that he had seen what they had not seen, so he took a handful from the trace of the messenger and threw it, and that this was how his soul had suggested it to him.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 96,
+              "to": 96
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "Musa told him to go, for it would be his lot in this life to say that there is to be no touching, and that he had an appointment that he would not miss, and he told him to look at his god, to which he had stayed devoted, saying that he would burn it and scatter it in the sea.",
+          "verses": [
+            {
+              "surah": 20,
+              "from": 97,
+              "to": 97
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God told Musa that his people had been tried after he left, and that the Samiri had led them astray [c1]. The Samiri brought out a calf, and the people said that it was their god [c4]. Harun had told them that they were only being tried by it, but they said that they would stay devoted to it until Musa returned [c6][c7]. Musa asked Harun and then the Samiri what lay behind it, and told the Samiri to go [c8][c10][c12].",
+      "body_md": "God told Musa that his people had been tried after he left, and that the Samiri had led them astray [c1]. Musa returned to his people angry and grieved, and asked whether their Lord had not promised them a good promise, whether the time had seemed long to them, or whether they had wished that anger from their Lord should fall on them, so that they broke their promise to him [c2]. They answered that they had not broken their promise to him of their own accord, but had been made to carry loads of the people's ornaments, which they threw, and that the Samiri threw likewise [c3]. He brought out for them a calf, a body that made a lowing sound, and they said that this was their god and the god of Musa, and that he had forgotten [c4]. God asks whether they did not see that it returned no word to them and had no power to harm or benefit them [c5]. Harun had told them before this that they were only being tried by it, that their Lord is the Merciful, and that they should follow him and obey his command [c6]. They said that they would not cease to be devoted to it until Musa returned to them [c7]. Musa asked Harun what had prevented him, when he saw them go astray, from following him, and asked whether he had disobeyed his command [c8]. Harun, addressing him as son of his mother, asked him not to seize him, and said that he had feared that Musa would say that he had caused division among the Children of Israel and had not waited for his word [c9]. Musa asked the Samiri what his concern was [c10]. The Samiri said that he had seen what they had not seen, so he took a handful from the trace of the messenger and threw it, and that this was how his soul had suggested it to him [c11]. Musa told him to go, for it would be his lot in this life to say that there is to be no touching, and that he had an appointment that he would not miss, and he told him to look at his god, to which he had stayed devoted, saying that he would burn it and scatter it in the sea [c12].",
+      "deep_md": "The ayah gives the Samiri's act as bringing out a calf, a body that made a lowing sound, and does not say how it was made [c4]. The words and he had forgotten can be read as said by the people of Musa or of the Samiri, and the Arabic allows both [c4]. The ayah gives Harun's address as son of my mother and records a physical action in his words, which this draft leaves out [c9]. The messenger in the Samiri's words is not named in the ayah [c11]. The ayah gives the sentence there is to be no touching without explaining it [c12].",
+      "kids_md": "The Samiri led the people astray [c1]. He brought out a calf, and the people said that it was their god [c4]. Harun told them that they were only being tried by it [c6]. They said that they would stay devoted to it until Musa returned [c7]. Musa asked Harun why he had not followed him, and Harun said that he feared Musa would say he had caused division among the Children of Israel [c8][c9]. Musa told the Samiri to go, and said that he would burn the god to which he had stayed devoted [c12].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage places the people's devotion to the calf beside God's question about whether they saw that it returned no word [c4][c5]. Another is that Harun's answer is about fear of causing division and the Samiri's is about what his soul suggested [c9][c11].",
+      "unknowns_md": "- Not established: the Samiri's personal name, his tribe or his origin; the ayah uses only the descriptive form the Samiri.\n- Not established: where the ornaments came from, or how the calf was made or how it came to make a sound.\n- Not established: how long Musa was away.\n- Not established: who is the subject of the words and he had forgotten.\n- Not established: who the messenger is in the Samiri's words, what the handful was, or what the trace was. Named in later tradition, not in the Quranic text: the messenger is identified as Jibril, and the handful as dust from the track of his horse.\n- Not established: what the words no touching mean, or how they applied to him.\n- Not established: what the appointment was, what became of the Samiri, or whether the calf was burned beyond Musa's words that he would burn it."
+    }
+  ],
+  "uncertainties_en": [
+    "Named in later tradition, not in the Quranic text: later works give the Samiri a personal name and an origin, and describe the calf and the handful at length.",
+    "Hadith to add later: reports about the Samiri and the calf, with a named grader for each; none is used here."
+  ]
+}
