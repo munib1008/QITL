@@ -1,0 +1,225 @@
+{
+  "slug": "glad-tidings-of-yahya",
+  "title_en": "The glad tidings of Yahya to Zakariyya",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "glad-tidings-of-yahya"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT draft: it is shorter than the prophet drafts, stays inside the event's own inventory refs and states only what those ayat state; the prophet stories (content/stories) are not repeated here. Chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-prayer-and-the-glad-tidings",
+      "position": 1,
+      "title_en": "The prayer and the glad tidings",
+      "event_slug": "glad-tidings-of-yahya",
+      "verses": [
+        {
+          "surah": 3,
+          "from": 38,
+          "to": 41
+        },
+        {
+          "surah": 19,
+          "from": 2,
+          "to": 11
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Zakariyya called on his Lord, quietly, and asked for good offspring from Him; the ayah says that his Lord hears prayer.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 38,
+              "to": 38
+            },
+            {
+              "surah": 19,
+              "from": 2,
+              "to": 3
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He said that his bones had grown weak and that age had set its mark on his head, and that he had never been unfortunate in calling on his Lord.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 4,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He said he feared the ones who would follow him, and his wife was barren; he asked for an heir who would inherit from him and from the family of Yaqub, and asked that his Lord make him pleasing.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 5,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The angels called to him while he stood praying in the mihrab, saying that God gives him glad tidings of Yahya, confirming a word from God, a sayyid and hasur, and a prophet among the righteous.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God said: O Zakariyya, We give you glad tidings of a boy whose name is Yahya; We have not made anyone before him of that name.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "He said: my Lord, how shall I have a boy when old age has reached me and my wife is barren; God said that this is how God does what He wills, that it is easy for Him, and that He had created him before when he was nothing.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 40,
+              "to": 40
+            },
+            {
+              "surah": 19,
+              "from": 8,
+              "to": 9
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "He asked for a sign, and God said the sign was that he would not speak to people for three days, except by gesture, and that he should remember his Lord much and glorify Him in the evening and morning (19:10 says three nights).",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 41,
+              "to": 41
+            },
+            {
+              "surah": 19,
+              "from": 10,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "He came out to his people from the mihrab and signalled to them to glorify God morning and evening.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Zakariyya called quietly on his Lord for offspring, and the angels called to him with glad tidings of Yahya [c1][c4]. He asked how he could have a boy, and the sign given to him was that he would not speak to people for three days, except by gesture [c6][c7].",
+      "body_md": "Zakariyya called on his Lord, quietly, and asked for good offspring from Him [c1]. He said that his bones had grown weak and that age had set its mark on his head, and that he had never been unfortunate in calling on his Lord [c2]. He said he feared the ones who would follow him, and his wife was barren; he asked for an heir who would inherit from him and from the family of Yaqub [c3].\n\nThe angels called to him while he stood praying in the mihrab, saying that God gives him glad tidings of Yahya, confirming a word from God, a sayyid and hasur, and a prophet among the righteous [c4]. God said: O Zakariyya, We give you glad tidings of a boy whose name is Yahya; We have not made anyone before him of that name [c5].\n\nHe said: my Lord, how shall I have a boy when old age has reached me and my wife is barren [c6]. God said that this is how God does what He wills, that it is easy for Him, and that He had created him before when he was nothing [c6].\n\nHe asked for a sign, and God said the sign was that he would not speak to people for three days, except by gesture, and that he should remember his Lord much and glorify Him in the evening and morning [c7]. He came out to his people from the mihrab and signalled to them to glorify God morning and evening [c8].",
+      "deep_md": "The passages tell the same event from different sides: one gives the angels' call in the mihrab and the other gives the quiet prayer and the wording of his request [c1][c4]. The sign is given as three days in one passage and three nights in the other [c7]. The words sayyid and hasur are left untranslated because the ayah does not explain them [c4].",
+      "kids_md": "Zakariyya called quietly on his Lord and asked for a good child [c1]. The angels called to him and gave him glad tidings of a boy named Yahya [c4][c5]. As a sign he would not speak to people for three days, except by gesture, and he told his people to glorify God morning and evening [c7][c8].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat show a prayer made quietly and answered [c1][c4]. Another is that the glad tidings are met with a question and answered with the statement that it is easy for God [c6].",
+      "unknowns_md": "- Not established: his age, his wife's name, or the place of the mihrab; the ayat give only that his bones had grown weak and his wife was barren.\n- Not established: who the ones who would follow him were, or what he feared from them.\n- Not established: whether the silence was of tongue by a cause or a sign alone; the ayah says only that he would not speak to people except by gesture.\n- Not established: the meaning of sayyid and hasur beyond the Arabic words; commentators differ and the draft leaves them untranslated.\n- The ayat do not say how long it was between the prayer and the glad tidings."
+    },
+    {
+      "anchor": "what-yahya-was-given",
+      "position": 2,
+      "title_en": "What Yahya was given",
+      "event_slug": "glad-tidings-of-yahya",
+      "verses": [
+        {
+          "surah": 19,
+          "from": 12,
+          "to": 15
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Yahya was told to take the Book with strength, and God gave him judgement while he was a child.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God also gave him tenderness from Himself and purity, and he feared God.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 13,
+              "to": 13
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He was dutiful to his parents and was not arrogant or disobedient.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 14,
+              "to": 14
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Peace be on him the day he was born, the day he dies and the day he is raised alive.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 15,
+              "to": 15
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Yahya was told to take the Book with strength, and God gave him judgement while he was a child [c1]. He feared God and was dutiful to his parents, and peace was invoked on him on the day he was born, the day he dies and the day he is raised alive [c2][c3][c4].",
+      "body_md": "Yahya was told to take the Book with strength, and God gave him judgement while he was a child [c1]. God also gave him tenderness from Himself and purity, and he feared God [c2].\n\nHe was dutiful to his parents and was not arrogant or disobedient [c3]. Peace be on him the day he was born, the day he dies and the day he is raised alive [c4].",
+      "deep_md": "The ayat list what he was given and how he was: strength with the Book, judgement, tenderness, purity and fear of God [c1][c2]. The words about his parents come before the words of peace on him [c3][c4].",
+      "kids_md": "Yahya was told to hold the Book firmly, and God gave him good judgement while he was still a child [c1]. He was kind to his parents and he feared God [c2][c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat link duty to parents with not being arrogant or disobedient [c3]. Another is that the passage ends with peace on his life, his death and his raising [c4].",
+      "unknowns_md": "- Not established: his age when he was given judgement, or what the judgement was; the ayah says only that he was a child.\n- Not established: which Book is meant; the ayah says the Book and does not say more.\n- Not established: what became of Yahya, the manner of his death or where he lived.\n- The ayat do not say what the words for tenderness and purity cover."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on Zakariyya, Yahya and his life. None is used in this draft.",
+    "The image of the head in 19:4 is rendered loosely (age had set its mark) so that this draft does not describe a prophet; a scholar should decide the wording.",
+    "The words sayyid and hasur (3:39) and the Book (19:12) have more than one reading; a scholar should decide how the page should word them.",
+    "The passages (3:38-41 and 19:2-11) are read as the same event; the order of the angels' call and the quiet prayer is not stated in the ayat."
+  ]
+}

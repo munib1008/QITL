@@ -1,0 +1,221 @@
+{
+  "slug": "yunus-and-the-fish",
+  "title_en": "Yunus and the fish",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "yunus-and-the-fish"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT draft: it is shorter than the prophet drafts, stays inside the event's own inventory refs and states only what those ayat state; the prophet stories (content/stories) are not repeated here. Chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-ship-and-the-fish",
+      "position": 1,
+      "title_en": "The ship and the fish",
+      "event_slug": "yunus-and-the-fish",
+      "verses": [
+        {
+          "surah": 37,
+          "from": 139,
+          "to": 148
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Yunus was among the messengers.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 139,
+              "to": 139
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He went away to the laden ship.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 140,
+              "to": 140
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He cast lots and was among those who lost.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 141,
+              "to": 141
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "The fish swallowed him while he was blameworthy.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 142,
+              "to": 142
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Had he not been among those who glorify God, he would have remained in its belly until the day they are raised.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 143,
+              "to": 144
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God cast him on the open ground, and he was sick.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 145,
+              "to": 145
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God caused a tree of yaqtin to grow over him.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 146,
+              "to": 146
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "God sent him to a hundred thousand or more; they believed, and God let them enjoy life for a time.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 147,
+              "to": 148
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Yunus, one of the messengers, went away to the laden ship, and the fish swallowed him [c1][c2][c4]. God cast him on the open ground, sent him to a hundred thousand or more, and they believed [c6][c8].",
+      "body_md": "The ayat say that Yunus was among the messengers [c1]. He went away to the laden ship, cast lots and was among those who lost [c2][c3].\n\nThe fish swallowed him while he was blameworthy [c4]. Had he not been among those who glorify God, he would have remained in its belly until the day they are raised [c5].\n\nGod cast him on the open ground, and he was sick, and caused a tree of yaqtin to grow over him [c6][c7]. God sent him to a hundred thousand or more; they believed, and God let them enjoy life for a time [c8].",
+      "deep_md": "The ayat give the cause of his rescue as his glorifying of God, and say what would otherwise have happened [c5]. The word for blameworthy describes him at the moment the fish swallowed him [c4]. The mission is told after the rescue: the number is given as a hundred thousand or more, and the result is that they believed [c8].",
+      "kids_md": "Yunus was one of God's messengers, and he went away on a ship that was full [c1][c2]. A fish swallowed him, but he glorified God, and God cast him out on open ground and made a tree grow over him [c4][c5][c6][c7]. Then God sent him to a hundred thousand people or more, and they believed [c8].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat tie his rescue to his glorifying of God [c5]. Another is that the account ends with a whole people who believed and were allowed to enjoy life for a time [c8].",
+      "unknowns_md": "- Not established: why he went away, where he was sent first, where the ship sailed, or what the lots decided; the verses say only that he went away to the laden ship and cast lots.\n- Not established: how long he stayed in the fish, where he was cast out, or what kind of tree the yaqtin was.\n- Not established: the name of the people he was sent to, the place, or how long they were allowed to enjoy life.\n- Not established: whether the sending to a hundred thousand or more happened before or after the events at sea; the verses tell it afterwards."
+    },
+    {
+      "anchor": "the-call-in-the-darkness",
+      "position": 2,
+      "title_en": "The call in the darkness",
+      "event_slug": "yunus-and-the-fish",
+      "verses": [
+        {
+          "surah": 21,
+          "from": 87,
+          "to": 88
+        },
+        {
+          "surah": 68,
+          "from": 48,
+          "to": 50
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The man of the fish went away angry, thought that We would not constrain him, and called out in the darkness that there is no god but God, glory to Him, and that he had been among the wrongdoers.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 87,
+              "to": 87
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God answered him and saved him from distress, and said that He saves the believers in this way.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 88,
+              "to": 88
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The hearer is told to be patient with the judgement of his Lord and not to be like the man of the fish when he cried out while choked with grief.",
+          "verses": [
+            {
+              "surah": 68,
+              "from": 48,
+              "to": 48
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "Had a favour from his Lord not reached him, he would have been cast on the open ground while blameworthy.",
+          "verses": [
+            {
+              "surah": 68,
+              "from": 49,
+              "to": 49
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "His Lord chose him and made him among the righteous.",
+          "verses": [
+            {
+              "surah": 68,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The man of the fish went away angry, and called out in the darkness that there is no god but God, glory to Him, and that he had been among the wrongdoers [c1]. God answered him and saved him from distress, chose him and made him among the righteous [c2][c5].",
+      "body_md": "The man of the fish went away angry, thought that We would not constrain him, and called out in the darkness that there is no god but God, glory to Him, and that he had been among the wrongdoers [c1]. God answered him and saved him from distress, and said that He saves the believers in this way [c2].\n\nAnother passage tells the hearer to be patient with the judgement of his Lord and not to be like the man of the fish when he cried out while choked with grief [c3]. It says that, had a favour from his Lord not reached him, he would have been cast on the open ground while blameworthy [c4]. His Lord chose him and made him among the righteous [c5].",
+      "deep_md": "The cry has its parts in the ayah: that there is no god but God, glory to Him, and that he had been among the wrongdoers [c1]. The Arabic for constrain can also be read as having power over him, and the draft keeps it open [c1]. The ayat give God's answer as an answer to the cry and say the same is done for the believers [c2].",
+      "kids_md": "The man of the fish called out in the darkness that there is no god but God, and that he had been among the wrongdoers [c1]. God answered him and saved him from his distress [c2]. God chose him and made him among the righteous [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat teach a prayer of praise and admission, and say that God answered it [c1][c2]. Another is that the hearer is told to be patient and not to be like him in his grief [c3].",
+      "unknowns_md": "- Not established: that the man of the fish is the messenger named in the other chapter is read from the epithet and the matching events; the ayat here do not name him.\n- Not established: what the darkness was, or where he was when he called; the Arabic word is plural and is not explained in the verses.\n- Not established: what he was angry about, or what he thought of being constrained; the Arabic verb allows more than one rendering.\n- Not established: how long the distress lasted."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the mission of Yunus, the fish and the people he was sent to. None is used in this draft.",
+    "The later chapter speaks of the man of the fish and of the one with the fish without naming Yunus; the link rests on the epithet and the matching events, as in the event inventory. A scholar should confirm.",
+    "The verb abaqa (37:140) is rendered 'went away' and is often rendered 'fled'. The Arabic naqdira (21:87) is rendered 'constrain'; it is read as having power over him by others. The words for blameworthy (muliim, madhmum) are rendered plainly."
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "slug": "sinai-provision",
+  "title_en": "The provision in the wilderness",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "sinai-provision"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT draft: it is shorter than the prophet drafts, stays inside the event's own inventory refs and states only what those ayat state; the prophet stories (content/stories) are not repeated here. Chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "shade-food-and-water",
+      "position": 1,
+      "title_en": "Shade, food and water",
+      "event_slug": "sinai-provision",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 57,
+          "to": 57
+        },
+        {
+          "surah": 2,
+          "from": 60,
+          "to": 60
+        },
+        {
+          "surah": 7,
+          "from": 160,
+          "to": 160
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God shaded a people with the cloud and sent down on them manna and quails; 7:160 says this of the people of Musa.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 57,
+              "to": 57
+            },
+            {
+              "surah": 7,
+              "from": 160,
+              "to": 160
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They were told to eat of the good things God had provided; the ayat say that they did no wrong to God, but were wronging themselves.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 57,
+              "to": 57
+            },
+            {
+              "surah": 7,
+              "from": 160,
+              "to": 160
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "In one passage Musa asks for water for his people, and in the other his people ask him for water.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 60,
+              "to": 60
+            },
+            {
+              "surah": 7,
+              "from": 160,
+              "to": 160
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God told Musa to strike the stone with his staff, and springs came out of it; the ayat state how many.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 60,
+              "to": 60
+            },
+            {
+              "surah": 7,
+              "from": 160,
+              "to": 160
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Every group of people knew its own drinking place.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 60,
+              "to": 60
+            },
+            {
+              "surah": 7,
+              "from": 160,
+              "to": 160
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They were told to eat and drink of God's provision and not to spread corruption in the land.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 60,
+              "to": 60
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God divided them into tribes, as communities; the ayah states how many.",
+          "verses": [
+            {
+              "surah": 7,
+              "from": 160,
+              "to": 160
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God shaded the people of Musa with the cloud and sent down manna and quails for them [c1]. When water was asked for, God told Musa to strike the stone with his staff, and springs came out of it [c3][c4].",
+      "body_md": "The ayat remind a people that God shaded them with the cloud and sent down on them manna and quails [c1]. They were told to eat of the good things that God had provided for them [c2].\n\nBoth passages tell of a request for water: in one passage Musa asks for it for his people, and in the other his people ask him for it [c3]. God told Musa to strike the stone with his staff, and springs came out of it [c4]. Every group of people knew its own drinking place [c5].\n\nThey were told to eat and drink of God's provision and not to spread corruption in the land [c6]. The other passage adds that God divided them into tribes, as communities [c7].",
+      "deep_md": "The passages use different verbs for the water coming out of the stone, and each states the number of the springs [c4]. Both passages end with the same statement: those who were given this provision did no wrong to God, but were wronging themselves [c2]. The division into tribes is stated in 7:160 only [c7].",
+      "kids_md": "God shaded Musa's people with the cloud and sent them manna and quails to eat [c1]. When they needed water, God told Musa to strike the stone with his staff, and springs came out [c3][c4]. Each group knew where to drink [c5].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that provision comes with an instruction, to eat of what is good and not to spread corruption in the land [c6]. Another is that the passages say wrongdoing harms the wrongdoers themselves and not God [c2].",
+      "unknowns_md": "- Not established: what the cloud, the manna and the quails were like; the verses do not describe them, and the words used here are the common renderings.\n- Not established: where this happened, when, or for how long the provision lasted.\n- Not established: how the passages are ordered in time; the stone is not identified, and the verses do not say whether the water ran for a time or once.\n- Not established: who exactly is addressed in the first passage; the other passage ties the same events to the people of Musa."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on this provision and on the stone. None is used in this draft.",
+    "The renderings 'manna', 'quails' and 'cloud' follow common usage; a scholar should confirm the wording for mann, salwa and ghamam.",
+    "The first passage addresses 'you' and does not name the people of Musa; it is read together with the other passage, which does.",
+    "Both passages state the number of the springs and the other passage states the number of the tribes; this draft does not write the number out because the shared number-word check has no anchor for it (its test keeps that word refused). A scholar should decide how the page states it."
+  ]
+}

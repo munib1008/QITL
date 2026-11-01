@@ -1,0 +1,123 @@
+{
+  "slug": "the-cow",
+  "title_en": "The cow",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "the-cow"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT draft: it is shorter than the prophet drafts, stays inside the event's own inventory refs and states only what those ayat state; the prophet stories (content/stories) are not repeated here. Chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "the-cow-and-the-dead",
+      "position": 1,
+      "title_en": "The cow and the dead person",
+      "event_slug": "the-cow",
+      "verses": [
+        {
+          "surah": 2,
+          "from": 67,
+          "to": 73
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Musa told his people that God commands them to slaughter a cow; they asked whether he was making a mockery of them, and he said he sought refuge in God from being among the ignorant.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 67,
+              "to": 67
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "They asked him to call on his Lord to make clear what kind of cow it was; he replied that his Lord says it is a cow neither old nor young but in between, and told them to do as they were commanded.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 68,
+              "to": 68
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They asked about its colour; he replied that his Lord says it is a yellow cow, bright in colour, pleasing to those who look.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 69,
+              "to": 69
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They asked once more, saying that cows looked alike to them and that, God willing, they would be guided.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "He replied that his Lord says it is a cow not broken in to turn the earth or water the field, sound, with no mark in it; they said he had now brought the truth, and they slaughtered it, though they almost did not do it.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 71,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God reminds them that they killed a person and fell into dispute about it, and that God was bringing out what they were hiding.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 72,
+              "to": 72
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God told them to strike him with a part of it, and said that in this way God gives life to the dead and shows them His signs, so that they might understand.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 73,
+              "to": 73
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Musa told his people that God commands them to slaughter a cow, and they asked more and more about it before they did it [c1][c2][c5]. The ayat then recall a person they had killed and disputed about, and God told them to strike him with a part of it [c6][c7].",
+      "body_md": "Musa told his people that God commands them to slaughter a cow [c1]. They asked whether he was making a mockery of them, and he said he sought refuge in God from being among the ignorant [c1].\n\nThey asked him to call on his Lord to make clear what kind of cow it was [c2]. He replied that it was neither old nor young but in between, and told them to do as they were commanded [c2]. They asked about its colour, and he replied that it was a yellow cow, bright in colour, pleasing to those who look [c3].\n\nThey asked once more, saying that cows looked alike to them and that, God willing, they would be guided [c4]. He replied that it was a cow not broken in to turn the earth or water the field, sound, with no mark in it [c5]. They said he had now brought the truth, and they slaughtered it, though they almost did not do it [c5].\n\nGod reminds them that they killed a person and fell into dispute about it, and that God was bringing out what they were hiding [c6]. God told them to strike him with a part of it, and said that in this way God gives life to the dead and shows them His signs, so that they might understand [c7].",
+      "deep_md": "Each answer from Musa begins by saying that his Lord says it, so the descriptions are given as coming from God and not from Musa [c2][c3][c5]. Their questions come one after another, and the last description is the narrowest [c2][c3][c5]. The ayat end the account by stating what the event shows: God gives life to the dead and shows His signs so that people might understand [c7].",
+      "kids_md": "Musa told his people that God told them to slaughter a cow [c1]. They kept asking what kind of cow it should be, and in the end they slaughtered it, though they almost did not [c2][c5]. God said that this showed how He gives life to the dead [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the people asked again and again before doing what they were told, and that the account sets this beside the plain instruction to do as they were commanded [c2][c5]. Another is that the ayat close on understanding, not on the cow itself [c7].",
+      "unknowns_md": "- Not established: who the person was, who killed him, where or when, and why the people disputed about it.\n- Not established: which part of the cow was used, what happened when the person was struck, or what the dead person said or did; the ayah says only that God gives life to the dead in this way.\n- Not established: how the order of the ayat relates to the order of events; the killing and the dispute are recalled after the cow is slaughtered.\n- The verses call them his people and do not name them."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the killing, the cow and what followed. None is used in this draft.",
+    "The pronouns in 2:73 (strike 'him' with a part of 'it') are not resolved by the ayah; this draft keeps them as they stand.",
+    "The Arabic adjectives for the age and colour of the cow (farid, bikr, awan, faqi) are rendered plainly; a scholar should confirm the wording."
+  ]
+}

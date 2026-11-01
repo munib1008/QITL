@@ -1,0 +1,314 @@
+{
+  "slug": "battle-of-badr",
+  "title_en": "The battle of Badr",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "battle-of-badr"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT draft: it is shorter than the prophet drafts, stays inside the event's own inventory refs and states only what those ayat state; the prophet stories (content/stories) are not repeated here. Chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "setting-out-and-the-help",
+      "position": 1,
+      "title_en": "Setting out and the help",
+      "event_slug": "battle-of-badr",
+      "verses": [
+        {
+          "surah": 8,
+          "from": 5,
+          "to": 12
+        },
+        {
+          "surah": 3,
+          "from": 123,
+          "to": 127
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The ayah says that the Lord brought the one addressed out from his house with the truth, though a party of the believers disliked it; they disputed with him about the truth after it had become clear, as if they were being driven to death while looking on.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 5,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God promised them that one of the pair of parties would be theirs, and they wished that the one without sharp strength would be theirs; but God wished to establish the truth by His words and cut off the last of the disbelievers, to establish the truth and nullify falsehood, even if the wrongdoers disliked it.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 7,
+              "to": 8
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "When they called on their Lord for help, He answered them: I will reinforce you with a thousand angels, following one another; God made it only glad tidings, so that their hearts would be at rest, and said that victory is only from God, who is Mighty, Wise.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 9,
+              "to": 10
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God covered them with drowsiness as security from Him, and sent down water from the sky to purify them and remove the filth of Satan, to strengthen their hearts and make their feet firm.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 11,
+              "to": 11
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "Your Lord revealed to the angels: I am with you, so make firm those who believe; I will cast terror into the hearts of those who disbelieve.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 12,
+              "to": 12
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "God gave them victory at Badr when they were weak, so that they fear God and give thanks.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 123,
+              "to": 123
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "The ayah says: when you said to the believers, would it not suffice that your Lord reinforce you with three thousand angels sent down; yes, if you are patient and fear God, and they come at you at once, your Lord will reinforce you with five thousand angels.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 124,
+              "to": 125
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "God made it only glad tidings, so that their hearts would be at rest, and said that victory is only from God, the Mighty, the Wise; and that He might cut off a part of those who disbelieved or subdue them, so that they turn back disappointed.",
+          "verses": [
+            {
+              "surah": 3,
+              "from": 126,
+              "to": 127
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat say that a party of the believers disliked the going out, and that God promised them one of the pair of parties [c1][c2]. God answered their call for help by reinforcing them with angels, and said that victory is only from God and that He gave them victory at Badr [c3][c6][c8].",
+      "body_md": "The ayah says that the Lord brought the one addressed out from his house with the truth, though a party of the believers disliked it [c1]. They disputed with him about the truth after it had become clear, as if they were being driven to death while looking on [c1].\n\nGod promised them that one of the pair of parties would be theirs, and they wished that the one without sharp strength would be theirs [c2]. God wished to establish the truth by His words and cut off the last of the disbelievers, to establish the truth and nullify falsehood, even if the wrongdoers disliked it [c2].\n\nWhen they called on their Lord for help, He answered them: I will reinforce you with a thousand angels, following one another [c3]. God made it only glad tidings, so that their hearts would be at rest, and said that victory is only from God, who is Mighty, Wise [c3]. He covered them with drowsiness as security from Him, and sent down water from the sky to purify them and remove the filth of Satan, to strengthen their hearts and make their feet firm [c4].\n\nYour Lord revealed to the angels: I am with you, so make firm those who believe; I will cast terror into the hearts of those who disbelieve [c5].\n\nGod gave them victory at Badr when they were weak, so that they fear God and give thanks [c6]. The ayah says: when you said to the believers, would it not suffice that your Lord reinforce you with three thousand angels sent down; yes, if you are patient and fear God, and they come at you at once, your Lord will reinforce you with five thousand angels [c7]. God made it only glad tidings, so that their hearts would be at rest, and said that victory is only from God, the Mighty, the Wise [c8].",
+      "deep_md": "The ayat give the angels' number differently in different places: a thousand in 8:9, and three thousand and five thousand in 3:124-125, and each is stated as a reinforcement and as glad tidings [c3][c7][c8]. In both places the ayat say the reinforcement was only glad tidings and a reassurance for hearts, and that victory is only from God [c3][c8]. The ayat of 3:123 name Badr, and the ayat that follow it are read with it [c6][c7].",
+      "kids_md": "The believers called on their Lord for help, and He answered them [c3]. He reinforced them with angels, made them calm, and said that victory is only from God [c3][c4][c8]. God gave them victory at Badr when they were weak [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat say the reinforcement was glad tidings and a calming of hearts, and that victory is only from God [c3][c8]. Another is that they were told to fear God and give thanks for the victory [c6].",
+      "unknowns_md": "- Not established: the date, the place beyond the name Badr, the number of the believers or of their opponents, or the casualties; the ayat give none of these.\n- Not established: who the pair of parties were, or what the party without sharp strength was; the ayah says only that one of the pair would be theirs.\n- Not established: whether 3:124-125 speak of this day or of another; the ayah that precedes them names Badr, and they are read here with it. A scholar should decide.\n- Not established: how the angels took part beyond what the ayat state, or how their number in one place relates to the numbers in the other.\n- Named in later tradition, not in the Quranic text: the leaders, the caravan, the tribes involved and the names of the fighters. The detailed accounts rest on biographical and historical sources (sira) and on later reports that the repository does not yet hold."
+    },
+    {
+      "anchor": "the-day-the-armies-met",
+      "position": 2,
+      "title_en": "The day the armies met",
+      "event_slug": "battle-of-badr",
+      "verses": [
+        {
+          "surah": 8,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 8,
+          "from": 41,
+          "to": 48
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "It was not they who killed them, but God killed them; and it was not the one addressed who threw when he threw, but God threw, so that He might try the believers with a good trial; God is Hearing, Knowing.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 17,
+              "to": 17
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The ayah refers to the day of the Criterion, the day the pair of armies met.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 41,
+              "to": 41
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "They were on the nearer side and their opponents on the farther side, and the caravan was below them; had they made an appointment they would have differed about it, but God was to accomplish a matter already done, so that whoever perished would perish by clear evidence and whoever lived would live by clear evidence.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 42,
+              "to": 42
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "God showed them to the one addressed in his sleep as few; had He shown them as many, the believers would have lost courage and disputed over the matter, but God spared them; when they met, He showed them to the believers as few, and made the believers few in their sight, so that God might accomplish a matter already done.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 43,
+              "to": 44
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The believers were told: when you meet a group, stand firm and remember God much, so that you may succeed; obey God and His Messenger and do not dispute, or you will lose heart and your strength will go; be patient, for God is with the patient.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 45,
+              "to": 46
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "They were told not to be like those who came out of their homes boastfully and to be seen by people, and who hinder others from God's way; Satan had made their deeds seem fair to them and said that no one could overcome them that day and that he was their protector; but when the pair of groups came in sight of each other he turned on his heels and said: I am free of you, I see what you do not see, I fear God.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 47,
+              "to": 48
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat call the day the pair of armies met the day of the Criterion, and say that it was God who killed them and God who threw [c1][c2]. The believers were told to stand firm, remember God much, obey and not dispute [c5].",
+      "body_md": "The ayah says: it was not they who killed them, but God killed them; and it was not the one addressed who threw when he threw, but God threw, so that He might try the believers with a good trial [c1]. The ayah refers to the day of the Criterion, the day the pair of armies met [c2].\n\nThey were on the nearer side and their opponents on the farther side, and the caravan was below them [c3]. Had they made an appointment they would have differed about it, but God was to accomplish a matter already done, so that whoever perished would perish by clear evidence and whoever lived would live by clear evidence [c3].\n\nGod showed them to the one addressed in his sleep as few; had He shown them as many, the believers would have lost courage and disputed over the matter, but God spared them [c4]. When they met, He showed them to the believers as few, and made the believers few in their sight, so that God might accomplish a matter already done [c4].\n\nThe believers were told: when you meet a group, stand firm and remember God much, so that you may succeed [c5]. They were told to obey God and His Messenger and not to dispute, or they would lose heart and their strength would go; they were told to be patient, for God is with the patient [c5].\n\nThey were told not to be like those who came out of their homes boastfully and to be seen by people, and who hinder others from God's way [c6]. Satan had made their deeds seem fair to them and said that no one could overcome them that day and that he was their protector; but when the pair of groups came in sight of each other he turned on his heels and said: I am free of you, I see what you do not see, I fear God [c6].",
+      "deep_md": "The ayat say more than once that God was to accomplish a matter already done: about the meeting place and about the view each side had of the other [c3][c4]. The believers are given instructions in the same passage: stand firm, remember God, obey, do not dispute, be patient [c5]. The account of Satan's words speaks of what he said before the groups met and what he said when they came in sight of each other [c6].",
+      "kids_md": "The ayat say that it was God who killed and God who threw [c1]. They tell the believers to stand firm, remember God much, obey and not to quarrel [c5]. Satan said he would protect some people, but he turned away when the groups met [c6].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the ayat give the believers a short list of conduct: stand firm, remember God much, obey, do not dispute and be patient [c5]. Another is that the ayat show Satan's promise failing when the groups met [c6].",
+      "unknowns_md": "- Not established: who killed whom, how many were on either side, what was thrown, or where the nearer and farther sides were.\n- Not established: who the opponents were by name, or who the caravan was; the ayat speak of a caravan below the believers and do not name it.\n- Not established: the date of the day of the Criterion; the ayah names the day and not its date.\n- Not established: how the ayat on spoils in 8:41 relate to this account; this draft does not reproduce their legal content."
+    },
+    {
+      "anchor": "the-captives",
+      "position": 3,
+      "title_en": "The captives",
+      "event_slug": "battle-of-badr",
+      "verses": [
+        {
+          "surah": 8,
+          "from": 67,
+          "to": 68
+        },
+        {
+          "surah": 8,
+          "from": 70,
+          "to": 71
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "It was not for a prophet to hold captives until he had made the land secure; they wanted the goods of this world, while God wants the Hereafter; God is Mighty, Wise.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 67,
+              "to": 67
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "Had it not been for a decree from God already given, a great punishment would have touched them for what they took.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 68,
+              "to": 68
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The Prophet was told to say to the captives in their hands: if God knows good in your hearts, He will give you better than what was taken from you, and forgive you; God is Forgiving, Merciful.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 70,
+              "to": 70
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "If they intend betrayal of him, they betrayed God before, and God gave him power over them; God is Knowing, Wise.",
+          "verses": [
+            {
+              "surah": 8,
+              "from": 71,
+              "to": 71
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat say that a prophet should not hold captives until he has made the land secure, and that a great punishment would have touched them but for a decree from God [c1][c2]. The Prophet was told what to say to the captives, and God is Forgiving, Merciful [c3].",
+      "body_md": "It was not for a prophet to hold captives until he had made the land secure; they wanted the goods of this world, while God wants the Hereafter [c1]. Had it not been for a decree from God already given, a great punishment would have touched them for what they took [c2].\n\nThe Prophet was told to say to the captives in their hands: if God knows good in your hearts, He will give you better than what was taken from you, and forgive you [c3]. If they intend betrayal of him, they betrayed God before, and God gave him power over them [c4].",
+      "deep_md": "The passage speaks to the believers about what they wanted and then speaks to the Prophet about what to say to the captives [c1][c3]. It ends with a warning to the captives that betrayal has a history, and with God's knowledge and wisdom [c4].",
+      "kids_md": "God told the believers what a prophet should do about captives [c1]. He told the Prophet to say to the captives that if God knows good in their hearts, He will give them better and forgive them [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage sets what people want of this world beside what God wants, the Hereafter [c1]. Another is that the captives are offered forgiveness if there is good in their hearts [c3].",
+      "unknowns_md": "- Not established: who the captives were, how many, or what was taken from them; the ayat say only that something was taken from them.\n- Not established: what the decree from God already given was, or what the believers did in the matter.\n- Not established: when or where the captives were held.\n- The ayah 8:69, on what was gained, is not drafted here because it is legal in kind."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, on the course of the battle, the numbers, the caravan, the captives and the individuals involved. None is used in this draft.",
+    "The ayat state no casualties, no dates and no commanders; none are given in this draft.",
+    "3:13 (the sign in the pair of groups that met) is not drafted: its Arabic wording of how each group saw the other is read in more than one way and carries a number that this draft cannot anchor safely.",
+    "Whether 3:124-125 belong to this day or to the day that the next event in the inventory covers is read in more than one way; a scholar should decide.",
+    "The prophet drafts in content/stories tell part of this at greater length; this event draft stays inside its own refs and does not repeat it."
+  ]
+}

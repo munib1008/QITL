@@ -1,0 +1,53 @@
+{
+ "note": "Anchors for the event drafts of batch dev2 (items 25-48 of the events track: Musa's later episodes to the victory). An anchor is an Arabic search key typed the way the Uthmani text spells it (matched on the light normal form of src/lib/events/verify.ts). Names and number words may appear in a chapter's text only when the anchor occurs in the ayat that chapter cites. tradition_names are refused in the story texts and allowed only in a sentence that carries the label in unknowns_md / uncertainties_en. Anchors are keys for checking, never shown to readers.",
+ "names": {
+  "Dawud": "داود",
+  "Yunus": "يونس",
+  "Yahya": "يحيى",
+  "Rum": "روم",
+  "Yathrib": "يثرب"
+ },
+ "numbers": {
+  "ninety": "تسعون",
+  "hundred": "مائة",
+  "thousands": "الوف"
+ },
+ "guarded": {},
+ "tradition_names": [
+  "Uhud",
+  "Ohod",
+  "Hudaybiyyah",
+  "Hudaibiyyah",
+  "Hudaibiya",
+  "Tabuk",
+  "Nadir",
+  "Qurayza",
+  "Qaynuqa",
+  "Khandaq",
+  "Hawazin",
+  "Thaqif",
+  "Taif",
+  "Byzantines",
+  "Byzantine",
+  "Persians",
+  "Persia",
+  "Heraclius",
+  "Abraha",
+  "Yemen",
+  "Jerusalem",
+  "Buraq",
+  "Miraj",
+  "Isra",
+  "Aqsa",
+  "Quraysh",
+  "Medina",
+  "Madinah",
+  "Sufyan",
+  "Jahl"
+ ],
+ "common_capitalised": [
+  "People"
+ ],
+ "opening_words": [],
+ "titles_ar": {}
+}

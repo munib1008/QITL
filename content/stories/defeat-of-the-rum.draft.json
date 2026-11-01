@@ -1,0 +1,100 @@
+{
+  "slug": "defeat-of-the-rum",
+  "title_en": "The defeat and the promised victory of the Rum",
+  "title_ar": null,
+  "subject": {
+    "type": "event",
+    "event_slug": "defeat-of-the-rum"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This is an EVENT draft: it is shorter than the prophet drafts, stays inside the event's own inventory refs and states only what those ayat state; the prophet stories (content/stories) are not repeated here. Chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "defeated-and-will-win",
+      "position": 1,
+      "title_en": "Defeated, and will be victorious",
+      "event_slug": "defeat-of-the-rum",
+      "verses": [
+        {
+          "surah": 30,
+          "from": 2,
+          "to": 7
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The Rum have been defeated, in the nearest land, and after their defeat they will themselves be victorious, in several years.",
+          "verses": [
+            {
+              "surah": 30,
+              "from": 2,
+              "to": 4
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The command belongs to God before and after; on that day the believers will rejoice in God's help.",
+          "verses": [
+            {
+              "surah": 30,
+              "from": 4,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "God helps whom He wills, and He is the Mighty, the Merciful.",
+          "verses": [
+            {
+              "surah": 30,
+              "from": 5,
+              "to": 5
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "It is the promise of God; God does not break His promise, but most people do not know.",
+          "verses": [
+            {
+              "surah": 30,
+              "from": 6,
+              "to": 6
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They know an outward part of the life of this world, while they are heedless of the Hereafter.",
+          "verses": [
+            {
+              "surah": 30,
+              "from": 7,
+              "to": 7
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "The ayat say that the Rum have been defeated in the nearest land and will be victorious after their defeat, in several years [c1]. They add that the command belongs to God before and after, and that God does not break His promise [c2][c4].",
+      "body_md": "The Rum have been defeated, in the nearest land, and after their defeat they will themselves be victorious, in several years [c1]. The command belongs to God before and after; on that day the believers will rejoice in God's help [c2].\n\nGod helps whom He wills, and He is the Mighty, the Merciful [c3]. It is the promise of God; God does not break His promise, but most people do not know [c4]. They know an outward part of the life of this world, while they are heedless of the Hereafter [c5].",
+      "deep_md": "The ayat speak of the past and of the future: a defeat that has happened and a victory that will follow it [c1]. The Arabic for nearest land can also be read as the lowest land, and the draft keeps it open [c1]. The final ayat turn from the event to people's knowledge, saying they know the outward part of this life and are heedless of the Hereafter [c4][c5].",
+      "kids_md": "The ayat say that the Rum had been defeated but would win after some years [c1]. They say that God keeps His promise, though most people do not know it [c4].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the passage places an event under God's command, before and after it [c2]. Another is that it sets the outward knowledge of this life beside heedlessness of the Hereafter [c5].",
+      "unknowns_md": "- Not established: which battle or war is meant, who defeated the Rum, where the nearest land was, or when the defeat happened.\n- Not established: how many years several covers, or in what event the victory came; the ayat give only several years.\n- Not established: what the believers rejoiced at beyond God's help, or what the connection of the believers to the Rum was.\n- Named in later tradition, not in the Quranic text: the identification of the Rum with the Byzantines, of their opponents with the Persians, and the places and years of the war."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, and early historical reports on the war and on the believers' reaction. None is used in this draft.",
+    "Named in later tradition, not in the Quranic text: the Byzantines, the Persians and the dating of the defeat and the victory.",
+    "The vowel reading of the verbs in 30:2-3 (defeated, will be victorious) is disputed in the readings tradition; a scholar of qira'at should decide how the page words it. The draft follows the common reading.",
+    "The phrase 'on that day the believers will rejoice' (30:4-5) is rendered closely and left open as to its cause."
+  ]
+}
