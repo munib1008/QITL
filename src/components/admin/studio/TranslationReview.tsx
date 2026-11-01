@@ -1,5 +1,6 @@
 "use client";
 
+import { LoadErrorText } from "../feedback";
 import { useState } from "react";
 import { EditorialStatus, type EditorialState } from "@/components/ui/evidence";
 import { Skeleton } from "@/components/ui/misc";
@@ -36,7 +37,7 @@ export function TranslationReviewDesk({ locale, canLinguistic, canReligious }: {
         .order("created_at", { ascending: false })
         .limit(100) ?? null,
   );
-  if (rows.error) return <p className="zq-error">{rows.error}</p>;
+  if (rows.error) return <p className="zq-error"><LoadErrorText error={rows.error} /></p>;
   if (!rows.rows) return <Skeleton height={20} />;
   if (!rows.rows.length) return <p className="zq-meta">{s.noTranslations}</p>;
   return (
@@ -94,7 +95,7 @@ function TranslationItem({
         </h3>
         <EditorialStatus status={r.status} />
       </div>
-      <p className="zq-meta">{`${lang} · ${s.version} ${r.version} · source v${r.translated_from_version}${r.model ? ` · ${r.model}` : ""}`}</p>
+      <p className="zq-meta">{`${lang} · ${s.version} ${r.version} · ${s.sourceVersion}${r.translated_from_version}${r.model ? ` · ${r.model}` : ""}`}</p>
       <p className="zq-meta">{`${s.linguistic}: ${state("linguistic")} · ${s.religious}: ${state("religious")}`}</p>
       <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" aria-expanded={open} onClick={onOpen}>
         {s.preview}

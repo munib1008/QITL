@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useLocale } from "@/lib/i18n/useLocale";
+import { adminSharedStrings } from "@/lib/i18n/modules/adminShared";
 
 /**
  * Long editorial forms on phones and tablets: a "Full-screen editing" button lifts the form into a full-screen view
@@ -9,6 +11,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
  * the same component either way.
  */
 export function FullScreenEditor({ title, children }: { title: string; children: ReactNode }) {
+  const t = adminSharedStrings(useLocale());
   const [full, setFull] = useState(false);
   const box = useRef<HTMLDivElement>(null);
   const enter = useRef<HTMLButtonElement>(null);
@@ -32,7 +35,7 @@ export function FullScreenEditor({ title, children }: { title: string; children:
   }, [full]);
 
   return (
-    <div ref={box} className={full ? "zq-fs zq-fs-on" : "zq-fs"} role={full ? "region" : undefined} aria-label={full ? `${title}, full-screen editing` : undefined}>
+    <div ref={box} className={full ? "zq-fs zq-fs-on" : "zq-fs"} role={full ? "region" : undefined} aria-label={full ? t.fullScreenOf(title) : undefined}>
       <div className="zq-fs-bar">
         {full ? (
           <>
@@ -40,12 +43,12 @@ export function FullScreenEditor({ title, children }: { title: string; children:
               {title}
             </h2>
             <button type="button" className="zq-btn zq-btn-primary" onClick={() => setFull(false)}>
-              Done
+              {t.done}
             </button>
           </>
         ) : (
           <button ref={enter} type="button" className="zq-btn zq-btn-secondary zq-fs-enter" onClick={() => setFull(true)}>
-            Full-screen editing
+            {t.fullScreen}
           </button>
         )}
       </div>

@@ -1,11 +1,16 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { getBrowserSupabase } from "@/lib/supabase/browser";
 import { EditorialStatus, type EditorialState } from "@/components/ui/evidence";
 import { EmptyState, Skeleton } from "@/components/ui/misc";
 import { publishBlockers } from "@/lib/encyclopedia/editor";
 import { STORY_KINDS } from "@/lib/encyclopedia/model";
+import { englishContent } from "@/lib/i18n/locales";
+import { useLocale } from "@/lib/i18n/useLocale";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { adminHadithStoriesStrings } from "@/lib/i18n/modules/adminHadithStories";
+import { AdminFeedback as Feedback, ServerText, errMsg, type AdminMsg } from "./feedback";
 
 /**
  * Hadith stories: editor and the scholarly (hadith authenticity) review queue. Every action is authorised again by the API
@@ -50,8 +55,19 @@ const cols =
   "id, slug, status, version, kind, title_en, title_ar, title_ur, narrator_en, narrator_ar, narrator_ur, summary_en, summary_ar, summary_ur, context_en, context_ar, context_ur";
 
 export function HadithStoriesAdmin({ canEdit, canReview }: { canEdit: boolean; canReview: boolean }) {
+  const locale = useLocale();
+  const hs = useMemo(() => adminHadithStoriesStrings(locale), [locale]);
+  const statusWord = (s: string) => (uiStrings(locale).status as Record<string, string>)[s] ?? s.replace("_", " ");
+  const blockerText = (b: string) => {
+    const g = /^(\S+) needs an individual grading/.exec(b);
+    const a = /^(\S+) is not an allowed source$/.exec(b);
+    if (hs.blockers[b]) return hs.blockers[b];
+    if (g) return hs.blockerGrading(g[1]!);
+    if (a) return hs.blockerSource(a[1]!);
+    return null;
+  };
   const [items, setItems] = useState<Story[] | null>(null);
-  const [msg, setMsg] = useState<{ tone: "ok" | "err"; text: string } | null>(null);
+  const [msg, setMsg] = useState<AdminMsg>(null);
   const [editing, setEditing] = useState<Story | null>(null);
   const [partFor, setPartFor] = useState<string>("");
 
@@ -86,10 +102,10 @@ export function HadithStoriesAdmin({ canEdit, canReview }: { canEdit: boolean; c
         ...s,
         review: rev ? { decision: rev.decision, stale: rev.story_version !== s.version } : null,
         parts: {
-          entries: es.map((e) => ({ id: e.id, label: `${e.hadith_entries?.collection_id ?? "?"} ${e.hadith_entries?.canonical_number ?? ""}${e.is_primary ? " (primary)" : ""}${e.hadith_gradings ? ` · graded ${e.hadith_gradings.grade}` : ""}` })),
-          links: (L.get(s.id) ?? []).map((l) => ({ id: l.id, label: `${l.target_kind}: ${l.people?.name_en ?? l.historical_communities?.name_en ?? l.historical_events?.title ?? l.guidance_topics?.title_en ?? "?"}` })),
-          claims: (C.get(s.id) ?? []).map((x) => ({ id: x.id, label: (x.evidence_claims?.statement ?? "claim").slice(0, 80) })),
-          lessons: (Ls.get(s.id) ?? []).map((x) => ({ id: x.id, label: `${x.kind.replace("_", " ")}: ${x.body_en.slice(0, 60)}` })),
+          entries: es.map((e) => ({ id: e.id, label: hs.entryLabel(e.hadith_entries?.collection_id ?? "?", e.hadith_entries?.canonical_number ?? "", e.is_primary, e.hadith_gradings?.grade ?? null) })),
+          links: (L.get(s.id) ?? []).map((l) => ({ id: l.id, label: `${hs.targetKinds[l.target_kind] ?? l.target_kind}: ${l.people?.name_en ?? l.historical_communities?.name_en ?? l.historical_events?.title ?? l.guidance_topics?.title_en ?? "?"}` })),
+          claims: (C.get(s.id) ?? []).map((x) => ({ id: x.id, label: (x.evidence_claims?.statement ?? hs.claimWord()).slice(0, 80) })),
+          lessons: (Ls.get(s.id) ?? []).map((x) => ({ id: x.id, label: `${hs.lessonKinds[x.kind] ?? x.kind.replace("_", " ")}: ${x.body_en.slice(0, 60)}` })),
         },
         blockers: publishBlockers({
           narrator: !!s.narrator_en,
@@ -101,7 +117,7 @@ export function HadithStoriesAdmin({ canEdit, canReview }: { canEdit: boolean; c
       };
     });
     setItems(out);
-  }, []);
+  }, [hs]);
   useEffect(() => {
     void load();
   }, [load]);
@@ -113,73 +129,69 @@ export function HadithStoriesAdmin({ canEdit, canReview }: { canEdit: boolean; c
       setMsg({ tone: "ok", text: ok });
       await load();
     } catch (e) {
-      setMsg({ tone: "err", text: (e as Error).message });
+      setMsg(errMsg(locale, hs.failedPrefix, (e as Error).message));
     }
   };
-  const status = (s: Story, to: string, revisionNote?: string) => act(() => call("/api/admin/status", { entityType: "hadith_story", entityId: s.id, status: to, revisionNote }), `Status: ${to.replace("_", " ")}.`);
+  const status = (s: Story, to: string, revisionNote?: string) => act(() => call("/api/admin/status", { entityType: "hadith_story", entityId: s.id, status: to, revisionNote }), hs.okStatus(statusWord(to)));
   const review = (s: Story, decision: "approved" | "changes_requested") => {
-    const comment = decision === "changes_requested" ? (window.prompt("What needs to change?") ?? "") : undefined;
+    const comment = decision === "changes_requested" ? (window.prompt(hs.promptChanges) ?? "") : undefined;
     if (decision === "changes_requested" && !comment) return;
-    void act(() => call("/api/admin/hadith-stories/review", { storyId: s.id, decision, comment }), decision === "approved" ? "Review recorded for this version." : "Changes requested.");
+    void act(() => call("/api/admin/hadith-stories/review", { storyId: s.id, decision, comment }), decision === "approved" ? hs.okReviewVersion : hs.okChanges);
   };
-  const reviewText = (s: Story) => (!s.review ? "pending" : s.review.decision === "approved" ? (s.review.stale ? "approved an earlier version, edited since, needs a new review" : "approved (current version)") : s.review.decision.replace(/_/g, " ") + (s.review.stale ? " (earlier version)" : ""));
+  const reviewText = (s: Story) => (!s.review ? hs.reviewPending : s.review.decision === "approved" ? (s.review.stale ? hs.reviewStaleApproved : hs.reviewApprovedCurrent) : (hs.decisions[s.review.decision] ?? s.review.decision.replace(/_/g, " ")) + (s.review.stale ? hs.earlierVersion : ""));
 
   return (
     <div style={{ display: "grid", gap: 24 }}>
       <section className="pp-card" aria-labelledby="hs-rules-h">
-        <h3 id="hs-rules-h">Evidence and review rules</h3>
+        <h3 id="hs-rules-h">{hs.rulesHeading}</h3>
         <ul style={{ margin: 0, paddingInlineStart: 20 }}>
-          <li>A story points at narrations already in the hadith library. There is no field for the narration text, and the database refuses a story whose text copies a narration or its licensed translation.</li>
-          <li>Allowed sources: Sahih al-Bukhari, Sahih Muslim, and Tirmidhi or Ibn Majah only with an individual grading of sahih or sahih li-ghayrihi by a named grader (choose that grading on the narration).</li>
-          <li>Exactly one primary narration. Other wordings are added as variants, each with its own grading; they are never merged.</li>
-          <li>A story that clarifies a Quranic story needs a Quran connection: an approved evidence claim with a Quran reference. Verses are never typed here.</li>
-          <li>Leave the historical context empty when the narration does not state it: the page then says &ldquo;Not established&rdquo;. Modern application is shown as an educational interpretation, never a ruling.</li>
-          <li>The scholarly review (hadith authenticity) is bound to the version. Editing the story or any part afterwards makes the approval stale. The author of the story or of any part cannot review it. A published story is frozen; start a correction to change it.</li>
+          <li>{hs.rule1}</li>
+          <li>{hs.rule2}</li>
+          <li>{hs.rule3}</li>
+          <li>{hs.rule4}</li>
+          <li>{hs.rule5}</li>
+          <li>{hs.rule6}</li>
         </ul>
       </section>
 
-      {canEdit ? <StoryForm key={editing?.id ?? "new"} story={editing} onCancel={() => setEditing(null)} onSaved={(t) => { setEditing(null); void act(async () => undefined, t); }} /> : null}
-      {canEdit ? <PartForm stories={(items ?? []).filter((s) => s.status !== "published")} storyId={partFor} setStoryId={setPartFor} onSaved={(t) => act(async () => undefined, t)} /> : null}
+      {canEdit ? <StoryForm key={editing?.id ?? "new"} story={editing} onCancel={() => setEditing(null)} onSaved={(text) => { setEditing(null); void act(async () => undefined, text); }} /> : null}
+      {canEdit ? <PartForm stories={(items ?? []).filter((s) => s.status !== "published")} storyId={partFor} setStoryId={setPartFor} onSaved={(text) => act(async () => undefined, text)} /> : null}
 
-      {msg ? (
-        <p role={msg.tone === "err" ? "alert" : "status"} className={msg.tone === "err" ? "zq-error" : "zq-help"}>
-          {msg.text}
-        </p>
-      ) : null}
+      <Feedback msg={msg} />
       {!items ? (
         <Skeleton height={20} />
       ) : !items.length ? (
-        <EmptyState title="No hadith stories yet." />
+        <EmptyState title={hs.noStories} />
       ) : (
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gap: 12 }} data-testid="hadith-story-queue">
           {items.map((s) => (
             <li key={s.id} className="pp-card">
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center" }}>
-                <span className="zq-eyebrow">Hadith story</span>
+                <span className="zq-eyebrow">{hs.hadithStory}</span>
                 <EditorialStatus status={s.status} />
-                <span className="zq-meta">Version {s.version}</span>
+                <span className="zq-meta">{hs.versionN(s.version)}</span>
               </div>
               <p style={{ margin: 0 }}>
-                {s.title_en} <span className="zq-meta">/hadith-stories/{s.slug} · {s.kind.replace(/_/g, " ")}</span>
+                <span {...englishContent(locale)}>{s.title_en}</span> <span className="zq-meta">/hadith-stories/{s.slug} · {hs.storyKinds[s.kind] ?? s.kind.replace(/_/g, " ")}</span>
               </p>
               <p className="zq-meta" style={{ margin: 0 }}>
-                Narrations: {s.parts.entries.map((e) => e.label).join("; ") || "none yet"} · links {s.parts.links.length} · Quran connections {s.parts.claims.length} · lessons {s.parts.lessons.length}
+                {hs.partsLine(s.parts.entries.map((e) => e.label).join("; ") || hs.noneYet, s.parts.links.length, s.parts.claims.length, s.parts.lessons.length)}
               </p>
               <p className="zq-meta" style={{ margin: 0 }} data-pathway="religious">
-                Scholarly review: {reviewText(s)}
+                {hs.scholarlyReview} {reviewText(s)}
               </p>
               {s.status !== "published" && s.blockers.length ? (
                 <p className="zq-meta" style={{ margin: 0 }} data-testid="blockers">
-                  Before publishing: {s.blockers.join("; ")}.
+                  {hs.beforePublishing} {s.blockers.map((b, i) => (<span key={i}>{i ? "; " : ""}{blockerText(b) ?? <ServerText>{b}</ServerText>}</span>))}.
                 </p>
               ) : null}
               {canEdit && s.status !== "published" ? (
                 <ul style={{ margin: 0, paddingInlineStart: 18 }}>
                   {[...s.parts.entries.map((p) => ({ ...p, type: "hadith_story_entry" })), ...s.parts.links.map((p) => ({ ...p, type: "hadith_story_link" })), ...s.parts.claims.map((p) => ({ ...p, type: "hadith_story_claim" })), ...s.parts.lessons.map((p) => ({ ...p, type: "hadith_story_lesson" }))].map((p) => (
                     <li key={p.id} className="zq-meta">
-                      {p.label}{" "}
-                      <button type="button" className="zq-btn zq-btn-quiet zq-btn-sm" onClick={() => act(() => call("/api/admin/hadith-stories", { type: p.type, id: p.id }, "DELETE"), "Part removed (the story is a new version).")}>
-                        Remove
+                      <span {...englishContent(locale)}>{p.label}</span>{" "}
+                      <button type="button" className="zq-btn zq-btn-quiet zq-btn-sm" onClick={() => act(() => call("/api/admin/hadith-stories", { type: p.type, id: p.id }, "DELETE"), hs.okPartRemoved)}>
+                        {hs.remove}
                       </button>
                     </li>
                   ))}
@@ -188,27 +200,27 @@ export function HadithStoriesAdmin({ canEdit, canReview }: { canEdit: boolean; c
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                 {canEdit && s.status !== "published" ? (
                   <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => { setEditing(s); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-                    Edit
+                    {hs.edit}
                   </button>
                 ) : null}
                 {canEdit && s.status === "draft" ? (
                   <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => status(s, "in_review")}>
-                    Send for review
+                    {hs.sendForReview}
                   </button>
                 ) : null}
                 {canReview && s.status !== "published" ? (
                   <>
                     <button type="button" className="zq-btn zq-btn-primary zq-btn-sm" onClick={() => review(s, "approved")}>
-                      Approve (authenticity)
+                      {hs.approveAuth}
                     </button>
                     <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => review(s, "changes_requested")}>
-                      Request changes
+                      {hs.requestChanges}
                     </button>
                   </>
                 ) : null}
                 {canEdit && s.status !== "published" ? (
                   <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => status(s, "published")}>
-                    Publish
+                    {hs.publish}
                   </button>
                 ) : null}
                 {canEdit && s.status === "published" ? (
@@ -216,16 +228,16 @@ export function HadithStoriesAdmin({ canEdit, canReview }: { canEdit: boolean; c
                     type="button"
                     className="zq-btn zq-btn-secondary zq-btn-sm"
                     onClick={() => {
-                      const note = window.prompt("Public revision note: what is being corrected and why?") ?? "";
+                      const note = window.prompt(hs.revisionPrompt) ?? "";
                       if (note.trim().length >= 3) void status(s, "correction", note);
                     }}
                   >
-                    Start a correction
+                    {hs.startCorrection}
                   </button>
                 ) : null}
                 {canEdit && s.status !== "published" ? (
                   <button type="button" className="zq-btn zq-btn-quiet zq-btn-sm" onClick={() => status(s, "archived")}>
-                    Archive
+                    {hs.archive}
                   </button>
                 ) : null}
               </div>
@@ -252,7 +264,9 @@ function Field({ id, label, help, area, defaultValue, required, maxLength, lang 
 }
 
 function StoryForm({ story, onSaved, onCancel }: { story: Story | null; onSaved: (text: string) => void; onCancel: () => void }) {
-  const [err, setErr] = useState<string | null>(null);
+  const locale = useLocale();
+  const hs = useMemo(() => adminHadithStoriesStrings(locale), [locale]);
+  const [err, setErr] = useState<AdminMsg>(null);
   return (
     <form
       className="zq-form pp-card"
@@ -264,46 +278,46 @@ function StoryForm({ story, onSaved, onCancel }: { story: Story | null; onSaved:
         for (const [k, v] of new FormData(form).entries()) if (v !== "") data[k] = v;
         try {
           await call("/api/admin/hadith-stories", { type: "hadith_story", id: story?.id, data });
-          onSaved(story ? "Story saved as a new version. It needs a new review." : "Draft saved. Add its narration, then send it for review.");
+          onSaved(story ? hs.okStorySavedNew : hs.okDraftSaved);
           if (!story) form.reset();
         } catch (x) {
-          setErr((x as Error).message);
+          setErr(errMsg(locale, hs.failedPrefix, (x as Error).message));
         }
       }}
     >
-      <h3>{story ? `Edit: ${story.title_en}` : "New hadith story"}</h3>
-      <p className="zq-help">Write the summary, context and lessons in your own words. Never paste the narration or a translation of it.</p>
-      <Field id="slug" label="Address (slug)" required defaultValue={story?.slug} maxLength={80} help="Lower-case letters, digits and hyphens." />
+      <h3>{story ? <>{hs.editPrefix} <span {...englishContent(locale)}>{story.title_en}</span></> : hs.newStory}</h3>
+      <p className="zq-help">{hs.ownWords}</p>
+      <Field id="slug" label={hs.slug} required defaultValue={story?.slug} maxLength={80} help={hs.slugHelp} />
       <div className="zq-field">
-        <label htmlFor="hs-kind">Kind of story</label>
+        <label htmlFor="hs-kind">{hs.kindOfStory}</label>
         <select id="hs-kind" name="kind" className="zq-input" defaultValue={story?.kind ?? "independent_lesson"}>
           {STORY_KINDS.map((k) => (
             <option key={k} value={k}>
-              {k.replace(/_/g, " ")}
+              {hs.storyKinds[k] ?? k.replace(/_/g, " ")}
             </option>
           ))}
         </select>
       </div>
-      <Field id="title_en" label="Title (English)" required defaultValue={story?.title_en} maxLength={200} />
-      <Field id="title_ar" label="Title (Arabic)" defaultValue={story?.title_ar} maxLength={200} lang="ar" />
-      <Field id="title_ur" label="Title (Urdu)" defaultValue={story?.title_ur} maxLength={200} lang="ur" />
-      <Field id="narrator_en" label="Narrator (English)" defaultValue={story?.narrator_en} maxLength={200} help="As named in the cited narration." />
-      <Field id="narrator_ar" label="Narrator (Arabic)" defaultValue={story?.narrator_ar} maxLength={200} lang="ar" />
-      <Field id="narrator_ur" label="Narrator (Urdu)" defaultValue={story?.narrator_ur} maxLength={200} lang="ur" />
-      <Field id="summary_en" label="Summary (English)" area defaultValue={story?.summary_en} maxLength={1500} />
-      <Field id="summary_ar" label="Summary (Arabic)" area defaultValue={story?.summary_ar} maxLength={1500} lang="ar" />
-      <Field id="summary_ur" label="Summary (Urdu)" area defaultValue={story?.summary_ur} maxLength={1500} lang="ur" />
-      <Field id="context_en" label="Historical context (English)" area defaultValue={story?.context_en} maxLength={3000} help="Leave empty when the narration does not state it; the page then says Not established." />
-      <Field id="context_ar" label="Historical context (Arabic)" area defaultValue={story?.context_ar} maxLength={3000} lang="ar" />
-      <Field id="context_ur" label="Historical context (Urdu)" area defaultValue={story?.context_ur} maxLength={3000} lang="ur" />
-      {err ? <p role="alert" className="zq-error">{err}</p> : null}
+      <Field id="title_en" label={hs.titleEn} required defaultValue={story?.title_en} maxLength={200} />
+      <Field id="title_ar" label={hs.titleAr} defaultValue={story?.title_ar} maxLength={200} lang="ar" />
+      <Field id="title_ur" label={hs.titleUr} defaultValue={story?.title_ur} maxLength={200} lang="ur" />
+      <Field id="narrator_en" label={hs.narratorEn} defaultValue={story?.narrator_en} maxLength={200} help={hs.narratorHelp} />
+      <Field id="narrator_ar" label={hs.narratorAr} defaultValue={story?.narrator_ar} maxLength={200} lang="ar" />
+      <Field id="narrator_ur" label={hs.narratorUr} defaultValue={story?.narrator_ur} maxLength={200} lang="ur" />
+      <Field id="summary_en" label={hs.summaryEn} area defaultValue={story?.summary_en} maxLength={1500} />
+      <Field id="summary_ar" label={hs.summaryAr} area defaultValue={story?.summary_ar} maxLength={1500} lang="ar" />
+      <Field id="summary_ur" label={hs.summaryUr} area defaultValue={story?.summary_ur} maxLength={1500} lang="ur" />
+      <Field id="context_en" label={hs.contextEn} area defaultValue={story?.context_en} maxLength={3000} help={hs.contextHelp} />
+      <Field id="context_ar" label={hs.contextAr} area defaultValue={story?.context_ar} maxLength={3000} lang="ar" />
+      <Field id="context_ur" label={hs.contextUr} area defaultValue={story?.context_ur} maxLength={3000} lang="ur" />
+      <Feedback msg={err} />
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
         <button type="submit" className="zq-btn zq-btn-primary">
-          {story ? "Save changes" : "Save draft"}
+          {story ? hs.saveChanges : hs.saveDraft}
         </button>
         {story ? (
           <button type="button" className="zq-btn zq-btn-secondary" onClick={onCancel}>
-            Cancel
+            {hs.cancel}
           </button>
         ) : null}
       </div>
@@ -314,8 +328,10 @@ function StoryForm({ story, onSaved, onCancel }: { story: Story | null; onSaved:
 const COLLECTIONS = ["bukhari", "muslim", "tirmidhi", "ibnmajah"] as const;
 
 function PartForm({ stories, storyId, setStoryId, onSaved }: { stories: Story[]; storyId: string; setStoryId: (id: string) => void; onSaved: (text: string) => void }) {
+  const locale = useLocale();
+  const hs = useMemo(() => adminHadithStoriesStrings(locale), [locale]);
   const [type, setType] = useState<"entry" | "link" | "claim" | "lesson">("entry");
-  const [err, setErr] = useState<string | null>(null);
+  const [err, setErr] = useState<AdminMsg>(null);
   const [claims, setClaims] = useState<Array<{ id: string; label: string }>>([]);
   const [found, setFound] = useState<Array<{ id: string; label: string; gradings: Array<{ id: string; label: string }> }>>([]);
   const [target, setTarget] = useState<Array<{ id: string; label: string }>>([]);
@@ -373,40 +389,40 @@ function PartForm({ stories, storyId, setStoryId, onSaved }: { stories: Story[];
         if (type === "entry") data.is_primary = fd.get("is_primary") === "on";
         try {
           await call("/api/admin/hadith-stories", { type: `hadith_story_${type}`, data });
-          onSaved("Part added. The story is now a new version and needs a new review.");
+          onSaved(hs.okPartAdded);
           form.reset();
           setFound([]);
         } catch (x) {
-          setErr((x as Error).message);
+          setErr(errMsg(locale, hs.failedPrefix, (x as Error).message));
         }
       }}
     >
-      <h3>Add a part to a draft story</h3>
+      <h3>{hs.addPartHeading}</h3>
       <div className="zq-field">
-        <label htmlFor="hs-story">Story</label>
+        <label htmlFor="hs-story">{hs.story}</label>
         <select id="hs-story" name="story" className="zq-input" value={storyId} onChange={(e) => setStoryId(e.target.value)} required>
-          <option value="">Choose…</option>
+          <option value="">{hs.chooseDots}</option>
           {stories.map((s) => (
-            <option key={s.id} value={s.id}>
+            <option key={s.id} value={s.id} {...englishContent(locale)}>
               {s.title_en}
             </option>
           ))}
         </select>
       </div>
       <div className="zq-field">
-        <label htmlFor="hs-part">Part</label>
+        <label htmlFor="hs-part">{hs.part}</label>
         <select id="hs-part" name="part" className="zq-input" value={type} onChange={(e) => setType(e.target.value as typeof type)}>
-          <option value="entry">Narration (a hadith in the library)</option>
-          <option value="link">Link to a person, community, event or theme</option>
-          <option value="claim">Quran connection (approved claim)</option>
-          <option value="lesson">Lesson or modern application</option>
+          <option value="entry">{hs.partEntry}</option>
+          <option value="link">{hs.partLink}</option>
+          <option value="claim">{hs.partClaim}</option>
+          <option value="lesson">{hs.partLesson}</option>
         </select>
       </div>
 
       {type === "entry" ? (
         <>
           <div className="zq-field">
-            <label htmlFor="hs-collection">Collection</label>
+            <label htmlFor="hs-collection">{hs.collection}</label>
             <select id="hs-collection" name="collection" className="zq-input" defaultValue="bukhari">
               {COLLECTIONS.map((c) => (
                 <option key={c} value={c}>
@@ -416,40 +432,40 @@ function PartForm({ stories, storyId, setStoryId, onSaved }: { stories: Story[];
             </select>
           </div>
           <div className="zq-field">
-            <label htmlFor="hs-number">Hadith number</label>
+            <label htmlFor="hs-number">{hs.hadithNumber}</label>
             <input id="hs-number" name="number" className="zq-input" inputMode="numeric" onBlur={(e) => void lookup((document.getElementById("hs-collection") as HTMLSelectElement).value, e.currentTarget.value.trim())} />
-            <p className="zq-help">Leave the field to look the narration up in the library. Only narrations already in the library can be used.</p>
+            <p className="zq-help">{hs.lookupHelp}</p>
           </div>
           <div className="zq-field">
-            <label htmlFor="hs-hadith">Narration found</label>
+            <label htmlFor="hs-hadith">{hs.narrationFound}</label>
             <select id="hs-hadith" name="hadith_id" className="zq-input" required>
-              <option value="">{found.length ? "Choose…" : "None found yet"}</option>
+              <option value="">{found.length ? hs.chooseDots : hs.noneFound}</option>
               {found.map((h) => (
-                <option key={h.id} value={h.id}>
+                <option key={h.id} value={h.id} {...englishContent(locale)}>
                   {h.label}
                 </option>
               ))}
             </select>
           </div>
           <div className="zq-field">
-            <label htmlFor="hs-grading">Individual grading relied on</label>
+            <label htmlFor="hs-grading">{hs.gradingRelied}</label>
             <select id="hs-grading" name="grading_id" className="zq-input">
-              <option value="">None (Bukhari and Muslim only)</option>
+              <option value="">{hs.gradingNone}</option>
               {found.flatMap((h) => h.gradings).map((g) => (
-                <option key={g.id} value={g.id}>
+                <option key={g.id} value={g.id} {...englishContent(locale)}>
                   {g.label}
                 </option>
               ))}
             </select>
-            <p className="zq-help">Required for Tirmidhi and Ibn Majah: sahih or sahih li-ghayrihi, by a named grader. A collection is never a grade.</p>
+            <p className="zq-help">{hs.gradingHelp}</p>
           </div>
           <label className="zq-check">
-            <input type="checkbox" name="is_primary" /> This is the primary narration
+            <input type="checkbox" name="is_primary" /> {hs.primaryCheck}
           </label>
           <div className="zq-field">
-            <label htmlFor="hs-variant">Variant label (optional)</label>
+            <label htmlFor="hs-variant">{hs.variantLabel}</label>
             <input id="hs-variant" name="variant_note" className="zq-input" maxLength={300} />
-            <p className="zq-help">A short label such as &ldquo;the longer wording&rdquo;. Never the narration text.</p>
+            <p className="zq-help">{hs.variantHelp}</p>
           </div>
         </>
       ) : null}
@@ -457,20 +473,20 @@ function PartForm({ stories, storyId, setStoryId, onSaved }: { stories: Story[];
       {type === "link" ? (
         <>
           <div className="zq-field">
-            <label htmlFor="hs-tk">Links to</label>
+            <label htmlFor="hs-tk">{hs.linksTo}</label>
             <select id="hs-tk" name="target_kind" className="zq-input" value={targetKind} onChange={(e) => setTargetKind(e.target.value)}>
-              <option value="person">Person</option>
-              <option value="community">Community</option>
-              <option value="event">Event</option>
-              <option value="theme">Theme (Life Guidance topic)</option>
+              <option value="person">{hs.optPerson}</option>
+              <option value="community">{hs.optCommunity}</option>
+              <option value="event">{hs.optEvent}</option>
+              <option value="theme">{hs.optTheme}</option>
             </select>
           </div>
           <div className="zq-field">
-            <label htmlFor="hs-target">Record</label>
+            <label htmlFor="hs-target">{hs.record}</label>
             <select id="hs-target" name="target_id" className="zq-input" required>
-              <option value="">Choose…</option>
+              <option value="">{hs.chooseDots}</option>
               {target.map((t) => (
-                <option key={t.id} value={t.id}>
+                <option key={t.id} value={t.id} {...englishContent(locale)}>
                   {t.label}
                 </option>
               ))}
@@ -481,37 +497,37 @@ function PartForm({ stories, storyId, setStoryId, onSaved }: { stories: Story[];
 
       {type === "claim" ? (
         <div className="zq-field">
-          <label htmlFor="hs-claim">Approved claim with a Quran reference</label>
+          <label htmlFor="hs-claim">{hs.claimWithQuran}</label>
           <select id="hs-claim" name="claim_id" className="zq-input" required>
-            <option value="">Choose…</option>
+            <option value="">{hs.chooseDots}</option>
             {claims.map((c) => (
-              <option key={c.id} value={c.id}>
+              <option key={c.id} value={c.id} {...englishContent(locale)}>
                 {c.label}
               </option>
             ))}
           </select>
-          <p className="zq-help">Verses are never typed here: the connection comes from the claim&rsquo;s reviewed references.</p>
+          <p className="zq-help">{hs.claimConnHelp}</p>
         </div>
       ) : null}
 
       {type === "lesson" ? (
         <>
           <div className="zq-field">
-            <label htmlFor="hs-lk">Kind</label>
+            <label htmlFor="hs-lk">{hs.kind}</label>
             <select id="hs-lk" name="kind" className="zq-input">
-              <option value="lesson">Lesson</option>
-              <option value="modern_application">Modern application (shown as an educational interpretation)</option>
+              <option value="lesson">{hs.optLesson}</option>
+              <option value="modern_application">{hs.optModern}</option>
             </select>
           </div>
-          <Field id="body_en" label="Text (English)" area required maxLength={1500} />
-          <Field id="body_ar" label="Text (Arabic)" area maxLength={1500} lang="ar" />
-          <Field id="body_ur" label="Text (Urdu)" area maxLength={1500} lang="ur" />
+          <Field id="body_en" label={hs.textEn} area required maxLength={1500} />
+          <Field id="body_ar" label={hs.textAr} area maxLength={1500} lang="ar" />
+          <Field id="body_ur" label={hs.textUr} area maxLength={1500} lang="ur" />
         </>
       ) : null}
 
-      {err ? <p role="alert" className="zq-error">{err}</p> : null}
+      <Feedback msg={err} />
       <button type="submit" className="zq-btn zq-btn-primary" disabled={!storyId}>
-        Add part
+        {hs.addPart}
       </button>
     </form>
   );

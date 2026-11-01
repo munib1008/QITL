@@ -1,10 +1,16 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { getBrowserSupabase } from "@/lib/supabase/browser";
 import { EditorialStatus, type EditorialState } from "@/components/ui/evidence";
 import { EmptyState, Skeleton } from "@/components/ui/misc";
 import { requiredPathways, RECORD_TYPE_KEYS, type RecordType, type ReviewedType } from "@/lib/shifa/editor";
+import { useLocale } from "@/lib/i18n/useLocale";
+import { englishContent } from "@/lib/i18n/locales";
+import { shifaStrings } from "@/lib/i18n/modules/shifa";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { adminShifaStrings } from "@/lib/i18n/modules/adminShifa";
+import { AdminFeedback as Feedback, errMsg, type AdminMsg } from "./feedback";
 import { ENTRY_KINDS, ICON_KEYS, SAFETY_KINDS, STUDY_TYPES, type EntryKind, type EvidenceCategory, type Pathway, type ShifaSection } from "@/lib/shifa/model";
 
 /**
@@ -20,16 +26,6 @@ async function call(url: string, body: unknown) {
   return d;
 }
 
-const TYPE_LABEL: Record<RecordType, string> = {
-  shifa_topic: "Topic",
-  shifa_entry: "Entry",
-  shifa_layer: "Evidence layer (A–D)",
-  shifa_scholarly_note: "Scholarly note",
-  shifa_safety_note: "Safety note",
-  shifa_link: "Link",
-};
-const REVIEWED_LABEL: Record<ReviewedType, string> = { shifa_topic: "Topic", shifa_entry: "Entry", shifa_safety_note: "Safety note", shifa_link: "Link" };
-const PATHWAY_LABEL: Record<Pathway, string> = { religious: "Religious review", clinical: "Clinical review" };
 
 interface ReviewState {
   decision: string;
@@ -46,16 +42,21 @@ interface Item {
   reviews: Partial<Record<Pathway, ReviewState>>;
 }
 
-function reviewText(required: boolean, r?: ReviewState): string {
-  if (!required) return "not required";
-  if (!r) return "pending";
-  if (r.decision === "approved") return r.stale ? "approved an earlier version — edited since, needs a new review" : "approved (current version)";
-  return r.decision.replace(/_/g, " ") + (r.stale ? " (earlier version)" : "");
-}
-
 export function ShifaAdmin({ canEdit, canReligious, canClinical }: { canEdit: boolean; canReligious: boolean; canClinical: boolean }) {
+  const locale = useLocale();
+  const sh = useMemo(() => adminShifaStrings(locale), [locale]);
+  const sf = useMemo(() => shifaStrings(locale), [locale]);
+  const statusWord = (s: string) => (uiStrings(locale).status as Record<string, string>)[s] ?? s.replace("_", " ");
+  const sectionName = (s: string) => (sf.sections as Record<string, { title: string }>)[s]?.title ?? s.replace(/_/g, " ");
+  const noteKind = (k: string) => (sf.safety.noteKinds as Record<string, string>)[k] ?? k.replace(/_/g, " ");
+  const reviewText = (required: boolean, r?: ReviewState): string => {
+    if (!required) return sh.notRequired;
+    if (!r) return sh.pending;
+    if (r.decision === "approved") return r.stale ? sh.approvedStale : sh.approvedCurrent;
+    return (sh.decisions[r.decision] ?? r.decision.replace(/_/g, " ")) + (r.stale ? sh.earlierVersion : "");
+  };
   const [items, setItems] = useState<Item[] | null>(null);
-  const [msg, setMsg] = useState<{ tone: "ok" | "err"; text: string } | null>(null);
+  const [msg, setMsg] = useState<AdminMsg>(null);
 
   const load = useCallback(async () => {
     const c = getBrowserSupabase();
@@ -82,7 +83,7 @@ export function ShifaAdmin({ canEdit, canReligious, canClinical }: { canEdit: bo
     };
     const out: Item[] = [];
     for (const t of (topics.data ?? []) as Array<{ id: string; status: EditorialState; version: number; slug: string; section: ShifaSection; title_en: string }>)
-      out.push({ type: "shifa_topic", id: t.id, status: t.status, version: t.version, label: t.title_en, detail: `/shifa/${t.section.replace(/_/g, "-")}/${t.slug} · ${t.section.replace(/_/g, " ")}`, pathways: requiredPathways({ type: "shifa_topic", section: t.section }), reviews: reviewsFor("shifa_topic", t.id, t.version) });
+      out.push({ type: "shifa_topic", id: t.id, status: t.status, version: t.version, label: t.title_en, detail: sh.topicDetail(`/shifa/${t.section.replace(/_/g, "-")}/${t.slug}`, sectionName(t.section)), pathways: requiredPathways({ type: "shifa_topic", section: t.section }), reviews: reviewsFor("shifa_topic", t.id, t.version) });
     for (const e of (entries.data ?? []) as unknown as Array<{ id: string; status: EditorialState; version: number; kind: EntryKind; title_en: string; shifa_topics: { title_en: string; section: ShifaSection } | null; shifa_layers: Array<{ evidence_category: EvidenceCategory }>; shifa_scholarly_notes: Array<{ id: string }> }>) {
       const cats = e.shifa_layers.map((l) => l.evidence_category);
       out.push({
@@ -90,18 +91,18 @@ export function ShifaAdmin({ canEdit, canReligious, canClinical }: { canEdit: bo
         id: e.id,
         status: e.status,
         version: e.version,
-        label: `${e.shifa_topics?.title_en ?? "Topic"} · ${e.title_en}`,
-        detail: `${e.kind} · layers ${cats.length ? [...new Set(cats)].sort().join(", ") : "none yet"} · ${e.shifa_scholarly_notes.length} scholarly note(s) · version ${e.version}`,
+        label: `${e.shifa_topics?.title_en ?? sh.topicWord} · ${e.title_en}`,
+        detail: sh.entryDetail((sf.entryKinds as Record<string, string>)[e.kind] ?? e.kind, cats.length ? [...new Set(cats)].sort().join(", ") : sh.noneYet, e.shifa_scholarly_notes.length, e.version),
         pathways: requiredPathways({ type: "shifa_entry", section: e.shifa_topics?.section ?? "quranic_healing", kind: e.kind, categories: cats, scholarlyNotes: e.shifa_scholarly_notes.length }),
         reviews: reviewsFor("shifa_entry", e.id, e.version),
       });
     }
     for (const n of (notes.data ?? []) as unknown as Array<{ id: string; status: EditorialState; version: number; kind: string; body_en: string; shifa_topics: { title_en: string } | null }>)
-      out.push({ type: "shifa_safety_note", id: n.id, status: n.status, version: n.version, label: `${n.shifa_topics?.title_en ?? "Topic"} · safety note (${n.kind.replace(/_/g, " ")})`, detail: n.body_en.slice(0, 240), pathways: requiredPathways({ type: "shifa_safety_note", kind: n.kind }), reviews: reviewsFor("shifa_safety_note", n.id, n.version) });
+      out.push({ type: "shifa_safety_note", id: n.id, status: n.status, version: n.version, label: sh.safetyNoteLabel(n.shifa_topics?.title_en ?? sh.topicWord, noteKind(n.kind)), detail: n.body_en.slice(0, 240), pathways: requiredPathways({ type: "shifa_safety_note", kind: n.kind }), reviews: reviewsFor("shifa_safety_note", n.id, n.version) });
     for (const l of (links.data ?? []) as unknown as Array<{ id: string; status: EditorialState; version: number; target_kind: string; shifa_topics: { title_en: string } | null }>)
-      out.push({ type: "shifa_link", id: l.id, status: l.status, version: l.version, label: `${l.shifa_topics?.title_en ?? "Topic"} → ${l.target_kind.replace(/_/g, " ")}`, detail: "A related-reading link; it shows only once the Shifa topic is published.", pathways: ["religious"], reviews: reviewsFor("shifa_link", l.id, l.version) });
+      out.push({ type: "shifa_link", id: l.id, status: l.status, version: l.version, label: `${l.shifa_topics?.title_en ?? sh.topicWord} → ${sh.targetKinds[l.target_kind] ?? l.target_kind.replace(/_/g, " ")}`, detail: sh.linkDetail, pathways: ["religious"], reviews: reviewsFor("shifa_link", l.id, l.version) });
     setItems(out);
-  }, []);
+  }, [sh, sf]);
   useEffect(() => {
     void load();
   }, [load]);
@@ -113,85 +114,81 @@ export function ShifaAdmin({ canEdit, canReligious, canClinical }: { canEdit: bo
       setMsg({ tone: "ok", text: ok });
       await load();
     } catch (e) {
-      setMsg({ tone: "err", text: (e as Error).message });
+      setMsg(errMsg(locale, sh.failedPrefix, (e as Error).message));
     }
   };
   const review = (it: Item, pathway: Pathway, decision: "approved" | "changes_requested") => {
-    const comment = decision === "changes_requested" ? (window.prompt("What needs to change?") ?? "") : undefined;
+    const comment = decision === "changes_requested" ? (window.prompt(sh.promptChanges) ?? "") : undefined;
     if (decision === "changes_requested" && !comment) return;
-    void act(() => call("/api/admin/shifa/review", { entityType: it.type, entityId: it.id, pathway, decision, comment }), decision === "approved" ? "Review recorded for this version." : "Changes requested.");
+    void act(() => call("/api/admin/shifa/review", { entityType: it.type, entityId: it.id, pathway, decision, comment }), decision === "approved" ? sh.okReviewVersion : sh.okChanges);
   };
-  const status = (it: Item, s: string, revisionNote?: string) => act(() => call("/api/admin/status", { entityType: it.type, entityId: it.id, status: s, revisionNote }), `Status: ${s.replace("_", " ")}.`);
+  const status = (it: Item, s: string, revisionNote?: string) => act(() => call("/api/admin/status", { entityType: it.type, entityId: it.id, status: s, revisionNote }), sh.okStatus(statusWord(s)));
   const can: Record<Pathway, boolean> = { religious: canReligious, clinical: canClinical };
 
   return (
     <div style={{ display: "grid", gap: 24 }}>
       <section className="pp-card" aria-labelledby="sh-rules-h">
-        <h3 id="sh-rules-h">Evidence and review rules</h3>
+        <h3 id="sh-rules-h">{sh.rulesHeading}</h3>
         <ul style={{ margin: 0, paddingInlineStart: 20 }}>
-          <li>A (Quran) and B (authentic hadith: Bukhari, Muslim, or individually sahih in Tirmidhi / Ibn Majah) hold only an approved evidence claim. A mention in scripture is never a treatment claim.</li>
-          <li>C (research) is the only layer that may state a health effect. It needs the finding, a named publication, a citation, the study type, the population and stated limits. Never enter a citation you have not checked against the publication itself.</li>
-          <li>D (traditional use or hypothesis) is flagged as such, shown apart and never as established.</li>
-          <li>No dosage, no “take X for Y”, no promised cure, no personal advice. The editor and the database refuse amounts with units, per-day frequencies and treatment instructions.</li>
-          <li>Ruqyah: only the Quran and supplications from the allowed hadith sources; its conditions are scholarly notes with a named scholar and work. No tool that attributes illness to jinn, the evil eye or magic.</li>
-          <li>Religious review (scholarly reviewer): A/B, scholarly notes, supplications, Quranic healing, ruqyah, topics, links. Clinical review (science reviewer): C/D, remedies, lifestyle, safety notes, and anything in the remedies and wellbeing sections. Mixed records need both, for the version being published; editing afterwards makes the approval stale.</li>
-          <li>A remedy page needs a published general safety note and a published medicines/interactions note. A wellbeing topic needs a published mental-health note and a published crisis note.</li>
-          <li>A reviewer never reviews a record they, or the author of any of its layers, wrote.</li>
+          <li>{sh.rule1}</li>
+          <li>{sh.rule2}</li>
+          <li>{sh.rule3}</li>
+          <li>{sh.rule4}</li>
+          <li>{sh.rule5}</li>
+          <li>{sh.rule6}</li>
+          <li>{sh.rule7}</li>
+          <li>{sh.rule8}</li>
         </ul>
       </section>
 
-      {canEdit ? <Editor onSaved={(t) => act(async () => undefined, t)} /> : null}
+      {canEdit ? <Editor onSaved={(text) => act(async () => undefined, text)} /> : null}
 
-      {msg ? (
-        <p role={msg.tone === "err" ? "alert" : "status"} className={msg.tone === "err" ? "zq-error" : "zq-help"}>
-          {msg.text}
-        </p>
-      ) : null}
+      <Feedback msg={msg} />
       {!items ? (
         <Skeleton height={20} />
       ) : !items.length ? (
-        <EmptyState title="No Shifa records yet." />
+        <EmptyState title={sh.noRecords} />
       ) : (
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gap: 12 }} data-testid="shifa-queue">
           {items.map((it) => (
             <li key={it.type + it.id} className="pp-card">
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center" }}>
-                <span className="zq-eyebrow">{REVIEWED_LABEL[it.type]}</span>
+                <span className="zq-eyebrow">{sh.recordTypes[it.type]}</span>
                 <EditorialStatus status={it.status} />
-                <span className="zq-meta">Version {it.version}</span>
+                <span className="zq-meta">{sh.versionN(it.version)}</span>
               </div>
-              <p style={{ margin: 0 }}>{it.label}</p>
+              <p style={{ margin: 0 }} {...englishContent(locale)}>{it.label}</p>
               <p className="zq-meta" style={{ margin: 0 }}>
                 {it.detail}
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
                 {(["religious", "clinical"] as Pathway[]).map((p) => (
                   <span key={p} className="zq-meta" data-pathway={p}>
-                    {PATHWAY_LABEL[p]}: {reviewText(it.pathways.includes(p), it.reviews[p])}
+                    {sh.pathwayLabels[p]}: {reviewText(it.pathways.includes(p), it.reviews[p])}
                   </span>
                 ))}
               </div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                 {canEdit && it.status === "draft" ? (
                   <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => status(it, "in_review")}>
-                    Send for review
+                    {sh.sendForReview}
                   </button>
                 ) : null}
                 {(["religious", "clinical"] as Pathway[]).map((p) =>
                   can[p] && it.pathways.includes(p) ? (
                     <span key={p} style={{ display: "contents" }}>
                       <button type="button" className="zq-btn zq-btn-primary zq-btn-sm" onClick={() => review(it, p, "approved")}>
-                        Approve ({p})
+                        {sh.approveP(sh.pathways[p]!)}
                       </button>
                       <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => review(it, p, "changes_requested")}>
-                        Request changes ({p})
+                        {sh.changesP(sh.pathways[p]!)}
                       </button>
                     </span>
                   ) : null,
                 )}
                 {canEdit && it.status !== "published" ? (
                   <button type="button" className="zq-btn zq-btn-secondary zq-btn-sm" onClick={() => status(it, "published")}>
-                    Publish
+                    {sh.publish}
                   </button>
                 ) : null}
                 {canEdit && it.status === "published" ? (
@@ -199,11 +196,11 @@ export function ShifaAdmin({ canEdit, canReligious, canClinical }: { canEdit: bo
                     type="button"
                     className="zq-btn zq-btn-secondary zq-btn-sm"
                     onClick={() => {
-                      const note = window.prompt("Public revision note: what is being corrected and why?") ?? "";
+                      const note = window.prompt(sh.revisionPrompt) ?? "";
                       if (note.trim().length >= 3) void status(it, "correction", note);
                     }}
                   >
-                    Start a correction
+                    {sh.startCorrection}
                   </button>
                 ) : null}
               </div>
@@ -223,9 +220,14 @@ interface Ref {
 }
 
 function Editor({ onSaved }: { onSaved: (text: string) => void }) {
+  const locale = useLocale();
+  const sh = useMemo(() => adminShifaStrings(locale), [locale]);
+  const sf = useMemo(() => shifaStrings(locale), [locale]);
+  const optLabel = (o: string): string =>
+    (sf.sections as Record<string, { title: string }>)[o]?.title ?? (sf.entryKinds as Record<string, string>)[o] ?? (sf.safety.noteKinds as Record<string, string>)[o] ?? (sf.research.studyTypes as Record<string, string>)[o] ?? o.replace(/_/g, " ");
   const [type, setType] = useState<RecordType>("shifa_topic");
   const [cat, setCat] = useState<EvidenceCategory>("A");
-  const [err, setErr] = useState<string | null>(null);
+  const [err, setErr] = useState<AdminMsg>(null);
   const [topics, setTopics] = useState<Ref[]>([]);
   const [entries, setEntries] = useState<Ref[]>([]);
   const [claims, setClaims] = useState<Array<Ref & { evidence: string }>>([]);
@@ -245,7 +247,7 @@ function Editor({ onSaved }: { onSaved: (text: string) => void }) {
         c.from("guidance_topics").select("id, title_en").order("title_en").limit(100),
       ]);
       setTopics(((t.data ?? []) as Array<{ id: string; title_en: string }>).map((x) => ({ id: x.id, label: x.title_en })));
-      setEntries(((e.data ?? []) as unknown as Array<{ id: string; title_en: string; shifa_topics: { title_en: string } | null }>).map((x) => ({ id: x.id, label: `${x.shifa_topics?.title_en ?? "Topic"} · ${x.title_en}` })));
+      setEntries(((e.data ?? []) as unknown as Array<{ id: string; title_en: string; shifa_topics: { title_en: string } | null }>).map((x) => ({ id: x.id, label: `${x.shifa_topics?.title_en ?? sh.topicWord} · ${x.title_en}` })));
       setClaims(((cl.data ?? []) as Array<{ id: string; statement: string; evidence: string }>).map((x) => ({ id: x.id, label: x.statement.slice(0, 90), evidence: x.evidence })));
       setPeople(((p.data ?? []) as Array<{ id: string; name_en: string }>).map((x) => ({ id: x.id, label: x.name_en })));
       setGuidance(((g.data ?? []) as Array<{ id: string; title_en: string }>).map((x) => ({ id: x.id, label: x.title_en })));
@@ -270,12 +272,12 @@ function Editor({ onSaved }: { onSaved: (text: string) => void }) {
     <div className="zq-field">
       <label htmlFor={`sh-${id}`}>{label}</label>
       <select id={`sh-${id}`} name={id} className="zq-input" required={!allowEmpty}>
-        {allowEmpty ? <option value="">—</option> : <option value="" disabled>Choose…</option>}
+        {allowEmpty ? <option value="">—</option> : <option value="" disabled>{sh.chooseDots}</option>}
         {options.map((o) => {
           const v = typeof o === "string" ? o : o.id;
-          const t = typeof o === "string" ? o.replace(/_/g, " ") : o.label;
+          const t = typeof o === "string" ? optLabel(o) : o.label;
           return (
-            <option key={v} value={v}>
+            <option key={v} value={v} {...(typeof o === "string" ? {} : englishContent(locale))}>
               {t}
             </option>
           );
@@ -306,21 +308,21 @@ function Editor({ onSaved }: { onSaved: (text: string) => void }) {
         if (type === "shifa_layer") data.evidence_category = cat;
         try {
           await call("/api/admin/shifa", { type, data });
-          onSaved("Draft saved. Send it for review when it is complete.");
+          onSaved(sh.okDraftSaved);
           form.reset();
         } catch (x) {
-          setErr((x as Error).message);
+          setErr(errMsg(locale, sh.failedPrefix, (x as Error).message));
         }
       }}
     >
-      <h3>New draft record</h3>
-      <p className="zq-help">No remedy, claim, dosage, verse, hadith or citation is ever pre-filled. Enter only what you have checked against the source.</p>
+      <h3>{sh.newDraft}</h3>
+      <p className="zq-help">{sh.noPrefill}</p>
       <div className="zq-field">
-        <label htmlFor="sh-type">Record type</label>
+        <label htmlFor="sh-type">{sh.recordType}</label>
         <select id="sh-type" name="type" className="zq-input" value={type} onChange={(e) => setType(e.target.value as RecordType)}>
           {RECORD_TYPE_KEYS.map((t) => (
             <option key={t} value={t}>
-              {TYPE_LABEL[t]}
+              {sh.recordTypes[t]}
             </option>
           ))}
         </select>
@@ -328,104 +330,100 @@ function Editor({ onSaved }: { onSaved: (text: string) => void }) {
 
       {type === "shifa_topic" ? (
         <>
-          {f("slug", "Slug", { required: true, pattern: "[a-z0-9-]{2,60}", dir: "ltr" })}
-          {sel("section", "Section", ["quranic_healing", "ruqyah", "prophetic_remedies", "wellbeing"])}
-          {f("title_en", "Title (English). A title is a navigation label, not a claim.", { required: true })}
-          {f("title_ar", "Title (Arabic, draft until a translator reviews it)", { dir: "rtl", lang: "ar" })}
-          {sel("icon_key", "Abstract icon", ICON_KEYS, true)}
+          {f("slug", sh.slugShort, { required: true, pattern: "[a-z0-9-]{2,60}", dir: "ltr" })}
+          {sel("section", sh.section, ["quranic_healing", "ruqyah", "prophetic_remedies", "wellbeing"])}
+          {f("title_en", sh.titleNav, { required: true })}
+          {f("title_ar", sh.titleArDraft, { dir: "rtl", lang: "ar" })}
+          {sel("icon_key", sh.abstractIcon, ICON_KEYS, true)}
         </>
       ) : null}
       {type === "shifa_entry" ? (
         <>
-          {sel("topic_id", "Topic", topics)}
-          {f("slug", "Slug", { required: true, pattern: "[a-z0-9-]{2,60}", dir: "ltr" })}
-          {sel("kind", "Kind", ENTRY_KINDS)}
-          {f("title_en", "Title (English)", { required: true })}
-          {f("title_ar", "Title (Arabic)", { dir: "rtl", lang: "ar" })}
+          {sel("topic_id", sh.topicWord, topics)}
+          {f("slug", sh.slugShort, { required: true, pattern: "[a-z0-9-]{2,60}", dir: "ltr" })}
+          {sel("kind", sh.kind, ENTRY_KINDS)}
+          {f("title_en", sh.titleEn, { required: true })}
+          {f("title_ar", sh.titleAr, { dir: "rtl", lang: "ar" })}
         </>
       ) : null}
       {type === "shifa_layer" ? (
         <>
-          {sel("entry_id", "Entry (a draft)", entries)}
+          {sel("entry_id", sh.entryDraft, entries)}
           <div className="zq-field">
-            <label htmlFor="sh-cat">Layer</label>
+            <label htmlFor="sh-cat">{sh.layer}</label>
             <select id="sh-cat" className="zq-input" value={cat} onChange={(e) => setCat(e.target.value as EvidenceCategory)}>
-              <option value="A">A · What the Quran says</option>
-              <option value="B">B · What authentic hadith record</option>
-              <option value="C">C · What modern research reports</option>
-              <option value="D">D · Traditional use or hypothesis (not established)</option>
+              <option value="A">{sf.layers.A.name}</option>
+              <option value="B">{sf.layers.B.name}</option>
+              <option value="C">{sf.layers.C.name}</option>
+              <option value="D">{sf.layers.D.name}</option>
             </select>
           </div>
-          {cat === "A" ? sel("claim_id", "Approved Quran claim", claimOptions("quran"), false, "Create the claim with its verse reference and have a scholarly reviewer approve it first.") : null}
-          {cat === "B" ? sel("claim_id", "Approved hadith claim", claimOptions("hadith"), false, "Only Bukhari, Muslim, or a narration individually graded sahih in Tirmidhi or Ibn Majah; the database checks.") : null}
+          {cat === "A" ? sel("claim_id", sh.approvedQuranClaim, claimOptions("quran"), false, sh.quranClaimHelp) : null}
+          {cat === "B" ? sel("claim_id", sh.approvedHadithClaim, claimOptions("hadith"), false, sh.hadithClaimHelp) : null}
           {cat === "C" ? (
             <>
-              {area("finding", "What the research reports", "Report the finding and its direction, including a null result. No instruction, no dosage.")}
-              {f("publication", "Publication (journal or report)", { required: true })}
-              {f("citation", "Citation", { required: true })}
-              {f("url", "Link to the publication (https)", { type: "url", dir: "ltr" })}
-              {sel("study_type", "Study type", STUDY_TYPES)}
-              {f("population", "Population or subject (people, species, cells)", { required: true })}
-              {area("limitations", "Limits of this evidence", "State study size, species or population, what was studied (describe, never recommend), and conflicts of interest. At least 20 characters.")}
-              {check("states_health_effect", "This finding reports a health effect")}
+              {area("finding", sh.finding, sh.findingHelp)}
+              {f("publication", sh.publication, { required: true })}
+              {f("citation", sh.citation, { required: true })}
+              {f("url", sh.publicationLink, { type: "url", dir: "ltr" })}
+              {sel("study_type", sh.studyType, STUDY_TYPES)}
+              {f("population", sh.population, { required: true })}
+              {area("limitations", sh.limits, sh.limitsHelp)}
+              {check("states_health_effect", sh.healthEffectCheck)}
             </>
           ) : null}
           {cat === "D" ? (
             <>
-              {area("finding", "The traditional use or hypothesis, as a statement of what is said, not of what works")}
-              {f("citation", "Historical or traditional source, if any")}
-              {check("is_traditional", "Traditional use")}
-              {check("is_hypothesis", "Hypothesis")}
+              {area("finding", sh.traditionalStatement)}
+              {f("citation", sh.traditionalSource)}
+              {check("is_traditional", sh.traditionalCheck)}
+              {check("is_hypothesis", sh.hypothesisCheck)}
             </>
           ) : null}
-          {f("language", "Language of the text", { defaultValue: "en", pattern: "[a-z]{2,3}", dir: "ltr" })}
+          {f("language", sh.languageOfText, { defaultValue: "en", pattern: "[a-z]{2,3}", dir: "ltr" })}
         </>
       ) : null}
       {type === "shifa_scholarly_note" ? (
         <>
-          {sel("entry_id", "Entry (a draft)", entries)}
-          {sel("claim_id", "Approved scholarly claim", claimOptions("scholar"), false, "The conditions of a permissible ruqyah are scholarly claims, not editor opinion.")}
-          {f("scholar_name", "Scholar (named)", { required: true })}
-          {f("work_title", "Work", { required: true })}
-          {f("locator", "Volume / page / section")}
+          {sel("entry_id", sh.entryDraft, entries)}
+          {sel("claim_id", sh.approvedScholarlyClaim, claimOptions("scholar"), false, sh.scholarlyClaimHelp)}
+          {f("scholar_name", sh.scholarNamed, { required: true })}
+          {f("work_title", sh.work, { required: true })}
+          {f("locator", sh.locator)}
         </>
       ) : null}
       {type === "shifa_safety_note" ? (
         <>
-          {sel("topic_id", "Topic", topics)}
-          {sel("entry_id", "Entry (optional)", entries, true)}
-          {sel("kind", "Kind", SAFETY_KINDS)}
-          {area("body_en", "Note (English)", "Safety wording only. No dosage.")}
-          {area("body_ar", "Note (Arabic, draft until reviewed)")}
+          {sel("topic_id", sh.topicWord, topics)}
+          {sel("entry_id", sh.entryOptional, entries, true)}
+          {sel("kind", sh.kind, SAFETY_KINDS)}
+          {area("body_en", sh.noteEn, sh.noteEnHelp)}
+          {area("body_ar", sh.noteArDraft)}
         </>
       ) : null}
       {type === "shifa_link" ? (
         <>
-          {sel("topic_id", "Shifa topic", topics)}
-          {sel("entry_id", "Entry (optional)", entries, true)}
+          {sel("topic_id", sh.shifaTopic, topics)}
+          {sel("entry_id", sh.entryOptional, entries, true)}
           <div className="zq-field">
-            <label htmlFor="sh-target-kind">Links to</label>
+            <label htmlFor="sh-target-kind">{sh.linksTo}</label>
             <select id="sh-target-kind" name="target_kind" className="zq-input" value={targetKind} onChange={(e) => setTargetKind(e.target.value)}>
               {["guidance_topic", "person", "event", "story", "food"].map((k) => (
                 <option key={k} value={k}>
-                  {k.replace("_", " ")}
+                  {sh.targetKinds[k] ?? k.replace("_", " ")}
                 </option>
               ))}
             </select>
           </div>
-          {targetKind === "guidance_topic" ? sel("target_id", "Life Guidance topic", guidance) : null}
-          {targetKind === "person" ? sel("target_id", "Person (e.g. Ayyub: the story stays in the stories module)", people) : null}
-          {["event", "story", "food"].includes(targetKind) ? f("target_id", `${targetKind} id`, { required: true, dir: "ltr" }) : null}
+          {targetKind === "guidance_topic" ? sel("target_id", sh.lifeGuidanceTopic, guidance) : null}
+          {targetKind === "person" ? sel("target_id", sh.personAyyub, people) : null}
+          {["event", "story", "food"].includes(targetKind) ? f("target_id", sh.idOfKind(sh.targetKinds[targetKind] ?? targetKind), { required: true, dir: "ltr" }) : null}
         </>
       ) : null}
-      {type !== "shifa_link" ? f("position", "Order", { type: "number", min: 1, max: 500, defaultValue: type === "shifa_topic" ? 100 : 1 }) : f("position", "Order", { type: "number", min: 1, max: 500, defaultValue: 1 })}
-      {err ? (
-        <p role="alert" className="zq-error">
-          {err}
-        </p>
-      ) : null}
+      {type !== "shifa_link" ? f("position", sh.order, { type: "number", min: 1, max: 500, defaultValue: type === "shifa_topic" ? 100 : 1 }) : f("position", sh.order, { type: "number", min: 1, max: 500, defaultValue: 1 })}
+      <Feedback msg={err} />
       <button type="submit" className="zq-btn zq-btn-primary">
-        Save draft
+        {sh.saveDraft}
       </button>
     </form>
   );

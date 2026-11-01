@@ -35,10 +35,10 @@ beforeAll(async () => {
   plain = await db.createUser("plain@test.local");
 }, 240_000);
 
-async function render(user: string | null) {
+async function render(user: string | null, locale = "en") {
   who = user;
   const { default: Page } = await import("@/app/[locale]/admin/stories/coverage/page");
-  return renderToStaticMarkup(await Page());
+  return renderToStaticMarkup(await Page({ params: Promise.resolve({ locale }) }));
 }
 
 describe("/admin/stories/coverage", () => {
@@ -69,5 +69,24 @@ describe("/admin/stories/coverage", () => {
   test("a signed-out visitor gets the same refusal", async () => {
     const html = await render(null);
     expect(html).toContain("Story coverage is for editorial staff");
+  });
+
+  test.each([
+    ["ar", "تغطية القصص", "أنبياء"],
+    ["ur", "کہانیوں کی کوریج", "انبیاء"],
+  ])("in %s the labels are translated and the figures and test ids are unchanged", async (locale, title, word) => {
+    const html = await render(editor, locale);
+    expect(html).toContain(title);
+    expect(html).toContain(word);
+    expect(html).toMatch(/data-testid="cov-discovered">159</);
+    expect((html.match(/data-testid="coverage-row"/g) ?? []).length).toBe(25 + 134);
+    // Database titles stay as data, marked English; the English interface wording is gone.
+    expect(html).toContain('lang="en"');
+    expect(html).not.toContain("Discovered (the item is in the register)");
+  });
+
+  test("the refusal for a non-staff user is translated", async () => {
+    expect(await render(plain, "ar")).not.toContain("Story coverage is for editorial staff");
+    expect(await render(null, "ur")).not.toContain("Story coverage is for editorial staff");
   });
 });

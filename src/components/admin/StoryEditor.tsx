@@ -1,11 +1,17 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { getBrowserSupabase } from "@/lib/supabase/browser";
 import { EditorialStatus, type EditorialState } from "@/components/ui/evidence";
 import { TextField } from "@/components/ui/misc";
 import { AnimationPlayer, ANIMATION_KEYS, ANIMATION_LABELS } from "@/components/story/AnimationPlayer";
 import { FACT_KEYS, FACT_TITLE, STEP_ROLES, STEP_TITLE } from "@/lib/data/story-types";
+import { useLocale } from "@/lib/i18n/useLocale";
+import { englishContent } from "@/lib/i18n/locales";
+import { storyStrings } from "@/lib/i18n/modules/story";
+import { uiStrings } from "@/lib/i18n/modules/ui";
+import { adminStoryStrings } from "@/lib/i18n/modules/adminStory";
+import { AdminFeedback as Feedback, errMsg, type AdminMsg } from "./feedback";
 
 interface Stop {
   id: string;
@@ -70,17 +76,25 @@ async function setStatus(entityType: string, entityId: string, status: string) {
 
 export function StoryEditor({ stops }: { stops: Stop[] }) {
   const sb = getBrowserSupabase();
+  const locale = useLocale();
+  const t = useMemo(() => adminStoryStrings(locale), [locale]);
+  const ss = useMemo(() => storyStrings(locale), [locale]);
+  const statusWord = (s: string) => (uiStrings(locale).status as Record<string, string>)[s] ?? s;
   const [subjects, setSubjects] = useState<Subject[] | null>(null);
   const [subjectKey, setSubjectKey] = useState("");
   const [rows, setRows] = useState<Row[]>([]);
   const [section, setSection] = useState("summary");
   const [audience, setAudience] = useState("full");
   const [anim, setAnim] = useState(ANIMATION_KEYS[0]!);
-  const [msg, setMsg] = useState<{ tone: "ok" | "err"; text: string } | null>(null);
+  const [msg, setMsg] = useState<AdminMsg>(null);
   const subject = subjects?.find((s) => `${s.type}:${s.id}` === subjectKey);
   const col = subject?.type === "event" ? "event_id" : "person_id";
 
-  const say = (tone: "ok" | "err", text: string) => setMsg({ tone, text });
+  const say = (tone: "ok" | "err", text: string, server?: string) => setMsg(server ? { tone, text, server } : { tone, text });
+  const sayErr = (message: string) => {
+    const m = errMsg(locale, t.failedPrefix, message, t.notConfigured);
+    say("err", m.text, m.server);
+  };
   const loadSubjects = useCallback(async () => {
     if (!sb) return;
     const [p, e] = await Promise.all([
@@ -115,17 +129,12 @@ export function StoryEditor({ stops }: { stops: Stop[] }) {
 
   return (
     <div style={{ display: "grid", gap: 24 }}>
-      {msg ? (
-        <p role={msg.tone === "err" ? "alert" : "status"} className={msg.tone === "err" ? "zq-error" : "zq-help"}>
-          {msg.text}
-        </p>
-      ) : null}
+      <Feedback msg={msg} />
 
       <section className="pp-card">
-        <h3>Subjects</h3>
+        <h3>{t.subjects}</h3>
         <p className="zq-meta" style={{ margin: 0 }}>
-          Prophets come from the journey content; events from the encyclopedia list. Both are created as drafts with names only — no dates, places or claims —
-          and must be reviewed before they are published.
+          {t.subjectsHelp}
         </p>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
           {missingPeople.length ? (
@@ -134,14 +143,14 @@ export function StoryEditor({ stops }: { stops: Stop[] }) {
               className="zq-btn zq-btn-secondary"
               onClick={async () => {
                 const { error } = (await sb?.from("people").insert(missingPeople.map((s) => ({ slug: s.id, name_en: s.name, name_ar: s.arabicName, honorific: s.honorific || null, kind: "prophet" })))) ?? {
-                  error: { message: "Not configured" },
+                  error: { message: t.notConfigured },
                 };
-                if (error) say("err", error.message);
-                else say("ok", `Created ${missingPeople.length} draft prophets.`);
+                if (error) sayErr(error.message);
+                else say("ok", t.createdProphets(missingPeople.length));
                 void loadSubjects();
               }}
             >
-              Import {missingPeople.length} prophets as drafts
+              {t.importProphets(missingPeople.length)}
             </button>
           ) : null}
           {missingEvents.length ? (
@@ -151,32 +160,32 @@ export function StoryEditor({ stops }: { stops: Stop[] }) {
               onClick={async () => {
                 const me = (await sb?.auth.getUser())?.data.user?.id;
                 const { error } = (await sb?.from("historical_events").insert(missingEvents.map(([slug, title, category]) => ({ slug, title, category, date_precision: "unknown", created_by: me })))) ?? {
-                  error: { message: "Not configured" },
+                  error: { message: t.notConfigured },
                 };
-                if (error) say("err", error.message);
-                else say("ok", `Created ${missingEvents.length} draft events with unknown dates. Add sources, dates and places before review.`);
+                if (error) sayErr(error.message);
+                else say("ok", t.createdEvents(missingEvents.length));
                 void loadSubjects();
               }}
             >
-              Import {missingEvents.length} encyclopedia events as drafts
+              {t.importEvents(missingEvents.length)}
             </button>
           ) : null}
         </div>
         <div className="zq-field">
-          <label htmlFor="se-subject">Prophet or event</label>
+          <label htmlFor="se-subject">{t.prophetOrEvent}</label>
           <select id="se-subject" className="zq-input" value={subjectKey} onChange={(e) => setSubjectKey(e.target.value)}>
-            <option value="">Choose…</option>
-            <optgroup label="Prophets">
+            <option value="">{t.choose}</option>
+            <optgroup label={t.prophets}>
               {(subjects ?? []).filter((s) => s.type === "person").map((s) => (
-                <option key={s.id} value={`person:${s.id}`}>
-                  {s.name} ({s.status})
+                <option key={s.id} value={`person:${s.id}`} {...englishContent(locale)}>
+                  {s.name} ({statusWord(s.status)})
                 </option>
               ))}
             </optgroup>
-            <optgroup label="Events">
+            <optgroup label={t.events}>
               {(subjects ?? []).filter((s) => s.type === "event").map((s) => (
-                <option key={s.id} value={`event:${s.id}`}>
-                  {s.name} ({s.status})
+                <option key={s.id} value={`event:${s.id}`} {...englishContent(locale)}>
+                  {s.name} ({statusWord(s.status)})
                 </option>
               ))}
             </optgroup>
@@ -187,16 +196,16 @@ export function StoryEditor({ stops }: { stops: Stop[] }) {
       {subject ? (
         <>
           <section className="pp-card">
-            <h3>Sections of {subject.name}</h3>
+            <h3>{t.sectionsOf} {subject.name}</h3>
             {rows.length ? (
               <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                 {rows.map((r) => (
                   <li key={r.id} className="zq-result" style={{ flexDirection: "row", flexWrap: "wrap", gap: 8, alignItems: "center", padding: "8px 0" }}>
                     <EditorialStatus status={r.status} />
-                    <b>{SECTIONS.find((x) => x[0] === r.section)?.[1] ?? r.section}</b>
+                    <b>{t.sections[r.section] ?? SECTIONS.find((x) => x[0] === r.section)?.[1] ?? r.section}</b>
                     <span className="zq-meta">
-                      {r.fact_key ? FACT_TITLE[r.fact_key as keyof typeof FACT_TITLE] : ""}
-                      {r.step_role ? `Challenge ${r.step_group} · ${STEP_TITLE[r.step_role as keyof typeof STEP_TITLE]}` : ""} · {r.audience}
+                      {r.fact_key ? (ss.facts[r.fact_key] ?? FACT_TITLE[r.fact_key as keyof typeof FACT_TITLE]) : ""}
+                      {r.step_role ? `${ss.challenge(r.step_group ?? 0)} · ${ss.steps[r.step_role] ?? STEP_TITLE[r.step_role as keyof typeof STEP_TITLE]}` : ""} · {t.audiences[r.audience] ?? r.audience}
                     </span>
                     {r.status === "draft" ? (
                       <button
@@ -205,21 +214,21 @@ export function StoryEditor({ stops }: { stops: Stop[] }) {
                         onClick={async () => {
                           try {
                             await setStatus("story_section", r.id, "in_review");
-                            say("ok", "Sent for review.");
+                            say("ok", t.okSent);
                           } catch (x) {
-                            say("err", (x as Error).message);
+                            sayErr((x as Error).message);
                           }
                           void loadRows();
                         }}
                       >
-                        Send for review
+                        {t.sendForReview}
                       </button>
                     ) : null}
                   </li>
                 ))}
               </ul>
             ) : (
-              <p className="zq-meta">No sections yet.</p>
+              <p className="zq-meta">{t.noSections}</p>
             )}
           </section>
 
@@ -231,7 +240,7 @@ export function StoryEditor({ stops }: { stops: Stop[] }) {
               const f = new FormData(e.currentTarget);
               const g = (k: string) => String(f.get(k) ?? "").trim();
               const base = audience === "full" ? null : rows.find((r) => r.id === g("base"));
-              if (audience !== "full" && !base) return say("err", "Choose the full section this version adapts.");
+              if (audience !== "full" && !base) return say("err", t.chooseFull);
               const known = section !== "fact" || f.get("known") === "on";
               const me = (await sb?.auth.getUser())?.data.user?.id;
               const { error } = (await sb?.from("story_sections").insert({
@@ -251,38 +260,38 @@ export function StoryEditor({ stops }: { stops: Stop[] }) {
                 everyday_example: section === "takeaway" ? g("everyday_example") || null : null,
                 claim_id: base?.claim_id ?? g("claim_id"),
                 created_by: me,
-              })) ?? { error: { message: "Not configured" } };
-              if (error) say("err", error.message);
+              })) ?? { error: { message: t.notConfigured } };
+              if (error) sayErr(error.message);
               else {
-                say("ok", "Saved as a draft.");
+                say("ok", t.okSavedDraft);
                 (e.target as HTMLFormElement).reset();
                 void loadRows();
               }
             }}
           >
-            <h3>Write a section</h3>
+            <h3>{t.writeSection}</h3>
             <div className="zq-field">
-              <label htmlFor="se-section">Section</label>
+              <label htmlFor="se-section">{t.section}</label>
               <select id="se-section" className="zq-input" value={section} onChange={(e) => setSection(e.target.value)}>
                 {SECTIONS.map(([k, label]) => (
                   <option key={k} value={k}>
-                    {label}
+                    {t.sections[k] ?? label}
                   </option>
                 ))}
               </select>
             </div>
             <div className="zq-field">
-              <label htmlFor="se-aud">Reading level</label>
+              <label htmlFor="se-aud">{t.readingLevel}</label>
               <select id="se-aud" className="zq-input" value={audience} onChange={(e) => setAudience(e.target.value)}>
-                <option value="full">Full story (the reviewed source text)</option>
-                <option value="young">Young learners (adapts a full section)</option>
-                <option value="kids">Kids (adapts a full section)</option>
+                <option value="full">{t.levelFull}</option>
+                <option value="young">{t.levelYoung}</option>
+                <option value="kids">{t.levelKids}</option>
               </select>
-              <span className="zq-help">Kids and young versions reuse the full section&apos;s claim: one set of reviewed evidence powers every level.</span>
+              <span className="zq-help">{t.levelHelp}</span>
             </div>
             {audience !== "full" ? (
               <div className="zq-field">
-                <label htmlFor="se-base">Adapts this full section</label>
+                <label htmlFor="se-base">{t.adaptsFull}</label>
                 <select id="se-base" name="base" className="zq-input" required>
                   {fullRows.map((r) => (
                     <option key={r.id} value={r.id}>
@@ -294,11 +303,11 @@ export function StoryEditor({ stops }: { stops: Stop[] }) {
             ) : null}
             {section === "fact" && audience === "full" ? (
               <div className="zq-field">
-                <label htmlFor="se-fact">Fact</label>
+                <label htmlFor="se-fact">{t.fact}</label>
                 <select id="se-fact" name="fact_key" className="zq-input">
                   {FACT_KEYS.map((k) => (
                     <option key={k} value={k}>
-                      {FACT_TITLE[k]}
+                      {ss.facts[k] ?? FACT_TITLE[k]}
                     </option>
                   ))}
                 </select>
@@ -307,21 +316,21 @@ export function StoryEditor({ stops }: { stops: Stop[] }) {
             {section === "fact" ? (
               <>
                 <label style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                  <input type="checkbox" name="known" defaultChecked /> The Quran or the selected authentic Hadith establish this
+                  <input type="checkbox" name="known" defaultChecked /> {t.knownCheck}
                 </label>
-                <TextField label="Value (as the source states it)" id="se-value" name="value_text" maxLength={160} help="Leave empty and untick when not established; the page then says so. Never substitute an estimate." />
-                <TextField label="Note" id="se-note" name="value_note" maxLength={300} help="e.g. what the figure does and does not cover." />
+                <TextField label={t.valueLabel} id="se-value" name="value_text" maxLength={160} help={t.valueHelp} />
+                <TextField label={t.note} id="se-note" name="value_note" maxLength={300} help={t.noteHelp} />
               </>
             ) : null}
             {section === "step" && audience === "full" ? (
               <>
-                <TextField label="Challenge number" id="se-group" name="step_group" type="number" min={1} defaultValue="1" />
+                <TextField label={t.challengeNumber} id="se-group" name="step_group" type="number" min={1} defaultValue="1" />
                 <div className="zq-field">
-                  <label htmlFor="se-role">Step</label>
+                  <label htmlFor="se-role">{t.step}</label>
                   <select id="se-role" name="step_role" className="zq-input">
                     {STEP_ROLES.map((r) => (
                       <option key={r} value={r}>
-                        {STEP_TITLE[r]}
+                        {ss.steps[r] ?? STEP_TITLE[r]}
                       </option>
                     ))}
                   </select>
@@ -329,23 +338,23 @@ export function StoryEditor({ stops }: { stops: Stop[] }) {
               </>
             ) : null}
             {["takeaway", "summary", "before_mission", "calling", "outcome", "scholarly_note"].includes(section) ? (
-              <TextField label={section === "takeaway" ? "Lesson" : "Heading (optional)"} id="se-title" name="title" maxLength={160} required={section === "takeaway"} />
+              <TextField label={section === "takeaway" ? t.lesson : t.headingOptional} id="se-title" name="title" maxLength={160} required={section === "takeaway"} />
             ) : null}
             {section !== "fact" ? (
               <div className="zq-field" style={{ maxWidth: "none" }}>
-                <label htmlFor="se-body">{section === "takeaway" ? "Meaning" : section === "reflection" ? "Question" : "Text (Markdown)"}</label>
+                <label htmlFor="se-body">{section === "takeaway" ? t.meaning : section === "reflection" ? t.question : t.textMd}</label>
                 <textarea id="se-body" name="body_md" className="zq-textarea" style={{ minHeight: 160 }} required />
-                <span className="zq-help">Only what the cited sources support. No invented dialogue, thoughts, motives, ages, places or dates.</span>
+                <span className="zq-help">{t.bodyHelp}</span>
               </div>
             ) : null}
             {section === "takeaway" ? (
-              <TextField label="Everyday example (shown as an educational application)" id="se-ex" name="everyday_example" required maxLength={1000} />
+              <TextField label={t.everydayExample} id="se-ex" name="everyday_example" required maxLength={1000} />
             ) : null}
-            <TextField label="Position" id="se-pos" name="position" type="number" min={1} defaultValue="1" />
-            {audience === "full" ? <TextField label="Claim id (the referenced claim this rests on)" id="se-claim" name="claim_id" required pattern="[0-9a-f-]{36}" dir="ltr" /> : null}
+            <TextField label={t.position} id="se-pos" name="position" type="number" min={1} defaultValue="1" />
+            {audience === "full" ? <TextField label={t.claimRests} id="se-claim" name="claim_id" required pattern="[0-9a-f-]{36}" dir="ltr" /> : null}
             <div>
               <button type="submit" className="zq-btn zq-btn-primary">
-                Save draft
+                {t.saveDraft}
               </button>
             </div>
           </form>
@@ -368,31 +377,31 @@ export function StoryEditor({ stops }: { stops: Stop[] }) {
                 alt_text: g("alt"),
                 claim_id: g("claim"),
                 created_by: me,
-              })) ?? { error: { message: "Not configured" } };
-              if (error) say("err", error.message);
-              else say("ok", "Animation registered as a draft. A scholarly reviewer approves it before it appears.");
+              })) ?? { error: { message: t.notConfigured } };
+              if (error) sayErr(error.message);
+              else say("ok", t.animationRegistered);
             }}
           >
-            <h3>Register a symbolic animation</h3>
+            <h3>{t.registerAnimation}</h3>
             <div className="zq-field">
-              <label htmlFor="se-anim">Animation</label>
+              <label htmlFor="se-anim">{t.animation}</label>
               <select id="se-anim" className="zq-input" value={anim} onChange={(e) => setAnim(e.target.value)}>
                 {ANIMATION_KEYS.map((k) => (
-                  <option key={k} value={k}>
+                  <option key={k} value={k} {...englishContent(locale)}>
                     {ANIMATION_LABELS[k]}
                   </option>
                 ))}
               </select>
             </div>
             <div style={{ maxWidth: 420 }}>
-              <AnimationPlayer animation={anim} caption="Preview" alt={ANIMATION_LABELS[anim] ?? anim} />
+              <AnimationPlayer animation={anim} caption={t.preview} alt={ANIMATION_LABELS[anim] ?? anim} />
             </div>
-            <TextField label="Caption" id="se-cap" name="caption" required maxLength={300} />
-            <TextField label="Text alternative" id="se-alt" name="alt" required maxLength={500} help="Describe what is shown; say that no people are depicted." />
-            <TextField label="Claim id the animation illustrates" id="se-mclaim" name="claim" required pattern="[0-9a-f-]{36}" dir="ltr" />
+            <TextField label={t.caption} id="se-cap" name="caption" required maxLength={300} />
+            <TextField label={t.textAlternative} id="se-alt" name="alt" required maxLength={500} help={t.altHelp} />
+            <TextField label={t.animationClaim} id="se-mclaim" name="claim" required pattern="[0-9a-f-]{36}" dir="ltr" />
             <div>
               <button type="submit" className="zq-btn zq-btn-secondary">
-                Register draft
+                {t.registerDraft}
               </button>
             </div>
           </form>
@@ -402,8 +411,14 @@ export function StoryEditor({ stops }: { stops: Stop[] }) {
   );
 }
 
-function QuizEditor({ subjectCol, subjectId, say }: { subjectCol: string; subjectId: string; say: (tone: "ok" | "err", text: string) => void }) {
+function QuizEditor({ subjectCol, subjectId, say }: { subjectCol: string; subjectId: string; say: (tone: "ok" | "err", text: string, server?: string) => void }) {
   const sb = getBrowserSupabase();
+  const locale = useLocale();
+  const t = useMemo(() => adminStoryStrings(locale), [locale]);
+  const sayErr = (message: string) => {
+    const m = errMsg(locale, t.failedPrefix, message, t.notConfigured);
+    say("err", m.text, m.server);
+  };
   const [quizzes, setQuizzes] = useState<Array<{ id: string; title: string; audience: string; status: EditorialState }>>([]);
   const load = useCallback(async () => {
     const { data } = (await sb?.from("story_quizzes").select("id, title, audience, status").eq(subjectCol, subjectId)) ?? { data: null };
@@ -414,35 +429,35 @@ function QuizEditor({ subjectCol, subjectId, say }: { subjectCol: string; subjec
   }, [load]);
   return (
     <section className="pp-card" style={{ maxWidth: 760 }}>
-      <h3>Quizzes</h3>
-      <p className="zq-meta" style={{ margin: 0 }}>Every question rests on a reviewed claim. No points or rewards are shown to readers.</p>
+      <h3>{t.quizzes}</h3>
+      <p className="zq-meta" style={{ margin: 0 }}>{t.quizzesHelp}</p>
       <form
         className="zq-form"
         onSubmit={async (e) => {
           e.preventDefault();
           const f = new FormData(e.currentTarget);
           const { error } = (await sb?.from("story_quizzes").insert({ [subjectCol]: subjectId, title: String(f.get("title")), audience: String(f.get("audience")) })) ?? {
-            error: { message: "Not configured" },
+            error: { message: t.notConfigured },
           };
-          if (error) say("err", error.message);
+          if (error) sayErr(error.message);
           else {
-            say("ok", "Quiz created as a draft.");
+            say("ok", t.quizCreated);
             void load();
           }
         }}
       >
-        <TextField label="Quiz title" id="qz-title" name="title" required />
+        <TextField label={t.quizTitle} id="qz-title" name="title" required />
         <div className="zq-field">
-          <label htmlFor="qz-aud">For</label>
+          <label htmlFor="qz-aud">{t.forAudience}</label>
           <select id="qz-aud" name="audience" className="zq-input" defaultValue="kids">
-            <option value="kids">Kids</option>
-            <option value="young">Young learners</option>
-            <option value="full">Full story</option>
+            <option value="kids">{t.kids}</option>
+            <option value="young">{t.youngLearners}</option>
+            <option value="full">{t.fullStory}</option>
           </select>
         </div>
         <div>
           <button type="submit" className="zq-btn zq-btn-secondary zq-btn-sm">
-            Create quiz
+            {t.createQuiz}
           </button>
         </div>
       </form>
@@ -466,10 +481,10 @@ function QuizEditor({ subjectCol, subjectId, say }: { subjectCol: string; subjec
               correct_index: Number(f.get("correct")) - 1,
               explanation: String(f.get("explanation") || "") || null,
               claim_id: String(f.get("claim")).trim(),
-            })) ?? { error: { message: "Not configured" } };
-            if (error) say("err", error.message);
+            })) ?? { error: { message: t.notConfigured } };
+            if (error) sayErr(error.message);
             else {
-              say("ok", "Question added.");
+              say("ok", t.questionAdded);
               (e.target as HTMLFormElement).reset();
             }
           }}
@@ -483,31 +498,31 @@ function QuizEditor({ subjectCol, subjectId, say }: { subjectCol: string; subjec
                 onClick={async () => {
                   try {
                     await setStatus("quiz", q.id, "in_review");
-                    say("ok", "Quiz sent for review.");
+                    say("ok", t.quizSent);
                     void load();
                   } catch (x) {
-                    say("err", (x as Error).message);
+                    sayErr((x as Error).message);
                   }
                 }}
               >
-                Send for review
+                {t.sendForReview}
               </button>
             ) : null}
           </p>
           {q.status === "draft" ? (
             <>
-              <TextField label="Question" id={`qz-p-${q.id}`} name="prompt" required />
+              <TextField label={t.question} id={`qz-p-${q.id}`} name="prompt" required />
               <div className="zq-field" style={{ maxWidth: "none" }}>
-                <label htmlFor={`qz-o-${q.id}`}>Options, one per line (2–5)</label>
+                <label htmlFor={`qz-o-${q.id}`}>{t.optionsOnePerLine}</label>
                 <textarea id={`qz-o-${q.id}`} name="options" className="zq-textarea" style={{ minHeight: 90 }} required />
               </div>
-              <TextField label="Correct option number" id={`qz-c-${q.id}`} name="correct" type="number" min={1} max={5} required />
-              <TextField label="Explanation (optional)" id={`qz-e-${q.id}`} name="explanation" />
-              <TextField label="Position" id={`qz-n-${q.id}`} name="position" type="number" min={1} defaultValue="1" />
-              <TextField label="Claim id" id={`qz-cl-${q.id}`} name="claim" required pattern="[0-9a-f-]{36}" dir="ltr" />
+              <TextField label={t.correctNumber} id={`qz-c-${q.id}`} name="correct" type="number" min={1} max={5} required />
+              <TextField label={t.explanationOptional} id={`qz-e-${q.id}`} name="explanation" />
+              <TextField label={t.position} id={`qz-n-${q.id}`} name="position" type="number" min={1} defaultValue="1" />
+              <TextField label={t.claimId} id={`qz-cl-${q.id}`} name="claim" required pattern="[0-9a-f-]{36}" dir="ltr" />
               <div>
                 <button type="submit" className="zq-btn zq-btn-secondary zq-btn-sm">
-                  Add question
+                  {t.addQuestion}
                 </button>
               </div>
             </>

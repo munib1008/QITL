@@ -341,6 +341,9 @@ async function main() {
     const keep = /<!-- before -->[\s\S]*<!-- \/before -->/.exec(prev)?.[0];
     if (keep) before = [keep];
   }
+  // A hand-written block kept across regenerations: the admin editors pass (inventory before and after, by file).
+  const prevDoc = fs.existsSync(doc) ? fs.readFileSync(doc, "utf8") : "";
+  const adminPass = /<!-- admin-pass -->[\s\S]*<!-- \/admin-pass -->/.exec(prevDoc)?.[0];
   const lines: string[] = [];
   lines.push("# Localisation status");
   lines.push("");
@@ -361,6 +364,7 @@ async function main() {
   lines.push("language (a leaf identical to English with Latin words does not count).");
   lines.push("");
   if (before.length) lines.push(...before, "");
+  if (adminPass) lines.push(adminPass, "");
   lines.push("## Coverage now");
   lines.push("");
   lines.push(...table(rows, true));
