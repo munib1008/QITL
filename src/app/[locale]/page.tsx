@@ -6,7 +6,6 @@ import { exploreLinks } from "@/lib/nav";
 import { applyNav } from "@/lib/site-config/config";
 import { getSiteConfig, homeText } from "@/lib/site-config/server";
 import { JourneyTimeline } from "@/components/journey/JourneyTimeline";
-import { HydrateOnVisible } from "@/components/journey/HydrateOnVisible";
 import { JourneyHeader } from "@/components/shell/SiteHeader";
 import { DraftBadge } from "@/components/ui/evidence";
 import { Rosette } from "@/components/ui/icons";
@@ -105,8 +104,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </section>
 
         <div id="journey">
-          {/* Server-rendered in full; hydrated when it nears the viewport or is touched (HydrateOnVisible). */}
-          <HydrateOnVisible targetId="journey">
           <JourneyTimeline
             eras={journey.eras}
             initialActive={stops[0]?.id}
@@ -137,7 +134,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </div>
             }
           />
-          </HydrateOnVisible>
         </div>
 
         <section id="explore" style={{ paddingTop: 64 }} aria-labelledby="explore-title">

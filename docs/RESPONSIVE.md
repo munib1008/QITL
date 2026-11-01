@@ -283,3 +283,9 @@ per-pixel threshold of 0.2.
   retries. The baselines were taken from the branch base's build, and this branch's build matches them, which is what the "pixel-identical"
   statement above rests on.
 - Real-device testing is not done and cannot be done from this machine; it remains in `docs/MASTER_COMPLETION_BACKLOG.md` item 30.
+
+## 2026-11-01 follow-up: two home-page changes reverted
+The measured blocking-time gain of the home-page work was not material, and two of its changes caused risk: `content-visibility: auto` on journey stops
+moved the page a few pixels after long jumps and made the mobile journey test (`every expanded card shows an evidence label and a citation chip`) fail, and
+hydrating the journey only when visible could lose a first tap. Both are removed (the CSS rule is commented out in `src/styles/components.css`; `HydrateOnVisible`
+is no longer used on the home page). The memoised stops and the animation-frame progress measure stay. All 19 journey tests pass.

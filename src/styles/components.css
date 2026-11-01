@@ -282,9 +282,12 @@
    find-in-page. The active stop is always rendered (it is the tall one and sets the page height); once a stop has been
    rendered the browser remembers its real height (contain-intrinsic-block-size: auto). Only the block axis is estimated, so
    right-to-left layouts are unaffected; paint containment would clip the active glow, so the clip is widened. */
+/* DISABLED 2026-11-01: the rule below moved the page by a few pixels after long jumps and the mobile journey test (every expanded card shows an
+   evidence label and a citation chip) failed with it on; the measured blocking-time gain was not material. Kept for reference:
 .zq-jt-item:not(.zq-jt-active) { content-visibility: auto; contain-intrinsic-block-size: auto 112px; overflow-clip-margin: 40px; }
-/* The estimate is the measured height of a collapsed stop: 110-112 px at 768 and up, about 130 px on a phone, 152 px at 320. */
+/* The estimate is the measured height of a collapsed stop: 110-112 px at 768 and up, about 130 px on a phone, 152 px at 320. * /
 @media (max-width: 480px) { .zq-jt-item:not(.zq-jt-active) { contain-intrinsic-block-size: auto 132px; } }
+*/
 @media (max-width: 340px) { .zq-jt-item:not(.zq-jt-active) { contain-intrinsic-block-size: auto 152px; } }
 .zq-jt-node { grid-column: 1; align-self: start; margin-top: 10px; position: relative; z-index: 1; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; padding: 0; background: var(--surface); border: 1.5px solid var(--glass-stroke); color: var(--ink-muted); transition: color .2s, border-color .2s, box-shadow .3s; }
 .zq-jt-node svg { width: 22px; height: 22px; }
