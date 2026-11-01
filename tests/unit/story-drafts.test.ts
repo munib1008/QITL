@@ -3,7 +3,7 @@ import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "nod
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, test } from "vitest";
-import { ayatOfRanges, compact, hasAnchor, hasErrors, markerIds, splitUnits, stripMarkers, validateStoryDraft, StoryDraftSchema, type Issue, type StoryDraft } from "@/lib/stories/draft";
+import { SUBJECT_TRACK, ayatOfRanges, compact, hasAnchor, hasErrors, markerIds, splitUnits, stripMarkers, validateStoryDraft, StoryDraftSchema, type Issue, type StoryDraft } from "@/lib/stories/draft";
 import { loadAnchorFixtures, loadDraftContext, loadDraftFiles } from "@/lib/stories/draft-load";
 import { chapterRow, importDraft, NullStore } from "@/lib/stories/draft-import";
 
@@ -310,7 +310,7 @@ describe("the drafts in content/stories", () => {
     for (const f of files) {
       const d = StoryDraftSchema.parse(f.raw);
       const inv = ctx.inventory.find((i) => i.slug === d.subject.event_slug)!;
-      expect(inv.track).toBe("prophets");
+      expect(inv.track).toBe(SUBJECT_TRACK[d.subject.type]);
     }
   });
 });
