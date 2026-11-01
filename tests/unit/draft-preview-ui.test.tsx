@@ -71,7 +71,10 @@ describe("every draft page carries the banner and the pending status", () => {
     expect(screen.getByTestId("pre-review")).toHaveTextContent(t.preTitle);
     expect(screen.getByTestId("scholar-checklist").querySelectorAll("li")).toHaveLength(12);
     // nothing in the page says a person or a date approved it
-    expect((document.body.textContent ?? "").replace(t.bannerBody, "")).not.toMatch(/approved by|reviewed by|signed off|reviewer:/i);
+    const text = (document.body.textContent ?? "").replace(t.bannerBody, "");
+    expect(text).not.toMatch(/approved by|reviewed by|signed off/i);
+    // a "Reviewer:" label (capitalised, as the page chrome would write it) never appears; a drafter's lower-case note to the reviewer is story text
+    expect(text).not.toMatch(/Reviewer:/);
   });
 
   test("an unknown slug is a 404", async () => {
