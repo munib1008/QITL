@@ -9,6 +9,7 @@ import { LangToggle, ThemeToggle } from "./toggles";
 import { MobileMenu } from "./MobileMenu";
 import { Logo, Mark } from "./Logo";
 import { exploreLinks } from "@/lib/nav";
+import { applyNav, EMPTY_CONFIG, type SiteConfig } from "@/lib/site-config/config";
 
 export interface NavLink {
   href: string;
@@ -16,13 +17,16 @@ export interface NavLink {
 }
 
 /** Sections reachable only through the menus (everything in exploreLinks that the section bar does not list). */
-export function moreNav(locale: string, t: ReturnType<typeof getDict>["t"]): NavLink[] {
+export function moreNav(locale: string, t: ReturnType<typeof getDict>["t"], config: SiteConfig = EMPTY_CONFIG): NavLink[] {
   const shown = new Set(mainNav(t).map((n) => n.href));
-  return exploreLinks(locale).filter((l) => !shown.has(l.href) && l.href !== "/search").map(({ href, label }) => ({ href, label }));
+  return applyNav(
+    exploreLinks(locale).filter((l) => !shown.has(l.href) && l.href !== "/search").map(({ href, label }) => ({ href, label })),
+    config,
+  );
 }
 
-export function mainNav(t: ReturnType<typeof getDict>["t"]): NavLink[] {
-  return [
+export function mainNav(t: ReturnType<typeof getDict>["t"], config: SiteConfig = EMPTY_CONFIG): NavLink[] {
+  return applyNav([
     { href: "/prophets", label: t.nav.prophets },
     { href: "/timeline", label: t.nav.timeline },
     { href: "/atlas", label: t.nav.atlas },
@@ -33,11 +37,15 @@ export function mainNav(t: ReturnType<typeof getDict>["t"]): NavLink[] {
     { href: "/genealogy", label: t.nav.genealogy },
     { href: "/last-hour", label: t.nav.lastHour },
     { href: "/community", label: t.nav.community },
-  ];
+  ], config);
 }
 
 /** Home (journey theme): glass nav with The Journey / Explore / Methodology. */
-export function JourneyHeader({ locale }: { locale: string }) {
+/**
+ * `config` is the administrator's menu configuration (/admin/site: hidden sections, Explore order); without it the menus are the
+ * built-in ones. Hiding only removes a link from the menus.
+ */
+export function JourneyHeader({ locale, config }: { locale: string; config?: SiteConfig }) {
   const { locale: l, t } = getDict(locale);
   const u = uiStrings(locale).shell;
   return (
@@ -55,14 +63,14 @@ export function JourneyHeader({ locale }: { locale: string }) {
         <Link className="zq-btn zq-btn-primary zq-btn-sm zq-btn-link" href="/prophets">
           {t.nav.begin}
         </Link>
-        <MobileMenu links={[...mainNav(t), ...moreNav(l, t)]} label={t.nav.explore} />
+        <MobileMenu links={[...mainNav(t, config), ...moreNav(l, t, config)]} label={t.nav.explore} />
       </div>
     </header>
   );
 }
 
 /** Reading pages (solid light/dark): brand, global search, language, theme, account. */
-export function ReadingHeader({ locale, query }: { locale: string; query?: string }) {
+export function ReadingHeader({ locale, query, config }: { locale: string; query?: string; config?: SiteConfig }) {
   const { locale: l, t } = getDict(locale);
   const u = uiStrings(locale).shell;
   const st = searchStrings(l);
@@ -80,15 +88,15 @@ export function ReadingHeader({ locale, query }: { locale: string; query?: strin
         <ThemeToggle labels={t.theme} />
         <LangToggle locale={l} labels={t.lang} />
         <AccountLink signInLabel={t.nav.signIn} accountLabel={t.nav.account} />
-        <MobileMenu links={[...mainNav(t), ...moreNav(l, t)]} label={t.nav.explore} />
+        <MobileMenu links={[...mainNav(t, config), ...moreNav(l, t, config)]} label={t.nav.explore} />
       </div>
       <nav className="pp-sections" aria-label={u.sections}>
-        {mainNav(t).map((n) => (
+        {mainNav(t, config).map((n) => (
           <Link key={n.href} href={n.href}>
             {n.label}
           </Link>
         ))}
-        <MobileMenu variant="more" links={moreNav(l, t)} label={t.nav.explore} />
+        <MobileMenu variant="more" links={moreNav(l, t, config)} label={t.nav.explore} />
       </nav>
     </header>
   );

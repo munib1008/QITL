@@ -11,7 +11,7 @@
  */
 
 /** Routes whose errors may carry private text: messages are never reported from them. */
-const PRIVATE_PATH = /^\/(?:(?:en|ar|ur)\/)?(?:api\/)?(?:admin\/)?(?:dreams|mufti|me|account|community\/questions|review-board)(?:\/|$)/;
+const PRIVATE_PATH = /^\/(?:(?:en|ar|ur)\/)?(?:api\/)?(?:admin\/)?(?:dreams|mufti|me|account|notifications|community\/questions|review-board)(?:\/|$)/;
 
 export function isPrivatePath(path: string | undefined): boolean {
   return !!path && PRIVATE_PATH.test(path);

@@ -48,8 +48,8 @@ credential or licence, or human review. Status per feature: `docs/FEATURE_ACCEPT
 
 | # | Item | Unblocked by |
 |---|---|---|
-| 27 | Mufti Q&A notifications and scholar application form; verified muftis | Code; owner verifies muftis |
-| 28 | Admin-editable landing content, navigation and feature flags | Code |
+| 27 | Mufti Q&A notifications and scholar application form; verified muftis | Code (done on `mod/mufti-flags`: in-app notifications, bell + panel, `/mufti/apply`, admin review list); owner verifies muftis; email delivery waits for item 29 |
+| 28 | Admin-editable landing content, navigation and feature flags | Code (done on `mod/mufti-flags`: `/admin/site`, versioned and audited; menus wired; the home page must read the text blocks with `homeText()` once `mod/perf-visual` is merged) |
 | 29 | Email digest sender | Email provider |
 | 30 | Visual regression baselines; real-device testing | Code; devices |
 | 31 | Home page performance (TBT) | Code |

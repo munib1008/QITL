@@ -67,6 +67,8 @@ export const ROUTES = [
   "/account",
   "/admin",
   "/admin/mufti",
+  "/admin/site",
+  "/mufti/apply",
   "/about",
   "/methodology",
   "/review-board",

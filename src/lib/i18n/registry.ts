@@ -11,6 +11,9 @@ import { homeStrings, journeyStrings } from "./modules/home";
 import { interpretationT } from "./modules/interpretation";
 import { lifestyleStrings } from "./modules/lifestyle";
 import { muftiT } from "./modules/mufti";
+import { muftiApplyT } from "./modules/muftiApply";
+import { notificationsT } from "./modules/notifications";
+import { siteAdminT } from "./modules/siteAdmin";
 import { getPlayerStrings } from "./modules/player";
 import { prophetStrings, storiesStrings } from "./modules/prophets";
 import { qiraatStrings } from "./modules/qiraat";
@@ -59,6 +62,9 @@ export const STRING_FILES: Array<{ module: string; file: string; get: (locale: s
   { module: "interpretation", file: "modules/interpretation.ts", get: interpretationT },
   { module: "lifestyle", file: "modules/lifestyle.ts", get: lifestyleStrings },
   { module: "mufti", file: "modules/mufti.ts", get: muftiT },
+  { module: "mufti", file: "modules/muftiApply.ts", get: muftiApplyT },
+  { module: "account", file: "modules/notifications.ts", get: notificationsT },
+  { module: "admin", file: "modules/siteAdmin.ts", get: siteAdminT },
   { module: "player", file: "modules/player.ts", get: getPlayerStrings },
   { module: "qiraat", file: "modules/qiraat.ts", get: qiraatStrings },
 ];

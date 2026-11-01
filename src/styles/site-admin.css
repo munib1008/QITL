@@ -1,0 +1,14 @@
+/* /admin/site: wording blocks and the menu editor. Mobile first; tokens only; 44px targets. */
+.sa fieldset.sa-block { margin: 0; min-width: 0; gap: 14px; }
+.sa .sa-block legend { font: 600 17px/24px var(--font-display); padding: 0 6px; }
+.sa .sa-lang { max-width: none; }
+.sa .zq-textarea { width: 100%; max-width: 100%; min-height: var(--tap, 44px); }
+.sa .sa-preview > summary { min-height: var(--tap, 44px); display: flex; align-items: center; cursor: pointer; font: 600 14px/20px var(--font-sans); }
+.sa .sa-preview-box { padding: 12px 14px; border: 1px dashed var(--hairline); border-radius: var(--radius-sm); background: var(--surface); overflow-wrap: anywhere; }
+.sa .sa-preview-box p { margin: 0 0 8px; }
+.sa .sa-row { flex-direction: column; align-items: stretch; }
+.sa .sa-label { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.sa .sa-label small { color: var(--ink-muted); font: 400 12px/16px var(--font-mono, monospace); }
+.sa .sa-row[data-hidden] .sa-label b { text-decoration: line-through; color: var(--ink-muted); }
+.sa .sa-sq { min-width: var(--tap, 44px); padding: 0; font-size: 20px; }
+@media (min-width: 601px) { .sa .sa-row { flex-direction: row; align-items: center; justify-content: space-between; } }

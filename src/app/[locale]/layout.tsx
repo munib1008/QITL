@@ -8,6 +8,8 @@ import { ServiceWorker } from "@/components/shell/ServiceWorker";
 import { BottomNav } from "@/components/shell/BottomNav";
 import { uiStrings } from "@/lib/i18n/modules/ui";
 import { exploreLinks } from "@/lib/nav";
+import { applyNav } from "@/lib/site-config/config";
+import { getSiteConfig } from "@/lib/site-config/server";
 import { Analytics } from "@/components/shell/Analytics";
 import "../globals.css";
 
@@ -52,6 +54,8 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   // The per-request CSP nonce from the middleware (src/middleware.ts). Reading it makes every page render per request:
   // a nonce-based policy cannot be served from a prebuilt HTML file (docs/SECURITY.md, "CSP").
   const nonce = (await headers()).get("x-nonce") ?? undefined;
+  // Hidden sections and the Explore order set in /admin/site; the built-in list when nothing is configured.
+  const siteConfig = await getSiteConfig();
   return (
     <html lang={locale} dir={dir} className={fontVariables} suppressHydrationWarning>
       <head>
@@ -66,7 +70,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           locale={locale}
           langLabels={t.lang}
           labels={t.bottom}
-          explore={exploreLinks(locale).filter((l) => l.href !== "/quran")}
+          explore={applyNav(exploreLinks(locale).filter((l) => l.href !== "/quran"), siteConfig)}
         />
         <ServiceWorker />
         <Analytics />
