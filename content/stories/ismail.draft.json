@@ -1,0 +1,251 @@
+{
+  "slug": "ismail",
+  "title_en": "Ismail",
+  "title_ar": "إسماعيل",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "ismail"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This subject is mentioned briefly or beside others, so the draft is short and states only what the cited ayat state. The chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "beside-ibrahim",
+      "position": 1,
+      "title_en": "Beside Ibrahim",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 2,
+          "from": 125,
+          "to": 125
+        },
+        {
+          "surah": 2,
+          "from": 127,
+          "to": 128
+        },
+        {
+          "surah": 14,
+          "from": 35,
+          "to": 35
+        },
+        {
+          "surah": 14,
+          "from": 39,
+          "to": 39
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "God made the house a place of return and of safety for people, and a place where Ibrahim stood is to be taken as a place of prayer.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 125,
+              "to": 125
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God made a covenant with Ibrahim and Ismail: they were to purify His house for those who go around it, those who stay there, and those who bow and prostrate.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 125,
+              "to": 125
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Ibrahim raised the foundations of the house, and Ismail is named in the same verse beside him.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 127,
+              "to": 127
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "A prayer follows in the first person plural, asking the Lord to accept from the speakers, and calling Him the One who hears and knows.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 127,
+              "to": 127
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "The prayer goes on to ask that both speakers be made submissive to Him, that a community submissive to Him come from their offspring, that He show them their rites of worship, and that He turn to them; it calls Him the One who accepts repentance, the Merciful.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 128,
+              "to": 128
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "In a prayer, Ibrahim asked his Lord to make this land secure and to keep him and his sons away from worshipping idols.",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 35,
+              "to": 35
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "Later in the same prayer, the speaker praises God, who gave him Ismail and Ishaq in his old age, and says that his Lord hears prayer.",
+          "verses": [
+            {
+              "surah": 14,
+              "from": 39,
+              "to": 39
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "God made a covenant with Ibrahim and Ismail to purify His house for those who go around it, stay in it and pray [c2]. Ibrahim raised the foundations of the house, with Ismail named beside him, and a prayer follows [c3][c4]. In another prayer, the speaker praises God for giving him Ismail and Ishaq in his old age [c7].",
+      "body_md": "God made the house a place of return and of safety for people [c1]. A place where Ibrahim stood is to be taken as a place of prayer [c1].\n\nGod made a covenant with Ibrahim and Ismail: they were to purify His house for those who go around it, those who stay there, and those who bow and prostrate [c2]. Ibrahim raised the foundations of the house, and Ismail is named in the same verse beside him [c3]. A prayer follows in the first person plural, asking the Lord to accept from the speakers [c4]. It goes on to ask that both speakers be made submissive to Him, that a community submissive to Him come from their offspring, that He show them their rites of worship, and that He turn to them [c5].\n\nIn another prayer, Ibrahim asked his Lord to make this land secure and to keep him and his sons away from worshipping idols [c6]. Later in the same prayer, the speaker praises God, who gave him Ismail and Ishaq in his old age, and says that his Lord hears prayer [c7].",
+      "deep_md": "The covenant names both men as the ones charged with purifying the house, and names the people the house is for: those who go around it, those who stay, those who bow and prostrate [c2]. The verse on the foundations names Ibrahim as the one who raises them and Ismail beside him [c3]. The prayer that follows speaks of 'us' and, in the next verse, of both speakers together [c4][c5]. The verse that names Ismail and Ishaq as a gift does not name its speaker; it sits inside the prayer that Ibrahim begins, and the gift is given in old age [c6][c7].",
+      "kids_md": "God asked Ibrahim and Ismail to keep His house pure for the people who come to go around it and to pray [c2]. Ibrahim raised the foundations of the house and Ismail was named beside him [c3]. A prayer followed, asking God to accept their work [c4]. In another prayer, the speaker thanked God for giving him Ismail and Ishaq when he was old [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the covenant shows a task shared by a pair, since both are named in it [c2]. Another is that the work is followed by a prayer for acceptance, so that building is joined to turning to God [c4][c5]. A further reading is that thanks for a gift can sit in the same prayer as a request to be kept from idol worship [c6][c7].",
+      "unknowns_md": "- Not established: the verses do not name the place where the house stood, its size, how long the work took, or how old Ismail was.\n- Not established: who speaks the prayer after the foundations. The text gives a plural 'us' and a form for both speakers, and does not name them.\n- Not established: whether Ismail took part in the raising of the foundations or is named beside Ibrahim for another reason; the wording names him right after Ibrahim and says no more.\n- Not established: what 'purify' covers in the covenant.\n- Not established: the age of Ibrahim, Ismail or Ishaq, or how far apart the sons were born.\n- Not established: which land the other prayer means by 'this land'. The verses of that prayer between the ones used here are not told in this chapter."
+    },
+    {
+      "anchor": "true-to-his-promise",
+      "position": 2,
+      "title_en": "True to his promise",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 19,
+          "from": 54,
+          "to": 55
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ismail is named for remembrance and is described as true to his promise, and as a messenger and a prophet.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 54,
+              "to": 54
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He used to tell his household to pray and to give zakat, and he was one with whom his Lord was pleased.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 55,
+              "to": 55
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Ismail is described as true to his promise, a messenger and a prophet [c1]. He told his household to pray and give zakat, and his Lord was pleased with him [c2].",
+      "body_md": "Ismail is named for remembrance and is described as true to his promise, and as a messenger and a prophet [c1]. He used to tell his household to pray and to give zakat, and he was one with whom his Lord was pleased [c2].",
+      "deep_md": "Ismail is described as true to his promise, as a messenger and as a prophet [c1]. The verse after it adds his instruction to his household and his Lord's pleasure with him [c2].",
+      "kids_md": "Ismail kept his promises [c1]. He told his family to pray and to give zakat, and God was pleased with him [c2].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the verses place keeping a promise beside caring for one's own household in prayer [c1][c2].",
+      "unknowns_md": "- Not established: which promise is meant, or to whom it was made.\n- Not established: whether the Arabic word for his household means his family or his people; this draft keeps 'household'.\n- Not established: where Ismail lived, to whom he was sent, or what his message was."
+    },
+    {
+      "anchor": "among-the-patient-and-the-best",
+      "position": 3,
+      "title_en": "Among the patient and the best",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 21,
+          "from": 85,
+          "to": 86
+        },
+        {
+          "surah": 38,
+          "from": 48,
+          "to": 48
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ismail is named together with Idris and Dhul-Kifl, and each of them is described as one of the patient.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 85,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "God says that He admitted them into His mercy, and that they were among the righteous.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 86,
+              "to": 86
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "Ismail is named again, with Alyasa and Dhul-Kifl, and each of them is described as one of the best.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 48,
+              "to": 48
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Ismail is named with Idris and Dhul-Kifl as one of the patient [c1]. God admitted them into His mercy and called them righteous [c2]. In another passage Ismail is named with Alyasa and Dhul-Kifl as one of the best [c3].",
+      "body_md": "Ismail is named together with Idris and Dhul-Kifl, and each of them is described as one of the patient [c1]. God says that He admitted them into His mercy, and that they were among the righteous [c2].\n\nIsmail is named again, with Alyasa and Dhul-Kifl, and each of them is described as one of the best [c3].",
+      "deep_md": "The passages group Ismail with different companions: Idris and Dhul-Kifl in one [c1], Alyasa and Dhul-Kifl in the other [c3]. The passage with Idris adds that God admitted them to His mercy and that they were righteous [c2].",
+      "kids_md": "God named Ismail with Idris and Dhul-Kifl and said each of them was patient [c1]. God took them into His mercy [c2]. In another place God named Ismail with Alyasa and Dhul-Kifl and said each was among the best [c3].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that patience is the quality singled out in the passage with Idris and that mercy is joined to it [c1][c2]. The passage with Alyasa names a different quality, being among the best [c3].",
+      "unknowns_md": "- Not established: what Ismail was patient in, or when or where.\n- Not established: the sense in which the passage with Alyasa calls them 'the best'; the verse gives the word and no example.\n- Not established: whether the lists describe one gathering or separate ones."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about this prophet. None is used in this draft.",
+    "The inventory does not include the passage on the vision of a sacrifice (37:99-113), and this draft does not use it. That passage does not name the son, and this draft does not decide who he is; a scholar should say how the page should treat the question.",
+    "2:127-128: the prayer has no verb of speech and no named speaker; the draft states only the plural wording and the dual 'both', and leaves the speakers open. A scholar should check the wording.",
+    "2:127: the draft says Ismail is named beside Ibrahim and does not say that he raised the foundations; a scholar should decide whether the Arabic supports saying more.",
+    "14:39: the speaker is not named in that verse; the draft reads it as Ibrahim because it sits in the prayer opened by his name. The verses 14:36-38 and 14:40-41 are not used.",
+    "19:55: the Arabic word that can mean household or people is rendered 'household'.",
+    "The prayers at 2:126 and 2:129 and the rest of 14:35-41 are Ibrahim's prayers that do not name Ismail and are not used.",
+    "Named in later tradition, not in the Quranic text: later writers gave Ismail a place of residence, a mother, a lifespan and a role in the house; none of this is used.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

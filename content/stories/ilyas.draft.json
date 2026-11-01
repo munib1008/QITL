@@ -1,0 +1,160 @@
+{
+  "slug": "ilyas",
+  "title_en": "Ilyas",
+  "title_ar": "إلياس",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "ilyas"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This subject is mentioned briefly or beside others, so the draft is short and states only what the cited ayat state. The chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "a-messenger-and-his-people",
+      "position": 1,
+      "title_en": "A messenger and his people",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 37,
+          "from": 123,
+          "to": 132
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ilyas is among the messengers.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 123,
+              "to": 123
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "He asked his people whether they would not be mindful of God.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 124,
+              "to": 124
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "He asked whether they called on Baal and abandoned the best of creators, God, their Lord and the Lord of their forefathers of old.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 125,
+              "to": 126
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "They called him a liar, and so they will be brought forward, except the devoted servants of God.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 127,
+              "to": 128
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "God left something upon him among those who came later; the Arabic does not state what.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 129,
+              "to": 129
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "Peace is pronounced upon Ilyasin.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 130,
+              "to": 130
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God says that thus He rewards those who do good, and that Ilyas was among His believing servants.",
+          "verses": [
+            {
+              "surah": 37,
+              "from": 131,
+              "to": 132
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Ilyas is among the messengers and asked his people whether they would not be mindful of God [c1][c2]. They called him a liar [c4]. He is among God's believing servants [c7].",
+      "body_md": "Ilyas is among the messengers [c1]. He asked his people whether they would not be mindful of God [c2]. He asked whether they called on Baal and abandoned the best of creators, God, their Lord and the Lord of their forefathers of old [c3].\n\nThey called him a liar, and so they will be brought forward, except the devoted servants of God [c4]. God left something upon him among those who came later [c5]. Peace is pronounced upon Ilyasin [c6]. God says that thus He rewards those who do good, and that Ilyas was among His believing servants [c7].",
+      "deep_md": "The passage opens with Ilyas's place among the messengers [c1] and gives his message as questions [c2][c3]. The people's answer is that they called him a liar, and the verse speaks of their being brought forward, with an exception for the devoted servants of God [c4]. The rest of the passage speaks of what God left upon him, peace, reward for those who do good, and his place among the believing servants [c5][c6][c7].",
+      "kids_md": "Ilyas was a messenger of God [c1]. He asked his people whether they would not be mindful of God, and whether they called on Baal and left the best of creators [c2][c3]. They said he was not telling the truth [c4]. God counted Ilyas among His believing servants [c7].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that Ilyas's message was a question put to his own people about whom they called on [c2][c3]. Another is that the passage separates the response of the people from the verdict God gives on his servant [c4][c7].",
+      "unknowns_md": "- Not established: where Ilyas lived, how long he preached, or how many followed him.\n- Not established: what Baal is in this verse. The word can also mean 'lord' or 'master', and the verse does not say whether a person, a statue or something else is meant.\n- Not established: what being 'brought forward' means, and who the 'devoted servants' who are excepted are.\n- Not established: what God left upon him among those who came later.\n- Not established: whether Ilyasin, in the verse of peace, is another form of the name Ilyas, as is often assumed, or names his family or followers; the spelling in this text divides the word into separate parts, and this draft does not decide.\n- Named in later tradition, not in the Quranic text: later writers identify Ilyas with a figure known from earlier scriptures as Elijah; none of that is used here."
+    },
+    {
+      "anchor": "named-among-the-righteous",
+      "position": 2,
+      "title_en": "Named among the righteous",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 6,
+          "from": 85,
+          "to": 85
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "Ilyas is named in a list with other figures, and each of those named is described as one of the righteous.",
+          "verses": [
+            {
+              "surah": 6,
+              "from": 85,
+              "to": 85
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Ilyas is named in a list of figures, each of them one of the righteous [c1].",
+      "body_md": "Ilyas is named in a list with other figures, and each of those named is described as one of the righteous [c1].",
+      "deep_md": "The verse is a list: Ilyas is one entry, and the description one of the righteous covers every entry [c1].",
+      "kids_md": "God named Ilyas as one of the righteous [c1].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the Quran can honour a person simply by naming him among the righteous [c1].",
+      "unknowns_md": "- Not established: the other names in the list are not told in this draft; they belong to the stories of those figures.\n- Not established: any act of Ilyas in this verse."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about this prophet. None is used in this draft.",
+    "37:125: the Arabic word ba'l can mean a lord or master, a husband, or a name of a deity; the draft writes 'Baal' and says in the unknowns that the verse does not define it. A scholar should decide how the page should word it.",
+    "37:127-128: the verb rendered 'will be brought forward' has no object or place in the verse, and the exception ('except the devoted servants of God') is read in more than one way; the draft keeps both open.",
+    "37:129: the object of the verb is omitted in the Arabic and the draft leaves it so.",
+    "37:130: the Quran text spells the name in the peace-verse as separate words; the draft writes 'Ilyasin' and does not say whether it is the same person.",
+    "Named in later tradition, not in the Quranic text: Ilyas is identified by later writers with Elijah and given a biography; none of this is used.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}

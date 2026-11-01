@@ -1,0 +1,219 @@
+{
+  "slug": "yaqub",
+  "title_en": "Yaqub",
+  "title_ar": "يعقوب",
+  "subject": {
+    "type": "prophet",
+    "event_slug": "yaqub"
+  },
+  "status": "draft",
+  "notes": "DRAFT for scholarly review; nothing here is reviewed or published. English only: the Arabic and Urdu texts are left null for translators. Written from the Quran text in content/quran (Tanzil Uthmani) in the drafter's own words; no published translation is quoted. Quran only: no hadith, no tafsir, no later tradition in the story texts. This subject is mentioned briefly or beside others, so the draft is short and states only what the cited ayat state. The chapters are a reading order, not a chronology the Quran claims. Honorifics are added when the page is rendered.",
+  "chapters": [
+    {
+      "anchor": "charge-to-his-sons-and-gift",
+      "position": 1,
+      "title_en": "Charge to his sons, gift and choosing",
+      "event_slug": null,
+      "verses": [
+        {
+          "surah": 2,
+          "from": 132,
+          "to": 133
+        },
+        {
+          "surah": 19,
+          "from": 49,
+          "to": 50
+        },
+        {
+          "surah": 21,
+          "from": 72,
+          "to": 73
+        },
+        {
+          "surah": 29,
+          "from": 27,
+          "to": 27
+        },
+        {
+          "surah": 38,
+          "from": 45,
+          "to": 47
+        }
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement_en": "The verse says that Ibrahim charged his sons with it, meaning the matter of the verse before, and Yaqub is named beside him.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 132,
+              "to": 132
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c2",
+          "statement_en": "The words that follow are addressed to 'my sons': God has chosen the religion for them, so they are not to die except in submission; the verse does not state whether Ibrahim, Yaqub or both speak.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 132,
+              "to": 132
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c3",
+          "statement_en": "The next verse asks its hearers whether they were witnesses when death came to Yaqub.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 133,
+              "to": 133
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c4",
+          "statement_en": "At that moment he asked his sons what they would worship after him.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 133,
+              "to": 133
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c5",
+          "statement_en": "They answered that they would worship his God and the God of his fathers, Ibrahim, Ismail and Ishaq, one God, and that they submit to Him.",
+          "verses": [
+            {
+              "surah": 2,
+              "from": 133,
+              "to": 133
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c6",
+          "statement_en": "When he withdrew from his people and from what they worshipped besides God, God granted him Ishaq and Yaqub, and made each of them a prophet.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 49,
+              "to": 49
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c7",
+          "statement_en": "God gave them of His mercy and gave them a high and truthful mention.",
+          "verses": [
+            {
+              "surah": 19,
+              "from": 50,
+              "to": 50
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c8",
+          "statement_en": "God granted him Ishaq and Yaqub as an additional gift and made each of them righteous.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 72,
+              "to": 72
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c9",
+          "statement_en": "God made them leaders who guide by His command, revealed to them the doing of good, the keeping up of prayer and the giving of zakat, and they were worshippers of God.",
+          "verses": [
+            {
+              "surah": 21,
+              "from": 73,
+              "to": 73
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c10",
+          "statement_en": "God granted him Ishaq and Yaqub, placed prophethood and the scripture among his offspring, gave him his reward in this world, and said that in the hereafter he is among the righteous.",
+          "verses": [
+            {
+              "surah": 29,
+              "from": 27,
+              "to": 27
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c11",
+          "statement_en": "The hearer is told to remember God's servants Ibrahim, Ishaq and Yaqub, who are described as people of strength and insight.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 45,
+              "to": 45
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c12",
+          "statement_en": "God says He made them pure by a special quality: the remembrance of the abode.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 46,
+              "to": 46
+            }
+          ],
+          "evidence": "quran"
+        },
+        {
+          "id": "c13",
+          "statement_en": "With God they are among the chosen, the best.",
+          "verses": [
+            {
+              "surah": 38,
+              "from": 47,
+              "to": 47
+            }
+          ],
+          "evidence": "quran"
+        }
+      ],
+      "summary_md": "Yaqub is named beside Ibrahim in the charge to their sons to die in submission [c1][c2]. When death came to Yaqub, he asked his sons what they would worship, and they answered that they would worship the one God [c3][c4][c5]. God granted Ishaq and Yaqub, made each of them a prophet, and named Yaqub among the chosen, the best [c6][c13].",
+      "body_md": "The verse says that Ibrahim charged his sons with it, meaning the matter of the verse before, and Yaqub is named beside him [c1]. The words that follow are addressed to 'my sons': God has chosen the religion for them, so they are not to die except in submission [c2]. The verse does not state whether Ibrahim, Yaqub or both speak [c2].\n\nThe next verse asks its hearers whether they were witnesses when death came to Yaqub [c3]. At that moment he asked his sons what they would worship after him [c4]. They answered that they would worship his God and the God of his fathers, Ibrahim, Ismail and Ishaq, one God, and that they submit to Him [c5].\n\nWhen he withdrew from his people and from what they worshipped besides God, God granted him Ishaq and Yaqub, and made each of them a prophet [c6]. God gave them of His mercy and gave them a high and truthful mention [c7]. God granted him Ishaq and Yaqub as an additional gift and made each of them righteous [c8]. God made them leaders who guide by His command, revealed to them the doing of good, the keeping up of prayer and the giving of zakat, and they were worshippers of God [c9]. God granted him Ishaq and Yaqub, placed prophethood and the scripture among his offspring, gave him his reward in this world, and said that in the hereafter he is among the righteous [c10].\n\nThe hearer is told to remember God's servants Ibrahim, Ishaq and Yaqub, who are described as people of strength and insight [c11]. God says He made them pure by a special quality: the remembrance of the abode [c12]. With God they are among the chosen, the best [c13].",
+      "deep_md": "The first verse names Yaqub beside Ibrahim in the charge to the sons, and the charge is that God has chosen the religion for them and that they are not to die except in submission [c1][c2]. The next verse puts the question to Yaqub's sons at the time of his death, and the sons answer with the same God and the same word, submission [c4][c5]. Yaqub is named after Ishaq each time the pair are named as a gift [c6][c8][c10]. In the closing passage the servants are named in order, Ibrahim, Ishaq, Yaqub [c11]. The descriptions given to them as a group are prophets [c6], righteous [c8], leaders who guide [c9], pure through the remembrance of the abode [c12], and chosen and best [c13].",
+      "kids_md": "Yaqub gave his sons advice [c1]. When he was dying, he asked them what they would worship after him [c3][c4]. They said they would worship his God, the God of Ibrahim, Ismail and Ishaq, the one God, and that they submit to Him [c5]. God gave Ishaq and Yaqub as a gift and made each of them a prophet [c6]. God said that Ibrahim, Ishaq and Yaqub are among the best [c11][c13].",
+      "lessons_md": "Educational interpretation (not scripture): One reading is that the verses show a family passing on its worship from one generation to the next by asking and answering [c4][c5]. Another is that other verses describe guidance as something God gives to those He makes leaders, together with prayer and good deeds [c9]. A further reading is that the closing passage names remembrance of the abode as the quality for which they were singled out [c12].",
+      "unknowns_md": "- Not established: the number or names of Yaqub's sons in these verses, their ages, or the place where he died.\n- Not established: who speaks the words 'my sons' in the first verse.\n- Not established: whether 'his fathers' includes Ismail as a forefather in the strict sense, or as an elder relative; the verse lists him with Ibrahim and Ishaq as 'fathers'.\n- Not established: how long before his death the question was asked.\n- Not established: who 'him' is in the gift passages. The neighbouring verses, which this draft does not cite, concern Ibrahim, and the draft reads the pronoun that way only in this note.\n- Not established: whether the gift passages describe one gift from different sides or separate moments, or how Yaqub is related to Ishaq and Ibrahim in them; he is named after Ishaq and the verses use no word of kinship for him.\n- Not established: what the high and truthful mention was, what 'the abode' means, or the sense of 'strength and insight'."
+    }
+  ],
+  "uncertainties_en": [
+    "Hadith to add later: authenticated narrations, each with a named grader, about this prophet. None is used in this draft.",
+    "The account of Yaqub overlaps the separately drafted story of his son, in which Yaqub is the father who speaks and acts at length. That story is not used here; this draft keeps only what the cited ayat say of Yaqub himself.",
+    "2:132: the Arabic can be read as Ibrahim charging his sons and Yaqub also charging his, or as Ibrahim charging his sons and Yaqub with them. The draft states only that Yaqub is named beside Ibrahim and does not say who speaks. A scholar should check the wording.",
+    "2:133: the verse calls Ibrahim, Ismail and Ishaq 'fathers' of Yaqub; the draft keeps that word and flags it in the unknowns.",
+    "19:50: the phrase rendered 'a high and truthful mention' is literally 'a tongue of truth, high'; a scholar should check the wording.",
+    "Named in later tradition, not in the Quranic text: Yaqub is said to have had another name, a particular family, a wife and a place of residence; none of this is used.",
+    "Arabic and Urdu texts are not written; they are left null for translators."
+  ]
+}
