@@ -54,7 +54,11 @@ test("the list: banner, counts per type, grouped, filter by ?type=", async ({ pa
   await page.locator("form.dp-search").getByRole("searchbox").fill("yusuf");
   await page.locator("form.dp-search").getByRole("button", { name: "Search" }).click();
   await expect(page).toHaveURL(/q=yusuf/);
-  await expect(page.getByTestId("draft-card")).toHaveCount(1);
+  // Several drafts mention Yusuf (his story and the events of it): the search narrows the list, and his own story is among them.
+  const found = await page.getByTestId("draft-card").count();
+  expect(found).toBeGreaterThanOrEqual(1);
+  expect(found).toBeLessThan(stories.length);
+  await expect(page.locator('a[data-testid="draft-card"][href$="/drafts/yusuf"]')).toHaveCount(1);
   expect(await sideways(page)).toBeLessThanOrEqual(1);
 });
 

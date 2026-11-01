@@ -53,3 +53,13 @@ the indicators are NOT merged into one percentage. Derive them from records, not
 | Scholarly approval | `editorial_reviews`, module review tables | 0 approvals; no reviewer appointed |
 | Licensing | `/admin/licences`, `docs/LICENSING.md` | Tanzil Arabic cleared (conditional); every other text/audio source blocked or pending |
 | Production readiness | `docs/PRODUCTION_READINESS.md` | Deployed; owner actions (Auth, admin, reviewers, legal review, backup rehearsal) pending |
+
+## Local test gotcha (2026-11-02)
+`.env.local` now holds the real Supabase URL and keys, and Next inlines `NEXT_PUBLIC_*` values at BUILD time. The browser specs assume "accounts not configured",
+so build for them with the values blanked, otherwise `pages.spec.ts` flow B and similar fail:
+`NEXT_PUBLIC_SUPABASE_URL= NEXT_PUBLIC_SUPABASE_ANON_KEY= SUPABASE_SERVICE_ROLE_KEY= pnpm exec next build` and run Playwright with the same three variables blank.
+Vercel production is unaffected.
+
+## Content state (2026-11-02)
+159 Quran-only English story drafts (every inventory item) are in `content/stories`, imported to production as DRAFT rows (159 stories, 397 chapters, 2490 claims, 2725 references;
+zero reviews), and shown publicly only on the separate `/drafts` preview with a "review pending" badge. Next: appoint reviewers, then review in `/admin/stories`.
