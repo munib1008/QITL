@@ -9,7 +9,7 @@
  },
  "numbers": {
   "ninety": "تسعون",
-  "hundred": "مائة",
+  "hundred": "مائة/ماية",
   "thousands": "الوف"
  },
  "guarded": {},
@@ -37,9 +37,7 @@
   "Jerusalem",
   "Buraq",
   "Miraj",
-  "Isra",
   "Aqsa",
-  "Quraysh",
   "Medina",
   "Madinah",
   "Sufyan",
