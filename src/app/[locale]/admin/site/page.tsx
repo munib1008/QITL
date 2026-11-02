@@ -12,7 +12,7 @@ function builtIn(): Record<TextKey, Record<Lang, string>> {
   const rows: Array<[TextKey, (h: ReturnType<typeof homeStrings>) => string]> = [
     ["home.hero.kicker", (h) => h.kicker],
     ["home.hero.title", (h) => `${h.heroTitle} ${h.heroTitle2}`],
-    ["home.hero.lead", (h) => `${h.leadBefore} (عليه السلام) ${h.leadAfter}`],
+    ["home.hero.lead", (h) => h.lead],
     ["home.intro.kicker", (h) => h.livingTimeline],
     ["home.intro.title", (h) => h.followThread],
     ["home.intro.body", (h) => h.datesNote],

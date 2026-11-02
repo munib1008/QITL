@@ -28,7 +28,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   // Administrator-edited text and hidden sections (/admin/site). With no edit, every value equals the built-in string below.
   const cfg = await getSiteConfig();
   const builtInTitle = `${t.heroTitle} ${t.heroTitle2}`;
-  const builtInLead = `${t.leadBefore} (عليه السلام) ${t.leadAfter}`;
+  const builtInLead = t.lead;
   const txt = await homeText(locale, {
     "home.hero.kicker": t.kicker,
     "home.hero.title": builtInTitle,
@@ -71,9 +71,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </h1>
           <p className="zq-lead">
             {txt["home.hero.lead"] === builtInLead ? (
-              <>
-                {t.leadBefore} <span lang="ar">(عليه السلام)</span> {t.leadAfter}
-              </>
+              t.lead
             ) : (
               txt["home.hero.lead"]
             )}
@@ -82,8 +80,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <a className="zq-btn zq-btn-primary zq-btn-link" href="#journey">
               {t.begin}
             </a>
-            <Link className="zq-btn zq-btn-secondary zq-btn-link" href="/methodology">
-              {t.how}
+            <Link className="zq-btn zq-btn-secondary zq-btn-link" href="/quran">
+              {t.exploreQuran}
             </Link>
           </div>
           <div className="zq-facts">
