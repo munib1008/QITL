@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { LinkedMedia } from "@/components/media/LinkedMedia";
+import type { Locale } from "@/lib/i18n/dict";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { BookmarkButton } from "@/components/account/BookmarkButton";
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
@@ -53,6 +55,7 @@ export default async function StoryPage({ params, searchParams }: { params: Prom
       lead={<span {...en}>{story.summary}</span>}
       meta={<BookmarkButton target={{ type: "story", id: story.slug }} />}
     >
+      <LinkedMedia type="story" id={story.slug} locale={locale as Locale} />
       <ChapterReader slug={story.slug} chapters={story.chapters} initialMode={parseMode(mode)} initialPosition={Number.isInteger(position) && position > 0 ? position : null} />
       <section className="pp-sec" id="discuss" aria-labelledby="d-h">
         <h2 id="d-h">{t.discussion}</h2>

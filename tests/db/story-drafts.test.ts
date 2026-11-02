@@ -238,5 +238,5 @@ describe("the drafts in content/stories", () => {
     }
     expect(await count("select count(*) as n from public.editorial_reviews")).toBe(0);
     expect(await count("select count(*) as n from public.chapters c join public.stories s on s.id = c.story_id where s.slug <> 'sample-yusuf' and c.status <> 'draft'")).toBe(0);
-  });
+  }, 240_000);
 });

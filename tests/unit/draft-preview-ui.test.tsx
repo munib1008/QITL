@@ -14,6 +14,8 @@ vi.mock("@/components/shell/ReadingPage", () => ({
 }));
 const route = vi.hoisted(() => ({ locale: "en" }));
 vi.mock("next/navigation", () => ({ useParams: () => ({ locale: route.locale }), usePathname: () => "/drafts", notFound: () => { throw new Error("NOT_FOUND"); } }));
+vi.mock("server-only", () => ({}));
+vi.mock("@/components/media/LinkedMedia", () => ({ LinkedMedia: () => null }));
 
 import DraftsIndex, { generateMetadata as listMeta } from "@/app/[locale]/drafts/page";
 import DraftPage, { generateMetadata as storyMeta } from "@/app/[locale]/drafts/[slug]/page";

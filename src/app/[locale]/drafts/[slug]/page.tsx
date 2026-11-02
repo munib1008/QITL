@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { DraftBanner } from "@/components/drafts/DraftBanner";
 import { DraftReader } from "@/components/drafts/DraftReader";
 import { PreReviewPanel } from "@/components/drafts/PreReviewPanel";
+import { LinkedMedia } from "@/components/media/LinkedMedia";
+import type { Locale } from "@/lib/i18n/dict";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { QuranAttribution } from "@/components/quran/QuranAttribution";
 import { englishContent } from "@/lib/i18n/locales";
@@ -52,6 +54,7 @@ export default async function DraftPage({ params, searchParams }: { params: Prom
       lead={t.storyMeta}
     >
       <DraftBanner locale={locale} preReviewLink />
+      <LinkedMedia type="story" id={story.slug} locale={locale as Locale} />
       <DraftReader chapters={story.chapters} quran={quranOf(story)} uncertainties={story.uncertainties_en} initialMode={parseMode(typeof mode === "string" ? mode : null) ?? DEFAULT_MODE} />
       <PreReviewPanel locale={locale} pre={story.preReview} checklist={DRAFT_INDEX.checklist} />
       <QuranAttribution src={DRAFT_INDEX.quranSource} />

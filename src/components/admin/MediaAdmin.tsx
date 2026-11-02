@@ -10,6 +10,7 @@ import { AdminFeedback as Feedback, ServerText, errMsg, type AdminMsg } from "./
 import { MEDIA_CATEGORIES, NON_FIGURATIVE_ITEMS, VIDEO_CONFIRMATION, type MediaMetadata } from "@/lib/media/validate";
 import { MAX_VIDEO_BYTES, MAX_VIDEO_SECONDS, MIN_VIDEO_DESCRIPTION } from "@/lib/media/video";
 import { folderOf, type MediaVariant } from "@/lib/media/render";
+import { AttachMedia } from "./AttachMedia";
 
 interface AssetRow {
   id: string;
@@ -264,6 +265,7 @@ export function MediaAdmin(flags: Flags) {
                     </div>
                   ))}
                   {flags.isEditor && ["draft", "in_review", "approved", "published", "correction"].includes(a.status) ? <ReplaceFile assetId={a.id} onDone={load} setMsg={setMsg} /> : null}
+                  {flags.isEditor ? <AttachMedia assetId={a.id} t={t as unknown as Record<string, unknown>} setMsg={setMsg} /> : null}
                   <details>
                     <summary>
                       {t.usedIn(uses.length, versions.length)}
