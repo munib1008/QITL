@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AiDraftStory } from "@/components/drafts/AiDraftStory";
+import { redirectIfPublicAiDraft } from "@/lib/stories/ai-draft-gate";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { EventsSection, FamilySection, IdentificationBlock, Name, NotEstablished, QuranSection, StoryLinks } from "@/components/encyclopedia/Encyclopedia";
 import { EmptyState } from "@/components/ui/misc";
@@ -36,7 +37,10 @@ export default async function PersonPage({ params }: { params: Promise<{ locale:
         </div>
       </ReadingPage>
     );
-  if (!p) notFound();
+  if (!p) {
+    await redirectIfPublicAiDraft(slug);
+    notFound();
+  }
   const s = t.sections;
   return (
     <ReadingPage

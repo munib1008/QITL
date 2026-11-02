@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import { getPublicSupabase } from "@/lib/supabase/server";
 
 /**
@@ -11,4 +12,10 @@ export async function publicAiDraftGate(): Promise<Map<string, { scholarly_statu
   const { data, error } = await sb.rpc("public_ai_drafts");
   if (error || !Array.isArray(data)) return new Map();
   return new Map((data as { slug: string; scholarly_status: string }[]).map((d) => [d.slug, { scholarly_status: d.scholarly_status }]));
+}
+
+/** A record page whose own record is not published yet sends the reader to the labelled AI draft when the database has released one. */
+export async function redirectIfPublicAiDraft(slug: string): Promise<void> {
+  const gate = await publicAiDraftGate();
+  if (gate?.has(slug)) redirect(`/drafts/${slug}`);
 }

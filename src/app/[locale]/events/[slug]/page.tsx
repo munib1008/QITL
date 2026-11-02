@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { ReadingPage } from "@/components/shell/ReadingPage";
+import { redirectIfPublicAiDraft } from "@/lib/stories/ai-draft-gate";
 import { AiDraftStory } from "@/components/drafts/AiDraftStory";
 import { StoryView } from "@/components/story/StoryView";
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
@@ -81,6 +82,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
     // A merged-away event keeps its address: it redirects to the event it was merged into.
     const to = await redirectTarget(slug);
     if (to && to !== slug) redirect(`/events/${to}`);
+    await redirectIfPublicAiDraft(slug);
     notFound();
   }
   if (!e || e === "not_configured") return <UniverseOnlyPage u={uv!} locale={locale} />;
