@@ -1,4 +1,4 @@
-import { buildIndex, countName, queryHash, type CorpusIndex, type NameCounts } from "./count";
+import { buildIndex, countName, queryHash, type CorpusIndex, type NameCounts, type NameQuery } from "./count";
 import { ENGINE_VERSIONS, type Corpus } from "./corpus";
 import { QUERY_VERSION } from "./count";
 import { buildQuery, surfaceFormsOf, validateRegistry, type NameDraft } from "./registry";
@@ -93,5 +93,30 @@ export function buildSeed(corpus: Corpus, names: NameDraft[], topics: TopicDraft
     },
     names: planNames,
     topics: planTopics,
+  };
+}
+
+/** A published (reviewed, sourced) row of divine_name_inclusions, as the database stores it. */
+export interface InclusionRow {
+  id: string;
+  measure: "B" | "C";
+  form: string;
+  root: string | null;
+  basis: string;
+}
+
+/**
+ * The counting query for a stored Name: its registered surface forms plus ONLY its published inclusion rows. B takes the
+ * row id as its review reference; C groups forms by root. The script and the admin recount both run this query, so a
+ * stored count and a verification always use the same one.
+ */
+export function storedQuery(slug: string, surfaceForms: string[], inclusions: InclusionRow[]): NameQuery {
+  const roots = new Map<string, string[]>();
+  for (const i of inclusions.filter((x) => x.measure === "C" && x.root)) roots.set(i.root!, [...(roots.get(i.root!) ?? []), i.form]);
+  return {
+    slug,
+    surfaceForms,
+    acceptedVariants: inclusions.filter((x) => x.measure === "B").map((x) => ({ form: x.form, basis: x.basis, reviewRef: x.id })),
+    relatedRoots: [...roots].map(([root, forms]) => ({ root, forms })),
   };
 }

@@ -18,6 +18,11 @@ import { RiwayahIndicator } from "@/components/qiraat/RiwayahIndicator";
 import { JumpToAyah } from "@/components/quran/JumpToAyah";
 import { quranReaderStrings } from "@/lib/i18n/modules/quranReader";
 import { attributionLine, markersForSurah } from "@/lib/quran-reader";
+import { asmaConfirmedInSurah } from "@/lib/data/asma";
+import { asmaStrings } from "@/lib/i18n/modules/asma";
+
+// Revalidated so the "Explore this Name" links follow reviewer decisions without a rebuild.
+export const revalidate = 300;
 
 export function generateStaticParams() {
   return LOCALES.flatMap((locale) => Array.from({ length: 114 }, (_, i) => ({ locale, surah: String(i + 1) })));
@@ -48,7 +53,7 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
     .map((s) => ({ s, passages: (s.surahs ?? []).filter((x) => x.number === n).flatMap((x) => x.passages) }))
     .filter((r) => r.passages.length);
   const name = meta?.name ?? journeyStops().flatMap((s) => s.surahs ?? []).find((x) => x.number === n)?.name ?? t.surah(n);
-  const ayahLinks: Record<number, Array<{ id: string; name: string }>> = {};
+  const ayahLinks: Record<number, Array<{ id: string; name: string; href?: string; lang?: string }>> = {};
   for (const r of related)
     for (const p of r.passages) {
       const rg = parseAyahRange(p);
@@ -56,6 +61,10 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
       for (let a = rg.from; a <= rg.to; a++) (ayahLinks[a] ??= []).push({ id: r.s.id, name: r.s.name });
     }
 
+  // "Explore this Name": only where a scholarly reviewer confirmed that the word refers to Allah in that ayah (never a lexical match alone).
+  const asmaLinks = await asmaConfirmedInSurah(n);
+  for (const [ayah, list] of Object.entries(asmaLinks))
+    for (const x of list) (ayahLinks[Number(ayah)] ??= []).push({ id: `asma-${x.slug}`, name: `${asmaStrings(locale).reader.exploreName}: ${x.ar}`, href: `/asma/${x.slug}` });
   return (
     <ReadingPage
       locale={locale}
@@ -110,7 +119,7 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
             <EmptyState label={<EvidenceLabel kind="unknown">{t.sourceNotImported}</EvidenceLabel>} title={t.surahNotLoaded}>
               <p>{t.surahNotLoadedBody}</p>
             </EmptyState>
-            <StudyLauncher surah={n} maxAyah={meta?.ayahs ?? null} related={ayahLinks} locale={locale} />
+            <StudyLauncher surah={n} maxAyah={meta?.ayahs ?? null} related={Object.fromEntries(Object.entries(ayahLinks).map(([a, l]) => [a, l.filter((x) => !x.href)]))} locale={locale} />
           </>
         )}
         <nav className="qr-surahnav" aria-label={t.surahNav}>

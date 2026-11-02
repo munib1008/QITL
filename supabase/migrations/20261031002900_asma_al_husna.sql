@@ -292,6 +292,30 @@ create table public.divine_name_misconceptions (
   check (evidence_status = 'needs_source' or correction_text is not null)
 );
 
+-- The reviewed inclusion lists behind measures B and C. Empty by default: the engine counts only PUBLISHED (reviewed, sourced) rows.
+-- Publishing or withdrawing one changes the counting query, so it sends the Name back for re-review (asma_inclusion_changed).
+create table public.divine_name_inclusions (
+  id uuid primary key default gen_random_uuid(),
+  name_id uuid not null references public.divine_names (id) on delete cascade,
+  measure text not null check (measure in ('B', 'C')),
+  form text not null check (char_length(form) between 2 and 60),
+  root text check (root is null or root ~ '^[ء-ي](-[ء-ي]){2,3}$'),
+  basis text not null check (char_length(basis) between 10 and 600 and public.asma_text_ok(basis)),
+  source_id uuid references public.sources (id),
+  locator text check (locator is null or char_length(locator) <= 200),
+  evidence_status text not null default 'needs_source' check (evidence_status in ('sourced', 'needs_source')),
+  status public.publication_status not null default 'draft',
+  version integer not null default 1,
+  needs_rereview boolean not null default false,
+  rereview_reason text,
+  created_by uuid references auth.users (id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  check ((measure = 'C') = (root is not null)),
+  check (evidence_status = 'needs_source' or source_id is not null),
+  unique (name_id, measure, form)
+);
+
 -- ---------- 4. Duas ----------
 -- Category A: the wording lives in an existing source record (a Quran verse in quran_verses, or a graded hadith record); this
 -- row holds a REFERENCE, never wording. Category B: personal wording, labelled, never presented as a quoted dua.
@@ -396,7 +420,7 @@ create table public.divine_name_topic_links (
 create table public.divine_name_reviews (
   id uuid primary key default gen_random_uuid(),
   entity_type text not null check (entity_type in ('divine_name', 'divine_name_translation', 'divine_name_linguistic', 'divine_name_hadith_evidence',
-    'divine_name_tafsir_link', 'divine_name_scholarly_position', 'divine_name_relationship', 'divine_name_misconception', 'authentic_dua', 'dua_life_topic')),
+    'divine_name_tafsir_link', 'divine_name_scholarly_position', 'divine_name_relationship', 'divine_name_misconception', 'divine_name_inclusion', 'authentic_dua', 'dua_life_topic')),
   entity_id uuid not null,
   entity_version integer not null default 1,
   reviewer_id uuid not null default auth.uid() references auth.users (id),
@@ -437,6 +461,7 @@ returns text language sql immutable as $$
     when 'divine_name_linguistic' then 'divine_name_linguistics' when 'divine_name_hadith_evidence' then 'divine_name_hadith_evidence'
     when 'divine_name_tafsir_link' then 'divine_name_tafsir_links' when 'divine_name_scholarly_position' then 'divine_name_scholarly_positions'
     when 'divine_name_relationship' then 'divine_name_relationships' when 'divine_name_misconception' then 'divine_name_misconceptions'
+    when 'divine_name_inclusion' then 'divine_name_inclusions'
     when 'authentic_dua' then 'authentic_duas' when 'dua_life_topic' then 'dua_life_topics' end;
 $$;
 
@@ -587,7 +612,7 @@ declare
     when 'divine_name_translations' then 'divine_name_translation' when 'divine_name_linguistics' then 'divine_name_linguistic'
     when 'divine_name_hadith_evidence' then 'divine_name_hadith_evidence' when 'divine_name_tafsir_links' then 'divine_name_tafsir_link'
     when 'divine_name_scholarly_positions' then 'divine_name_scholarly_position' when 'divine_name_relationships' then 'divine_name_relationship'
-    else 'divine_name_misconception' end;
+    when 'divine_name_inclusions' then 'divine_name_inclusion' else 'divine_name_misconception' end;
   sys boolean := coalesce(current_setting('qitl.asma_system', true), '') = '1' or coalesce(current_setting('qitl.import', true), '') = '1';
   h record;
 begin
@@ -625,7 +650,7 @@ begin
     if new.needs_rereview then
       raise exception 'flagged for re-review: record a new approving review first' using errcode = 'P0001';
     end if;
-    if not public.asma_name_public(new.name_id) and etype <> 'divine_name_misconception' then
+    if not public.asma_name_public(new.name_id) and etype not in ('divine_name_misconception', 'divine_name_inclusion') then
       raise exception 'publish the Name first' using errcode = 'P0001';
     end if;
   end if;
@@ -706,6 +731,26 @@ begin
   return null;
 end $$;
 create trigger divine_names_after_change after update on public.divine_names for each row execute function public.asma_after_name_change();
+
+-- Publishing (or withdrawing) an accepted-variant / related-root row changes the counting query of its Name.
+create or replace function public.asma_inclusion_changed()
+returns trigger language plpgsql security definer set search_path = public, extensions as $$
+declare nid uuid := coalesce(new.name_id, old.name_id);
+begin
+  if (tg_op = 'INSERT' and new.status = 'published') or (tg_op = 'UPDATE' and (old.status = 'published') is distinct from (new.status = 'published')) then
+    perform set_config('qitl.asma_system', '1', true);
+    update public.divine_names set classification_version = classification_version + 1, needs_rereview = true,
+      rereview_reason = 'an accepted-variant or related-root list changed',
+      scholarly_status = case when scholarly_status = 'approved' then 'invalidated' else scholarly_status end,
+      visibility = case when visibility in ('public_ai_draft', 'public_approved') then 'private_draft' else visibility end,
+      status = case when status = 'published' then 'correction'::public.publication_status else status end
+    where id = nid;
+    perform public.asma_flag_name_dependents(nid, 'an accepted-variant or related-root list changed');
+    perform set_config('qitl.asma_system', '0', true);
+  end if;
+  return null;
+end $$;
+create trigger divine_name_inclusions_changed after insert or update on public.divine_name_inclusions for each row execute function public.asma_inclusion_changed();
 
 -- A new current counting methodology sends every Name back for re-review.
 create or replace function public.asma_methodology_changed()
@@ -884,6 +929,9 @@ returns jsonb language sql stable security definer set search_path = public, ext
         'evidence_status', r.evidence_status, 'note', case when r.evidence_status = 'sourced' then r.note end) order by o.slug)
       from public.divine_name_relationships r join public.divine_names o on o.id = r.related_name_id
       where r.name_id = n.id and r.status not in ('rejected', 'archived') and public.asma_name_visible(o.id)), '[]'::jsonb),
+    'inclusions', coalesce((select jsonb_agg(jsonb_build_object('measure', i.measure, 'form', i.form, 'root', i.root, 'basis', i.basis, 'locator', i.locator,
+        'work', (select s.work from public.sources s where s.id = i.source_id)) order by i.measure, i.form)
+      from public.divine_name_inclusions i where i.name_id = n.id and i.status = 'published'), '[]'::jsonb),
     'misconceptions', coalesce((select jsonb_agg(jsonb_build_object('slug', c.slug, 'claim', c.claim_text, 'correction', case when c.evidence_status = 'sourced' then c.correction_text end,
         'evidence_status', c.evidence_status, 'reviewed', public.asma_review_ok('divine_name_misconception', c.id)) order by c.slug)
       from public.divine_name_misconceptions c where c.name_id = n.id and c.status not in ('rejected', 'archived')), '[]'::jsonb),
@@ -921,6 +969,15 @@ returns jsonb language sql stable security definer set search_path = public, ext
   from public.divine_name_quran_occurrences o join public.divine_names n on n.id = o.name_id
   join public.divine_name_occurrence_methodologies m on m.id = o.methodology_id
   where o.surah_id = p_surah and o.ayah_no = p_ayah and m.is_current and o.measure in ('A', 'B') and o.referent_status = 'confirmed_allah' and public.asma_name_visible(n.id);
+$$;
+
+-- The same, for a whole surah: what the Quran reader needs to show "Explore this Name" on the right ayat.
+create or replace function public.public_asma_confirmed_in_surah(p_surah smallint)
+returns jsonb language sql stable security definer set search_path = public, extensions as $$
+  select coalesce(jsonb_agg(distinct jsonb_build_object('ayah', o.ayah_no, 'slug', n.slug, 'ar', n.name_ar, 'transliteration', n.transliteration)), '[]'::jsonb)
+  from public.divine_name_quran_occurrences o join public.divine_names n on n.id = o.name_id
+  join public.divine_name_occurrence_methodologies m on m.id = o.methodology_id
+  where o.surah_id = p_surah and m.is_current and o.measure in ('A', 'B') and o.referent_status = 'confirmed_allah' and public.asma_name_visible(n.id);
 $$;
 
 -- Names whose lexical occurrences include a verse (search by verse in the gallery). Lexical only, labelled as such by the page.
@@ -970,14 +1027,14 @@ declare t text;
 begin
   -- audit on every table that carries content
   foreach t in array array['divine_names', 'divine_name_aliases', 'divine_name_translations', 'divine_name_linguistics', 'divine_name_hadith_evidence', 'divine_name_tafsir_links',
-      'divine_name_scholarly_positions', 'divine_name_relationships', 'divine_name_misconceptions', 'authentic_duas', 'dua_life_topics', 'dua_divine_name_links', 'dua_topic_links',
+      'divine_name_scholarly_positions', 'divine_name_relationships', 'divine_name_misconceptions', 'divine_name_inclusions', 'authentic_duas', 'dua_life_topics', 'dua_divine_name_links', 'dua_topic_links',
       'divine_name_topic_links', 'divine_name_occurrence_methodologies'] loop
     execute format('create trigger %I after insert or update or delete on public.%I for each row execute function public.audit()', t || '_audit', t);
   end loop;
   foreach t in array array['divine_names', 'authentic_duas', 'dua_life_topics'] loop
     execute format('create trigger %I before insert or update on public.%I for each row execute function public.asma_guard_top()', t || '_guard', t);
   end loop;
-  foreach t in array array['divine_name_translations', 'divine_name_linguistics', 'divine_name_hadith_evidence', 'divine_name_tafsir_links', 'divine_name_scholarly_positions', 'divine_name_relationships', 'divine_name_misconceptions'] loop
+  foreach t in array array['divine_name_translations', 'divine_name_linguistics', 'divine_name_hadith_evidence', 'divine_name_tafsir_links', 'divine_name_scholarly_positions', 'divine_name_relationships', 'divine_name_misconceptions', 'divine_name_inclusions'] loop
     execute format('create trigger %I before insert or update on public.%I for each row execute function public.asma_guard_child()', t || '_guard', t);
   end loop;
   execute 'create trigger divine_name_aliases_guard before insert or update or delete on public.divine_name_aliases for each row execute function public.asma_guard_part(''name_id'', ''divine_names'')';
@@ -986,13 +1043,13 @@ begin
   execute 'create trigger divine_name_topic_links_guard before insert or update or delete on public.divine_name_topic_links for each row execute function public.asma_guard_part(''topic_id'', ''dua_life_topics'')';
   -- the author column is the database's record
   foreach t in array array['divine_names', 'divine_name_translations', 'divine_name_linguistics', 'divine_name_hadith_evidence', 'divine_name_tafsir_links',
-      'divine_name_scholarly_positions', 'divine_name_relationships', 'divine_name_misconceptions', 'authentic_duas', 'dua_life_topics'] loop
+      'divine_name_scholarly_positions', 'divine_name_relationships', 'divine_name_misconceptions', 'divine_name_inclusions', 'authentic_duas', 'dua_life_topics'] loop
     execute format('create trigger a0_stamp_author before insert or update on public.%I for each row execute function public.stamp_author(%L)', t, 'created_by');
   end loop;
 
   foreach t in array array['divine_names', 'divine_name_aliases', 'divine_name_translations', 'divine_name_linguistics', 'divine_name_occurrence_methodologies',
       'divine_name_quran_occurrences', 'divine_name_count_summaries', 'divine_name_hadith_evidence', 'divine_name_tafsir_links', 'divine_name_scholarly_positions',
-      'divine_name_relationships', 'divine_name_misconceptions', 'authentic_duas', 'dua_life_topics', 'dua_divine_name_links', 'dua_topic_links', 'divine_name_topic_links',
+      'divine_name_relationships', 'divine_name_misconceptions', 'divine_name_inclusions', 'authentic_duas', 'dua_life_topics', 'dua_divine_name_links', 'dua_topic_links', 'divine_name_topic_links',
       'divine_name_reviews', 'user_divine_name_learning', 'user_dua_bookmarks'] loop
     execute format('alter table public.%I enable row level security', t);
     execute format('alter table public.%I force row level security', t);
@@ -1008,7 +1065,7 @@ begin
     execute format('create policy editor_update on public.%I for update to authenticated using (public.has_role(''editor'')) with check (public.has_role(''editor''))', t);
     execute format('create policy admin_delete on public.%I for delete to authenticated using (public.has_role(''admin'') and status <> ''published'')', t);
   end loop;
-  foreach t in array array['divine_name_translations', 'divine_name_linguistics', 'divine_name_hadith_evidence', 'divine_name_tafsir_links', 'divine_name_scholarly_positions', 'divine_name_misconceptions'] loop
+  foreach t in array array['divine_name_translations', 'divine_name_linguistics', 'divine_name_hadith_evidence', 'divine_name_tafsir_links', 'divine_name_scholarly_positions', 'divine_name_misconceptions', 'divine_name_inclusions'] loop
     execute format('grant select on public.%I to anon, authenticated', t);
     execute format('grant insert, update, delete on public.%I to authenticated', t);
     execute format('create policy read_published on public.%I for select using (public.asma_staff() or (status = ''published'' and public.asma_name_public(name_id)))', t);
@@ -1071,12 +1128,12 @@ create policy own_delete on public.user_dua_bookmarks for delete to authenticate
 
 -- ---------- 13. Function privileges ----------
 revoke execute on function public.asma_guard_top(), public.asma_guard_child(), public.asma_guard_part(), public.check_asma_reviewer(), public.apply_asma_review(),
-  public.asma_after_name_change(), public.asma_methodology_changed(), public.asma_flag_name_dependents(uuid, text), public.compute_asma_integrity(text, uuid),
+  public.asma_after_name_change(), public.asma_methodology_changed(), public.asma_inclusion_changed(), public.asma_flag_name_dependents(uuid, text), public.compute_asma_integrity(text, uuid),
   public.asma_record(text, uuid), public.asma_review_ok(text, uuid), public.asma_counts_consistent(uuid), public.asma_summary_json(uuid) from public, anon, authenticated;
 revoke execute on function public.asma_replace_occurrences(uuid, uuid, text, jsonb), public.asma_set_referent(uuid, text, text),
   public.run_asma_integrity(text, uuid), public.publish_asma_ai_draft(text, uuid), public.withdraw_asma_ai_draft(text, uuid) from public, anon;
 grant execute on function public.asma_replace_occurrences(uuid, uuid, text, jsonb), public.asma_set_referent(uuid, text, text),
   public.run_asma_integrity(text, uuid), public.publish_asma_ai_draft(text, uuid), public.withdraw_asma_ai_draft(text, uuid) to authenticated;
 grant execute on function public.public_asma_names(), public.public_asma_name(text), public.public_asma_occurrences(text, text, integer, integer, smallint),
-  public.public_asma_names_in_verse(smallint, smallint), public.public_asma_lexical_in_verse(smallint, smallint), public.public_asma_duas(), public.public_asma_dua(text),
+  public.public_asma_names_in_verse(smallint, smallint), public.public_asma_confirmed_in_surah(smallint), public.public_asma_lexical_in_verse(smallint, smallint), public.public_asma_duas(), public.public_asma_dua(text),
   public.public_asma_topics() to anon, authenticated;

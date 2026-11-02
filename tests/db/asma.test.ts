@@ -24,7 +24,7 @@ const mkName = async (extra: Record<string, unknown> = {}, who = editor): Promis
   const [r] = await db.as<{ id: string }>(who, `insert into public.divine_names (${cols.join(",")}) values (${cols.map((_, i) => `$${i + 1}`).join(",")}) returning id`, Object.values(f));
   return r!.id;
 };
-const rows = (a: number, b = 0, c = 0) => [
+const rows = (a: number, b = 0, c = 0): Array<Record<string, string | number>> => [
   ...Array.from({ length: a }, (_, i) => ({ surah: 1, ayah: 1 + (i % 7), token: i + 1, measure: "A", relation: "direct", form: "الغفور", raw: "ٱلْغَفُورُ" })),
   ...Array.from({ length: b }, (_, i) => ({ surah: 2, ayah: 255, token: i + 1, measure: "B", relation: "direct", form: "للغفور", raw: "لِلْغَفُورِ" })),
   ...Array.from({ length: c }, (_, i) => ({ surah: 112, ayah: 1 + (i % 4), token: 50 + i, measure: "C", relation: "related", form: "غفران", raw: "غُفْرَانَ", root: "غ-ف-ر" })),
@@ -179,6 +179,9 @@ describe("counts are computed, never typed", () => {
     await db.as(scholar, "select public.asma_set_referent($1, 'confirmed_allah', 'fixture')", [a!.id]);
     const hook = (await db.as<{ r: Array<{ slug: string }> }>(null, "select public.public_asma_names_in_verse(1::smallint, 1::smallint) as r"))[0]!.r;
     expect(hook.length).toBeGreaterThan(0);
+    const surah = (await db.as<{ r: Array<{ ayah: number; slug: string }> }>(null, "select public.public_asma_confirmed_in_surah(1::smallint) as r"))[0]!.r;
+    expect(surah.some((x) => x.ayah === 1)).toBe(true);
+    expect((await db.as<{ r: unknown[] }>(null, "select public.public_asma_confirmed_in_surah(2::smallint) as r"))[0]!.r).toEqual([]);
   });
 });
 
@@ -207,7 +210,7 @@ describe("the AI-draft pathway", () => {
     const mine = list.find((x) => x.scholarly_status === "not_reviewed" && x.published === false);
     expect(mine).toMatchObject({ ai_generated: true, scholarly_status: "not_reviewed", published: false });
     const slug = (await sel("select slug from public.divine_names where id = $1", [id]))[0]!.slug as string;
-    const doc = (await db.as<{ r: Record<string, any> }>(null, "select public.public_asma_name($1) as r", [slug]))[0]!.r;
+    const doc = (await db.as<{ r: { summary: { measures: Record<string, { count: number; verses: number }>; edition: { sha256: string } } } }>(null, "select public.public_asma_name($1) as r", [slug]))[0]!.r;
     expect(doc.summary.measures).toMatchObject({ A: { count: 3, verses: 3 }, B: { count: 1 }, C: { count: 2 } });
     expect(doc.summary.edition.sha256).toBe(HASH);
     expect(JSON.stringify(doc)).not.toMatch(/"total"/);
@@ -330,6 +333,24 @@ describe("re-review when the classification or the methodology changes", () => {
     await db.as(editor, "update public.divine_names set root = 'غ-ف-ر' where id = $1", [id]);
     expect((await sel("select status, needs_rereview from public.divine_name_scholarly_positions where id = $1", [pos!.id]))[0]).toEqual({ status: "correction", needs_rereview: true });
     expect(await db.as(null, "select id from public.divine_name_scholarly_positions where id = $1", [pos!.id])).toHaveLength(0);
+  });
+  test("measures B and C come only from published, sourced, reviewed inclusion rows; publishing one sends the Name back for re-review", async () => {
+    const id = await publishedName();
+    const ins = (cols: string, vals: unknown[]) => db.as<{ id: string }>(editor, `insert into public.divine_name_inclusions (name_id, ${cols}) values ($1, ${vals.map((_, i) => `$${i + 2}`).join(",")}) returning id`, [id, ...vals]);
+    await rejects(ins("measure, form, basis", ["C", "غفران", "[fixture] a related-root form"]), /check constraint/); // C needs its root
+    await rejects(ins("measure, form, basis, root", ["B", "للغفور", "[fixture] a prefixed form", "غ-ف-ر"]), /check constraint/); // B has no root
+    await rejects(ins("measure, form, basis, evidence_status", ["B", "للغفور", "[fixture] a prefixed form", "sourced"]), /check constraint/); // sourced needs a source
+    const [placeholder] = await ins("measure, form, basis", ["B", "للغفور", "[fixture] a prefixed form"]);
+    await review(scholar, "divine_name_inclusion", placeholder!.id);
+    await rejects(db.as(editor, "update public.divine_name_inclusions set status = 'published' where id = $1", [placeholder!.id]), /needs source" placeholder is never published/);
+    const [inc] = await ins("measure, form, root, basis, source_id, evidence_status", ["C", "غفران", "غ-ف-ر", "[fixture] a related-root form a reviewer listed", srcId, "sourced"]);
+    await rejects(db.as(editor, "update public.divine_name_inclusions set status = 'published' where id = $1", [inc!.id]), /no review, no publish/);
+    expect(await sel("select 1 from public.divine_name_inclusions where status = 'published' and name_id = $1", [id])).toHaveLength(0);
+    await review(scholar, "divine_name_inclusion", inc!.id);
+    await db.as(editor, "update public.divine_name_inclusions set status = 'published' where id = $1", [inc!.id]);
+    expect(await state(id)).toMatchObject({ status: "correction", classification_version: 2, needs_rereview: true, visibility: "private_draft" });
+    expect((await sel("select stale from public.divine_name_count_summaries where name_id = $1", [id])).every((r) => r.stale === true)).toBe(true);
+    await rejects(db.as(editor, "update public.divine_name_inclusions set basis = '[fixture] edited in place after publication' where id = $1", [inc!.id]), /fixed: move it to correction/);
   });
   test("a new current counting methodology sends every Name back for re-review", async () => {
     const db2 = await createDb({ supabaseDefaults: true });

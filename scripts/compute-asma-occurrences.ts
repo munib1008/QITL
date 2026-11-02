@@ -19,11 +19,11 @@ import { createClient } from "@supabase/supabase-js";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 import { readFileSync } from "node:fs";
-import { buildIndex, serialiseCounts, countName } from "../src/lib/asma/count";
+import { buildIndex, countName, queryHash, serialiseCounts } from "../src/lib/asma/count";
 import { loadQuranCorpusFromDisk } from "../src/lib/asma/corpus-node";
 import { buildQuery } from "../src/lib/asma/registry";
 import { loadNamesFile } from "../src/lib/asma/registry-node";
-import { buildSeed, type TopicDraft } from "../src/lib/asma/seed";
+import { buildSeed, occurrenceRows, storedQuery, type InclusionRow, type TopicDraft } from "../src/lib/asma/seed";
 import { parseFlags, requireEnv } from "../src/lib/importers/common";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -77,10 +77,20 @@ async function main() {
     if (ins.error) throw new Error(ins.error.message);
     for (const r of ins.data ?? []) ids.set(r.slug as string, r.id as string);
   }
+  // A stored Name is recounted from ITS stored query (registered surface forms + published inclusion rows), never from the draft file.
+  const stored = await sb.from("divine_names").select("id, slug, surface_forms");
+  if (stored.error) throw new Error(stored.error.message);
+  const incl = await sb.from("divine_name_inclusions").select("id, name_id, measure, form, root, basis").eq("status", "published");
+  if (incl.error) throw new Error(incl.error.message);
   for (const n of plan.names) {
-    const id = ids.get(n.row.slug as string)!;
-    const r = await sb.rpc("asma_replace_occurrences", { p_name: id, p_methodology: methodologyId, p_query_hash: n.queryHash, p_rows: n.occurrences });
-    if (r.error) throw new Error(`${n.row.slug}: ${r.error.message}`);
+    const slug = n.row.slug as string;
+    const id = ids.get(slug)!;
+    const row = (stored.data ?? []).find((r) => r.id === id) as { surface_forms: string[] } | undefined;
+    const mine = ((incl.data ?? []) as Array<InclusionRow & { name_id: string }>).filter((x) => x.name_id === id);
+    const q = storedQuery(slug, row?.surface_forms ?? (n.row.surface_forms as string[]), mine);
+    const counts = countName(index, q);
+    const r = await sb.rpc("asma_replace_occurrences", { p_name: id, p_methodology: methodologyId, p_query_hash: queryHash(q), p_rows: occurrenceRows(counts) });
+    if (r.error) throw new Error(`${slug}: ${r.error.message}`);
   }
   for (const t of plan.topics) {
     const got = await sb.from("dua_life_topics").select("id").eq("slug", t.row.slug as string).maybeSingle();
