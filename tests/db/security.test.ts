@@ -211,8 +211,9 @@ describe("1. grants: least privilege on every table", () => {
       `select p.proname, format_type(p.prorettype, null) as ret from pg_proc p join pg_namespace n on n.oid = p.pronamespace
        where n.nspname = 'public' and p.prosecdef and has_function_privilege('anon', p.oid, 'execute')`,
     );
-    // Visibility helpers used inside policies return booleans; unsubscribe() takes an unguessable token.
-    expect(rows.filter((r) => r.ret !== "boolean" && r.proname !== "unsubscribe").map((r) => r.proname)).toEqual([]);
+    // Visibility helpers used inside policies return booleans; unsubscribe() takes an unguessable token; the two public_ai_draft*
+    // functions are the deliberate read API for labelled AI drafts (tests/db/ai-draft.test.ts proves they return only passed, public AI drafts).
+    expect(rows.filter((r) => r.ret !== "boolean" && r.proname !== "unsubscribe" && !["public_ai_drafts", "public_ai_draft"].includes(r.proname)).map((r) => r.proname)).toEqual([]);
     // The licence-gated edition text is never readable through a definer function.
     const [r] = await db.admin<{ ok: boolean }>("select has_function_privilege('authenticated', 'public.quran_edition_ayah(uuid, smallint, smallint)', 'execute') as ok");
     expect(r!.ok).toBe(false);
