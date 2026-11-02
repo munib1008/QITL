@@ -66,6 +66,7 @@ const PUBLIC_BY_DESIGN: Record<string, string> = {
   translation_editions: "edition catalogue; the text itself is licence-gated",
   riwayat: "reference catalogue of riwayat",
   creation_categories: "taxonomy",
+  partner_service_categories: "admin-managed taxonomy of learning-partner service categories (names only)",
   lifestyle_record_types: "module registry",
   quran_text_editions: "edition registry metadata, no text",
   feature_flags: "public switches for unbuilt features; admins write",
