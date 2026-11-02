@@ -1,7 +1,7 @@
 import type { NextRequest } from "next/server";
 import type { ZodTypeAny } from "zod";
 import { z } from "zod";
-import { dbError, fail, isResponse, json, parseBody, requireUser } from "@/lib/api";
+import { dbError, fail, isResponse, json, requireUser } from "@/lib/api";
 import {
   AvailabilityInput,
   ContactInput,
