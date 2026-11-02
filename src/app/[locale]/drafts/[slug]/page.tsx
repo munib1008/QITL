@@ -9,6 +9,7 @@ import { ReadingPage } from "@/components/shell/ReadingPage";
 import { QuranAttribution } from "@/components/quran/QuranAttribution";
 import { englishContent } from "@/lib/i18n/locales";
 import { draftPreviewStrings } from "@/lib/i18n/modules/draftPreview";
+import { publicAiDraftGate } from "@/lib/stories/ai-draft-gate";
 import { DRAFT_INDEX, NOINDEX, findDraft, quranOf } from "@/lib/stories/draft-data";
 import { DEFAULT_MODE, parseMode } from "@/lib/stories/modes";
 
@@ -25,7 +26,8 @@ export default async function DraftPage({ params, searchParams }: { params: Prom
   const { locale, slug } = await params;
   const { mode } = await searchParams;
   const story = findDraft(slug);
-  if (!story) notFound();
+  const gate = await publicAiDraftGate();
+  if (!story || (gate && !gate.has(slug))) notFound();
   const t = draftPreviewStrings(locale);
   const en = englishContent(locale);
 

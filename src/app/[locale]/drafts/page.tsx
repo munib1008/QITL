@@ -5,6 +5,7 @@ import { ReadingPage } from "@/components/shell/ReadingPage";
 import { EmptyState } from "@/components/ui/misc";
 import { englishContent } from "@/lib/i18n/locales";
 import { draftPreviewStrings } from "@/lib/i18n/modules/draftPreview";
+import { publicAiDraftGate } from "@/lib/stories/ai-draft-gate";
 import { DRAFT_INDEX, NOINDEX } from "@/lib/stories/draft-data";
 import { SUBJECT_TYPES, groupByType, parseSubjectType, type PreviewStory } from "@/lib/stories/draft-preview";
 import "@/styles/draft-preview.css";
@@ -29,7 +30,8 @@ export default async function DraftsIndex({ params, searchParams }: { params: Pr
   const q = (typeof sp.q === "string" ? sp.q : "").trim().slice(0, 80);
   const nq = norm(q);
   const matches = (s: PreviewStory) => !nq || norm(`${s.title_en} ${s.slug}`).includes(nq) || (!!s.title_ar && s.title_ar.includes(q));
-  const visible = DRAFT_INDEX.stories.filter(matches);
+  const gate = await publicAiDraftGate();
+  const visible = DRAFT_INDEX.stories.filter((s) => (!gate || gate.has(s.slug)) && matches(s));
   const groups = groupByType(visible).filter((g) => !type || g.type === type);
   const href = (ty: string | null) => {
     const p = new URLSearchParams();
