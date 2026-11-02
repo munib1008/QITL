@@ -11,6 +11,7 @@ import { homeStrings, journeyStrings } from "./modules/home";
 import { interpretationT } from "./modules/interpretation";
 import { lifestyleStrings } from "./modules/lifestyle";
 import { muftiT } from "./modules/mufti";
+import { partnersT } from "./modules/partners";
 import { muftiApplyT } from "./modules/muftiApply";
 import { notificationsT } from "./modules/notifications";
 import { siteAdminT } from "./modules/siteAdmin";
@@ -83,6 +84,7 @@ export const STRING_FILES: Array<{ module: string; file: string; get: (locale: s
   { module: "lifestyle", file: "modules/lifestyle.ts", get: lifestyleStrings },
   { module: "mufti", file: "modules/mufti.ts", get: muftiT },
   { module: "mufti", file: "modules/muftiApply.ts", get: muftiApplyT },
+  { module: "partners", file: "modules/partners.ts", get: partnersT },
   { module: "account", file: "modules/notifications.ts", get: notificationsT },
   { module: "admin", file: "modules/siteAdmin.ts", get: siteAdminT },
   { module: "admin", file: "modules/peopleAdmin.ts", get: peopleAdminStrings },
