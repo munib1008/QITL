@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { ReadingPage } from "@/components/shell/ReadingPage";
+import { AiDraftStory } from "@/components/drafts/AiDraftStory";
 import { StoryView } from "@/components/story/StoryView";
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
 import { EvidenceLabel } from "@/components/ui/evidence";
@@ -111,7 +112,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
           {story.state === "ok" && story.story ? (
             <StoryView story={story.story} name={e.title} chapterKey={`event:${e.slug}`} />
           ) : (
-            <EmptyState label={<EvidenceLabel kind="unknown">{t.notWritten}</EvidenceLabel>} title={t.storyPending} />
+            <AiDraftStory slug={slug} locale={locale} fallback={<EmptyState label={<EvidenceLabel kind="unknown">{t.notWritten}</EvidenceLabel>} title={t.storyPending} />} />
           )}
           <StoryChapterLinks stories={linked} locale={locale} />
           <section className="pp-sec" id="discuss" aria-labelledby="d-h">

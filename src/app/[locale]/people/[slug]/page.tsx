@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AiDraftStory } from "@/components/drafts/AiDraftStory";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { EventsSection, FamilySection, IdentificationBlock, Name, NotEstablished, QuranSection, StoryLinks } from "@/components/encyclopedia/Encyclopedia";
 import { EmptyState } from "@/components/ui/misc";
@@ -100,6 +101,7 @@ export default async function PersonPage({ params }: { params: Promise<{ locale:
             { label: s.place, value: null },
           ]}
         />
+        <AiDraftStory slug={slug} locale={raw} fallback={null} />
         <p>
           <Link className="zq-btn zq-btn-secondary zq-btn-link" href="/people">
             {s.back}
