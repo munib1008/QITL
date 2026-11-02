@@ -38,9 +38,12 @@ for (const surah of [1, 12]) {
         for (const a of el.getAnimations({ subtree: true })) a.finish();
         for (const n of [el, ...Array.from(el.querySelectorAll<HTMLElement>("*"))]) if (n.scrollTop) n.scrollTop = 0;
       });
-      const arabic = (await sheet.locator("[data-study-arabic]").boundingBox())!;
-      const tabs = (await sheet.getByRole("tablist").boundingBox())!;
-      expect(arabic.y + arabic.height).toBeLessThanOrEqual(tabs.y + 1);
+      // Polled: under load the sheet can still be settling when first measured.
+      await expect.poll(async () => {
+        const arabic = (await sheet.locator("[data-study-arabic]").boundingBox())!;
+        const tabs = (await sheet.getByRole("tablist").boundingBox())!;
+        return arabic.y + arabic.height - (tabs.y + 1);
+      }).toBeLessThanOrEqual(0);
       await expect(sheet.getByRole("tab")).toHaveCount(7);
       await expect(sheet.getByRole("tab", { name: "Translations" })).toHaveAttribute("aria-selected", "true");
       await expect(sheet.locator('[data-slot="early-tafsir"]')).toContainText("Commentary, not a translation");
