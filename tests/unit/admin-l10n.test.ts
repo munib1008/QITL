@@ -10,6 +10,7 @@ import { adminLicencesRaw, adminLicencesStrings } from "@/lib/i18n/modules/admin
 import { adminLifestyleRaw, adminLifestyleStrings } from "@/lib/i18n/modules/adminLifestyle";
 import { adminLineageRaw, adminLineageStrings } from "@/lib/i18n/modules/adminLineage";
 import { adminMediaRaw, adminMediaStrings } from "@/lib/i18n/modules/adminMedia";
+import { partnersRaw, partnersT } from "@/lib/i18n/modules/partners";
 import { adminQiraatRaw, adminQiraatStrings } from "@/lib/i18n/modules/adminQiraat";
 import { adminSharedRaw, adminSharedStrings } from "@/lib/i18n/modules/adminShared";
 import { adminShifaRaw, adminShifaStrings } from "@/lib/i18n/modules/adminShifa";
@@ -35,6 +36,7 @@ const FILES: Array<[string, { en: object; ar: object; ur: object }, (locale: str
   ["adminLineage", adminLineageRaw, adminLineageStrings],
   ["adminMedia", adminMediaRaw, adminMediaStrings],
   ["adminQiraat", adminQiraatRaw, adminQiraatStrings],
+  ["partners", partnersRaw, partnersT],
   ["adminShared", adminSharedRaw, adminSharedStrings],
   ["adminShifa", adminShifaRaw, adminShifaStrings],
   ["adminStory", adminStoryRaw, adminStoryStrings],
