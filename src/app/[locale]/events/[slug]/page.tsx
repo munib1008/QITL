@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { ReadingPage } from "@/components/shell/ReadingPage";
+import { redirectIfPublicAiDraft } from "@/lib/stories/ai-draft-gate";
+import { AiDraftStory } from "@/components/drafts/AiDraftStory";
 import { StoryView } from "@/components/story/StoryView";
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
 import { EvidenceLabel } from "@/components/ui/evidence";
@@ -80,6 +82,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
     // A merged-away event keeps its address: it redirects to the event it was merged into.
     const to = await redirectTarget(slug);
     if (to && to !== slug) redirect(`/events/${to}`);
+    await redirectIfPublicAiDraft(slug);
     notFound();
   }
   if (!e || e === "not_configured") return <UniverseOnlyPage u={uv!} locale={locale} />;
@@ -111,7 +114,7 @@ export default async function EventPage({ params }: { params: Promise<{ locale: 
           {story.state === "ok" && story.story ? (
             <StoryView story={story.story} name={e.title} chapterKey={`event:${e.slug}`} />
           ) : (
-            <EmptyState label={<EvidenceLabel kind="unknown">{t.notWritten}</EvidenceLabel>} title={t.storyPending} />
+            <AiDraftStory slug={slug} locale={locale} fallback={<EmptyState label={<EvidenceLabel kind="unknown">{t.notWritten}</EvidenceLabel>} title={t.storyPending} />} />
           )}
           <StoryChapterLinks stories={linked} locale={locale} />
           <section className="pp-sec" id="discuss" aria-labelledby="d-h">

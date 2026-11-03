@@ -13,6 +13,7 @@ import { CopyCitationButton, ShareButton } from "@/components/account/ShareButto
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
 import { ShifaRelated } from "@/components/shifa/Related";
 import { NoteEditor } from "@/components/account/NoteEditor";
+import { AiDraftStory } from "@/components/drafts/AiDraftStory";
 import { StoryView } from "@/components/story/StoryView";
 import { getStory } from "@/lib/data/story";
 import { getLinkedStories } from "@/lib/data/story-links";
@@ -207,13 +208,19 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
                   }
                 />
               ) : (
-                <EmptyState
-                  tone={story.state === "not_configured" ? "soon" : "unknown"}
-                  label={<EvidenceLabel kind="unknown">{t.notWritten}</EvidenceLabel>}
-                  title={story.state === "error" ? t.storyError : t.storyPending(p.name)}
-                >
-                  <p>{t.storyPendingBody}</p>
-                </EmptyState>
+                <AiDraftStory
+                  slug={p.id}
+                  locale={locale}
+                  fallback={
+                    <EmptyState
+                      tone={story.state === "not_configured" ? "soon" : "unknown"}
+                      label={<EvidenceLabel kind="unknown">{t.notWritten}</EvidenceLabel>}
+                      title={story.state === "error" ? t.storyError : t.storyPending(p.name)}
+                    >
+                      <p>{t.storyPendingBody}</p>
+                    </EmptyState>
+                  }
+                />
               )}
             </section>
           ) : null}

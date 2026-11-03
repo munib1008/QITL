@@ -10,8 +10,13 @@ import { TimelineLayers } from "@/components/lifestyle/TimelineLayers";
 import { timelineStrings } from "@/lib/i18n/modules/events";
 import { CompleteTimeline, ViewSwitch } from "@/components/timeline/CompleteTimeline";
 import { e2eFixturesEnabled } from "@/lib/e2e-fixtures";
-import { parseTracks } from "@/lib/events/tracks";
+import { parseTracks, TRACK_IDS } from "@/lib/events/tracks";
 import { publishedUniverse, universeCounts } from "@/lib/events/universe";
+import { draftLastHour, draftTimeline } from "@/content/draftAtlas";
+import { EraScrollTimeline } from "@/components/redesign/EraScrollTimeline";
+import { redesignStrings } from "@/lib/i18n/modules/redesign";
+import { timelineStrings as completeStrings } from "@/lib/i18n/modules/timeline";
+import { englishContent } from "@/lib/i18n/locales";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const t = timelineStrings((await params).locale);
@@ -28,6 +33,27 @@ export default async function TimelinePage({ params, searchParams }: { params: P
   // The Complete Timeline (research atlas) is a second view of the same page; the guided Journey stays the default.
   if (view === "complete") {
     const [items, counts] = await Promise.all([publishedUniverse(), universeCounts()]);
+    // Nothing reviewed is published yet: show the labelled draft inventory as a scroll story instead of an empty page.
+    if (!items || items.length === 0) {
+      const draft = draftTimeline();
+      const r = redesignStrings(locale);
+      return (
+        <ReadingPage locale={locale} crumbs={[{ label: t.title }]} title={t.title} lead={t.lead}>
+          <div className="zq-pagebody">
+            <ViewSwitch locale={locale} view="complete" />
+            <EraScrollTimeline
+              eras={draft.eras}
+              items={draft.items}
+              signs={draftLastHour().signs}
+              tracks={TRACK_IDS.map((id) => ({ id, name: completeStrings(locale).tracks[id].name, note: completeStrings(locale).tracks[id].note }))}
+              s={r.scroll}
+              initial={parseTracks(tracks)}
+              englishAttrs={englishContent(locale)}
+            />
+          </div>
+        </ReadingPage>
+      );
+    }
     return (
       <ReadingPage locale={locale} crumbs={[{ label: t.title }]} title={t.title} lead={t.lead}>
         <div className="zq-pagebody">

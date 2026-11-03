@@ -5,7 +5,7 @@ import { SearchField } from "@/components/ui/misc";
 import { searchStrings } from "@/lib/i18n/modules/search";
 import { Icon } from "@/components/ui/icons";
 import { AccountLink } from "./AccountLink";
-import { LangToggle, ThemeToggle } from "./toggles";
+import { LangToggle } from "./toggles";
 import { MobileMenu } from "./MobileMenu";
 import { Logo, Mark } from "./Logo";
 import { exploreLinks } from "@/lib/nav";
@@ -51,7 +51,7 @@ export function JourneyHeader({ locale, config }: { locale: string; config?: Sit
   return (
     <header className="zq-nav">
       <Link className="zq-brand" href="/" aria-label={u.brandHome}>
-        <Logo height={52} tone="dark" priority tagline={t.brandTagline} />
+        <Logo height={52} tone="light" priority tagline={t.brandTagline} />
       </Link>
       <nav className="zq-links" aria-label={u.mainNav}>
         <a href="#journey">{t.nav.journey}</a>
@@ -85,7 +85,6 @@ export function ReadingHeader({ locale, query, config }: { locale: string; query
           <Icon.search />
           <span className="zq-hide-sm">{t.nav.search}</span>
         </Link>
-        <ThemeToggle labels={t.theme} />
         <LangToggle locale={l} labels={t.lang} />
         <AccountLink signInLabel={t.nav.signIn} accountLabel={t.nav.account} />
         <MobileMenu links={[...mainNav(t, config), ...moreNav(l, t, config)]} label={t.nav.explore} />
