@@ -42,6 +42,8 @@ export const ROUTES = [
   "/genealogy?view=lineage",
   "/genealogy?view=lineage&empty=1",
   "/lineage",
+  "/lineage?draft=1",
+  "/timeline?view=complete&draft=1",
   "/scriptures",
   "/scriptures?empty=1",
   "/admin/scriptures",

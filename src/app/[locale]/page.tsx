@@ -6,6 +6,9 @@ import { exploreLinks } from "@/lib/nav";
 import { applyNav } from "@/lib/site-config/config";
 import { getSiteConfig, homeText } from "@/lib/site-config/server";
 import { JourneyTimeline } from "@/components/journey/JourneyTimeline";
+import { JourneyDial, type DialStop } from "@/components/journey/JourneyDial";
+import { ERA_TEXT } from "@/content/labels";
+import { redesignStrings } from "@/lib/i18n/modules/redesign";
 import { JourneyHeader } from "@/components/shell/SiteHeader";
 import { DraftBadge } from "@/components/ui/evidence";
 import { Rosette } from "@/components/ui/icons";
@@ -25,6 +28,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const prophets = stops.filter((s) => s.type === "prophet").reduce((n, s) => n + s.name.split(" & ").length, 0);
   const milestones = stops.filter((s) => s.type === "milestone").length;
   const bsm = basmala();
+  const rd = redesignStrings(locale);
+  const dialStops: DialStop[] = stops.map((x) => ({ id: x.id, name: x.name, arabic: x.arabicName, eraLabel: x.era.label, dateLabel: x.era.label, certainty: x.era.certainty === "unknown" ? "relative" : x.era.certainty, certaintyLabel: ERA_TEXT[x.era.certainty] }));
   // Administrator-edited text and hidden sections (/admin/site). With no edit, every value equals the built-in string below.
   const cfg = await getSiteConfig();
   const builtInTitle = `${t.heroTitle} ${t.heroTitle2}`;
@@ -99,6 +104,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <span>{t.everyDate}</span>
             </div>
           </div>
+        </section>
+
+        <section className="rd-homedial" aria-labelledby="dial-h">
+          <div className="zq-sechead">
+            <h2 id="dial-h">{rd.dial.heading}</h2>
+            <p>{rd.dial.note}</p>
+          </div>
+          <JourneyDial stops={dialStops} s={rd.dial} href="/timeline?view=complete" />
         </section>
 
         <div id="journey">

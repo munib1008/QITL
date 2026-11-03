@@ -230,7 +230,7 @@ export function EraScrollTimeline({
                   </ul>
                   {e.k === "f" ? (
                     <p className="rd-small">
-                      <Link href="/last-hour">{s.toLastHour}</Link>
+                      <Link href="/last-hour" className="rd-link">{s.toLastHour}</Link>
                     </p>
                   ) : null}
                 </section>

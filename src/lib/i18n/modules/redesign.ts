@@ -6,6 +6,20 @@
 import { moduleStrings } from "./index";
 
 const en = {
+  namesDial: {
+    label: "Dial of the Names in the educational list",
+    prev: "Previous",
+    next: "Next",
+    play: "Auto-play",
+    pause: "Pause",
+    position: "Position in the list",
+    open: "Open this Name",
+    of: "of",
+    inList: "in this list",
+    draft: "AI draft",
+    draftBanner: "Draft list shown because the database is not connected. The Names, their order and their meanings are an AI draft awaiting scholarly review. The dial counts only what it shows and does not claim the Names are limited to a number.",
+    heading: "The Names, one by one",
+  },
   dial: {
     label: "Journey dial: stops from Adam to the passing of the Prophet",
     prev: "Previous",
@@ -18,6 +32,8 @@ const en = {
     none: "No stop matches.",
     open: "Open the timeline",
     stopOf: "Stop {n} of {total}",
+    heading: "The journey at a glance",
+    note: "Select a tick, step through, or search. Not to scale: the order is shown, never the distance.",
   },
   scroll: {
     categories: "Categories",
@@ -66,6 +82,20 @@ export const redesignStrings = (locale: string) =>
   moduleStrings(locale, {
     en,
     ar: {
+      namesDial: {
+        label: "قرص الأسماء في القائمة التعليمية",
+        prev: "السابق",
+        next: "التالي",
+        play: "تشغيل تلقائي",
+        pause: "إيقاف مؤقت",
+        position: "الموضع في القائمة",
+        open: "افتح هذا الاسم",
+        of: "من",
+        inList: "في هذه القائمة",
+        draft: "مسوَّدة آلية",
+        draftBanner: "قائمة مسوَّدة تظهر لأن قاعدة البيانات غير متصلة. الأسماء وترتيبها ومعانيها مسوَّدة آلية بانتظار المراجعة العلمية. القرص يعدّ ما يعرضه فقط ولا يزعم أن الأسماء محصورة بعدد.",
+        heading: "الأسماء واحدًا واحدًا",
+      },
       dial: {
         label: "قرص الرحلة: المحطات من آدم إلى وفاة النبي",
         prev: "السابق",
@@ -78,6 +108,8 @@ export const redesignStrings = (locale: string) =>
         none: "لا توجد محطة مطابقة.",
         open: "افتح الخط الزمني",
         stopOf: "المحطة {n} من {total}",
+        heading: "الرحلة في لمحة",
+        note: "اختر علامة أو تنقّل أو ابحث. ليس بمقياس رسم: يُعرض الترتيب لا المسافة.",
       },
       scroll: {
         categories: "الفئات",
@@ -122,6 +154,20 @@ export const redesignStrings = (locale: string) =>
       },
     },
     ur: {
+      namesDial: {
+        label: "تعلیمی فہرست میں اسماء کا ڈائل",
+        prev: "پچھلا",
+        next: "اگلا",
+        play: "خودکار چلائیں",
+        pause: "روکیں",
+        position: "فہرست میں مقام",
+        open: "یہ نام کھولیں",
+        of: "از",
+        inList: "اس فہرست میں",
+        draft: "مشینی مسودہ",
+        draftBanner: "مسودہ فہرست اس لیے دکھائی گئی ہے کہ ڈیٹا بیس جڑا نہیں۔ نام، ان کی ترتیب اور معانی مشینی مسودہ ہیں جو علمی نظرثانی کے منتظر ہیں۔ ڈائل صرف وہی گنتا ہے جو دکھاتا ہے اور یہ دعویٰ نہیں کرتا کہ نام کسی عدد میں محدود ہیں۔",
+        heading: "نام، ایک ایک کر کے",
+      },
       dial: {
         label: "سفر کا ڈائل: آدم سے نبی ﷺ کی وفات تک کے مقامات",
         prev: "پچھلا",
@@ -134,6 +180,8 @@ export const redesignStrings = (locale: string) =>
         none: "کوئی مقام نہیں ملا۔",
         open: "ٹائم لائن کھولیں",
         stopOf: "مقام {n} از {total}",
+        heading: "سفر ایک نظر میں",
+        note: "کوئی نشان چنیں، آگے بڑھیں یا تلاش کریں۔ پیمانے کے مطابق نہیں: ترتیب دکھائی جاتی ہے، فاصلہ نہیں۔",
       },
       scroll: {
         categories: "زمرے",

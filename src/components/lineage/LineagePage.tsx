@@ -16,6 +16,8 @@ import { englishContent } from "@/lib/i18n/locales";
 export interface LineageParams {
   classes?: string;
   empty?: string;
+  /** ?draft=1 shows the labelled draft line even when fixtures or published data exist (automated tests, reviewers). */
+  draft?: string;
 }
 
 export function lineageMetadata(locale: string): Metadata {
@@ -53,7 +55,7 @@ export async function LineagePage({ locale, params }: { locale: string; params: 
       <div className="zq-pagebody">
         <ViewSwitch locale={locale} active="lineage" />
         {fixture ? <p className="ln-fixture">{t.fixture}</p> : null}
-        {data.source === "none" ? (
+        {data.source === "none" || params.draft === "1" ? (
           // Nothing reviewed is published: the labelled draft line, never an invented generation.
           <LineageLine spine={draftLineage().spine} branches={draftLineage().branches} s={redesignStrings(locale).lineage} englishAttrs={englishContent(locale)} />
         ) : (

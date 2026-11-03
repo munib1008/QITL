@@ -26,15 +26,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 /** Reviewed events are read from the database; refresh every 5 minutes. */
 export const revalidate = 300;
 
-export default async function TimelinePage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ selected?: string; layer?: string; view?: string; tracks?: string | string[] }> }) {
+export default async function TimelinePage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ selected?: string; layer?: string; view?: string; tracks?: string | string[]; draft?: string }> }) {
   const { locale } = await params;
-  const { selected, layer, view, tracks } = await searchParams;
+  const { selected, layer, view, tracks, draft: forceDraft } = await searchParams;
   const t = timelineStrings(locale);
   // The Complete Timeline (research atlas) is a second view of the same page; the guided Journey stays the default.
   if (view === "complete") {
     const [items, counts] = await Promise.all([publishedUniverse(), universeCounts()]);
     // Nothing reviewed is published yet: show the labelled draft inventory as a scroll story instead of an empty page.
-    if (!items || items.length === 0) {
+    if (forceDraft === "1" || !items || items.length === 0) {
       const draft = draftTimeline();
       const r = redesignStrings(locale);
       return (

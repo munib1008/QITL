@@ -127,7 +127,7 @@
 .tl-badge[data-shape="rings"] .tl-badge-s { -webkit-mask: radial-gradient(circle farthest-side at 34% 50%, transparent 0 36%, #000 37% 51%, transparent 52%), radial-gradient(circle farthest-side at 66% 50%, transparent 0 36%, #000 37% 51%, transparent 52%); mask: radial-gradient(circle farthest-side at 34% 50%, transparent 0 36%, #000 37% 51%, transparent 52%), radial-gradient(circle farthest-side at 66% 50%, transparent 0 36%, #000 37% 51%, transparent 52%); }
 .tl-badge[data-shape="spiral"] .tl-badge-s { -webkit-mask: radial-gradient(circle closest-side, #000 0 16%, transparent 17% 30%, #000 31% 44%, transparent 45% 58%, #000 59% 72%, transparent 73%); mask: radial-gradient(circle closest-side, #000 0 16%, transparent 17% 30%, #000 31% 44%, transparent 45% 58%, #000 59% 72%, transparent 73%); }
 .tl-chip { border-color: transparent; background: var(--surface); box-shadow: var(--shadow-raised-sm); padding-inline-start: 6px; }
-.tl-chip[data-on="false"] { box-shadow: var(--shadow-inset); opacity: 0.6; }
+.tl-chip[data-on="false"] { box-shadow: var(--shadow-inset); background: var(--surface-sunken); color: var(--ink-muted); }
 .tl-chip[data-on="true"] { box-shadow: var(--shadow-raised-sm); }
 .tl-chip:hover .tl-badge { transform: translateY(-2px) scale(1.06); }
 @media (prefers-reduced-motion: reduce) { .tl-badge, .tl-chip:hover .tl-badge { transition: none; transform: none; } }
