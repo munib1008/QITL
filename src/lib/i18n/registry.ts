@@ -47,6 +47,7 @@ import { adminStoryStrings } from "./modules/adminStory";
 import { adminToolsStrings } from "./modules/adminTools";
 import { adminUniverseStrings } from "./modules/adminUniverse";
 import { draftPreviewStrings } from "./modules/draftPreview";
+import { redesignStrings } from "./modules/redesign";
 
 /**
  * Every interface strings file, with the module it serves. Used by the inventory (scripts/i18n-inventory.ts,
@@ -54,6 +55,7 @@ import { draftPreviewStrings } from "./modules/draftPreview";
  * A module that adds a strings file adds it here.
  */
 export const STRING_FILES: Array<{ module: string; file: string; get: (locale: string) => unknown }> = [
+  { module: "redesign", file: "modules/redesign.ts", get: redesignStrings },
   { module: "shell", file: "dict.ts", get: (l) => getDict(l).t },
   { module: "shell", file: "modules/ui.ts", get: uiStrings },
   { module: "home", file: "modules/home.ts", get: (l) => ({ home: homeStrings(l), journey: journeyStrings(l) }) },

@@ -1,0 +1,161 @@
+{
+ "schema": "qitl.lasthour.v1",
+ "status": "draft",
+ "review": {
+  "state": "pending_scholarly_review",
+  "rule": "Signs of the Last Hour. No date, no year and no countdown is given or implied, and the order among the signs is not established. Every hadith number reads 'No. —' until a reviewer pins it to a verified edition. The Mahdi is left out until his grading and details are decided by the review board."
+ },
+ "signs": [
+  {
+   "id": "hour",
+   "title": "The Hour itself",
+   "major": false,
+   "evidence": [
+    "quran"
+   ],
+   "refs": [
+    "7:187"
+   ],
+   "note": "Its time is known only to Allah.",
+   "source": null
+  },
+  {
+   "id": "smoke",
+   "title": "The smoke",
+   "major": true,
+   "evidence": [
+    "disputed",
+    "hadith"
+   ],
+   "refs": [
+    "44:10–11"
+   ],
+   "note": "Scholars differ on whether this verse speaks of a past or a future event.",
+   "source": "Sahih Muslim, No. —"
+  },
+  {
+   "id": "dajjal",
+   "title": "The Dajjal",
+   "major": true,
+   "evidence": [
+    "hadith"
+   ],
+   "refs": [],
+   "note": "An authentic narration reports a false messiah who will appear before the Hour.",
+   "source": "Sahih al-Bukhari / Sahih Muslim, No. —"
+  },
+  {
+   "id": "beast",
+   "title": "The Beast of the earth",
+   "major": true,
+   "evidence": [
+    "quran",
+    "hadith"
+   ],
+   "refs": [
+    "27:82"
+   ],
+   "note": "The Quran states that a creature will speak to the people when the word is fulfilled.",
+   "source": "Sahih Muslim, No. —"
+  },
+  {
+   "id": "sun-west",
+   "title": "The sun rising from the west",
+   "major": true,
+   "evidence": [
+    "scholar",
+    "hadith"
+   ],
+   "refs": [
+    "6:158"
+   ],
+   "note": "Scholars link the verse to this sign.",
+   "source": "Sahih al-Bukhari / Sahih Muslim, No. —"
+  },
+  {
+   "id": "isa-descent",
+   "title": "The descent of Isa, son of Maryam",
+   "major": true,
+   "evidence": [
+    "scholar",
+    "hadith"
+   ],
+   "refs": [
+    "43:61"
+   ],
+   "note": "Scholars interpret the verse as a sign of the Hour.",
+   "source": "Sahih al-Bukhari / Sahih Muslim, No. —"
+  },
+  {
+   "id": "yajuj-majuj",
+   "title": "Ya'juj and Ma'juj released",
+   "major": true,
+   "evidence": [
+    "quran"
+   ],
+   "refs": [
+    "18:94–99",
+    "21:96–97"
+   ],
+   "note": "The Quran states that the barrier will be broken before the promise comes.",
+   "source": null
+  },
+  {
+   "id": "landslide-east",
+   "title": "A landslide in the east",
+   "major": true,
+   "evidence": [
+    "hadith"
+   ],
+   "refs": [],
+   "note": "One of three landslides in an authentic narration.",
+   "source": "Sahih Muslim, No. —"
+  },
+  {
+   "id": "landslide-west",
+   "title": "A landslide in the west",
+   "major": true,
+   "evidence": [
+    "hadith"
+   ],
+   "refs": [],
+   "note": "One of three landslides in an authentic narration.",
+   "source": "Sahih Muslim, No. —"
+  },
+  {
+   "id": "landslide-arabia",
+   "title": "A landslide in the Arabian Peninsula",
+   "major": true,
+   "evidence": [
+    "hadith"
+   ],
+   "refs": [],
+   "note": "One of three landslides in an authentic narration.",
+   "source": "Sahih Muslim, No. —"
+  },
+  {
+   "id": "fire",
+   "title": "A fire that gathers the people",
+   "major": true,
+   "evidence": [
+    "hadith"
+   ],
+   "refs": [],
+   "note": "Narrations differ on details.",
+   "source": "Sahih Muslim, No. —"
+  },
+  {
+   "id": "trumpet",
+   "title": "The Trumpet and the Resurrection",
+   "major": false,
+   "evidence": [
+    "quran"
+   ],
+   "refs": [
+    "39:68"
+   ],
+   "note": "Follows the signs. The Quran states it is sudden.",
+   "source": null
+  }
+ ]
+}

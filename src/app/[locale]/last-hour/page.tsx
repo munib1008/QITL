@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { CitationChip, EvidenceLabel } from "@/components/ui/evidence";
-import { EmptyState } from "@/components/ui/misc";
 import { getServerSupabase } from "@/lib/supabase/server";
 import type { EvidenceKind } from "@/content/journey";
 import { englishContent } from "@/lib/i18n/locales";
 import { lastHourStrings } from "@/lib/i18n/modules/events";
+import { draftLastHour } from "@/content/draftAtlas";
+import { DraftLastHour } from "@/components/redesign/DraftLastHour";
+import { redesignStrings } from "@/lib/i18n/modules/redesign";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const t = lastHourStrings((await params).locale);
@@ -114,11 +115,7 @@ export default async function LastHourPage({ params }: { params: Promise<{ local
             ) : null,
           )
         ) : (
-          <EmptyState label={<EvidenceLabel kind="unknown">{t.notPublished}</EvidenceLabel>} title={t.emptyTitle}>
-            <p>
-              {t.emptyBody} <Link href="/methodology">{t.methodology}</Link>.
-            </p>
-          </EmptyState>
+          <DraftLastHour signs={draftLastHour().signs} s={redesignStrings(locale).lastHour} englishAttrs={en} />
         )}
       </div>
     </ReadingPage>
