@@ -6,6 +6,7 @@ import { englishContent } from "@/lib/i18n/locales";
 import { journeyStrings } from "@/lib/i18n/modules/home";
 import { uiStrings } from "@/lib/i18n/modules/ui";
 import { useLocale } from "@/lib/i18n/useLocale";
+import { eraText } from "@/lib/i18n/modules/eras";
 import type { JourneyEra, JourneyItem } from "@/content/journey";
 import { CitationChip } from "@/components/ui/evidence";
 import { EvidenceDrawer, type EvidenceTab } from "@/components/ui/EvidenceDrawer";
@@ -359,8 +360,8 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
               if (!items.length) return null;
               return (
                 <li key={e.title}>
-                  <p className="zq-jt-rail-era" {...en}>
-                    {e.title}
+                  <p className="zq-jt-rail-era" {...(eraText(locale, e.title).english ? en : {})}>
+                    {eraText(locale, e.title).text}
                   </p>
                   <ol {...en}>
                     {items.map((it) => (
@@ -388,11 +389,11 @@ export function JourneyTimeline({ eras, intro, initialActive, scrollSync = true,
                 <li className="zq-jt-era">
                   <div className="zq-jt-era-pill zq-glass">
                     <p className="zq-eyebrow">
-                      {String(ei + 1).padStart(2, "0")} / <span {...en}>{e.title}</span>
+                      {String(ei + 1).padStart(2, "0")} / <span {...(eraText(locale, e.title).english ? en : {})}>{eraText(locale, e.title).text}</span>
                     </p>
                     {e.note ? (
-                      <p className="zq-jt-era-note" {...en}>
-                        {e.note}
+                      <p className="zq-jt-era-note" {...(eraText(locale, e.note).english ? en : {})}>
+                        {eraText(locale, e.note).text}
                       </p>
                     ) : null}
                   </div>
