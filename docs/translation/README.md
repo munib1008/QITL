@@ -12,3 +12,7 @@ Rules:
 - Plain, neutral, consistent wording for interface text; Urdu in clear modern Urdu (the site shows Urdu in Nastaliq).
 - Placeholders such as `{n}` are kept. A string ending `()` in `key` was produced by a function, exported with the sample values 3, 7 and 9 so the sentence shape is visible.
 - The story drafts in `content/stories` are English only and are a separate job (they are checked against the Quran by the validator; Arabic and Urdu story text goes through the Story Studio translation job and review).
+
+## Not in the CSV
+
+`src/lib/i18n/modules/eras.ts` holds Arabic and Urdu drafts for the six era titles and five era notes of the home journey (the journey content file stays English). Translators should review that file directly; `tests/unit/eras.test.ts` fails if a journey era gains a title or note with no entry.

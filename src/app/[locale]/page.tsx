@@ -12,6 +12,7 @@ import { Mark } from "@/components/shell/Logo";
 import { getDict } from "@/lib/i18n";
 import { publicEnv } from "@/lib/env";
 import { englishContent } from "@/lib/i18n/locales";
+import { eraText } from "@/lib/i18n/modules/eras";
 import { homeStrings } from "@/lib/i18n/modules/home";
 import { uiStrings } from "@/lib/i18n/modules/ui";
 import { jsonForScript } from "@/lib/security/html";
@@ -106,8 +107,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <ol>
             {journey.eras.map((era) => (
               <li key={era.title}>
-                <a href="#journey" {...en}>
-                  {era.title}
+                <a href="#journey" {...(eraText(locale, era.title).english ? en : {})}>
+                  {eraText(locale, era.title).text}
                 </a>
               </li>
             ))}
