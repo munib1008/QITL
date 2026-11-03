@@ -25,6 +25,7 @@ export interface DialStrings {
   none: string;
   open: string;
   stopOf: string;
+  position: string;
 }
 
 const fmt = (s: string, v: Record<string, string | number>) => s.replace(/\{(\w+)\}/g, (_, k: string) => String(v[k] ?? ""));
@@ -32,7 +33,7 @@ const fmt = (s: string, v: Record<string, string | number>) => s.replace(/\{(\w+
 /**
  * The home journey dial: every stop is a tick on a ring, a hand sweeps to the current one, and the centre names it.
  * Auto-plays (never under prefers-reduced-motion) and pauses while the pointer or focus is inside. Search jumps to a stop.
- * Every control is a real button; the ticks are keyboard-reachable and Previous / Next give larger targets.
+ * The ticks are decorative; a click on the ring picks the nearest stop for pointer users, and a labelled range input, Previous and Next serve the keyboard.
  */
 export function JourneyDial({ stops, s, href }: { stops: DialStop[]; s: DialStrings; href: string }) {
   const n = stops.length;
@@ -71,8 +72,19 @@ export function JourneyDial({ stops, s, href }: { stops: DialStop[]; s: DialStri
   const stop = stops[i]!;
   return (
     <div className="rd-dial-wrap">
+      {/* Pointer convenience only: a click on the ring picks the nearest stop. The range input, Previous and Next do the same for the keyboard and assistive technology. */}
       <div
-        className="rd-dial"
+        className="rd-dial rd-dial-hit"
+        onClick={(e) => {
+          const r = e.currentTarget.getBoundingClientRect();
+          const dx = e.clientX - (r.left + r.width / 2);
+          const dy = e.clientY - (r.top + r.height / 2);
+          const dist = Math.hypot(dx, dy) / (r.width / 2);
+          if (dist < 0.62) return; // the centre is not a target
+          const ang = (Math.atan2(dx, -dy) + 2 * Math.PI) % (2 * Math.PI);
+          go(Math.round((ang / (2 * Math.PI)) * n) % n);
+          setAuto(false);
+        }}
         role="group"
         aria-label={s.label}
         onMouseEnter={() => setHold(true)}
@@ -83,21 +95,7 @@ export function JourneyDial({ stops, s, href }: { stops: DialStop[]; s: DialStri
         <span className="rd-dial-hand" aria-hidden="true" style={{ transform: `rotate(${acc}deg)` }} />
         {stops.map((x, idx) => {
           const a = (idx * 2 * Math.PI) / n;
-          return (
-            <button
-              key={x.id}
-              type="button"
-              className="rd-tick"
-              data-cert={x.certainty}
-              aria-pressed={idx === i}
-              aria-label={`${x.name}, ${x.certaintyLabel}`}
-              onClick={() => {
-                go(idx);
-                setAuto(false);
-              }}
-              style={{ left: `${50 + 43 * Math.sin(a)}%`, top: `${50 - 43 * Math.cos(a)}%` }}
-            />
-          );
+          return <span key={x.id} aria-hidden="true" className="rd-tick" data-cert={x.certainty} data-on={idx === i} style={{ left: `${50 + 43 * Math.sin(a)}%`, top: `${50 - 43 * Math.cos(a)}%` }} />;
         })}
         <div className="rd-dial-core" aria-live="polite">
           <span className="rd-eyebrow">{stop.eraLabel}</span>
@@ -114,6 +112,7 @@ export function JourneyDial({ stops, s, href }: { stops: DialStop[]; s: DialStri
       <p className="zq-meta" aria-hidden="true">
         {fmt(s.stopOf, { n: i + 1, total: n })}
       </p>
+      <input type="range" className="rd-range" aria-label={s.position} min={0} max={n - 1} value={i} onChange={(e) => { go(Number(e.target.value)); setAuto(false); }} />
       <div className="rd-row">
         <button type="button" className="zq-btn zq-btn-secondary" onClick={() => { go((i + n - 1) % n); setAuto(false); }}>
           {s.prev}

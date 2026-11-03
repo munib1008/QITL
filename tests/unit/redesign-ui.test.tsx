@@ -34,6 +34,8 @@ describe("JourneyDial", () => {
     await u.type(screen.getByLabelText(s.searchLabel), "zzz");
     expect(screen.getByRole("status")).toHaveTextContent(s.none);
     for (const b of [s.prev, s.next]) expect(screen.getByRole("button", { name: b })).toBeInTheDocument();
+    expect(screen.getByRole("slider", { name: s.position })).toHaveAttribute("max", String(stops.length - 1));
+    expect(document.querySelectorAll(".rd-tick")).toHaveLength(stops.length); // decorative ticks, not extra tab stops
   });
 });
 
@@ -51,10 +53,10 @@ describe("NamesDial", () => {
     expect(screen.getByTestId("names-dial").textContent).toMatch(/2\s+of\s+5/);
     expect(screen.getByTestId("names-dial").textContent).not.toMatch(/\b99\b/);
   });
-  test("keyboard: a labelled range moves through the Names; the ticks are not tab stops", async () => {
+  test("keyboard: a labelled range moves through the Names; the ticks are decorative", async () => {
     render(<NamesDial names={names} s={s} locale="en" />);
     const range = screen.getByRole("slider", { name: s.position });
     expect(range).toHaveAttribute("max", String(names.length - 1));
-    for (const t of document.querySelectorAll(".rd-tick")) expect(t.getAttribute("tabindex")).toBe("-1");
+    expect(document.querySelectorAll(".rd-dial button")).toHaveLength(0); // the ticks are decorative, not tab stops
   });
 });

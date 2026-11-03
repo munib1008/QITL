@@ -21,7 +21,7 @@ export interface NamesDialStrings {
 /**
  * A dial of the Names in the educational list: a tick for each Name, a hand that sweeps to the current one, the Name
  * in the centre. It counts the Names it is given and never states a total: the enumeration is not established here.
- * Keyboard users get Previous / Next and a labelled range input; the ticks are for the pointer only. Auto-play never
+ * Keyboard users get Previous / Next and a labelled range input; the ticks are decorative. Auto-play never
  * starts under prefers-reduced-motion and pauses while the pointer or focus is inside.
  */
 export function NamesDial({ names, s, locale }: { names: DialName[]; s: NamesDialStrings; locale: string }) {
@@ -61,17 +61,11 @@ export function NamesDial({ names, s, locale }: { names: DialName[]; s: NamesDia
         {names.map((x, idx) => {
           const a = (idx * 2 * Math.PI) / n;
           return (
-            <button
+            <span
               key={x.slug}
-              type="button"
-              tabIndex={-1}
               aria-hidden="true"
-              className="rd-tick rd-tick-sm"
-              aria-pressed={idx === i}
-              onClick={() => {
-                go(idx);
-                stop();
-              }}
+              className="rd-tick-sm"
+              data-on={idx === i}
               style={{ left: `${50 + 44 * Math.sin(a)}%`, top: `${50 - 44 * Math.cos(a)}%` }}
             />
           );
