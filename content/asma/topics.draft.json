@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "status": "AI draft, not reviewed. Life-situation pathways are structure: a topic names a situation and lists Names; each link may point to a verse only when that verse contains the Name's exact surface form (computed). The thematic connection itself awaits a scholarly reviewer.",
+    "dua": "No dua is listed here. Category A duas need an existing source record; none has been supplied."
+  },
+  "topics": [
+    { "slug": "seeking-forgiveness", "position": 1, "en": "Seeking forgiveness", "ar": "طلب المغفرة", "ur": "مغفرت طلب کرنا", "names": ["al-ghafur", "al-ghaffar", "at-tawwab", "al-afuww"] },
+    { "slug": "seeking-guidance", "position": 2, "en": "Seeking guidance", "ar": "طلب الهداية", "ur": "ہدایت مانگنا", "names": ["al-hadi"] },
+    { "slug": "seeking-provision", "position": 3, "en": "Seeking provision", "ar": "طلب الرزق", "ur": "رزق مانگنا", "names": ["ar-razzaq", "al-wahhab"] }
+  ]
+}

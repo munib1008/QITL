@@ -9,7 +9,7 @@ import { ayahCounts, loadQuran } from "@/lib/events/verify";
 
 /** Top-level pages of the site, for the internal-link check (merged with the app directory when it can be read). */
 export const KNOWN_TOP_LEVEL_ROUTES = [
-  "about", "accessibility", "account", "admin", "atlas", "community", "compare", "contact", "corrections", "creation", "dreams", "events",
+  "about", "accessibility", "account", "admin", "asma", "atlas", "community", "compare", "contact", "corrections", "creation", "dreams", "events",
   "genealogy", "guidance", "hadith", "last-hour", "learn", "life-through-ages", "methodology", "mufti", "privacy", "prophets", "qiraat",
   "quran", "review-board", "search", "shifa", "sign-in", "stories", "terms", "timeline",
 ];

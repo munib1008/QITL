@@ -20,7 +20,7 @@ const NEAR = "1200px 0px";
 /** Where the eye reads: ayat above this line (px from the top, below the sticky header and the anchors' scroll margin) count as read past. */
 const READ_LINE = 160;
 
-type Links = Record<number, Array<{ id: string; name: string }>>;
+type Links = Record<number, Array<{ id: string; name: string; href?: string; lang?: string }>>;
 
 interface Props {
   surah: number;
@@ -199,7 +199,7 @@ export function AyahReader({ surah, surahName, verses, links, locale = "en", mar
     }
   };
 
-  const onStudy = useCallback((ayah: number, text: string) => setStudy({ surah, ayah, arabic: text, related: links[ayah] ?? [] }), [surah, links]);
+  const onStudy = useCallback((ayah: number, text: string) => setStudy({ surah, ayah, arabic: text, related: (links[ayah] ?? []).filter((l) => !l.href) }), [surah, links]);
 
   const onCopy = useCallback(
     async (ayah: number, text: string) => {
@@ -315,8 +315,8 @@ interface ItemProps {
 
 const AyahItem = memo(function AyahItem({ surah, ayah, text, marker, links, live, studied, copied, canShare, studyLabel, studyAria, r, q, onStudy, onCopy, onShare }: ItemProps) {
   const related = (links ?? []).map((l) => (
-    <Link key={l.id} className="zq-iconbtn" href={`/prophets/${l.id}`} prefetch={false}>
-      <span lang="en">{l.name}</span> {q.next}
+    <Link key={l.id} className="zq-iconbtn" href={l.href ?? `/prophets/${l.id}`} prefetch={false}>
+      <span lang={l.href ? l.lang : "en"}>{l.name}</span> {q.next}
     </Link>
   ));
   // A plain same-page anchor: the highlight hook replays it on click; no router work per ayah.
