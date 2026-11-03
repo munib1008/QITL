@@ -8,10 +8,10 @@ import { getSiteConfig, homeText } from "@/lib/site-config/server";
 import { JourneyTimeline } from "@/components/journey/JourneyTimeline";
 import { JourneyHeader } from "@/components/shell/SiteHeader";
 import { DraftBadge } from "@/components/ui/evidence";
-import { Rosette } from "@/components/ui/icons";
 import { Mark } from "@/components/shell/Logo";
 import { getDict } from "@/lib/i18n";
 import { publicEnv } from "@/lib/env";
+import { englishContent } from "@/lib/i18n/locales";
 import { homeStrings } from "@/lib/i18n/modules/home";
 import { uiStrings } from "@/lib/i18n/modules/ui";
 import { jsonForScript } from "@/lib/security/html";
@@ -19,6 +19,7 @@ import { jsonForScript } from "@/lib/security/html";
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = homeStrings(locale);
+  const en = englishContent(locale);
   const journey = getJourney();
   const stops = journeyStops(journey);
   // A stop can present more than one prophet ("Musa & Harun"), so count names, not cards.
@@ -101,6 +102,18 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </section>
 
+        <nav className="zq-rule" aria-label={t.livingTimeline} data-testid="era-rule">
+          <ol>
+            {journey.eras.map((era) => (
+              <li key={era.title}>
+                <a href="#journey" {...en}>
+                  {era.title}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+
         <div id="journey">
           <JourneyTimeline
             eras={journey.eras}
@@ -139,15 +152,23 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <span className="zq-kicker">{t.moreWays}</span>
             <h2 id="explore-title">{t.everyStory}</h2>
           </div>
-          <div className="zq-features zq-features-all">
+          <ol className="zq-index" data-testid="explore-index">
             {applyNav(exploreLinks(locale), cfg)
               .filter((l) => l.href !== "/search")
               .map((l, i) => (
-                <Feature key={l.href} title={l.label} points={([8, 10, 12] as const)[i % 3]!} href={l.href}>
-                  {l.note ?? ""}
-                </Feature>
+                <li key={l.href}>
+                  <span className="zq-index-no" aria-hidden="true">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <Link href={l.href} className="zq-index-link">
+                      {l.label}
+                    </Link>
+                    {l.note ? <p>{l.note}</p> : null}
+                  </div>
+                </li>
               ))}
-          </div>
+          </ol>
         </section>
       </main>
       <footer className="zq-foot" id="method">
@@ -165,20 +186,5 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         {bsm ? <QuranAttribution src={quranSource()} /> : null}
       </footer>
     </div>
-  );
-}
-
-/** One card per section of QITL (the same list as the Explore menus). Each section states its own data status. */
-function Feature({ title, points, href, children }: { title: string; points: 8 | 10 | 12; href: string; children: React.ReactNode }) {
-  return (
-    <article className="zq-feature zq-glass">
-      <Rosette points={points} />
-      <h3>
-        <Link href={href} className="zq-feature-link">
-          {title}
-        </Link>
-      </h3>
-      {children ? <p>{children}</p> : null}
-    </article>
   );
 }
