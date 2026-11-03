@@ -24,11 +24,11 @@ interface Tokens {
 
 /** next/font exposes self-hosted faces as --ff-* variables; the literal family names stay as fallbacks. */
 const FAMILY_VARS: Record<string, string> = {
-  display: 'var(--ff-serif, "Source Serif 4"), var(--ff-naskh, "Noto Naskh Arabic"), Georgia, serif',
-  sans: 'var(--ff-plex, "IBM Plex Sans"), var(--ff-plex-ar, "IBM Plex Sans Arabic"), system-ui, sans-serif',
+  display: 'var(--ff-inter, "Inter"), var(--ff-naskh, "Noto Naskh Arabic"), system-ui, sans-serif',
+  sans: 'var(--ff-inter, "Inter"), var(--ff-plex-ar, "IBM Plex Sans Arabic"), system-ui, sans-serif',
   quran: 'var(--ff-amiri-quran, "Amiri Quran"), var(--ff-amiri, "Amiri"), var(--ff-naskh, "Noto Naskh Arabic"), serif',
   naskh: 'var(--ff-naskh, "Noto Naskh Arabic"), var(--ff-amiri, "Amiri"), serif',
-  mono: 'var(--ff-mono, "IBM Plex Mono"), ui-monospace, monospace',
+  mono: 'var(--ff-inter, "Inter"), ui-monospace, monospace',
 };
 
 export function loadTokens(path = resolve(root, "design/tokens/tokens.json")): Tokens {

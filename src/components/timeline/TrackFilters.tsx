@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState, useTransition } from "react";
 import { completeHref, toggleTrack, TRACK_IDS, type TrackId } from "@/lib/events/tracks";
-import { TrackIcon } from "./TrackIcon";
+import { TrackBadge } from "./TrackIcon";
 
 export interface TrackFilterLabels {
   legend: string;
@@ -56,7 +56,7 @@ export function TrackFilters({
                 <span className="tl-chip-check" aria-hidden="true">
                   {isOn ? "✓" : ""}
                 </span>
-                <TrackIcon track={t.id} />
+                <TrackBadge track={t.id} />
                 <span className="tl-chip-name">{t.name}</span>
                 <span className="tl-chip-n">{t.count}</span>
               </label>

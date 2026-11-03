@@ -54,3 +54,17 @@ export function TrackIcon({ track, size = 18 }: { track: TrackId; size?: number 
     </svg>
   );
 }
+
+/**
+ * A raised tile with a bevelled mark in the track colour: the depth version of TrackIcon for filters and cards.
+ * Decorative (aria-hidden): the track name always sits beside it.
+ */
+export function TrackBadge({ track, size = "md" }: { track: TrackId; size?: "md" | "lg" }) {
+  return (
+    <span className={size === "lg" ? "tl-badge tl-badge-lg" : "tl-badge"} data-shape={TRACK_SHAPE[track]} data-track={track} aria-hidden="true">
+      <span className="tl-badge-g">
+        <span className="tl-badge-s" />
+      </span>
+    </span>
+  );
+}

@@ -49,7 +49,11 @@ export const TOKENS = {
     "shadow-float",
     "shadow-drawer",
     "shadow-glow",
-    "shadow-glow-active"
+    "shadow-glow-active",
+    "shadow-raised",
+    "shadow-raised-sm",
+    "shadow-raised-lg",
+    "shadow-inset"
   ],
   "spacing": [
     "space-1",
