@@ -29,7 +29,7 @@ export async function AiDraftIndex({ types, locale }: { types: SubjectType[]; lo
           <ul className="zq-jc-refs" data-testid="ai-draft-index-list">
             {g.items.map((s) => (
               <li key={s.slug}>
-                <Link href={`/drafts/${s.slug}`} {...en}>
+                <Link href={`/drafts/${s.slug}`} style={{ display: "inline-block", minHeight: 28, padding: "3px 2px" }} {...en}>
                   {s.title_en}
                 </Link>
                 {s.title_ar ? (
@@ -45,8 +45,10 @@ export async function AiDraftIndex({ types, locale }: { types: SubjectType[]; lo
           </ul>
         </div>
       ))}
-      <p className="zq-meta">
-        <Link href="/drafts">{t.listTitle}</Link>
+      <p>
+        <Link className="zq-btn zq-btn-quiet zq-btn-sm zq-btn-link" href="/drafts">
+          {t.listTitle}
+        </Link>
       </p>
     </section>
   );
