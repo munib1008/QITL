@@ -9,6 +9,7 @@ import { adminStrings } from "@/lib/i18n/modules/admin";
 
 const LINKS: Array<{ href: string; roles: Role[] }> = [
   { href: "/admin", roles: ["editor", "scholarly_reviewer", "moderator", "admin"] },
+  { href: "/admin/verification", roles: ["editor", "scholarly_reviewer", "science_reviewer", "moderator", "admin"] },
   { href: "/admin/review", roles: ["editor", "scholarly_reviewer", "admin"] },
   { href: "/admin/life-through-ages", roles: ["editor", "scholarly_reviewer", "science_reviewer", "admin"] },
   { href: "/admin/events/new", roles: ["editor", "admin"] },

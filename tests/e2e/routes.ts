@@ -113,6 +113,7 @@ export const ROUTES = [
   "/admin/review",
   "/admin/shifa",
   "/admin/asma",
+  "/admin/verification",
   "/admin/science",
   "/admin/sources",
   "/admin/studio",
