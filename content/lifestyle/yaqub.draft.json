@@ -1,0 +1,208 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "yaqub",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era in years for Yaqub."
+    },
+    "region": {
+      "status": "stated",
+      "text_en": "The Quran names no homeland for Yaqub. In Yusuf's account, Yusuf says God brought his family from the desert (open country), and his parents are told to enter Egypt.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 99,
+          "to": 100
+        }
+      ]
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "He is named with Ibrahim and Ishaq: God granted Ibrahim both Ishaq and Yaqub, and placed prophethood and the scripture among Ibrahim's offspring.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 49,
+          "to": 49
+        },
+        {
+          "surah": 21,
+          "from": 72,
+          "to": 72
+        },
+        {
+          "surah": 29,
+          "from": 27,
+          "to": 27
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Yaqub. It says only that death came to him, and that he then asked his sons what they would worship after him."
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "God revealed to him and his forefathers the doing of good, the keeping up of prayer and the giving of zakat, and says they were worshippers of God.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 73,
+          "to": 73
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "God made him a prophet, and with Ibrahim and Ishaq one of the leaders who guide by God's command.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 49,
+          "to": 49
+        },
+        {
+          "surah": 21,
+          "from": 72,
+          "to": 73
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Yaqub ate or drank."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding by Yaqub."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe Yaqub's clothing. It mentions only Yusuf's shirt, which was later cast over his face."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe where or how Yaqub lived."
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe how Yaqub travelled."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "He had sons, whom he asked at his death what they would worship after him, and a son Yusuf who told him a dream; he warned Yusuf not to tell it to his brothers.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 133,
+          "to": 133
+        },
+        {
+          "surah": 12,
+          "from": 4,
+          "to": 6
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the customs or leisure of Yaqub's household."
+    },
+    "education": {
+      "status": "stated",
+      "text_en": "The Quran says he had knowledge because God had taught him, and records the question he put to his sons about what they would worship after him.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 68,
+          "to": 68
+        },
+        {
+          "surah": 2,
+          "from": 133,
+          "to": 133
+        }
+      ]
+    },
+    "health_treatment": {
+      "status": "stated",
+      "text_en": "In grief over Yusuf his eyes turned white; when the bearer of good news cast Yusuf's shirt on his face, he returned seeing. The Quran gives no cause or treatment beyond these words.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 84,
+          "to": 84
+        },
+        {
+          "surah": 12,
+          "from": 96,
+          "to": 96
+        }
+      ]
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate where Yaqub lived."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "At his death he asked his sons what they would worship; they answered that they would worship his God and the God of his fathers, one God, and submit to Him.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 133,
+          "to": 133
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "He grieved long over Yusuf and said his course was graceful patience; he said he complained of his distress and sorrow only to God, and told his sons not to despair of God's mercy.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 12,
+          "from": 84,
+          "to": 84
+        },
+        {
+          "surah": 12,
+          "from": 86,
+          "to": 87
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran tells of Yaqub through his words, his sons and his grief, not through a description of his daily routine, so such details should not be added from outside the Quran.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 133,
+          "to": 133
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages present graceful patience, taking one's complaint to God alone, and not despairing of God's mercy as part of how Yaqub met loss.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 12,
+          "from": 86,
+          "to": 87
+        }
+      ]
+    }
+  }
+}
