@@ -20,6 +20,7 @@ const LINKS: Array<{ href: string; roles: Role[] }> = [
   { href: "/admin/guidance", roles: ["editor", "admin"] },
   { href: "/admin/shifa", roles: ["editor", "scholarly_reviewer", "science_reviewer", "admin"] },
   { href: "/admin/asma", roles: ["editor", "scholarly_reviewer", "admin"] },
+  { href: "/admin/science", roles: ["editor", "scholarly_reviewer", "science_reviewer", "admin"] },
   { href: "/admin/hadith-stories", roles: ["editor", "scholarly_reviewer", "admin"] },
   { href: "/admin/people", roles: ["editor", "scholarly_reviewer", "admin"] },
   { href: "/admin/communities", roles: ["editor", "scholarly_reviewer", "admin"] },
