@@ -3,6 +3,8 @@ import { getJourney, journeyStops } from "@/content/journey";
 import { basmala, quranSource } from "@/content/quran";
 import { QuranAttribution } from "@/components/quran/QuranAttribution";
 import { exploreLinks } from "@/lib/nav";
+import { groupLinks } from "@/lib/nav-groups";
+import "@/styles/nav-groups.css";
 import { applyNav } from "@/lib/site-config/config";
 import { getSiteConfig, homeText } from "@/lib/site-config/server";
 import { JourneyTimeline } from "@/components/journey/JourneyTimeline";
@@ -166,23 +168,35 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <span className="zq-kicker">{t.moreWays}</span>
             <h2 id="explore-title">{t.everyStory}</h2>
           </div>
-          <ol className="zq-index" data-testid="explore-index">
-            {applyNav(exploreLinks(locale), cfg)
-              .filter((l) => l.href !== "/search")
-              .map((l, i) => (
-                <li key={l.href}>
-                  <span className="zq-index-no" aria-hidden="true">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <Link href={l.href} className="zq-index-link">
-                      {l.label}
-                    </Link>
-                    {l.note ? <p>{l.note}</p> : null}
-                  </div>
-                </li>
-              ))}
-          </ol>
+          <div className="zq-index-groups" data-testid="explore-index">
+            {(() => {
+              let no = 0;
+              return groupLinks(
+                applyNav(exploreLinks(locale), cfg).filter((l) => l.href !== "/search"),
+                locale,
+              ).map((b) => (
+                <section key={b.id ?? "rest"} className="zq-index-group" aria-label={b.label ?? undefined}>
+                  {b.label ? <h3>{b.label}</h3> : null}
+                  {b.note ? <p>{b.note}</p> : null}
+                  <ol className="zq-index">
+                    {b.links.map((l) => (
+                      <li key={l.href}>
+                        <span className="zq-index-no" aria-hidden="true">
+                          {String(++no).padStart(2, "0")}
+                        </span>
+                        <div>
+                          <Link href={l.href} className="zq-index-link">
+                            {l.label}
+                          </Link>
+                          {l.note ? <p>{l.note}</p> : null}
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </section>
+              ));
+            })()}
+          </div>
         </section>
       </main>
       <footer className="zq-foot" id="method">

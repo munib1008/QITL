@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { groupLinks } from "@/lib/nav-groups";
+import "@/styles/nav-groups.css";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { Fragment, useEffect, useRef, useState, type ReactNode } from "react";
 import { resolveLocale, stripLocale } from "@/lib/i18n";
 import { LangToggle, type LangLabels } from "./toggles";
 import { uiStrings } from "@/lib/i18n/modules/ui";
@@ -150,20 +152,33 @@ export function BottomNav({ labels, explore, locale, langLabels }: { labels: Bot
               </button>
             </div>
             <ul className="qb-grid">
-              {explore.map((e) => (
-                <li key={e.label}>
-                  {e.href ? (
-                    <Link href={e.href} aria-current={is(e.href) ? "page" : undefined} onClick={() => setOpen(false)}>
-                      <b>{e.label}</b>
-                      {e.note ? <small>{e.note}</small> : null}
-                    </Link>
-                  ) : (
-                    <span className="qb-soon" aria-disabled="true">
-                      <b>{e.label}</b>
-                      <small>{labels.soon}</small>
-                    </span>
-                  )}
-                </li>
+              {groupLinks(
+                explore.map((e) => ({ ...e, href: e.href ?? "" })),
+                locale ?? "en",
+              ).map((b) => (
+                <Fragment key={b.id ?? "rest"}>
+                  {b.label ? (
+                    <li className="qb-group">
+                      <h3>{b.label}</h3>
+                      <p>{b.note}</p>
+                    </li>
+                  ) : null}
+                  {b.links.map((e) => (
+                    <li key={e.label}>
+                      {e.href ? (
+                        <Link href={e.href} aria-current={is(e.href) ? "page" : undefined} onClick={() => setOpen(false)}>
+                          <b>{e.label}</b>
+                          {e.note ? <small>{e.note}</small> : null}
+                        </Link>
+                      ) : (
+                        <span className="qb-soon" aria-disabled="true">
+                          <b>{e.label}</b>
+                          <small>{labels.soon}</small>
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </Fragment>
               ))}
             </ul>
             {langLabels ? (
