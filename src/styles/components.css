@@ -398,3 +398,5 @@ a.zq-iconbtn { text-decoration: none; }
 .zq-btn-secondary:hover { background: var(--surface-sunken); }
 .zq-btn-secondary:active { box-shadow: var(--shadow-inset); }
 .zq-input { border-color: transparent; border-radius: 12px; background: var(--surface-sunken); box-shadow: var(--shadow-inset); }
+/* Scrolling a journey node into view must leave it below the sticky header (72px) instead of under it, or the header intercepts the tap. */
+.zq-jt-item, .zq-jt-node, .zq-jt-era, [data-node] { scroll-margin-top: 112px; }
