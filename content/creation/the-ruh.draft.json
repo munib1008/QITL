@@ -1,0 +1,140 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "the-ruh",
+  "category": "humans",
+  "name_en": "The ruh (spirit)",
+  "name_ar": "الروح",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Asked about the ruh, the Quran answers that the ruh is of the command of my Lord, and that people have been given only a little knowledge.",
+      "refs": [
+        {
+          "surah": 17,
+          "from": 85,
+          "to": 85
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran says the ruh is of the command of the Lord and gives no account of how it came to be."
+    },
+    "purpose": {
+      "status": "not_established",
+      "note_en": "The Quran gives no purpose for the ruh in answer to the question put to the Prophet."
+    },
+    "nature": {
+      "status": "not_established",
+      "note_en": "The Quran does not say what the ruh is. It answers the question by pointing to the Lord's command and to how little knowledge people are given."
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe abilities of the ruh itself."
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "The verse that answers the question adds that people have been given only a little knowledge.",
+      "refs": [
+        {
+          "surah": 17,
+          "from": 85,
+          "to": 85
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "After shaping the first human, God breathed into him of His ruh. In another verse, after proportioning the human, He breathed into him of His ruh and gave hearing, sight and hearts.",
+      "refs": [
+        {
+          "surah": 15,
+          "from": 29,
+          "to": 29
+        },
+        {
+          "surah": 32,
+          "from": 9,
+          "to": 9
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The word ruh appears beside the angels standing in rows on a day when none speaks without permission, with the angels coming down by their Lord's permission, and as the trustworthy ruh that brought the Quran to the Prophet's heart. The verses do not equate these uses.",
+      "refs": [
+        {
+          "surah": 78,
+          "from": 38,
+          "to": 38
+        },
+        {
+          "surah": 97,
+          "from": 4,
+          "to": 4
+        },
+        {
+          "surah": 26,
+          "from": 193,
+          "to": 194
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no time or order for the ruh."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where the ruh is."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verse answers the question by giving the matter to the Lord and noting how little knowledge people have, so this profile offers no definition and does not assume the word means the same in every verse.",
+      "refs": [
+        {
+          "surah": 17,
+          "from": 85,
+          "to": 85
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verse marks a limit to human knowledge on this question, so the lesson read here is restraint and trust rather than speculation.",
+      "refs": [
+        {
+          "surah": 17,
+          "from": 85,
+          "to": 85
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-ruh (the ruh), amr (command), nafakha (He breathed), al-ruh al-amin (the trustworthy ruh), ruh al-qudus (the holy ruh, named in the case of Isa).",
+      "refs": [
+        {
+          "surah": 17,
+          "from": 85,
+          "to": 85
+        },
+        {
+          "surah": 15,
+          "from": 29,
+          "to": 29
+        },
+        {
+          "surah": 26,
+          "from": 193,
+          "to": 193
+        },
+        {
+          "surah": 2,
+          "from": 87,
+          "to": 87
+        }
+      ]
+    }
+  }
+}

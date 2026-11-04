@@ -1,0 +1,131 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "raven",
+  "category": "animals",
+  "name_en": "The raven",
+  "name_ar": "الغراب",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The raven (ghurab) is a bird God sent to the one who had killed his brother.",
+      "refs": [
+        {
+          "surah": 5,
+          "from": 30,
+          "to": 31
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the origin of the raven."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "God sent it to show him how to cover his brother's body.",
+      "refs": [
+        {
+          "surah": 5,
+          "from": 31,
+          "to": 31
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The raven is described searching in the earth.",
+      "refs": [
+        {
+          "surah": 5,
+          "from": 31,
+          "to": 31
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "It was the means by which the man was shown how to cover his brother's body.",
+      "refs": [
+        {
+          "surah": 5,
+          "from": 31,
+          "to": 31
+        }
+      ]
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the raven."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "The man said, woe to me, am I unable to be like this raven and cover my brother's body? He became one of those who regret.",
+      "refs": [
+        {
+          "surah": 5,
+          "from": 31,
+          "to": 31
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "After the killing of one of the two sons of Adam by the other, God sent a raven searching in the earth, and the killer was shown how to cover his brother's body.",
+      "refs": [
+        {
+          "surah": 5,
+          "from": 27,
+          "to": 31
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date for the event."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "The raven was searching in the earth.",
+      "refs": [
+        {
+          "surah": 5,
+          "from": 31,
+          "to": 31
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verse gives the raven's role in one sentence. This profile adds nothing about what the bird did to the ground beyond 'searching in the earth'.",
+      "refs": [
+        {
+          "surah": 5,
+          "from": 31,
+          "to": 31
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): a man learns from a bird how to do what he could not work out, and regret follows, which is read as a lesson in humility and in regret after wrongdoing.",
+      "refs": [
+        {
+          "surah": 5,
+          "from": 31,
+          "to": 31
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: ghurab (a raven), yabhathu fi al-ard (searching in the earth), yuwari (to cover), saw'ah (his brother's body, as covered).",
+      "refs": [
+        {
+          "surah": 5,
+          "from": 31,
+          "to": 31
+        }
+      ]
+    }
+  }
+}
