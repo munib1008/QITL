@@ -10,3 +10,5 @@ html:is([lang="ar"], [lang="ur"]) .zq-mmenu-group { letter-spacing: 0; text-tran
 .zq-index-group h3 { margin: 0; font: 500 24px/32px var(--font-display); }
 .zq-index-group > p { margin: 2px 0 8px; font: 400 14px/22px var(--font-sans); color: var(--ink-muted); }
 .zq-index-groups .zq-index { padding: 0; }
+/* Hub pages: the links to the other categories are touch targets (24px minimum), also in Arabic and Urdu where the line is shorter. */
+.hub-others a { display: inline-block; min-height: 28px; padding: 4px 2px; }
