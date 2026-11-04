@@ -13,8 +13,12 @@ const PAGES: Array<{ path: string; heading: RegExp; check: (page: import("@playw
     check: async (p) => {
       await expect(p.getByTestId("nuh-note")).toContainText("950 years");
       await expect(p.getByTestId("nuh-note")).toContainText("not established by the Quran or the selected authentic hadith");
-      await expect(p.locator('[data-field][data-known="false"]')).toHaveCount(20);
-      await expect(p.getByTestId("empty-state").first()).toBeVisible();
+      // The Quran-only AI draft (content/lifestyle/nuh.draft.json) fills the 20 fields: some stated with their verses, the rest honestly "not established".
+      await expect(p.getByTestId("lifestyle-draft")).toBeVisible();
+      await expect(p.getByTestId("verification-badge").first()).toContainText("AI-Assisted Draft");
+      await expect(p.locator("[data-field][data-draft]")).toHaveCount(20);
+      await expect(p.locator('[data-field][data-known="false"]')).toHaveCount(9);
+      await expect(p.locator('[data-field][data-known="true"]')).toHaveCount(11);
     },
   },
   {
@@ -59,7 +63,7 @@ for (const width of [360, 1440]) {
     test.skip(() => test.info().project.name !== "desktop", "one project drives both widths");
     test.use({ viewport: { width, height: width < 600 ? 780 : 900 } });
     for (const pg of PAGES) {
-      test(`${pg.path}: designed empty state and no axe violations`, async ({ page }) => {
+      test(`${pg.path}: designed state and no axe violations`, async ({ page }) => {
         const res = await page.goto(pg.path);
         expect(res?.status()).toBe(200);
         await expect(page.getByRole("heading", { level: 1, name: pg.heading })).toBeVisible();
