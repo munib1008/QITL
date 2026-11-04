@@ -1,0 +1,294 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "sulayman",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for Sulayman. It says he inherited from Dawud, which links them but does not date either."
+    },
+    "region": {
+      "status": "stated",
+      "text_en": "The Quran does not name the seat of his kingdom. Places in his story are the valley of the ants, Saba (from which the hoopoe brought news) and the land God had blessed, toward which the wind ran by his command.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 27,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 21,
+          "from": 81,
+          "to": 81
+        }
+      ]
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "He addressed the people, inherited from Dawud, and had forces of jinn, humankind and birds gathered and held in ranks for him. God calls him an excellent servant who turned back to Him again and again.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 16,
+          "to": 16
+        },
+        {
+          "surah": 27,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 38,
+          "from": 30,
+          "to": 30
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "stated",
+      "text_en": "The Quran gives no age. It says God decreed death upon him and that only a creature of the earth eating his staff showed the jinn he had died; when he fell, they understood.",
+      "refs": [
+        {
+          "surah": 34,
+          "from": 14,
+          "to": 14
+        }
+      ]
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "He passed with his forces, looked over the birds and asked about the hoopoe, judged a case with Dawud, and sent a letter to the ruler of Saba.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 27,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 21,
+          "from": 78,
+          "to": 78
+        },
+        {
+          "surah": 27,
+          "from": 28,
+          "to": 28
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "He held a kingdom (he prayed for one that would not suit anyone after him), judged with Dawud, and was given knowledge.",
+      "refs": [
+        {
+          "surah": 38,
+          "from": 35,
+          "to": 35
+        },
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        },
+        {
+          "surah": 21,
+          "from": 78,
+          "to": 79
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not say what Sulayman ate or drank. It mentions great basins and fixed cooking-pots made for him, not their contents."
+    },
+    "farming_livestock": {
+      "status": "stated",
+      "text_en": "A case that he and Dawud judged concerned a field into which some people's sheep had strayed by night.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 78,
+          "to": 78
+        }
+      ]
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Sulayman or his court."
+    },
+    "housing": {
+      "status": "stated",
+      "text_en": "The Quran does not describe his dwelling. It says mihrabs, likenesses, great basins and fixed cooking-pots were made for him, and mentions a sarh with a smooth surface of glass that looked like water.",
+      "refs": [
+        {
+          "surah": 34,
+          "from": 13,
+          "to": 13
+        },
+        {
+          "surah": 27,
+          "from": 44,
+          "to": 44
+        }
+      ]
+    },
+    "transport": {
+      "status": "stated",
+      "text_en": "God made the wind run by his command, softly, to where he directed; its morning was a month and its evening a month.",
+      "refs": [
+        {
+          "surah": 38,
+          "from": 36,
+          "to": 36
+        },
+        {
+          "surah": 21,
+          "from": 81,
+          "to": 81
+        },
+        {
+          "surah": 34,
+          "from": 12,
+          "to": 12
+        }
+      ]
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "He inherited from Dawud, and God says He gave Sulayman to Dawud. In prayer he mentioned the favour on him and on his parents.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 16,
+          "to": 16
+        },
+        {
+          "surah": 38,
+          "from": 30,
+          "to": 30
+        },
+        {
+          "surah": 27,
+          "from": 19,
+          "to": 19
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe customs or leisure at his court beyond the episodes it tells."
+    },
+    "education": {
+      "status": "stated",
+      "text_en": "God gave Dawud and Sulayman knowledge, and Sulayman says people were taught the speech of the birds.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 15,
+          "to": 16
+        }
+      ]
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment in the story of Sulayman."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate of his land. It speaks of the wind being subjected to him as a gift, not of weather."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "He said praise belongs to God, prayed to be inspired to give thanks and do righteous work, and asked forgiveness of his Lord. God calls him one who turned back to Him.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 15,
+          "to": 15
+        },
+        {
+          "surah": 27,
+          "from": 19,
+          "to": 19
+        },
+        {
+          "surah": 38,
+          "from": 35,
+          "to": 35
+        },
+        {
+          "surah": 38,
+          "from": 30,
+          "to": 30
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "God tested him, casting a body upon his throne, and he turned back. When he saw the throne brought, he said it was to test whether he would be thankful or ungrateful.",
+      "refs": [
+        {
+          "surah": 38,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 27,
+          "from": 40,
+          "to": 40
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran presents his command over the wind and the service of the jinn as favours from God and gives no account of how they worked, so a reader should not add one.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 16,
+          "to": 16
+        },
+        {
+          "surah": 34,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 38,
+          "from": 36,
+          "to": 36
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages present thanks to God for each favour, and turning back to Him after a test, as a pattern in Sulayman's story.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 19,
+          "to": 19
+        },
+        {
+          "surah": 27,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 38,
+          "from": 34,
+          "to": 35
+        }
+      ]
+    }
+  }
+}

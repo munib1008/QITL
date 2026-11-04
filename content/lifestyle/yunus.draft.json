@@ -1,0 +1,172 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "yunus",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for Yunus."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the land of Yunus. It mentions a town whose people believed and the bare land where he was cast."
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "He was sent to a hundred thousand or more people. They believed, and God let them enjoy life for a while.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 147,
+          "to": 148
+        },
+        {
+          "surah": 10,
+          "from": 98,
+          "to": 98
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age or length of life for Yunus."
+    },
+    "daily_activities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the day-to-day activities of Yunus."
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "God says he was among the messengers, and that his Lord chose him and made him one of the righteous.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 139,
+          "to": 139
+        },
+        {
+          "surah": 68,
+          "from": 50,
+          "to": 50
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Yunus or his people ate or drank."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding in his story; the plant over him is described as growing, not as farmed."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Yunus."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe where or how Yunus or his people lived."
+    },
+    "transport": {
+      "status": "stated",
+      "text_en": "He fled to a ship that was laden.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 140,
+          "to": 140
+        }
+      ]
+    },
+    "family_community": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the family of Yunus."
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe customs or leisure in his story."
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe teaching or learning in his story."
+    },
+    "health_treatment": {
+      "status": "stated",
+      "text_en": "He was cast on the bare land while sick, and God caused a plant of the kind called yaqtin to grow over him. The Quran does not say it was a treatment.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 145,
+          "to": 146
+        }
+      ]
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate of his land."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "In the darknesses he called out that there is no god but God, glorified Him and said he was among the wrongdoers. The Quran says that, were he not among those who glorify God, he would have stayed in the fish.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 87,
+          "to": 87
+        },
+        {
+          "surah": 37,
+          "from": 143,
+          "to": 144
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "He fled to the laden ship, was among the losers of a casting of lots, and was swallowed by a fish while blameworthy; the one called dhu al-nun, read here as Yunus, called out in the darknesses and was saved from the distress.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 140,
+          "to": 142
+        },
+        {
+          "surah": 21,
+          "from": 87,
+          "to": 88
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran does not say where Yunus was sent or what kind of fish it was, so a reader should not supply these as if the Quran stated them.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 139,
+          "to": 148
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages present calling on God in distress, admitting fault and being saved, and note that his people believed and were allowed to enjoy life for a while.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 87,
+          "to": 88
+        },
+        {
+          "surah": 37,
+          "from": 148,
+          "to": 148
+        },
+        {
+          "surah": 10,
+          "from": 98,
+          "to": 98
+        }
+      ]
+    }
+  }
+}

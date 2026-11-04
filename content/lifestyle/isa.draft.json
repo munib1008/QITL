@@ -1,0 +1,274 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "isa",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for Isa."
+    },
+    "region": {
+      "status": "stated",
+      "text_en": "The Quran names no land for Isa. It says Maryam withdrew to an eastern place, later to a far place for his birth, and that mother and son were given refuge on high ground, a place of rest and flowing water.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 16,
+          "to": 16
+        },
+        {
+          "surah": 19,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 23,
+          "from": 50,
+          "to": 50
+        }
+      ]
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "He was a messenger to the Children of Israel and had disciples who said they were God's helpers; one group of the Children of Israel believed and another disbelieved.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 49,
+          "to": 49
+        },
+        {
+          "surah": 3,
+          "from": 52,
+          "to": 52
+        },
+        {
+          "surah": 61,
+          "from": 14,
+          "to": 14
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "stated",
+      "text_en": "He spoke to people in the cradle and in maturity, and was told to pray and give zakat as long as he lived. The Quran gives no number of years.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 46,
+          "to": 46
+        },
+        {
+          "surah": 19,
+          "from": 31,
+          "to": 31
+        }
+      ]
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "He was enjoined with prayer and zakat as long as he lived, and to be dutiful to his mother.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 31,
+          "to": 32
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "He was a messenger to the Children of Israel, taught the Book, the wisdom, the Torah and the Injil, and came with signs by God's permission.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 48,
+          "to": 49
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "stated",
+      "text_en": "He told people what they eat and store in their houses. At his birth Maryam was told to eat ripe dates and drink, and the disciples asked for a table from heaven to eat from.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 49,
+          "to": 49
+        },
+        {
+          "surah": 19,
+          "from": 25,
+          "to": 26
+        },
+        {
+          "surah": 5,
+          "from": 112,
+          "to": 114
+        }
+      ]
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran mentions a palm tree at his birth but does not describe farming or herding."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Isa."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe where Isa lived. It mentions a refuge on high ground and the houses of the people he addressed."
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention travel or transport for Isa."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "His mother was Maryam, whom God chose and purified, and who said no human had touched her. He was dutiful to his mother; Zakariyya was her guardian, and God made her and her son a sign.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 42,
+          "to": 42
+        },
+        {
+          "surah": 3,
+          "from": 47,
+          "to": 47
+        },
+        {
+          "surah": 19,
+          "from": 32,
+          "to": 32
+        },
+        {
+          "surah": 3,
+          "from": 37,
+          "to": 37
+        },
+        {
+          "surah": 21,
+          "from": 91,
+          "to": 91
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "stated",
+      "text_en": "The disciples asked for a table from heaven, and Isa prayed that it be a festival for the first and the last of them and a sign from God.",
+      "refs": [
+        {
+          "surah": 5,
+          "from": 112,
+          "to": 114
+        }
+      ]
+    },
+    "education": {
+      "status": "stated",
+      "text_en": "God taught him the Book, the wisdom, the Torah and the Injil.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 48,
+          "to": 48
+        },
+        {
+          "surah": 5,
+          "from": 110,
+          "to": 110
+        }
+      ]
+    },
+    "health_treatment": {
+      "status": "stated",
+      "text_en": "He said that by God's permission he heals the one blind from birth and the leper. The Quran presents these as signs, not as a medical practice.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 49,
+          "to": 49
+        },
+        {
+          "surah": 5,
+          "from": 110,
+          "to": 110
+        }
+      ]
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate of his land."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "He was enjoined with prayer and zakat as long as he lived. He said God is his Lord and theirs and told people to worship Him.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 31,
+          "to": 31
+        },
+        {
+          "surah": 3,
+          "from": 51,
+          "to": 51
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "When he sensed disbelief he asked who would help him to God, and some said his clear proofs were magic. The Quran says they did not kill or crucify him, it was made to appear so to them, and God raised him to Himself.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 52,
+          "to": 52
+        },
+        {
+          "surah": 5,
+          "from": 110,
+          "to": 110
+        },
+        {
+          "surah": 4,
+          "from": 157,
+          "to": 158
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran gives no date or land for Isa and does not describe his trade or home, so a reader should not supply these from other sources as if the Quran stated them.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 48,
+          "to": 49
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the passages stress that he is a servant who says God is the Lord of all, and that each sign comes by God's permission.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 30,
+          "to": 30
+        },
+        {
+          "surah": 3,
+          "from": 51,
+          "to": 51
+        },
+        {
+          "surah": 3,
+          "from": 49,
+          "to": 49
+        }
+      ]
+    }
+  }
+}

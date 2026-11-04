@@ -1,0 +1,289 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "muhammad",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for Muhammad's life, and it does not give his age at any event."
+    },
+    "region": {
+      "status": "stated",
+      "text_en": "The Quran does not describe a homeland at length. Places it links to him include the Sacred Mosque and the farthest mosque, a cave, Badr and Hunayn.",
+      "refs": [
+        {
+          "surah": 17,
+          "from": 1,
+          "to": 1
+        },
+        {
+          "surah": 9,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 3,
+          "from": 123,
+          "to": 123
+        },
+        {
+          "surah": 9,
+          "from": 25,
+          "to": 25
+        }
+      ]
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "Those with him are described as firm against the disbelievers and merciful among themselves, bowing and prostrating. The Quran also names the emigrants and the helpers who followed him.",
+      "refs": [
+        {
+          "surah": 48,
+          "from": 29,
+          "to": 29
+        },
+        {
+          "surah": 9,
+          "from": 117,
+          "to": 117
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "stated",
+      "text_en": "The Quran gives no number of years. He says he stayed among them a lifetime before the revelation, and God tells him that he, like they, will die.",
+      "refs": [
+        {
+          "surah": 10,
+          "from": 16,
+          "to": 16
+        },
+        {
+          "surah": 39,
+          "from": 30,
+          "to": 30
+        },
+        {
+          "surah": 3,
+          "from": 144,
+          "to": 144
+        }
+      ]
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "He was told to rise in the night and recite the Quran slowly; the Quran says he stood somewhat less than two-thirds of the night, or half of it, or a third, as did some of those with him.",
+      "refs": [
+        {
+          "surah": 73,
+          "from": 1,
+          "to": 4
+        },
+        {
+          "surah": 73,
+          "from": 20,
+          "to": 20
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "He is the Messenger of God and the seal of the prophets, and the Quran was divided so that he could recite it to the people over a period.",
+      "refs": [
+        {
+          "surah": 33,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 17,
+          "from": 106,
+          "to": 106
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "stated",
+      "text_en": "Believers were told not to enter the Prophet's houses for a meal unless invited, not to linger waiting for it, and to disperse after eating.",
+      "refs": [
+        {
+          "surah": 33,
+          "from": 53,
+          "to": 53
+        }
+      ]
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding by Muhammad."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe his clothing. Words addressing him as wrapped or covered are not taken here as a description of dress."
+    },
+    "housing": {
+      "status": "stated",
+      "text_en": "The Quran speaks of the Prophet's houses, which believers were not to enter without permission, of his home that he was brought out of, and of rooms behind which people called out to him.",
+      "refs": [
+        {
+          "surah": 33,
+          "from": 53,
+          "to": 53
+        },
+        {
+          "surah": 8,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 49,
+          "from": 4,
+          "to": 4
+        }
+      ]
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe how he travelled. The night journey is presented as a sign God showed him, not as ordinary travel."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "He is described as an orphan who was sheltered. He was not the father of any of the men, his wives are called mothers of the believers, and he is told to speak to them about choosing between this world's life and what God offers.",
+      "refs": [
+        {
+          "surah": 93,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 33,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 33,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 33,
+          "from": 28,
+          "to": 28
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "stated",
+      "text_en": "Believers were told not to raise their voices above the Prophet's voice or speak loudly to him as they do to each other, and the Quran faults those who called to him from behind the rooms.",
+      "refs": [
+        {
+          "surah": 49,
+          "from": 2,
+          "to": 4
+        }
+      ]
+    },
+    "education": {
+      "status": "stated",
+      "text_en": "God sent down the Book and wisdom upon him and taught him what he did not know. The Quran says he did not recite any book before it, nor write it with his right hand.",
+      "refs": [
+        {
+          "surah": 4,
+          "from": 113,
+          "to": 113
+        },
+        {
+          "surah": 29,
+          "from": 48,
+          "to": 48
+        }
+      ]
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe illness or treatment for Muhammad."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate of his land."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "He was told to rise in prayer at night, to pray to his Lord and sacrifice, and to glorify his Lord with praise and ask His forgiveness.",
+      "refs": [
+        {
+          "surah": 73,
+          "from": 2,
+          "to": 4
+        },
+        {
+          "surah": 108,
+          "from": 2,
+          "to": 2
+        },
+        {
+          "surah": 110,
+          "from": 3,
+          "to": 3
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "Those who disbelieved plotted to restrain, kill or expel him, and drove him out; in the cave he told his companion not to grieve because God was with them. The Quran also recalls wounds among the believers and tells them not to weaken or grieve.",
+      "refs": [
+        {
+          "surah": 8,
+          "from": 30,
+          "to": 30
+        },
+        {
+          "surah": 9,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 3,
+          "from": 139,
+          "to": 140
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran mostly names events and gives no dates, ages or daily details for Muhammad, so such details should be kept apart from what it states.",
+      "refs": [
+        {
+          "surah": 33,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 3,
+          "from": 144,
+          "to": 144
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the passages present reliance on God in danger, night prayer, and patience after wounds as parts of his life as the Quran describes it.",
+      "refs": [
+        {
+          "surah": 9,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 73,
+          "from": 2,
+          "to": 4
+        },
+        {
+          "surah": 3,
+          "from": 139,
+          "to": 140
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "dhul-kifl",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era in years for Dhul-Kifl."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the land of Dhul-Kifl."
+    },
+    "community": {
+      "status": "not_established",
+      "note_en": "The Quran does not say which people Dhul-Kifl belonged to. It names him beside other servants of God."
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Dhul-Kifl."
+    },
+    "daily_activities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the daily activities of Dhul-Kifl."
+    },
+    "occupation": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe any work of Dhul-Kifl, and does not explain his name."
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Dhul-Kifl ate or drank."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding by Dhul-Kifl."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Dhul-Kifl."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe where or how Dhul-Kifl lived."
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe how Dhul-Kifl travelled."
+    },
+    "family_community": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention the family of Dhul-Kifl."
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe customs or leisure of Dhul-Kifl."
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe teaching or learning in connection with Dhul-Kifl."
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment in connection with Dhul-Kifl."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate where Dhul-Kifl lived."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "The Quran names him among the patient, says God admitted him into His mercy and that he was among the righteous, and names him again among the best.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 85,
+          "to": 86
+        },
+        {
+          "surah": 38,
+          "from": 48,
+          "to": 48
+        }
+      ]
+    },
+    "challenges": {
+      "status": "not_established",
+      "note_en": "The Quran calls him one of the patient but does not say what he faced."
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran gives only a name and a few qualities for Dhul-Kifl, so his deeds, people and place are not established and should not be taken from other sources.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 85,
+          "to": 85
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages present patience and being among the righteous and the best as what the Quran records of Dhul-Kifl, without a story attached.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 85,
+          "to": 86
+        },
+        {
+          "surah": 38,
+          "from": 48,
+          "to": 48
+        }
+      ]
+    }
+  }
+}

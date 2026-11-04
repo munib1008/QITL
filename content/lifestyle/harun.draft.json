@@ -1,0 +1,208 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "harun",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era in years for Harun."
+    },
+    "region": {
+      "status": "stated",
+      "text_en": "God inspired Musa and his brother to settle their people in Misr; the Quran names no other land for Harun.",
+      "refs": [
+        {
+          "surah": 10,
+          "from": 87,
+          "to": 87
+        }
+      ]
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "He was Musa's brother and was left among the people when Musa went for the appointed time; in the account of the calf he is addressed among the Children of Israel.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 142,
+          "to": 142
+        },
+        {
+          "surah": 20,
+          "from": 94,
+          "to": 94
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Harun."
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "Musa told him to take his place among the people and set things right; he told them they were being tried, that their Lord is the Merciful, and that they should follow him and obey his order.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 142,
+          "to": 142
+        },
+        {
+          "surah": 20,
+          "from": 90,
+          "to": 90
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "God gave him as a prophet out of mercy and as a helper with Musa; Musa asked for him as a helper from his family and as more fluent in speech, to confirm him.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 53,
+          "to": 53
+        },
+        {
+          "surah": 25,
+          "from": 35,
+          "to": 35
+        },
+        {
+          "surah": 20,
+          "from": 29,
+          "to": 30
+        },
+        {
+          "surah": 28,
+          "from": 34,
+          "to": 34
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Harun ate or drank."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding by Harun."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe Harun's clothing."
+    },
+    "housing": {
+      "status": "stated",
+      "text_en": "God inspired Musa and his brother to settle their people in houses in Misr and to make their houses a qiblah, a word the Quran leaves untranslated here.",
+      "refs": [
+        {
+          "surah": 10,
+          "from": 87,
+          "to": 87
+        }
+      ]
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe how Harun travelled."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "He was Musa's brother, requested as a helper from Musa's own family; he addressed Musa as son of his mother and said the people deemed him weak and nearly killed him.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 29,
+          "to": 30
+        },
+        {
+          "surah": 20,
+          "from": 94,
+          "to": 94
+        },
+        {
+          "surah": 7,
+          "from": 150,
+          "to": 150
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe customs or leisure of Harun beyond the matters of faith in his story."
+    },
+    "education": {
+      "status": "stated",
+      "text_en": "God gave Musa and Harun the clear scripture and guided both of them on the straight path.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 117,
+          "to": 118
+        }
+      ]
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment of Harun."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate where Harun lived."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "God says He favoured Musa and Harun, pronounces peace upon them, and says both were among His believing servants.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 114,
+          "to": 114
+        },
+        {
+          "surah": 37,
+          "from": 120,
+          "to": 122
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "When Musa was away the people turned to the calf and said they would not stop until Musa returned; Harun said he feared being blamed for dividing them, and that they had nearly killed him.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 88,
+          "to": 94
+        },
+        {
+          "surah": 7,
+          "from": 150,
+          "to": 150
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran reports Harun mostly through Musa's requests and the incident of the calf, so details of his own daily life, age or place are not established and should not be supplied from outside sources.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 90,
+          "to": 90
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages present Harun as a supporting brother who urged the people to obey and feared dividing them, with the Quran reporting both his words and Musa's reproach.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 90,
+          "to": 94
+        }
+      ]
+    }
+  }
+}
