@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { CountsNote, PersonCard } from "@/components/encyclopedia/Encyclopedia";
+import { AiDraftIndex } from "@/components/drafts/AiDraftIndex";
 import { EmptyState } from "@/components/ui/misc";
 import { peopleCounts, publishedPeople } from "@/lib/data/encyclopedia";
 import { groupPeople } from "@/lib/encyclopedia/model";
@@ -51,6 +52,7 @@ export default async function PeoplePage({ params }: { params: Promise<{ locale:
             </p>
           </EmptyState>
         )}
+        <AiDraftIndex types={["person"]} locale={locale} />
       </div>
     </ReadingPage>
   );

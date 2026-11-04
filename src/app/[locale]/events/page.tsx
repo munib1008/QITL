@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { EvidenceLabel } from "@/components/ui/evidence";
+import { AiDraftIndex } from "@/components/drafts/AiDraftIndex";
 import { EmptyState } from "@/components/ui/misc";
 import { publishedEvents } from "@/lib/data/events";
 import { englishContent } from "@/lib/i18n/locales";
@@ -66,6 +67,7 @@ export default async function EventsIndex({ params }: { params: Promise<{ locale
             <p>{t.emptyBody}</p>
           </EmptyState>
         )}
+        <AiDraftIndex types={["event", "parable", "seerah"]} locale={locale} />
       </div>
     </ReadingPage>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ReadingPage } from "@/components/shell/ReadingPage";
 import { CommunityCard, CountsNote } from "@/components/encyclopedia/Encyclopedia";
+import { AiDraftIndex } from "@/components/drafts/AiDraftIndex";
 import { EmptyState } from "@/components/ui/misc";
 import { communityCounts, publishedCommunities } from "@/lib/data/encyclopedia";
 import { getDict } from "@/lib/i18n";
@@ -43,6 +44,7 @@ export default async function CommunitiesPage({ params }: { params: Promise<{ lo
             </p>
           </EmptyState>
         )}
+        <AiDraftIndex types={["community"]} locale={locale} />
       </div>
     </ReadingPage>
   );

@@ -28,6 +28,7 @@ import { isKind, SEARCH_KINDS } from "@/lib/search";
 
 vi.mock("server-only", () => ({}));
 vi.mock("@/components/drafts/AiDraftStory", () => ({ AiDraftStory: () => null }));
+vi.mock("@/components/drafts/AiDraftIndex", () => ({ AiDraftIndex: () => null }));
 vi.mock("@/components/shell/ReadingPage", () => ({
   ReadingPage: ({ title, children }: { title?: React.ReactNode; children: React.ReactNode }) => (
     <div>
