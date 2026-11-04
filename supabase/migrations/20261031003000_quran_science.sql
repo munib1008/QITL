@@ -31,7 +31,7 @@ returns boolean language sql immutable as $$
     or t ~* '\m(awaiting|awaits?|pending|until)\s+(laboratory|scientific|empirical)\s+(proof|confirmation|verification)'
     or t ~* '\mcures?\s+(all|every|any)\M'
     or t ~* '\mguarantee[sd]?\s+(healing|cure|recovery)'
-    or t ~* '\m\d{1,3}\s*%\s*(confidence|certain|certainty|sure|proven|accurate|match)'
+    or t ~* '\m\d{1,3}\s*%\s*(confiden|certain|certainty|sure|proven|accurate|match)'
     or t ~* '\mconfidence\s+(score|level|rating)?\s*(of|:|=)?\s*\d'
     or t ~* 'معجزة علمية (مثبتة|ثابتة)|ثبت علميا أن'
     or t ~ 'سائنسی معجزہ ثابت|سائنس نے ثابت کر دیا'

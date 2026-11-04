@@ -19,6 +19,7 @@
     "i18n:export": "tsx scripts/export-translations.ts",
     "import:drafts": "tsx scripts/import-story-drafts.ts",
     "asma:compute": "tsx scripts/compute-asma-occurrences.ts",
+    "science:seed": "tsx scripts/load-science-seed.ts",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
