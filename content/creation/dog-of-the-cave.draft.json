@@ -1,0 +1,142 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "dog-of-the-cave",
+  "category": "animals",
+  "name_en": "The dog of the people of the cave",
+  "name_ar": "كلب أصحاب الكهف",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran speaks of 'their dog' (kalbuhum) with the sleepers of the cave.",
+      "refs": [
+        {
+          "surah": 18,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 18,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the origin of the dog."
+    },
+    "purpose": {
+      "status": "not_established",
+      "note_en": "The Quran does not state a purpose for the dog."
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The dog is described stretching out its two forelegs at the threshold.",
+      "refs": [
+        {
+          "surah": 18,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe abilities of the dog."
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the dog."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "The dog is with the sleepers while they are turned to the right and the left. Some people later guess their number, counting the dog, and the Quran says my Lord knows best their number.",
+      "refs": [
+        {
+          "surah": 18,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 18,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The sleepers rest in the cave while their dog stretches its forelegs at the threshold. The passage then reports people's guesses about their number, counting the dog.",
+      "refs": [
+        {
+          "surah": 18,
+          "from": 16,
+          "to": 16
+        },
+        {
+          "surah": 18,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 18,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date for the dog or for the event beyond the story of the people of the cave."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "The dog is at the threshold (al-wasid).",
+      "refs": [
+        {
+          "surah": 18,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verse reports what people said about the number of the sleepers and their dog and tells the Prophet that God knows best their number. This profile therefore gives no count.",
+      "refs": [
+        {
+          "surah": 18,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verse tells the Prophet not to argue about them except with a clear argument, which is read as a lesson to turn from guessing at details.",
+      "refs": [
+        {
+          "surah": 18,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: kalb (a dog), basit dhira'ayhi (stretching out its two forelegs), al-wasid (the threshold), rajman bil-ghayb (guessing at the unseen).",
+      "refs": [
+        {
+          "surah": 18,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 18,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    }
+  }
+}

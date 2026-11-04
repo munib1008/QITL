@@ -1,0 +1,170 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "horse",
+  "category": "animals",
+  "name_en": "The horse",
+  "name_ar": "الخيل",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran names horses (al-khayl) with mules and donkeys, and among the desires made attractive to people it names marked horses (al-khayl al-musawwamah).",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 8,
+          "to": 8
+        },
+        {
+          "surah": 3,
+          "from": 14,
+          "to": 14
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the origin of the horse in particular."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "Horses, mules and donkeys are named for people to ride and as adornment. People are told to prepare strength including tethered horses to deter the enemy of God.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 8,
+          "to": 8
+        },
+        {
+          "surah": 8,
+          "from": 60,
+          "to": 60
+        }
+      ]
+    },
+    "nature": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the horse beyond its uses."
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe abilities of the horse."
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the horse."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Love of marked horses, with other desires, is made attractive to people as the enjoyment of worldly life. They are also named for riding and as readiness against an enemy.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 16,
+          "from": 8,
+          "to": 8
+        },
+        {
+          "surah": 8,
+          "from": 60,
+          "to": 60
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "Horses appear in a verse on spoils for which the believers had not driven any horse or riding beast. Iblis is also told to rally against people with his horse and foot.",
+      "refs": [
+        {
+          "surah": 59,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 17,
+          "from": 64,
+          "to": 64
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no time or order for the horse."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where horses live."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran mentions horses for riding, adornment and readiness. It describes no breed or feature, and the surah of the runners (al-'Adiyat) swears by 'the runners' without naming the animal.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 8,
+          "to": 8
+        },
+        {
+          "surah": 8,
+          "from": 60,
+          "to": 60
+        },
+        {
+          "surah": 100,
+          "from": 1,
+          "to": 5
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the same animals appear as enjoyment and as readiness, which is read as a lesson that gifts carry both pleasure and responsibility.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 8,
+          "from": 60,
+          "to": 60
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-khayl (horses), ribat al-khayl (tethered horses), al-musawwamah (marked), al-rikab (riding beasts), khaylika wa rajilika (your horse and your foot).",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 8,
+          "to": 8
+        },
+        {
+          "surah": 8,
+          "from": 60,
+          "to": 60
+        },
+        {
+          "surah": 3,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 59,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 17,
+          "from": 64,
+          "to": 64
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "bee",
+  "category": "animals",
+  "name_en": "The bee",
+  "name_ar": "النحل",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The bee (al-nahl) is a creature the Quran says God inspired: your Lord inspired the bee.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 68,
+          "to": 68
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the creation of the bee in particular. It says in general that every living thing was made from water."
+    },
+    "purpose": {
+      "status": "not_established",
+      "note_en": "The Quran does not state a purpose for the bee itself. It calls the passage a sign for people who reflect."
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The bee is told by inspiration to take houses in the mountains, in the trees and in what people construct, and then to eat from all the fruits and follow the ways of its Lord.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 68,
+          "to": 69
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "From the bellies of the bees comes a drink of differing colours. The verse says in it is healing for people.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 69,
+          "to": 69
+        }
+      ]
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the bee."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "The drink that comes from the bees is described as having healing for people. The verse names no illness, no dose and no treatment, and calls this a sign for people who reflect.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 69,
+          "to": 69
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "not_established",
+      "note_en": "The bee appears in a passage of signs on God's favours, not in a story of an event."
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no time or order for the bee."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "The bee is told to take houses from the mountains, the trees and what people construct.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 68,
+          "to": 68
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verse says there is healing in the drink for people. This profile adds no dose, no named illness and no promise for any person, because the verse gives none.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 69,
+          "to": 69
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the passage presents the bee's work under God's inspiration as a sign for those who reflect, so it is read as an invitation to reflect.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 68,
+          "to": 69
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-nahl (the bee), awha (He inspired), sharab (a drink), shifa' (healing), ayah (a sign).",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 68,
+          "to": 68
+        },
+        {
+          "surah": 16,
+          "from": 69,
+          "to": 69
+        }
+      ]
+    }
+  }
+}
