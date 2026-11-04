@@ -1,0 +1,76 @@
+{
+  "schema": "qitl.guidance.draft.v1",
+  "slug": "feeling-guilty",
+  "fields": {
+    "situation": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Guilt is the pain of knowing you did wrong, a burden that can push a person toward hiding, despair or, as the Quran describes, toward turning back to God.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 135,
+          "to": 135
+        }
+      ]
+    },
+    "quran_says": {
+      "status": "stated",
+      "text_en": "The Quran tells those who have wronged themselves not to despair of God's mercy, and says God forgives sins altogether. It describes believers who, after a wrong, remember God and ask forgiveness for their sins, and do not knowingly persist in what they did.",
+      "refs": [
+        {
+          "surah": 39,
+          "from": 53,
+          "to": 53
+        },
+        {
+          "surah": 3,
+          "from": 135,
+          "to": 135
+        }
+      ]
+    },
+    "prophet_experience": {
+      "status": "stated",
+      "text_en": "Yunus went off in anger and thought God would not restrain him. He was swallowed by the fish while blameworthy. In the darkness he called that there is no god but God, glory to Him, and that he had been among the wrongdoers. God answered him and saved him from the distress.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 87,
+          "to": 88
+        },
+        {
+          "surah": 37,
+          "from": 139,
+          "to": 144
+        }
+      ]
+    },
+    "everyday_application": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): A modest response is to name the wrong honestly, ask God's forgiveness in your own words as Yunus did, and repair what can be repaired with the people you wronged. The Quran presents turning back to God as open to the person who has wronged himself.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 87,
+          "to": 87
+        },
+        {
+          "surah": 39,
+          "from": 53,
+          "to": 53
+        }
+      ]
+    },
+    "limits": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The Quran does not say how any one wrong is to be repaired or what any one person's standing is with God. This lesson gives no ruling: ask a qualified mufti. It is not counselling or medical care. If guilt or shame leads you to hopeless thoughts or thoughts of harming yourself, please contact a qualified professional or local emergency services.",
+      "refs": [
+        {
+          "surah": 39,
+          "from": 53,
+          "to": 53
+        }
+      ]
+    }
+  }
+}

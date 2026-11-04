@@ -1,0 +1,71 @@
+{
+  "schema": "qitl.guidance.draft.v1",
+  "slug": "financial-difficulty",
+  "fields": {
+    "situation": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Financial difficulty means lacking enough to meet needs or pay what is owed, which brings worry, shame and strain on a household.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 280,
+          "to": 280
+        }
+      ]
+    },
+    "quran_says": {
+      "status": "stated",
+      "text_en": "The Quran says that whoever is mindful of God, He makes a way out for him and provides for him from where he does not expect, and that whoever relies on God, He is enough for him. It also says a debtor in hardship should be given time until ease, and that giving up the debt as charity is better.",
+      "refs": [
+        {
+          "surah": 65,
+          "from": 2,
+          "to": 3
+        },
+        {
+          "surah": 2,
+          "from": 280,
+          "to": 280
+        }
+      ]
+    },
+    "prophet_experience": {
+      "status": "stated",
+      "text_en": "Musa, at the water of Madyan, watered for two women who were holding back, then turned to the shade and said: My Lord, I am in need of whatever good You send down to me.",
+      "refs": [
+        {
+          "surah": 28,
+          "from": 23,
+          "to": 24
+        }
+      ]
+    },
+    "everyday_application": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): A modest step is to say your need plainly to God, as Musa did, and to ask for help from people you trust, such as family or a community. Being honest with those you owe, and giving time to those who owe you where you can, is in the spirit of the verse on debt.",
+      "refs": [
+        {
+          "surah": 28,
+          "from": 24,
+          "to": 24
+        },
+        {
+          "surah": 2,
+          "from": 280,
+          "to": 280
+        }
+      ]
+    },
+    "limits": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The Quran does not give a plan for debt, income or budgeting, and it does not say that a particular need will be met in a particular way or time. This lesson is not financial, legal or counselling advice. For debt or contracts ask a qualified adviser, and for a ruling a mufti. If hardship leaves you hopeless or in danger, contact a qualified professional or local emergency services.",
+      "refs": [
+        {
+          "surah": 65,
+          "from": 2,
+          "to": 3
+        }
+      ]
+    }
+  }
+}

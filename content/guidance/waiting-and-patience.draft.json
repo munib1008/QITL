@@ -1,0 +1,91 @@
+{
+  "schema": "qitl.guidance.draft.v1",
+  "slug": "waiting-and-patience",
+  "fields": {
+    "situation": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Waiting and patience concern the long stretch between asking for relief and seeing it, when time passes slowly and hope can wear thin.",
+      "refs": [
+        {
+          "surah": 70,
+          "from": 5,
+          "to": 5
+        }
+      ]
+    },
+    "quran_says": {
+      "status": "stated",
+      "text_en": "The Quran tells believers to be patient and steadfast and to seek help through patience and prayer, and says the patient are given their reward without measure. It tells the Prophet to be patient with a beautiful patience.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 200,
+          "to": 200
+        },
+        {
+          "surah": 2,
+          "from": 45,
+          "to": 45
+        },
+        {
+          "surah": 39,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 70,
+          "from": 5,
+          "to": 5
+        }
+      ]
+    },
+    "prophet_experience": {
+      "status": "stated",
+      "text_en": "Nuh stayed among his people a thousand years less fifty years. He was told that none of them would believe except those who already had, and not to be distressed by what they did. He went on making the ship while leaders of his people mocked him as they passed. Yaqub, at the loss of Yusuf, spoke of beautiful patience.",
+      "refs": [
+        {
+          "surah": 29,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 11,
+          "from": 36,
+          "to": 38
+        },
+        {
+          "surah": 12,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "everyday_application": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): A modest response is to keep up small steady acts, such as prayer and good deeds, while waiting, to ask God for help as the Quran suggests, and to be patient with yourself as well as with others. Nuh's story shows persistence over a long time; it does not set a time by which relief arrives.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 45,
+          "to": 45
+        },
+        {
+          "surah": 29,
+          "from": 14,
+          "to": 14
+        }
+      ]
+    },
+    "limits": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The Quran does not say how long any one person must wait or what the outcome will be, and its call to patience should not be read as a call to accept harm. This lesson gives no ruling. If waiting leaves you in despair or danger, please speak to a qualified professional or local emergency services.",
+      "refs": [
+        {
+          "surah": 70,
+          "from": 5,
+          "to": 5
+        }
+      ]
+    }
+  }
+}
