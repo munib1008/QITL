@@ -1,0 +1,86 @@
+{
+  "schema": "qitl.guidance.draft.v1",
+  "slug": "feeling-overwhelmed",
+  "fields": {
+    "situation": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Feeling overwhelmed means the demands, worries or tasks in front of a person seem larger than their strength, so that even beginning feels impossible.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 286,
+          "to": 286
+        }
+      ]
+    },
+    "quran_says": {
+      "status": "stated",
+      "text_en": "The Quran says God does not burden a soul beyond its capacity, that hearts find rest in remembering God, and that with hardship comes ease. It also tells believers to seek help through patience and prayer.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 286,
+          "to": 286
+        },
+        {
+          "surah": 13,
+          "from": 28,
+          "to": 28
+        },
+        {
+          "surah": 94,
+          "from": 5,
+          "to": 6
+        },
+        {
+          "surah": 2,
+          "from": 45,
+          "to": 45
+        }
+      ]
+    },
+    "prophet_experience": {
+      "status": "stated",
+      "text_en": "Before going to Pharaoh, Musa asked his Lord to expand his chest and make his task easy. Maryam, in the pains of childbirth, wished she had died before this; she was called from beneath her not to grieve, and told to shake the palm trunk, eat, drink and be content.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 25,
+          "to": 28
+        },
+        {
+          "surah": 19,
+          "from": 22,
+          "to": 26
+        }
+      ]
+    },
+    "everyday_application": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): A modest step is to turn to God in prayer and ask for ease, as Musa did, and to name the one task in front of you instead of the whole load. Telling someone you trust what weighs on you is also in keeping with the call to seek help.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 25,
+          "to": 26
+        },
+        {
+          "surah": 2,
+          "from": 45,
+          "to": 45
+        }
+      ]
+    },
+    "limits": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The sources do not give a method for managing workload, and they do not promise that a particular feeling will lift. This lesson is not counselling or medical care. If you feel unable to cope, or are thinking of harming yourself, please contact a qualified professional or your local emergency services.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 286,
+          "to": 286
+        }
+      ]
+    }
+  }
+}

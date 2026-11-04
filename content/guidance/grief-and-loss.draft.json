@@ -1,0 +1,91 @@
+{
+  "schema": "qitl.guidance.draft.v1",
+  "slug": "grief-and-loss",
+  "fields": {
+    "situation": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Grief is the sorrow that follows the loss of someone or something dearly held, and it can weigh on the body, the heart and daily life for a long while.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 84,
+          "to": 84
+        }
+      ]
+    },
+    "quran_says": {
+      "status": "stated",
+      "text_en": "The Quran says people will be tested with loss, and that the patient, who say that to God they belong and to Him they return, receive blessings and mercy from their Lord. It tells believers not to lose heart or grieve, and tells the Prophet that his Lord has not left him.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 155,
+          "to": 157
+        },
+        {
+          "surah": 3,
+          "from": 139,
+          "to": 139
+        },
+        {
+          "surah": 93,
+          "from": 3,
+          "to": 3
+        }
+      ]
+    },
+    "prophet_experience": {
+      "status": "stated",
+      "text_en": "Yaqub said, how great is my sorrow for Yusuf; his eyes turned white from grief and he was suppressing it. He spoke of beautiful patience and said he complained of his sorrow and grief only to God. The heart of the mother of Musa became empty, and her son was returned to her so that her eye might be comforted and she not grieve.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 84,
+          "to": 86
+        },
+        {
+          "surah": 12,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 28,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 28,
+          "from": 13,
+          "to": 13
+        }
+      ]
+    },
+    "everyday_application": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): A modest response is to let grief be spoken, as Yaqub brought his sorrow to God, to say the words of return that the Quran gives, and to stay near people who can sit with you. Patience, as these verses show it, does not require hiding sorrow.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 86,
+          "to": 86
+        },
+        {
+          "surah": 2,
+          "from": 156,
+          "to": 156
+        }
+      ]
+    },
+    "limits": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The Quran does not set a length or stages for grief, and this lesson does not judge anyone's sorrow. It is not counselling or medical care. If grief becomes too heavy to carry, or you have thoughts of harming yourself, please contact a qualified professional or local emergency services.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 84,
+          "to": 84
+        }
+      ]
+    }
+  }
+}

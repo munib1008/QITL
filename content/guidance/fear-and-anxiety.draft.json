@@ -1,0 +1,86 @@
+{
+  "schema": "qitl.guidance.draft.v1",
+  "slug": "fear-and-anxiety",
+  "fields": {
+    "situation": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Fear and anxiety are feelings of dread about what may come, which can tighten the body and crowd the mind, whether the danger is near or only imagined.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 67,
+          "to": 67
+        }
+      ]
+    },
+    "quran_says": {
+      "status": "stated",
+      "text_en": "The Quran says hearts find rest in remembering God. It records believers who, told that people had gathered against them, said God is enough for them and the best disposer of affairs. It says that for the friends of God there is no fear, and they do not grieve.",
+      "refs": [
+        {
+          "surah": 13,
+          "from": 28,
+          "to": 28
+        },
+        {
+          "surah": 3,
+          "from": 173,
+          "to": 173
+        },
+        {
+          "surah": 10,
+          "from": 62,
+          "to": 62
+        }
+      ]
+    },
+    "prophet_experience": {
+      "status": "stated",
+      "text_en": "Musa and Harun said they feared Pharaoh would hasten against them or transgress; they were told not to fear, for God was with them, hearing and seeing. Musa also felt fear within himself and was told not to fear. At the sea, when his companions said they would be overtaken, he said never: his Lord was with him and would guide him.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 45,
+          "to": 46
+        },
+        {
+          "surah": 20,
+          "from": 67,
+          "to": 68
+        },
+        {
+          "surah": 26,
+          "from": 61,
+          "to": 62
+        }
+      ]
+    },
+    "everyday_application": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): A modest response is to name the fear to God in prayer, as Musa and Harun did, and to remember God in a quiet moment, since the Quran links remembrance with the rest of the heart. Telling someone you trust what frightens you is also a sensible step. This is a reflection, not a treatment for anxiety.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 45,
+          "to": 46
+        },
+        {
+          "surah": 13,
+          "from": 28,
+          "to": 28
+        }
+      ]
+    },
+    "limits": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The Quran does not say a believer will never feel fear: its prophets are shown afraid. It does not describe anxiety as a condition or offer any treatment. This lesson is not counselling or medical care. If fear is constant or overwhelming, or leads you to think of harming yourself, please contact a qualified professional or local emergency services.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 67,
+          "to": 67
+        }
+      ]
+    }
+  }
+}
