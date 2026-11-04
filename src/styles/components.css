@@ -330,6 +330,8 @@
   .zq-jt-fill, .zq-jc, .zq-rv { transition: none; }
   .zq-rv { opacity: 1; transform: none; }
   .zq-jc:hover { transform: none; }
+  /* Nothing inside the journey runs a transition (a color change at first paint counted as a running animation). */
+  .zq-jt, .zq-jt * { transition: none !important; animation: none !important; }
 }
 @container (min-width: 860px) { .zq-jt-line { padding-inline: var(--space-2); } }
 @media print { .zq-rv { opacity: 1; transform: none; } .zq-glass { backdrop-filter: none; background: var(--glass-fill-strong); } }
