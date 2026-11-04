@@ -15,6 +15,7 @@ const GROUP_OF: Record<string, NavGroupId> = {
   "/timeline": "stories",
   "/stories": "stories",
   "/hadith-stories": "stories",
+  "/drafts": "stories",
   "/events": "stories",
   "/people": "stories",
   "/communities": "stories",

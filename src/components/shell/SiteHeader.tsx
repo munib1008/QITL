@@ -9,6 +9,7 @@ import { LangToggle } from "./toggles";
 import { MobileMenu } from "./MobileMenu";
 import { Logo, Mark } from "./Logo";
 import { exploreLinks } from "@/lib/nav";
+import { verificationStrings } from "@/lib/i18n/modules/verification";
 import { applyNav, EMPTY_CONFIG, type SiteConfig } from "@/lib/site-config/config";
 
 export interface NavLink {
@@ -119,6 +120,7 @@ export function SiteFooter({ locale }: { locale: string }) {
         <nav aria-label={u.about}>
           <Link href="/about">{f.about}</Link>
           <Link href="/methodology">{f.methodology}</Link>
+          <Link href="/verification">{verificationStrings(locale).page.title}</Link>
           <Link href="/review-board">{f.reviewBoard}</Link>
           <Link href="/corrections">{f.corrections}</Link>
         </nav>
