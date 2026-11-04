@@ -20,6 +20,9 @@ import { quranReaderStrings } from "@/lib/i18n/modules/quranReader";
 import { attributionLine, markersForSurah } from "@/lib/quran-reader";
 import { asmaConfirmedInSurah } from "@/lib/data/asma";
 import { asmaStrings } from "@/lib/i18n/modules/asma";
+import { draftsCitingSurah } from "@/lib/stories/draft-related";
+import { publicAiDraftGate } from "@/lib/stories/ai-draft-gate";
+import { draftPreviewStrings } from "@/lib/i18n/modules/draftPreview";
 
 // Revalidated so the "Explore this Name" links follow reviewer decisions without a rebuild.
 export const revalidate = 300;
@@ -65,6 +68,10 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
   const asmaLinks = await asmaConfirmedInSurah(n);
   for (const [ayah, list] of Object.entries(asmaLinks))
     for (const x of list) (ayahLinks[Number(ayah)] ??= []).push({ id: `asma-${x.slug}`, name: `${asmaStrings(locale).reader.exploreName}: ${x.ar}`, href: `/asma/${x.slug}` });
+  // Related knowledge: the public story drafts whose chapters cite this ayah (at most three per ayah, each links to the labelled draft).
+  const gate = await publicAiDraftGate();
+  for (const [ayah, list] of draftsCitingSurah(n, gate ? new Set(gate.keys()) : null))
+    for (const d of list.slice(0, 3)) (ayahLinks[ayah] ??= []).push({ id: `draft-${d.slug}`, name: `${d.title} (${draftPreviewStrings(locale).draftWord})`, href: `/drafts/${d.slug}`, lang: "en" });
   return (
     <ReadingPage
       locale={locale}
