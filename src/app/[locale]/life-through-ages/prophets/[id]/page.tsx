@@ -3,7 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BASE, LtaShell, NoRecords } from "@/components/lifestyle/Shell";
 import { CategoryBadge, ReconstructionContainer, RecordMeta } from "@/components/lifestyle/Evidence";
+import { DraftFields } from "@/components/lifestyle/DraftFields";
 import { NuhNote } from "@/components/lifestyle/NuhNote";
+import { lifestyleDraft } from "@/lib/lifestyle/draft-data";
+import { draftSlugFor } from "@/lib/stories/draft-outline";
 import { Markdown } from "@/components/ui/Markdown";
 import { findStop, journeyStops } from "@/content/journey";
 import { LOCALES } from "@/lib/i18n";
@@ -52,13 +55,16 @@ export default async function ProphetLifePage({ params }: { params: Promise<{ lo
       {id === "nuh" ? <NuhNote t={t} /> : null}
       {slugs.map((slug) => {
         const prof = profiles.find((x) => x.person_slug === slug);
+        const draft = lifestyleDraft(slug) ?? lifestyleDraft(draftSlugFor(slug));
         return (
           <section key={slug} className="lta-section" aria-labelledby={`lta-how-${slug}`} data-testid="lifestyle-profile">
             <h2 id={`lta-how-${slug}`}>
               {t.prophet.howTheyLived}
               {slugs.length > 1 ? ` · ${slug.charAt(0).toUpperCase()}${slug.slice(1)}` : ""}
             </h2>
-            {!prof ? (
+            {!prof && draft ? (
+              <DraftFields draft={draft} t={t} locale={locale} />
+            ) : !prof ? (
               <>
                 <NoRecords t={t} result={res} title={t.prophet.profileDraft} />
                 <FieldGrid t={t} fields={[]} />

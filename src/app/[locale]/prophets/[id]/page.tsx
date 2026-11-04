@@ -13,7 +13,9 @@ import { CopyCitationButton, ShareButton } from "@/components/account/ShareButto
 import { DiscussionPreview } from "@/components/community/DiscussionPreview";
 import { ShifaRelated } from "@/components/shifa/Related";
 import { NoteEditor } from "@/components/account/NoteEditor";
+import { AiDraftOutline } from "@/components/drafts/AiDraftOutline";
 import { AiDraftStory } from "@/components/drafts/AiDraftStory";
+import { draftSlugFor } from "@/lib/stories/draft-outline";
 import { StoryView } from "@/components/story/StoryView";
 import { getStory } from "@/lib/data/story";
 import { getLinkedStories } from "@/lib/data/story-links";
@@ -209,7 +211,7 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
                 />
               ) : (
                 <AiDraftStory
-                  slug={p.id}
+                  slug={draftSlugFor(p.id)}
                   locale={locale}
                   fallback={
                     <EmptyState
@@ -251,9 +253,15 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
                 ))}
               </ol>
             ) : (
-              <EmptyState label={<EvidenceLabel kind="unknown">{t.outlineMissing}</EvidenceLabel>} title={t.outlineMissingTitle}>
-                <p>{t.outlineMissingBody}</p>
-              </EmptyState>
+              <AiDraftOutline
+                slug={p.id}
+                locale={locale}
+                fallback={
+                  <EmptyState label={<EvidenceLabel kind="unknown">{t.outlineMissing}</EvidenceLabel>} title={t.outlineMissingTitle}>
+                    <p>{t.outlineMissingBody}</p>
+                  </EmptyState>
+                }
+              />
             )}
           </section>
 
