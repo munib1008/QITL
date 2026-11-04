@@ -1,0 +1,110 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "alyasa",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for Alyasa; he is named only in two short lists."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the land or place of Alyasa."
+    },
+    "community": {
+      "status": "not_established",
+      "note_en": "The Quran says nothing about the people of Alyasa; it names him only in lists."
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age or length of life for Alyasa."
+    },
+    "daily_activities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Alyasa did day to day."
+    },
+    "occupation": {
+      "status": "not_established",
+      "note_en": "The Quran does not state an occupation for Alyasa; it names him with others who were favoured."
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Alyasa ate or drank."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding for Alyasa."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Alyasa."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe where or how Alyasa lived."
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention travel or transport for Alyasa."
+    },
+    "family_community": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the family of Alyasa."
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe customs or leisure for Alyasa."
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe teaching or learning for Alyasa."
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment for Alyasa."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate of the land of Alyasa."
+    },
+    "worship": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the worship of Alyasa beyond naming him among the favoured and the best."
+    },
+    "challenges": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe hardships faced by Alyasa."
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Alyasa is named only in two short lists, so any life story, place or date attached to him elsewhere is not something the Quran states.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 86,
+          "to": 86
+        },
+        {
+          "surah": 38,
+          "from": 48,
+          "to": 48
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran can describe a person as favoured and among the best with only a name and a title, so its silence on details is not a verdict on anyone's worth.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 86,
+          "to": 86
+        },
+        {
+          "surah": 38,
+          "from": 48,
+          "to": 48
+        }
+      ]
+    }
+  }
+}
