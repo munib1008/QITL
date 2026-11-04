@@ -2,10 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { Fragment, useEffect, useRef } from "react";
 import type { Role } from "@/lib/admin";
 import { stripLocale } from "@/lib/i18n";
 import { adminStrings } from "@/lib/i18n/modules/admin";
+import { adminGroupStrings } from "@/lib/i18n/modules/adminGroups";
+import { groupAdminLinks } from "@/lib/admin-groups";
+import { useLocale } from "@/lib/i18n/useLocale";
+import "@/styles/nav-groups.css";
 
 const LINKS: Array<{ href: string; roles: Role[] }> = [
   { href: "/admin", roles: ["editor", "scholarly_reviewer", "moderator", "admin"] },
@@ -66,6 +70,9 @@ export function AdminNav({ roles, labels }: { roles: Role[]; labels?: AdminNavLa
   const ref = useRef<HTMLDetailsElement>(null);
   const links = LINKS.filter((l) => isAdmin || l.roles.some((r) => roles.includes(r))).map((l) => ({ ...l, label: (labels ?? en).nav[l.href] ?? l.href }));
   const current = links.find((l) => l.href === path);
+  const locale = useLocale();
+  const groupLabels = adminGroupStrings(locale).groups;
+  const blocks = groupAdminLinks(links);
   useEffect(() => {
     const d = ref.current;
     if (!d) return;
@@ -87,10 +94,15 @@ export function AdminNav({ roles, labels }: { roles: Role[]; labels?: AdminNavLa
         <p className="zq-eyebrow" style={{ padding: "0 12px 8px" }}>
           {roles.map((r) => labels?.roles[r] ?? r.replace("_", " ")).join(" · ")}
         </p>
-        {links.map((l) => (
-          <Link key={l.href} href={l.href} aria-current={path === l.href ? "page" : undefined}>
-            {l.label}
-          </Link>
+        {blocks.map((b) => (
+          <Fragment key={b.id ?? "rest"}>
+            {b.id && b.id !== "overview" ? <p className="zq-admin-nav-group">{groupLabels[b.id]}</p> : null}
+            {b.links.map((l) => (
+              <Link key={l.href} href={l.href} aria-current={path === l.href ? "page" : undefined}>
+                {l.label}
+              </Link>
+            ))}
+          </Fragment>
         ))}
       </details>
     </nav>

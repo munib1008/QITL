@@ -12,3 +12,7 @@ html:is([lang="ar"], [lang="ur"]) .zq-mmenu-group { letter-spacing: 0; text-tran
 .zq-index-groups .zq-index { padding: 0; }
 /* Hub pages: the links to the other categories are touch targets (24px minimum), also in Arabic and Urdu where the line is shorter. */
 .hub-others a { display: inline-block; min-height: 28px; padding: 4px 2px; }
+
+/* Admin navigation groups (by the work being done). */
+.zq-admin-nav-group { margin: 12px 12px 2px; font: 600 11px/16px var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); }
+html:is([lang="ar"], [lang="ur"]) .zq-admin-nav-group { letter-spacing: 0; text-transform: none; font-size: 13px; line-height: 20px; }
