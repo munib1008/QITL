@@ -6,7 +6,7 @@ import { COLLECTIONS } from "@/lib/data/hadith";
 /** Public, crawlable routes. Account, admin and search pages are excluded. */
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = publicEnv.siteUrl.replace(/\/$/, "");
-  const fixed = ["", "/prophets", "/timeline", "/timeline?view=complete", "/atlas", "/quran", "/hadith", "/stories", "/hadith-stories", "/people", "/communities", "/creation", "/events", "/learn", "/genealogy", "/genealogy?view=lineage", "/lineage", "/asma", "/science", "/science/questions", "/science/timeline", "/science/journeys", "/scriptures", "/last-hour", "/compare", "/community", "/guidance", "/shifa", "/shifa/quranic-healing", "/shifa/ruqyah", "/shifa/prophetic-remedies", "/shifa/wellbeing", "/about", "/methodology", "/review-board", "/corrections", "/accessibility", "/privacy", "/terms"];
+  const fixed = ["", "/prophets", "/timeline", "/timeline?view=complete", "/atlas", "/quran", "/hadith", "/stories", "/hadith-stories", "/people", "/communities", "/creation", "/events", "/learn", "/genealogy", "/genealogy?view=lineage", "/lineage", "/asma", "/science", "/science/questions", "/science/timeline", "/science/journeys", "/scriptures", "/last-hour", "/compare", "/community", "/guidance", "/shifa", "/shifa/quranic-healing", "/shifa/ruqyah", "/shifa/prophetic-remedies", "/shifa/wellbeing", "/hub/quran", "/hub/stories", "/hub/learn", "/hub/knowledge", "/hub/community", "/about", "/methodology", "/review-board", "/corrections", "/accessibility", "/privacy", "/terms"];
   const quran = Array.from({ length: 114 }, (_, i) => `/quran/${i + 1}`);
   const hadith = COLLECTIONS.map((c) => `/hadith/${c.id}`);
   const prophets = journeyStops().map((s) => `/prophets/${s.id}`);

@@ -176,7 +176,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 locale,
               ).map((b) => (
                 <section key={b.id ?? "rest"} className="zq-index-group" aria-label={b.label ?? undefined}>
-                  {b.label ? <h3>{b.label}</h3> : null}
+                  {b.label ? (
+                    <h3>
+                      <Link href={`/hub/${b.id}`}>{b.label}</Link>
+                    </h3>
+                  ) : null}
                   {b.note ? <p>{b.note}</p> : null}
                   <ol className="zq-index">
                     {b.links.map((l) => (
