@@ -1,0 +1,24 @@
+/* The shared verification badge and its disclosure. One semantics for every module: the label is text; tone only adds an edge colour. */
+.vf { display: grid; gap: 8px; margin: 12px 0; max-width: 72ch; }
+.vf-head { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 0; }
+.vf-badge { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; min-height: 28px; border: 1px solid var(--border, currentColor); border-inline-start-width: 4px; border-radius: var(--radius-pill, 999px); font: 600 13px/18px var(--font-sans); color: var(--ink); }
+.vf-dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; flex: none; }
+.vf[data-tone="ok"] .vf-badge { border-color: var(--glow-emerald, currentColor); }
+.vf[data-tone="caution"] .vf-badge { border-style: dashed; border-color: var(--glow-gold, currentColor); }
+.vf[data-tone="info"] .vf-badge { border-color: var(--ink-muted, currentColor); }
+.vf[data-tone="blocked"] .vf-badge { border-style: dotted; border-color: var(--ink-muted, currentColor); }
+.vf-link { font: 500 13px/18px var(--font-sans); color: var(--ink-muted); }
+.vf-notice { margin: 0; font: 400 15px/24px var(--font-sans); color: var(--ink); }
+.vf-more { font: 400 14px/22px var(--font-sans); color: var(--ink-muted); }
+.vf-more summary { cursor: pointer; min-height: 24px; color: var(--ink); }
+.vf-more dl { display: grid; gap: 2px 12px; margin: 8px 0; }
+.vf-more dt { font-weight: 600; color: var(--ink); }
+.vf-more dd { margin: 0 0 6px; }
+.vf-more h4 { margin: 8px 0 4px; font: 600 14px/20px var(--font-sans); color: var(--ink); }
+.vf-more ul { margin: 0; padding-inline-start: 18px; }
+.vf-actions { display: flex; gap: 14px; margin: 8px 0 0; }
+.vf-page dl.vf-states { display: grid; gap: 14px; margin: 16px 0 28px; }
+.vf-page dl.vf-states dt { margin-bottom: 4px; }
+.vf-counts { list-style: none; margin: 12px 0; padding: 0; display: grid; gap: 10px; }
+.vf-counts li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid var(--glass-stroke, var(--border)); }
+.vf-counts b { font: 600 20px/28px var(--font-display); }

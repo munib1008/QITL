@@ -120,6 +120,7 @@ export const ROUTES = [
   "/admin/partners",
   "/about",
   "/methodology",
+  "/verification",
   "/review-board",
   "/corrections",
   "/terms",
