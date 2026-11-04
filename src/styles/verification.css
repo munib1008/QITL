@@ -9,6 +9,7 @@
 .vf[data-tone="blocked"] .vf-badge { border-style: dotted; border-color: var(--ink-muted, currentColor); }
 .vf-link { font: 500 13px/18px var(--font-sans); color: var(--ink-muted); }
 .vf-notice { margin: 0; font: 400 15px/24px var(--font-sans); color: var(--ink); }
+.vf-verify { margin: 0; padding: 8px 12px; border-inline-start: 3px solid var(--glow-gold, currentColor); font: 500 14px/22px var(--font-sans); color: var(--ink); }
 .vf-more { font: 400 14px/22px var(--font-sans); color: var(--ink-muted); }
 .vf-more summary { cursor: pointer; min-height: 24px; color: var(--ink); }
 .vf-more dl { display: grid; gap: 2px 12px; margin: 8px 0; }

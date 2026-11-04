@@ -128,11 +128,17 @@ describe("kept apart from reviewed knowledge", () => {
   test("not in the sitemap", () => {
     for (const e of sitemap()) expect(e.url).not.toMatch(/\/drafts/);
   });
-  test("not in Explore, in any language", () => {
-    for (const l of ["en", "ar", "ur"]) for (const x of exploreLinks(l)) expect(x.href).not.toMatch(/^\/drafts/);
+  test("Explore lists the drafts only as the one labelled draft section (the 2026-11 policy: publish drafts openly, labelled)", () => {
+    for (const l of ["en", "ar", "ur"]) {
+      const hits = exploreLinks(l).filter((x) => x.href.startsWith("/drafts"));
+      expect(hits.map((x) => x.href)).toEqual(["/drafts"]);
+      expect(hits[0]!.label.length).toBeGreaterThan(3);
+    }
   });
-  test("not read by the unified search, the home page or the sitemap code", () => {
-    for (const f of ["src/lib/search-sources.ts", "src/app/sitemap.ts", "src/lib/nav.ts"]) expect(readFileSync(join(root, f), "utf8")).not.toMatch(/story-drafts|draft-data|\/drafts/);
+  test("not read by the unified search, the sitemap code or the home page's data", () => {
+    for (const f of ["src/lib/search-sources.ts", "src/app/sitemap.ts"]) expect(readFileSync(join(root, f), "utf8")).not.toMatch(/story-drafts|draft-data|\/drafts/);
+    // the navigation registry may name the /drafts section, but never reads the draft data itself
+    expect(readFileSync(join(root, "src/lib/nav.ts"), "utf8")).not.toMatch(/story-drafts|draft-data/);
     expect(readFileSync(join(root, "src", "app", "[locale]", "page.tsx"), "utf8")).not.toMatch(/story-drafts|draft-data|\/drafts/);
   });
   test("the preview reads files only: it imports no database client", () => {

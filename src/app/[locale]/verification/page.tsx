@@ -47,6 +47,14 @@ export default async function VerificationPage({ params }: { params: Promise<{ l
             ))}
           </dl>
         </section>
+        <section aria-labelledby="vf-check" data-testid="verification-check">
+          <h2 id="vf-check">{p.check.title}</h2>
+          <ol>
+            {p.check.steps.map((s) => (
+              <li key={s}>{s}</li>
+            ))}
+          </ol>
+        </section>
         <section aria-labelledby="vf-sources">
           <h2 id="vf-sources">{p.howSources}</h2>
           <p>{p.howSourcesBody}</p>

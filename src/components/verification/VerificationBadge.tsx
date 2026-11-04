@@ -41,6 +41,11 @@ export function VerificationBadge({ state, locale, detail, kind = "scholarly", n
           {draftNotice}
         </p>
       ) : null}
+      {notice && (state === "ai_assisted_draft" || state === "pending_verification") ? (
+        <p className="vf-verify" data-testid="verification-verify-yourself">
+          {t.verifyYourself}
+        </p>
+      ) : null}
       <details className="vf-more">
         <summary>{s.label}</summary>
         <p>{s.what}</p>
