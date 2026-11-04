@@ -15,6 +15,7 @@
     "check:stories": "tsx scripts/check-stories.ts",
     "check:drafts": "tsx scripts/check-story-drafts.ts",
     "check:lifestyle": "tsx scripts/check-lifestyle-drafts.ts",
+    "check:sourced": "tsx scripts/check-sourced-drafts.ts",
     "drafts:index": "tsx scripts/build-draft-index.ts",
     "review:packs": "tsx scripts/build-review-packs.ts",
     "i18n:export": "tsx scripts/export-translations.ts",
