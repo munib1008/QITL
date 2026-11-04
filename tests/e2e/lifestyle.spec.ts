@@ -85,3 +85,18 @@ test("the prophet page links to Their Life & Times, and the timeline keeps the p
   await expect(page.getByTestId("timeline-layers")).toHaveAttribute("data-layer", "prophets");
   await expect(page.getByRole("navigation", { name: "Timeline layer" }).getByRole("link", { name: "Prophets & events" })).toHaveAttribute("aria-current", "true");
 });
+
+// Every prophet page of the journey has its Quran-only "How They Lived" draft (Harun's is shown with Musa's).
+const PROPHET_IDS = ["adam", "idris", "nuh", "hud", "salih", "ibrahim", "lut", "ismail", "ishaq", "yaqub", "yusuf", "ayyub", "shuayb", "musa", "dhulkifl", "dawud", "sulayman", "ilyas", "alyasa", "yunus", "zakariya", "yahya", "isa", "muhammad"];
+test.describe("how they lived drafts", () => {
+  test.skip(() => test.info().project.name !== "desktop", "one project drives every page");
+  for (const id of PROPHET_IDS)
+    test(`/life-through-ages/prophets/${id} shows the AI-assisted draft with twenty fields`, async ({ page }) => {
+      const res = await page.goto(`/life-through-ages/prophets/${id}`);
+      expect(res?.status()).toBe(200);
+      const draft = page.getByTestId("lifestyle-draft");
+      await expect(draft.first()).toBeVisible();
+      await expect(draft.first().getByTestId("verification-badge")).toContainText("AI-Assisted Draft");
+      expect(await draft.first().locator("[data-field]").count()).toBe(20);
+    });
+});
