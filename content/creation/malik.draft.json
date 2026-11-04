@@ -1,0 +1,135 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "malik",
+  "category": "angels",
+  "name_en": "Malik (called from the Fire)",
+  "name_ar": "مالك",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Those in the punishment of Hell call out to Malik. The verse gives him no title, and the Quran does not say outright that Malik is one of the angels it elsewhere calls keepers of Hell and companions of the Fire.",
+      "refs": [
+        {
+          "surah": 43,
+          "from": 74,
+          "to": 77
+        },
+        {
+          "surah": 40,
+          "from": 49,
+          "to": 49
+        },
+        {
+          "surah": 74,
+          "from": 31,
+          "to": 31
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not state what Malik is made from or when."
+    },
+    "purpose": {
+      "status": "not_established",
+      "note_en": "The Quran gives no task for Malik beyond the one exchange it reports."
+    },
+    "nature": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe Malik or say what he is."
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran names no power of Malik."
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran names no limit of Malik."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "The people of the Fire call to him that their Lord should finish them off, and he answers that they are staying.",
+      "refs": [
+        {
+          "surah": 43,
+          "from": 77,
+          "to": 77
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "One scene is told. The wrongdoers who stay in Hell's punishment call out to Malik, asking that their Lord put an end to them, and he replies that they are to remain.",
+      "refs": [
+        {
+          "surah": 43,
+          "from": 74,
+          "to": 77
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "The call is set in the Hereafter, among those who remain in the punishment of Hell, whose torment is not eased.",
+      "refs": [
+        {
+          "surah": 43,
+          "from": 74,
+          "to": 77
+        }
+      ]
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran places Malik only in the scene where the people of the Fire call to him; it names no further place."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Popular descriptions of Malik's form, of his rank, or of his being chief of the keepers of the Fire are not stated in the Quran, which gives only the call and the reply.",
+      "refs": [
+        {
+          "surah": 43,
+          "from": 77,
+          "to": 77
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The short exchange may be read as a reminder that the warnings about the Fire are meant to be heeded before that Day, since the plea to be ended is met with a statement that they remain.",
+      "refs": [
+        {
+          "surah": 43,
+          "from": 77,
+          "to": 77
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "The Quran writes the call as ya Malik. Elsewhere it calls the keepers of Hell khazanat jahannam and khazanatuha, and says the companions of the Fire are angels.",
+      "refs": [
+        {
+          "surah": 43,
+          "from": 77,
+          "to": 77
+        },
+        {
+          "surah": 40,
+          "from": 49,
+          "to": 49
+        },
+        {
+          "surah": 39,
+          "from": 71,
+          "to": 71
+        },
+        {
+          "surah": 74,
+          "from": 31,
+          "to": 31
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "recording-angels",
+  "category": "angels",
+  "name_en": "The recording angels (noble recorders)",
+  "name_ar": "الكرام الكاتبون",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran says there are over each person guardians, noble ones who write. It also says that Our messengers write what people plot. These verses do not themselves use the word angels for them.",
+      "refs": [
+        {
+          "surah": 82,
+          "from": 10,
+          "to": 12
+        },
+        {
+          "surah": 43,
+          "from": 80,
+          "to": 80
+        },
+        {
+          "surah": 10,
+          "from": 21,
+          "to": 21
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not state what the recorders are made from or when."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "They guard and write down what people do. Another passage says that no word is uttered without a watcher ready beside it.",
+      "refs": [
+        {
+          "surah": 82,
+          "from": 10,
+          "to": 12
+        },
+        {
+          "surah": 50,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "They are described as noble and as knowing what people do.",
+      "refs": [
+        {
+          "surah": 82,
+          "from": 11,
+          "to": 12
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "They write, and they know what people do. The Quran does not say how.",
+      "refs": [
+        {
+          "surah": 82,
+          "from": 11,
+          "to": 12
+        },
+        {
+          "surah": 43,
+          "from": 80,
+          "to": 80
+        },
+        {
+          "surah": 10,
+          "from": 21,
+          "to": 21
+        }
+      ]
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran names no limit of the recorders."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "They are over every person, noble and writing, and they know what is done. Even secrets and private talk are not unheard by God, and His messengers write beside the people.",
+      "refs": [
+        {
+          "surah": 82,
+          "from": 10,
+          "to": 12
+        },
+        {
+          "surah": 43,
+          "from": 80,
+          "to": 80
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "not_established",
+      "note_en": "The Quran tells no particular event about the recorders; it states what they do."
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran does not say when the recording begins; it presents it as present now and for each person."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "A passage speaks of the two who receive, sitting on the right and on the left, and of a watcher ready beside every word. It does not say outright that these are the same as the guardians named elsewhere.",
+      "refs": [
+        {
+          "surah": 50,
+          "from": 17,
+          "to": 18
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Names for the recorders, the idea that good and bad deeds are written by different ones, or a particular count are not stated in these verses, which speak of guardians who write and a watcher beside every word.",
+      "refs": [
+        {
+          "surah": 82,
+          "from": 10,
+          "to": 12
+        },
+        {
+          "surah": 50,
+          "from": 17,
+          "to": 18
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The verses may be read as a reminder to speak and act as people whose words and deeds are being kept, without turning that reminder into fear of anything beyond what the verses say.",
+      "refs": [
+        {
+          "surah": 82,
+          "from": 10,
+          "to": 12
+        },
+        {
+          "surah": 50,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "The Quran uses hafizin (guardians), kiram (noble) and katibin (writers) together, and raqib atid (a watcher ready), al-mutalaqqiyan for the two who receive, and rusuluna (Our messengers) for those who write.",
+      "refs": [
+        {
+          "surah": 82,
+          "from": 10,
+          "to": 11
+        },
+        {
+          "surah": 50,
+          "from": 17,
+          "to": 18
+        },
+        {
+          "surah": 43,
+          "from": 80,
+          "to": 80
+        }
+      ]
+    }
+  }
+}
