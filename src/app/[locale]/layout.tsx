@@ -31,21 +31,12 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover", // safe-area insets for the bottom navigation on notched phones
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f7f3ea" },
-    { media: "(prefers-color-scheme: dark)", color: "#061519" },
-  ],
+  themeColor: "#eff2f9",
 };
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
 }
-
-/**
- * Applies a theme the reader chose earlier before first paint (no flash). Without a choice the CSS follows
- * prefers-color-scheme. Pages that own a theme (the home journey) set data-theme on their own wrapper.
- */
-const THEME_INIT = `try{var t=localStorage.getItem("qitl-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;
 
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -53,14 +44,11 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const { dir, t } = getDict(locale);
   // The per-request CSP nonce from the middleware (src/middleware.ts). Reading it makes every page render per request:
   // a nonce-based policy cannot be served from a prebuilt HTML file (docs/SECURITY.md, "CSP").
-  const nonce = (await headers()).get("x-nonce") ?? undefined;
+  await headers();
   // Hidden sections and the Explore order set in /admin/site; the built-in list when nothing is configured.
   const siteConfig = await getSiteConfig();
   return (
-    <html lang={locale} dir={dir} className={fontVariables} suppressHydrationWarning>
-      <head>
-        <script nonce={nonce} dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
-      </head>
+    <html lang={locale} dir={dir} className={fontVariables} data-theme="light" suppressHydrationWarning>
       <body>
         <a className="zq-skip" href="#main">
           {t.skip}

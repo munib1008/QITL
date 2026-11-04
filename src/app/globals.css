@@ -9,6 +9,7 @@
 @import "../styles/interpretation.css";
 @import "../styles/i18n.css";
 @import "../styles/lineage.css";
+@import "../styles/redesign.css";
 
 @tailwind base;
 @tailwind components;

@@ -8,6 +8,10 @@ import { Gallery } from "@/components/asma/Gallery";
 import { asmaNames } from "@/lib/data/asma";
 import { getDict } from "@/lib/i18n";
 import { asmaStrings } from "@/lib/i18n/modules/asma";
+import { NamesDial } from "@/components/asma/NamesDial";
+import { draftDialNames, type DialName } from "@/content/asmaDial";
+import { pick } from "@/lib/asma/model";
+import { redesignStrings } from "@/lib/i18n/modules/redesign";
 
 export const revalidate = 300;
 
@@ -23,6 +27,10 @@ export default async function AsmaHub({ params }: { params: Promise<{ locale: st
   const names = await asmaNames();
   const drafts = names?.filter(isAiDraft).length ?? 0;
   const approved = names ? names.length - drafts : 0;
+  // The dial shows the connected Names when there are any, else the labelled draft registry (never a count claim).
+  const connected: DialName[] | null = names && names.length ? names.map((n) => ({ slug: n.slug, vowelled: n.vowelled, transliteration: n.transliteration, meaning: pick(n.rendering, locale), draft: isAiDraft(n) })) : null;
+  const dialNames = connected ?? draftDialNames(locale);
+  const rd = redesignStrings(locale).namesDial;
   const cards = [
     { href: "/asma/dua", ...s.dashboard.cards.dua },
     { href: "/asma/pathways", ...s.dashboard.cards.pathways },
@@ -56,6 +64,17 @@ export default async function AsmaHub({ params }: { params: Promise<{ locale: st
             </ul>
           </>
         )}
+        <section aria-labelledby="as-dial-h" className="as-sections">
+          <h2 id="as-dial-h" className="zq-eyebrow">
+            {rd.heading}
+          </h2>
+          {connected ? null : (
+            <p className="tl-synthetic" role="note" data-testid="dial-draft-banner">
+              {rd.draftBanner}
+            </p>
+          )}
+          <NamesDial names={dialNames} locale={locale} s={rd} />
+        </section>
         <p className="as-note" data-testid="recognition-note">
           {s.recognition.note}
         </p>

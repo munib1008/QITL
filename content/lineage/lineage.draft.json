@@ -1,0 +1,618 @@
+{
+ "schema": "qitl.lineage.v1",
+ "status": "draft",
+ "review": {
+  "state": "pending_scholarly_review",
+  "rule": "A draft view of the line from Adam to Muhammad ﷺ for use when the lineage database has nothing published. It invents no generation, name, age or date: where the sources give no names or no count it shows a gap. Names from Adnan to the Prophet ﷺ follow the classical sira and must be pinned to a verified edition before publication. Hadith numbers read 'No. —' until pinned."
+ },
+ "spine": [
+  {
+   "id": "adam",
+   "name": "Adam",
+   "arabic": "آدم",
+   "role": "prophet",
+   "link": "quran",
+   "honorific": "(عليه السلام)",
+   "subtitle": "The first human and the first prophet",
+   "evidence": [
+    "quran"
+   ],
+   "refs": [
+    "3:59",
+    "38:71–72",
+    "2:30–39"
+   ],
+   "note": "The Quran states that Allah created Adam from clay and made him the first human and prophet."
+  },
+  {
+   "id": "gap-adam-nuh",
+   "name": "Between Adam and Nuh",
+   "arabic": "",
+   "role": "gap",
+   "link": "unknown",
+   "honorific": "",
+   "subtitle": "Not established",
+   "evidence": [
+    "unknown"
+   ],
+   "refs": [
+    "19:58"
+   ],
+   "note": "Not established. The Quran counts Nuh among the descendants of Adam (19:58) and gives no names and no count of generations."
+  },
+  {
+   "id": "nuh",
+   "name": "Nuh",
+   "arabic": "نوح",
+   "role": "prophet",
+   "link": "quran",
+   "honorific": "(عليه السلام)",
+   "subtitle": "Messenger to his people; the Ark",
+   "evidence": [
+    "quran"
+   ],
+   "refs": [
+    "71:1–28",
+    "11:25–49",
+    "19:58"
+   ],
+   "note": "The Quran states that Nuh is among the descendants of Adam."
+  },
+  {
+   "id": "gap-nuh-ibrahim",
+   "name": "Between Nuh and Ibrahim",
+   "arabic": "",
+   "role": "gap",
+   "link": "unknown",
+   "honorific": "",
+   "subtitle": "Not established",
+   "evidence": [
+    "unknown"
+   ],
+   "refs": [
+    "19:58",
+    "37:83"
+   ],
+   "note": "Not established. The Quran counts Ibrahim among the descendants of those carried with Nuh (19:58) and calls him of Nuh's kind (37:83). It gives no names and no count."
+  },
+  {
+   "id": "ibrahim",
+   "name": "Ibrahim",
+   "arabic": "إبراهيم",
+   "role": "prophet",
+   "link": "quran",
+   "honorific": "(عليه السلام)",
+   "subtitle": "Khalil Allah",
+   "evidence": [
+    "quran"
+   ],
+   "refs": [
+    "14:35–41",
+    "2:124–129",
+    "4:125"
+   ],
+   "note": "The Quran states that Allah took Ibrahim as an intimate friend. Two lines of prophets come from his sons Ishaq and Ismail."
+  },
+  {
+   "id": "ismail",
+   "name": "Ismail",
+   "arabic": "إسماعيل",
+   "role": "prophet",
+   "link": "quran",
+   "honorific": "(عليه السلام)",
+   "subtitle": "Son of Ibrahim; co-builder of the House",
+   "evidence": [
+    "quran",
+    "hadith"
+   ],
+   "refs": [
+    "14:39",
+    "2:125–129",
+    "19:54–55",
+    "Sahih Muslim, No. —"
+   ],
+   "note": "The Quran names Ismail as a son of Ibrahim. An authentic narration reports that the Prophet ﷺ descends from Ismail through Kinana and Quraysh."
+  },
+  {
+   "id": "gap-ismail-adnan",
+   "name": "Between Ismail and Adnan",
+   "arabic": "",
+   "role": "gap",
+   "link": "unknown",
+   "honorific": "",
+   "subtitle": "Not established",
+   "evidence": [
+    "unknown"
+   ],
+   "refs": [],
+   "note": "Not established. Scholars differ widely on the number and the names, and no authenticated chain with a count exists."
+  },
+  {
+   "id": "adnan",
+   "name": "Adnan",
+   "arabic": "عدنان",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Where the classical lineage begins",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Classical Sunni scholarship records the Prophet's ﷺ lineage back to Adnan. Names before Adnan are not established."
+  },
+  {
+   "id": "maad",
+   "name": "Ma'add",
+   "arabic": "معد",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Adnan",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "nizar",
+   "name": "Nizar",
+   "arabic": "نزار",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Ma'add",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "mudar",
+   "name": "Mudar",
+   "arabic": "مضر",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Nizar",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "ilyas-mudar",
+   "name": "Ilyas ibn Mudar",
+   "arabic": "إلياس بن مضر",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "An ancestor; not the prophet Ilyas",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira. He is an ancestor of the Prophet ﷺ and is not the prophet Ilyas named in the Quran."
+  },
+  {
+   "id": "mudrika",
+   "name": "Mudrika",
+   "arabic": "مدركة",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Ilyas",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "khuzayma",
+   "name": "Khuzayma",
+   "arabic": "خزيمة",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Mudrika",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "kinana",
+   "name": "Kinana",
+   "arabic": "كنانة",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Khuzayma",
+   "evidence": [
+    "scholar",
+    "hadith"
+   ],
+   "refs": [
+    "Sahih Muslim, No. —"
+   ],
+   "note": "An authentic narration reports that Allah chose Kinana from the descendants of Ismail."
+  },
+  {
+   "id": "al-nadr",
+   "name": "al-Nadr",
+   "arabic": "النضر",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Kinana",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira. Scholars differ on whether the name Quraysh belongs to al-Nadr or to Fihr."
+  },
+  {
+   "id": "malik",
+   "name": "Malik",
+   "arabic": "مالك",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of al-Nadr",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "fihr",
+   "name": "Fihr",
+   "arabic": "فهر",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Malik; often named Quraysh",
+   "evidence": [
+    "scholar",
+    "disputed"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira. Scholars differ on whether the name Quraysh belongs to Fihr or to al-Nadr."
+  },
+  {
+   "id": "ghalib",
+   "name": "Ghalib",
+   "arabic": "غالب",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Fihr",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "luayy",
+   "name": "Lu'ayy",
+   "arabic": "لؤي",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Ghalib",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "kab",
+   "name": "Ka'b",
+   "arabic": "كعب",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Lu'ayy",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "murrah",
+   "name": "Murrah",
+   "arabic": "مرة",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Ka'b",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "kilab",
+   "name": "Kilab",
+   "arabic": "كلاب",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Murrah",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "qusayy",
+   "name": "Qusayy",
+   "arabic": "قصي",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Kilab",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "abd-manaf",
+   "name": "Abd Manaf",
+   "arabic": "عبد مناف",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Qusayy",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "hashim",
+   "name": "Hashim",
+   "arabic": "هاشم",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Abd Manaf; Banu Hashim",
+   "evidence": [
+    "scholar",
+    "hadith"
+   ],
+   "refs": [
+    "Sahih Muslim, No. —"
+   ],
+   "note": "An authentic narration reports that Allah chose Banu Hashim from Quraysh."
+  },
+  {
+   "id": "abd-al-muttalib",
+   "name": "Abd al-Muttalib",
+   "arabic": "عبد المطلب",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Hashim",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "abdullah",
+   "name": "Abdullah",
+   "arabic": "عبد الله",
+   "role": "ancestor",
+   "link": "scholar",
+   "honorific": "",
+   "subtitle": "Son of Abd al-Muttalib; father of the Prophet ﷺ",
+   "evidence": [
+    "scholar"
+   ],
+   "refs": [
+    "Ibn Hisham, al-Sira (edition to pin)"
+   ],
+   "note": "Recorded by the classical sira."
+  },
+  {
+   "id": "muhammad",
+   "name": "Muhammad",
+   "arabic": "محمد",
+   "role": "prophet",
+   "link": "scholar",
+   "honorific": "ﷺ",
+   "subtitle": "The Messenger of Allah and the seal of the prophets",
+   "evidence": [
+    "quran",
+    "scholar"
+   ],
+   "refs": [
+    "33:40",
+    "48:29",
+    "61:6"
+   ],
+   "note": "The Quran states that Muhammad ﷺ is the Messenger of Allah and the seal of the prophets (33:40)."
+  }
+ ],
+ "branches": [
+  {
+   "title": "Through Ishaq: the line of Yaqub (Israil) and the Children of Israel",
+   "after": "ibrahim",
+   "nodes": [
+    {
+     "id": "ishaq",
+     "name": "Ishaq",
+     "arabic": "إسحاق",
+     "role": "prophet",
+     "link": "quran",
+     "honorific": "(عليه السلام)",
+     "subtitle": "",
+     "evidence": [
+      "quran"
+     ],
+     "refs": [
+      "11:69–73",
+      "37:112–113"
+     ],
+     "note": "The Quran states that the angels gave Ibrahim and his wife glad tidings of Ishaq, and of Yaqub after him (11:71)."
+    },
+    {
+     "id": "yaqub",
+     "name": "Yaqub (Israil)",
+     "arabic": "يعقوب",
+     "role": "prophet",
+     "link": "quran",
+     "honorific": "(عليه السلام)",
+     "subtitle": "",
+     "evidence": [
+      "quran"
+     ],
+     "refs": [
+      "2:132–133",
+      "3:93",
+      "12:4–6"
+     ],
+     "note": "Also called Israil in the Quran (3:93). The Children of Israel are his descendants; the generations between are not established."
+    },
+    {
+     "id": "yusuf",
+     "name": "Yusuf",
+     "arabic": "يوسف",
+     "role": "prophet",
+     "link": "quran",
+     "honorific": "(عليه السلام)",
+     "subtitle": "",
+     "evidence": [
+      "quran"
+     ],
+     "refs": [
+      "12:4–6",
+      "12:3–101"
+     ],
+     "note": "Son of Yaqub, who tells him of his dream (12:4–6)."
+    },
+    {
+     "id": "musa-harun",
+     "name": "Musa and Harun",
+     "arabic": "موسى وهارون",
+     "role": "prophet",
+     "link": "quran",
+     "honorific": "(عليهما السلام)",
+     "subtitle": "",
+     "evidence": [
+      "quran"
+     ],
+     "refs": [
+      "19:51–53",
+      "28:3–46"
+     ],
+     "note": "Messengers to the Children of Israel. Harun is Musa's brother (19:53). The generations from Yaqub are not established."
+    },
+    {
+     "id": "dawud-sulayman",
+     "name": "Dawud and Sulayman",
+     "arabic": "داود وسليمان",
+     "role": "prophet",
+     "link": "quran",
+     "honorific": "(عليهما السلام)",
+     "subtitle": "",
+     "evidence": [
+      "quran"
+     ],
+     "refs": [
+      "27:15–16",
+      "38:30"
+     ],
+     "note": "Sulayman inherited from Dawud (27:16). The generations from Yaqub are not established."
+    },
+    {
+     "id": "zakariya-yahya",
+     "name": "Zakariya and Yahya",
+     "arabic": "زكريا ويحيى",
+     "role": "prophet",
+     "link": "quran",
+     "honorific": "(عليهما السلام)",
+     "subtitle": "",
+     "evidence": [
+      "quran"
+     ],
+     "refs": [
+      "19:2–15",
+      "3:38–41"
+     ],
+     "note": "Yahya was given to Zakariya as a son in his old age (19:7)."
+    },
+    {
+     "id": "maryam-isa",
+     "name": "Maryam and Isa",
+     "arabic": "مريم وعيسى",
+     "role": "prophet",
+     "link": "quran",
+     "honorific": "(عليهما السلام)",
+     "subtitle": "",
+     "evidence": [
+      "quran"
+     ],
+     "refs": [
+      "66:12",
+      "3:35–36",
+      "19:16–34"
+     ],
+     "note": "Maryam is the daughter of Imran (66:12). Isa is her son (3:45) and a messenger to the Children of Israel (3:49)."
+    }
+   ]
+  }
+ ]
+}

@@ -385,3 +385,14 @@ a.zq-iconbtn { text-decoration: none; }
 .zq-jt[data-motion="paused"] *, .zq-jt[data-motion="paused"] *::after { animation-play-state: paused !important; }
 /* Directional arrows flip with the reading direction. */
 [dir="rtl"] .zq-arrow { display: inline-block; transform: scaleX(-1); }
+
+/* Redesign foundation: one light theme with soft elevation (tokens shadow-raised*, shadow-inset).
+   Hairline borders stay for structure; depth carries hierarchy. */
+.zq-card { border-color: transparent; border-radius: 16px; box-shadow: var(--shadow-raised); }
+.zq-btn { border-radius: 8px; transition: background-color .15s, box-shadow .15s, transform .15s; }
+.zq-btn-primary { box-shadow: 4px 4px 10px rgba(22,27,29,0.28), -3px -3px 8px #fafbff; }
+.zq-btn-primary:active { box-shadow: var(--shadow-inset); }
+.zq-btn-secondary { border-color: transparent; box-shadow: var(--shadow-raised-sm); }
+.zq-btn-secondary:hover { background: var(--surface-sunken); }
+.zq-btn-secondary:active { box-shadow: var(--shadow-inset); }
+.zq-input { border-color: transparent; border-radius: 12px; background: var(--surface-sunken); box-shadow: var(--shadow-inset); }

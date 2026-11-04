@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ReadingPage } from "@/components/shell/ReadingPage";
-import { EmptyState } from "@/components/ui/misc";
 import { loadLineage } from "@/lib/data/lineage";
 import { genealogyStrings } from "@/lib/i18n/modules/atlas";
 import { lineageStrings } from "@/lib/i18n/modules/lineage";
@@ -9,10 +8,16 @@ import { isLineageClass, type LineageClass } from "@/lib/lineage/classes";
 import { FIXTURE_END, FIXTURE_START } from "@/lib/lineage/fixtures";
 import { LINEAGE_END, LINEAGE_START } from "@/lib/lineage/path";
 import { LineageView } from "./LineageView";
+import { draftLineage } from "@/content/draftAtlas";
+import { LineageLine } from "@/components/redesign/LineageLine";
+import { redesignStrings } from "@/lib/i18n/modules/redesign";
+import { englishContent } from "@/lib/i18n/locales";
 
 export interface LineageParams {
   classes?: string;
   empty?: string;
+  /** ?draft=1 shows the labelled draft line even when fixtures or published data exist (automated tests, reviewers). */
+  draft?: string;
 }
 
 export function lineageMetadata(locale: string): Metadata {
@@ -50,10 +55,9 @@ export async function LineagePage({ locale, params }: { locale: string; params: 
       <div className="zq-pagebody">
         <ViewSwitch locale={locale} active="lineage" />
         {fixture ? <p className="ln-fixture">{t.fixture}</p> : null}
-        {data.source === "none" ? (
-          <EmptyState title={g.notConnected}>
-            <p>{t.emptyBody}</p>
-          </EmptyState>
+        {data.source === "none" || params.draft === "1" ? (
+          // Nothing reviewed is published: the labelled draft line, never an invented generation.
+          <LineageLine spine={draftLineage().spine} branches={draftLineage().branches} s={redesignStrings(locale).lineage} englishAttrs={englishContent(locale)} />
         ) : (
           <LineageView doc={data.doc} counts={data.counts} start={fixture && data.doc.people.length ? FIXTURE_START : LINEAGE_START} end={fixture && data.doc.people.length ? FIXTURE_END : LINEAGE_END} initialClasses={initial} />
         )}
