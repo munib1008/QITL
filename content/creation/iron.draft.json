@@ -1,0 +1,178 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "iron",
+  "category": "heavens_earth",
+  "name_en": "Iron",
+  "name_ar": "الحديد",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Iron (hadid) is named as something God sent down, in the same verse as the messengers, the Book and the balance.",
+      "refs": [
+        {
+          "surah": 57,
+          "from": 25,
+          "to": 25
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God says: 'We sent down iron'. The verse gives no further account of how or from where, and this profile adds nothing to that wording.",
+      "refs": [
+        {
+          "surah": 57,
+          "from": 25,
+          "to": 25
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "Iron holds strong might and benefits for people, and God sent it so that He would know who helps Him and His messengers unseen.",
+      "refs": [
+        {
+          "surah": 57,
+          "from": 25,
+          "to": 25
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "Iron has great might in it, and it can also be made soft: God made iron soft for Dawud. In the story of Dhul-Qarnayn, sheets of iron were blown on until they became like fire.",
+      "refs": [
+        {
+          "surah": 57,
+          "from": 25,
+          "to": 25
+        },
+        {
+          "surah": 34,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 18,
+          "from": 96,
+          "to": 96
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "In Dawud's case iron was made soft so that he could make full coats of armour and measure the links well.",
+      "refs": [
+        {
+          "surah": 34,
+          "from": 10,
+          "to": 11
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "Iron is not a power apart from God: it is among what He sent down. The verse that names it ends by saying God is strong and mighty. People told to be stones or iron are still raised by the One who first made them.",
+      "refs": [
+        {
+          "surah": 57,
+          "from": 25,
+          "to": 25
+        },
+        {
+          "surah": 17,
+          "from": 50,
+          "to": 51
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "There are benefits in iron for people, and also might for war. Dawud made armour from it, and rods of iron are named among the punishments of the Fire.",
+      "refs": [
+        {
+          "surah": 57,
+          "from": 25,
+          "to": 25
+        },
+        {
+          "surah": 34,
+          "from": 11,
+          "to": 11
+        },
+        {
+          "surah": 22,
+          "from": 21,
+          "to": 21
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "Dhul-Qarnayn asked for sheets of iron, had them levelled between the two sides, told them to blow until it became like fire, and then asked for molten metal to pour over it.",
+      "refs": [
+        {
+          "surah": 18,
+          "from": 96,
+          "to": 96
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran does not date when iron was sent down or say where it falls in the order of creation."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where iron is found or where it was sent down to."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): 'Sent down' is the verse's own wording. This profile does not claim what it means for how iron came to the earth, and any such comparison belongs to the separate Quran & Science module.",
+      "refs": [
+        {
+          "surah": 57,
+          "from": 25,
+          "to": 25
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The verse puts iron beside the Book and the balance, so strength is tied to justice: power is a trust that is tested by whether it helps God and His messengers.",
+      "refs": [
+        {
+          "surah": 57,
+          "from": 25,
+          "to": 25
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Hadid is iron; ba's is might or violence; anzalna means We sent down; zubar are sheets or pieces of iron; sabighat are full coats of armour; maqami' are rods; qitr is molten metal.",
+      "refs": [
+        {
+          "surah": 57,
+          "from": 25,
+          "to": 25
+        },
+        {
+          "surah": 18,
+          "from": 96,
+          "to": 96
+        },
+        {
+          "surah": 34,
+          "from": 11,
+          "to": 11
+        },
+        {
+          "surah": 22,
+          "from": 21,
+          "to": 21
+        }
+      ]
+    }
+  }
+}

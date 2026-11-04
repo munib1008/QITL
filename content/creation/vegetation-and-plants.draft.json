@@ -1,0 +1,282 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "vegetation-and-plants",
+  "category": "heavens_earth",
+  "name_en": "Vegetation and Plants",
+  "name_ar": "النبات",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Plants (nabat) are brought up from the earth by God with water in many kinds: grain, date palms, olives, vines, pomegranates, fruit and pasture, many of them in pairs.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 99,
+          "to": 99
+        },
+        {
+          "surah": 80,
+          "from": 27,
+          "to": 31
+        },
+        {
+          "surah": 20,
+          "from": 53,
+          "to": 53
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God sends water down from the sky and brings out with it the growth of every kind of plant. He is the one who splits open the grain and the date-stone.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 99,
+          "to": 99
+        },
+        {
+          "surah": 6,
+          "from": 95,
+          "to": 95
+        },
+        {
+          "surah": 22,
+          "from": 5,
+          "to": 5
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "Plants are provision for people and their animals, and a sign for people who reflect.",
+      "refs": [
+        {
+          "surah": 80,
+          "from": 32,
+          "to": 32
+        },
+        {
+          "surah": 16,
+          "from": 11,
+          "to": 11
+        },
+        {
+          "surah": 36,
+          "from": 33,
+          "to": 33
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "Plants are in pairs of every kind, and fruits come in pairs and in different colours. A crop grows, turns yellow and becomes crumbled stubble.",
+      "refs": [
+        {
+          "surah": 36,
+          "from": 36,
+          "to": 36
+        },
+        {
+          "surah": 13,
+          "from": 3,
+          "to": 3
+        },
+        {
+          "surah": 35,
+          "from": 27,
+          "to": 27
+        },
+        {
+          "surah": 57,
+          "from": 20,
+          "to": 20
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "The earth stirs and swells when water comes down on it. A tree comes out of the mount of Sinai bearing oil, and God made fire from the green tree.",
+      "refs": [
+        {
+          "surah": 41,
+          "from": 39,
+          "to": 39
+        },
+        {
+          "surah": 23,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 36,
+          "from": 80,
+          "to": 80
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "Growth depends on water and on God's permission: good land brings out its plants by its Lord's leave, and plants dry up and become scattered stubble that the winds blow away.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 58,
+          "to": 58
+        },
+        {
+          "surah": 18,
+          "from": 45,
+          "to": 45
+        },
+        {
+          "surah": 57,
+          "from": 20,
+          "to": 20
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Plants are food, fruit, oil, fodder and fire for people. They are told to eat of the fruit, to give its due on the day of harvest, and not to waste.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 141,
+          "to": 141
+        },
+        {
+          "surah": 16,
+          "from": 10,
+          "to": 11
+        },
+        {
+          "surah": 36,
+          "from": 80,
+          "to": 80
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "Adam and his wife were told not to go near a tree. Maryam was told to shake the trunk of the palm so that fresh dates would fall. A plant of gourd was caused to grow over Yunus.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 19,
+          "to": 22
+        },
+        {
+          "surah": 19,
+          "from": 25,
+          "to": 25
+        },
+        {
+          "surah": 37,
+          "from": 146,
+          "to": 146
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "In one passage the earth is spread out and then its water and pasture are brought out of it.",
+      "refs": [
+        {
+          "surah": 79,
+          "from": 30,
+          "to": 31
+        }
+      ]
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "On the earth, in gardens, in fields, and in one verse on the mount of Sinai.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 141,
+          "to": 141
+        },
+        {
+          "surah": 23,
+          "from": 19,
+          "to": 20
+        },
+        {
+          "surah": 80,
+          "from": 30,
+          "to": 30
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The phrase 'pairs of plants' is quoted as the Quran states it. This profile does not read it as a claim about plant reproduction or take it beyond what the verses say.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 53,
+          "to": 53
+        },
+        {
+          "surah": 36,
+          "from": 36,
+          "to": 36
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The verses tie growth to gratitude and to a share for others at harvest, and use the dried plant as a picture of the passing of worldly life.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 141,
+          "to": 141
+        },
+        {
+          "surah": 57,
+          "from": 20,
+          "to": 20
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Nabat means plant growth; zar' is crops; habb is grain; nawa is a date-stone; zawj bahij is a beautiful pair; hutam is crumbled stubble; jannat are gardens; nakhl is date palms; zaytun is olives.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 99,
+          "to": 99
+        },
+        {
+          "surah": 6,
+          "from": 95,
+          "to": 95
+        },
+        {
+          "surah": 22,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 57,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 36,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 16,
+          "from": 11,
+          "to": 11
+        }
+      ]
+    }
+  }
+}

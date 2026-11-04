@@ -1,0 +1,255 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "the-sea-and-rivers",
+  "category": "heavens_earth",
+  "name_en": "The Sea and Rivers",
+  "name_ar": "البحر والأنهار",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The sea (bahr, yamm) and the rivers (anhar) are created and subjected by God. The Quran speaks of two seas, one sweet and fresh, the other salt and bitter.",
+      "refs": [
+        {
+          "surah": 14,
+          "from": 32,
+          "to": 32
+        },
+        {
+          "surah": 25,
+          "from": 53,
+          "to": 53
+        },
+        {
+          "surah": 35,
+          "from": 12,
+          "to": 12
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God subjected the sea for people, made rivers in the earth, set mountains in it, and made a barrier between the two seas. How the seas and rivers came to be is not described beyond this.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 27,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 13,
+          "from": 3,
+          "to": 3
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "The sea is subjected so that people eat fresh flesh from it, take out ornaments to wear, see ships moving through it, seek God's bounty and give thanks.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 35,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 45,
+          "from": 12,
+          "to": 12
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "Two seas, one sweet and fresh, one salt and bitter, meet with a barrier between them that they do not cross. Rivers run through the earth.",
+      "refs": [
+        {
+          "surah": 25,
+          "from": 53,
+          "to": 53
+        },
+        {
+          "surah": 55,
+          "from": 19,
+          "to": 20
+        },
+        {
+          "surah": 13,
+          "from": 3,
+          "to": 3
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "Pearls and coral come out of them, and ships raised up in the sea like landmarks sail on it. At sea, winds can carry ships gently or a storm wind and waves can come from every side.",
+      "refs": [
+        {
+          "surah": 55,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 55,
+          "from": 24,
+          "to": 24
+        },
+        {
+          "surah": 10,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "The seas do not cross the barrier set between them. If the sea were ink for the words of God, it would run out before His words ran out, even if another like it were added.",
+      "refs": [
+        {
+          "surah": 55,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 18,
+          "from": 109,
+          "to": 109
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Ships sail the sea for what benefits people; caught in danger at sea, people call on God sincerely; and the sea provides food and ornaments.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 164,
+          "to": 164
+        },
+        {
+          "surah": 10,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 16,
+          "from": 14,
+          "to": 14
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "God told Musa to strike a dry path for his people through the sea. Musa's mother was told to put her baby into the water (yamm) and not to fear or grieve.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 77,
+          "to": 77
+        },
+        {
+          "surah": 28,
+          "from": 7,
+          "to": 7
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran does not say when in the order of creation the seas and rivers were made."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "Rivers run through the earth, and the two seas meet with a barrier between them. People travel on land and sea and are guided in their darkness.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 55,
+          "from": 19,
+          "to": 20
+        },
+        {
+          "surah": 6,
+          "from": 97,
+          "to": 97
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The barrier between the two seas is given in the Quran's own words. This profile does not name places where it is thought to be seen, or explain it by modern findings.",
+      "refs": [
+        {
+          "surah": 25,
+          "from": 53,
+          "to": 53
+        },
+        {
+          "surah": 55,
+          "from": 20,
+          "to": 20
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The sea is both a benefit and a danger in the verses, a reminder that people turn to God when the benefit is withdrawn, and to give thanks when they are saved.",
+      "refs": [
+        {
+          "surah": 10,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 16,
+          "from": 14,
+          "to": 14
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Bahr is sea; yamm is a large body of water; nahr (plural anhar) is a river; barzakh is a barrier; furat is sweet; ujaj is salt and bitter; fulk is a ship; lu'lu' is pearl; marjan is coral.",
+      "refs": [
+        {
+          "surah": 25,
+          "from": 53,
+          "to": 53
+        },
+        {
+          "surah": 28,
+          "from": 7,
+          "to": 7
+        },
+        {
+          "surah": 13,
+          "from": 3,
+          "to": 3
+        },
+        {
+          "surah": 55,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 16,
+          "from": 14,
+          "to": 14
+        }
+      ]
+    }
+  }
+}
