@@ -13,7 +13,7 @@ const AR = "نص تجريبي";
 const URL1 = "https://example.test/source";
 
 let db: Db;
-let editor: string, editor2: string, sci: string, sch: string, both: string, admin: string, plain: string;
+let editor: string, sci: string, sch: string, both: string, admin: string, plain: string;
 let n = 0;
 
 const sel = (sql: string, p: unknown[] = []) => db.admin<Record<string, unknown>>(sql, p);
@@ -62,7 +62,6 @@ async function publishedTopic(): Promise<string> {
 beforeAll(async () => {
   db = await createDb({ supabaseDefaults: true });
   editor = await db.createUser("editor@test.local", ["editor"]);
-  editor2 = await db.createUser("editor2@test.local", ["editor"]);
   sci = await db.createUser("sci@test.local", ["science_reviewer"]);
   sch = await db.createUser("sch@test.local", ["scholarly_reviewer"]);
   both = await db.createUser("both@test.local", ["editor", "science_reviewer", "scholarly_reviewer"]);
