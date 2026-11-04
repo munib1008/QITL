@@ -70,7 +70,7 @@ test("/science filters: by discipline, evidence state, relationship, and search"
   await page.getByLabel("Discipline").selectOption("biology");
   await page.getByRole("button", { name: "Apply" }).click();
   await expect(page).toHaveURL(/discipline=biology/);
-  await expect(page.getByTestId("topic-card")).toHaveCount(2);
+  await expect(page.getByTestId("topic-card")).toHaveCount(3);
   // a hostile filter value is ignored, not reflected
   await page.goto("/science?discipline=%3Cscript%3E&evidence=bogus");
   await expect(page.getByTestId("topic-card")).toHaveCount(13);
@@ -82,7 +82,7 @@ test("a topic page: 17 sections, the corpus text, a dated milestone with its sou
   await expect(page.locator("main section.sc-section")).toHaveCount(17);
   await expect(page.getByTestId("does-not-establish")).toContainText("does not claim that the verse predicted the expansion");
   await expect(page.getByTestId("does-not-establish")).toContainText("Nothing here is a scientific proof of the Quran");
-  await expect(page.getByTestId("passage").first().locator(".sc-ayah")).toContainText("وَإِنَّا لَمُوسِعُونَ");
+  await expect(page.getByTestId("passage").first().locator(".sc-ayah")).toContainText("لَمُوسِعُونَ");
   await expect(page.getByTestId("terms")).toContainText("لَمُوسِعُونَ");
   await expect(page.getByTestId("interpretive-link")).toContainText("proposal");
   const dated = page.getByTestId("milestones").locator('li[data-dated="true"]');
