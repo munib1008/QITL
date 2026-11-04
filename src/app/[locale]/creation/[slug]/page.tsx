@@ -7,6 +7,7 @@ import { CreationVisual } from "@/components/creation/CreationVisual";
 import { ProfileView } from "@/components/creation/ProfileView";
 import { CATEGORIES, getCreationProfile } from "@/lib/data/creation";
 import { creationStrings } from "@/lib/i18n/modules/creation";
+import { RelatedKnowledge } from "@/components/graph/RelatedKnowledge";
 import { DraftFields } from "@/components/sourced/DraftFields";
 import { creationDrafts } from "@/lib/sourced/data";
 import { CREATION_FIELDS } from "@/lib/sourced/kinds";
@@ -52,6 +53,7 @@ export default async function CreationProfilePage({ params }: { params: Promise<
       >
         <div className="zq-pagebody cr-body">
           <DraftFields fields={draft.fields} order={CREATION_FIELDS} labels={t.profile.fields} locale={raw} testId="creation-draft" />
+          <RelatedKnowledge kind="creation" slug={draft.slug} locale={raw} />
         </div>
       </ReadingPage>
     );

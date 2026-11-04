@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BASE, LtaShell, NoRecords } from "@/components/lifestyle/Shell";
 import { CategoryBadge, ReconstructionContainer, RecordMeta } from "@/components/lifestyle/Evidence";
+import { RelatedKnowledge } from "@/components/graph/RelatedKnowledge";
 import { DraftFields } from "@/components/lifestyle/DraftFields";
 import { NuhNote } from "@/components/lifestyle/NuhNote";
 import { lifestyleDraft } from "@/lib/lifestyle/draft-data";
@@ -63,7 +64,10 @@ export default async function ProphetLifePage({ params }: { params: Promise<{ lo
               {slugs.length > 1 ? ` · ${slug.charAt(0).toUpperCase()}${slug.slice(1)}` : ""}
             </h2>
             {!prof && draft ? (
-              <DraftFields draft={draft} t={t} locale={locale} />
+              <>
+                <DraftFields draft={draft} t={t} locale={locale} />
+                <RelatedKnowledge kind="lifestyle" slug={draft.slug} locale={locale} />
+              </>
             ) : !prof ? (
               <>
                 <NoRecords t={t} result={res} title={t.prophet.profileDraft} />

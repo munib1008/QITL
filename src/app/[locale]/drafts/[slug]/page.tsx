@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { RelatedKnowledge } from "@/components/graph/RelatedKnowledge";
 import { DraftBanner } from "@/components/drafts/DraftBanner";
 import { DraftReader } from "@/components/drafts/DraftReader";
 import { PreReviewPanel } from "@/components/drafts/PreReviewPanel";
@@ -58,6 +59,7 @@ export default async function DraftPage({ params, searchParams }: { params: Prom
       <DraftBanner locale={locale} preReviewLink />
       <LinkedMedia type="story" id={story.slug} locale={locale as Locale} />
       <DraftReader chapters={story.chapters} quran={quranOf(story)} uncertainties={story.uncertainties_en} initialMode={parseMode(typeof mode === "string" ? mode : null) ?? DEFAULT_MODE} />
+      <RelatedKnowledge kind="story" slug={story.slug} locale={locale} />
       <PreReviewPanel locale={locale} pre={story.preReview} checklist={DRAFT_INDEX.checklist} />
       <QuranAttribution src={DRAFT_INDEX.quranSource} />
     </ReadingPage>
