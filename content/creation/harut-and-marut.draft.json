@@ -1,0 +1,131 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "harut-and-marut",
+  "category": "angels",
+  "name_en": "Harut and Marut",
+  "name_ar": "هاروت وماروت",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Harut and Marut are named together, as the pair of angels upon whom something was sent down in Babil.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not state what they were made from, when they were made, or why they were sent to Babil."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "The pair present themselves as a trial. They teach no one until they have said that they are only a trial and that the person should not disbelieve.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        }
+      ]
+    },
+    "nature": {
+      "status": "not_established",
+      "note_en": "Beyond calling them the pair of angels, the verse does not describe their nature, form or rank."
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "People learn from the pair that by which they cause separation between a man and his wife.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "The harm done with what is learned reaches no one except by God's permission, and it is said that what people learn harms them and does not benefit them.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "The pair warn each person before teaching. People who learn what harms them, and who buy it, have no share in the Hereafter, and the verse calls wretched what they sold themselves for.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The pair are mentioned in the passage about what people followed concerning the kingdom of Sulayman, where the devils disbelieved and taught sorcery while Sulayman did not disbelieve.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The verse gives no date for when this was sent down, only that people followed it."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "The verse places what was sent down to the pair in Babil.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Longer stories about why the pair came down, or what became of them, are not in the Quran. The verse gives only the warning, the teaching and the outcome for those who learn.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The pair's warning before teaching may be read as a reminder that knowledge can be a test, and that harm from it is bounded by God's permission and ends in loss for those who choose it.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "The Quran calls the two al-malakayn and has them describe themselves as fitnah (a trial). It uses sihr (sorcery) for what the devils taught in the same verse.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        }
+      ]
+    }
+  }
+}
