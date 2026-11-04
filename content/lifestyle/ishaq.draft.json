@@ -1,0 +1,148 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "ishaq",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for Ishaq and no age at any point in his life."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where Ishaq lived or where the glad tidings of his birth were given."
+    },
+    "community": {
+      "status": "not_established",
+      "note_en": "The Quran does not say which people Ishaq was sent to or lived among."
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Ishaq. It says his parents were old when the glad tidings came, not how long he lived."
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "Ishaq and Yaqub were inspired to do good deeds, to establish prayer and to give zakat.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 73,
+          "to": 73
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "Ishaq is described as a prophet from among the righteous, and with Yaqub as leaders who guide by God's command.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 112,
+          "to": 112
+        },
+        {
+          "surah": 21,
+          "from": 73,
+          "to": 73
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Ishaq ate or drank."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding in the account of Ishaq."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Ishaq."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe where or how Ishaq lived."
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention any means of travel for Ishaq."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "Messengers gave Ibrahim's wife the glad tidings of Ishaq and, after Ishaq, Yaqub; among the offspring of Ibrahim and Ishaq, some do good and some clearly wrong themselves.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 71,
+          "to": 71
+        },
+        {
+          "surah": 37,
+          "from": 113,
+          "to": 113
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe customs or leisure in the life of Ishaq."
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe teaching or learning in the account of Ishaq."
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment in the account of Ishaq."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate of any land of Ishaq."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "Ishaq and Yaqub were worshippers of God, and God calls Ibrahim, Ishaq and Yaqub His servants, made pure by the remembrance of the abode.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 73,
+          "to": 73
+        },
+        {
+          "surah": 38,
+          "from": 45,
+          "to": 46
+        }
+      ]
+    },
+    "challenges": {
+      "status": "not_established",
+      "note_en": "The Quran gives no event, trial or opposition in the account of Ishaq."
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran names Ishaq mostly beside Ibrahim and Yaqub and gives no biography, so a reader should not add a wife, children, a place or a lifespan from other sources as if the Quran stated them.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 71,
+          "to": 71
+        },
+        {
+          "surah": 38,
+          "from": 45,
+          "to": 45
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the last verse of these passages reminds readers that blessing on a line does not settle how each person in it behaves.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 113,
+          "to": 113
+        }
+      ]
+    }
+  }
+}

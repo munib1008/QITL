@@ -1,0 +1,230 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "adam",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for the creation of Adam or for his time in the garden or on the earth."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where the garden was, nor which part of the earth Adam and his wife went down to."
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "The Quran later addresses humankind as the children of Adam, and tells Adam and his wife that on the earth some of them would be enemies of others.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 24,
+          "to": 24
+        },
+        {
+          "surah": 7,
+          "from": 26,
+          "to": 27
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Adam and no length for his stay in the garden or on the earth."
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "In the garden God told Adam and his wife to live there and to take of it freely, wherever they wished, with one tree they were not to approach.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 35,
+          "to": 35
+        },
+        {
+          "surah": 7,
+          "from": 19,
+          "to": 19
+        }
+      ]
+    },
+    "occupation": {
+      "status": "not_established",
+      "note_en": "The Quran names no trade or work for Adam. It speaks of a successor placed on the earth and of names taught to him, which is not stated as an occupation."
+    },
+    "foods_beverages": {
+      "status": "stated",
+      "text_en": "In the garden Adam and his wife were told to take of it freely, and Adam was told he would not go hungry or be thirsty there; one tree was forbidden to them.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 35,
+          "to": 35
+        },
+        {
+          "surah": 20,
+          "from": 118,
+          "to": 119
+        }
+      ]
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe any farming or herding by Adam."
+    },
+    "clothing_care": {
+      "status": "stated",
+      "text_en": "In the garden Adam was told he would not be without clothing. After the slip, he and his wife began to cover themselves with leaves of the garden.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 118,
+          "to": 118
+        },
+        {
+          "surah": 7,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "housing": {
+      "status": "stated",
+      "text_en": "God told Adam to dwell in the garden with his wife. After the descent, the earth was to be a place to live and provision for a time.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 35,
+          "to": 35
+        },
+        {
+          "surah": 7,
+          "from": 24,
+          "to": 24
+        }
+      ]
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention any means of travel for Adam. It speaks of a descent to the earth without describing how it happened."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "Adam had a wife, and God warned Adam that the one who refused to prostrate was an enemy to him and to his wife.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 35,
+          "to": 35
+        },
+        {
+          "surah": 20,
+          "from": 116,
+          "to": 117
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe customs or leisure in the life of Adam."
+    },
+    "education": {
+      "status": "stated",
+      "text_en": "God taught Adam the names, all of them, and when God told him to inform the angels of the names, he did so.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 31,
+          "to": 31
+        },
+        {
+          "surah": 2,
+          "from": 33,
+          "to": 33
+        }
+      ]
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment in the account of Adam."
+    },
+    "climate": {
+      "status": "stated",
+      "text_en": "The Quran describes the garden as a place where Adam would not suffer from the sun's heat. It gives no description of the climate of the earth he came down to.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 119,
+          "to": 119
+        }
+      ]
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "After the slip, Adam and his wife said they had wronged themselves and asked for forgiveness and mercy; Adam received words from his Lord and God accepted his repentance.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 23,
+          "to": 23
+        },
+        {
+          "surah": 2,
+          "from": 37,
+          "to": 37
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "Satan whispered to Adam and his wife and led them down by deception; they tasted of the tree they had been told to avoid, and God called them back to His warning.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 20,
+          "to": 22
+        },
+        {
+          "surah": 20,
+          "from": 120,
+          "to": 121
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran describes Adam's origin in different words in different places (dust, clay, dry clay of moulded mud), and a reader should keep each wording as given rather than merge them or add detail from other sources.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 59,
+          "to": 59
+        },
+        {
+          "surah": 15,
+          "from": 26,
+          "to": 26
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages place a warning before the mistake and repentance, acceptance and guidance after it, so that returning to God is presented as open after a slip.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 117,
+          "to": 117
+        },
+        {
+          "surah": 2,
+          "from": 37,
+          "to": 37
+        },
+        {
+          "surah": 20,
+          "from": 122,
+          "to": 122
+        }
+      ]
+    }
+  }
+}

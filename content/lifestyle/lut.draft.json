@@ -1,0 +1,204 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "lut",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for Lut and says nothing about when he lived."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran speaks of the town of Lut's people without naming it, and says it lies on an established road (15:76)."
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "Lut was a brother to his people, who denied the messengers, and he told them he was a trustworthy messenger to them.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 160,
+          "to": 162
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Lut and no length of time for which he called his people."
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "Lut called his people to be mindful of God and obey him, said he asked them for no payment, and asked them about their deeds.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 163,
+          "to": 164
+        },
+        {
+          "surah": 7,
+          "from": 80,
+          "to": 80
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "Lut was a trustworthy messenger to his people, and the Quran says he was among the messengers.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 162,
+          "to": 162
+        },
+        {
+          "surah": 37,
+          "from": 133,
+          "to": 133
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Lut or his people ate or drank."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding in the account of Lut."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Lut or his people."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the house of Lut. It speaks of his household and of a town, not of buildings."
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran tells Lut to travel with his family in part of the night (11:81) but describes no means of travel."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "Lut had a household, and his wife is named among those who stayed behind. In his words to the crowd he speaks of his daughters; the Quran gives those words only.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 83,
+          "to": 83
+        },
+        {
+          "surah": 11,
+          "from": 78,
+          "to": 78
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "stated",
+      "text_en": "Lut said his people approached men with desire instead of women, a shameful deed none had done before them, and did wrong in their gathering place.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 80,
+          "to": 81
+        },
+        {
+          "surah": 29,
+          "from": 29,
+          "to": 29
+        }
+      ]
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran says God gave Lut judgement and knowledge (21:74) but describes no teaching or schooling."
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment in the account of Lut."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the ordinary climate of the land of Lut."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "Lut told his people to be mindful of God and obey him, and he turned in prayer to his Lord to save him and his family and to help him against the people who spread corruption.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 163,
+          "to": 163
+        },
+        {
+          "surah": 26,
+          "from": 169,
+          "to": 169
+        },
+        {
+          "surah": 29,
+          "from": 30,
+          "to": 30
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "His people threatened to drive him out of the town and challenged him to bring God's punishment; they pressed him about his guest, and Lut wished he had strength against them.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 167,
+          "to": 167
+        },
+        {
+          "surah": 29,
+          "from": 29,
+          "to": 29
+        },
+        {
+          "surah": 54,
+          "from": 37,
+          "to": 37
+        },
+        {
+          "surah": 11,
+          "from": 80,
+          "to": 80
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran refers to the town of Lut without naming it and gives his words about his guests and daughters without further explanation, so a reader should not supply a name, a place or a motive from other sources.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 82,
+          "to": 82
+        },
+        {
+          "surah": 11,
+          "from": 78,
+          "to": 78
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages show Lut beginning with a call to be mindful of God and a statement that he asks no payment, and turning to his Lord in prayer when threatened.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 163,
+          "to": 164
+        },
+        {
+          "surah": 26,
+          "from": 169,
+          "to": 169
+        }
+      ]
+    }
+  }
+}

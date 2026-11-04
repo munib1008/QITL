@@ -1,0 +1,245 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "salih",
+  "fields": {
+    "period": {
+      "status": "stated",
+      "text_en": "The Quran says God made Salih's people successors after ʿĀd and settled them in the land. It gives no date or length of time.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 74,
+          "to": 74
+        }
+      ]
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The verses name no land for Salih's people. They speak only of plains, mountains, gardens and springs in the land where they were settled."
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "God sent to Thamud their brother Salih, who told them to worship God and said they had no god other than Him.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 73,
+          "to": 73
+        },
+        {
+          "surah": 11,
+          "from": 61,
+          "to": 61
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Salih and no length of time for which he called Thamud."
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "Salih called Thamud to worship God, told them to ask forgiveness and turn back to Him, and warned them not to harm the she-camel of God.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 73,
+          "to": 73
+        },
+        {
+          "surah": 11,
+          "from": 61,
+          "to": 61
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "Salih described himself as a trustworthy messenger to Thamud who asked them for no payment, his reward being only with the Lord of the worlds.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 143,
+          "to": 143
+        },
+        {
+          "surah": 26,
+          "from": 145,
+          "to": 145
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran mentions crops and palm trees but does not say what Salih or his people ate or drank."
+    },
+    "farming_livestock": {
+      "status": "stated",
+      "text_en": "Salih asked whether they would be left secure in gardens and springs, crops and palm trees. The she-camel had a share of water and they had a share on a known day.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 146,
+          "to": 148
+        },
+        {
+          "surah": 26,
+          "from": 155,
+          "to": 155
+        }
+      ]
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Salih or his people."
+    },
+    "housing": {
+      "status": "stated",
+      "text_en": "Salih said they took palaces from the plains and carved houses out of the mountains. Later, the Quran says their houses stand empty because of their wrongdoing.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 74,
+          "to": 74
+        },
+        {
+          "surah": 26,
+          "from": 149,
+          "to": 149
+        },
+        {
+          "surah": 27,
+          "from": 52,
+          "to": 52
+        }
+      ]
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran calls the she-camel a sign and a trial, not a mount, and describes no means of travel for Thamud."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "The Quran mentions a leading group who were arrogant and weak believers, and nine groups in the city who spread corruption and planned to attack Salih and his family by night.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 75,
+          "to": 75
+        },
+        {
+          "surah": 27,
+          "from": 48,
+          "to": 49
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "stated",
+      "text_en": "Thamud held to the worship of their fathers, and said they took an ill omen from Salih and those with him.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 62,
+          "to": 62
+        },
+        {
+          "surah": 27,
+          "from": 47,
+          "to": 47
+        }
+      ]
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe teaching or learning among Thamud."
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment in the account of Salih."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the ordinary climate of the land of Thamud."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "Salih told Thamud to worship God and to ask Him for forgiveness; they asked whether he forbade them to worship what their fathers worshipped.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 11,
+          "from": 62,
+          "to": 62
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "Thamud called Salih bewitched and an insolent liar, hamstrung the she-camel despite the warning, and nine groups planned to attack him and his family by night.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 153,
+          "to": 153
+        },
+        {
+          "surah": 54,
+          "from": 25,
+          "to": 25
+        },
+        {
+          "surah": 7,
+          "from": 77,
+          "to": 77
+        },
+        {
+          "surah": 27,
+          "from": 48,
+          "to": 49
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran describes palaces, rock-cut houses, gardens and springs only in Salih's words to his people and names no place in the verses used here, so a reader should not add a location from other sources.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 74,
+          "to": 74
+        },
+        {
+          "surah": 26,
+          "from": 146,
+          "to": 149
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages link what Thamud had been given with the call not to spread corruption, and present Salih answering opposition by saying he conveyed his Lord's message and advised them.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 74,
+          "to": 74
+        },
+        {
+          "surah": 26,
+          "from": 150,
+          "to": 152
+        },
+        {
+          "surah": 7,
+          "from": 79,
+          "to": 79
+        }
+      ]
+    }
+  }
+}
