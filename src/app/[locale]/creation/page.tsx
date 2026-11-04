@@ -9,6 +9,8 @@ import { MisconceptionExplorer, type MisconceptionItem } from "@/components/crea
 import { Dual } from "@/components/creation/parts";
 import { atlasRefs, getAtlas, type Atlas } from "@/lib/data/creation";
 import { creationStrings } from "@/lib/i18n/modules/creation";
+import { CreationDraftIndex } from "@/components/sourced/CreationDraftIndex";
+import { draftPreviewStrings } from "@/lib/i18n/modules/draftPreview";
 
 export const revalidate = 300;
 
@@ -124,6 +126,8 @@ export default async function CreationHome({ params }: { params: Promise<{ local
             <p className="zq-meta">{t.misconceptions.help}</p>
             <MisconceptionExplorer items={misconceptions} locale={locale} />
           </section>
+
+          <CreationDraftIndex locale={locale} heading={draftPreviewStrings(raw).listTitle} />
 
           <SourcePanel refs={atlasRefs(atlas)} t={t} />
         </div>

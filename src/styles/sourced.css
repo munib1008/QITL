@@ -1,0 +1,8 @@
+/* Sourced AI drafts (Creation Atlas profiles, Life Guidance lessons): one card per field, stated with its verses or "not established". */
+.sd-fields { list-style: none; margin: 16px 0; padding: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.sd-field { padding: 14px 16px; border: 1px solid var(--glass-stroke, var(--border)); border-radius: var(--radius-md, 10px); background: var(--glass-fill, transparent); }
+.sd-field h3 { margin: 0 0 6px; font: 600 15px/22px var(--font-sans); color: var(--ink); }
+.sd-field p { margin: 0; font: 400 15px/24px var(--font-sans); color: var(--ink); }
+.sd-field[data-known="false"] p { color: var(--ink-muted); }
+.sd-refs { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 8px; }
+.sd-index { list-style: none; margin: 8px 0 16px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; }

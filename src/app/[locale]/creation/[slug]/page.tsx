@@ -7,6 +7,9 @@ import { CreationVisual } from "@/components/creation/CreationVisual";
 import { ProfileView } from "@/components/creation/ProfileView";
 import { CATEGORIES, getCreationProfile } from "@/lib/data/creation";
 import { creationStrings } from "@/lib/i18n/modules/creation";
+import { DraftFields } from "@/components/sourced/DraftFields";
+import { creationDrafts } from "@/lib/sourced/data";
+import { CREATION_FIELDS } from "@/lib/sourced/kinds";
 
 export const revalidate = 300;
 
@@ -28,6 +31,31 @@ export default async function CreationProfilePage({ params }: { params: Promise<
   const t = creationStrings(raw);
   if (!SLUG.test(slug)) notFound();
   const r = await getCreationProfile(slug);
+  const draft = creationDrafts().get(slug);
+  if (draft && !(r.state === "ok" && r.atlas?.profiles[0])) {
+    const cat = CATEGORIES.find((c) => c.id === draft.category);
+    return (
+      <ReadingPage
+        locale={raw}
+        crumbs={[{ href: "/creation", label: t.title }, { label: locale === "ar" ? draft.name_ar : draft.name_en }]}
+        kicker={<span className="pp-chap">{locale === "ar" ? cat?.nameAr : cat?.nameEn}</span>}
+        title={
+          <>
+            {locale === "ar" ? draft.name_ar : draft.name_en}{" "}
+            {locale === "en" ? (
+              <small lang="ar" dir="rtl" className="cr-h1-ar">
+                {draft.name_ar}
+              </small>
+            ) : null}
+          </>
+        }
+      >
+        <div className="zq-pagebody cr-body">
+          <DraftFields fields={draft.fields} order={CREATION_FIELDS} labels={t.profile.fields} locale={raw} testId="creation-draft" />
+        </div>
+      </ReadingPage>
+    );
+  }
   if (r.state !== "ok")
     return (
       <ReadingPage locale={raw} crumbs={[{ href: "/creation", label: t.title }, { label: t.profile.crumb }]} title={t.title}>
