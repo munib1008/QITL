@@ -26,7 +26,12 @@ test("distress topic page shows the medical / mental-health recommendation and c
   await expect(safety).toBeVisible();
   await expect(safety).toContainText("mental-health professional");
   await expect(safety).toContainText("local emergency services");
-  await expect(page.getByTestId("empty-state")).toBeVisible();
+  // The Quran-only AI draft (content/guidance/feeling-overwhelmed.draft.json) stands in for the lesson until one is reviewed.
+  const draft = page.getByTestId("guidance-draft");
+  await expect(draft).toBeVisible();
+  await expect(draft.getByTestId("verification-badge")).toContainText("AI-Assisted Draft");
+  expect(await draft.locator("[data-field]").count()).toBe(5);
+  await expect(draft.getByText("not counselling or medical care").first()).toBeVisible();
   await expect(page.getByTestId("ask-mufti")).toBeVisible();
 });
 
