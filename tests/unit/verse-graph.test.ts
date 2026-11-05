@@ -60,3 +60,25 @@ describe("the shared evidence graph", () => {
     expect(relatedNodes("story", "not-a-story")).toEqual([]);
   });
 });
+
+import { citersOfSurah } from "@/lib/graph/verse-graph";
+import { creationDrafts } from "@/lib/sourced/data";
+describe("Quran reader links", () => {
+  test("a Creation profile is listed on an ayah only if one of its stated fields cites that ayah; at most three per ayah; no story drafts", () => {
+    let checked = 0;
+    for (let surah = 1; surah <= 114; surah++) {
+      for (const [ayah, list] of citersOfSurah(surah)) {
+        expect(list.length).toBeLessThanOrEqual(3);
+        for (const c of list) {
+          expect(["creation", "guidance", "lifestyle"]).toContain(c.kind);
+          if (c.kind !== "creation") continue;
+          const d = creationDrafts().get(c.slug)!;
+          const cites = Object.values(d.fields).some((f) => f.status === "stated" && f.refs.some((r) => r.surah === surah && ayah >= r.from && ayah <= r.to));
+          expect(cites, `${c.slug} ${surah}:${ayah}`).toBe(true);
+          checked++;
+        }
+      }
+    }
+    expect(checked).toBeGreaterThan(0);
+  });
+});

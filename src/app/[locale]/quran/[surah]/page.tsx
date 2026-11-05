@@ -21,6 +21,8 @@ import { attributionLine, markersForSurah } from "@/lib/quran-reader";
 import { asmaConfirmedInSurah } from "@/lib/data/asma";
 import { asmaStrings } from "@/lib/i18n/modules/asma";
 import { draftsCitingSurah } from "@/lib/stories/draft-related";
+import { citersOfSurah } from "@/lib/graph/verse-graph";
+import { graphStrings } from "@/lib/i18n/modules/graph";
 import { publicAiDraftGate } from "@/lib/stories/ai-draft-gate";
 import { draftPreviewStrings } from "@/lib/i18n/modules/draftPreview";
 
@@ -72,6 +74,9 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
   const gate = await publicAiDraftGate();
   for (const [ayah, list] of draftsCitingSurah(n, gate ? new Set(gate.keys()) : null))
     for (const d of list.slice(0, 3)) (ayahLinks[ayah] ??= []).push({ id: `draft-${d.slug}`, name: `${d.title} (${draftPreviewStrings(locale).draftWord})`, href: `/drafts/${d.slug}`, lang: "en" });
+  // Creation Atlas, Life Guidance and How They Lived pages that cite this ayah (a pointer to read more, never a claim they agree).
+  const gk = graphStrings(locale).kinds;
+  for (const [ayah, list] of citersOfSurah(n)) for (const c of list) (ayahLinks[ayah] ??= []).push({ id: `${c.kind}-${c.slug}`, name: `${c.title} (${gk[c.kind]})`, href: c.href, lang: "en" });
   return (
     <ReadingPage
       locale={locale}

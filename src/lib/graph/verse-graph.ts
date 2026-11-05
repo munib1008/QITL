@@ -104,3 +104,33 @@ export function allNodes(): GraphNode[] {
   if (!nodes) build();
   return [...nodes!.values()].map(({ kind, slug, title, href }) => ({ kind, slug, title, href }));
 }
+
+export interface AyahCiter {
+  kind: Exclude<NodeKind, "story">;
+  slug: string;
+  title: string;
+  href: string;
+}
+
+/**
+ * The Creation Atlas profiles, Life Guidance lessons and How They Lived profiles that cite each ayah of one surah (ayah number to
+ * pages), for the Quran reader. A page appears on an ayah only because it cites that ayah. At most `perAyah` per ayah, in node order.
+ */
+export function citersOfSurah(surah: number, perAyah = 3): Map<number, AyahCiter[]> {
+  if (!nodes) build();
+  const out = new Map<number, AyahCiter[]>();
+  const prefix = `${surah}:`;
+  for (const [a, ids] of byAyah!) {
+    if (!a.startsWith(prefix)) continue;
+    const ayah = Number(a.slice(prefix.length));
+    const list: AyahCiter[] = [];
+    for (const nid of ids) {
+      const n = nodes!.get(nid)!;
+      if (n.kind === "story") continue;
+      list.push({ kind: n.kind, slug: n.slug, title: n.title, href: n.href });
+      if (list.length >= perAyah) break;
+    }
+    if (list.length) out.set(ayah, list);
+  }
+  return out;
+}
