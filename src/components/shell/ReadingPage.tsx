@@ -17,7 +17,6 @@ export async function ReadingPage({
   kicker,
   lead,
   meta,
-  query,
   children,
 }: {
   locale: string;
@@ -26,6 +25,7 @@ export async function ReadingPage({
   kicker?: ReactNode;
   lead?: ReactNode;
   meta?: ReactNode;
+  /** Kept for callers that pass the search text; the header's search is the command palette now. */
   query?: string;
   children: ReactNode;
 }) {
