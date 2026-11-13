@@ -84,8 +84,12 @@ export default async function ProphetPage({ params }: { params: Promise<{ locale
               <small lang="ar">{p.honorific}</small>
             ) : null}
           </h1>
-          <p className="pp-ar" lang="ar" dir="rtl">
-            {p.arabicName}
+          {/* The block follows the page direction so the name sits under the title (start edge in EN, AR and UR); the
+              Arabic run itself stays RTL inside a <bdi>. */}
+          <p className="pp-ar" lang="ar">
+            <bdi lang="ar" dir="rtl">
+              {p.arabicName}
+            </bdi>
           </p>
           {p.subtitle ? (
             <p className="pp-sub" {...en}>

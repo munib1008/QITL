@@ -11,7 +11,9 @@
 .pp-chap{font:600 11px/16px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brass-ink)}
 .pp-h1{margin:8px 0 4px;font:500 clamp(36px,5vw,52px)/1.08 var(--font-display);letter-spacing:-.01em}
 .pp-h1 small{font:400 22px/1 var(--font-naskh);color:var(--ink-muted)}
-.pp-ar{font:400 30px/1.5 var(--font-naskh);color:var(--ink);margin:0}
+.pp-ar{font:400 30px/1.5 var(--font-naskh);color:var(--ink);margin:0;text-align:start}
+/* Follow the page direction, not the first strong character (pages.css sets plaintext on RTL paragraphs, which would flip a bdi-only line to LTR). */
+.pp-head p.pp-ar{unicode-bidi:isolate}
 .pp-sub{margin:6px 0 0;font:400 18px/28px var(--font-display);color:var(--ink-muted);max-width:60ch}
 .pp-meta{grid-column:2;display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
 .pp-acts{grid-column:2;display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
