@@ -74,7 +74,7 @@ test("Nastaliq for Urdu interface text, the Quran font for Quranic Arabic", asyn
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("/ur/quran/1");
   const fam = (sel: string) => page.locator(sel).first().evaluate((el) => getComputedStyle(el).fontFamily);
-  expect(await fam(".pp-sections a")).toMatch(/Nastaliq/i);
+  expect(await fam(".hud .navlinks a")).toMatch(/Nastaliq/i);
   // Arabic blocks inside the Urdu interface keep Naskh (the prophet's Arabic name).
   await page.goto("/ur/prophets/yusuf");
   expect(await fam(".pp-ar[lang=ar]")).not.toMatch(/Nastaliq/i);
@@ -90,7 +90,7 @@ test("Nastaliq for Urdu interface text, the Quran font for Quranic Arabic", asyn
   });
   expect(await fam(".zq-ar-quran")).toMatch(/Amiri Quran/i);
   expect(await fam(".zq-ar-quran")).not.toMatch(/Nastaliq/i);
-  const ls = await page.locator(".pp-sections a").first().evaluate((el) => getComputedStyle(el).letterSpacing);
+  const ls = await page.locator(".hud .navlinks a").first().evaluate((el) => getComputedStyle(el).letterSpacing);
   expect(["normal", "0px"]).toContain(ls);
 });
 
@@ -101,7 +101,7 @@ test("no clipped Nastaliq in buttons, pills and navigation at 320px", async ({ p
     await page.evaluate(() => document.fonts.ready);
     const bad = await page.evaluate(() => {
       const out: string[] = [];
-      const sel = ".zq-btn, .zq-pill, .zq-chip, .zq-lang-opt, .qb-item span, .pp-sections a, .zq-iconbtn, summary, label, select";
+      const sel = ".zq-btn, .zq-pill, .zq-chip, .zq-lang-opt, .qb-item span, .hud .navlinks a, .zq-iconbtn, summary, label, select";
       for (const el of Array.from(document.querySelectorAll<HTMLElement>(sel))) {
         const text = el.textContent ?? "";
         if (!/[؀-ۿ]/.test(text) || el.closest("[lang=ar]")) continue;
