@@ -216,7 +216,9 @@ describe("1. grants: least privilege on every table", () => {
     // Visibility helpers used inside policies return booleans; unsubscribe() takes an unguessable token; the two public_ai_draft*
     // functions are the deliberate read API for labelled AI drafts (tests/db/ai-draft.test.ts proves they return only passed, public AI drafts).
     // The public_asma_* functions are the same kind of deliberate read API for the Asma' al-Husna module (tests/db/asma.test.ts).
-    const ALLOWED_READ_API = ["public_ai_drafts", "public_ai_draft", "public_asma_names", "public_asma_name", "public_asma_occurrences", "public_asma_names_in_verse", "public_asma_confirmed_in_surah", "public_asma_lexical_in_verse", "public_asma_duas", "public_asma_dua", "public_asma_topics"];
+    // The public_science_* functions are the deliberate read API for Quran & Science (tests/db/science.test.ts): they return only visible
+    // topics (published through two separate reviews, or a labelled AI draft that passed the automated check), a publication only when verified.
+    const ALLOWED_READ_API = ["public_science_topics", "public_science_topic", "public_science_questions", "public_science_timeline", "public_ai_drafts", "public_ai_draft", "public_asma_names", "public_asma_name", "public_asma_occurrences", "public_asma_names_in_verse", "public_asma_confirmed_in_surah", "public_asma_lexical_in_verse", "public_asma_duas", "public_asma_dua", "public_asma_topics"];
     expect(rows.filter((r) => r.ret !== "boolean" && r.proname !== "unsubscribe" && !ALLOWED_READ_API.includes(r.proname)).map((r) => r.proname)).toEqual([]);
     // The licence-gated edition text is never readable through a definer function.
     const [r] = await db.admin<{ ok: boolean }>("select has_function_privilege('authenticated', 'public.quran_edition_ayah(uuid, smallint, smallint)', 'execute') as ok");

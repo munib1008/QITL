@@ -3,6 +3,7 @@
 import "@/styles/reader.css";
 import Link from "next/link";
 import { useDeferredValue, useId, useMemo, useState } from "react";
+import { quranDivisionStrings } from "@/lib/i18n/modules/quranDivision";
 import { quranReaderStrings } from "@/lib/i18n/modules/quranReader";
 import { searchSurahs, type AyahPos, type SurahIndexEntry } from "@/lib/quran-reader";
 
@@ -83,6 +84,9 @@ export function SurahIndex({ surahs, juz, locale = "en" }: { surahs: Entry[]; ju
                 <Link href={`/quran/${s}#ayah-${a}`}>
                   <b>{quranReaderStrings(locale).markers.juz(i + 1)}</b>
                   <span className="zq-meta" dir="ltr">{`Q ${s}:${a}`}</span>
+                </Link>{" "}
+                <Link className="zq-meta" href={`/quran/juz/${i + 1}`} aria-label={`${quranReaderStrings(locale).markers.juz(i + 1)} (${quranDivisionStrings(locale).juzNav})`}>
+                  ↗
                 </Link>
               </li>
             ))}

@@ -1,0 +1,263 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "shayatin",
+  "category": "iblis_shayatin",
+  "name_en": "The Shayatin (the devils)",
+  "name_ar": "الشياطين",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran speaks of devils of men and of jinn, and of the whisperer who whispers in people's chests from the jinn and from people. It also speaks of Iblis and his offspring as enemies.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 112,
+          "to": 112
+        },
+        {
+          "surah": 114,
+          "from": 4,
+          "to": 6
+        },
+        {
+          "surah": 18,
+          "from": 50,
+          "to": 50
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not state how the devils as a group came to be. It names devils among men and among the jinn, and speaks of the offspring of Iblis."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "God says He sent the devils upon the disbelievers to urge them on, and that for whoever turns away from the remembrance of the Merciful He appoints a devil as his companion.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 83,
+          "to": 83
+        },
+        {
+          "surah": 43,
+          "from": 36,
+          "to": 36
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The devils are described as an enemy and as urging evil. They promise poverty and command indecency, and some of them disbelieved by teaching sorcery to people. They inspire one another with decorated speech to deceive.",
+      "refs": [
+        {
+          "surah": 35,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 2,
+          "from": 268,
+          "to": 268
+        },
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        },
+        {
+          "surah": 6,
+          "from": 112,
+          "to": 112
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "They whisper and urge in people's hearts, and they inspire their allies to argue. In Sulayman's reign some devils dived for him and did other work, and others were bound in chains.",
+      "refs": [
+        {
+          "surah": 114,
+          "from": 5,
+          "to": 6
+        },
+        {
+          "surah": 19,
+          "from": 83,
+          "to": 83
+        },
+        {
+          "surah": 6,
+          "from": 121,
+          "to": 121
+        },
+        {
+          "surah": 21,
+          "from": 82,
+          "to": 82
+        },
+        {
+          "surah": 38,
+          "from": 37,
+          "to": 38
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "The devil's plot is called weak. They cannot bring the Quran down, it is not fitting for them and they cannot, and they are barred from listening. The sky is guarded from every rebellious devil, and one who steals a hearing is followed by a flame. They have no authority over those who believe.",
+      "refs": [
+        {
+          "surah": 4,
+          "from": 76,
+          "to": 76
+        },
+        {
+          "surah": 26,
+          "from": 210,
+          "to": 212
+        },
+        {
+          "surah": 15,
+          "from": 17,
+          "to": 18
+        },
+        {
+          "surah": 37,
+          "from": 7,
+          "to": 10
+        },
+        {
+          "surah": 16,
+          "from": 99,
+          "to": 99
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "The devils are made allies of those who do not believe, and the devil and his tribe see people from where they cannot see them. People are told to seek refuge in God from their incitements and their presence, and to say what is best, since the devil sows discord between people.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 27,
+          "to": 27
+        },
+        {
+          "surah": 23,
+          "from": 97,
+          "to": 98
+        },
+        {
+          "surah": 17,
+          "from": 53,
+          "to": 53
+        },
+        {
+          "surah": 7,
+          "from": 200,
+          "to": 201
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The devils taught sorcery in Sulayman's reign while he did not disbelieve. Ayyub called to his Lord that the devil had touched him with hardship and torment. A devil made the deeds of a people seem good to them and told them no one could overcome them, then turned on his heels when the two groups met.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 102,
+          "to": 102
+        },
+        {
+          "surah": 38,
+          "from": 41,
+          "to": 41
+        },
+        {
+          "surah": 8,
+          "from": 48,
+          "to": 48
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "The Quran swears that the devils will be gathered together with those who deny, and brought around Hell on their knees.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 68,
+          "to": 68
+        }
+      ]
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran gives no dwelling for the devils. It describes them trying to listen toward the highest assembly and being driven off from every side."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The devil is sometimes imagined as able to force a person, but the Quran says he has no authority over those who believe and rely on their Lord, and that his power is only over those who take him as an ally. His appearance and number are not described.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 99,
+          "to": 100
+        },
+        {
+          "surah": 14,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The verses may be read as a call to seek refuge in God from incitement, to remember Him when touched by it, and to treat speech that stirs enmity between people as a sign of the devil's work, not as insight.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 200,
+          "to": 201
+        },
+        {
+          "surah": 17,
+          "from": 53,
+          "to": 53
+        },
+        {
+          "surah": 5,
+          "from": 91,
+          "to": 91
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "The Quran uses ash-shaytan and ash-shayatin, rajim (cast out) for the devil from whom heaven is guarded, qarin (companion), waswas and khannas for the whisperer, and nazgh for a prompting.",
+      "refs": [
+        {
+          "surah": 15,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 43,
+          "from": 36,
+          "to": 36
+        },
+        {
+          "surah": 114,
+          "from": 4,
+          "to": 4
+        },
+        {
+          "surah": 7,
+          "from": 200,
+          "to": 200
+        }
+      ]
+    }
+  }
+}

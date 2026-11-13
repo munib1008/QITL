@@ -1,0 +1,305 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "angels",
+  "category": "angels",
+  "name_en": "The Angels",
+  "name_ar": "الملائكة",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran lists belief in God's angels together with belief in His books and messengers. It calls the angels honoured servants of the Merciful and rejects the claim that they are His children.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 285,
+          "to": 285
+        },
+        {
+          "surah": 21,
+          "from": 26,
+          "to": 26
+        },
+        {
+          "surah": 43,
+          "from": 19,
+          "to": 19
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not state what the angels were made from or when they were made."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "God made the angels messengers. Those with Him do not disdain His worship and glorify Him night and day without flagging, and the angels are sent down with the spirit by His command.",
+      "refs": [
+        {
+          "surah": 35,
+          "from": 1,
+          "to": 1
+        },
+        {
+          "surah": 21,
+          "from": 19,
+          "to": 20
+        },
+        {
+          "surah": 16,
+          "from": 2,
+          "to": 2
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "They are described as servants who do not disdain worship, who never speak ahead of Him and who act by His command. They fear their Lord above them, do not disobey what He orders and do what they are ordered.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 26,
+          "to": 27
+        },
+        {
+          "surah": 16,
+          "from": 49,
+          "to": 50
+        },
+        {
+          "surah": 66,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 4,
+          "from": 172,
+          "to": 172
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "Some angels are given wings, two, three or four, and God adds to creation what He wills. The Quran assigns them tasks: bringing down the spirit by His command, taking souls at death, writing down deeds, bearing the Throne and reinforcing believers.",
+      "refs": [
+        {
+          "surah": 35,
+          "from": 1,
+          "to": 1
+        },
+        {
+          "surah": 16,
+          "from": 2,
+          "to": 2
+        },
+        {
+          "surah": 6,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 82,
+          "from": 10,
+          "to": 12
+        },
+        {
+          "surah": 40,
+          "from": 7,
+          "to": 7
+        },
+        {
+          "surah": 8,
+          "from": 9,
+          "to": 9
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "They say they have no knowledge except what God taught them. They do not disobey, they never speak ahead of Him, and their intercession avails nothing unless God permits it for whom He wills and approves.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 32,
+          "to": 32
+        },
+        {
+          "surah": 21,
+          "from": 27,
+          "to": 28
+        },
+        {
+          "surah": 53,
+          "from": 26,
+          "to": 26
+        },
+        {
+          "surah": 66,
+          "from": 6,
+          "to": 6
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Guardians are sent over people and noble writers know what they do. The angels ask forgiveness for those on earth, send blessings with God on believers, and come down to those who say their Lord is God and stay upright, telling them not to fear.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 82,
+          "from": 10,
+          "to": 12
+        },
+        {
+          "surah": 42,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 33,
+          "from": 43,
+          "to": 43
+        },
+        {
+          "surah": 41,
+          "from": 30,
+          "to": 30
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The angels were told of a successor to be placed on the earth and were ordered to prostrate to Adam. They spoke to Maryam of her choosing. They reinforced the believers at Badr, and they descend with the spirit in the Night of Decree.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 30,
+          "to": 34
+        },
+        {
+          "surah": 3,
+          "from": 42,
+          "to": 45
+        },
+        {
+          "surah": 3,
+          "from": 123,
+          "to": 125
+        },
+        {
+          "surah": 97,
+          "from": 1,
+          "to": 4
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "They were already present when their Lord announced a successor on the earth, before Adam was taught the names and before they were told to prostrate to him.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 30,
+          "to": 34
+        }
+      ]
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "The Quran speaks of angels in the heavens, of angels encircling the Throne and glorifying, and of angels descending to the earth and rising to God.",
+      "refs": [
+        {
+          "surah": 53,
+          "from": 26,
+          "to": 26
+        },
+        {
+          "surah": 39,
+          "from": 75,
+          "to": 75
+        },
+        {
+          "surah": 97,
+          "from": 4,
+          "to": 4
+        },
+        {
+          "surah": 70,
+          "from": 4,
+          "to": 4
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Two ideas are not found in the verses: that angels are female or children of God, which the Quran rejects, and any account of their material, ranks or total count. The verses give wings, tasks and obedience, not these details.",
+      "refs": [
+        {
+          "surah": 17,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 43,
+          "from": 19,
+          "to": 19
+        },
+        {
+          "surah": 53,
+          "from": 27,
+          "to": 27
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The angels are shown in constant obedience and watchfulness. A reader may take from the verses on guarding and writing a reminder that deeds are noticed, and from the angels' words about their knowledge the humility of admitting what one was not taught.",
+      "refs": [
+        {
+          "surah": 82,
+          "from": 10,
+          "to": 12
+        },
+        {
+          "surah": 2,
+          "from": 32,
+          "to": 32
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "The Quran uses al-mala'ikah for the angels and malak for one. It calls them rusul (messengers), al-muqarrabun (those brought near), ibad mukramun (honoured servants) and hafazah (guardians).",
+      "refs": [
+        {
+          "surah": 35,
+          "from": 1,
+          "to": 1
+        },
+        {
+          "surah": 53,
+          "from": 26,
+          "to": 26
+        },
+        {
+          "surah": 4,
+          "from": 172,
+          "to": 172
+        },
+        {
+          "surah": 21,
+          "from": 26,
+          "to": 26
+        },
+        {
+          "surah": 6,
+          "from": 61,
+          "to": 61
+        }
+      ]
+    }
+  }
+}

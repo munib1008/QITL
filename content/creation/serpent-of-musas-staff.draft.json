@@ -1,0 +1,231 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "serpent-of-musas-staff",
+  "category": "animals",
+  "name_en": "The staff and the serpent of Musa",
+  "name_ar": "العصا والحية",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Musa's staff ('asa) became a serpent, described in the Quran by three words: hayyah, thu'ban mubin (a clear serpent) and jann.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 7,
+          "from": 107,
+          "to": 107
+        },
+        {
+          "surah": 27,
+          "from": 10,
+          "to": 10
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "Musa was told to throw his staff down, and when he did it turned into a serpent. God said He would return it to its first state.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 19,
+          "to": 21
+        },
+        {
+          "surah": 7,
+          "from": 107,
+          "to": 107
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "The staff thrown before Pharaoh became a clear serpent as a sign, and Musa was sent with signs to Pharaoh and his people.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 107,
+          "to": 107
+        },
+        {
+          "surah": 26,
+          "from": 32,
+          "to": 32
+        },
+        {
+          "surah": 27,
+          "from": 10,
+          "to": 12
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "It moved swiftly, and Musa saw it shaking as if it were a jann and turned away without looking back.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 27,
+          "from": 10,
+          "to": 10
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "It swallowed up what they fabricated, and the magicians were thrown down prostrate.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 117,
+          "to": 120
+        },
+        {
+          "surah": 26,
+          "from": 45,
+          "to": 45
+        }
+      ]
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the serpent."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Musa was afraid, and God told him not to fear: the messengers do not fear before Him. At the meeting with the magicians he felt fear in himself, though what he saw there was their ropes and sticks seeming to move.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 20,
+          "from": 21,
+          "to": 21
+        },
+        {
+          "surah": 20,
+          "from": 66,
+          "to": 67
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "Musa was shown the sign when told to throw his staff. Before Pharaoh the staff became a clear serpent, and the magicians were defeated, humbled and thrown down prostrate.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 107,
+          "to": 107
+        },
+        {
+          "surah": 7,
+          "from": 116,
+          "to": 120
+        },
+        {
+          "surah": 20,
+          "from": 66,
+          "to": 69
+        },
+        {
+          "surah": 26,
+          "from": 32,
+          "to": 32
+        },
+        {
+          "surah": 26,
+          "from": 44,
+          "to": 45
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date for the event."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the place in the verses cited here."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran uses three words for what the staff became and says it moved swiftly. Whether they describe one form or successive moments is not stated, and this profile does not choose.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 7,
+          "from": 107,
+          "to": 107
+        },
+        {
+          "surah": 27,
+          "from": 10,
+          "to": 10
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Musa's fear and God's 'do not fear' are set beside the staff's change, which is read as a lesson that reassurance comes with the sign.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 20,
+          "from": 21,
+          "to": 21
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: 'asa (a staff), hayyah (a serpent), thu'ban (a serpent), jann, talqaf (it swallows up), tas'a (moves swiftly).",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 20,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 7,
+          "from": 107,
+          "to": 107
+        },
+        {
+          "surah": 27,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 7,
+          "from": 117,
+          "to": 117
+        }
+      ]
+    }
+  }
+}

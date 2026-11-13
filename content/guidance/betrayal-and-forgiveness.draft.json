@@ -1,0 +1,86 @@
+{
+  "schema": "qitl.guidance.draft.v1",
+  "slug": "betrayal-and-forgiveness",
+  "fields": {
+    "situation": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Betrayal is being hurt by someone who was trusted, often within the family or among close friends, and then facing the question of whether and how to forgive.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 15,
+          "to": 15
+        }
+      ]
+    },
+    "quran_says": {
+      "status": "stated",
+      "text_en": "The Quran says a bad deed is repaid with one like it, but whoever pardons and sets things right has his reward with God. It urges pardoning and overlooking, asking if people do not love that God should forgive them, and tells the believer to repel evil with what is better.",
+      "refs": [
+        {
+          "surah": 42,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 24,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 41,
+          "from": 34,
+          "to": 34
+        }
+      ]
+    },
+    "prophet_experience": {
+      "status": "stated",
+      "text_en": "Yusuf's brothers agreed to put him in the depths of the well. Later, when they stood before him, he said there was no blame on them that day, that God forgives them and is the most merciful of the merciful, and he spoke of Satan having stirred up discord between him and his brothers.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 15,
+          "to": 15
+        },
+        {
+          "surah": 12,
+          "from": 92,
+          "to": 92
+        },
+        {
+          "surah": 12,
+          "from": 100,
+          "to": 100
+        }
+      ]
+    },
+    "everyday_application": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): A gentle approach is to name the hurt honestly, decide what contact is safe, and, when you are ready, consider pardon as the Quran encourages. Asking God for a heart able to let go is a modest place to begin. Nothing here asks anyone to stay in harm's way.",
+      "refs": [
+        {
+          "surah": 42,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 24,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "limits": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The sources do not say how long forgiveness should take, and they do not require reconciliation with someone who still harms you. This lesson gives no ruling on a particular dispute, debt or abuse: for a ruling ask a qualified mufti, and for safety or legal matters contact a qualified professional.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 92,
+          "to": 92
+        }
+      ]
+    }
+  }
+}

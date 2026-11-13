@@ -1,0 +1,152 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "the-pen",
+  "category": "heavens_earth",
+  "name_en": "The Pen",
+  "name_ar": "القلم",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The pen (qalam) is named in the Quran as the means by which God taught, and God swears by the pen and by what they write.",
+      "refs": [
+        {
+          "surah": 96,
+          "from": 4,
+          "to": 4
+        },
+        {
+          "surah": 68,
+          "from": 1,
+          "to": 1
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe how or when the pen was made."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "God taught the human being by the pen what he did not know.",
+      "refs": [
+        {
+          "surah": 96,
+          "from": 3,
+          "to": 5
+        }
+      ]
+    },
+    "nature": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the pen itself, its form or its material."
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe abilities of the pen beyond teaching by it and the writing of 'what they write'."
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "Pens and ink are small beside the words of God: if all the trees on the earth were pens, and the sea with seven more seas added to it were ink, the words of God would not run out.",
+      "refs": [
+        {
+          "surah": 31,
+          "from": 27,
+          "to": 27
+        },
+        {
+          "surah": 18,
+          "from": 109,
+          "to": 109
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Humans learn by it: God taught the human being what he did not know, and the oath by the pen and by what they write draws attention to writing among people.",
+      "refs": [
+        {
+          "surah": 96,
+          "from": 4,
+          "to": 5
+        },
+        {
+          "surah": 68,
+          "from": 1,
+          "to": 1
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "In the account of Maryam's guardianship, people cast their pens to decide which of them would take care of her.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 44,
+          "to": 44
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran does not say when the pen was made or where it comes in the order of creation."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where the pen is."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The pen of the first revelation and the oath at the start of Surat al-Qalam are not turned here into a statement about a cosmic Pen that wrote all things. The verses say God taught by the pen and swear by it; the further claim is not in these verses.",
+      "refs": [
+        {
+          "surah": 96,
+          "from": 4,
+          "to": 4
+        },
+        {
+          "surah": 68,
+          "from": 1,
+          "to": 1
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The first revelation names the pen as a means of teaching, so learning and writing are shown as gifts from the Most Generous.",
+      "refs": [
+        {
+          "surah": 96,
+          "from": 3,
+          "to": 5
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Qalam (plural aqlam) is a pen; yasturun means they write; allama means He taught; midad is ink.",
+      "refs": [
+        {
+          "surah": 68,
+          "from": 1,
+          "to": 1
+        },
+        {
+          "surah": 96,
+          "from": 4,
+          "to": 4
+        },
+        {
+          "surah": 3,
+          "from": 44,
+          "to": 44
+        },
+        {
+          "surah": 18,
+          "from": 109,
+          "to": 109
+        }
+      ]
+    }
+  }
+}

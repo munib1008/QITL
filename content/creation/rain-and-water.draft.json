@@ -1,0 +1,277 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "rain-and-water",
+  "category": "heavens_earth",
+  "name_en": "Rain and Water",
+  "name_ar": "الماء والمطر",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Water is sent down by God from the sky, called pure water and blessed water. The Quran also says every living thing was made from water.",
+      "refs": [
+        {
+          "surah": 25,
+          "from": 48,
+          "to": 48
+        },
+        {
+          "surah": 50,
+          "from": 9,
+          "to": 9
+        },
+        {
+          "surah": 21,
+          "from": 30,
+          "to": 30
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God sent water down from the sky in due measure and lodged it in the earth. Every creature is said to be created from water, and God made every living thing from it.",
+      "refs": [
+        {
+          "surah": 23,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 24,
+          "from": 45,
+          "to": 45
+        },
+        {
+          "surah": 21,
+          "from": 30,
+          "to": 30
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "God sends water to revive dead land, to give people and their animals drink and food, and to bring out grain, plants and gardens.",
+      "refs": [
+        {
+          "surah": 25,
+          "from": 48,
+          "to": 49
+        },
+        {
+          "surah": 80,
+          "from": 25,
+          "to": 32
+        },
+        {
+          "surah": 16,
+          "from": 10,
+          "to": 10
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "Water is described as pure, blessed and sent in measure. God could have made drinking water bitter if He willed, and He sends it from the clouds.",
+      "refs": [
+        {
+          "surah": 25,
+          "from": 48,
+          "to": 48
+        },
+        {
+          "surah": 50,
+          "from": 9,
+          "to": 9
+        },
+        {
+          "surah": 56,
+          "from": 69,
+          "to": 70
+        },
+        {
+          "surah": 43,
+          "from": 11,
+          "to": 11
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "Water brings dead land to life so that grain, fruit and plants come up, makes valleys flow each according to its measure, and runs through the earth in springs.",
+      "refs": [
+        {
+          "surah": 41,
+          "from": 39,
+          "to": 39
+        },
+        {
+          "surah": 13,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 39,
+          "from": 21,
+          "to": 21
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "People do not send it down: God asks whether they brought it down from the clouds or He did. He can make the water sink into the ground, so no one else could bring flowing water.",
+      "refs": [
+        {
+          "surah": 56,
+          "from": 69,
+          "to": 69
+        },
+        {
+          "surah": 67,
+          "from": 30,
+          "to": 30
+        },
+        {
+          "surah": 23,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Water is for people to drink, for their animals and crops. At Badr it was sent down on the believers to cleanse them and to steady their feet.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 80,
+          "from": 32,
+          "to": 32
+        },
+        {
+          "surah": 8,
+          "from": 11,
+          "to": 11
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "In the Flood the gates of the sky were opened with pouring water and the earth burst with springs, and the waters met. Musa struck a rock with his staff and twelve springs burst out for his people.",
+      "refs": [
+        {
+          "surah": 54,
+          "from": 11,
+          "to": 12
+        },
+        {
+          "surah": 2,
+          "from": 60,
+          "to": 60
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "Before the heavens and the earth were made, God's Throne is said to have been on the water.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 7,
+          "to": 7
+        }
+      ]
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "Water comes down from the sky, is lodged in the earth, and runs in springs through it.",
+      "refs": [
+        {
+          "surah": 39,
+          "from": 21,
+          "to": 21
+        },
+        {
+          "surah": 23,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The Quran's descriptions of rain and of life from water are given as signs. This profile does not add a mechanism to them or compare them with modern accounts of the water cycle or the origin of life.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 30,
+          "to": 30
+        },
+        {
+          "surah": 24,
+          "from": 45,
+          "to": 45
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Water that revives dead land is used again and again in the Quran as a picture of the revival of people on the Last Day, so everyday rain becomes a reminder of the return to God.",
+      "refs": [
+        {
+          "surah": 41,
+          "from": 39,
+          "to": 39
+        },
+        {
+          "surah": 7,
+          "from": 57,
+          "to": 57
+        },
+        {
+          "surah": 30,
+          "from": 19,
+          "to": 19
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Ma' is water; wadq are drops; ghayth is a helpful rain; tahur is pure; furat is sweet; ujaj is bitter; muzn are rain clouds; mu'sirat are clouds that pour; yanabi' are springs.",
+      "refs": [
+        {
+          "surah": 25,
+          "from": 48,
+          "to": 48
+        },
+        {
+          "surah": 30,
+          "from": 48,
+          "to": 48
+        },
+        {
+          "surah": 57,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 56,
+          "from": 69,
+          "to": 70
+        },
+        {
+          "surah": 78,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 39,
+          "from": 21,
+          "to": 21
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "the-preserved-tablet",
+  "category": "heavens_earth",
+  "name_en": "The Preserved Tablet",
+  "name_ar": "اللوح المحفوظ",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran says the glorious Quran is in a preserved tablet (lawh mahfuz). It uses several other names for a record kept with God: a hidden book, the Mother of the Book, a clear record and a clear register. Whether these are one thing is not stated in these verses.",
+      "refs": [
+        {
+          "surah": 85,
+          "from": 21,
+          "to": 22
+        },
+        {
+          "surah": 56,
+          "from": 77,
+          "to": 78
+        },
+        {
+          "surah": 43,
+          "from": 4,
+          "to": 4
+        },
+        {
+          "surah": 6,
+          "from": 59,
+          "to": 59
+        },
+        {
+          "surah": 36,
+          "from": 12,
+          "to": 12
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe how or when the preserved tablet was made."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "The Quran says its own message is in a preserved tablet. Elsewhere the verses say no misfortune strikes the earth or people except in a book before God brings it about, and that nothing small or great escapes Him except in a clear record.",
+      "refs": [
+        {
+          "surah": 85,
+          "from": 21,
+          "to": 22
+        },
+        {
+          "surah": 57,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 10,
+          "from": 61,
+          "to": 61
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The tablet is called preserved or guarded. The book in which the Quran is said to be is hidden or guarded, and the Quran 'in the Mother of the Book with Us' is called exalted and wise.",
+      "refs": [
+        {
+          "surah": 85,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 56,
+          "from": 78,
+          "to": 78
+        },
+        {
+          "surah": 43,
+          "from": 4,
+          "to": 4
+        }
+      ]
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran gives the tablet no abilities of its own."
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "The record is under God's control: He erases what He wills and confirms what He wills, and the Mother of the Book is with Him.",
+      "refs": [
+        {
+          "surah": 13,
+          "from": 39,
+          "to": 39
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "God writes what people have sent ahead and their traces, and everything He has counted in a clear register. Nothing, small or great, escapes Him, and it is all in a clear record.",
+      "refs": [
+        {
+          "surah": 36,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 10,
+          "from": 61,
+          "to": 61
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe events involving the preserved tablet."
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "The record is said to precede what happens: no misfortune occurs except in a book before God brings it into being.",
+      "refs": [
+        {
+          "surah": 57,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "The Mother of the Book is 'with Us' and 'with Him', that is, with God. The verses do not say more about where it is.",
+      "refs": [
+        {
+          "surah": 43,
+          "from": 4,
+          "to": 4
+        },
+        {
+          "surah": 13,
+          "from": 39,
+          "to": 39
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The Quran names the preserved tablet in only a few words. This profile does not describe its shape, size or material, and does not equate every 'book' or 'record' in the Quran with it.",
+      "refs": [
+        {
+          "surah": 85,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 6,
+          "from": 59,
+          "to": 59
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Believers are told that nothing is lost with God and that no misfortune comes without it being in a record. The verses link this to not grieving over what is missed or boasting over what is given.",
+      "refs": [
+        {
+          "surah": 57,
+          "from": 22,
+          "to": 23
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Lawh is a tablet; mahfuz is preserved or guarded; kitab is a book or record; maknun is hidden; umm al-kitab is the Mother of the Book; imam mubin is a clear register; mubin means clear.",
+      "refs": [
+        {
+          "surah": 85,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 56,
+          "from": 78,
+          "to": 78
+        },
+        {
+          "surah": 43,
+          "from": 4,
+          "to": 4
+        },
+        {
+          "surah": 36,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 6,
+          "from": 59,
+          "to": 59
+        }
+      ]
+    }
+  }
+}

@@ -9,6 +9,10 @@ import { ShifaRelated } from "@/components/shifa/Related";
 import { needsSafetyNotice, plannedTopic } from "@/lib/guidance/topics";
 import { getDict } from "@/lib/i18n";
 import { guidanceT } from "@/lib/i18n/modules/guidance";
+import { RelatedKnowledge } from "@/components/graph/RelatedKnowledge";
+import { DraftFields } from "@/components/sourced/DraftFields";
+import { guidanceDrafts } from "@/lib/sourced/data";
+import { GUIDANCE_FIELDS } from "@/lib/sourced/kinds";
 
 export const revalidate = 300;
 
@@ -32,6 +36,7 @@ export default async function GuidanceTopicPage({ params }: { params: Params }) 
   const topic = data?.topic ?? plannedTopic(slug);
   if (!topic) notFound();
   const lessons = data?.lessons ?? [];
+  const draft = lessons.length ? undefined : guidanceDrafts().get(slug);
   return (
     <ReadingPage
       locale={raw}
@@ -51,6 +56,11 @@ export default async function GuidanceTopicPage({ params }: { params: Params }) 
           <h2 id="gd-lessons-h">{s.lessonsHeading}</h2>
           {lessons.length ? (
             lessons.map((l, i) => <LessonView key={l.id} lesson={l} s={s} locale={locale} index={i + 1} />)
+          ) : draft ? (
+            <>
+              <DraftFields fields={draft.fields} order={GUIDANCE_FIELDS} labels={s.notice.draftLabels} locale={raw} testId="guidance-draft" />
+              <RelatedKnowledge kind="guidance" slug={draft.slug} locale={raw} />
+            </>
           ) : (
             <EmptyState label={<EvidenceLabel kind="unknown" lang={locale}>{s.inPreparation}</EvidenceLabel>} title={data === null ? s.emptyNotConnected : s.topicEmptyTitle}>
               <p>{s.topicEmptyBody}</p>

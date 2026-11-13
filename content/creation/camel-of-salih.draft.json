@@ -1,0 +1,206 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "camel-of-salih",
+  "category": "animals",
+  "name_en": "The she-camel of Salih",
+  "name_ar": "ناقة صالح",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The she-camel is called the she-camel of God and a sign for Thamud, sent as a visible sign.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 73,
+          "to": 73
+        },
+        {
+          "surah": 17,
+          "from": 59,
+          "to": 59
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran calls her the she-camel of God and a sign. It does not describe how she came to be."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "She was a sign from their Lord and a trial for them. The Quran says signs are sent only to warn.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 73,
+          "to": 73
+        },
+        {
+          "surah": 54,
+          "from": 27,
+          "to": 27
+        },
+        {
+          "surah": 17,
+          "from": 59,
+          "to": 59
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "She was to be left to eat in God's earth, and water was divided between her and them, each drinking turn attended.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 73,
+          "to": 73
+        },
+        {
+          "surah": 26,
+          "from": 155,
+          "to": 155
+        },
+        {
+          "surah": 54,
+          "from": 28,
+          "to": 28
+        }
+      ]
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe abilities of the she-camel beyond what is stated of her drinking."
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the she-camel."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Salih told his people not to touch her with harm or a painful punishment would seize them. They hamstrung her, and the Quran says she was made a sign that they wronged.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 73,
+          "to": 73
+        },
+        {
+          "surah": 26,
+          "from": 156,
+          "to": 156
+        },
+        {
+          "surah": 11,
+          "from": 64,
+          "to": 65
+        },
+        {
+          "surah": 17,
+          "from": 59,
+          "to": 59
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "Thamud were given a drinking turn each, then hamstrung her. They were told to enjoy their homes for three days, a promise not to be belied; then a tremor and one shout took them.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 155,
+          "to": 158
+        },
+        {
+          "surah": 11,
+          "from": 65,
+          "to": 65
+        },
+        {
+          "surah": 7,
+          "from": 78,
+          "to": 78
+        },
+        {
+          "surah": 54,
+          "from": 31,
+          "to": 31
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "Thamud are named as successors after the people of Aad, and the she-camel belongs to the time of Salih among them.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 73,
+          "to": 74
+        }
+      ]
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "She was to be left to eat in God's earth. Thamud are told they were settled in the land, taking palaces from its plains and carving houses in the mountains.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 73,
+          "to": 74
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran calls her a sign and a trial and tells of the water-turns and the hamstringing. It does not describe her form or origin beyond 'she-camel of God', and this profile adds nothing.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 73,
+          "to": 73
+        },
+        {
+          "surah": 54,
+          "from": 27,
+          "to": 29
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the account joins a sign, a warning and the result of ignoring it, and is read as a lesson in heeding warnings and in sharing a resource fairly.",
+      "refs": [
+        {
+          "surah": 54,
+          "from": 27,
+          "to": 31
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: naqah (a she-camel), naqat Allah (the she-camel of God), shirb (a drinking turn), 'aqaruha (they hamstrung her), ayah (a sign), fitnah (a trial).",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 73,
+          "to": 73
+        },
+        {
+          "surah": 26,
+          "from": 155,
+          "to": 155
+        },
+        {
+          "surah": 91,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 54,
+          "from": 27,
+          "to": 27
+        }
+      ]
+    }
+  }
+}

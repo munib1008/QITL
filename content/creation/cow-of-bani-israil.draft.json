@@ -1,0 +1,139 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "cow-of-bani-israil",
+  "category": "animals",
+  "name_en": "The cow of Bani Israil",
+  "name_ar": "بقرة بني إسرائيل",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran speaks of a cow (baqarah) that Musa told his people God commanded them to slaughter.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 67,
+          "to": 67
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the origin of this cow."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "After the cow was slaughtered, they were told to strike the dead person with part of it. God brings out what they hid, and thus He gives life to the dead and shows His signs so that they may reason.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 72,
+          "to": 73
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The replies describe it as neither old nor young but between those, yellow and bright in colour, pleasing to those who look, not broken in to plough the earth or water the tilth, sound and without blemish.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 68,
+          "to": 69
+        },
+        {
+          "surah": 2,
+          "from": 71,
+          "to": 71
+        }
+      ]
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe abilities of the cow beyond its description."
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the cow."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "The people asked what it was, then what its colour was, saying cows look alike to them. They slaughtered it, though they almost did not do so.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 68,
+          "to": 71
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "A killing was disputed and God was to bring out what they hid. They were told to strike the dead person with part of the slaughtered cow, and thus God gives life to the dead.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 67,
+          "to": 73
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "It is set in the time of Musa and his people.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 67,
+          "to": 67
+        }
+      ]
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the place of the event."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the questions in the account are about the people's delay. The cow is described only by what the replies state, and no further description is added here.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 68,
+          "to": 71
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the people asked many questions before acting, and the verse ends that they almost did not do it, which is read as a lesson against needless delay in obeying a clear command.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 67,
+          "to": 71
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: baqarah (a cow), farid (old), bikr (young), 'awan (between these), safra' (yellow), dhalul (broken in), shiyah (a mark).",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 68,
+          "to": 68
+        },
+        {
+          "surah": 2,
+          "from": 69,
+          "to": 69
+        },
+        {
+          "surah": 2,
+          "from": 71,
+          "to": 71
+        }
+      ]
+    }
+  }
+}

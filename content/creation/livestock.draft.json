@@ -1,0 +1,186 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "livestock",
+  "category": "animals",
+  "name_en": "Livestock (al-an'am)",
+  "name_ar": "الأنعام",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran counts eight pairs of livestock: two of sheep, two of goats, two of camels and two of cattle.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 143,
+          "to": 144
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God created the livestock for people, and He made them for people from what His hands made.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 36,
+          "from": 71,
+          "to": 71
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "They give warmth and benefits and food, beauty when brought home and when sent to pasture, and they carry loads. Their skins give dwellings and their wool, fur and hair give furnishings and goods.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 5,
+          "to": 7
+        },
+        {
+          "surah": 16,
+          "from": 80,
+          "to": 80
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "God made them submissive to people. From between digested food and blood, pure milk is given to drink.",
+      "refs": [
+        {
+          "surah": 36,
+          "from": 72,
+          "to": 72
+        },
+        {
+          "surah": 16,
+          "from": 66,
+          "to": 66
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "They carry people's loads to lands that would be reached only with hardship, and people ride them and are carried on them as on ships.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 7,
+          "to": 7
+        },
+        {
+          "surah": 40,
+          "from": 79,
+          "to": 80
+        },
+        {
+          "surah": 23,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the livestock."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "People eat from them, ride them, drink from them and use their parts. The Quran asks whether they will not give thanks.",
+      "refs": [
+        {
+          "surah": 36,
+          "from": 72,
+          "to": 73
+        },
+        {
+          "surah": 23,
+          "from": 21,
+          "to": 21
+        },
+        {
+          "surah": 40,
+          "from": 79,
+          "to": 79
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The Quran rebukes those who forbade certain livestock, asking by what knowledge they did so and whether they witnessed God's instruction.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 143,
+          "to": 144
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no time or order for the livestock."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where the livestock live."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): where the Quran likens people to livestock, the verses speak of not hearing, reasoning or understanding. This profile does not take them as a statement about the animals themselves.",
+      "refs": [
+        {
+          "surah": 25,
+          "from": 44,
+          "to": 44
+        },
+        {
+          "surah": 7,
+          "from": 179,
+          "to": 179
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the passage calls the livestock a lesson and ends with a question about thanks, so it is read as a call to gratitude.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 66,
+          "to": 66
+        },
+        {
+          "surah": 36,
+          "from": 73,
+          "to": 73
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-an'am (livestock), al-da'n (sheep), al-ma'z (goats), al-ibil (camels), al-baqar (cattle), 'ibrah (a lesson).",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 143,
+          "to": 143
+        },
+        {
+          "surah": 6,
+          "from": 144,
+          "to": 144
+        },
+        {
+          "surah": 16,
+          "from": 66,
+          "to": 66
+        }
+      ]
+    }
+  }
+}

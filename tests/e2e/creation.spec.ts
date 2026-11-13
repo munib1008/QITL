@@ -73,11 +73,30 @@ test("Arabic home is right-to-left with the Arabic sentence and no axe violation
 });
 
 test("profile page without a database shows the designed unavailable state", async ({ page }) => {
-  const res = await page.goto("/creation/jinn");
+  // A slug with no reviewed record and no draft: the designed unavailable state, never an invented profile.
+  const res = await page.goto("/creation/no-such-profile");
   expect(res?.status()).toBe(200);
   await expect(page.getByText("The Creation Atlas is not connected yet.")).toBeVisible();
   await expect(page.getByRole("link", { name: "Creation Atlas" }).first()).toBeVisible();
   await axe(page);
+});
+
+test("a profile with a Quran-only AI draft shows 13 fields under the AI-Assisted Draft badge, each stated with verses or not established", async ({ page }) => {
+  const res = await page.goto("/creation/jinn");
+  expect(res?.status()).toBe(200);
+  const draft = page.getByTestId("creation-draft");
+  await expect(draft).toBeVisible();
+  await expect(draft.getByTestId("verification-badge")).toContainText("AI-Assisted Draft");
+  expect(await draft.locator("[data-field]").count()).toBe(13);
+  expect(await draft.locator('[data-field][data-known="true"] a[href^="/quran/"]').count()).toBeGreaterThan(5);
+  await axe(page);
+});
+
+test("the Creation Atlas hub lists the drafts by category, with the unseen categories included", async ({ page }) => {
+  await page.goto("/creation");
+  const idx = page.getByTestId("creation-draft-index");
+  await expect(idx).toBeVisible();
+  for (const slug of ["jinn", "iblis", "jibril", "the-ruh", "bee", "the-mountains"]) await expect(idx.locator(`a[href$="/creation/${slug}"]`)).toBeVisible();
 });
 
 test("profile addresses outside the slug rule are not found", async ({ page }) => {

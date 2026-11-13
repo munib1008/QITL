@@ -1,0 +1,245 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "adam-first-human",
+  "category": "humans",
+  "name_en": "Adam (the creation of the first human)",
+  "name_ar": "آدم",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Adam is the human the angels were told to prostrate to. God chose Adam, with Nuh and the families of Ibrahim and Imran, above the worlds, and later people are addressed as the children of Adam.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 3,
+          "from": 33,
+          "to": 33
+        },
+        {
+          "surah": 17,
+          "from": 70,
+          "to": 70
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God made Adam from earth and then said to him Be, and he was. He is also described as made from clay and from dried ringing clay of moulded mud, then shaped, and God breathed into him of His spirit.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 59,
+          "to": 59
+        },
+        {
+          "surah": 38,
+          "from": 71,
+          "to": 72
+        },
+        {
+          "surah": 15,
+          "from": 28,
+          "to": 29
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "God told the angels He was setting a successor on the earth. Adam was then taught the names of all things and shown to the angels.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 30,
+          "to": 31
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "He was taught the names, forgot the covenant and was found to have no firm resolve. When he erred, his Lord chose him, accepted his repentance and guided him.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 31,
+          "to": 31
+        },
+        {
+          "surah": 20,
+          "from": 115,
+          "to": 115
+        },
+        {
+          "surah": 20,
+          "from": 121,
+          "to": 122
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "He was taught the names of all things and was able to inform the angels of them, when the angels said they had no knowledge except what God had taught them.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 31,
+          "to": 33
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "He forgot, and God found in him no firm resolve. Satan made him and his wife slip, and he and his wife acknowledged they had wronged themselves.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 115,
+          "to": 115
+        },
+        {
+          "surah": 2,
+          "from": 36,
+          "to": 36
+        },
+        {
+          "surah": 7,
+          "from": 22,
+          "to": 23
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Adam lived in the garden with his wife, and Satan was a clear enemy to them both. Later people are addressed as the children of Adam.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 35,
+          "to": 35
+        },
+        {
+          "surah": 7,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 17,
+          "from": 70,
+          "to": 70
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The angels prostrate and Iblis refuses; Adam is taught the names; he and his wife are told not to approach the tree; Satan whispers; they repent and are sent down. The full telling is on his story page.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 30,
+          "to": 39
+        },
+        {
+          "surah": 7,
+          "from": 11,
+          "to": 25
+        },
+        {
+          "surah": 20,
+          "from": 115,
+          "to": 123
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date for Adam and does not count the generations between him and later prophets."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "Adam and his wife were first in the garden. They were then told to go down, with a dwelling and enjoyment on the earth for a time.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 35,
+          "to": 36
+        },
+        {
+          "surah": 7,
+          "from": 24,
+          "to": 25
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the account addresses Adam and his wife together in the whispering, the slip and the plea for forgiveness, and this profile follows the verses in not blaming one alone.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 20,
+          "to": 23
+        },
+        {
+          "surah": 2,
+          "from": 35,
+          "to": 37
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the account pairs a human slip with repentance, acceptance and guidance, so it is read as teaching a return to God after error.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 37,
+          "to": 37
+        },
+        {
+          "surah": 20,
+          "from": 122,
+          "to": 122
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words in the account: khalifah (a successor), al-asma' (the names), usjudu (prostrate), al-shajarah (the tree), al-jannah (the garden), tab (He accepted repentance), ihbitu (go down).",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 30,
+          "to": 30
+        },
+        {
+          "surah": 2,
+          "from": 31,
+          "to": 31
+        },
+        {
+          "surah": 2,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 2,
+          "from": 35,
+          "to": 35
+        },
+        {
+          "surah": 2,
+          "from": 37,
+          "to": 37
+        },
+        {
+          "surah": 2,
+          "from": 36,
+          "to": 36
+        }
+      ]
+    }
+  }
+}

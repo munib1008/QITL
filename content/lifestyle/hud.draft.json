@@ -1,0 +1,257 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "hud",
+  "fields": {
+    "period": {
+      "status": "stated",
+      "text_en": "The Quran says God made Hud's people successors after the people of Nuh. It gives no date or length of time.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 69,
+          "to": 69
+        }
+      ]
+    },
+    "region": {
+      "status": "stated",
+      "text_en": "The Quran says Hud warned his people at al-Ahqaf. It does not say where that lay or that it was the whole of their land.",
+      "refs": [
+        {
+          "surah": 46,
+          "from": 21,
+          "to": 21
+        }
+      ]
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "God sent to ʿĀd their brother Hud, who told them to worship God and said they had no god other than Him.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 65,
+          "to": 65
+        },
+        {
+          "surah": 11,
+          "from": 50,
+          "to": 50
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Hud and no length of time for which he called his people."
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "Hud called his people to worship God, reminded them of God's favours, told them to ask forgiveness and turn back to Him, and warned them of the punishment of a great day.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 65,
+          "to": 65
+        },
+        {
+          "surah": 7,
+          "from": 69,
+          "to": 69
+        },
+        {
+          "surah": 11,
+          "from": 52,
+          "to": 52
+        },
+        {
+          "surah": 26,
+          "from": 135,
+          "to": 135
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "Hud described himself as a trustworthy messenger to his people who asked them for no payment, his reward being only with the Lord of the worlds.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 125,
+          "to": 125
+        },
+        {
+          "surah": 26,
+          "from": 127,
+          "to": 127
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Hud or his people ate or drank."
+    },
+    "farming_livestock": {
+      "status": "stated",
+      "text_en": "Hud told his people to be mindful of the One who had supplied them with livestock, children, gardens and springs.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 132,
+          "to": 134
+        }
+      ]
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Hud or his people."
+    },
+    "housing": {
+      "status": "stated",
+      "text_en": "Hud asked whether they built a landmark on every high place for amusement and took strongholds hoping to live forever. After the wind, nothing could be seen but their dwellings.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 128,
+          "to": 129
+        },
+        {
+          "surah": 46,
+          "from": 25,
+          "to": 25
+        }
+      ]
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe any means of travel for Hud or his people."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "Hud is called their brother. The Quran mentions a leading group of the disbelievers among his people, and says his people followed the command of every obstinate tyrant.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 65,
+          "to": 65
+        },
+        {
+          "surah": 7,
+          "from": 66,
+          "to": 66
+        },
+        {
+          "surah": 11,
+          "from": 59,
+          "to": 59
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "stated",
+      "text_en": "His people held to what their fathers worshipped. Hud criticised building a landmark on every high place for amusement, and said that when they seized, they seized as tyrants.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 70,
+          "to": 70
+        },
+        {
+          "surah": 26,
+          "from": 128,
+          "to": 130
+        }
+      ]
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe teaching or learning among the people of Hud."
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment in the account of Hud."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "Rain is mentioned as promised (11:52) and as hoped for from a cloud (46:24), but the Quran gives no description of the ordinary climate of their land."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "Hud told his people to worship none but God and to ask Him for forgiveness; they held to the gods their fathers worshipped and said they would not leave them on his word.",
+      "refs": [
+        {
+          "surah": 46,
+          "from": 21,
+          "to": 21
+        },
+        {
+          "surah": 11,
+          "from": 52,
+          "to": 52
+        },
+        {
+          "surah": 7,
+          "from": 70,
+          "to": 70
+        },
+        {
+          "surah": 11,
+          "from": 53,
+          "to": 53
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "The leaders of his disbelieving people said they saw foolishness in him and thought him a liar. They refused to leave their gods, and a wind, coming as a cloud they took for rain, destroyed everything by its Lord's command.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 66,
+          "to": 66
+        },
+        {
+          "surah": 11,
+          "from": 53,
+          "to": 53
+        },
+        {
+          "surah": 46,
+          "from": 24,
+          "to": 25
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran shows the way of life of Hud's people only through his questions to them (landmarks, strongholds, livestock, gardens, springs), so a reader should not add towns, trades or dress from other sources.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 128,
+          "to": 134
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages link remembering what God supplied with turning back to Him, and show Hud answering the charge of foolishness by saying he conveys the messages of his Lord and relies on God.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 132,
+          "to": 134
+        },
+        {
+          "surah": 7,
+          "from": 67,
+          "to": 68
+        },
+        {
+          "surah": 11,
+          "from": 56,
+          "to": 56
+        }
+      ]
+    }
+  }
+}

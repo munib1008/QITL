@@ -1,0 +1,194 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "the-throne",
+  "category": "heavens_earth",
+  "name_en": "The Throne",
+  "name_ar": "العرش",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Throne ('arsh) belongs to God, who is called Lord of the Great Throne and Lord of the Noble Throne. The Quran says God settled on the Throne after creating the heavens and the earth.",
+      "refs": [
+        {
+          "surah": 9,
+          "from": 129,
+          "to": 129
+        },
+        {
+          "surah": 23,
+          "from": 116,
+          "to": 116
+        },
+        {
+          "surah": 7,
+          "from": 54,
+          "to": 54
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe how or when the Throne was made."
+    },
+    "purpose": {
+      "status": "not_established",
+      "note_en": "The Quran does not state a purpose for the Throne itself."
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The Throne is called great and noble. On the Last Day, eight will carry the Throne of your Lord above them.",
+      "refs": [
+        {
+          "surah": 9,
+          "from": 129,
+          "to": 129
+        },
+        {
+          "surah": 23,
+          "from": 116,
+          "to": 116
+        },
+        {
+          "surah": 69,
+          "from": 17,
+          "to": 17
+        }
+      ]
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe actions of the Throne itself."
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The verses describe no limits of the Throne; they say only that God is its Lord."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Those who carry the Throne and those around it glorify their Lord with praise, believe in Him and ask forgiveness for those who believe. Angels are seen circling around the Throne on the Last Day.",
+      "refs": [
+        {
+          "surah": 40,
+          "from": 7,
+          "to": 7
+        },
+        {
+          "surah": 39,
+          "from": 75,
+          "to": 75
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "God settled on the Throne after the creation of the heavens and the earth in six days. The same word 'arsh is also used for the throne of the ruler of Saba, which is a different throne.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 54,
+          "to": 54
+        },
+        {
+          "surah": 27,
+          "from": 22,
+          "to": 23
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "When the heavens and the earth were made in six days, God's Throne was on the water; God then settled on the Throne.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 7,
+          "to": 7
+        },
+        {
+          "surah": 7,
+          "from": 54,
+          "to": 54
+        }
+      ]
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "On the Last Day the Throne is above them, and angels are seen standing around it.",
+      "refs": [
+        {
+          "surah": 69,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 39,
+          "from": 75,
+          "to": 75
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The Throne and God 'settling' on it are given here in the Quran's own words. This profile does not describe a shape or a seat, or say how the settling is to be understood; the verses leave it unseen.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 54,
+          "to": 54
+        },
+        {
+          "surah": 20,
+          "from": 5,
+          "to": 5
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The verses often follow the account of creation with the Throne, so reflection on the heavens and the earth is meant to end in praise of the Lord of the Great Throne.",
+      "refs": [
+        {
+          "surah": 9,
+          "from": 129,
+          "to": 129
+        },
+        {
+          "surah": 23,
+          "from": 86,
+          "to": 86
+        },
+        {
+          "surah": 27,
+          "from": 26,
+          "to": 26
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "'Arsh means throne; istawa means He settled; 'azim means great; karim means noble. The verse of the Kursi says His kursi extends over the heavens and the earth; whether it is the same as the Throne is not stated.",
+      "refs": [
+        {
+          "surah": 9,
+          "from": 129,
+          "to": 129
+        },
+        {
+          "surah": 23,
+          "from": 116,
+          "to": 116
+        },
+        {
+          "surah": 20,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 2,
+          "from": 255,
+          "to": 255
+        }
+      ]
+    }
+  }
+}

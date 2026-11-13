@@ -1,0 +1,267 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "ibrahim",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for Ibrahim and no total age."
+    },
+    "region": {
+      "status": "stated",
+      "text_en": "The Quran says Ibrahim settled some of his offspring in a valley with no crops near God's Sacred House, and that God delivered him and Lut to a land He had blessed. It names neither his homeland nor that land.",
+      "refs": [
+        {
+          "surah": 14,
+          "from": 37,
+          "to": 37
+        },
+        {
+          "surah": 21,
+          "from": 71,
+          "to": 71
+        }
+      ]
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "Ibrahim spoke to his father and his people, who were devoted to idols; they answered that they found their fathers worshipping them.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 74,
+          "to": 74
+        },
+        {
+          "surah": 21,
+          "from": 52,
+          "to": 54
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "stated",
+      "text_en": "Ibrahim praised God for giving him Ismail and Ishaq in his old age. The Quran does not state his total age.",
+      "refs": [
+        {
+          "surah": 14,
+          "from": 39,
+          "to": 39
+        },
+        {
+          "surah": 15,
+          "from": 54,
+          "to": 54
+        }
+      ]
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "Ibrahim argued with his father and his people against idols, prayed to his Lord, and welcomed guests with a roasted calf.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 42,
+          "to": 45
+        },
+        {
+          "surah": 14,
+          "from": 35,
+          "to": 41
+        },
+        {
+          "surah": 11,
+          "from": 69,
+          "to": 69
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "God describes Ibrahim as a siddiq, one of great truthfulness, and as a prophet, and promised to make him a leader for the people.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 41,
+          "to": 41
+        },
+        {
+          "surah": 2,
+          "from": 124,
+          "to": 124
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "stated",
+      "text_en": "Ibrahim brought his guests a roasted calf, described elsewhere as a fat calf. He also said his Lord feeds him and gives him drink.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 69,
+          "to": 69
+        },
+        {
+          "surah": 51,
+          "from": 26,
+          "to": 26
+        },
+        {
+          "surah": 26,
+          "from": 79,
+          "to": 79
+        }
+      ]
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "A calf brought to guests and a valley with no crops are mentioned, but the Quran does not describe farming or herding by Ibrahim."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Ibrahim."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the home of Ibrahim. It speaks of the people of the house, but not of the house itself."
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran mentions emigration (29:26) but describes no means of travel for Ibrahim."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "Ibrahim had a father, a wife and sons: Ismail and Ishaq, with Yaqub to follow; Lut believed him, and prophethood and the Book were placed among his offspring.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 42,
+          "to": 42
+        },
+        {
+          "surah": 11,
+          "from": 71,
+          "to": 71
+        },
+        {
+          "surah": 14,
+          "from": 39,
+          "to": 39
+        },
+        {
+          "surah": 29,
+          "from": 26,
+          "to": 27
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "stated",
+      "text_en": "Ibrahim answered his guests' greeting of peace with peace, brought out a meal for them, and asked whether they would not eat.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 69,
+          "to": 69
+        },
+        {
+          "surah": 51,
+          "from": 24,
+          "to": 27
+        }
+      ]
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "Ibrahim said knowledge had come to him which had not come to his father (19:43), but the Quran describes no teaching or schooling."
+    },
+    "health_treatment": {
+      "status": "stated",
+      "text_en": "Ibrahim said that when he is ill, his Lord heals him.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 80,
+          "to": 80
+        }
+      ]
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate of the land of Ibrahim."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "Ibrahim turned his face to the One who originated the heavens and the earth, prayed to be an establisher of prayer, and with Ismail raised the foundations of the House, asking God to accept it.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 79,
+          "to": 79
+        },
+        {
+          "surah": 14,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 2,
+          "from": 127,
+          "to": 127
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "His father threatened to stone him, his people moved to burn him and God made the fire coolness and safety, and a king argued with him about his Lord.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 46,
+          "to": 46
+        },
+        {
+          "surah": 21,
+          "from": 68,
+          "to": 69
+        },
+        {
+          "surah": 2,
+          "from": 258,
+          "to": 258
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran gives Ibrahim's words, prayers and encounters but no dates, ages or named places for them, so a reader should not add a route, a town or a year from other sources.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 71,
+          "to": 71
+        },
+        {
+          "surah": 29,
+          "from": 26,
+          "to": 26
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages present speaking to a father who disagrees with respect and reasons, and welcoming guests with a greeting and a meal, as part of Ibrahim's account.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 42,
+          "to": 47
+        },
+        {
+          "surah": 51,
+          "from": 24,
+          "to": 27
+        }
+      ]
+    }
+  }
+}

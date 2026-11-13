@@ -1,0 +1,169 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "donkey",
+  "category": "animals",
+  "name_en": "The donkey",
+  "name_ar": "الحمار",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran names donkeys (al-hamir) with horses and mules.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 8,
+          "to": 8
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the origin of the donkey in particular."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "Horses, mules and donkeys are named for people to ride and as adornment.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 8,
+          "to": 8
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The harshest of voices is the voice of donkeys, in Luqman's advice to his son.",
+      "refs": [
+        {
+          "surah": 31,
+          "from": 19,
+          "to": 19
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "A donkey carrying volumes of books is used as a picture in a likeness.",
+      "refs": [
+        {
+          "surah": 62,
+          "from": 5,
+          "to": 5
+        }
+      ]
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the donkey."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "People ride donkeys. Luqman tells his son to be moderate in his walk and lower his voice, because the harshest voice is the donkey's.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 8,
+          "to": 8
+        },
+        {
+          "surah": 31,
+          "from": 13,
+          "to": 13
+        },
+        {
+          "surah": 31,
+          "from": 19,
+          "to": 19
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "A donkey is in the account of the man who passed a ruined town, who is told to look at his donkey. It is also in the likeness of those who were given the Torah and did not carry it, and of people fleeing like startled donkeys.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 259,
+          "to": 259
+        },
+        {
+          "surah": 62,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 74,
+          "from": 50,
+          "to": 51
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no time or order for the donkey."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where donkeys live."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the donkey appears in likenesses that describe human conduct: Luqman's advice, the verse on those given the Torah and the verse on people fleeing. These are not statements about the animal's worth or intelligence.",
+      "refs": [
+        {
+          "surah": 31,
+          "from": 19,
+          "to": 19
+        },
+        {
+          "surah": 62,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 74,
+          "from": 50,
+          "to": 51
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Luqman's advice joins a moderate walk with a lowered voice, with the donkey's voice as the picture of the harshest, and is read as a lesson in restraint in speech.",
+      "refs": [
+        {
+          "surah": 31,
+          "from": 19,
+          "to": 19
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-himar (the donkey), al-humur (donkeys), asfar (volumes of books), ankar al-aswat (the harshest of voices).",
+      "refs": [
+        {
+          "surah": 31,
+          "from": 19,
+          "to": 19
+        },
+        {
+          "surah": 62,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 74,
+          "from": 50,
+          "to": 50
+        },
+        {
+          "surah": 16,
+          "from": 8,
+          "to": 8
+        }
+      ]
+    }
+  }
+}

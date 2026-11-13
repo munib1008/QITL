@@ -13,8 +13,12 @@ const PAGES: Array<{ path: string; heading: RegExp; check: (page: import("@playw
     check: async (p) => {
       await expect(p.getByTestId("nuh-note")).toContainText("950 years");
       await expect(p.getByTestId("nuh-note")).toContainText("not established by the Quran or the selected authentic hadith");
-      await expect(p.locator('[data-field][data-known="false"]')).toHaveCount(20);
-      await expect(p.getByTestId("empty-state").first()).toBeVisible();
+      // The Quran-only AI draft (content/lifestyle/nuh.draft.json) fills the 20 fields: some stated with their verses, the rest honestly "not established".
+      await expect(p.getByTestId("lifestyle-draft")).toBeVisible();
+      await expect(p.getByTestId("verification-badge").first()).toContainText("AI-Assisted Draft");
+      await expect(p.locator("[data-field][data-draft]")).toHaveCount(20);
+      await expect(p.locator('[data-field][data-known="false"]')).toHaveCount(9);
+      await expect(p.locator('[data-field][data-known="true"]')).toHaveCount(11);
     },
   },
   {
@@ -59,7 +63,7 @@ for (const width of [360, 1440]) {
     test.skip(() => test.info().project.name !== "desktop", "one project drives both widths");
     test.use({ viewport: { width, height: width < 600 ? 780 : 900 } });
     for (const pg of PAGES) {
-      test(`${pg.path}: designed empty state and no axe violations`, async ({ page }) => {
+      test(`${pg.path}: designed state and no axe violations`, async ({ page }) => {
         const res = await page.goto(pg.path);
         expect(res?.status()).toBe(200);
         await expect(page.getByRole("heading", { level: 1, name: pg.heading })).toBeVisible();
@@ -80,4 +84,19 @@ test("the prophet page links to Their Life & Times, and the timeline keeps the p
   await page.goto("/timeline");
   await expect(page.getByTestId("timeline-layers")).toHaveAttribute("data-layer", "prophets");
   await expect(page.getByRole("navigation", { name: "Timeline layer" }).getByRole("link", { name: "Prophets & events" })).toHaveAttribute("aria-current", "true");
+});
+
+// Every prophet page of the journey has its Quran-only "How They Lived" draft (Harun's is shown with Musa's).
+const PROPHET_IDS = ["adam", "idris", "nuh", "hud", "salih", "ibrahim", "lut", "ismail", "ishaq", "yaqub", "yusuf", "ayyub", "shuayb", "musa", "dhulkifl", "dawud", "sulayman", "ilyas", "alyasa", "yunus", "zakariya", "yahya", "isa", "muhammad"];
+test.describe("how they lived drafts", () => {
+  test.skip(() => test.info().project.name !== "desktop", "one project drives every page");
+  for (const id of PROPHET_IDS)
+    test(`/life-through-ages/prophets/${id} shows the AI-assisted draft with twenty fields`, async ({ page }) => {
+      const res = await page.goto(`/life-through-ages/prophets/${id}`);
+      expect(res?.status()).toBe(200);
+      const draft = page.getByTestId("lifestyle-draft");
+      await expect(draft.first()).toBeVisible();
+      await expect(draft.first().getByTestId("verification-badge")).toContainText("AI-Assisted Draft");
+      expect(await draft.first().locator("[data-field]").count()).toBe(20);
+    });
 });

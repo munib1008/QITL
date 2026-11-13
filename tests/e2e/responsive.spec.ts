@@ -65,8 +65,13 @@ async function hiddenBehindBottomNav(page: Page) {
   return page.evaluate(async () => {
     const nav = document.querySelector<HTMLElement>("[data-bottom-nav]");
     if (!nav || getComputedStyle(nav).display === "none") return null;
-    window.scrollTo(0, document.documentElement.scrollHeight);
-    await new Promise((r) => setTimeout(r, 120));
+    // Instant, not smooth: the question is where the page ends, not how long the scroll animation takes.
+    // Long reader pages mount more of themselves as they are scrolled, so scroll again until the height stops changing.
+    for (let i = 0, last = -1; i < 8 && document.documentElement.scrollHeight !== last; i++) {
+      last = document.documentElement.scrollHeight;
+      window.scrollTo({ top: last, behavior: "instant" });
+      await new Promise((r) => setTimeout(r, 150));
+    }
     const navTop = nav.getBoundingClientRect().top;
     const foot = document.querySelector<HTMLElement>("footer");
     if (!foot) return null;

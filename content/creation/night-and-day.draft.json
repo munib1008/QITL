@@ -1,0 +1,228 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "night-and-day",
+  "category": "heavens_earth",
+  "name_en": "Night and Day",
+  "name_ar": "الليل والنهار",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Night and day are two signs (ayatayn) that God made and named together; they are created along with the sun and the moon.",
+      "refs": [
+        {
+          "surah": 17,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 21,
+          "from": 33,
+          "to": 33
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God created the night and the day with the sun and the moon. He splits open the dawn and made the night a time of stillness.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 33,
+          "to": 33
+        },
+        {
+          "surah": 6,
+          "from": 96,
+          "to": 96
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "The night is for rest and the day for seeking God's bounty, so that people give thanks; the night and day are also signs by which people know the number of years and the reckoning.",
+      "refs": [
+        {
+          "surah": 28,
+          "from": 73,
+          "to": 73
+        },
+        {
+          "surah": 17,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 25,
+          "from": 47,
+          "to": 47
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The night is a covering and the day a time of livelihood and rising. One wraps over the other, one enters into the other, and the night covers the day and seeks it swiftly.",
+      "refs": [
+        {
+          "surah": 78,
+          "from": 10,
+          "to": 11
+        },
+        {
+          "surah": 25,
+          "from": 47,
+          "to": 47
+        },
+        {
+          "surah": 39,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 31,
+          "from": 29,
+          "to": 29
+        },
+        {
+          "surah": 7,
+          "from": 54,
+          "to": 54
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "God makes the night enter the day and the day enter the night, turns the night and the day about, and strips the day away from the night.",
+      "refs": [
+        {
+          "surah": 31,
+          "from": 29,
+          "to": 29
+        },
+        {
+          "surah": 24,
+          "from": 44,
+          "to": 44
+        },
+        {
+          "surah": 36,
+          "from": 37,
+          "to": 37
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "Neither continues or changes by itself: if God made the night or the day unending until the Day of Resurrection, no other god could bring the other. Nor does the night outstrip the day.",
+      "refs": [
+        {
+          "surah": 28,
+          "from": 71,
+          "to": 72
+        },
+        {
+          "surah": 36,
+          "from": 40,
+          "to": 40
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "People rest in the night and seek God's bounty by day. Rising in the night is described as firmer for standing in prayer and clearer in speech, and the day gives a long occupation.",
+      "refs": [
+        {
+          "surah": 28,
+          "from": 73,
+          "to": 73
+        },
+        {
+          "surah": 73,
+          "from": 6,
+          "to": 7
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The Quran swears by the night as it covers and the day as it shines. It also says God took His servant on a journey by night from the Sacred Mosque to the farthest mosque.",
+      "refs": [
+        {
+          "surah": 92,
+          "from": 1,
+          "to": 2
+        },
+        {
+          "surah": 17,
+          "from": 1,
+          "to": 1
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran does not say when night and day were made within the six days."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The verses give no place for the night and the day beyond their relation to the sun, the moon and the earth."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The verse saying that the night wraps over the day and the day over the night is read here only in its own words. It is not turned into a statement about shape or motion, and this profile does not compare it with modern astronomy.",
+      "refs": [
+        {
+          "surah": 39,
+          "from": 5,
+          "to": 5
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Night and day are presented as a pair of mercies to give thanks for: rest on one side, effort and bounty on the other.",
+      "refs": [
+        {
+          "surah": 28,
+          "from": 73,
+          "to": 73
+        },
+        {
+          "surah": 25,
+          "from": 47,
+          "to": 47
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Layl is night; nahar is day; libas is a covering; ma'ash is livelihood; nushur is a rising up; sarmad means unbroken; yulij means He makes enter; yukawwir means He wraps over.",
+      "refs": [
+        {
+          "surah": 78,
+          "from": 10,
+          "to": 11
+        },
+        {
+          "surah": 25,
+          "from": 47,
+          "to": 47
+        },
+        {
+          "surah": 28,
+          "from": 71,
+          "to": 71
+        },
+        {
+          "surah": 31,
+          "from": 29,
+          "to": 29
+        },
+        {
+          "surah": 39,
+          "from": 5,
+          "to": 5
+        }
+      ]
+    }
+  }
+}

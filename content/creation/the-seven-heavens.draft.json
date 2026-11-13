@@ -1,0 +1,272 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "the-seven-heavens",
+  "category": "heavens_earth",
+  "name_en": "The Seven Heavens",
+  "name_ar": "السماوات السبع",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran presents the heavens as a creation of God: seven heavens, one above another, and of the earth 'the like of them'. The verse does not explain what that likeness is. The single word 'heaven' is also used for the sky above, called a built structure.",
+      "refs": [
+        {
+          "surah": 65,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 67,
+          "from": 3,
+          "to": 3
+        },
+        {
+          "surah": 2,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God turned to the heaven while it was smoke and completed seven heavens. He is described as the one who built it and raised its height. Another verse says the heavens and the earth were joined together and God split them apart.",
+      "refs": [
+        {
+          "surah": 41,
+          "from": 11,
+          "to": 12
+        },
+        {
+          "surah": 79,
+          "from": 27,
+          "to": 28
+        },
+        {
+          "surah": 21,
+          "from": 30,
+          "to": 30
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "God says He did not create the heaven, the earth and what lies between them in play, but with truth. The making of the heavens and the earth is given as signs for people of understanding, who reflect on it and say their Lord did not make it in vain.",
+      "refs": [
+        {
+          "surah": 44,
+          "from": 38,
+          "to": 39
+        },
+        {
+          "surah": 3,
+          "from": 190,
+          "to": 191
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "Described as built and strong: 'seven strong ones' above you, raised without supports you can see, and a protected roof. When the eye looks again and again, it finds no flaw and no crack in what the All-Merciful made.",
+      "refs": [
+        {
+          "surah": 78,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 13,
+          "from": 2,
+          "to": 2
+        },
+        {
+          "surah": 21,
+          "from": 32,
+          "to": 32
+        },
+        {
+          "surah": 67,
+          "from": 3,
+          "to": 4
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "The seven heavens glorify God, though people do not understand their glorification. When God told the heaven and the earth to come, willingly or unwillingly, they said they came willingly.",
+      "refs": [
+        {
+          "surah": 17,
+          "from": 44,
+          "to": 44
+        },
+        {
+          "surah": 41,
+          "from": 11,
+          "to": 11
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "The heavens do not hold themselves in place: God holds the heavens and the earth so that they do not move away, and holds the sky so that it does not fall on the earth except by His leave.",
+      "refs": [
+        {
+          "surah": 35,
+          "from": 41,
+          "to": 41
+        },
+        {
+          "surah": 22,
+          "from": 65,
+          "to": 65
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "The nearest heaven is adorned with lamps and guarded. Everything in the heavens and the earth is subjected for people, from God, and people are told to look at the sky above them, how it was built and adorned.",
+      "refs": [
+        {
+          "surah": 41,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 45,
+          "from": 13,
+          "to": 13
+        },
+        {
+          "surah": 50,
+          "from": 6,
+          "to": 6
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The jinn say they reached for the sky and found it filled with strong guards and flaming fires. Of the Last Day the Quran says the heaven will split open and be rolled up like a scroll of writings.",
+      "refs": [
+        {
+          "surah": 72,
+          "from": 8,
+          "to": 8
+        },
+        {
+          "surah": 84,
+          "from": 1,
+          "to": 1
+        },
+        {
+          "surah": 21,
+          "from": 104,
+          "to": 104
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "The heavens and the earth together are said to be made in six days. One passage has the earth made in two days, its mountains and provision set in four, and seven heavens completed in two days. Another has the heaven built first and the earth spread out after that. The two are not reconciled here.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 54,
+          "to": 54
+        },
+        {
+          "surah": 41,
+          "from": 9,
+          "to": 12
+        },
+        {
+          "surah": 79,
+          "from": 27,
+          "to": 30
+        }
+      ]
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "Above the people: 'We built above you seven strong ones'. The sky is called a raised roof, and the heavens are also called seven ways above you.",
+      "refs": [
+        {
+          "surah": 78,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 52,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 23,
+          "from": 17,
+          "to": 17
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The seven heavens are sometimes read as a diagram or fitted to a modern model. The verses give the number, the words 'one above another' and the wording of their making; they do not give measurements or a layout, and this profile adds none.",
+      "refs": [
+        {
+          "surah": 65,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 67,
+          "from": 3,
+          "to": 3
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The verses ask the reader to look up and reflect, and the verse naming the seven heavens ends by saying God has power over everything and encompasses everything in knowledge. Awe at the heavens is meant to lead to trust in the One who made them.",
+      "refs": [
+        {
+          "surah": 65,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 3,
+          "from": 190,
+          "to": 190
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Sama' is heaven or sky and samawat its plural; tibaq means one above another; saqf is a roof; bina' is a built structure; dukhan is smoke; masabih are lamps; fatq is a splitting apart and ratq a joined state.",
+      "refs": [
+        {
+          "surah": 67,
+          "from": 3,
+          "to": 3
+        },
+        {
+          "surah": 52,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 2,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 41,
+          "from": 11,
+          "to": 12
+        },
+        {
+          "surah": 21,
+          "from": 30,
+          "to": 30
+        }
+      ]
+    }
+  }
+}

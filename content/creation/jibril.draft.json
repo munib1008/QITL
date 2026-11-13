@@ -1,0 +1,152 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "jibril",
+  "category": "angels",
+  "name_en": "Jibril (Gabriel)",
+  "name_ar": "جبريل",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Jibril is named in only a few places. In one verse he is mentioned right after God's angels and messengers, together with Mikal, and in another he is named among those who support the Prophet.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 97,
+          "to": 98
+        },
+        {
+          "surah": 66,
+          "from": 4,
+          "to": 4
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not state what Jibril was made from or when."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "He brought the Quran down upon the Prophet's heart by God's permission, confirming what came before it and as guidance and glad tidings for the believers.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 97,
+          "to": 97
+        }
+      ]
+    },
+    "nature": {
+      "status": "not_established",
+      "note_en": "The verses that name Jibril do not describe his form or say more of what he is. They do not say by name that the Faithful Spirit or the Spirit sent to Maryam is Jibril."
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "Beyond bringing the revelation down by God's leave, the verses that name Jibril describe no power of his."
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "He brought the revelation down by God's leave, not by his own authority.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 97,
+          "to": 97
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "He brought the Quran down upon the Prophet's heart. In another verse God, Jibril, the righteous believers and the angels are named as supporters of the Prophet, and enmity toward Jibril is treated as enmity toward God and His angels and messengers.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 97,
+          "to": 98
+        },
+        {
+          "surah": 66,
+          "from": 4,
+          "to": 4
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The Quran names Jibril in the sending down of the revelation to the Prophet's heart and in the verse that names him among the Prophet's supporters. It tells no other event under his name.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 97,
+          "to": 97
+        },
+        {
+          "surah": 66,
+          "from": 4,
+          "to": 4
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no time for Jibril's creation or for his coming, apart from the revelation it describes."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where Jibril is."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The Quran names Jibril only in a few verses. Where it speaks of the Faithful Spirit or of Our Spirit sent to Maryam it does not say the name, so linking them to Jibril is a further step that this draft does not take.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 193,
+          "to": 194
+        },
+        {
+          "surah": 19,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 2,
+          "from": 97,
+          "to": 97
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The verses present revelation as carried by a servant acting by God's leave, which invites readers to receive the Quran as guidance and glad tidings rather than as the work of any messenger.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 97,
+          "to": 97
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "The Quran writes the name Jibril. It calls the one who brings down the revelation the Faithful Spirit and the Holy Spirit, without saying in those verses that the name is Jibril.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 97,
+          "to": 97
+        },
+        {
+          "surah": 26,
+          "from": 193,
+          "to": 194
+        },
+        {
+          "surah": 16,
+          "from": 102,
+          "to": 102
+        }
+      ]
+    }
+  }
+}

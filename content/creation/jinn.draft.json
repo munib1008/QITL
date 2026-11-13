@@ -1,0 +1,270 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "jinn",
+  "category": "jinn",
+  "name_en": "The Jinn",
+  "name_ar": "الجن",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran addresses the company of jinn and men together and says it created the jinn and men to worship Him. Among the jinn there are those who submit and those who deviate.",
+      "refs": [
+        {
+          "surah": 51,
+          "from": 56,
+          "to": 56
+        },
+        {
+          "surah": 55,
+          "from": 33,
+          "to": 33
+        },
+        {
+          "surah": 6,
+          "from": 130,
+          "to": 130
+        },
+        {
+          "surah": 72,
+          "from": 14,
+          "to": 14
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "The Quran says God created the jann from a flame of fire, and that this was before man, whom the verse before names as made from clay.",
+      "refs": [
+        {
+          "surah": 55,
+          "from": 15,
+          "to": 15
+        },
+        {
+          "surah": 15,
+          "from": 26,
+          "to": 27
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "God says He created the jinn and mankind only so that they would worship Him.",
+      "refs": [
+        {
+          "surah": 51,
+          "from": 56,
+          "to": 56
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The jinn speak, hear and choose. A group listened to the Quran and believed, and they said that some of them are righteous and others less so, in different ways, and that some submit while others deviate. Iblis was one of the jinn.",
+      "refs": [
+        {
+          "surah": 72,
+          "from": 1,
+          "to": 2
+        },
+        {
+          "surah": 72,
+          "from": 11,
+          "to": 11
+        },
+        {
+          "surah": 72,
+          "from": 14,
+          "to": 15
+        },
+        {
+          "surah": 18,
+          "from": 50,
+          "to": 50
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "An ifrit among the jinn told Sulayman that he would bring a throne before he rose from his seat, and some of the jinn worked before Sulayman by his Lord's permission, making what he wished.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 39,
+          "to": 39
+        },
+        {
+          "surah": 34,
+          "from": 12,
+          "to": 13
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "The jinn said that they cannot frustrate God on the earth. When Sulayman died they saw that, had they known the unseen, they would not have stayed in the humiliating punishment. The jinn said they found the sky filled with strong guards and flames, and the Quran says none pass through the regions of the heavens and earth except with authority.",
+      "refs": [
+        {
+          "surah": 72,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 34,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 72,
+          "from": 8,
+          "to": 9
+        },
+        {
+          "surah": 55,
+          "from": 33,
+          "to": 33
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Some men sought refuge with men of the jinn, which increased them in burden. The Quran asks the company of jinn and men whether messengers came to them, and a group of the jinn turned back to their people as warners after listening to the Quran.",
+      "refs": [
+        {
+          "surah": 72,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 6,
+          "from": 130,
+          "to": 130
+        },
+        {
+          "surah": 46,
+          "from": 29,
+          "to": 29
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "A group listened to the Quran and returned to their people as warners. Some jinn worked for Sulayman and did not know that he had died until the creature of the earth was seen gnawing his staff. Iblis, who refused to prostrate to Adam, was one of the jinn.",
+      "refs": [
+        {
+          "surah": 46,
+          "from": 29,
+          "to": 32
+        },
+        {
+          "surah": 72,
+          "from": 1,
+          "to": 2
+        },
+        {
+          "surah": 34,
+          "from": 12,
+          "to": 14
+        },
+        {
+          "surah": 18,
+          "from": 50,
+          "to": 50
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "The Quran says the jann was created earlier than man.",
+      "refs": [
+        {
+          "surah": 15,
+          "from": 26,
+          "to": 27
+        }
+      ]
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not name a homeland or dwelling for the jinn."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): It is not stated in the Quran that all jinn are evil, since it records righteous jinn. Nor is it stated that they know the unseen, since it says they did not. Their forms, numbers and societies are not described in the verses.",
+      "refs": [
+        {
+          "surah": 72,
+          "from": 11,
+          "to": 11
+        },
+        {
+          "surah": 72,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 34,
+          "from": 14,
+          "to": 14
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The jinn are addressed together with humans as accountable, and some of them responded to the Quran at once. This may be read as an invitation to measure oneself by the response to guidance rather than by origin or by what is unseen.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 130,
+          "to": 130
+        },
+        {
+          "surah": 46,
+          "from": 29,
+          "to": 32
+        },
+        {
+          "surah": 72,
+          "from": 1,
+          "to": 2
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "The Quran uses al-jinn, al-jann (the one created from fire), ifrit min al-jinn, nafar min al-jinn (a group of jinn), ma'shar al-jinn (the company of jinn) and al-jinnah in the last surah.",
+      "refs": [
+        {
+          "surah": 15,
+          "from": 27,
+          "to": 27
+        },
+        {
+          "surah": 55,
+          "from": 15,
+          "to": 15
+        },
+        {
+          "surah": 27,
+          "from": 39,
+          "to": 39
+        },
+        {
+          "surah": 72,
+          "from": 1,
+          "to": 1
+        },
+        {
+          "surah": 6,
+          "from": 128,
+          "to": 128
+        },
+        {
+          "surah": 114,
+          "from": 6,
+          "to": 6
+        }
+      ]
+    }
+  }
+}

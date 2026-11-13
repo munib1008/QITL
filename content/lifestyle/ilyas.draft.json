@@ -1,0 +1,152 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "ilyas",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for Ilyas."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the land or place of Ilyas and his people."
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "Ilyas is among the messengers; he spoke to his own people and asked whether they would not be mindful of God.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 123,
+          "to": 124
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age or length of life for Ilyas."
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "He spoke to his people, asking whether they called on Baal and abandoned the best of creators.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 124,
+          "to": 126
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "God says Ilyas is among the messengers.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 123,
+          "to": 123
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Ilyas or his people ate or drank."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding in the passage on Ilyas."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Ilyas or his people."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe where or how Ilyas lived."
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention travel or transport in the passage on Ilyas."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "He reminded his people that God is their Lord and the Lord of their forefathers of old.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 126,
+          "to": 126
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe customs or leisure of his people beyond their calling on Baal."
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe teaching or learning in the passage on Ilyas."
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment in the passage on Ilyas."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate of the land of Ilyas."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "He told his people to be mindful of God, while they called on Baal. God says he was among His believing servants.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 124,
+          "to": 126
+        },
+        {
+          "surah": 37,
+          "from": 132,
+          "to": 132
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "His people called him a liar. The Quran says that they will therefore be brought forward, except God's devoted servants.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 127,
+          "to": 128
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the passage on Ilyas is brief and gives no place, date or daily detail, so none should be supplied from elsewhere as if the Quran stated it.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 123,
+          "to": 132
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the passage shows a prophet appealing to his people with a question, and ends with peace upon him as a reward for those who do good.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 124,
+          "to": 126
+        },
+        {
+          "surah": 37,
+          "from": 130,
+          "to": 131
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "birds",
+  "category": "animals",
+  "name_en": "Birds (al-tayr)",
+  "name_ar": "الطير",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran says there is no bird that flies on its two wings but it is a community like people.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 38,
+          "to": 38
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the origin of birds in general."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "Everyone in the heavens and the earth glorifies God, and the birds in rows; each knows its prayer and its glorification.",
+      "refs": [
+        {
+          "surah": 24,
+          "from": 41,
+          "to": 41
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The birds above people in rows are held up by none but the Most Merciful.",
+      "refs": [
+        {
+          "surah": 67,
+          "from": 19,
+          "to": 19
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "Sulayman was taught the speech of the birds, and the birds were among his hosts. The birds were gathered with Dawud, each one turning back.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 16,
+          "to": 17
+        },
+        {
+          "surah": 38,
+          "from": 19,
+          "to": 19
+        }
+      ]
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of birds in general."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Ibrahim asked to see how God gives life to the dead so that his heart be at ease. He was told to take four birds, place a portion of them on each hill, and call them, and they would come to him in haste. The birds were subjected with Dawud, and Sulayman was taught their speech.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 260,
+          "to": 260
+        },
+        {
+          "surah": 27,
+          "from": 16,
+          "to": 16
+        },
+        {
+          "surah": 34,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 21,
+          "from": 79,
+          "to": 79
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The four birds of Ibrahim; the hoopoe in Sulayman's account; the raven; birds in flocks against the companions of the elephant; a clay form of a bird that Isa says becomes a bird by God's permission; and, in Yusuf's prison, an interpretation that birds will eat from a head.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 260,
+          "to": 260
+        },
+        {
+          "surah": 27,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 5,
+          "from": 31,
+          "to": 31
+        },
+        {
+          "surah": 105,
+          "from": 3,
+          "to": 3
+        },
+        {
+          "surah": 3,
+          "from": 49,
+          "to": 49
+        },
+        {
+          "surah": 12,
+          "from": 41,
+          "to": 41
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no time or order for birds as a group."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "Birds are above people, in rows.",
+      "refs": [
+        {
+          "surah": 67,
+          "from": 19,
+          "to": 19
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verse on Ibrahim's four birds asks him to take four and call them. It names no kinds of birds, and this profile names none.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 260,
+          "to": 260
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): birds appear as glorifiers, as held up by God, and as a means of easing Ibrahim's heart, which is read as a lesson that signs of God's power may be seen in ordinary creatures.",
+      "refs": [
+        {
+          "surah": 24,
+          "from": 41,
+          "to": 41
+        },
+        {
+          "surah": 67,
+          "from": 19,
+          "to": 19
+        },
+        {
+          "surah": 2,
+          "from": 260,
+          "to": 260
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-tayr (birds), mantiq al-tayr (the speech of the birds), saffat (in rows), tayran ababil (birds in flocks), awwab (turning back).",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 16,
+          "to": 16
+        },
+        {
+          "surah": 67,
+          "from": 19,
+          "to": 19
+        },
+        {
+          "surah": 105,
+          "from": 3,
+          "to": 3
+        },
+        {
+          "surah": 38,
+          "from": 19,
+          "to": 19
+        }
+      ]
+    }
+  }
+}

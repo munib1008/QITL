@@ -1,0 +1,143 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "ismail",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for Ismail and no age at any point in his life."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where Ismail lived. It names him beside Ibrahim at the House without placing either in a land."
+    },
+    "community": {
+      "status": "not_established",
+      "note_en": "The Quran does not say which people Ismail was sent to. It speaks of his household."
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Ismail and no length for his life."
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "Ismail used to tell his household to pray and to give zakat.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 55,
+          "to": 55
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "Ismail is described as true to his promise, and as a messenger and a prophet.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 54,
+          "to": 54
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Ismail ate or drank."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding in the account of Ismail."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Ismail."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe where or how Ismail lived."
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention any means of travel for Ismail."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "Ibrahim praised God for giving him Ismail and Ishaq in his old age, and Ismail had a household that he told to pray.",
+      "refs": [
+        {
+          "surah": 14,
+          "from": 39,
+          "to": 39
+        },
+        {
+          "surah": 19,
+          "from": 55,
+          "to": 55
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe customs or leisure in the life of Ismail."
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe teaching or learning in the account of Ismail."
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment in the account of Ismail."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate of any land of Ismail."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "God made a covenant with Ibrahim and Ismail to purify His house for those who go around it, stay there, bow and prostrate; Ismail told his household to pray and give zakat.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 125,
+          "to": 125
+        },
+        {
+          "surah": 19,
+          "from": 55,
+          "to": 55
+        }
+      ]
+    },
+    "challenges": {
+      "status": "not_established",
+      "note_en": "Ismail is named among the patient, but the Quran gives no event, trial or opposition from which that patience is drawn."
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran names Ismail beside Ibrahim at the House and in lists of prophets but gives no biography, so a reader should not add a residence, a lifespan or a role from other sources as if the Quran stated them.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 127,
+          "to": 127
+        },
+        {
+          "surah": 21,
+          "from": 85,
+          "to": 86
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these verses place keeping a promise beside caring for one's own household in prayer.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 54,
+          "to": 55
+        }
+      ]
+    }
+  }
+}

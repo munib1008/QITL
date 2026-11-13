@@ -1,0 +1,161 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "bearers-of-the-throne",
+  "category": "angels",
+  "name_en": "The bearers of the Throne",
+  "name_ar": "حملة العرش",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran speaks of those who bear the Throne and those around it. It calls the ones encircling the Throne angels, but the verse on the bearers does not itself say outright that the bearers are angels.",
+      "refs": [
+        {
+          "surah": 40,
+          "from": 7,
+          "to": 7
+        },
+        {
+          "surah": 39,
+          "from": 75,
+          "to": 75
+        },
+        {
+          "surah": 69,
+          "from": 17,
+          "to": 17
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not state what the bearers are made from or when."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "They bear the Throne, glorify with praise of their Lord and ask forgiveness for the believers.",
+      "refs": [
+        {
+          "surah": 40,
+          "from": 7,
+          "to": 7
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "They glorify their Lord with praise and believe in Him.",
+      "refs": [
+        {
+          "surah": 40,
+          "from": 7,
+          "to": 7
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "On the Day when the sky is split, eight will bear the Throne of the Lord above them. The verse does not say what the eight are.",
+      "refs": [
+        {
+          "surah": 69,
+          "from": 13,
+          "to": 17
+        }
+      ]
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran names no limit of the bearers beyond the fact that they ask God and do not decide."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "They ask forgiveness for the believers, saying that God's mercy and knowledge encompass all things, and pray that He forgive those who repent and follow His way, protect them from Hell, admit them to the Gardens of Eden with the righteous among their parents, spouses and offspring, and keep them from evil deeds.",
+      "refs": [
+        {
+          "surah": 40,
+          "from": 7,
+          "to": 9
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The Quran gives one scene: the Day of the Reality, when the trumpet is blown, the sky is split, and eight bear the Throne above them.",
+      "refs": [
+        {
+          "surah": 69,
+          "from": 13,
+          "to": 17
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran does not say when the bearers began to bear the Throne."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "The Throne is borne, angels encircle it glorifying, and on that Day the angel stands on the sides of the split sky with the Throne above them.",
+      "refs": [
+        {
+          "surah": 40,
+          "from": 7,
+          "to": 7
+        },
+        {
+          "surah": 39,
+          "from": 75,
+          "to": 75
+        },
+        {
+          "surah": 69,
+          "from": 16,
+          "to": 17
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The number eight is stated for one Day only. A number for the bearers at other times, a size, or a description of them is not stated in the verses.",
+      "refs": [
+        {
+          "surah": 69,
+          "from": 17,
+          "to": 17
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Those who bear the Throne are shown asking forgiveness for believers. This may be read as a picture of humility in prayer, and as a reminder that mercy is asked from the one whose mercy and knowledge encompass all things.",
+      "refs": [
+        {
+          "surah": 40,
+          "from": 7,
+          "to": 9
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "The Quran uses alladhina yahmiluna al-arsh (those who bear the Throne), hafifina min hawl al-arsh (encircling the Throne) and yahmilu arsha rabbika (bears the Throne of your Lord).",
+      "refs": [
+        {
+          "surah": 40,
+          "from": 7,
+          "to": 7
+        },
+        {
+          "surah": 39,
+          "from": 75,
+          "to": 75
+        },
+        {
+          "surah": 69,
+          "from": 17,
+          "to": 17
+        }
+      ]
+    }
+  }
+}

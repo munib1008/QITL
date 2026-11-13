@@ -1,0 +1,203 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "nuh",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era in years for Nuh. His place in the order of the prophets is not a dated claim."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the land or place of Nuh's people."
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "Nuh was sent to his own people and told them to worship God alone.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 59,
+          "to": 59
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "stated",
+      "text_en": "He stayed among his people a thousand years less fifty years. The Quran does not state his total age.",
+      "refs": [
+        {
+          "surah": 29,
+          "from": 14,
+          "to": 14
+        }
+      ]
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "He called his people to God by night and by day, openly and in private.",
+      "refs": [
+        {
+          "surah": 71,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 71,
+          "from": 8,
+          "to": 9
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "He is described as a messenger calling his people, and as building the ship under God's guidance and inspiration.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 37,
+          "to": 37
+        },
+        {
+          "surah": 23,
+          "from": 27,
+          "to": 27
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Nuh or his people ate or drank."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding among Nuh's people. It mentions pairs of animals carried on the ship, not their keeping."
+    },
+    "clothing_care": {
+      "status": "stated",
+      "text_en": "His people are described as putting their fingers in their ears and covering themselves with their garments so as not to hear him.",
+      "refs": [
+        {
+          "surah": 71,
+          "from": 7,
+          "to": 7
+        }
+      ]
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe where or how Nuh's people lived."
+    },
+    "transport": {
+      "status": "stated",
+      "text_en": "The ship he built carried the believers and a pair of each kind, and sailed on waves like mountains.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 40,
+          "to": 42
+        },
+        {
+          "surah": 23,
+          "from": 27,
+          "to": 27
+        }
+      ]
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "His family was to be carried on the ship except those against whom the word had gone forth; one son is described as refusing to board.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 40,
+          "to": 43
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the customs or leisure of Nuh's people beyond their beliefs."
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe teaching or learning among Nuh's people."
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment in the story of Nuh."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the ordinary climate of his land. The flood is recounted as an event, not as a climate."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "Nuh told his people to worship God and seek His forgiveness; they held to gods the Quran names, among them Wadd, Suwa, Yaghuth, Yauq and Nasr.",
+      "refs": [
+        {
+          "surah": 71,
+          "from": 3,
+          "to": 4
+        },
+        {
+          "surah": 71,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 71,
+          "from": 23,
+          "to": 23
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "His people rejected him, and their leaders ridiculed him as he built the ship; he prayed to his Lord that he was overcome and asked for help.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 38,
+          "to": 38
+        },
+        {
+          "surah": 54,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 7,
+          "from": 60,
+          "to": 60
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran gives no dates, places or measurements for Nuh's life, so a reader should not add them from other sources as if the Quran stated them.",
+      "refs": [
+        {
+          "surah": 29,
+          "from": 14,
+          "to": 14
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages present persistence in calling people, openly and in private, and patience under ridicule as part of Nuh's mission.",
+      "refs": [
+        {
+          "surah": 71,
+          "from": 5,
+          "to": 9
+        },
+        {
+          "surah": 11,
+          "from": 38,
+          "to": 38
+        }
+      ]
+    }
+  }
+}

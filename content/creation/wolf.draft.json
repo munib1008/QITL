@@ -1,0 +1,123 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "wolf",
+  "category": "animals",
+  "name_en": "The wolf",
+  "name_ar": "الذئب",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The wolf (al-dhi'b) appears in the account of Yusuf, in his father's fear and in his brothers' claim.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 13,
+          "to": 13
+        },
+        {
+          "surah": 12,
+          "from": 17,
+          "to": 17
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the origin of the wolf."
+    },
+    "purpose": {
+      "status": "not_established",
+      "note_en": "The Quran does not state a purpose for the wolf."
+    },
+    "nature": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the wolf itself. It appears only in what people say."
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe abilities of the wolf."
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the wolf."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Yaqub said he feared the wolf might eat Yusuf while they were unaware. His sons later said the wolf had eaten him, and they brought false blood on his shirt.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 13,
+          "to": 13
+        },
+        {
+          "surah": 12,
+          "from": 17,
+          "to": 18
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The brothers took Yusuf and agreed to put him in the depths of the well. They returned weeping in the evening, said the wolf had eaten him, and Yaqub said their souls had tempted them to something and that beautiful patience was his course.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 13,
+          "to": 18
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date for the event."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where the wolf is supposed to have been."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran never shows a wolf acting. It appears in the father's fear and in his sons' claim, which Yaqub rejects. This profile does not describe the animal's conduct.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 13,
+          "to": 13
+        },
+        {
+          "surah": 12,
+          "from": 17,
+          "to": 18
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the sons' use of an animal as an excuse, answered by Yaqub's beautiful patience, is read as a lesson about blaming others and about patience.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 17,
+          "to": 18
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-dhi'b (the wolf), dam kadhib (false blood), sabrun jamil (beautiful patience), sawwalat lakum anfusukum (your souls tempted you).",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 13,
+          "to": 13
+        },
+        {
+          "surah": 12,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    }
+  }
+}

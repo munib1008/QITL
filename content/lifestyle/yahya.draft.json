@@ -1,0 +1,165 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "yahya",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for Yahya."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the land or place of Yahya."
+    },
+    "community": {
+      "status": "not_established",
+      "note_en": "The Quran does not say to whom Yahya was sent in the passages used here."
+    },
+    "lifespan": {
+      "status": "stated",
+      "text_en": "The Quran gives no number of years. It says he was given judgment as a child, and that peace is on him the day he was born, the day he dies and the day he is raised alive.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 19,
+          "from": 15,
+          "to": 15
+        }
+      ]
+    },
+    "daily_activities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the day-to-day activities of Yahya."
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "He is called a prophet from among the righteous, a leader and one who holds back, and was told to take the Book with strength.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 39,
+          "to": 39
+        },
+        {
+          "surah": 19,
+          "from": 12,
+          "to": 12
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Yahya ate or drank."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding for Yahya."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Yahya."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe where or how Yahya lived."
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention travel or transport for Yahya."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "He was given to Zakariyya when the father was old and the mother barren. He was dutiful to his parents.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 19,
+          "from": 8,
+          "to": 8
+        },
+        {
+          "surah": 19,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 21,
+          "from": 90,
+          "to": 90
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe customs or leisure for Yahya."
+    },
+    "education": {
+      "status": "stated",
+      "text_en": "God told him to take the Book with strength and gave him judgment as a child.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 12,
+          "to": 12
+        }
+      ]
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment for Yahya."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate of his land."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "He feared God, and God gave him tenderness from Himself and purity. His family is described as hastening to good deeds and calling on God in hope and fear.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 13,
+          "to": 13
+        },
+        {
+          "surah": 21,
+          "from": 90,
+          "to": 90
+        }
+      ]
+    },
+    "challenges": {
+      "status": "not_established",
+      "note_en": "In the passages used here the Quran does not describe hardships faced by Yahya."
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran gives Yahya's character and gifts but no place, trade or timeline, so none should be added as if stated.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 12,
+          "to": 15
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the passages present dutifulness to parents and humility, rather than harshness, as part of his description.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 14,
+          "to": 14
+        }
+      ]
+    }
+  }
+}

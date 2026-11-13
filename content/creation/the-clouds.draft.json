@@ -1,0 +1,235 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "the-clouds",
+  "category": "heavens_earth",
+  "name_en": "The Clouds",
+  "name_ar": "السحاب",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Clouds (sahab, ghamam) are created things that God drives and subjects between the sky and the earth. They are called heavy when they carry rain.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 164,
+          "to": 164
+        },
+        {
+          "surah": 7,
+          "from": 57,
+          "to": 57
+        },
+        {
+          "surah": 13,
+          "from": 12,
+          "to": 12
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God drives the clouds gently, joins them together and piles them up. He also brings the heavy clouds into being, and the winds stir them.",
+      "refs": [
+        {
+          "surah": 24,
+          "from": 43,
+          "to": 43
+        },
+        {
+          "surah": 13,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 30,
+          "from": 48,
+          "to": 48
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "Clouds bring rain: the drops come out from within them, and the water revives dead land and brings out fruit.",
+      "refs": [
+        {
+          "surah": 24,
+          "from": 43,
+          "to": 43
+        },
+        {
+          "surah": 30,
+          "from": 48,
+          "to": 48
+        },
+        {
+          "surah": 7,
+          "from": 57,
+          "to": 57
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "Clouds are spread in the sky as God wills, made into pieces and heaped up, and the rain comes out from within them. God sends down from the sky 'mountains' in which there is hail.",
+      "refs": [
+        {
+          "surah": 30,
+          "from": 48,
+          "to": 48
+        },
+        {
+          "surah": 24,
+          "from": 43,
+          "to": 43
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "The clouds pour out rain, and God sends hail on whom He wills and turns it from whom He wills; in the same verse the flash of the lightning almost takes away sight.",
+      "refs": [
+        {
+          "surah": 24,
+          "from": 43,
+          "to": 43
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "The clouds move only as God drives them: He drives, joins and heaps them, and rain falls on whom He wills and is turned from whom He wills.",
+      "refs": [
+        {
+          "surah": 24,
+          "from": 43,
+          "to": 43
+        },
+        {
+          "surah": 30,
+          "from": 48,
+          "to": 48
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "People watch lightning with fear and hope. Clouds gave shade to Banu Israil. A cloud seen coming toward the valleys of the people of Aad looked like rain but was a wind carrying a painful punishment.",
+      "refs": [
+        {
+          "surah": 13,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 2,
+          "from": 57,
+          "to": 57
+        },
+        {
+          "surah": 46,
+          "from": 24,
+          "to": 24
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "God shaded Banu Israil with the cloud; the people of Aad mistook a cloud for rain; and on the Day the sky will split open with the clouds.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 57,
+          "to": 57
+        },
+        {
+          "surah": 46,
+          "from": 24,
+          "to": 24
+        },
+        {
+          "surah": 25,
+          "from": 25,
+          "to": 25
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran does not say when in the order of creation the clouds were made."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "Clouds are subjected between the sky and the earth.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 164,
+          "to": 164
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The verse about clouds being driven, joined and piled up is quoted in its own words only. This profile does not map it onto a modern account of how clouds form, which belongs to the separate Quran & Science module.",
+      "refs": [
+        {
+          "surah": 24,
+          "from": 43,
+          "to": 43
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The cloud that brings rain to one place and turns it from another shows that mercy and warning both come by God's will; the people of Aad mistook a punishment for a rain cloud.",
+      "refs": [
+        {
+          "surah": 24,
+          "from": 43,
+          "to": 43
+        },
+        {
+          "surah": 46,
+          "from": 24,
+          "to": 24
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Sahab means clouds; ghamam is cloud cover; muzn are rain clouds; mu'sirat are clouds that pour; rukam is a heap; kisaf are pieces; wadq are drops; barad is hail; barq is lightning; ra'd is thunder; sawa'iq are thunderbolts.",
+      "refs": [
+        {
+          "surah": 24,
+          "from": 43,
+          "to": 43
+        },
+        {
+          "surah": 13,
+          "from": 12,
+          "to": 13
+        },
+        {
+          "surah": 30,
+          "from": 48,
+          "to": 48
+        },
+        {
+          "surah": 56,
+          "from": 69,
+          "to": 69
+        },
+        {
+          "surah": 78,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 2,
+          "from": 19,
+          "to": 19
+        }
+      ]
+    }
+  }
+}

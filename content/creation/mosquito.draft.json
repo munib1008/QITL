@@ -1,0 +1,96 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "mosquito",
+  "category": "animals",
+  "name_en": "The mosquito (gnat)",
+  "name_ar": "البعوضة",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran uses a mosquito (ba'udah) as a likeness, saying God is not shy to strike a likeness with it or with what is above it.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 26,
+          "to": 26
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the origin of the mosquito."
+    },
+    "purpose": {
+      "status": "not_established",
+      "note_en": "The Quran does not state a purpose for the mosquito. It uses it in a likeness."
+    },
+    "nature": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the mosquito beyond naming it in a likeness."
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe abilities of the mosquito."
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the mosquito."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Those who believe know the likeness is the truth from their Lord. Those who disbelieve ask what God meant by it; by it He leads many astray and guides many.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 26,
+          "to": 26
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "not_established",
+      "note_en": "The mosquito appears in a likeness, not in a story of an event."
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no time or order for the mosquito."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where the mosquito lives."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verse is about the likeness and how people respond to it. It says nothing about the insect's habits, and this profile adds none.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 26,
+          "to": 26
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): a small thing can serve as a test of how listeners respond: the verse says it leads many astray and guides many, and that only the defiant are led astray by it.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 26,
+          "to": 26
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: ba'udah (a mosquito), mathal (a likeness), fa-ma fawqaha (or what is above it).",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 26,
+          "to": 26
+        }
+      ]
+    }
+  }
+}

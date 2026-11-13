@@ -1,0 +1,81 @@
+{
+  "schema": "qitl.guidance.draft.v1",
+  "slug": "family-difficulties",
+  "fields": {
+    "situation": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Family difficulties include disagreement with parents, children or a spouse, and the strain of loving people who see things differently from you.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 45,
+          "to": 45
+        }
+      ]
+    },
+    "quran_says": {
+      "status": "stated",
+      "text_en": "The Quran tells people to be good to their parents, never to snap at them, and to lower the wing of humility to them out of mercy. If parents press toward what is wrong, one is not to obey them in it, yet is to keep their company in this world with kindness. It also speaks of affection and mercy between spouses.",
+      "refs": [
+        {
+          "surah": 17,
+          "from": 23,
+          "to": 24
+        },
+        {
+          "surah": 31,
+          "from": 15,
+          "to": 15
+        },
+        {
+          "surah": 30,
+          "from": 21,
+          "to": 21
+        }
+      ]
+    },
+    "prophet_experience": {
+      "status": "stated",
+      "text_en": "Ibrahim spoke gently to his father, calling him my father and giving reasons. His father threatened to stone him and told him to leave; Ibrahim answered peace be upon you and said he would ask his Lord to forgive him. Nuh called to his Lord about his son, and was told that this son was not of his family, since his deed was not righteous.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 42,
+          "to": 47
+        },
+        {
+          "surah": 11,
+          "from": 45,
+          "to": 46
+        }
+      ]
+    },
+    "everyday_application": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): A modest approach is to speak gently and give reasons, as Ibrahim did, to keep kindness in how you treat family even when you disagree, and to bring the matter to God in prayer. For a quarrel between spouses that is hard to settle, the Quran speaks of sending an arbiter from each family.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 42,
+          "to": 47
+        },
+        {
+          "surah": 4,
+          "from": 35,
+          "to": 35
+        }
+      ]
+    },
+    "limits": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The sources give no verdict on any particular family dispute and do not say how to divide duties, money or custody between relatives. For a ruling ask a qualified mufti. This lesson is not counselling; if you are being harmed or threatened by someone in your family, contact local emergency services or a qualified professional.",
+      "refs": [
+        {
+          "surah": 31,
+          "from": 15,
+          "to": 15
+        }
+      ]
+    }
+  }
+}

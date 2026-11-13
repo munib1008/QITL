@@ -1,0 +1,223 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "shuayb",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era in years for Shuayb."
+    },
+    "region": {
+      "status": "stated",
+      "text_en": "God sent him to Madyan, to its people as their brother; the Quran also records him addressing the people of the Aykah.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 85,
+          "to": 85
+        },
+        {
+          "surah": 26,
+          "from": 176,
+          "to": 177
+        }
+      ]
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "He was sent to the people of Madyan as their brother; his people said they would have stoned him but for his kinsfolk.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 85,
+          "to": 85
+        },
+        {
+          "surah": 11,
+          "from": 91,
+          "to": 91
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Shuayb."
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "He called his people to worship God alone, to give full measure and weight, not to defraud people and not to spread corruption, and to be patient until God judges between them.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 85,
+          "to": 87
+        },
+        {
+          "surah": 11,
+          "from": 84,
+          "to": 85
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "He told the people of the Aykah he was a trustworthy messenger to them and asked them for no payment, his reward lying only with the Lord of the worlds.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 176,
+          "to": 180
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Shuayb or his people ate or drank."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding among Shuayb's people."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Shuayb or his people."
+    },
+    "housing": {
+      "status": "stated",
+      "text_en": "The leaders threatened to drive him and the believers out of their town, and the morning found the wrongdoers fallen in their homes. The Quran does not describe the buildings.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 88,
+          "to": 88
+        },
+        {
+          "surah": 7,
+          "from": 91,
+          "to": 91
+        },
+        {
+          "surah": 11,
+          "from": 94,
+          "to": 94
+        }
+      ]
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe how Shuayb or his people travelled."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "His kinsfolk are mentioned as the reason his people did not stone him, and he asked whether they were mightier to his people than God; believers were with him when the leaders threatened them.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 91,
+          "to": 92
+        },
+        {
+          "surah": 7,
+          "from": 88,
+          "to": 88
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "stated",
+      "text_en": "He warned against reducing measure and weight, defrauding people of their things, and sitting on every path making threats; his people spoke of doing as they wished with their wealth.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 85,
+          "to": 86
+        },
+        {
+          "surah": 11,
+          "from": 84,
+          "to": 87
+        }
+      ]
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe teaching or learning among Shuayb's people; it records his advice and warnings."
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment in the story of Shuayb."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the ordinary climate of Madyan. The quake is recounted as an event, not as a climate."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "He told them to worship God, to hope for the last day, to ask their Lord for forgiveness and turn back to Him; his people asked whether his prayer commanded them to leave what their fathers worshipped.",
+      "refs": [
+        {
+          "surah": 29,
+          "from": 36,
+          "to": 36
+        },
+        {
+          "surah": 11,
+          "from": 87,
+          "to": 87
+        },
+        {
+          "surah": 11,
+          "from": 90,
+          "to": 90
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "The leaders threatened to drive him and the believers out unless they returned to their way; his people called him bewitched and a liar, saw him as weak, and would have stoned him but for his kinsfolk.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 88,
+          "to": 88
+        },
+        {
+          "surah": 26,
+          "from": 185,
+          "to": 186
+        },
+        {
+          "surah": 11,
+          "from": 91,
+          "to": 91
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran ties Shuayb's message to honest dealing and to refusing corruption, but gives no dates or measurements of the places it names, so those should not be supplied from outside sources.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 85,
+          "to": 85
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages present fair weight and measure, not defrauding people, and patience until God judges as central to Shuayb's call.",
+      "refs": [
+        {
+          "surah": 11,
+          "from": 85,
+          "to": 85
+        },
+        {
+          "surah": 7,
+          "from": 87,
+          "to": 87
+        }
+      ]
+    }
+  }
+}

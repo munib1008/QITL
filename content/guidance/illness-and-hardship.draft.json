@@ -1,0 +1,71 @@
+{
+  "schema": "qitl.guidance.draft.v1",
+  "slug": "illness-and-hardship",
+  "fields": {
+    "situation": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Illness or long hardship brings pain, weakness and uncertainty, and often tests the patience of the sufferer and of the people around them.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 155,
+          "to": 155
+        }
+      ]
+    },
+    "quran_says": {
+      "status": "stated",
+      "text_en": "The Quran says people will be tested with fear, hunger and loss of wealth, lives and fruits, and gives good news to the patient, who say that to God they belong and to Him they return. It also quotes Ibrahim saying that when he is ill, God is the One who heals him.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 155,
+          "to": 157
+        },
+        {
+          "surah": 26,
+          "from": 80,
+          "to": 80
+        }
+      ]
+    },
+    "prophet_experience": {
+      "status": "stated",
+      "text_en": "Ayyub called to his Lord that harm had touched him and that He is the most merciful. God answered, removed the harm, and gave him his family and the like of them with them. He was told to strike with his foot: there was cool water to wash in and to drink. God found him patient.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 83,
+          "to": 84
+        },
+        {
+          "surah": 38,
+          "from": 41,
+          "to": 44
+        }
+      ]
+    },
+    "everyday_application": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): A modest response is to call on God in prayer as Ayyub did, to tell someone you trust how heavy it is, and to let others help you. QITL offers this only as a reflection on the prophets' example; it is not a way to treat any illness.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 83,
+          "to": 83
+        }
+      ]
+    },
+    "limits": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The Quran does not name the kind of harm Ayyub suffered or say how long it lasted, and it does not tell any reader what will happen in their own illness. This lesson is not medical care or counselling. Please see a qualified doctor or health professional, and contact local emergency services if you are in danger.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 83,
+          "to": 84
+        }
+      ]
+    }
+  }
+}

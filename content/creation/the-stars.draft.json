@@ -1,0 +1,250 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "the-stars",
+  "category": "heavens_earth",
+  "name_en": "The Stars",
+  "name_ar": "النجوم",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Stars (nujum, kawakib) are creations of God placed in the nearest heaven as adornment, called lamps (masabih), and they are among the things subjected by His command.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 67,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 16,
+          "from": 12,
+          "to": 12
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God adorned the nearest heaven with stars and lamps, and the stars are subjected by His command.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 67,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 7,
+          "from": 54,
+          "to": 54
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "Stars are given as adornment for those who look, as a means of guidance in the darkness of land and sea, and the lamps are also made a means of pelting devils.",
+      "refs": [
+        {
+          "surah": 15,
+          "from": 16,
+          "to": 16
+        },
+        {
+          "surah": 6,
+          "from": 97,
+          "to": 97
+        },
+        {
+          "surah": 67,
+          "from": 5,
+          "to": 5
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "Stars are called lamps and adornment. One 'piercing star' is named in an oath. The stars are also said to bow down to God.",
+      "refs": [
+        {
+          "surah": 67,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 86,
+          "from": 3,
+          "to": 3
+        },
+        {
+          "surah": 22,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "The stars are subjected by His command, they bow down to God, and they guide travellers in the darkness of land and sea.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 22,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 6,
+          "from": 97,
+          "to": 97
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "The stars are not permanent: on the Last Day they will be effaced and scattered.",
+      "refs": [
+        {
+          "surah": 77,
+          "from": 8,
+          "to": 8
+        },
+        {
+          "surah": 82,
+          "from": 2,
+          "to": 2
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "People are given the stars to find their way in the darkness of land and sea, and the sky is adorned with them for those who look.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 97,
+          "to": 97
+        },
+        {
+          "surah": 15,
+          "from": 16,
+          "to": 16
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "Ibrahim saw a star and said it was his lord; when it set, he said he did not love those that set. Yusuf saw eleven stars bowing to him in a dream. God swears by the places (mawaqi') of the stars.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 76,
+          "to": 76
+        },
+        {
+          "surah": 12,
+          "from": 4,
+          "to": 4
+        },
+        {
+          "surah": 56,
+          "from": 75,
+          "to": 75
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran does not say on which of the six days the stars were made."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "The stars are in the nearest heaven, which God adorned with them, and in the sky among the constellations.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 15,
+          "from": 16,
+          "to": 16
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Stars as adornment, as guidance and as missiles against devils are the Quran's own descriptions. This profile does not connect them to shooting stars or to any observed phenomenon, and the verses on the flame that follows a listener are quoted only as stated.",
+      "refs": [
+        {
+          "surah": 67,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 15,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The stars are given as beauty and guidance together, a reminder that what people admire can also serve a purpose in God's design.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 6,
+          "from": 97,
+          "to": 97
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Najm (plural nujum) is a star; kawkab (plural kawakib) is a star or bright body; masabih are lamps; buruj are constellations or towers; shihab is a flame; tariq is the night-comer.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 67,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 15,
+          "from": 16,
+          "to": 18
+        },
+        {
+          "surah": 86,
+          "from": 1,
+          "to": 3
+        },
+        {
+          "surah": 6,
+          "from": 76,
+          "to": 76
+        }
+      ]
+    }
+  }
+}

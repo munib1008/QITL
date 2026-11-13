@@ -1,0 +1,96 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "mikal",
+  "category": "angels",
+  "name_en": "Mikal (Michael)",
+  "name_ar": "ميكال",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Mikal is named once in the Quran, right after God's angels, His messengers and Jibril.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 98,
+          "to": 98
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not state what Mikal was made from or when."
+    },
+    "purpose": {
+      "status": "not_established",
+      "note_en": "The Quran gives no task for Mikal."
+    },
+    "nature": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe Mikal."
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran names no power of Mikal."
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran names no limit of Mikal."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "The only verse that names him says that whoever is an enemy of God, His angels, His messengers, Jibril and Mikal will find that God is an enemy of the disbelievers.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 98,
+          "to": 98
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "not_established",
+      "note_en": "The Quran tells no event involving Mikal."
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no time for Mikal."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where Mikal is."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Roles often given to Mikal, such as particular duties over rain or provision, are not stated in the Quran, which names him only once and gives no task.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 98,
+          "to": 98
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Mikal appears in a verse of warning about enmity toward God's angels and messengers, which may be read as a call to hold what God has honoured in respect.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 98,
+          "to": 98
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "The Quran writes the name Mikal once, as the last name in a list that begins with God, His angels and His messengers.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 98,
+          "to": 98
+        }
+      ]
+    }
+  }
+}

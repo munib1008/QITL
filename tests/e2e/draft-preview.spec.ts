@@ -139,9 +139,12 @@ test("a cited range is a link into the reader, the ayat glow there, and the Arab
   await expect.poll(async () => (await page.evaluate(() => (window as unknown as { __flashes: string[] }).__flashes)).includes(`ayah-${r.from}`)).toBe(true);
 });
 
-test("the draft pages are not in Explore, the home page or the About page's main links, but About carries one discreet link", async ({ page }) => {
+test("the drafts are one labelled section of Explore (grouped under Stories & History) and About carries one discreet link", async ({ page }) => {
+  // Policy since 2026-11: unreviewed drafts are published openly under a visible label instead of being hidden from navigation.
   await page.goto("/");
-  await expect(page.locator('a[href="/drafts"]')).toHaveCount(0);
+  const idx = page.getByTestId("explore-index");
+  await expect(idx.locator('a[href="/drafts"]')).toHaveCount(1);
+  await expect(idx.locator("section", { has: page.locator('a[href="/drafts"]') }).locator("h3")).toHaveText("Stories & History");
   await page.goto("/about");
   await expect(page.locator('main a[href="/drafts"]')).toHaveCount(1);
   await expect(page.locator('main a[href="/drafts"]')).toHaveText("Draft preview of stories under review");

@@ -1,0 +1,134 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "locusts-lice-frogs",
+  "category": "animals",
+  "name_en": "Locusts, lice and frogs",
+  "name_ar": "الجراد والقمل والضفادع",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran lists the locusts, the lice (al-qummal) and the frogs with the flood and blood as detailed signs sent on Pharaoh's people.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 133,
+          "to": 133
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God says He sent them upon the people.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 133,
+          "to": 133
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "They are named as signs, set out in detail. The people were arrogant and a criminal people.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 133,
+          "to": 133
+        }
+      ]
+    },
+    "nature": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe these creatures themselves."
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe abilities of these creatures."
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of these creatures."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "God sent them upon Pharaoh's people as signs, and the people stayed arrogant.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 133,
+          "to": 133
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "They are among the signs sent on the people of Pharaoh in Musa's time. Elsewhere the Quran says Musa was given nine clear signs, and likens people rising from graves to scattered locusts.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 130,
+          "to": 133
+        },
+        {
+          "surah": 17,
+          "from": 101,
+          "to": 101
+        },
+        {
+          "surah": 54,
+          "from": 7,
+          "to": 7
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "They are set among the people of Pharaoh in the time of Musa.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 130,
+          "to": 133
+        }
+      ]
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where each creature was sent."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verse lists the flood, locusts, lice, frogs and blood without giving an order of events or a count of each, so no sequence is claimed here.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 133,
+          "to": 133
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verse says that after detailed signs they stayed arrogant, which is read as a lesson that a sign alone does not change a hardened heart.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 133,
+          "to": 133
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-jarad (locusts), al-qummal (often rendered lice), al-dafadi' (frogs), al-tufan (the flood), al-dam (blood), ayat mufassalat (detailed signs).",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 133,
+          "to": 133
+        }
+      ]
+    }
+  }
+}

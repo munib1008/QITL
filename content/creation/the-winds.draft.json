@@ -1,0 +1,275 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "the-winds",
+  "category": "heavens_earth",
+  "name_en": "The Winds",
+  "name_ar": "الرياح",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Winds are created and sent by God: bearers of good news before His mercy, fertilising winds, and also a violent wind that destroyed a people.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 57,
+          "to": 57
+        },
+        {
+          "surah": 15,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 69,
+          "from": 6,
+          "to": 6
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God sends the winds and turns them about; the turning of the winds is among the signs, together with the clouds subjected between the sky and the earth.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 164,
+          "to": 164
+        },
+        {
+          "surah": 45,
+          "from": 5,
+          "to": 5
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "Winds bring good news before the rain, stir up clouds, carry ships to seek God's bounty, and bring water; they are also a means of punishment for those who deny.",
+      "refs": [
+        {
+          "surah": 30,
+          "from": 46,
+          "to": 46
+        },
+        {
+          "surah": 30,
+          "from": 48,
+          "to": 48
+        },
+        {
+          "surah": 15,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 69,
+          "from": 6,
+          "to": 6
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "Winds are described as bearers of good news, fertilising, good (tayyiba), violent (asifa), roaring (sarsar) and barren (aqim).",
+      "refs": [
+        {
+          "surah": 30,
+          "from": 46,
+          "to": 46
+        },
+        {
+          "surah": 15,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 10,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 21,
+          "from": 81,
+          "to": 81
+        },
+        {
+          "surah": 69,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 51,
+          "from": 41,
+          "to": 41
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "Winds stir up clouds and drive them, push ships, and scatter dry plants. A roaring wind was sent against the people of Aad for seven nights and eight days and left them like hollow palm trunks.",
+      "refs": [
+        {
+          "surah": 30,
+          "from": 48,
+          "to": 48
+        },
+        {
+          "surah": 18,
+          "from": 45,
+          "to": 45
+        },
+        {
+          "surah": 69,
+          "from": 6,
+          "to": 7
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "Winds move by command: Sulayman's wind ran at his order by God's will, and a storm wind is sent by God on whom He wills.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 81,
+          "to": 81
+        },
+        {
+          "surah": 17,
+          "from": 69,
+          "to": 69
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "A mercy and a punishment: a gentle wind carries ships and glad tidings, a barren wind came on the people of Aad, and at the Trench the believers were helped with a wind and forces they could not see. Sulayman's wind was made to run for him.",
+      "refs": [
+        {
+          "surah": 30,
+          "from": 46,
+          "to": 46
+        },
+        {
+          "surah": 51,
+          "from": 41,
+          "to": 41
+        },
+        {
+          "surah": 33,
+          "from": 9,
+          "to": 9
+        },
+        {
+          "surah": 21,
+          "from": 81,
+          "to": 81
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The Aad were destroyed by a roaring wind; at the Trench a wind and unseen forces were sent against the enemy; and Sulayman was given the wind, whose morning journey was a month and whose evening journey was a month.",
+      "refs": [
+        {
+          "surah": 69,
+          "from": 6,
+          "to": 7
+        },
+        {
+          "surah": 33,
+          "from": 9,
+          "to": 9
+        },
+        {
+          "surah": 34,
+          "from": 12,
+          "to": 12
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran does not say when in the order of creation the winds were made."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "Winds and clouds are mentioned together as subjected between the sky and the earth, over land and sea.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 164,
+          "to": 164
+        },
+        {
+          "surah": 27,
+          "from": 63,
+          "to": 63
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The verse that calls the winds fertilising (lawaqih) is quoted as it stands. This profile does not extend it into an account of weather or of plants, and any such link belongs to the separate Quran & Science module.",
+      "refs": [
+        {
+          "surah": 15,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The same creation is shown as mercy and as punishment, so the verses teach gratitude when the wind carries ships and rain, and fear of God when it is sent against those who deny.",
+      "refs": [
+        {
+          "surah": 30,
+          "from": 46,
+          "to": 46
+        },
+        {
+          "surah": 69,
+          "from": 6,
+          "to": 6
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Rih (plural riyah) is wind; sarsar is roaring; aqim is barren; lawaqih means fertilising; mubashshirat means bearers of good news; asif means violent; qasif means shattering.",
+      "refs": [
+        {
+          "surah": 69,
+          "from": 6,
+          "to": 6
+        },
+        {
+          "surah": 51,
+          "from": 41,
+          "to": 41
+        },
+        {
+          "surah": 15,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 30,
+          "from": 46,
+          "to": 46
+        },
+        {
+          "surah": 10,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 17,
+          "from": 69,
+          "to": 69
+        }
+      ]
+    }
+  }
+}

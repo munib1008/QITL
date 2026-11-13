@@ -1,0 +1,108 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "elephants",
+  "category": "animals",
+  "name_en": "The elephant (companions of the elephant)",
+  "name_ar": "الفيل",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The surah names the people of the event the companions of the elephant (ashab al-fil).",
+      "refs": [
+        {
+          "surah": 105,
+          "from": 1,
+          "to": 1
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the origin of the elephant."
+    },
+    "purpose": {
+      "status": "not_established",
+      "note_en": "The Quran does not state a purpose for the elephant."
+    },
+    "nature": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the elephant itself. It names it only in the title of the people."
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe abilities of the elephant."
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the elephant."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "The surah names the people of the event after the elephant: the companions of the elephant.",
+      "refs": [
+        {
+          "surah": 105,
+          "from": 1,
+          "to": 1
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "The Lord made their plan go astray, sent birds in flocks against them throwing stones of sijjil, and made them like eaten chaff.",
+      "refs": [
+        {
+          "surah": 105,
+          "from": 1,
+          "to": 5
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date for the event."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The surah does not name the place of the event."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the surah names the elephant only in the title of the people and says nothing of the elephant's actions, so this profile describes none.",
+      "refs": [
+        {
+          "surah": 105,
+          "from": 1,
+          "to": 1
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the surah shows a plan brought to nothing by birds in flocks and stones, and it is read as a lesson on God's power over human schemes.",
+      "refs": [
+        {
+          "surah": 105,
+          "from": 1,
+          "to": 5
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-fil (the elephant), ashab al-fil (the companions of the elephant), tayran ababil (birds in flocks), sijjil, 'asf ma'kul (eaten chaff).",
+      "refs": [
+        {
+          "surah": 105,
+          "from": 1,
+          "to": 1
+        },
+        {
+          "surah": 105,
+          "from": 3,
+          "to": 5
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "spider",
+  "category": "animals",
+  "name_en": "The spider",
+  "name_ar": "العنكبوت",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The spider (al-'ankabut) is named in a likeness (mathal).",
+      "refs": [
+        {
+          "surah": 29,
+          "from": 41,
+          "to": 41
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the origin of the spider."
+    },
+    "purpose": {
+      "status": "not_established",
+      "note_en": "The Quran does not state a purpose for the spider. It uses the spider in a likeness."
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The spider takes a house.",
+      "refs": [
+        {
+          "surah": 29,
+          "from": 41,
+          "to": 41
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "The spider takes a house for itself.",
+      "refs": [
+        {
+          "surah": 29,
+          "from": 41,
+          "to": 41
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "The frailest of houses is the spider's house.",
+      "refs": [
+        {
+          "surah": 29,
+          "from": 41,
+          "to": 41
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "The spider is the likeness of those who take protectors besides God.",
+      "refs": [
+        {
+          "surah": 29,
+          "from": 41,
+          "to": 41
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "not_established",
+      "note_en": "The spider appears in a likeness, not in a story of an event."
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no time or order for the spider."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where the spider lives."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verse says the frailest of houses is the spider's house and makes no further statement about spiders. It is a likeness for reliance on others than God.",
+      "refs": [
+        {
+          "surah": 29,
+          "from": 41,
+          "to": 41
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): protection sought from anyone other than God is likened to the frailest house, which is read as a lesson against misplaced reliance.",
+      "refs": [
+        {
+          "surah": 29,
+          "from": 41,
+          "to": 41
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-'ankabut (the spider), bayt (a house), awhan (frailest), awliya' (protectors), mathal (a likeness).",
+      "refs": [
+        {
+          "surah": 29,
+          "from": 41,
+          "to": 41
+        }
+      ]
+    }
+  }
+}

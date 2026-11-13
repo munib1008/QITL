@@ -1,0 +1,280 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "iblis",
+  "category": "iblis_shayatin",
+  "name_en": "Iblis",
+  "name_ar": "إبليس",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Iblis is described as one of the jinn. He is called a disbeliever, rajim (cast out), and an enemy of Adam and his wife.",
+      "refs": [
+        {
+          "surah": 18,
+          "from": 50,
+          "to": 50
+        },
+        {
+          "surah": 2,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 15,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 20,
+          "from": 117,
+          "to": 117
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "The Quran says Iblis was of the jinn, and it reports his words that God created him from fire and Adam from clay.",
+      "refs": [
+        {
+          "surah": 18,
+          "from": 50,
+          "to": 50
+        },
+        {
+          "surah": 7,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 38,
+          "from": 76,
+          "to": 76
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "The Quran says that those who followed Iblis were under no authority of his, except that God might know who believes in the Hereafter and who is in doubt about it.",
+      "refs": [
+        {
+          "surah": 34,
+          "from": 20,
+          "to": 21
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "He refused to prostrate to Adam. He was arrogant and was among the disbelievers, and he went beyond his Lord's command. He said he was better than Adam because he was made from fire and Adam from clay.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 18,
+          "from": 50,
+          "to": 50
+        },
+        {
+          "surah": 38,
+          "from": 74,
+          "to": 76
+        },
+        {
+          "surah": 7,
+          "from": 12,
+          "to": 12
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "Iblis said he would make things on the earth attractive to people and mislead them all except God's sincere servants. God told him he could rouse whom he could with his voice, bring his horse and foot, and share in their wealth and children, and that his promises are only deceit.",
+      "refs": [
+        {
+          "surah": 15,
+          "from": 39,
+          "to": 40
+        },
+        {
+          "surah": 17,
+          "from": 64,
+          "to": 64
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "God told him that over His servants he has no authority except over those who follow him. On the Day he says he had no authority over them except that he called and they answered, and he cannot help them. He has no power over those who believe and rely on their Lord.",
+      "refs": [
+        {
+          "surah": 15,
+          "from": 42,
+          "to": 42
+        },
+        {
+          "surah": 17,
+          "from": 65,
+          "to": 65
+        },
+        {
+          "surah": 14,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 16,
+          "from": 99,
+          "to": 99
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "God told Adam that Iblis is an enemy to him and his wife. Iblis said he would sit in wait for people on God's straight path and come at them from before, behind, right and left. He is called a clear enemy of people, who are told to take him as an enemy.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 117,
+          "to": 117
+        },
+        {
+          "surah": 7,
+          "from": 16,
+          "to": 17
+        },
+        {
+          "surah": 36,
+          "from": 60,
+          "to": 60
+        },
+        {
+          "surah": 35,
+          "from": 6,
+          "to": 6
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "Iblis refused to prostrate when the angels prostrated to Adam, was told to go out and was cursed, and asked for respite until the Day they are raised, which was granted until a known time. He made Adam and his wife slip in the garden, and on the Day he disowns those who followed him.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 7,
+          "from": 11,
+          "to": 18
+        },
+        {
+          "surah": 15,
+          "from": 28,
+          "to": 40
+        },
+        {
+          "surah": 2,
+          "from": 36,
+          "to": 36
+        },
+        {
+          "surah": 14,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "He appears at the creation of Adam, when the angels were told to prostrate, and was given respite until the Day of the known time.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 15,
+          "from": 36,
+          "to": 38
+        },
+        {
+          "surah": 38,
+          "from": 79,
+          "to": 81
+        }
+      ]
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran tells him to go down and to go out from it, without naming the place, and gives no dwelling for him afterwards."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Iblis is often taken for an angel because he is named among those who were told to prostrate, but the Quran states that he was one of the jinn. His appearance and any rank he held are not described.",
+      "refs": [
+        {
+          "surah": 18,
+          "from": 50,
+          "to": 50
+        },
+        {
+          "surah": 2,
+          "from": 34,
+          "to": 34
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The account may be read as a warning about arrogance and about measuring worth by origin, since his refusal began with the claim that he was better. It also shows that his power over people is limited to calling.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 38,
+          "from": 75,
+          "to": 76
+        },
+        {
+          "surah": 14,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "The Quran uses the name Iblis, and calls him ash-shaytan in the retelling of Adam's slip. It calls him rajim (cast out) and speaks of the curse upon him.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 7,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 15,
+          "from": 34,
+          "to": 35
+        },
+        {
+          "surah": 38,
+          "from": 77,
+          "to": 78
+        }
+      ]
+    }
+  }
+}

@@ -14,9 +14,11 @@ import { partnersRaw, partnersT } from "@/lib/i18n/modules/partners";
 import { adminQiraatRaw, adminQiraatStrings } from "@/lib/i18n/modules/adminQiraat";
 import { adminSharedRaw, adminSharedStrings } from "@/lib/i18n/modules/adminShared";
 import { adminAsmaRaw, adminAsmaStrings } from "@/lib/i18n/modules/adminAsma";
+import { adminScienceRaw, adminScienceStrings } from "@/lib/i18n/modules/adminScience";
 import { adminShifaRaw, adminShifaStrings } from "@/lib/i18n/modules/adminShifa";
 import { adminStoryRaw, adminStoryStrings } from "@/lib/i18n/modules/adminStory";
 import { adminToolsRaw, adminToolsStrings } from "@/lib/i18n/modules/adminTools";
+import { adminVerificationRaw, adminVerificationStrings } from "@/lib/i18n/modules/adminVerification";
 import { adminUniverseRaw, adminUniverseStrings } from "@/lib/i18n/modules/adminUniverse";
 
 /**
@@ -27,6 +29,7 @@ import { adminUniverseRaw, adminUniverseStrings } from "@/lib/i18n/modules/admin
  */
 const FILES: Array<[string, { en: object; ar: object; ur: object }, (locale: string) => object]> = [
   ["adminChapter", adminChapterRaw, adminChapterStrings],
+  ["adminVerification", adminVerificationRaw, adminVerificationStrings],
   ["adminCoverage", adminCoverageRaw, adminCoverageStrings],
   ["adminCreation", adminCreationRaw, adminCreationStrings],
   ["adminGuidance", adminGuidanceRaw, adminGuidanceStrings],
@@ -41,6 +44,7 @@ const FILES: Array<[string, { en: object; ar: object; ur: object }, (locale: str
   ["adminShared", adminSharedRaw, adminSharedStrings],
   ["adminShifa", adminShifaRaw, adminShifaStrings],
   ["adminAsma", adminAsmaRaw, adminAsmaStrings],
+  ["adminScience", adminScienceRaw, adminScienceStrings],
   ["adminStory", adminStoryRaw, adminStoryStrings],
   ["adminTools", adminToolsRaw, adminToolsStrings],
   ["adminUniverse", adminUniverseRaw, adminUniverseStrings],

@@ -1,0 +1,549 @@
+{
+  "_comment": "DRAFT inventory of candidate topics for Quran & Science (docs/QURAN_SCIENCE.md). Nothing here is reviewed. Quran references are checked against the loaded corpus; Arabic terms are copied from the corpus text of the verse. Classification fields are left unassessed; no evidence state, interpretation strength or connection strength has been assigned by a reviewer. Section texts are null placeholders. Milestones appear only where a year was checked against an authoritative record (verified_source, verified_note). Arabic and Urdu titles are drafts for a translator.",
+  "version": "science-seed-v1",
+  "topics": [
+    {
+      "slug": "sky-built-and-widened-51-47",
+      "kind": "natural",
+      "discipline": "cosmology",
+      "title": {
+        "en": "The sky and the word 'musi'un' (51:47)",
+        "ar": "السماء ولفظ «لَمُوسِعُونَ» (٥١:٤٧)",
+        "ur": "آسمان اور لفظ «لَمُوسِعُونَ» (۵۱:۴۷)"
+      },
+      "summary": "Candidate topic: Q 51:47, read alongside the science of the expansion of the universe. The reading of the verse's wording is an interpretive question.",
+      "does_not_establish_en": "Science has strong observational support for the expansion of the universe on large scales. That support does not by itself settle how the wording of this verse is to be understood, which is debated. This page does not claim that the verse predicted the expansion.",
+      "links": [
+        {
+          "surah": 51,
+          "ayah": 47,
+          "terms": [
+            "لَمُوسِعُونَ",
+            "بَنَيْنَٰهَا"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "The universe is expanding on large scales.",
+          "kind": "observation"
+        }
+      ],
+      "discoveries": [
+        {
+          "title": "The expanding universe in the scientific literature",
+          "milestones": [
+            {
+              "kind": "hypothesis",
+              "label": "Friedman, 'Über die Krümmung des Raumes', Zeitschrift für Physik 10(1), 377–386 (publication record only; its content was not independently read for this entry).",
+              "year": 1922,
+              "verified_source": "https://api.crossref.org/works/10.1007/BF01332580",
+              "verified_note": "Checked 2026-11-04 in the Crossref record for DOI 10.1007/BF01332580: author A. Friedman, Zeitschrift für Physik vol. 10 issue 1 pp. 377-386, issued 1922-12.",
+              "publication": 0
+            },
+            {
+              "kind": "observation",
+              "label": "Hubble, 'A relation between distance and radial velocity among extra-galactic nebulae', Proceedings of the National Academy of Sciences 15(3), 168–173 (publication record only).",
+              "year": 1929,
+              "verified_source": "https://api.crossref.org/works/10.1073/pnas.15.3.168",
+              "verified_note": "Checked 2026-11-04 in the Crossref record for DOI 10.1073/pnas.15.3.168: author Edwin Hubble, PNAS vol. 15 issue 3 pp. 168-173, issued 1929-03-15.",
+              "publication": 1
+            },
+            {
+              "kind": "hypothesis",
+              "label": "Lemaître, 'A Homogeneous Universe of Constant Mass and Increasing Radius accounting for the Radial Velocity of Extra-galactic Nebulae', Monthly Notices of the Royal Astronomical Society 91(5), 483–490 (this MNRAS publication only; an earlier original was not checked for this entry).",
+              "year": 1931,
+              "verified_source": "https://api.crossref.org/works/10.1093/mnras/91.5.483",
+              "verified_note": "Checked 2026-11-04 in the Crossref record for DOI 10.1093/mnras/91.5.483: author A. G. Lemaître, MNRAS vol. 91 issue 5 pp. 483-490, issued 1931-03-13.",
+              "publication": 2
+            },
+            {
+              "kind": "observation",
+              "label": "Further early radial-velocity measurements of nebulae (for example by V. M. Slipher): date and source awaiting verification.",
+              "year": null
+            }
+          ]
+        }
+      ],
+      "publications": [
+        {
+          "title": "Über die Krümmung des Raumes",
+          "authors": [
+            "A. Friedman"
+          ],
+          "doi": "10.1007/BF01332580",
+          "year": 1922,
+          "url": "https://doi.org/10.1007/BF01332580",
+          "verified_source": "https://api.crossref.org/works/10.1007/BF01332580",
+          "verified_note": "Crossref record checked 2026-11-04; awaiting a science reviewer's verification."
+        },
+        {
+          "title": "A relation between distance and radial velocity among extra-galactic nebulae",
+          "authors": [
+            "Edwin Hubble"
+          ],
+          "doi": "10.1073/pnas.15.3.168",
+          "year": 1929,
+          "url": "https://doi.org/10.1073/pnas.15.3.168",
+          "verified_source": "https://api.crossref.org/works/10.1073/pnas.15.3.168",
+          "verified_note": "Crossref record checked 2026-11-04; awaiting a science reviewer's verification."
+        },
+        {
+          "title": "A Homogeneous Universe of Constant Mass and Increasing Radius accounting for the Radial Velocity of Extra-galactic Nebulae",
+          "authors": [
+            "A. G. Lemaître"
+          ],
+          "doi": "10.1093/mnras/91.5.483",
+          "year": 1931,
+          "url": "https://doi.org/10.1093/mnras/91.5.483",
+          "verified_source": "https://api.crossref.org/works/10.1093/mnras/91.5.483",
+          "verified_note": "Crossref record checked 2026-11-04; awaiting a science reviewer's verification."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the present rate of cosmic expansion, and why do different measurement methods give different values?",
+          "known": "Many independent observations are consistent with an expanding universe.",
+          "uncertain": "Why different methods of measuring the present expansion rate give different values is under active study.",
+          "competing": null,
+          "testability": "testable",
+          "why_connection": "Some modern readers discuss Q 51:47 in connection with expansion. Whether the verse's wording refers to expansion is a question of interpretation, not of measurement."
+        }
+      ]
+    },
+    {
+      "slug": "heavens-and-earth-joined-21-30",
+      "kind": "natural",
+      "discipline": "cosmology",
+      "title": {
+        "en": "Heavens and earth, joined and then parted (21:30)",
+        "ar": "السماوات والأرض: الرتق والفتق (٢١:٣٠)",
+        "ur": "آسمان اور زمین: ملے ہوئے اور پھر جدا (۲۱:۳۰)"
+      },
+      "summary": "Candidate topic: the first part of Q 21:30, read alongside scientific accounts of the early universe. Separate from the topic on life and water in the same verse.",
+      "does_not_establish_en": "Cosmological models describe the early universe as very different from its present state. That does not by itself show what this verse's wording refers to, which is a question of interpretation. This page does not claim that the verse describes any particular cosmological model.",
+      "links": [
+        {
+          "surah": 21,
+          "ayah": 30,
+          "terms": [
+            "رَتْقًا",
+            "فَفَتَقْنَٰهُمَا"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Current cosmological models describe the early universe as very different from its present state.",
+          "kind": "theory"
+        }
+      ],
+      "discoveries": [],
+      "publications": [],
+      "questions": [
+        {
+          "question": "What can be said about the universe before the earliest epochs that can be observed?",
+          "known": "Observations constrain models of the early universe back to a certain epoch.",
+          "uncertain": "What preceded or underlies the earliest epochs is not settled by observation.",
+          "competing": null,
+          "testability": "partly_testable",
+          "why_connection": "Some readers connect the wording of Q 21:30 to early-universe models; that connection is interpretive and is not claimed here."
+        }
+      ]
+    },
+    {
+      "slug": "life-from-water-21-30",
+      "kind": "natural",
+      "discipline": "biology",
+      "title": {
+        "en": "Life and water (21:30)",
+        "ar": "الماء والحياة (٢١:٣٠)",
+        "ur": "پانی اور زندگی (۲۱:۳۰)"
+      },
+      "summary": "Candidate topic: the second part of Q 21:30, read alongside the biology of water. Separate from the topic on the heavens and the earth in the same verse.",
+      "does_not_establish_en": "Water is essential to all known life. That general finding does not by itself settle how the wording of this verse is to be understood, and it does not show that the verse is a statement of biochemistry.",
+      "links": [
+        {
+          "surah": 21,
+          "ayah": 30,
+          "terms": [
+            "ٱلْمَآءِ",
+            "حَىٍّ"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Water is essential to all known life.",
+          "kind": "observation"
+        }
+      ],
+      "discoveries": [],
+      "publications": [],
+      "questions": []
+    },
+    {
+      "slug": "night-day-sun-moon-orbits-21-33",
+      "kind": "natural",
+      "discipline": "astronomy",
+      "title": {
+        "en": "Night and day, the sun and the moon, each in an orbit (21:33)",
+        "ar": "الليل والنهار والشمس والقمر في فلك (٢١:٣٣)",
+        "ur": "رات، دن، سورج اور چاند، ہر ایک اپنے مدار میں (۲۱:۳۳)"
+      },
+      "summary": "Candidate topic: Q 21:33 read alongside the science of orbital motion.",
+      "does_not_establish_en": "Orbital motion under gravity is well studied in astronomy. That does not by itself determine the meaning of the Arabic word translated as orbit in this verse, nor show that the verse states a physical law.",
+      "links": [
+        {
+          "surah": 21,
+          "ayah": 33,
+          "terms": [
+            "فَلَكٍ",
+            "يَسْبَحُونَ"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "The Sun, Moon and planets move along orbits under gravity.",
+          "kind": "theory"
+        }
+      ],
+      "discoveries": [],
+      "publications": [],
+      "questions": []
+    },
+    {
+      "slug": "clouds-rain-and-hail-24-43",
+      "kind": "natural",
+      "discipline": "earth_science",
+      "title": {
+        "en": "Clouds, rain and hail (24:43)",
+        "ar": "السحاب والمطر والبَرَد (٢٤:٤٣)",
+        "ur": "بادل، بارش اور اولے (۲۴:۴۳)"
+      },
+      "summary": "Candidate topic: Q 24:43 read alongside atmospheric science.",
+      "does_not_establish_en": "Atmospheric science explains how clouds, rain and hail form. A description of familiar weather in a verse does not by itself show knowledge beyond what was observable, and this page makes no such claim.",
+      "links": [
+        {
+          "surah": 24,
+          "ayah": 43,
+          "terms": [
+            "يُزْجِى",
+            "رُكَامًا",
+            "ٱلْوَدْقَ",
+            "بَرَدٍ"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Clouds, rain and hail form through processes studied in atmospheric science.",
+          "kind": "mechanism"
+        }
+      ],
+      "discoveries": [],
+      "publications": [],
+      "questions": []
+    },
+    {
+      "slug": "two-seas-and-a-barrier-55-19-25-53",
+      "kind": "natural",
+      "discipline": "oceanography",
+      "title": {
+        "en": "The two seas and a barrier (55:19-20; 25:53)",
+        "ar": "البحران والبرزخ (٥٥:١٩–٢٠؛ ٢٥:٥٣)",
+        "ur": "دو سمندر اور آڑ (۵۵:۱۹–۲۰؛ ۲۵:۵۳)"
+      },
+      "summary": "Candidate topic: Q 55:19-20 and 25:53 read alongside the oceanography of where fresh water and sea water meet.",
+      "does_not_establish_en": "Fresh water and sea water meeting is studied in oceanography and varies by place. That does not by itself settle what the verses refer to, which is debated, and this page does not claim a particular physical barrier.",
+      "links": [
+        {
+          "surah": 55,
+          "ayah": 19,
+          "terms": [
+            "مَرَجَ",
+            "ٱلْبَحْرَيْنِ"
+          ]
+        },
+        {
+          "surah": 55,
+          "ayah": 20,
+          "terms": [
+            "بَرْزَخٌ"
+          ]
+        },
+        {
+          "surah": 25,
+          "ayah": 53,
+          "terms": [
+            "بَرْزَخًا",
+            "وَحِجْرًا",
+            "مَّحْجُورًا"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Fresh water and sea water meet in estuaries and at some sea boundaries, where their mixing is studied in oceanography.",
+          "kind": "observation"
+        }
+      ],
+      "discoveries": [],
+      "publications": [],
+      "questions": []
+    },
+    {
+      "slug": "earth-and-mountains-78-6-7",
+      "kind": "natural",
+      "discipline": "geology",
+      "title": {
+        "en": "The earth as a resting place and the mountains as pegs (78:6-7)",
+        "ar": "الأرض مهادا والجبال أوتادا (٧٨:٦–٧)",
+        "ur": "زمین بچھونا اور پہاڑ میخیں (۷۸:۶–۷)"
+      },
+      "summary": "Candidate topic: Q 78:6-7 read alongside the geology of mountains.",
+      "does_not_establish_en": "Geology describes how mountain ranges are supported by thicker crust beneath them. That does not by itself show that the word translated as pegs describes this, which is a question of interpretation, and this page does not claim it.",
+      "links": [
+        {
+          "surah": 78,
+          "ayah": 6,
+          "terms": [
+            "مِهَٰدًا"
+          ]
+        },
+        {
+          "surah": 78,
+          "ayah": 7,
+          "terms": [
+            "أَوْتَادًا"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Mountain ranges are supported by thicker crust beneath them (isostasy).",
+          "kind": "mechanism"
+        }
+      ],
+      "discoveries": [],
+      "publications": [],
+      "questions": []
+    },
+    {
+      "slug": "stages-of-human-development-23-12-14",
+      "kind": "natural",
+      "discipline": "embryology",
+      "title": {
+        "en": "Stages of human development (23:12-14)",
+        "ar": "أطوار خلق الإنسان (٢٣:١٢–١٤)",
+        "ur": "انسانی تخلیق کے مراحل (۲۳:۱۲–۱۴)"
+      },
+      "summary": "Candidate topic: Q 23:12-14 read alongside embryology.",
+      "does_not_establish_en": "Embryology describes human development in stages. Matching the verses' terms to modern stages involves choices of translation and interpretation. This page does not claim that the verses give a scientific account, and it gives no medical information.",
+      "links": [
+        {
+          "surah": 23,
+          "ayah": 12,
+          "terms": [
+            "سُلَٰلَةٍ"
+          ]
+        },
+        {
+          "surah": 23,
+          "ayah": 13,
+          "terms": [
+            "نُطْفَةً"
+          ]
+        },
+        {
+          "surah": 23,
+          "ayah": 14,
+          "terms": [
+            "عَلَقَةً",
+            "مُضْغَةً"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Human embryonic development proceeds in stages described by embryology.",
+          "kind": "observation"
+        }
+      ],
+      "discoveries": [],
+      "publications": [],
+      "questions": []
+    },
+    {
+      "slug": "the-bee-16-68-69",
+      "kind": "natural",
+      "discipline": "biology",
+      "title": {
+        "en": "The bee and what comes from it (16:68-69)",
+        "ar": "النحل وما يخرج من بطونها (١٦:٦٨–٦٩)",
+        "ur": "شہد کی مکھی اور اس سے نکلنے والی چیز (۱۶:۶۸–۶۹)"
+      },
+      "summary": "Candidate topic: Q 16:68-69 read alongside the biology of honey bees. Health is not the subject of this page.",
+      "does_not_establish_en": "Honey bees make honey from nectar. This page makes no medical claim: it does not say that honey is a treatment for any condition, and it gives no dose or treatment advice. Questions about health belong with a qualified clinician.",
+      "dne_ar": "تصنع النحل العسل من الرحيق. لا تقدّم هذه الصفحة أي ادعاء طبي: فهي لا تقول إن العسل يعالج أو يشفي أي مرض، ولا تذكر جرعة ولا نصيحة علاجية. أسئلة الصحة مكانها الطبيب المختص.",
+      "dne_ur": "شہد کی مکھی پھولوں کے رس سے شہد بناتی ہے۔ یہ صفحہ کوئی طبی دعویٰ نہیں کرتا: یہ نہیں کہتا کہ شہد کسی بیماری کا علاج یا شفا ہے، اور نہ کوئی مقدار یا علاج کا مشورہ دیتا ہے۔ صحت کے سوالات کے لیے مستند معالج سے رجوع کریں۔",
+      "links": [
+        {
+          "surah": 16,
+          "ayah": 68,
+          "terms": [
+            "ٱلنَّحْلِ"
+          ]
+        },
+        {
+          "surah": 16,
+          "ayah": 69,
+          "terms": [
+            "شَرَابٌ"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Honey bees produce honey from nectar.",
+          "kind": "observation"
+        }
+      ],
+      "discoveries": [],
+      "publications": [],
+      "questions": []
+    },
+    {
+      "slug": "sleep-and-death-39-42",
+      "kind": "natural",
+      "discipline": "biology",
+      "title": {
+        "en": "Sleep, death and the taking of souls (39:42)",
+        "ar": "الوفاة والنوم (٣٩:٤٢)",
+        "ur": "موت اور نیند (۳۹:۴۲)"
+      },
+      "summary": "Candidate topic: Q 39:42. Sleep can be studied empirically; the nature of the soul is outside empirical science.",
+      "does_not_establish_en": "Sleep is studied empirically, but the nature of the soul (nafs) is not a subject of empirical science, and this page does not treat it as open to laboratory testing. Neurological findings about sleep do not by themselves show what the verse's wording refers to.",
+      "links": [
+        {
+          "surah": 39,
+          "ayah": 42,
+          "terms": [
+            "يَتَوَفَّى",
+            "مَنَامِهَا"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Sleep is a regular altered state of consciousness studied in neuroscience.",
+          "kind": "observation"
+        },
+        {
+          "claim": "The nature of the soul is not a subject of empirical science.",
+          "kind": "metaphysical",
+          "evidence_state": "outside_empirical_science"
+        }
+      ],
+      "discoveries": [],
+      "publications": [],
+      "questions": []
+    },
+    {
+      "slug": "duration-of-nuh-mission-29-14",
+      "kind": "natural",
+      "discipline": "geology",
+      "title": {
+        "en": "The duration stated for Nuh's time with his people (29:14)",
+        "ar": "مدة بقاء نوح في قومه (٢٩:١٤)",
+        "ur": "نوح علیہ السلام کا اپنی قوم میں قیام (۲۹:۱۴)"
+      },
+      "summary": "Candidate topic: Q 29:14, the stated duration and the flood, read alongside geology and archaeology of past floods. No person is depicted.",
+      "does_not_establish_en": "Past floods are studied in geology and archaeology. This page does not assert a geological date, does not say that any finding corresponds to the event in the verse, and does not decide how the stated duration is to be read.",
+      "links": [
+        {
+          "surah": 29,
+          "ayah": 14,
+          "terms": [
+            "ٱلطُّوفَانُ"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Records of past floods are studied in geology and archaeology.",
+          "kind": "historical"
+        }
+      ],
+      "discoveries": [],
+      "publications": [],
+      "questions": []
+    },
+    {
+      "slug": "iron-sent-down-57-25",
+      "kind": "natural",
+      "discipline": "astronomy",
+      "title": {
+        "en": "Iron 'sent down' (57:25)",
+        "ar": "إنزال الحديد (٥٧:٢٥)",
+        "ur": "لوہے کا اتارا جانا (۵۷:۲۵)"
+      },
+      "summary": "Candidate topic: Q 57:25 read alongside the astrophysics of how heavy elements form.",
+      "does_not_establish_en": "Astrophysics studies how elements such as iron are formed in stars. That does not by itself settle how the verb in this verse is to be understood, and this page does not claim that the verse refers to stellar processes.",
+      "links": [
+        {
+          "surah": 57,
+          "ayah": 25,
+          "terms": [
+            "ٱلْحَدِيدَ",
+            "وَأَنزَلْنَا"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Heavy elements such as iron are produced in stellar processes.",
+          "kind": "theory"
+        }
+      ],
+      "discoveries": [],
+      "publications": [],
+      "questions": []
+    },
+    {
+      "slug": "unseen-matters-2-3",
+      "kind": "unseen",
+      "discipline": "metaphysics",
+      "title": {
+        "en": "Unseen matters: outside empirical science (2:3)",
+        "ar": "الغيب خارج نطاق العلم التجريبي (٢:٣)",
+        "ur": "غیب: تجرباتی سائنس کے دائرے سے باہر (۲:۳)"
+      },
+      "summary": "Matters of the unseen, such as angels, jinn, the resurrection and the nature of the soul, are classified here as outside empirical science.",
+      "does_not_establish_en": "Empirical science does not address matters of the unseen, so it neither supports nor contradicts them. This page does not say that science has settled them either way, and it does not treat them as open to laboratory testing. They are a matter of faith and of the revealed sources.",
+      "dne_ar": "لا يتناول العلم التجريبي أمور الغيب، فلا يؤيدها ولا ينقضها. لا تقول هذه الصفحة إن العلم أثبتها أو نفاها، ولا تصفها بأنها تنتظر إثباتًا مخبريًا. هي من مسائل الإيمان والمصادر الموحى بها.",
+      "dne_ur": "تجرباتی سائنس غیب کے امور سے بحث نہیں کرتی، اس لیے نہ ان کی تائید کرتی ہے اور نہ تردید۔ یہ صفحہ یہ نہیں کہتا کہ سائنس نے انہیں ثابت یا رد کیا ہے، اور نہ انہیں لیبارٹری کے ثبوت کا منتظر بتاتا ہے۔ یہ ایمان اور وحی کے مصادر کا معاملہ ہے۔",
+      "links": [
+        {
+          "surah": 2,
+          "ayah": 3,
+          "terms": [
+            "بِٱلْغَيْبِ"
+          ],
+          "relationship": "not_scientifically_testable"
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Matters of the unseen, such as angels, jinn, the resurrection and the nature of the soul, are not subjects of empirical measurement.",
+          "kind": "metaphysical",
+          "evidence_state": "outside_empirical_science"
+        }
+      ],
+      "discoveries": [],
+      "publications": [],
+      "questions": []
+    }
+  ]
+}

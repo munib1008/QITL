@@ -1,5 +1,6 @@
 import { getDict } from "./index";
 import { asmaStrings } from "./modules/asma";
+import { scienceStrings } from "./modules/science";
 import { atlasStrings, genealogyStrings } from "./modules/atlas";
 import { creationStrings } from "./modules/creation";
 import { dreamsT } from "./modules/dreams";
@@ -44,6 +45,7 @@ import { adminMediaStrings } from "./modules/adminMedia";
 import { adminQiraatStrings } from "./modules/adminQiraat";
 import { adminSharedStrings } from "./modules/adminShared";
 import { adminAsmaStrings } from "./modules/adminAsma";
+import { adminScienceStrings } from "./modules/adminScience";
 import { adminShifaStrings } from "./modules/adminShifa";
 import { adminStoryStrings } from "./modules/adminStory";
 import { adminToolsStrings } from "./modules/adminTools";
@@ -110,6 +112,8 @@ export const STRING_FILES: Array<{ module: string; file: string; get: (locale: s
   { module: "admin", file: "modules/adminShifa.ts", get: adminShifaStrings },
   { module: "admin", file: "modules/adminAsma.ts", get: adminAsmaStrings },
   { module: "asma", file: "modules/asma.ts", get: asmaStrings },
+  { module: "science", file: "modules/science.ts", get: scienceStrings },
+  { module: "admin", file: "modules/adminScience.ts", get: adminScienceStrings },
   { module: "admin", file: "modules/adminStory.ts", get: adminStoryStrings },
   { module: "admin", file: "modules/adminTools.ts", get: adminToolsStrings },
   { module: "admin", file: "modules/adminUniverse.ts", get: adminUniverseStrings },

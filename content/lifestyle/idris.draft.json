@@ -1,0 +1,117 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "idris",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for Idris and says nothing about when he lived."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the land or place of Idris."
+    },
+    "community": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the people Idris belonged to or was sent to."
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Idris. It says God raised him to a high place without saying how or when."
+    },
+    "daily_activities": {
+      "status": "not_established",
+      "note_en": "The Quran gives no events or daily conduct of Idris."
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "Idris is described as a siddiq, a word for one of great truthfulness, and as a prophet; God raised him to a high place.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 56,
+          "to": 57
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Idris ate or drank."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding in the account of Idris."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe clothing or dress for Idris."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe where or how Idris lived."
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention any means of travel for Idris."
+    },
+    "family_community": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the family of Idris or say who his people were."
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe customs or leisure in the life of Idris."
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe teaching or learning in the account of Idris."
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment in the account of Idris."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate of the land of Idris."
+    },
+    "worship": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the worship of Idris. It names him as truthful and patient, and says he was admitted into God's mercy, without giving acts of worship."
+    },
+    "challenges": {
+      "status": "not_established",
+      "note_en": "Idris is named among the patient, but the Quran gives no event, trial or opposition from which that patience is drawn."
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran gives Idris only a few verses and no events, so a reader should not add a biography, a place or a date to him from other sources as if the Quran stated them.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 56,
+          "to": 57
+        },
+        {
+          "surah": 21,
+          "from": 85,
+          "to": 86
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages present Idris through his qualities, truthfulness and patience, and through what God did for him, rather than through a story of events.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 56,
+          "to": 57
+        },
+        {
+          "surah": 21,
+          "from": 85,
+          "to": 86
+        }
+      ]
+    }
+  }
+}

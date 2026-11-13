@@ -1,0 +1,172 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "fish-of-yunus",
+  "category": "animals",
+  "name_en": "The great fish of Yunus",
+  "name_ar": "الحوت",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran calls it al-hut (the fish), and Yunus is called the companion of the fish and dhu al-nun.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 142,
+          "to": 142
+        },
+        {
+          "surah": 68,
+          "from": 48,
+          "to": 48
+        },
+        {
+          "surah": 21,
+          "from": 87,
+          "to": 87
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the origin of the fish."
+    },
+    "purpose": {
+      "status": "not_established",
+      "note_en": "The Quran does not state a purpose for the fish itself."
+    },
+    "nature": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the fish beyond its action."
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "The fish swallowed Yunus.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 142,
+          "to": 142
+        }
+      ]
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the fish."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Yunus was in its belly and called out in the darknesses that there is no god but God. God answered and saved him from distress.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 142,
+          "to": 142
+        },
+        {
+          "surah": 21,
+          "from": 87,
+          "to": 88
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "Yunus left in anger, drew lots on the laden ship and was among those cast out. The fish swallowed him, and had he not glorified God he would have stayed in its belly till the day they are raised. He was cast on the open land, sick, and a plant of yaqtin grew over him.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 87,
+          "to": 87
+        },
+        {
+          "surah": 37,
+          "from": 140,
+          "to": 146
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date for the event."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "He was in the belly of the fish, in the darknesses, and was then cast on the open land.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 142,
+          "to": 142
+        },
+        {
+          "surah": 21,
+          "from": 87,
+          "to": 87
+        },
+        {
+          "surah": 37,
+          "from": 145,
+          "to": 145
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran says the fish swallowed him and he was later cast on open ground. It names no sea, no kind of fish and no length of stay, and this profile does not guess.",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 142,
+          "to": 142
+        },
+        {
+          "surah": 37,
+          "from": 145,
+          "to": 145
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the story joins distress, a prayer of glorifying and confessing wrong, and God's answer, and it is read as encouragement to turn back to God in hardship.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 87,
+          "to": 88
+        },
+        {
+          "surah": 37,
+          "from": 143,
+          "to": 143
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-hut (the fish), dhu al-nun (the one of the fish), sahib al-hut (the companion of the fish), iltaqamahu (swallowed him), yaqtin (a plant named yaqtin).",
+      "refs": [
+        {
+          "surah": 37,
+          "from": 142,
+          "to": 142
+        },
+        {
+          "surah": 21,
+          "from": 87,
+          "to": 87
+        },
+        {
+          "surah": 68,
+          "from": 48,
+          "to": 48
+        },
+        {
+          "surah": 37,
+          "from": 146,
+          "to": 146
+        }
+      ]
+    }
+  }
+}

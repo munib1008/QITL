@@ -1,0 +1,347 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "musa",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era in years for Musa, and does not name the king's dynasty."
+    },
+    "region": {
+      "status": "stated",
+      "text_en": "The Quran places him with the people of Fir'awn, in Madyan, in the sacred valley of Tuwa near the mountain at-Tur, and by the sea; his people were told to settle in houses in Misr.",
+      "refs": [
+        {
+          "surah": 28,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 28,
+          "from": 29,
+          "to": 29
+        },
+        {
+          "surah": 20,
+          "from": 12,
+          "to": 12
+        },
+        {
+          "surah": 26,
+          "from": 63,
+          "to": 63
+        },
+        {
+          "surah": 10,
+          "from": 87,
+          "to": 87
+        }
+      ]
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "He told Fir'awn to send the Children of Israel with him, spoke to his people about God's favour on them, and was raised as a child in Fir'awn's household.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 105,
+          "to": 105
+        },
+        {
+          "surah": 5,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 26,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Musa. It mentions him as a child, at full strength, serving a term of years in Madyan, and an appointment of thirty nights and ten."
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "He leaned on a staff and beat down leaves with it for his sheep; in Madyan he watered for two women who were holding back, then withdrew to the shade.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 28,
+          "from": 23,
+          "to": 24
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "One of two women asked her father to hire him as the strong and trustworthy; the service was eight years, or ten if he chose. God later chose him and sent him as a messenger and prophet.",
+      "refs": [
+        {
+          "surah": 28,
+          "from": 26,
+          "to": 27
+        },
+        {
+          "surah": 19,
+          "from": 51,
+          "to": 51
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "stated",
+      "text_en": "God sent manna and salwa down on his people; they said they could not bear one kind of food and asked for herbs, cucumbers, lentils and onions. A fish is mentioned as a meal on his journey with a servant of God.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 57,
+          "to": 57
+        },
+        {
+          "surah": 2,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 18,
+          "from": 61,
+          "to": 62
+        }
+      ]
+    },
+    "farming_livestock": {
+      "status": "stated",
+      "text_en": "He had sheep, for which he beat down leaves with his staff. The Quran does not describe tilling or herding by his people.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "clothing_care": {
+      "status": "stated",
+      "text_en": "When God called him in the sacred valley of Tuwa, he was told to take off his footwear.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 12,
+          "to": 12
+        }
+      ]
+    },
+    "housing": {
+      "status": "stated",
+      "text_en": "God inspired Musa and his brother to settle their people in houses in Misr and to make their houses a qiblah, a word the Quran leaves untranslated here; elsewhere his people are told to enter a town.",
+      "refs": [
+        {
+          "surah": 10,
+          "from": 87,
+          "to": 87
+        },
+        {
+          "surah": 2,
+          "from": 58,
+          "to": 58
+        }
+      ]
+    },
+    "transport": {
+      "status": "stated",
+      "text_en": "He was told to travel by night with God's servants, to strike the sea so that a dry path opened through it, and he boarded a boat on his journey with a servant of God.",
+      "refs": [
+        {
+          "surah": 26,
+          "from": 52,
+          "to": 52
+        },
+        {
+          "surah": 20,
+          "from": 77,
+          "to": 77
+        },
+        {
+          "surah": 18,
+          "from": 71,
+          "to": 71
+        }
+      ]
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "His mother cast him in the river as God inspired and his sister followed him; God returned him to his mother. He set out with his family toward the fire and asked for his brother Harun as a helper.",
+      "refs": [
+        {
+          "surah": 28,
+          "from": 7,
+          "to": 13
+        },
+        {
+          "surah": 28,
+          "from": 29,
+          "to": 29
+        },
+        {
+          "surah": 20,
+          "from": 29,
+          "to": 30
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "stated",
+      "text_en": "The father in Madyan offered him one of his daughters in marriage for service of eight years, or ten, with God as witness. His appointment with Fir'awn's magicians was set for the day of the festival.",
+      "refs": [
+        {
+          "surah": 28,
+          "from": 27,
+          "to": 28
+        },
+        {
+          "surah": 20,
+          "from": 59,
+          "to": 59
+        }
+      ]
+    },
+    "education": {
+      "status": "stated",
+      "text_en": "God gave him judgement and knowledge at full strength and wrote for him in the tablets an admonition and detailing of everything; he also asked to follow a servant of God to be taught right guidance.",
+      "refs": [
+        {
+          "surah": 28,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 7,
+          "from": 145,
+          "to": 145
+        },
+        {
+          "surah": 18,
+          "from": 66,
+          "to": 66
+        }
+      ]
+    },
+    "health_treatment": {
+      "status": "stated",
+      "text_en": "He asked God to loosen the knot from his tongue so that people would understand his speech, and said that his brother Harun was more fluent. The Quran gives no cause or treatment.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 27,
+          "to": 28
+        },
+        {
+          "surah": 28,
+          "from": 34,
+          "to": 34
+        }
+      ]
+    },
+    "climate": {
+      "status": "stated",
+      "text_en": "Years of drought and a shortage of fruits were sent on the people of Fir'awn as a sign. The Quran gives no general description of the climate of his lands.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 130,
+          "to": 130
+        }
+      ]
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "He was told to worship God alone and establish prayer for God's remembrance; his people were told to make their houses a qiblah and establish prayer; he asked that they glorify and remember God much.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 14,
+          "to": 14
+        },
+        {
+          "surah": 10,
+          "from": 87,
+          "to": 87
+        },
+        {
+          "surah": 20,
+          "from": 33,
+          "to": 34
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "He killed a man and fled in fear, Fir'awn spoke of killing him, his people asked for a god like others' and made a calf in his absence, and they refused to enter the land God had assigned.",
+      "refs": [
+        {
+          "surah": 28,
+          "from": 15,
+          "to": 21
+        },
+        {
+          "surah": 40,
+          "from": 26,
+          "to": 26
+        },
+        {
+          "surah": 7,
+          "from": 138,
+          "to": 138
+        },
+        {
+          "surah": 20,
+          "from": 85,
+          "to": 88
+        },
+        {
+          "surah": 5,
+          "from": 24,
+          "to": 24
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran tells Musa's story as events and words across many passages, with no dates, no dynasty and no measurements of places, so such details should not be added from outside sources as if the Quran stated them.",
+      "refs": [
+        {
+          "surah": 28,
+          "from": 3,
+          "to": 3
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages present reliance on God, patience with his people, asking for a helper in a hard task, and repentance after error as parts of Musa's story.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 128,
+          "to": 128
+        },
+        {
+          "surah": 20,
+          "from": 29,
+          "to": 32
+        },
+        {
+          "surah": 28,
+          "from": 16,
+          "to": 16
+        }
+      ]
+    }
+  }
+}

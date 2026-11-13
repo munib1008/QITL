@@ -1,0 +1,214 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "angels-of-death",
+  "category": "angels",
+  "name_en": "The angel of death and the angels who take souls",
+  "name_ar": "ملك الموت",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran speaks of the angel of death who has been put in charge of people, of Our messengers who take a soul when death arrives, and of the angels who take the souls of the wrongdoers and of the good.",
+      "refs": [
+        {
+          "surah": 32,
+          "from": 11,
+          "to": 11
+        },
+        {
+          "surah": 6,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 16,
+          "from": 28,
+          "to": 28
+        },
+        {
+          "surah": 16,
+          "from": 32,
+          "to": 32
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not state what the angel of death was made from or when."
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "The angel of death is the one put in charge of people, and then they are returned to their Lord.",
+      "refs": [
+        {
+          "surah": 32,
+          "from": 11,
+          "to": 11
+        }
+      ]
+    },
+    "nature": {
+      "status": "not_established",
+      "note_en": "One verse speaks of the angel of death in the singular and another of Our messengers in the plural. The Quran does not explain how the two are related, or give a name or form."
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "They take people's souls when death arrives. They speak to the dying: to the good they say peace, and from the wrongdoers they ask in what state they were. They are also shown striking faces and backs, and stretching out their hands.",
+      "refs": [
+        {
+          "surah": 32,
+          "from": 11,
+          "to": 11
+        },
+        {
+          "surah": 6,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 16,
+          "from": 32,
+          "to": 32
+        },
+        {
+          "surah": 4,
+          "from": 97,
+          "to": 97
+        },
+        {
+          "surah": 47,
+          "from": 27,
+          "to": 27
+        },
+        {
+          "surah": 6,
+          "from": 93,
+          "to": 93
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "The Quran says these messengers do not fall short in their task. It also says that it is God who takes the souls at the time of death and during sleep.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 39,
+          "from": 42,
+          "to": 42
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "God sends guardians over people, and when death comes to one of them Our messengers take him. The angels meet the good with peace and the wrongdoers with questioning and rebuke.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 16,
+          "from": 28,
+          "to": 28
+        },
+        {
+          "surah": 16,
+          "from": 32,
+          "to": 32
+        },
+        {
+          "surah": 4,
+          "from": 97,
+          "to": 97
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "not_established",
+      "note_en": "The Quran tells no event of the angel of death with a named person; it states what happens at death in general."
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "They come at the moment death arrives for a person.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 32,
+          "from": 11,
+          "to": 11
+        }
+      ]
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where the angels who take souls are before they come."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): A personal name for the angel of death, and descriptions of his form or size, are not given in the Quran, which says only the angel of death and Our messengers.",
+      "refs": [
+        {
+          "surah": 32,
+          "from": 11,
+          "to": 11
+        },
+        {
+          "surah": 6,
+          "from": 61,
+          "to": 61
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The passages present death as a handing over to the Lord by those put in charge, which may be read as a reminder of accountability and of the difference between meeting the angels with peace and with rebuke.",
+      "refs": [
+        {
+          "surah": 32,
+          "from": 11,
+          "to": 11
+        },
+        {
+          "surah": 16,
+          "from": 32,
+          "to": 32
+        },
+        {
+          "surah": 4,
+          "from": 97,
+          "to": 97
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "The Quran uses malak al-mawt (the angel of death), rusuluna (Our messengers) and the verb tawaffa for what the angels do when they take a soul.",
+      "refs": [
+        {
+          "surah": 32,
+          "from": 11,
+          "to": 11
+        },
+        {
+          "surah": 6,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 16,
+          "from": 28,
+          "to": 28
+        }
+      ]
+    }
+  }
+}

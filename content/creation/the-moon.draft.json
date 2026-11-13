@@ -1,0 +1,240 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "the-moon",
+  "category": "heavens_earth",
+  "name_en": "The Moon",
+  "name_ar": "القمر",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The moon is a creation of God set in the heavens, named with the sun and the stars as subjected by His command, and counted among His signs. People are told not to prostrate to it but to God.",
+      "refs": [
+        {
+          "surah": 71,
+          "from": 16,
+          "to": 16
+        },
+        {
+          "surah": 7,
+          "from": 54,
+          "to": 54
+        },
+        {
+          "surah": 41,
+          "from": 37,
+          "to": 37
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God made the moon together with the night, the day and the sun, and made it a light in the heavens.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 33,
+          "to": 33
+        },
+        {
+          "surah": 71,
+          "from": 16,
+          "to": 16
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "The moon is made a light and set in stations so that people know the number of years and the reckoning. The new moons are also given as marks of time for people and for the pilgrimage.",
+      "refs": [
+        {
+          "surah": 10,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 2,
+          "from": 189,
+          "to": 189
+        },
+        {
+          "surah": 17,
+          "from": 12,
+          "to": 12
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The moon is called a light (nur) and a luminous moon (qamar munir). It was set in stations until it returns like an old palm stalk.",
+      "refs": [
+        {
+          "surah": 10,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 25,
+          "from": 61,
+          "to": 61
+        },
+        {
+          "surah": 36,
+          "from": 39,
+          "to": 39
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "The moon moves in a course (falak) along with the sun, the night and the day, and runs to an appointed term. The sun cannot overtake it.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 33,
+          "to": 33
+        },
+        {
+          "surah": 13,
+          "from": 2,
+          "to": 2
+        },
+        {
+          "surah": 36,
+          "from": 40,
+          "to": 40
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "The moon runs by calculation and is not to be worshipped. On the Last Day it will be eclipsed and joined together with the sun.",
+      "refs": [
+        {
+          "surah": 55,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 41,
+          "from": 37,
+          "to": 37
+        },
+        {
+          "surah": 75,
+          "from": 8,
+          "to": 9
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "The sun and the moon are subjected to people, constantly following their course. The new moons are marks of time for the people and for the pilgrimage.",
+      "refs": [
+        {
+          "surah": 14,
+          "from": 33,
+          "to": 33
+        },
+        {
+          "surah": 2,
+          "from": 189,
+          "to": 189
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "A verse says that the Hour has drawn near and the moon has split. The verse is brief and gives no further detail here. Yusuf saw in a dream eleven stars, the sun and the moon bowing to him.",
+      "refs": [
+        {
+          "surah": 54,
+          "from": 1,
+          "to": 1
+        },
+        {
+          "surah": 12,
+          "from": 4,
+          "to": 4
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran does not say on which of the six days the moon was made."
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "The moon is in the heavens: God made it a light 'in them' and set a luminous moon in the sky among the constellations.",
+      "refs": [
+        {
+          "surah": 71,
+          "from": 16,
+          "to": 16
+        },
+        {
+          "surah": 25,
+          "from": 61,
+          "to": 61
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The verse about the moon splitting is short. Readers should keep its wording as it is and not add a time, a place, a witness or a mechanism that the verse itself does not give.",
+      "refs": [
+        {
+          "surah": 54,
+          "from": 1,
+          "to": 1
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The moon's phases are tied in the verses to the reckoning of time and to worship, so the night sky is presented as a calendar given in mercy as well as a wonder.",
+      "refs": [
+        {
+          "surah": 10,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 2,
+          "from": 189,
+          "to": 189
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Qamar is the moon; hilal (plural ahilla) is the new moon; manazil are stations; nur is light; urjun is a palm stalk; husban means a reckoning; khasafa means it was eclipsed.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 189,
+          "to": 189
+        },
+        {
+          "surah": 36,
+          "from": 39,
+          "to": 39
+        },
+        {
+          "surah": 10,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 55,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 75,
+          "from": 8,
+          "to": 8
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "camel",
+  "category": "animals",
+  "name_en": "The camel",
+  "name_ar": "الإبل",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The camels (al-ibil) are named among the livestock (al-an'am): the Quran lists camels as one of the pairs of livestock. Other words it uses are jamal, ba'ir and naqah.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 143,
+          "to": 144
+        },
+        {
+          "surah": 7,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 12,
+          "from": 72,
+          "to": 72
+        },
+        {
+          "surah": 7,
+          "from": 73,
+          "to": 73
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "The Quran asks people to look at the camels and how they were created, and it says God created the livestock for them.",
+      "refs": [
+        {
+          "surah": 88,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 16,
+          "from": 5,
+          "to": 5
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "The livestock were created for warmth, benefits and food, for beauty, and to carry loads to lands that people could not reach except with hardship. They are also for riding.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 5,
+          "to": 7
+        },
+        {
+          "surah": 40,
+          "from": 79,
+          "to": 79
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The Quran calls the livestock a lesson and says God made them submissive to people. It asks whether people do not look at the camels, how they were created.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 66,
+          "to": 66
+        },
+        {
+          "surah": 36,
+          "from": 72,
+          "to": 72
+        },
+        {
+          "surah": 88,
+          "from": 17,
+          "to": 17
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "Livestock carry people's burdens to distant lands. In Yusuf's account a camel-load (himl ba'ir) is used as a measure of reward.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 7,
+          "to": 7
+        },
+        {
+          "surah": 12,
+          "from": 72,
+          "to": 72
+        }
+      ]
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the camel."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "People ride livestock and eat from them, have benefits and drinks in them, and are carried on them as on ships. The Quran asks whether they will not give thanks.",
+      "refs": [
+        {
+          "surah": 40,
+          "from": 79,
+          "to": 80
+        },
+        {
+          "surah": 36,
+          "from": 72,
+          "to": 73
+        },
+        {
+          "surah": 23,
+          "from": 21,
+          "to": 22
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "Camels appear in Yusuf's account: a camel-load is an added measure for the family's supply, and a camel-load is offered as a reward. They appear in a likeness: the gates of heaven are not opened to those who reject the signs until the camel passes through the eye of the needle. See also the she-camel of Salih.",
+      "refs": [
+        {
+          "surah": 12,
+          "from": 65,
+          "to": 65
+        },
+        {
+          "surah": 12,
+          "from": 72,
+          "to": 72
+        },
+        {
+          "surah": 7,
+          "from": 40,
+          "to": 40
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "not_established",
+      "note_en": "The Quran gives no time or order for the camel as a species."
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not say where camels live."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran gives the camel's uses and calls it a sign. It does not describe its body or habits, and this profile adds none.",
+      "refs": [
+        {
+          "surah": 88,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 16,
+          "from": 5,
+          "to": 7
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the instruction to look at the camels and consider how they were created is read as an invitation to reflect on provision and to give thanks.",
+      "refs": [
+        {
+          "surah": 88,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 36,
+          "from": 72,
+          "to": 73
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-ibil (camels), al-jamal (the camel in the needle's eye), ba'ir (a camel), naqah (a she-camel), al-an'am (livestock).",
+      "refs": [
+        {
+          "surah": 88,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 7,
+          "from": 40,
+          "to": 40
+        },
+        {
+          "surah": 12,
+          "from": 72,
+          "to": 72
+        },
+        {
+          "surah": 7,
+          "from": 73,
+          "to": 73
+        },
+        {
+          "surah": 6,
+          "from": 144,
+          "to": 144
+        }
+      ]
+    }
+  }
+}

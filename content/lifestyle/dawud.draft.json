@@ -1,0 +1,258 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "dawud",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era in years for Dawud."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the land of Dawud."
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "The Quran says that those among the Children of Israel who disbelieved were cursed by the tongue of Dawud, and that God gave him the kingdom.",
+      "refs": [
+        {
+          "surah": 5,
+          "from": 78,
+          "to": 78
+        },
+        {
+          "surah": 2,
+          "from": 251,
+          "to": 251
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Dawud."
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "The mountains and the birds glorified God with him in the evening and at sunrise; he judged between people and received disputants who came in to him.",
+      "refs": [
+        {
+          "surah": 38,
+          "from": 18,
+          "to": 19
+        },
+        {
+          "surah": 38,
+          "from": 21,
+          "to": 22
+        },
+        {
+          "surah": 38,
+          "from": 26,
+          "to": 26
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "God gave him the kingdom, wisdom and decisive speech, made him a khalifah on the earth to judge between people, softened iron for him and taught him to make labus, a covering to protect people in their fighting.",
+      "refs": [
+        {
+          "surah": 38,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 38,
+          "from": 26,
+          "to": 26
+        },
+        {
+          "surah": 34,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 21,
+          "from": 80,
+          "to": 80
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe what Dawud ate or drank."
+    },
+    "farming_livestock": {
+      "status": "stated",
+      "text_en": "The Quran records two cases about livestock: Dawud and Sulayman judged about a field where sheep had pastured by night, and a disputant brought a case of ninety-nine ewes against one ewe.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 78,
+          "to": 78
+        },
+        {
+          "surah": 38,
+          "from": 23,
+          "to": 24
+        }
+      ]
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe Dawud's clothing. It mentions only a protective covering, labus, which he was taught to make (21:80)."
+    },
+    "housing": {
+      "status": "stated",
+      "text_en": "The disputants climbed into the mihrab, a word the Quran leaves undescribed, and went in to Dawud. The Quran gives no other description of his dwelling.",
+      "refs": [
+        {
+          "surah": 38,
+          "from": 21,
+          "to": 22
+        }
+      ]
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe how Dawud travelled."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "God granted Dawud Sulayman, who inherited from him; the two judged together about a field.",
+      "refs": [
+        {
+          "surah": 38,
+          "from": 30,
+          "to": 30
+        },
+        {
+          "surah": 27,
+          "from": 16,
+          "to": 16
+        },
+        {
+          "surah": 21,
+          "from": 78,
+          "to": 78
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe customs or leisure of Dawud."
+    },
+    "education": {
+      "status": "stated",
+      "text_en": "God taught him of what He willed and gave him wisdom, knowledge and decisive speech; he was also taught the craft of making a protective covering.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 251,
+          "to": 251
+        },
+        {
+          "surah": 21,
+          "from": 79,
+          "to": 80
+        },
+        {
+          "surah": 38,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 27,
+          "from": 15,
+          "to": 15
+        }
+      ]
+    },
+    "health_treatment": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention illness or treatment of Dawud."
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate where Dawud lived."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "He was one who turned back to God again and again and said that praise belongs to God; after the dispute he asked his Lord for forgiveness, fell down bowing and turned back, and God forgave him.",
+      "refs": [
+        {
+          "surah": 38,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 27,
+          "from": 15,
+          "to": 15
+        },
+        {
+          "surah": 38,
+          "from": 24,
+          "to": 25
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "He killed Jalut by God's permission; the disputants alarmed him, he thought God had only tested him, asked forgiveness, and was told not to follow desire.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 251,
+          "to": 251
+        },
+        {
+          "surah": 38,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 38,
+          "from": 24,
+          "to": 24
+        },
+        {
+          "surah": 38,
+          "from": 26,
+          "to": 26
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran mentions Dawud's kingdom, craft and judging in short passages without dates, places or measurements, so these should not be supplied from other sources.",
+      "refs": [
+        {
+          "surah": 38,
+          "from": 20,
+          "to": 20
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages present gratitude for knowledge, turning back to God after a trial, and judging with truth rather than desire as the lessons drawn about Dawud.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 15,
+          "to": 15
+        },
+        {
+          "surah": 38,
+          "from": 24,
+          "to": 24
+        },
+        {
+          "surah": 38,
+          "from": 26,
+          "to": 26
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "the-mountains",
+  "category": "heavens_earth",
+  "name_en": "The Mountains",
+  "name_ar": "الجبال",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "Mountains are created features of the earth, named as stakes or pegs (awtad) and as firm anchors (rawasi) set in it, and counted among the things God made as a benefit for people and their animals.",
+      "refs": [
+        {
+          "surah": 78,
+          "from": 6,
+          "to": 7
+        },
+        {
+          "surah": 16,
+          "from": 15,
+          "to": 15
+        },
+        {
+          "surah": 79,
+          "from": 32,
+          "to": 33
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "God is said to have set firm mountains in the earth 'from above it' and to have anchored them, in the passages on the making and spreading of the earth.",
+      "refs": [
+        {
+          "surah": 41,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 79,
+          "from": 30,
+          "to": 32
+        },
+        {
+          "surah": 16,
+          "from": 15,
+          "to": 15
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "God set firm mountains in the earth so that it does not shake with people, and made paths and signposts so that they find their way. He also made shelters for people in the mountains.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 15,
+          "to": 16
+        },
+        {
+          "surah": 21,
+          "from": 31,
+          "to": 31
+        },
+        {
+          "surah": 31,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 16,
+          "from": 81,
+          "to": 81
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "Described as firm, high (shamikhat) and set upright, with streaks of different colours: white, red and intensely black.",
+      "refs": [
+        {
+          "surah": 77,
+          "from": 27,
+          "to": 27
+        },
+        {
+          "surah": 88,
+          "from": 19,
+          "to": 19
+        },
+        {
+          "surah": 35,
+          "from": 27,
+          "to": 27
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "Mountains are said to join in glorifying God with Dawud, and to bow down to God along with the sun, the moon, the stars, trees and animals. Had this Quran been sent down on a mountain, it would have been seen humbled and split apart from fear of God.",
+      "refs": [
+        {
+          "surah": 38,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 22,
+          "from": 18,
+          "to": 18
+        },
+        {
+          "surah": 59,
+          "from": 21,
+          "to": 21
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "The mountains do not last: on the Last Day they will be set moving, will be like carded wool and become a mirage, and the Lord will blow them away.",
+      "refs": [
+        {
+          "surah": 81,
+          "from": 3,
+          "to": 3
+        },
+        {
+          "surah": 101,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 78,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 20,
+          "from": 105,
+          "to": 107
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "God made shelters in the mountains for people, and paths for finding the way. A people who came after Aad are described as carving homes in the mountains, and were told to remember God's favours.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 81,
+          "to": 81
+        },
+        {
+          "surah": 16,
+          "from": 15,
+          "to": 15
+        },
+        {
+          "surah": 7,
+          "from": 74,
+          "to": 74
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "God raised the Mount (Tur) above Banu Israil when He took their covenant. When Musa asked to see his Lord, he was told to look at the mountain; when his Lord appeared to it, He made it crumble and Musa fell down senseless.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 63,
+          "to": 63
+        },
+        {
+          "surah": 7,
+          "from": 143,
+          "to": 143
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "One passage places the mountains after the earth is spread out and its water and pasture are brought forth; another mentions setting them in the earth within the days of its making. The two are not reconciled here.",
+      "refs": [
+        {
+          "surah": 79,
+          "from": 30,
+          "to": 32
+        },
+        {
+          "surah": 41,
+          "from": 9,
+          "to": 10
+        }
+      ]
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The verses place mountains in the earth in general; they do not list ranges or regions, apart from the few named in stories."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Pegs and anchors are the Quran's own images. This profile does not turn them into a claim about what lies beneath mountains, which the verses do not describe, and links to modern findings belong to the separate Quran & Science module.",
+      "refs": [
+        {
+          "surah": 78,
+          "from": 7,
+          "to": 7
+        },
+        {
+          "surah": 16,
+          "from": 15,
+          "to": 15
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The mountain is shown both as a sign of firmness and, in the verses on the Last Day, as something that does not last. Both pictures turn the reader away from trusting in what looks permanent.",
+      "refs": [
+        {
+          "surah": 78,
+          "from": 7,
+          "to": 7
+        },
+        {
+          "surah": 101,
+          "from": 5,
+          "to": 5
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Jabal (plural jibal) is a mountain; rawasi are firm anchors; awtad are stakes or pegs; shamikhat means lofty; ihn is wool; tur is the mount named in the story of Musa.",
+      "refs": [
+        {
+          "surah": 78,
+          "from": 7,
+          "to": 7
+        },
+        {
+          "surah": 16,
+          "from": 15,
+          "to": 15
+        },
+        {
+          "surah": 77,
+          "from": 27,
+          "to": 27
+        },
+        {
+          "surah": 101,
+          "from": 5,
+          "to": 5
+        },
+        {
+          "surah": 2,
+          "from": 63,
+          "to": 63
+        }
+      ]
+    }
+  }
+}

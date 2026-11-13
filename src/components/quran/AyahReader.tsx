@@ -376,7 +376,7 @@ function Markers({ m, r }: { m: AyahMarker; r: QuranReaderStrings }) {
     <ul className="qr-markers" aria-label={r.markers.label}>
       {m.juz ? (
         <li className="qr-marker" data-kind="juz">
-          {r.markers.juz(m.juz)}
+          <Link href={`/quran/juz/${m.juz}`}>{r.markers.juz(m.juz)}</Link>
         </li>
       ) : null}
       {m.hizb ? (
@@ -386,7 +386,7 @@ function Markers({ m, r }: { m: AyahMarker; r: QuranReaderStrings }) {
       ) : null}
       {m.page ? (
         <li className="qr-marker" data-kind="page">
-          {r.markers.page(m.page)}
+          <Link href={`/quran/page/${m.page}`}>{r.markers.page(m.page)}</Link>
         </li>
       ) : null}
     </ul>

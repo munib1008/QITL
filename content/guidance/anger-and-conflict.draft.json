@@ -1,0 +1,86 @@
+{
+  "schema": "qitl.guidance.draft.v1",
+  "slug": "anger-and-conflict",
+  "fields": {
+    "situation": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): Anger and conflict arise when a person feels wronged or provoked, and the question is what to do with the heat of the moment and with the person across from you.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 134,
+          "to": 134
+        }
+      ]
+    },
+    "quran_says": {
+      "status": "stated",
+      "text_en": "The Quran praises those who restrain their anger and pardon people. It tells the believer to repel evil with what is better, so that one with whom there was enmity may become like a close friend. It describes the servants of the Merciful as saying peace when the ignorant address them.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 134,
+          "to": 134
+        },
+        {
+          "surah": 41,
+          "from": 34,
+          "to": 34
+        },
+        {
+          "surah": 25,
+          "from": 63,
+          "to": 63
+        }
+      ]
+    },
+    "prophet_experience": {
+      "status": "stated",
+      "text_en": "Musa came back to his people angry and grieved, threw down the tablets and seized his brother by the head. His brother said the people had overpowered him and nearly killed him. Musa then prayed for forgiveness for himself and his brother. In another passage, Musa and Harun are told to speak gently to Pharaoh.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 150,
+          "to": 151
+        },
+        {
+          "surah": 20,
+          "from": 43,
+          "to": 44
+        }
+      ]
+    },
+    "everyday_application": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): A modest practice is to pause before answering, choose the gentler word, and ask God's forgiveness if the heat of the moment led you to act harshly. If you cannot settle a conflict alone, asking a fair person you both trust to help is in keeping with the Quran's call to put things right between people.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 151,
+          "to": 151
+        },
+        {
+          "surah": 20,
+          "from": 44,
+          "to": 44
+        },
+        {
+          "surah": 49,
+          "from": 10,
+          "to": 10
+        }
+      ]
+    },
+    "limits": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): The sources do not list what to do in every dispute and do not say when anger is justified. This lesson gives no ruling on a particular case: for a ruling ask a qualified mufti. If anger leads to violence or you fear for your safety, contact a qualified professional or local emergency services.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 134,
+          "to": 134
+        }
+      ]
+    }
+  }
+}

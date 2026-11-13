@@ -1,0 +1,213 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "the-calf",
+  "category": "animals",
+  "name_en": "The calf of Musa's people",
+  "name_ar": "العجل",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The calf (al-'ijl) is a body with a lowing that Musa's people made from their ornaments after he had gone.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 148,
+          "to": 148
+        },
+        {
+          "surah": 20,
+          "from": 88,
+          "to": 88
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "Musa's people made it from their ornaments after him. In the other telling, the Samiri threw what they had cast, and a calf was brought out for them, a body with a lowing.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 148,
+          "to": 148
+        },
+        {
+          "surah": 20,
+          "from": 85,
+          "to": 85
+        },
+        {
+          "surah": 20,
+          "from": 87,
+          "to": 88
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "The people took it, and said this is your god and the god of Musa. The Quran counts them wrongdoers.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 148,
+          "to": 148
+        },
+        {
+          "surah": 20,
+          "from": 88,
+          "to": 88
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "It is a body with a lowing. It does not speak to them or guide them to any way, and does not return a word to them.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 148,
+          "to": 148
+        },
+        {
+          "surah": 20,
+          "from": 88,
+          "to": 89
+        }
+      ]
+    },
+    "abilities": {
+      "status": "not_established",
+      "note_en": "The Quran gives no abilities for the calf beyond the lowing."
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "It cannot speak to them, guide them, return a word, or own harm or benefit for them.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 148,
+          "to": 148
+        },
+        {
+          "surah": 20,
+          "from": 89,
+          "to": 89
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Harun warned them that they were being tried by it. They said they would stay devoted to it until Musa returned. Musa returned angry and sorrowful, and wrath and humiliation were promised to those who took the calf.",
+      "refs": [
+        {
+          "surah": 20,
+          "from": 90,
+          "to": 91
+        },
+        {
+          "surah": 7,
+          "from": 150,
+          "to": 150
+        },
+        {
+          "surah": 7,
+          "from": 152,
+          "to": 152
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "Musa's people took the calf after his absence, Harun warned them, Musa returned and questioned his brother and the Samiri. He told the Samiri that the calf would be burned and scattered in the sea.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 148,
+          "to": 152
+        },
+        {
+          "surah": 20,
+          "from": 85,
+          "to": 97
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "It happened after Musa went away, when the people took the calf after him.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 51,
+          "to": 51
+        },
+        {
+          "surah": 7,
+          "from": 148,
+          "to": 148
+        }
+      ]
+    },
+    "location": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the place where it was made."
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verses describe a calf, a body with a lowing, made from their ornaments. They do not say it was gold, and this profile does not say so either.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 148,
+          "to": 148
+        },
+        {
+          "surah": 20,
+          "from": 88,
+          "to": 88
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): a made thing cannot answer, guide or benefit, which is read as a lesson against placing worship in what cannot help.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 148,
+          "to": 148
+        },
+        {
+          "surah": 20,
+          "from": 89,
+          "to": 89
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-'ijl (the calf), jasad (a body), khuwar (a lowing), huliyyihim (their ornaments), 'akifin (devoted to it), al-Samiri.",
+      "refs": [
+        {
+          "surah": 7,
+          "from": 148,
+          "to": 148
+        },
+        {
+          "surah": 20,
+          "from": 88,
+          "to": 88
+        },
+        {
+          "surah": 20,
+          "from": 91,
+          "to": 91
+        },
+        {
+          "surah": 20,
+          "from": 95,
+          "to": 95
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "zakariyya",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era for Zakariyya."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the land of Zakariyya. It mentions the mihrab where he prayed and where he went in to Maryam."
+    },
+    "community": {
+      "status": "stated",
+      "text_en": "He went out to his people from the mihrab and signalled to them to glorify God in the morning and the evening.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 11,
+          "to": 11
+        }
+      ]
+    },
+    "lifespan": {
+      "status": "stated",
+      "text_en": "He describes himself as old: his bone had grown weak, his head flared with white, and he had reached extreme old age. No number of years is given.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 4,
+          "to": 4
+        },
+        {
+          "surah": 19,
+          "from": 8,
+          "to": 8
+        },
+        {
+          "surah": 3,
+          "from": 40,
+          "to": 40
+        }
+      ]
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "He stood praying in the mihrab and went in to Maryam there. His sign was that he would not speak to people for three days except by gesture, and he was to remember his Lord much.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 37,
+          "to": 37
+        },
+        {
+          "surah": 3,
+          "from": 39,
+          "to": 39
+        },
+        {
+          "surah": 3,
+          "from": 41,
+          "to": 41
+        }
+      ]
+    },
+    "occupation": {
+      "status": "stated",
+      "text_en": "He was made guardian of Maryam. The Quran names no trade for him and lists him among the righteous.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 37,
+          "to": 37
+        },
+        {
+          "surah": 6,
+          "from": 85,
+          "to": 85
+        }
+      ]
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran says he found provision with Maryam but does not say what it was, so no food is established."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding in his story."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the clothing of Zakariyya."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe his home. The mihrab is a place of prayer, not described as a dwelling."
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not mention travel or transport in his story."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "His wife was barren and he feared his kinsfolk who would come after him, so he asked for an heir from the family of Yaqub. God gave him Yahya and put his wife right for him.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 5,
+          "to": 6
+        },
+        {
+          "surah": 21,
+          "from": 90,
+          "to": 90
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe customs or leisure in his story."
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe teaching or learning for Zakariyya."
+    },
+    "health_treatment": {
+      "status": "stated",
+      "text_en": "He says his bone had grown weak. The Quran calls his wife barren and says God put her right for him. No treatment is described.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 4,
+          "to": 5
+        },
+        {
+          "surah": 21,
+          "from": 90,
+          "to": 90
+        }
+      ]
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate of his land."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "He called on his Lord with a hidden call, asked for good offspring and not to be left alone. He and his family hastened to good deeds, called on God in hope and fear and were humble before Him.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 3,
+          "to": 3
+        },
+        {
+          "surah": 3,
+          "from": 38,
+          "to": 38
+        },
+        {
+          "surah": 21,
+          "from": 89,
+          "to": 90
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "Old age, a barren wife and fear for what his kinsfolk would do after him are the setting of his prayer. He asked how a boy could be born and was told it is easy for God.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 4,
+          "to": 9
+        },
+        {
+          "surah": 3,
+          "from": 40,
+          "to": 40
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran does not say what Zakariyya's work was beyond guarding Maryam, nor where the mihrab stood, so a reader should not supply these.",
+      "refs": [
+        {
+          "surah": 3,
+          "from": 37,
+          "to": 39
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these passages present hidden, persistent prayer even in old age, and remembrance and glorifying God when a sign is given.",
+      "refs": [
+        {
+          "surah": 19,
+          "from": 3,
+          "to": 4
+        },
+        {
+          "surah": 3,
+          "from": 41,
+          "to": 41
+        }
+      ]
+    }
+  }
+}

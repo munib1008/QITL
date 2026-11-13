@@ -1,0 +1,156 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "hoopoe",
+  "category": "animals",
+  "name_en": "The hoopoe",
+  "name_ar": "الهدهد",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The hoopoe (al-hudhud) is one of the birds (al-tayr) among Sulayman's hosts.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 17,
+          "to": 17
+        },
+        {
+          "surah": 27,
+          "from": 20,
+          "to": 20
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the creation of the hoopoe in particular."
+    },
+    "purpose": {
+      "status": "not_established",
+      "note_en": "The Quran does not state a purpose for the hoopoe."
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "In the account the hoopoe speaks to Sulayman, says he has comprehended what Sulayman had not, and reports people prostrating to the sun instead of God.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 22,
+          "to": 24
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "He came with sure news from Saba and told of a woman ruling them with a great throne. Sulayman then told him to cast a letter to them and turn away from them.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 22,
+          "to": 23
+        },
+        {
+          "surah": 27,
+          "from": 28,
+          "to": 28
+        }
+      ]
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the hoopoe."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Sulayman checked on the birds and noticed the hoopoe's absence. He warned of a severe punishment unless the hoopoe brought clear authority, then said they would see whether he spoke truth.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 20,
+          "to": 21
+        },
+        {
+          "surah": 27,
+          "from": 27,
+          "to": 27
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "Sulayman missed the hoopoe, who stayed away for a short while and returned with news from Saba. Sulayman tested the report and sent a letter with him.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 20,
+          "to": 28
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "The event is in Sulayman's time. The passage gives no date.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 16,
+          "to": 20
+        }
+      ]
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "He brought news from Saba and stayed away not far in distance.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 22,
+          "to": 22
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the passage tells the hoopoe's report and Sulayman's test of it. It does not say the bird was punished, so no punishment is claimed here.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 21,
+          "to": 28
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the king weighs the report ('we will see whether you spoke truth') rather than accepting or dismissing it at once, which is read as a lesson in verifying news.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 27,
+          "to": 27
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-hudhud (the hoopoe), al-tayr (the birds), saba' (Saba), naba' yaqin (sure news), sultan mubin (clear authority).",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 27,
+          "from": 22,
+          "to": 22
+        },
+        {
+          "surah": 27,
+          "from": 21,
+          "to": 21
+        }
+      ]
+    }
+  }
+}

@@ -2,6 +2,7 @@ import "server-only";
 import { getPublicSupabase } from "@/lib/supabase/server";
 import { aliasExpansions, dedupe, FACETS, isFacet, isKind, plainSnippet, scoreFields, SEARCH_KINDS, searchJourney, type Facet, type SearchHit, type SearchKind } from "@/lib/search";
 import { isTrack, TRACK_IDS, type TrackId } from "@/lib/events/tracks";
+import { searchAiDrafts } from "@/lib/search-drafts";
 import { searchQuran, searchStatic, searchSurahs } from "@/lib/search-sources";
 
 /*
@@ -108,7 +109,7 @@ export async function unifiedSearch(input: SearchInput): Promise<SearchResult> {
   const empty: SearchResult = { q, page: 1, pages: 0, total: 0, perPage: PER_PAGE, facet, kind, track, surah, facets: {}, kinds: {}, tracks: {}, surahs: [], database: "not_configured", results: [] };
   if (!q) return empty;
   const db = await searchDatabase(q);
-  const all = dedupe([...searchJourney(q), ...searchSurahs(q), ...searchQuran(q), ...searchStatic(q, input.locale ?? "en"), ...db.hits]);
+  const all = dedupe([...searchJourney(q), ...searchSurahs(q), ...searchQuran(q), ...searchStatic(q, input.locale ?? "en"), ...(await searchAiDrafts(q)), ...db.hits]);
   // Faceted counts: every facet is counted over the results that pass the OTHER filters.
   const keep = (h: SearchHit, skip: Skip) =>
     (skip === "facet" || !facet || h.facet === facet) &&

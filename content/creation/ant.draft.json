@@ -1,0 +1,131 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "ant",
+  "category": "animals",
+  "name_en": "The ant",
+  "name_ar": "النملة",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran speaks of an ant (namlah) and of the ants (al-naml) as a group with a valley and dwellings.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "origin": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the creation of the ant in particular."
+    },
+    "purpose": {
+      "status": "not_established",
+      "note_en": "The Quran does not state a purpose for the ant."
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "The ants are shown as a group with dwellings, addressed by one of their number.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "One ant speaks to the others, tells them to enter their dwellings and names the risk that Sulayman and his soldiers might crush them without perceiving it.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "limitations": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe limits of the ants themselves."
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "Sulayman, passing with his hosts, smiled laughing at the ant's words and prayed to be inspired to thank God for His favour on him and on his parents.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 17,
+          "to": 19
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "Sulayman's hosts of jinn, men and birds were gathered and kept in ranks. When they came to the valley of the ants, one ant spoke, and Sulayman smiled and prayed.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 17,
+          "to": 19
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "The event is set in Sulayman's time, after he inherited from Dawud. The passage gives no date.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 16,
+          "to": 18
+        }
+      ]
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "The place is the valley of the ants.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verse reports what the ant said and that Sulayman smiled. It does not describe how ants communicate in general, and this profile adds nothing about that.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 18,
+          "to": 19
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verse sets an ant's warning to its fellows beside a king's prayer of thanks, and it is read as a lesson in care for others and in gratitude.",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 18,
+          "to": 19
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words used: al-naml (the ants), namlah (an ant), wad al-naml (the valley of the ants), masakinakum (your dwellings), yahtimannakum (crush you).",
+      "refs": [
+        {
+          "surah": 27,
+          "from": 18,
+          "to": 18
+        }
+      ]
+    }
+  }
+}

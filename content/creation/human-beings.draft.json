@@ -1,0 +1,302 @@
+{
+  "schema": "qitl.creation.draft.v1",
+  "slug": "human-beings",
+  "category": "humans",
+  "name_en": "Human beings",
+  "name_ar": "الإنسان",
+  "fields": {
+    "classification": {
+      "status": "stated",
+      "text_en": "The Quran speaks of the human by two words, al-insan and al-bashar, and says God created him. It says the children of Adam were honoured and favoured over many of those God created.",
+      "refs": [
+        {
+          "surah": 55,
+          "from": 3,
+          "to": 4
+        },
+        {
+          "surah": 15,
+          "from": 28,
+          "to": 28
+        },
+        {
+          "surah": 17,
+          "from": 70,
+          "to": 70
+        }
+      ]
+    },
+    "origin": {
+      "status": "stated",
+      "text_en": "The first human is said to be made from clay, from dust, and from dried ringing clay of moulded mud. His offspring come from a drop, then a clinging clot, then a lump, then bones clothed with flesh, then another creation.",
+      "refs": [
+        {
+          "surah": 6,
+          "from": 2,
+          "to": 2
+        },
+        {
+          "surah": 15,
+          "from": 26,
+          "to": 26
+        },
+        {
+          "surah": 23,
+          "from": 12,
+          "to": 14
+        },
+        {
+          "surah": 30,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 32,
+          "from": 7,
+          "to": 8
+        },
+        {
+          "surah": 55,
+          "from": 14,
+          "to": 14
+        }
+      ]
+    },
+    "purpose": {
+      "status": "stated",
+      "text_en": "Jinn and humankind were created only to worship God. God also set humans as successors on the earth and raised some above others in rank in order to test them in what He gave them.",
+      "refs": [
+        {
+          "surah": 51,
+          "from": 56,
+          "to": 56
+        },
+        {
+          "surah": 2,
+          "from": 30,
+          "to": 30
+        },
+        {
+          "surah": 6,
+          "from": 165,
+          "to": 165
+        }
+      ]
+    },
+    "nature": {
+      "status": "stated",
+      "text_en": "Created weak, hasty, anxious when harm touches him and withholding when good touches him, yet in the best form. He is given hearing, sight and hearts, and a self inspired with its wrongdoing and its God-consciousness.",
+      "refs": [
+        {
+          "surah": 4,
+          "from": 28,
+          "to": 28
+        },
+        {
+          "surah": 17,
+          "from": 11,
+          "to": 11
+        },
+        {
+          "surah": 70,
+          "from": 19,
+          "to": 21
+        },
+        {
+          "surah": 95,
+          "from": 4,
+          "to": 4
+        },
+        {
+          "surah": 32,
+          "from": 9,
+          "to": 9
+        },
+        {
+          "surah": 91,
+          "from": 7,
+          "to": 8
+        }
+      ]
+    },
+    "abilities": {
+      "status": "stated",
+      "text_en": "Taught clear expression and given hearing, sight and hearts. Adam was taught the names, and the human carried the trust that the heavens, the earth and the mountains declined.",
+      "refs": [
+        {
+          "surah": 55,
+          "from": 3,
+          "to": 4
+        },
+        {
+          "surah": 16,
+          "from": 78,
+          "to": 78
+        },
+        {
+          "surah": 2,
+          "from": 31,
+          "to": 31
+        },
+        {
+          "surah": 33,
+          "from": 72,
+          "to": 72
+        }
+      ]
+    },
+    "limitations": {
+      "status": "stated",
+      "text_en": "Brought out of the mothers' wombs knowing nothing, given only a little knowledge, and created weak. The same verse calls the human who carried the trust a wrongdoer and ignorant.",
+      "refs": [
+        {
+          "surah": 16,
+          "from": 78,
+          "to": 78
+        },
+        {
+          "surah": 17,
+          "from": 85,
+          "to": 85
+        },
+        {
+          "surah": 4,
+          "from": 28,
+          "to": 28
+        },
+        {
+          "surah": 33,
+          "from": 72,
+          "to": 72
+        }
+      ]
+    },
+    "relationship_with_humans": {
+      "status": "stated",
+      "text_en": "God created people from one soul and made them peoples and tribes so that they may know one another. The most honoured with God is the most God-conscious.",
+      "refs": [
+        {
+          "surah": 4,
+          "from": 1,
+          "to": 1
+        },
+        {
+          "surah": 49,
+          "from": 13,
+          "to": 13
+        }
+      ]
+    },
+    "quranic_events": {
+      "status": "stated",
+      "text_en": "God told the angels He would create a human, they were told to prostrate to Adam, and Iblis refused. Adam and his wife were placed in the garden and then sent down to the earth.",
+      "refs": [
+        {
+          "surah": 2,
+          "from": 30,
+          "to": 36
+        },
+        {
+          "surah": 38,
+          "from": 71,
+          "to": 74
+        }
+      ]
+    },
+    "chronological_position": {
+      "status": "stated",
+      "text_en": "The Quran says there came upon the human a period of time when he was not even a thing mentioned. It gives no date for the creation of the first human.",
+      "refs": [
+        {
+          "surah": 76,
+          "from": 1,
+          "to": 1
+        }
+      ]
+    },
+    "location": {
+      "status": "stated",
+      "text_en": "The earth is laid down for the creatures. People are told that in it they live and die and from it they will be brought out.",
+      "refs": [
+        {
+          "surah": 55,
+          "from": 10,
+          "to": 10
+        },
+        {
+          "surah": 7,
+          "from": 24,
+          "to": 25
+        }
+      ]
+    },
+    "misconceptions": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verses on clay, a drop and a clot name the materials and stages the Quran states. They give no dates, and this profile reads no later theory into them.",
+      "refs": [
+        {
+          "surah": 23,
+          "from": 12,
+          "to": 14
+        },
+        {
+          "surah": 15,
+          "from": 26,
+          "to": 26
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the verses pair the origin of humankind with honour and with accountability, so they are read as a call to gratitude and humility rather than pride in descent.",
+      "refs": [
+        {
+          "surah": 17,
+          "from": 70,
+          "to": 70
+        },
+        {
+          "surah": 49,
+          "from": 13,
+          "to": 13
+        },
+        {
+          "surah": 7,
+          "from": 11,
+          "to": 12
+        }
+      ]
+    },
+    "vocabulary": {
+      "status": "stated",
+      "text_en": "Words the Quran uses: al-insan and al-bashar (the human), al-tin (clay), al-turab (dust), al-salsal (dried ringing clay), al-nutfah (a drop), al-alaqah (a clinging clot), al-mudghah (a lump), al-nafs (the self).",
+      "refs": [
+        {
+          "surah": 15,
+          "from": 26,
+          "to": 26
+        },
+        {
+          "surah": 15,
+          "from": 28,
+          "to": 28
+        },
+        {
+          "surah": 23,
+          "from": 12,
+          "to": 14
+        },
+        {
+          "surah": 30,
+          "from": 20,
+          "to": 20
+        },
+        {
+          "surah": 4,
+          "from": 1,
+          "to": 1
+        }
+      ]
+    }
+  }
+}

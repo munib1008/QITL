@@ -1,0 +1,182 @@
+{
+  "schema": "qitl.lifestyle.draft.v1",
+  "slug": "ayyub",
+  "fields": {
+    "period": {
+      "status": "not_established",
+      "note_en": "The Quran gives no date or era in years for Ayyub."
+    },
+    "region": {
+      "status": "not_established",
+      "note_en": "The Quran does not name the land of Ayyub."
+    },
+    "community": {
+      "status": "not_established",
+      "note_en": "The Quran does not say which people Ayyub belonged to."
+    },
+    "lifespan": {
+      "status": "not_established",
+      "note_en": "The Quran gives no age for Ayyub and does not say how long his hardship lasted."
+    },
+    "daily_activities": {
+      "status": "stated",
+      "text_en": "He called out to his Lord in his harm, and God told him to strike with his foot.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 83,
+          "to": 83
+        },
+        {
+          "surah": 38,
+          "from": 41,
+          "to": 42
+        }
+      ]
+    },
+    "occupation": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe any trade or work of Ayyub; it calls him God's servant."
+    },
+    "foods_beverages": {
+      "status": "not_established",
+      "note_en": "The Quran mentions only a drink given to him with a cool washing-place (38:42), not any foods or diet."
+    },
+    "farming_livestock": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe farming or herding by Ayyub."
+    },
+    "clothing_care": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe Ayyub's clothing."
+    },
+    "housing": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe where or how Ayyub lived."
+    },
+    "transport": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe how Ayyub travelled."
+    },
+    "family_community": {
+      "status": "stated",
+      "text_en": "God gave him his family and the like of them with them, as a mercy from Him and a reminder for those who worship and for those with understanding.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 84,
+          "to": 84
+        },
+        {
+          "surah": 38,
+          "from": 43,
+          "to": 43
+        }
+      ]
+    },
+    "customs_leisure": {
+      "status": "stated",
+      "text_en": "He was told to take a bundle in his hand and strike with it, so as not to fail in something he was bound by; the Quran does not say what that was.",
+      "refs": [
+        {
+          "surah": 38,
+          "from": 44,
+          "to": 44
+        }
+      ]
+    },
+    "education": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe teaching or learning in the story of Ayyub."
+    },
+    "health_treatment": {
+      "status": "stated",
+      "text_en": "Harm and suffering touched him, and God removed the harm that was on him. He was told to strike with his foot, with the words that this was a cool washing-place and a drink. The Quran does not name the harm.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 83,
+          "to": 84
+        },
+        {
+          "surah": 38,
+          "from": 41,
+          "to": 42
+        }
+      ]
+    },
+    "climate": {
+      "status": "not_established",
+      "note_en": "The Quran does not describe the climate where Ayyub lived."
+    },
+    "worship": {
+      "status": "stated",
+      "text_en": "He called to his Lord that harm had touched him and that He is the most merciful of those who show mercy; God calls him His servant, found him patient and said he turned back to God often.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 83,
+          "to": 83
+        },
+        {
+          "surah": 38,
+          "from": 41,
+          "to": 41
+        },
+        {
+          "surah": 38,
+          "from": 44,
+          "to": 44
+        }
+      ]
+    },
+    "challenges": {
+      "status": "stated",
+      "text_en": "Harm touched him; he said Satan had touched him with hardship and suffering. God found him patient.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 83,
+          "to": 83
+        },
+        {
+          "surah": 38,
+          "from": 41,
+          "to": 41
+        },
+        {
+          "surah": 38,
+          "from": 44,
+          "to": 44
+        }
+      ]
+    },
+    "differences_modern": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): the Quran does not name Ayyub's affliction, his land or the length of his trial, so a reader should not supply them from other accounts.",
+      "refs": [
+        {
+          "surah": 21,
+          "from": 83,
+          "to": 83
+        }
+      ]
+    },
+    "lessons": {
+      "status": "stated",
+      "text_en": "Educational interpretation (not scripture): these verses present calling on God in hardship, patience and turning back to God as what the Quran praises in Ayyub, and present his restoration as a mercy and a reminder.",
+      "refs": [
+        {
+          "surah": 38,
+          "from": 44,
+          "to": 44
+        },
+        {
+          "surah": 21,
+          "from": 84,
+          "to": 84
+        }
+      ]
+    }
+  }
+}
