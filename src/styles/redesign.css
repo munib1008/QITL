@@ -20,14 +20,15 @@
 .rd-dial::before { content: ""; position: absolute; inset: 3%; border-radius: 50%; box-shadow: var(--shadow-inset); pointer-events: none; }
 .rd-dial-hand { position: absolute; inset-inline-start: calc(50% - 1px); top: 7%; width: 2px; height: 43%; border-radius: 2px; background: linear-gradient(to top, transparent, var(--brand)); transform-origin: 50% 100%; transition: transform .7s cubic-bezier(.4, 0, .2, 1); pointer-events: none; }
 .rd-tick { position: absolute; width: 14px; height: 14px; border: 1.5px solid var(--border); border-radius: 50%; transform: translate(-50%, -50%); background: var(--hairline); transition: width .3s, height .3s, box-shadow .3s; z-index: 2; pointer-events: none; }
-.rd-tick[data-on="true"] { width: 26px; height: 26px; box-shadow: 0 0 0 5px rgba(11,85,96,.28); z-index: 3; }
-.rd-tick[data-cert="exact"] { background: #0b5560; }
-.rd-tick[data-cert="traditional"] { background: #2d7580; }
-.rd-tick[data-cert="estimate"] { background: #7fa9ae; }
-.rd-tick[data-cert="disputed"] { background: #d9a520; }
+.rd-tick[data-on="true"] { width: 26px; height: 26px; box-shadow: 0 0 0 5px var(--accent-soft); z-index: 3; }
+/* Certainty is shape, not hue: filled ink (exact), filled graphite (traditional), hollow ring (estimate), dashed ring (disputed). */
+.rd-tick[data-cert="exact"] { background: var(--ink); border-color: var(--ink); }
+.rd-tick[data-cert="traditional"] { background: var(--ink-muted); border-color: var(--ink-muted); }
+.rd-tick[data-cert="estimate"] { background: var(--surface-raised); border-color: var(--ink-muted); }
+.rd-tick[data-cert="disputed"] { background: var(--surface-raised); border: 1.5px dashed var(--ink); }
 .rd-dial-hit { cursor: pointer; }
 .rd-tick-sm { position: absolute; width: 9px; height: 9px; border: 1px solid var(--border); border-radius: 50%; transform: translate(-50%, -50%); background: var(--border); z-index: 2; pointer-events: none; }
-.rd-tick-sm[data-on="true"] { width: 16px; height: 16px; background: var(--brand); box-shadow: 0 0 0 4px rgba(11,85,96,.28); z-index: 3; }
+.rd-tick-sm[data-on="true"] { width: 16px; height: 16px; background: var(--brand); box-shadow: 0 0 0 4px var(--accent-soft); z-index: 3; }
 .rd-names-ar { font: 500 clamp(28px, 5vw, 44px)/1.5 var(--font-quran, var(--font-naskh)); }
 .rd-names-tr { font: 700 clamp(16px, 2.4vw, 20px)/1.2 var(--font-sans); }
 .rd-range { width: 100%; max-width: 360px; accent-color: var(--brand); min-height: 44px; }
@@ -71,7 +72,7 @@
 .rd-focus-title { font: 700 20px/1.2 var(--font-display); letter-spacing: -.01em; margin: 0; }
 .rd-focus-ar { font: 500 28px/1.4 var(--font-sans); margin: 0; }
 .rd-note { margin: 0; padding: 10px 14px; border-radius: 8px; font: 500 14px/20px var(--font-sans); }
-.rd-warn { background: #fdf3d1; border: 1px solid #e6cf79; color: #6b4a00; }
+.rd-warn { background: var(--surface-sunken); border: 1px solid var(--border); color: var(--ink); }
 .rd-era { padding-top: 8px; }
 .rd-era-head { padding-top: 56px; display: grid; gap: 4px; scroll-snap-align: start; transition: opacity .5s ease-out, transform .5s ease-out; }
 .rd-era-head[data-reached="false"] { opacity: .15; transform: translateY(24px); }
