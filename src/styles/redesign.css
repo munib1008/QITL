@@ -40,7 +40,7 @@
 .rd-cert[data-cert="exact"] { background: #0b5560; border-color: #0b5560; color: #fff; }
 .rd-cert[data-cert="traditional"] { border-color: #2d7580; color: #1f6670; }
 .rd-cert[data-cert="estimate"] { border-style: dashed; color: var(--slate); }
-.rd-cert[data-cert="disputed"] { border: 3px double #7a4e00; color: #7a4e00; }
+.rd-cert[data-cert="disputed"] { border: 3px double var(--ev-disputed); color: var(--ev-disputed); }
 .rd-cert[data-cert="relative"], .rd-cert[data-cert="unknown"] { border-style: dotted; }
 .rd-search { display: grid; gap: 8px; width: 100%; }
 
@@ -121,7 +121,7 @@
 .rd-sign-n { flex: none; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 12px; box-shadow: var(--shadow-inset); font: 700 15px/1 var(--font-sans); font-variant-numeric: tabular-nums; }
 .rd-sign-n:empty { display: none; }
 .rd-sign-title { font: 700 20px/1.25 var(--font-display); margin: 0 0 4px; }
-.rd-badge { display: inline-block; margin-inline-start: 8px; padding: 1px 8px; border-radius: 6px; border: 3px double #7a4e00; color: #7a4e00; font: 600 12px/18px var(--font-sans); vertical-align: middle; }
+.rd-badge { display: inline-block; margin-inline-start: 8px; padding: 1px 8px; border-radius: 6px; border: 3px double var(--ev-disputed); color: var(--ev-disputed); font: 600 12px/18px var(--font-sans); vertical-align: middle; }
 
 html { scroll-snap-type: y proximity; }
 @media (prefers-reduced-motion: reduce) {

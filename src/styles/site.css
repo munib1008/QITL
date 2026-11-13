@@ -278,7 +278,7 @@ kbd.k{font-family:var(--font-mono);font-size:11px;padding:2px 6px;border:1px sol
 /* ---- evidence & certainty labels ---- */
 .ev{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 var(--space-2);border:1.5px solid currentColor;border-radius:5px;font-size:12px;font-weight:650;white-space:nowrap;color:var(--q-text-2);background:transparent}
 .ev:before{content:'';width:8px;height:8px;flex:none}
-.ev.quran{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}.ev.quran:before{background:currentColor;transform:rotate(45deg)}
+.ev.quran{background:var(--q-text);border-color:var(--q-text);color:var(--q-bg)}.ev.quran:before{background:currentColor;transform:rotate(45deg)}
 .ev.hadith:before{border-radius:50%;background:currentColor}
 .ev.scholar:before{border-radius:50%;border:1.5px solid currentColor;background:linear-gradient(90deg,currentColor 50%,transparent 50%)}
 .ev.estimate{border-style:dashed}.ev.estimate:before{content:'≈';width:auto;height:auto;font-size:13px;line-height:1}

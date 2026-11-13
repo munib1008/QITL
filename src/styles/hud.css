@@ -147,3 +147,12 @@ a.zq-chip:active, button.zq-chip:active, a.zq-pill:active, button.zq-pill:active
 .pp-card h2, .pp-card h3 { font-family: var(--font-display); letter-spacing: -.01em; }
 .pp-pos { border-color: var(--q-line); }
 @media (max-width: 640px) { .pp-head { padding: var(--space-4); } }
+
+/* Inline links in running text are underlined: their colour alone is not enough to tell them from the text (WCAG 1.4.1). */
+.zq-prose a, .zq-pagebody p a:not([class]), .zq-pagebody li a:not([class]), .zq-pagebody .zq-meta a:not([class]), .reading-body p > a:not([class]) {
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+}
+
+/* "Coming soon" entries: dashed and quieter by colour, not by opacity (opacity pushed the label under 4.5:1). */
+.qb-soon { opacity: 1; border-style: dashed; color: var(--q-text-2); }
+.qb-soon small { color: var(--q-text-3); }
