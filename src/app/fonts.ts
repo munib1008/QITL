@@ -6,7 +6,8 @@ import localFont from "next/font/local";
  * so no request goes to Google at runtime. Exposed as --ff-*; tokens.css builds --font-* stacks from them.
  */
 /** One typeface for the whole interface: Inter. Scripture and Arabic keep their own faces below. */
-export const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--ff-inter", display: "swap" });
+// A variable font: one file covers every weight (400 to 800) instead of one request per weight.
+export const inter = Inter({ subsets: ["latin"], variable: "--ff-inter", display: "swap" });
 export const plexAr = IBM_Plex_Sans_Arabic({ subsets: ["arabic"], weight: ["400", "600"], variable: "--ff-plex-ar", display: "swap" });
 export const amiriQuran = Amiri_Quran({ subsets: ["arabic"], weight: "400", variable: "--ff-amiri-quran", display: "swap", preload: false });
 export const amiri = Amiri({ subsets: ["arabic"], weight: ["400", "700"], variable: "--ff-amiri", display: "swap", preload: false });
