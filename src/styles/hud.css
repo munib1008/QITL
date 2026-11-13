@@ -11,7 +11,7 @@
 .hud .navlinks a[aria-current="page"]::after { content: ""; position: absolute; inset-inline: var(--space-4); bottom: 2px; height: 2px; border-radius: 2px; background: var(--accent); }
 .hud .navtools { display: flex; align-items: center; gap: var(--space-2); margin-inline-start: 0; }
 .hud .zq-lang { display: inline-flex; border: 1px solid var(--q-line); border-radius: var(--radius-sm); overflow: hidden; background: var(--q-surface); box-shadow: none; }
-.hud .zq-lang-opt { display: grid; place-items: center; min-width: 44px; min-height: 38px; padding: 0 var(--space-2); font: 600 13px/1 var(--font-sans); color: var(--q-text-2); text-decoration: none; background: transparent; border: 0; box-shadow: none; transition: background-color var(--dur-fast) var(--ease-standard); }
+.hud .zq-lang-opt { display: grid; place-items: center; min-width: 44px; min-height: 44px; padding: 0 var(--space-2); font: 600 13px/1 var(--font-sans); color: var(--q-text-2); text-decoration: none; background: transparent; border: 0; box-shadow: none; transition: background-color var(--dur-fast) var(--ease-standard); }
 .hud .zq-lang-opt:hover { background: var(--q-surface-2); }
 .hud .zq-lang-opt[aria-current="true"] { background: var(--q-surface-2); color: var(--q-text); box-shadow: inset 0 -2px 0 var(--accent); }
 .hud .zq-soon { font-size: 12px; color: var(--q-text-3); border: 1px dashed var(--q-line-2); border-radius: var(--radius-pill); padding: 2px var(--space-3); white-space: nowrap; }
@@ -79,7 +79,7 @@ a.zq-chip:active, button.zq-chip:active, a.zq-pill:active, button.zq-pill:active
 .zq-btn-secondary:hover { background: var(--q-surface-2); box-shadow: var(--shadow-e2); }
 .zq-btn-secondary:active { box-shadow: var(--shadow-e0); }
 .zq-btn-quiet:hover { background: var(--q-surface-2); }
-.zq-chip:hover, .zq-pill:hover, .rd-chip:hover { background: var(--q-surface-2); border-color: var(--q-line-2); }
+.zq-chip:not([aria-pressed="true"]):not([aria-selected="true"]):hover, .zq-pill:not([aria-pressed="true"]):not([aria-selected="true"]):hover, .rd-chip:not([aria-pressed="true"]):hover { background: var(--q-surface-2); border-color: var(--q-line-2); }
 /* Cards that are links, or that contain the page's one link, lift on hover and press on activation. */
 :is(a.pp-card, a.zq-card, a.pt-card, a.qa-card, a.qs-card, a.qr-card, a.he-card, a.sc-card, a.lta-card, a.lta-tile, a.rd-card, .zq-prophet, .zq-jc, .feature, .pathcard) {
   transition: transform var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard);
@@ -97,3 +97,15 @@ a.zq-chip:active, button.zq-chip:active, a.zq-pill:active, button.zq-pill:active
 .hud .searchbtn { white-space: nowrap; }
 .hud .searchbtn kbd { white-space: nowrap; }
 .palette .searchfield svg { color: var(--q-text-3); }
+
+/* Directional icons mirror in right-to-left interfaces. */
+[dir="rtl"] .icon-dir { transform: scaleX(-1); }
+.btn svg { width: 18px; height: 18px; flex: none; }
+
+/* Footer links: a 24px minimum target (WCAG 2.2). */
+.footerlinks a { display: inline-flex; align-items: center; min-height: 32px; }
+
+/* The Explore menu is shown from 1024px (the bottom bar's Explore sheet replaces it below that). */
+@media (min-width: 1024px) { .hud .zq-mmenu, .hud .zq-mmenu-more { display: block; } }
+@media (max-width: 1023px) { .hud .zq-mmenu, .hud .zq-mmenu-more { display: none; } }
+.hud .zq-mmenu > button span { display: inline !important; }

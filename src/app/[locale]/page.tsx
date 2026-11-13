@@ -8,13 +8,10 @@ import "@/styles/nav-groups.css";
 import { applyNav } from "@/lib/site-config/config";
 import { getSiteConfig, homeText } from "@/lib/site-config/server";
 import { JourneyTimeline } from "@/components/journey/JourneyTimeline";
-import { JourneyDial, type DialStop } from "@/components/journey/JourneyDial";
-import { ERA_TEXT } from "@/content/labels";
+import { JourneyMap, type MapStop } from "@/components/journey/JourneyMap";
 import { redesignStrings } from "@/lib/i18n/modules/redesign";
-import { HudHeader } from "@/components/shell/SiteHeader";
+import { HudHeader, SiteFooter } from "@/components/shell/SiteHeader";
 import { DraftBadge } from "@/components/ui/evidence";
-import { Mark } from "@/components/shell/Logo";
-import { getDict } from "@/lib/i18n";
 import { publicEnv } from "@/lib/env";
 import { englishContent } from "@/lib/i18n/locales";
 import { eraText } from "@/lib/i18n/modules/eras";
@@ -33,7 +30,20 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const milestones = stops.filter((s) => s.type === "milestone").length;
   const bsm = basmala();
   const rd = redesignStrings(locale);
-  const dialStops: DialStop[] = stops.map((x) => ({ id: x.id, name: x.name, arabic: x.arabicName, eraLabel: x.era.label, dateLabel: x.era.label, certainty: x.era.certainty === "unknown" ? "relative" : x.era.certainty, certaintyLabel: ERA_TEXT[x.era.certainty] }));
+  const mapStops: MapStop[] = journey.eras.flatMap((era, eraIndex) =>
+    era.items.map((x) => ({
+      id: x.id,
+      name: x.name,
+      arabic: x.arabicName,
+      honorific: x.honorific,
+      chapter: x.chapter,
+      kind: x.type,
+      eraIndex,
+      eraLabel: x.era.label,
+      summary: x.summary,
+      href: `/prophets/${x.id}`,
+    })),
+  );
   // Administrator-edited text and hidden sections (/admin/site). With no edit, every value equals the built-in string below.
   const cfg = await getSiteConfig();
   const builtInTitle = `${t.heroTitle} ${t.heroTitle2}`;
@@ -57,65 +67,72 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   };
 
   return (
-    <div className="zq-page" data-theme="journey" id="top">
+    <div className="pp zq-page" id="top">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonForScript(jsonLd) }} />
       <HudHeader locale={locale} config={cfg} />
       <main id="main">
-        <section className="zq-hero" aria-labelledby="hero-title">
-          {bsm ? (
-            <p className="zq-basmala" lang="ar" dir="rtl">
-              {bsm}
-            </p>
-          ) : null}
-          <span className="zq-kicker">{txt["home.hero.kicker"]}</span>
-          <h1 id="hero-title">
-            {txt["home.hero.title"] === builtInTitle ? (
-              <>
-                {t.heroTitle}
-                <span>{t.heroTitle2}</span>
-              </>
-            ) : (
-              txt["home.hero.title"]
-            )}
-          </h1>
-          <p className="zq-lead">
-            {txt["home.hero.lead"] === builtInLead ? (
-              t.lead
-            ) : (
-              txt["home.hero.lead"]
-            )}
-          </p>
-          <div className="zq-heroact">
-            <a className="zq-btn zq-btn-primary zq-btn-link" href="#journey">
-              {t.begin}
-            </a>
-            <Link className="zq-btn zq-btn-secondary zq-btn-link" href="/quran">
-              {t.exploreQuran}
-            </Link>
+        <section className="qs hero2 container" aria-labelledby="hero-title">
+          <div className="kick">
+            <div className="eyebrow">{txt["home.hero.kicker"]}</div>
+            {bsm ? (
+              <p className="basm arabic" lang="ar" dir="rtl">
+                {bsm}
+              </p>
+            ) : null}
           </div>
-          <div className="zq-facts">
+          <div className="titlerow">
+            <h1 id="hero-title">
+              {txt["home.hero.title"] === builtInTitle ? (
+                <>
+                  <span style={{ display: "block" }}>{t.heroTitle}</span>
+                  <em>{t.heroTitle2}</em>
+                </>
+              ) : (
+                txt["home.hero.title"]
+              )}
+            </h1>
+            <div className="side">
+              <p>{txt["home.hero.lead"] === builtInLead ? t.lead : txt["home.hero.lead"]}</p>
+              <div className="cta">
+                <a className="btn gold" href="#journey">
+                  {t.begin}
+                </a>
+                <Link className="btn" href="/quran">
+                  {t.exploreQuran}
+                </Link>
+              </div>
+            </div>
+          </div>
+          <JourneyMap
+            stops={mapStops}
+            badge={<DraftBadge status={journey.status} />}
+            s={{
+              label: rd.dial.label,
+              heading: rd.dial.heading,
+              note: rd.dial.note,
+              keyHint: t.mapKeys,
+              chapter: t.chapter,
+              milestone: t.milestone,
+              open: t.open,
+              of: t.of,
+              eras: journey.eras.map((e) => eraText(locale, e.title).text),
+            }}
+          />
+          <div className="hero-stats">
             {/* These counts are computed from the journey content, never typed in. */}
             <div>
-              <b>{prophets}</b>
+              <strong>{prophets}</strong>
               <span>{t.prophetsNamed}</span>
             </div>
             <div>
-              <b>{milestones}</b>
+              <strong>{milestones}</strong>
               <span>{t.milestones}</span>
             </div>
             <div>
-              <b>{t.every}</b>
+              <strong>{t.every}</strong>
               <span>{t.everyDate}</span>
             </div>
           </div>
-        </section>
-
-        <section className="rd-homedial" aria-labelledby="dial-h">
-          <div className="zq-sechead">
-            <h2 id="dial-h">{rd.dial.heading}</h2>
-            <p>{rd.dial.note}</p>
-          </div>
-          <JourneyDial stops={dialStops} s={rd.dial} href="/timeline?view=complete" />
         </section>
 
         <nav className="zq-rule" aria-label={t.livingTimeline} data-testid="era-rule">
@@ -203,20 +220,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </section>
       </main>
-      <footer className="zq-foot" id="method">
-        <span className="zq-foot-mark">
-          <Mark size={36} tone="dark" />
-          <span>{uiStrings(locale).site.title}</span>
-        </span>
-        <span>{getDict(locale).t.footer.principles}</span>
-        <nav className="zq-foot-links" aria-label={t.about}>
-          <Link href="/about">{t.footerAbout}</Link>
-          <Link href="/methodology">{t.footerMethodology}</Link>
-          <Link href="/privacy">{t.footerPrivacy}</Link>
-          <Link href="/accessibility">{t.footerAccessibility}</Link>
-        </nav>
-        {bsm ? <QuranAttribution src={quranSource()} /> : null}
-      </footer>
+      <SiteFooter locale={locale} />
+      {bsm ? <QuranAttribution src={quranSource()} /> : null}
     </div>
   );
 }

@@ -55,8 +55,8 @@ body.locked{overflow:hidden}
 .hero-copy{display:flex;flex-direction:column;gap:var(--space-5)}
 .hero-copy .basm{align-self:flex-start;font-size:28px;line-height:1.5;color:var(--q-text-2);margin:0}
 .hero-copy .edition{display:none}
-h1{font-family:var(--font-display);font-size:var(--q-fs-h1);font-weight:800;line-height:1;letter-spacing:-.035em;margin:0}
-h1 em{font-style:normal;color:var(--q-text-3)}
+.qs h1{font-family:var(--font-display);font-size:var(--q-fs-h1);font-weight:800;line-height:1;letter-spacing:-.035em;margin:0}
+.qs h1 em{font-style:normal;color:var(--q-text-3)}
 .hero-copy>p{font-size:var(--q-fs-lead);line-height:1.65;color:var(--q-text-2);max-width:480px;margin:0}
 .hero-proof{display:flex;flex-wrap:wrap;gap:var(--space-5);font-size:var(--q-fs-sm);color:var(--q-text-2)}
 .hero-proof span{display:flex;align-items:center;gap:var(--space-2)}.hero-proof .icon{width:16px;height:16px;color:var(--accent)}
@@ -90,7 +90,7 @@ h1 em{font-style:normal;color:var(--q-text-3)}
 .library-section,.paths-section{padding-top:0}
 .sectiontop{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--space-5);margin-bottom:var(--space-6)}
 .sectiontop>div{display:flex;flex-direction:column;gap:var(--space-3)}
-h2{font-family:var(--font-display);font-size:var(--q-fs-h2);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:0}
+.qs h2{font-family:var(--font-display);font-size:var(--q-fs-h2);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:0}
 .sectiontop p{margin:0;font-size:var(--q-fs-body);color:var(--q-text-2)}
 /* ===== journey ===== */
 .journey-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:var(--space-5);align-items:stretch}

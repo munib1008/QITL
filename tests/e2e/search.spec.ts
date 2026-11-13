@@ -60,14 +60,27 @@ test("facets filter and pagination pages through results with 44px targets", asy
   expect(overflow).toBeLessThanOrEqual(0);
 });
 
-test("the header field searches the whole site", async ({ page }) => {
+test("the header search opens the command palette (Ctrl+K), finds the page and Enter opens the top result", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("/prophets");
-  const field = page.locator("header").getByRole("searchbox", { name: "Search QITL" });
-  await field.fill("Musa");
-  await field.press("Enter");
+  await page.getByRole("button", { name: /Search QITL/ }).click();
+  const dlg = page.getByRole("dialog", { name: "Search QITL" });
+  await expect(dlg).toBeVisible();
+  const box = dlg.getByRole("combobox");
+  await expect(box).toBeFocused();
+  await box.fill("Musa");
+  await expect(dlg.getByRole("option").first().getByRole("link")).toHaveAttribute("href", "/prophets/musa");
+  await box.press("Enter");
+  await expect(page).toHaveURL(/\/prophets\/musa$/);
+  // Ctrl+K opens it anywhere, Esc closes it, and "see all results" goes to the full page.
+  await page.keyboard.press("Control+k");
+  await expect(dlg).toBeVisible();
+  await dlg.getByRole("combobox").fill("Musa");
+  await dlg.getByRole("link", { name: /See all results/ }).click();
   await expect(page).toHaveURL(/\/search\?q=Musa/);
-  await expect(results(page).first().locator(".sr-link")).toHaveAttribute("href", "/prophets/musa");
+  await page.keyboard.press("Control+k");
+  await page.keyboard.press("Escape");
+  await expect(dlg).toBeHidden();
 });
 
 test("Arabic and Urdu interfaces: RTL, localised labels, Urdu-script input", async ({ page }) => {

@@ -19,7 +19,7 @@ test("/ur is Urdu: lang, dir, Urdu bottom navigation, draft notice", async ({ pa
   await page.goto("/ur/timeline");
   await expect(page.locator("html")).toHaveAttribute("lang", "ur");
   await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
-  await expect(page.getByRole("navigation", { name: "بنیادی" }).getByRole("link", { name: "ٹائم لائن" })).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "بنیادی" }).getByRole("link", { name: "سفر" })).toBeVisible();
   await expect(page.locator("footer")).toContainText("اردو انٹرفیس کا مسودہ");
 });
 

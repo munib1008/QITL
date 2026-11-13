@@ -54,7 +54,7 @@ test("CSP: the nonce changes on every request", async ({ request }) => {
   expect(a).not.toEqual(b);
 });
 
-test("one light theme: a stored dark choice or a dark system preference never changes the page, and no inline theme script is needed", async ({ page }) => {
+test("theme: light by default; only the theme cookie (never localStorage or the system preference) sets dark, on the server, with no inline theme script", async ({ page, context, baseURL }) => {
   await page.emulateMedia({ colorScheme: "dark" });
   await page.addInitScript(() => {
     try {
@@ -65,7 +65,11 @@ test("one light theme: a stored dark choice or a dark system preference never ch
   });
   await page.goto("/prophets");
   expect(await page.evaluate(() => document.documentElement.dataset.theme)).toBe("light");
-  expect(await page.evaluate(() => getComputedStyle(document.body).backgroundColor)).toBe("rgb(239, 242, 249)");
+  expect(await page.evaluate(() => getComputedStyle(document.body).backgroundColor)).toBe("rgb(244, 244, 242)");
+  await context.addCookies([{ name: "qitl-theme", value: "dark", url: baseURL! }]);
+  await page.goto("/prophets");
+  expect(await page.evaluate(() => document.documentElement.dataset.theme)).toBe("dark");
+  expect(await page.evaluate(() => getComputedStyle(document.body).backgroundColor)).toBe("rgb(20, 20, 20)");
 });
 
 test("CSP: API responses carry the no-script policy and no page nonce", async ({ request }) => {

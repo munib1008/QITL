@@ -5,11 +5,12 @@ import { expect, test } from "@playwright/test";
 test.use({ viewport: { width: 360, height: 780 } });
 
 test("bottom navigation: five labelled destinations, current page marked, hidden on desktop widths", async ({ page }) => {
-  await page.goto("/timeline");
+  await page.goto("/prophets");
   const nav = page.getByRole("navigation", { name: "Primary" });
   await expect(nav).toBeVisible();
-  for (const name of ["Home", "Timeline", "Quran", "Explore", "Profile"]) await expect(nav.getByRole(name === "Explore" ? "button" : "link", { name })).toBeVisible();
-  await expect(nav.getByRole("link", { name: "Timeline" })).toHaveAttribute("aria-current", "page");
+  for (const name of ["Discover", "Journey", "Quran"]) await expect(nav.getByRole("link", { name })).toBeVisible();
+  for (const name of ["Search", "Explore"]) await expect(nav.getByRole("button", { name })).toBeVisible();
+  await expect(nav.getByRole("link", { name: "Journey" })).toHaveAttribute("aria-current", "page");
   for (const el of await nav.locator(".qb-item").all()) {
     const b = (await el.boundingBox())!;
     expect(b.height).toBeGreaterThanOrEqual(44);
@@ -90,7 +91,7 @@ test("prophet page: chapter progress with next / previous, and resume reading af
 test("Arabic at 360px: right-to-left, bottom navigation in Arabic, no sideways scroll, no axe violations", async ({ page }) => {
   await page.goto("/ar/timeline");
   await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
-  await expect(page.getByRole("navigation", { name: "التنقل الأساسي" }).getByRole("link", { name: "الخط الزمني" })).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "التنقل الأساسي" }).getByRole("link", { name: "الرحلة" })).toBeVisible();
   const over = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(over).toBeLessThanOrEqual(1);
   const r = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]).analyze();

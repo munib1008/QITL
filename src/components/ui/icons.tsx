@@ -41,6 +41,11 @@ export const Icon = {
       <path d="M2 3h12v8H7l-3 3v-3H2z" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinejoin="round" />
     </Svg>
   ),
+  arrowRight: (p: P) => (
+    <Svg {...p} className={`icon-dir ${p.className ?? ""}`.trim()}>
+      <path d="M3 8h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" />
+    </Svg>
+  ),
   sun: (p: P) => (
     <Svg {...p}>
       <circle cx={8} cy={8} r={2.8} fill="none" stroke="currentColor" strokeWidth={1.5} />

@@ -24,18 +24,21 @@ for (const width of [390, 1440]) {
     test.use({ viewport: { width, height: width < 600 ? 844 : 900 } });
 
     for (const l of LOCALES) {
-      test(`${l.code}: home dial steps, searches and has no axe violations`, async ({ page }) => {
+      test(`${l.code}: home journey map selects stops by key, opens one, and has no axe violations`, async ({ page }) => {
         const res = await page.goto(`${l.prefix}/`);
         expect(res?.status()).toBe(200);
-        const dial = page.locator(".rd-dial").first();
-        await expect(dial).toBeVisible();
-        const core = dial.locator(".rd-dial-core");
-        const first = await core.textContent();
-        await page.locator(".rd-dial-wrap .rd-row .zq-btn").last().click();
-        await expect.poll(async () => core.textContent()).not.toBe(first);
-        await page.locator("#rd-dial-q").fill("Yusuf");
-        await page.locator(".rd-search .rd-chip").first().click();
-        await expect(core).toContainText("Yusuf");
+        const map = page.locator(".mapwide");
+        await expect(map).toBeVisible();
+        const stops = map.locator(".stop");
+        expect(await stops.count()).toBeGreaterThanOrEqual(29);
+        const card = page.locator(".selcard");
+        const first = await card.locator(".nm").textContent();
+        await stops.first().focus();
+        await page.keyboard.press("ArrowRight");
+        await expect.poll(async () => card.locator(".nm").textContent()).not.toBe(first);
+        await expect(card.locator(".nm")).not.toBeEmpty();
+        // The selected stop's summary is draft content and carries the badge; the card links to the stop's page.
+        await expect(card.locator("a.btn")).toHaveAttribute("href", /\/prophets\//);
         expect(await sideways(page)).toBeLessThanOrEqual(0);
         expect(await axe(page)).toEqual([]);
       });

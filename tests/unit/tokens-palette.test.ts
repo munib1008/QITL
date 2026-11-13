@@ -98,7 +98,7 @@ describe("palette guard", () => {
 
 describe("WCAG contrast of the token pairs", () => {
   const surfaces = ["surface", "surface-raised", "surface-sunken"];
-  const text = ["ink", "ink-muted", "brass-ink", "slate", "brand", "ev-quran", "ev-hadith", "ev-scholar", "ev-estimate", "ev-disputed", "ev-unknown", "status-info", "status-success", "status-warning", "status-danger"];
+  const text = ["ink", "ink-muted", "brass", "glow-gold", "brass-ink", "slate", "brand", "ev-quran", "ev-hadith", "ev-scholar", "ev-estimate", "ev-disputed", "ev-unknown", "status-info", "status-success", "status-warning", "status-danger"];
   for (const th of ["light", "dark"] as const) {
     it(`${th}: body, muted, accent, evidence and status text reach 4.5:1 on every surface`, () => {
       const low: string[] = [];

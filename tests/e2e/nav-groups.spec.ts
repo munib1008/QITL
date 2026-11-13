@@ -44,7 +44,7 @@ test("the desktop More menu is grouped and keeps every link", async ({ page }) =
   test.skip(test.info().project.name !== "desktop", "the section bar is a desktop control");
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("/prophets");
-  await page.getByRole("navigation", { name: "Sections" }).getByRole("button").click();
+  await page.getByRole("navigation", { name: "Main" }).getByRole("button", { name: "Explore" }).click();
   const list = page.locator("nav.zq-mmenu-list:visible").first();
   await expect(list.locator(".zq-mmenu-group").first()).toBeVisible();
   expect(await list.locator("a").count()).toBeGreaterThanOrEqual(8);
