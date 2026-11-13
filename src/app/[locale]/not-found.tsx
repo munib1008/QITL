@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ReadingHeader, SiteFooter } from "@/components/shell/SiteHeader";
+import { HudHeader, SiteFooter } from "@/components/shell/SiteHeader";
 import { Rosette } from "@/components/ui/icons";
 import { SearchField } from "@/components/ui/misc";
 import { getDict } from "@/lib/i18n";
@@ -15,7 +15,7 @@ export default function NotFound() {
   const { t } = getDict(locale);
   return (
     <div className="pp">
-      <ReadingHeader locale={locale} />
+      <HudHeader locale={locale} />
       <main className="pp-wrap" id="main">
         <div className="zq-status-page">
           <Rosette points={8} className="pp-mark" />

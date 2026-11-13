@@ -24,6 +24,7 @@ import { qiraatStrings } from "./modules/qiraat";
 import { quranPageStrings, readerStrings } from "./modules/reader";
 import { quranReaderStrings } from "./modules/quranReader";
 import { compareStrings, learnStrings, searchStrings } from "./modules/search";
+import { hudStrings } from "./modules/hud";
 import { accountStrings } from "./modules/account";
 import { apiStrings } from "./modules/api";
 import { communityStrings } from "./modules/community";
@@ -74,6 +75,7 @@ export const STRING_FILES: Array<{ module: string; file: string; get: (locale: s
   { module: "genealogy", file: "modules/atlas.ts (genealogy)", get: genealogyStrings },
   { module: "hadith", file: "modules/hadith.ts", get: hadithStrings },
   { module: "quran", file: "modules/reader.ts", get: (l) => ({ reader: readerStrings(l), page: quranPageStrings(l), nav: quranReaderStrings(l) }) },
+  { module: "hud", file: "modules/hud.ts", get: hudStrings },
   { module: "search", file: "modules/search.ts (search)", get: searchStrings },
   { module: "learn", file: "modules/search.ts (learn)", get: learnStrings },
   { module: "compare", file: "modules/search.ts (compare)", get: compareStrings },

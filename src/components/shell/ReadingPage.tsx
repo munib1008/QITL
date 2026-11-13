@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { uiStrings } from "@/lib/i18n/modules/ui";
-import { ReadingHeader, SiteFooter } from "./SiteHeader";
+import { HudHeader, SiteFooter } from "./SiteHeader";
 import { getSiteConfig } from "@/lib/site-config/server";
 
 export interface Crumb {
@@ -33,7 +33,7 @@ export async function ReadingPage({
   const config = await getSiteConfig(); // hidden sections and the Explore order from /admin/site
   return (
     <div className="pp">
-      <ReadingHeader locale={locale} query={query} config={config} />
+      <HudHeader locale={locale} config={config} />
       <main className="pp-wrap" id="main">
         {crumbs?.length ? (
           <ol className="pp-crumb" aria-label={u.breadcrumb}>

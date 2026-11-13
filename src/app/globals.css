@@ -10,6 +10,8 @@
 @import "../styles/i18n.css";
 @import "../styles/lineage.css";
 @import "../styles/redesign.css";
+@import "../styles/site.css";
+@import "../styles/hud.css";
 
 @tailwind base;
 @tailwind components;

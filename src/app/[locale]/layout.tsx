@@ -1,11 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
-import { headers } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { fontVariables } from "../fonts";
 import { getDict, isLocale, LOCALES } from "@/lib/i18n";
 import { publicEnv } from "@/lib/env";
 import { ServiceWorker } from "@/components/shell/ServiceWorker";
 import { BottomNav } from "@/components/shell/BottomNav";
+import { CommandPalette } from "@/components/shell/CommandPalette";
+import { THEME_COOKIE } from "@/lib/theme";
 import { uiStrings } from "@/lib/i18n/modules/ui";
 import { exploreLinks } from "@/lib/nav";
 import { applyNav } from "@/lib/site-config/config";
@@ -31,7 +33,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover", // safe-area insets for the bottom navigation on notched phones
-  themeColor: "#eff2f9",
+  themeColor: [{ media: "(prefers-color-scheme: light)", color: "#f4f4f2" }, { media: "(prefers-color-scheme: dark)", color: "#141414" }],
 };
 
 export function generateStaticParams() {
@@ -45,10 +47,12 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   // The per-request CSP nonce from the middleware (src/middleware.ts). Reading it makes every page render per request:
   // a nonce-based policy cannot be served from a prebuilt HTML file (docs/SECURITY.md, "CSP").
   await headers();
+  // The reader's theme choice (ThemeToggle sets this cookie); light when there is none.
+  const theme = (await cookies()).get(THEME_COOKIE)?.value === "dark" ? "dark" : "light";
   // Hidden sections and the Explore order set in /admin/site; the built-in list when nothing is configured.
   const siteConfig = await getSiteConfig();
   return (
-    <html lang={locale} dir={dir} className={fontVariables} data-theme="light" suppressHydrationWarning>
+    <html lang={locale} dir={dir} className={fontVariables} data-theme={theme} suppressHydrationWarning>
       <body>
         <a className="zq-skip" href="#main">
           {t.skip}
@@ -60,6 +64,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           labels={t.bottom}
           explore={applyNav(exploreLinks(locale).filter((l) => l.href !== "/quran"), siteConfig)}
         />
+        <CommandPalette quick={applyNav(exploreLinks(locale), siteConfig).filter((l) => l.href).map(({ href, label }) => ({ href, label }))} />
         <ServiceWorker />
         <Analytics />
       </body>

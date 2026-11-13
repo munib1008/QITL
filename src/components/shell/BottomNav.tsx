@@ -8,6 +8,8 @@ import { Fragment, useEffect, useRef, useState, type ReactNode } from "react";
 import { resolveLocale, stripLocale } from "@/lib/i18n";
 import { LangToggle, type LangLabels } from "./toggles";
 import { uiStrings } from "@/lib/i18n/modules/ui";
+import { hudStrings } from "@/lib/i18n/modules/hud";
+import { SearchTrigger } from "./SearchTrigger";
 import { useSession } from "@/components/account/useSession";
 
 export interface BottomNavLabels {
@@ -58,6 +60,12 @@ const ICONS = {
     <I>
       <circle cx="12" cy="12" r="9" />
       <path d="M15.5 8.5l-2 5-5 2 2-5z" />
+    </I>
+  ),
+  search: (
+    <I>
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <path d="m16 16 5 5" />
     </I>
   ),
   profile: (
@@ -117,10 +125,11 @@ export function BottomNav({ labels, explore, locale, langLabels }: { labels: Bot
   const profileHref = session.status === "signed_in" ? "/account" : `/sign-in?returnTo=${encodeURIComponent(path)}`;
   const is = (p: string) => (p === "/" ? path === "/" : path === p || path.startsWith(`${p}/`));
   const exploreActive = !open && explore.some((e) => e.href && is(e.href));
+  const h = hudStrings(locale ?? "en");
   const items = [
-    { key: "home", href: "/", label: labels.home, active: is("/") },
-    { key: "timeline", href: "/timeline", label: labels.timeline, active: is("/timeline") },
-    { key: "quran", href: "/quran", label: labels.quran, active: is("/quran") },
+    { key: "home", href: "/", label: h.nav.discover, active: is("/") },
+    { key: "timeline", href: "/prophets", label: h.nav.journey, active: is("/prophets") },
+    { key: "quran", href: "/quran", label: h.nav.quran, active: is("/quran") },
   ] as const;
 
   return (
@@ -132,14 +141,14 @@ export function BottomNav({ labels, explore, locale, langLabels }: { labels: Bot
             <span>{it.label}</span>
           </Link>
         ))}
+        <SearchTrigger className="qb-item" label={h.search.open}>
+          {ICONS.search}
+          <span>{h.search.mobile}</span>
+        </SearchTrigger>
         <button ref={btn} type="button" className="qb-item" aria-haspopup="dialog" aria-expanded={open} data-active={exploreActive || open || undefined} onClick={() => setOpen(true)}>
           {ICONS.explore}
           <span>{labels.explore}</span>
         </button>
-        <Link href={profileHref} prefetch={false} className="qb-item" aria-current={is("/account") || is("/sign-in") ? "page" : undefined}>
-          {ICONS.profile}
-          <span>{labels.profile}</span>
-        </Link>
       </nav>
       {open ? (
         <div className="qb-backdrop" onClick={(e) => e.target === e.currentTarget && close()}>
@@ -181,6 +190,12 @@ export function BottomNav({ labels, explore, locale, langLabels }: { labels: Bot
                 </Fragment>
               ))}
             </ul>
+            <p className="qb-account">
+              <Link href={profileHref} prefetch={false} onClick={() => setOpen(false)} aria-current={is("/account") || is("/sign-in") ? "page" : undefined}>
+                {ICONS.profile}
+                <span>{labels.profile}</span>
+              </Link>
+            </p>
             {langLabels ? (
               <div className="qb-lang">
                 <LangToggle locale={resolveLocale(locale)} labels={langLabels} variant="sheet" />

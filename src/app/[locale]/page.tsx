@@ -11,7 +11,7 @@ import { JourneyTimeline } from "@/components/journey/JourneyTimeline";
 import { JourneyDial, type DialStop } from "@/components/journey/JourneyDial";
 import { ERA_TEXT } from "@/content/labels";
 import { redesignStrings } from "@/lib/i18n/modules/redesign";
-import { JourneyHeader } from "@/components/shell/SiteHeader";
+import { HudHeader } from "@/components/shell/SiteHeader";
 import { DraftBadge } from "@/components/ui/evidence";
 import { Mark } from "@/components/shell/Logo";
 import { getDict } from "@/lib/i18n";
@@ -59,7 +59,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <div className="zq-page" data-theme="journey" id="top">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonForScript(jsonLd) }} />
-      <JourneyHeader locale={locale} config={cfg} />
+      <HudHeader locale={locale} config={cfg} />
       <main id="main">
         <section className="zq-hero" aria-labelledby="hero-title">
           {bsm ? (

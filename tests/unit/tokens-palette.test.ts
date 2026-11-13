@@ -13,7 +13,7 @@ const ACCENT = ["accent", "accent-soft", "on-accent", "brand", "brand-deep", "on
 const EVIDENCE = ["ev-quran", "ev-hadith", "ev-scholar", "ev-estimate", "ev-disputed", "ev-unknown"];
 const STATUS = ["status-info", "status-success", "status-warning", "status-danger"];
 const ALLOWED = new Set([...PAPER, ...GRAPHITE, ...INK, ...ACCENT, ...EVIDENCE, ...STATUS]);
-const THEMES = ["light", "dark", "journey"] as const;
+const THEMES = ["light", "dark"] as const; // the glass "journey" theme is retired: pages inherit light or dark
 
 const tokens = loadTokens();
 const colour = tokens.color.tokens;
@@ -23,17 +23,22 @@ function value(name: string, theme: string): string {
   const t = byName.get(name);
   if (!t) throw new Error(`no colour token ${name}`);
   const raw = typeof t.value === "string" ? t.value : t.value[theme];
+  if (raw === undefined) throw new Error(`token ${name} has no value for ${theme}`);
   const ref = /^\{(.+)\}$/.exec(raw);
-  return ref ? value(ref[1], theme) : raw;
+  return ref?.[1] ? value(ref[1], theme) : raw;
 }
-function rgb(v: string): [number, number, number, number] {
+type RGBA = readonly [number, number, number, number];
+function rgb(v: string): RGBA {
   const hex = /^#([0-9a-f]{6})$/i.exec(v);
-  if (hex) return [0, 2, 4].map((i) => parseInt(hex[1].slice(i, i + 2), 16)).concat(1) as [number, number, number, number];
+  if (hex?.[1]) {
+    const h = hex[1];
+    return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16), 1];
+  }
   const m = /^rgba?\(\s*(\d+)[,\s]+(\d+)[,\s]+(\d+)(?:[,\s/]+([\d.]+))?\s*\)$/.exec(v);
   if (!m) throw new Error(`unparseable colour ${v}`);
-  return [+m[1], +m[2], +m[3], m[4] === undefined ? 1 : +m[4]];
+  return [Number(m[1]), Number(m[2]), Number(m[3]), m[4] === undefined ? 1 : Number(m[4])];
 }
-const lum = ([r, g, b]: number[]) => {
+const lum = ([r, g, b]: RGBA) => {
   const f = (c: number) => ((c /= 255) <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4);
   return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b);
 };
@@ -42,9 +47,9 @@ const contrast = (a: string, b: string) => {
   return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05);
 };
 /** The design's greys are slightly warm (channel spread up to 6); anything beyond 8 is a real hue. */
-const isNeutral = ([r, g, b]: number[]) => Math.max(r, g, b) - Math.min(r, g, b) <= 8;
+const isNeutral = ([r, g, b]: RGBA) => Math.max(r, g, b) - Math.min(r, g, b) <= 8;
 /** The accent family: hue within the teal band of #0b5560 / #6fbac4. */
-function isAccentHue([r, g, b]: number[]) {
+function isAccentHue([r, g, b]: RGBA) {
   const max = Math.max(r, g, b), min = Math.min(r, g, b);
   if (max === min) return true;
   const d = max - min;

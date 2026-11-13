@@ -41,6 +41,17 @@ export const Icon = {
       <path d="M2 3h12v8H7l-3 3v-3H2z" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinejoin="round" />
     </Svg>
   ),
+  sun: (p: P) => (
+    <Svg {...p}>
+      <circle cx={8} cy={8} r={2.8} fill="none" stroke="currentColor" strokeWidth={1.5} />
+      <path d="M8 1.5v1.7M8 12.8v1.7M1.5 8h1.7M12.8 8h1.7M3.4 3.4l1.2 1.2M11.4 11.4l1.2 1.2M12.6 3.4l-1.2 1.2M4.6 11.4l-1.2 1.2" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" />
+    </Svg>
+  ),
+  moon: (p: P) => (
+    <Svg {...p}>
+      <path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8a5.6 5.6 0 1 0 6.8 6.8z" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinejoin="round" />
+    </Svg>
+  ),
   search: (p: P) => (
     <Svg {...p}>
       <circle cx={7} cy={7} r={4.5} fill="none" stroke="currentColor" strokeWidth={1.6} />

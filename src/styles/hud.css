@@ -1,0 +1,99 @@
+/* HUD header, command palette, mobile bar and interaction feedback. Imported last, so it wins over earlier rules.
+   Colour, elevation, radius and motion come from the generated tokens; nothing here hard-codes a hue. */
+
+/* ---------- HUD header ---------- */
+.hud { display: contents; }
+.hud .navwrap { box-shadow: var(--shadow-e0); transition: box-shadow var(--dur-base) var(--ease-standard); }
+.hud .brand { color: var(--q-text); }
+.hud .brandmark { width: 36px; height: 36px; color: var(--q-text); flex: none; }
+.hud .navlinks { align-items: center; }
+.hud .navlinks a[aria-current="page"] { position: relative; }
+.hud .navlinks a[aria-current="page"]::after { content: ""; position: absolute; inset-inline: var(--space-4); bottom: 2px; height: 2px; border-radius: 2px; background: var(--accent); }
+.hud .navtools { display: flex; align-items: center; gap: var(--space-2); margin-inline-start: 0; }
+.hud .zq-lang { display: inline-flex; border: 1px solid var(--q-line); border-radius: var(--radius-sm); overflow: hidden; background: var(--q-surface); box-shadow: none; }
+.hud .zq-lang-opt { display: grid; place-items: center; min-width: 44px; min-height: 38px; padding: 0 var(--space-2); font: 600 13px/1 var(--font-sans); color: var(--q-text-2); text-decoration: none; background: transparent; border: 0; box-shadow: none; transition: background-color var(--dur-fast) var(--ease-standard); }
+.hud .zq-lang-opt:hover { background: var(--q-surface-2); }
+.hud .zq-lang-opt[aria-current="true"] { background: var(--q-surface-2); color: var(--q-text); box-shadow: inset 0 -2px 0 var(--accent); }
+.hud .zq-soon { font-size: 12px; color: var(--q-text-3); border: 1px dashed var(--q-line-2); border-radius: var(--radius-pill); padding: 2px var(--space-3); white-space: nowrap; }
+.hud .zq-btn-secondary { background: var(--q-surface); border: 1px solid var(--q-line-2); box-shadow: var(--shadow-e1); }
+/* Explore menu (every section not in the primary four) as a popover. */
+.hud .zq-mmenu { position: relative; }
+.hud .zq-mmenu > button { background: transparent; border: 0; box-shadow: none; color: var(--q-text-2); font: 500 14px/1 var(--font-sans); border-radius: var(--radius-pill); min-height: 36px; padding: var(--space-2) var(--space-4); }
+.hud .zq-mmenu > button:hover, .hud .zq-mmenu > button[aria-expanded="true"] { background: var(--q-surface-2); color: var(--q-text); }
+.hud .zq-mmenu-list { position: absolute; inset-inline-end: 0; top: calc(100% + var(--space-2)); width: min(360px, 90vw); max-height: 70vh; overflow: auto; padding: var(--space-2); background: var(--q-surface); border: 1px solid var(--q-line); border-radius: var(--radius-md); box-shadow: var(--shadow-e3); z-index: 40; animation: q-pop var(--dur-base) var(--ease-standard); }
+.hud .zq-mmenu-list[hidden] { display: none; }
+.hud .zq-mmenu-list a { display: block; padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); color: var(--q-text); text-decoration: none; transition: background-color var(--dur-fast) var(--ease-standard); }
+.hud .zq-mmenu-list a:hover { background: var(--q-surface-2); }
+.hud .zq-mmenu-group { margin: var(--space-3) var(--space-3) var(--space-1); font: 600 11px/16px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--q-text-3); }
+/* Below 1024px the section links, language and account live in the bottom bar and its Explore sheet. */
+@media (max-width: 1023px) {
+  .hud .navlinks, .hud .zq-lang, .hud .zq-soon, .hud .navtools > a { display: none; }
+  .hud .navtools { margin-inline-start: auto; }
+  .hud .searchbtn { min-width: 0; width: 40px; padding: 0; justify-content: center; }
+  .hud .searchbtn span, .hud .searchbtn kbd { display: none; }
+}
+@media (max-width: 640px) { .hud .topbar { display: none; } .hud .brand small { display: none; } .nav { height: 64px; gap: var(--space-3); } }
+
+/* ---------- Command palette ---------- */
+@keyframes q-pop { from { opacity: 0; transform: translateY(8px) scale(.985); } to { opacity: 1; transform: none; } }
+.palette { z-index: 80; place-items: start center; }
+.palette .dialog { padding: var(--space-3); max-width: 640px; box-shadow: var(--shadow-e4); animation: q-pop var(--dur-base) var(--ease-standard); }
+.palette .dialoghead { display: flex; align-items: center; gap: var(--space-2); margin: 0 0 var(--space-2); }
+.palette .searchfield { flex: 1; }
+.palette-label { margin: var(--space-3) var(--space-3) var(--space-1); font: 600 11px/16px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--q-text-3); }
+.palette-list { list-style: none; margin: 0; padding: 0; max-height: min(52vh, 420px); overflow: auto; }
+.palette .result { padding: 0; min-height: 0; border: 0; border-inline-start: 3px solid transparent; border-radius: var(--radius-sm); transition: background-color var(--dur-fast) var(--ease-standard); }
+.palette .result[aria-selected="true"] { background: var(--q-surface-2); border-inline-start-color: var(--accent); }
+.palette .result a { display: flex; align-items: center; gap: var(--space-3); width: 100%; min-height: 52px; padding: var(--space-2) var(--space-3); color: var(--q-text); text-decoration: none; }
+.palette .result b { flex: 1; font-size: 15px; font-weight: 600; }
+.palette .result .arabic { font-family: var(--font-arabic); font-size: 18px; color: var(--q-text-2); }
+.palette .result small { font-size: 12px; color: var(--q-text-3); white-space: nowrap; }
+.palette .empty { margin: var(--space-3); color: var(--q-text-2); }
+.palette-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-2); margin-top: var(--space-2); padding: var(--space-3) var(--space-3) var(--space-1); border-top: 1px solid var(--q-line); font-size: 12px; color: var(--q-text-3); }
+@media (max-width: 640px) { .palette { padding: 0; } .palette .dialog { max-width: none; border-radius: 0 0 var(--radius-lg) var(--radius-lg); } }
+
+/* ---------- Mobile bar: the current item is the accent ---------- */
+.qb-nav { background: var(--q-surface); border-top: 1px solid var(--q-line); box-shadow: var(--shadow-e3); }
+.qb-item { color: var(--q-text-2); }
+.qb-item[aria-current="page"], .qb-item[data-active] { color: var(--accent); }
+.qb-item[aria-current="page"] svg, .qb-item[data-active] svg { color: var(--accent); }
+.qb-item:focus-visible { outline: 2px solid var(--focus); }
+.qb-account { margin: var(--space-3) 0 0; }
+.qb-account a { display: flex; align-items: center; gap: var(--space-3); min-height: 44px; padding: 0 var(--space-3); border-radius: var(--radius-sm); color: var(--q-text); text-decoration: none; }
+.qb-account a[aria-current="page"] { color: var(--accent); }
+
+/* ---------- Interaction feedback (Button, cards, chips). Durations, press scale and lift are motion tokens that
+   collapse to 0.01ms / 1 / 0px under prefers-reduced-motion, so reduced-motion users get the same colour and
+   shadow changes with no movement. ---------- */
+.zq-btn, .btn, .iconbtn, .zq-iconbtn, .zq-chip, .zq-pill, .rd-chip, .chip, .qb-item {
+  transition: transform var(--dur-instant) var(--ease-standard), box-shadow var(--dur-fast) var(--ease-standard), background-color var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard), color var(--dur-fast) var(--ease-standard);
+}
+.zq-btn:not([disabled]):not([aria-disabled="true"]):active, .btn:not([disabled]):active, .iconbtn:not([disabled]):active, .zq-iconbtn:not([disabled]):active,
+a.zq-chip:active, button.zq-chip:active, a.zq-pill:active, button.zq-pill:active, .rd-chip:active, .chip:not([disabled]):active, .qb-item:active { transform: scale(var(--press-scale)); }
+/* Flat, token-driven button faces (replaces the earlier neumorphic overrides). Primary is the one accent action. */
+.zq-btn { border-radius: var(--radius-sm); }
+.zq-btn-primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); box-shadow: var(--shadow-e1); }
+.zq-btn-primary:hover { background: color-mix(in srgb, var(--accent) 88%, var(--q-text)); box-shadow: var(--shadow-e2); }
+.zq-btn-primary:active { box-shadow: var(--shadow-e0); }
+.zq-btn-secondary { background: var(--q-surface); color: var(--q-text); border-color: var(--q-line-2); box-shadow: var(--shadow-e1); }
+.zq-btn-secondary:hover { background: var(--q-surface-2); box-shadow: var(--shadow-e2); }
+.zq-btn-secondary:active { box-shadow: var(--shadow-e0); }
+.zq-btn-quiet:hover { background: var(--q-surface-2); }
+.zq-chip:hover, .zq-pill:hover, .rd-chip:hover { background: var(--q-surface-2); border-color: var(--q-line-2); }
+/* Cards that are links, or that contain the page's one link, lift on hover and press on activation. */
+:is(a.pp-card, a.zq-card, a.pt-card, a.qa-card, a.qs-card, a.qr-card, a.he-card, a.sc-card, a.lta-card, a.lta-tile, a.rd-card, .zq-prophet, .zq-jc, .feature, .pathcard) {
+  transition: transform var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard);
+}
+:is(a.pp-card, a.zq-card, a.pt-card, a.qa-card, a.qs-card, a.qr-card, a.he-card, a.sc-card, a.lta-card, a.lta-tile, a.rd-card, .zq-prophet, .zq-jc, .feature, .pathcard):hover { transform: translateY(var(--hover-lift)); box-shadow: var(--shadow-e2); border-color: var(--q-line-2); }
+:is(a.pp-card, a.zq-card, a.pt-card, a.qa-card, a.qs-card, a.qr-card, a.he-card, a.sc-card, a.lta-card, a.lta-tile, a.rd-card, .zq-prophet, .zq-jc, .feature, .pathcard):active { transform: scale(var(--press-scale)); box-shadow: var(--shadow-e1); }
+/* Cards and panels: flat token elevation instead of the old double shadows. */
+.zq-card, .pp-card { border-color: var(--q-line); border-radius: var(--radius-md); box-shadow: var(--shadow-e1); }
+@media (prefers-reduced-motion: reduce) {
+  .hud .zq-mmenu-list, .palette .dialog { animation: none; }
+}
+
+/* Icons from the app's icon set are bare <svg>s on a 16px grid: size them where the design used its .icon class. */
+.hud .searchbtn svg, .hud .iconbtn svg, .palette .searchfield svg, .palette .iconbtn svg { width: 20px; height: 20px; flex: none; }
+.hud .searchbtn { white-space: nowrap; }
+.hud .searchbtn kbd { white-space: nowrap; }
+.palette .searchfield svg { color: var(--q-text-3); }

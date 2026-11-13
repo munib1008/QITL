@@ -20,7 +20,7 @@ describe("tokens", () => {
       ...t.zIndex.tokens,
     ].map((x) => `--${x.name}:`);
     for (const n of names) expect(css, n).toContain(n);
-    for (const theme of ["light", "dark", "journey"]) expect(css).toContain(`[data-theme="${theme}"]`);
+    for (const theme of ["light", "dark"]) expect(css).toContain(`[data-theme="${theme}"]`);
     for (const f of Object.keys(t.type.families)) expect(css).toContain(`--font-${f}:`);
   });
   test("the generated CSS is up to date with tokens.json", () => {
