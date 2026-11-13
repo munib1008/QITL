@@ -41,7 +41,7 @@ test("atlas: zoom buttons, touch pan and pinch, controls clear of each other and
   expect(a!.y + a!.height).toBeLessThanOrEqual(b!.y + 0.5);
   expect(b!.y + b!.height).toBeLessThanOrEqual(c!.y + 0.5);
   // Scrolled into the middle of the screen, the whole drawing fits between the sticky header and the bottom bar.
-  await page.locator(".zx-stage").evaluate((el) => el.scrollIntoView({ block: "center" }));
+  await page.locator(".zx-stage").evaluate((el) => el.scrollIntoView({ block: "center", behavior: "instant" }));
   const navTop = (await page.locator("[data-bottom-nav]").boundingBox())!.y;
   const stage = (await page.locator(".zx-stage").boundingBox())!;
   expect(stage.y + stage.height).toBeLessThanOrEqual(navTop);

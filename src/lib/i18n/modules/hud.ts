@@ -23,6 +23,7 @@ export const hudStrings = (locale: string) =>
         hint: "↑ ↓ to move · Enter to open · Esc to close",
         count: { one: "1 result", many: "{n} results" },
       },
+      list: { filter: "Filter by name, surah or era", filterLabel: "Filter the list", count: "{n} of {total}", empty: "None", none: "No match.", noneNote: "Clear the filter or try another name.", open: "Open", chapter: "Chapter", firstSource: "First source" },
       theme: { toDark: "Switch to dark theme", toLight: "Switch to light theme" },
     },
     ar: {
@@ -45,6 +46,7 @@ export const hudStrings = (locale: string) =>
         hint: "↑ ↓ للتنقل · Enter للفتح · Esc للإغلاق",
         count: { one: "نتيجة واحدة", many: "{n} نتائج" },
       },
+      list: { filter: "صفِّ بالاسم أو السورة أو العصر", filterLabel: "صفِّ القائمة", count: "{n} من {total}", empty: "لا شيء", none: "لا نتائج.", noneNote: "امسح المرشح أو جرّب اسمًا آخر.", open: "افتح", chapter: "الفصل", firstSource: "المصدر الأول" },
       theme: { toDark: "التبديل إلى السمة الداكنة", toLight: "التبديل إلى السمة الفاتحة" },
     },
     ur: {
@@ -67,6 +69,7 @@ export const hudStrings = (locale: string) =>
         hint: "↑ ↓ حرکت · Enter کھولیں · Esc بند",
         count: { one: "1 نتیجہ", many: "{n} نتائج" },
       },
+      list: { filter: "نام، سورت یا دور سے چھانٹیں", filterLabel: "فہرست چھانٹیں", count: "{n} از {total}", empty: "کوئی نہیں", none: "کوئی نتیجہ نہیں۔", noneNote: "فلٹر ہٹائیں یا کوئی اور نام آزمائیں۔", open: "کھولیں", chapter: "باب", firstSource: "پہلا حوالہ" },
       theme: { toDark: "گہری تھیم پر جائیں", toLight: "ہلکی تھیم پر جائیں" },
     },
   });

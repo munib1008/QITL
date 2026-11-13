@@ -16,17 +16,25 @@ export default function NotFound() {
   return (
     <div className="pp">
       <HudHeader locale={locale} />
-      <main className="pp-wrap" id="main">
-        <div className="zq-status-page">
-          <Rosette points={8} className="pp-mark" />
-          <p className="zq-eyebrow">404</p>
+      <main className="pp-main" id="main">
+        <section className="qs container nf">
+          <Rosette points={8} className="mark" />
+          <div className="eyebrow">404</div>
           <h1>{u.errors.notFoundTitle}</h1>
-          <p className="zq-meta">{u.errors.notFoundBody}</p>
+          <p>{u.errors.notFoundBody}</p>
           <SearchField id="nf-q" maxWidth={480} />
-          <p>
-            <Link href="/">{u.shell.home}</Link> · <Link href="/prophets">{t.nav.prophets}</Link> · <Link href="/quran">{t.nav.quran}</Link>
-          </p>
-        </div>
+          <div className="cta" style={{ marginTop: "var(--space-5)", display: "flex", flexWrap: "wrap", gap: "var(--space-3)", justifyContent: "center" }}>
+            <Link className="btn gold" href="/">
+              {u.shell.home}
+            </Link>
+            <Link className="btn" href="/prophets">
+              {t.nav.prophets}
+            </Link>
+            <Link className="btn" href="/quran">
+              {t.nav.quran}
+            </Link>
+          </div>
+        </section>
       </main>
       <SiteFooter locale={locale} />
     </div>

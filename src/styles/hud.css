@@ -109,3 +109,41 @@ a.zq-chip:active, button.zq-chip:active, a.zq-pill:active, button.zq-pill:active
 @media (min-width: 1024px) { .hud .zq-mmenu, .hud .zq-mmenu-more { display: block; } }
 @media (max-width: 1023px) { .hud .zq-mmenu, .hud .zq-mmenu-more { display: none; } }
 .hud .zq-mmenu > button span { display: inline !important; }
+
+/* ---------- Inner pages: the design's page hero and section rhythm ---------- */
+.pp-main { display: block; min-height: 60vh; }
+.pp-main .reading-body { padding-bottom: var(--space-9); }
+.phero .eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.phero .meta .zq-chip, .phero .meta .zq-ev { margin: 0; }
+@media (max-width: 640px) { .phero { padding-top: var(--space-5); padding-bottom: var(--space-5); } .phero h1 { font-size: 40px; } }
+/* Legacy page bodies take the design's card language. */
+.zq-pagebody { display: grid; gap: var(--space-6); }
+.zq-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-4); }
+.zq-eyebrow { font: 600 11px/16px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--q-text-3); }
+.zq-meta { color: var(--q-text-2); }
+.zq-card, .pp-card { background: var(--q-surface); border: 1px solid var(--q-line); border-radius: var(--radius-md); padding: var(--space-5); box-shadow: var(--shadow-e1); }
+
+/* Design list and card pages. */
+.qs .field svg, .qs .toolbar svg { width: 18px; height: 18px; flex: none; color: var(--q-text-3); }
+.card-link { text-decoration: none; color: var(--q-text); transition: transform var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard); }
+.card-link:hover { transform: translateY(var(--hover-lift)); box-shadow: var(--shadow-e2); border-color: var(--q-line-2); }
+.card-link:active { transform: scale(var(--press-scale)); box-shadow: var(--shadow-e1); }
+.qs .stile, .qs .stopcard { transition: transform var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard); }
+.qs .stile:hover, .qs .stopcard:hover { transform: translateY(var(--hover-lift)); }
+.qs .stile:active, .qs .stopcard:active { transform: scale(var(--press-scale)); }
+@media (max-width: 1100px) { .qs .sgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .qs .cards.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } .qs .tl-items { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .qs .sgrid, .qs .cards.four, .qs .cards, .qs .rules { grid-template-columns: 1fr; } }
+.qs h2.eyebrow, .qs h3.eyebrow { font: 600 11px/16px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--q-text-3); margin: 0 0 var(--space-3); }
+.qs .card h2:not(.eyebrow), .qs .card h3 { font-size: var(--q-fs-h4); letter-spacing: 0; line-height: 1.25; }
+
+/* ---------- Prophet page: the design's plate (card, rosette, display name, mono kicker) ---------- */
+.pp-head { background: var(--q-surface); border: 1px solid var(--q-line); border-radius: var(--radius-lg); box-shadow: var(--shadow-e2); padding: var(--space-6); margin-top: var(--space-4); }
+.pp-mark { color: var(--accent); }
+.pp-h1 { font: 800 clamp(36px, 5vw, 48px)/1.02 var(--font-display); letter-spacing: -.03em; }
+.pp-h1 small { font: 400 20px/1 var(--font-arabic); color: var(--q-text-3); }
+.pp-ar { font-family: var(--font-arabic); color: var(--q-text-2); }
+.pp-chap { color: var(--q-text-3); }
+.pp-sub { color: var(--q-text-2); }
+.pp-card h2, .pp-card h3 { font-family: var(--font-display); letter-spacing: -.01em; }
+.pp-pos { border-color: var(--q-line); }
+@media (max-width: 640px) { .pp-head { padding: var(--space-4); } }

@@ -5,7 +5,7 @@
 html{scroll-padding-top:88px}
 
 /* ===== QITL concept v2 — grey/white + one accent (teal). Single 8px spacing grid, one type scale, one radius scale. ===== */
-html{scroll-behavior:smooth;scroll-padding-top:88px}
+html{scroll-padding-top:88px}
 body{background-color:var(--q-bg);color:var(--q-text);-webkit-font-smoothing:antialiased;
  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%23888' stroke-opacity='.08'%3E%3Crect x='40' y='40' width='40' height='40'/%3E%3Crect x='40' y='40' width='40' height='40' transform='rotate(45 60 60)'/%3E%3C/g%3E%3C/svg%3E")}
 body.locked{overflow:hidden}

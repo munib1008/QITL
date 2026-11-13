@@ -106,18 +106,24 @@ export default async function SurahPage({ params }: { params: Promise<{ locale: 
         {/* Audio stays honest: the Qira'at module shows a player only for an approved recording of this riwayah. */}
         <RiwayahIndicator locale={locale} surah={n} />
         {related.length ? (
-          <section aria-labelledby="rel-h" className="pp-card">
-            <h2 id="rel-h">{t.onJourney}</h2>
-            <ul className="zq-jc-refs" {...en}>
+          <section aria-labelledby="rel-h" className="qs card">
+            <h2 id="rel-h" className="eyebrow">
+              {t.onJourney}
+            </h2>
+            <div {...en}>
               {related.map((r) => (
-                <li key={r.s.id}>
-                  <Link href={`/prophets/${r.s.id}`}>{r.s.name}</Link>
-                  {r.passages.map((p) => (
-                    <CitationChip key={p} href={ayahHash(parseAyahRange(p)?.from ?? 1, parseAyahRange(p)?.to)}>{`Q ${p}`}</CitationChip>
-                  ))}
-                </li>
+                <div key={r.s.id} className="pl">
+                  <Link href={`/prophets/${r.s.id}`}>
+                    <b>{r.s.name}</b>
+                  </Link>
+                  <span style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                    {r.passages.map((p) => (
+                      <CitationChip key={p} href={ayahHash(parseAyahRange(p)?.from ?? 1, parseAyahRange(p)?.to)}>{`Q ${p}`}</CitationChip>
+                    ))}
+                  </span>
+                </div>
               ))}
-            </ul>
+            </div>
           </section>
         ) : null}
         {verses ? (

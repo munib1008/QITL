@@ -19,42 +19,46 @@ export default async function HadithIndex({ params }: { params: Promise<{ locale
   const hs = hadithStoryStrings(locale);
   return (
     <ReadingPage locale={locale} crumbs={[{ label: t.title }]} title={t.title} lead={t.lead}>
-      <div className="zq-pagebody">
-        <div className="zq-grid">
+      <div className="qs section">
+        <div className="cards four">
           {COLLECTIONS.map((c) => (
-            <Link key={c.id} href={`/hadith/${c.id}`} className="zq-card" style={{ textDecoration: "none", color: "var(--ink)", maxWidth: "none" }}>
-              <p className="zq-eyebrow" {...en}>
+            <Link key={c.id} href={`/hadith/${c.id}`} className="card card-link">
+              <p className="eyebrow" {...en}>
                 {c.compiler}
               </p>
-              <h2 className="zq-title" style={{ fontFamily: "var(--font-display)", fontSize: 22 }} {...en}>
+              <h2 {...en} style={{ margin: 0, font: "700 var(--q-fs-h4)/1.25 var(--font-display)" }}>
                 {c.name}
               </h2>
-              <p className="zq-prophet-ar" lang="ar" dir="rtl" style={{ margin: 0 }}>
+              <span className="arabic" lang="ar" dir="rtl" style={{ fontSize: 20, color: "var(--q-text-2)", alignSelf: "flex-start" }}>
                 {c.arabic}
-              </p>
-              <p className="zq-meta" {...en}>
-                {c.note}
-              </p>
+              </span>
+              <p {...en}>{c.note}</p>
             </Link>
           ))}
         </div>
-        <section className="pp-card" aria-labelledby="hs-link-h">
-          <h3 id="hs-link-h">{hs.title}</h3>
-          <p className="zq-meta" style={{ margin: 0 }}>
-            {hs.navNote} <Link href="/hadith-stories">{hs.nav}</Link>.
-          </p>
-        </section>
-        <section className="pp-card" aria-labelledby="grading-h">
-          <h3 id="grading-h">{t.gradingHeading}</h3>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <EvidenceLabel kind="hadith">{t.gradeAuthentic}</EvidenceLabel>
-            <EvidenceLabel kind="scholar">{t.gradeOther}</EvidenceLabel>
-            <EvidenceLabel kind="unknown">{t.gradeNone}</EvidenceLabel>
+        <div className="sectiontop" style={{ marginTop: "var(--space-8)" }}>
+          <div>
+            <h2 id="grading-h">{t.gradingHeading}</h2>
           </div>
-          <p className="zq-meta" style={{ margin: 0 }}>
-            {t.gradingNote} <Link href="/methodology#hadith">{t.methodology}</Link>.
-          </p>
-        </section>
+        </div>
+        <div className="rules">
+          <section className="card quiet" aria-labelledby="grading-h">
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+              <EvidenceLabel kind="hadith">{t.gradeAuthentic}</EvidenceLabel>
+              <EvidenceLabel kind="scholar">{t.gradeOther}</EvidenceLabel>
+              <EvidenceLabel kind="unknown">{t.gradeNone}</EvidenceLabel>
+            </div>
+            <p>
+              {t.gradingNote} <Link href="/methodology#hadith">{t.methodology}</Link>.
+            </p>
+          </section>
+          <section className="card quiet" aria-labelledby="hs-link-h">
+            <h3 id="hs-link-h">{hs.title}</h3>
+            <p>
+              {hs.navNote} <Link href="/hadith-stories">{hs.nav}</Link>.
+            </p>
+          </section>
+        </div>
       </div>
     </ReadingPage>
   );

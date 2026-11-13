@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getJourney, journeyStops, type PlaceCertainty } from "@/content/journey";
 import { englishContent } from "@/lib/i18n/locales";
+import { hudStrings } from "@/lib/i18n/modules/hud";
 import { atlasStrings } from "@/lib/i18n/modules/atlas";
 import { uiStrings } from "@/lib/i18n/modules/ui";
 import { ReadingPage } from "@/components/shell/ReadingPage";
-import { DraftBadge, EvidenceLabel } from "@/components/ui/evidence";
+import { DraftBadge } from "@/components/ui/evidence";
 import { MapLegend } from "@/components/ui/misc";
 import { AtlasMapLoader } from "@/components/atlas/AtlasMapLoader";
 import { AtlasSchematic, type AtlasStop } from "@/components/atlas/AtlasSchematic";
@@ -18,7 +19,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 const ORDER: PlaceCertainty[] = ["point", "region", "hypothesis", "disputed", "unknown"];
-const KIND = { point: "scholar", region: "estimate", hypothesis: "estimate", disputed: "disputed", unknown: "unknown" } as const;
 
 export default async function AtlasPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ focus?: string }> }) {
   const { locale } = await params;
@@ -32,7 +32,6 @@ export default async function AtlasPage({ params, searchParams }: { params: Prom
   const schematic: AtlasStop[] = j.eras.flatMap((e) =>
     e.items.map((s) => ({ id: s.id, name: s.name, era: e.title, place: s.place?.name ?? t.locationUnknown, certainty: s.place?.certainty ?? "unknown" })),
   );
-  const groups = ORDER.map((c) => ({ c, items: stops.filter((s) => (s.place?.certainty ?? "unknown") === c) })).filter((g) => g.items.length);
 
   return (
     <ReadingPage
@@ -53,45 +52,57 @@ export default async function AtlasPage({ params, searchParams }: { params: Prom
             </Link>
           </p>
         ) : null}
-        <div className="zq-split" style={{ gridTemplateColumns: undefined }}>
-          <section aria-labelledby="places-h" className="zq-split-sticky">
-            <h2 id="places-h" className="zq-eyebrow">
-              {t.placesHeading}
-            </h2>
-            <p className="zq-meta">{t.placesNote}</p>
-            {groups.map((g) => (
-              <div key={g.c} style={{ marginTop: 16 }}>
-                <EvidenceLabel kind={KIND[g.c]}>{PLACE_TEXT[g.c]}</EvidenceLabel>
-                <ul style={{ listStyle: "none", padding: 0, margin: "8px 0 0" }} {...en}>
-                  {g.items.map((s) => (
-                    <li key={s.id} className="zq-result" style={{ padding: "8px 0" }} aria-current={focus === s.id || undefined}>
-                      <Link href={`/prophets/${s.id}#places`} style={{ color: "var(--ink)", fontWeight: focus === s.id ? 700 : 600 }}>
-                        {s.name}
-                      </Link>
-                      <span className="zq-meta">{s.place?.name ?? t.locationUnknown}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        <div className="qs">
+          <div className="legend" style={{ marginBottom: "var(--space-5)" }}>
+            {ORDER.map((c) => (
+              <span key={c} className={`place ${c}`}>
+                <i aria-hidden="true" />
+                {PLACE_TEXT[c]}
+              </span>
             ))}
-          </section>
-          <section aria-label={t.map} className="zx-map-col">
-            {mapConfigured() ? (
-              <AtlasMapLoader tilesUrl={publicEnv.mapTilesUrl} attribution={publicEnv.mapAttribution} />
-            ) : (
-              <>
-                <p className="zq-meta">{t.noMap}</p>
-                <AtlasSchematic stops={schematic} focus={focus} rtl={locale !== "en"} />
-              </>
-            )}
-            <ResponsiveDetails className="zx-legend" summary={t.legend}>
-              <MapLegend
-                items={mapConfigured() ? ["point", "region", "unknown", "hypothesis", "route"] : ["point", "region", "hypothesis", "unknown"]}
-                attribution={mapConfigured() ? publicEnv.mapAttribution : t.schematicAttribution}
-              />
-            </ResponsiveDetails>
-          </section>
+          </div>
+          <div className="board" data-testid="places-board">
+            {ORDER.map((c) => {
+              const items = stops.filter((s) => (s.place?.certainty ?? "unknown") === c);
+              return (
+                <section key={c} className="col" aria-label={PLACE_TEXT[c]}>
+                  <h3>
+                    {PLACE_TEXT[c]} <small>{items.length}</small>
+                  </h3>
+                  {items.length ? (
+                    items.map((s) => (
+                      <Link key={s.id} className="pl" href={`/prophets/${s.id}#places`} aria-current={focus === s.id || undefined} {...en}>
+                        <b>{s.name}</b>
+                        <small>{s.place?.name ?? t.locationUnknown}</small>
+                      </Link>
+                    ))
+                  ) : (
+                    <small style={{ color: "var(--q-text-3)" }}>{hudStrings(locale).list.empty}</small>
+                  )}
+                </section>
+              );
+            })}
+          </div>
+          <p className="callout" style={{ marginTop: "var(--space-5)" }}>
+            <span>{t.placesNote}</span>
+          </p>
         </div>
+        <section aria-label={t.map} className="zx-map-col" style={{ marginTop: "var(--space-7)" }}>
+          {mapConfigured() ? (
+            <AtlasMapLoader tilesUrl={publicEnv.mapTilesUrl} attribution={publicEnv.mapAttribution} />
+          ) : (
+            <>
+              <p className="zq-meta">{t.noMap}</p>
+              <AtlasSchematic stops={schematic} focus={focus} rtl={locale !== "en"} />
+            </>
+          )}
+          <ResponsiveDetails className="zx-legend" summary={t.legend}>
+            <MapLegend
+              items={mapConfigured() ? ["point", "region", "unknown", "hypothesis", "route"] : ["point", "region", "hypothesis", "unknown"]}
+              attribution={mapConfigured() ? publicEnv.mapAttribution : t.schematicAttribution}
+            />
+          </ResponsiveDetails>
+        </section>
       </div>
     </ReadingPage>
   );

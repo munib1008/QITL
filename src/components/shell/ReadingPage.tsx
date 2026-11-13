@@ -34,28 +34,32 @@ export async function ReadingPage({
   return (
     <div className="pp">
       <HudHeader locale={locale} config={config} />
-      <main className="pp-wrap" id="main">
-        {crumbs?.length ? (
-          <ol className="pp-crumb" aria-label={u.breadcrumb}>
-            <li>
-              <Link href="/">{u.home}</Link>
-            </li>
-            {crumbs.map((c, i) => (
-              <li key={c.label} aria-current={i === crumbs.length - 1 ? "page" : undefined}>
-                {c.href && i < crumbs.length - 1 ? <Link href={c.href}>{c.label}</Link> : c.label}
-              </li>
-            ))}
-          </ol>
-        ) : null}
-        {title ? (
-          <header className="zq-pagehead">
-            {kicker ? <div className="pp-kick">{kicker}</div> : null}
-            <h1>{title}</h1>
-            {lead ? <p className="lead">{lead}</p> : null}
-            {meta ? <div className="pp-meta" style={{ marginTop: 14 }}>{meta}</div> : null}
-          </header>
-        ) : null}
-        {children}
+      <main className="pp-main" id="main">
+        <div className="qs">
+          <section className="phero container">
+            {crumbs?.length ? (
+              <ol className="crumb" aria-label={u.breadcrumb}>
+                <li>
+                  <Link href="/">{u.home}</Link>
+                </li>
+                {crumbs.map((c, i) => (
+                  <li key={c.label} aria-current={i === crumbs.length - 1 ? "page" : undefined}>
+                    {c.href && i < crumbs.length - 1 ? <Link href={c.href}>{c.label}</Link> : c.label}
+                  </li>
+                ))}
+              </ol>
+            ) : null}
+            {title ? (
+              <>
+                {kicker ? <div className="eyebrow">{kicker}</div> : null}
+                <h1>{title}</h1>
+                {lead ? <p className="lead">{lead}</p> : null}
+                {meta ? <div className="meta">{meta}</div> : null}
+              </>
+            ) : null}
+          </section>
+        </div>
+        <div className="container reading-body">{children}</div>
       </main>
       <SiteFooter locale={locale} />
     </div>
