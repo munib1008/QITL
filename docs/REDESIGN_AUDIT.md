@@ -56,3 +56,25 @@ Everything below was verified on a production build (`pnpm build`) with the Play
 3. The Asma schema migration `20261031002900_asma_al_husna.sql` is in the repo but must be applied by operations; until then the Names pages show the not-connected state and the dial uses the draft registry.
 4. Visual regression baselines (`tests/e2e/visual.spec.ts-snapshots`) are Windows images and are skipped on Linux; they are now stale and must be regenerated on the CI image (`pnpm test:visual --update-snapshots`).
 5. The home page's journey section (`JourneyTimeline`) still has its glass styling; it renders on the light surface but has not been redrawn.
+
+## Performance and reliability pass (Lighthouse, production build)
+
+Baseline and result, mobile preset (slow 4G, 4x CPU) and desktop preset, seven key pages (`/`, `/asma`, `/last-hour`, `/lineage`, `/prophets/yusuf`, `/quran/1`, the complete timeline):
+
+| Measure | Before | After |
+|---|---|---|
+| SEO | 92 on every page ("no meta description": it was streamed into `<body>`) | **100** on every page (`htmlLimitedBots`) |
+| Render-blocking stylesheets | 5 requests, 670 to 1410 ms estimated | **0** (`experimental.inlineCss`; the CSP allows inline styles) |
+| Home total blocking time (mobile) | 460 ms | **140 ms** |
+| Desktop performance | not measured | **96 to 99**, LCP 1.0 to 1.3 s, TBT 0 ms, CLS under 0.04 |
+| Mobile performance | 72 to 89 (home 74, Quran 75) | 78 to 91 (home 85, Quran 91; LCP 3.1 to 4.9 s under the lab's 4x CPU throttle) |
+| Accessibility, best practices | 98 to 100 | 98 to 100 |
+| Backdrop blur and endless sheen animation on every glass card | on | **off** (solid raised surface; less paint work) |
+| Inter | five static weights | one variable font file |
+| Route crawl: 126 routes in en, ar and ur at 390px (378 URLs) | not run | **0** problems: every status 200 (404 page aside), no console errors, no failed requests, no sideways scroll |
+
+A hero entrance animation was tried and removed: it delayed the largest contentful paint by about 0.5 s.
+
+Not fixed (documented): mobile LCP is bound by hydration cost on slow CPUs (about 800 KB total transfer including fonts; the journey data is serialised into the home page twice, 470 KB of HTML before compression). The next step is to trim the journey props and split the timeline's client code. Pages carry `Cache-Control: no-store` (the per-request CSP nonce requires it), so they cannot enter the back/forward cache.
+
+Two more fixes found by the e2e run on the new build: the journey stops faded out right after hydration (a flash, and a fade in progress reads as low contrast to axe), so unrevealed stops now hide instantly and fade in only on reveal, and the active stop is never faded.

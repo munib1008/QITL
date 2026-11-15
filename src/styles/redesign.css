@@ -132,3 +132,31 @@ html { scroll-snap-type: y proximity; }
 .rd-homedial { padding: 64px 16px 24px; display: grid; gap: 24px; justify-items: center; }
 
 .rd-link { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 8px; }
+
+/* ---- Polish pass: the journey section and the home shell on the single light theme ----
+   No backdrop blur and no endless sheen (both cost paint and main-thread time); depth comes from the shadow tokens. */
+.zq-glass { background: var(--surface); -webkit-backdrop-filter: none; backdrop-filter: none; border: 0; box-shadow: var(--shadow-raised); border-radius: 20px; }
+.zq-glass::after { display: none; }
+.zq-nav { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--surface); border-bottom: 0; box-shadow: 0 6px 18px -8px rgba(22, 27, 29, .25); }
+.zq-hero h1 { font-weight: 800; letter-spacing: -.035em; line-height: 1; }
+.zq-facts { border-top-color: var(--hairline); }
+.zq-facts div + div { border-inline-start-color: var(--hairline); }
+.zq-jc { border-radius: 20px; }
+.zq-jc:hover { transform: translateY(-3px); box-shadow: var(--shadow-raised-lg); border-color: transparent; }
+.zq-jt-active .zq-jc { box-shadow: var(--shadow-raised-lg), 0 0 0 2px var(--brand); border-color: transparent; }
+.zq-jc-sec { border: 0; box-shadow: var(--shadow-inset); background: var(--surface-sunken); }
+.zq-jt-progress { background: var(--surface); border: 0; box-shadow: var(--shadow-raised-sm); }
+.zq-jt-progress > span { background: linear-gradient(90deg, #2d7580, var(--brand)); }
+.zq-jt-node { border: 0; background: var(--surface); box-shadow: var(--shadow-raised-sm); }
+.zq-jt-active .zq-jt-node { color: #fff; background: var(--brand); box-shadow: inset 3px 3px 6px rgba(0, 0, 0, .35), inset -2px -2px 5px rgba(255, 255, 255, .12); animation: zq-pulse-teal 2.8s ease-in-out infinite; }
+@keyframes zq-pulse-teal { 50% { box-shadow: inset 3px 3px 6px rgba(0, 0, 0, .35), inset -2px -2px 5px rgba(255, 255, 255, .12), 0 0 0 7px rgba(11, 85, 96, .16); } }
+.zq-jt-track { background: var(--hairline); }
+.zq-jc .zq-chip, .zq-jt-filter { border: 0; box-shadow: var(--shadow-raised-sm); background: var(--surface); }
+.zq-jt-modal .zq-drawer { border: 0; background: var(--surface); box-shadow: var(--shadow-drawer); }
+/* The active stop (the first one on load) is the reader's focus: show it at once instead of fading it in (a fade in progress also
+   reads as low contrast to automated checks, and the stop is the first thing a reader sees). */
+.zq-jt-item.zq-rv.zq-jt-active { opacity: 1; transform: none; transition: none; }
+/* Journey stops hide the instant their reveal state is applied (no fade-out flash after hydration) and fade in only when
+   they are revealed on scroll. A fade-out in progress also reads as low contrast to automated checks. */
+.zq-rv { transition: none; }
+.zq-rv.zq-in { transition: opacity .6s ease, transform .6s cubic-bezier(.2, .7, .2, 1); }

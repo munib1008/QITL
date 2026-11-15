@@ -6,10 +6,11 @@ import localFont from "next/font/local";
  * so no request goes to Google at runtime. Exposed as --ff-*; tokens.css builds --font-* stacks from them.
  */
 /** Interface text: DM Sans for body and Manrope for headings (the finalised site design). Inter stays loaded for pages not yet ported. */
-export const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--ff-dm-sans", display: "swap" });
-export const manrope = Manrope({ subsets: ["latin"], weight: ["500", "600", "700", "800"], variable: "--ff-manrope", display: "swap" });
+// Variable fonts: one file per face covers every weight instead of one request per weight.
+export const dmSans = DM_Sans({ subsets: ["latin"], variable: "--ff-dm-sans", display: "swap" });
+export const manrope = Manrope({ subsets: ["latin"], variable: "--ff-manrope", display: "swap" });
 /** Legacy interface face: Inter. Scripture and Arabic keep their own faces below. */
-export const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--ff-inter", display: "swap" });
+export const inter = Inter({ subsets: ["latin"], variable: "--ff-inter", display: "swap" });
 export const plexAr = IBM_Plex_Sans_Arabic({ subsets: ["arabic"], weight: ["400", "600"], variable: "--ff-plex-ar", display: "swap" });
 export const amiriQuran = Amiri_Quran({ subsets: ["arabic"], weight: "400", variable: "--ff-amiri-quran", display: "swap", preload: false });
 export const amiri = Amiri({ subsets: ["arabic"], weight: ["400", "700"], variable: "--ff-amiri", display: "swap", preload: false });

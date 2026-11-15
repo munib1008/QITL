@@ -26,6 +26,13 @@ const config: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   typedRoutes: false,
+  // Put <title>, the description and the social tags in <head> for every client, not streamed into <body> (search engines and
+  // link scrapers that are not recognised as bots missed the meta description; Lighthouse SEO flagged it).
+  htmlLimitedBots: /.*/,
+  // Inline the page's CSS instead of five render-blocking stylesheet requests (the CSP allows inline styles).
+  experimental: { inlineCss: true },
+  // The image sizes the site really uses: shorter srcset lists, fewer variants to generate.
+  images: { deviceSizes: [360, 640, 828, 1080, 1440, 1920], imageSizes: [16, 32, 48, 64, 96, 128, 256] },
   async headers() {
     return [
       { source: "/:path*", headers: securityHeaders },
