@@ -28,7 +28,8 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "test:visual": "node scripts/test-visual.mjs",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "axe:sweep": "node scripts/axe-sweep.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.3.0",
